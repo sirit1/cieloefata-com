@@ -1,0 +1,15 @@
+{
+  "sello": "Cielo Efata",
+  "piezas": [
+    {
+      "slug": "2-pedro-1",
+      "titulo": "La fe que no añade",
+      "pasaje": "2 Pedro 1:5-7",
+      "tipo": "corte",
+      "html": "2-pedro-1.html",
+      "guia": "guias.html",
+      "pdf": "pdfs/2-pedro-1.pdf",
+      "estado": "publicado"
+    }
+  ]
+}
