@@ -3,76 +3,125 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Cielo Efata — El texto manda</title>
+<title>Cielo Efata — Abre el texto. No el eslogan.</title>
+<meta name="description" content="Sello editorial y laboratorio de lectura bíblica. Método V.E.R.D.A.D. Confrontación de fábulas. Obras del Dr. Alejandro Sirit."/>
 <link rel="canonical" href="https://www.cieloefata.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-body{margin:0;background:#f3e6c8;font-family:Source Sans 3,sans-serif;color:#142033}
-nav{position:sticky;top:0;z-index:20;background:#12263a;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;padding:10px}
-nav img{height:36px;width:36px;border-radius:50%;object-fit:cover;background:#fff}
-nav a{color:#f3e6c8;text-decoration:none;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.hero{background:#0d1a2b;text-align:center;padding:48px 16px}
-.hero img{width:128px;height:128px;border-radius:50%;object-fit:cover;border:2px solid #b38728;background:#fff}
-h1{font-family:Cormorant Garamond,serif;color:#f3e6c8;letter-spacing:.16em}
-.lead{font-family:Cormorant Garamond,serif;font-style:italic;color:#d4b56a;font-size:20px}
-.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;max-width:860px;margin:20px auto 0}
-.door{background:#16324f;color:#f3e6c8;padding:14px;text-decoration:none;text-align:left}
-.door strong{display:block;font-family:Cormorant Garamond,serif;color:#d4b56a;font-size:20px}
-main{max-width:920px;margin:0 auto;padding:12px 16px 48px}
-section{padding:36px 0;border-bottom:1px solid #e0c98a}
-h2{font-family:Cormorant Garamond,serif;color:#16324f}
-p,li{color:#4a5568;line-height:1.7}
-.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
-.book{background:#fff8ea;border:1px solid #e6d3a6;padding:8px;text-align:center;text-decoration:none;color:#142033}
-.book img{width:100%;height:210px;object-fit:cover;display:block;margin-bottom:8px}
-.btn{display:inline-block;background:#b38728;color:#0d1a2b;text-decoration:none;padding:10px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-footer{background:#12263a;color:#d4b56a;text-align:center;padding:22px}
-footer img{height:48px;width:48px;border-radius:50%;object-fit:cover;vertical-align:middle;background:#fff}
+:root{--ink:#12263a;--gold:#b38728;--parch:#f3e6c8;--paper:#fff8ea;--mute:#4a5568}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--parch);font-family:Source Sans 3,sans-serif;color:#142033}
 a{color:#8a6418}
+nav{position:sticky;top:0;z-index:30;background:var(--ink);display:flex;flex-wrap:wrap;gap:12px 16px;justify-content:center;align-items:center;padding:10px 14px}
+nav img{height:36px;width:36px;border-radius:50%;object-fit:cover;background:#fff}
+nav a{color:var(--parch);text-decoration:none;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.hero{background:#0d1a2b;color:var(--parch);text-align:center;padding:56px 18px 48px}
+.hero img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);background:#fff}
+.hero h1{font-family:Cormorant Garamond,serif;letter-spacing:.18em;font-size:clamp(28px,6vw,48px);margin:16px 0 8px}
+.hero .lead{font-family:Cormorant Garamond,serif;font-style:italic;color:#d4b56a;font-size:clamp(18px,3vw,26px);max-width:28ch;margin:0 auto 18px}
+.hero p.why{max-width:42ch;margin:0 auto 22px;color:#c9d4e0;line-height:1.6}
+.btn{display:inline-block;background:var(--gold);color:#0d1a2b;text-decoration:none;padding:12px 16px;margin:4px;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.btn.ghost{background:transparent;color:var(--parch);border:1px solid #d4b56a}
+main{max-width:920px;margin:0 auto;padding:8px 18px 56px}
+section{padding:44px 0;border-bottom:1px solid #e0c98a}
+h2{font-family:Cormorant Garamond,serif;color:var(--ink);font-size:30px;margin:0 0 12px}
+h3{font-family:Cormorant Garamond,serif;color:var(--ink);margin:8px 0}
+p,li{color:var(--mute);line-height:1.75}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid #e6d3a6;padding:18px}
+.card strong{display:block;font-family:Cormorant Garamond,serif;font-size:22px;color:var(--ink)}
+.lie{border-left:3px solid #8b2e2e;padding:12px 14px;background:#fff4ea;margin:10px 0}
+.truth{border-left:3px solid var(--gold);padding:12px 14px;background:var(--paper);margin:10px 0}
+ol.met{padding-left:20px}
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.book{background:var(--paper);border:1px solid #e6d3a6;padding:8px;text-align:center;text-decoration:none;color:#142033}
+.book img{width:100%;height:210px;object-fit:cover;display:block;margin-bottom:8px}
+footer{background:var(--ink);color:#d4b56a;text-align:center;padding:28px 16px;font-size:13px}
+footer img{height:44px;width:44px;border-radius:50%;object-fit:cover;vertical-align:middle;background:#fff}
 </style>
 </head>
 <body>
 <nav>
 <img src="cover-sello.jpg" alt="Cielo Efata"/>
-<a href="#metodo">Metodo</a>
+<a href="#por-que">Por qué</a>
+<a href="#mentiras">Mentiras</a>
+<a href="#metodo">Método</a>
 <a href="#obras">Obras</a>
 <a href="2-pedro-1.html">Laboratorio</a>
 <a href="https://revelatio.app">RevelatiO</a>
 </nav>
+
 <header class="hero">
 <img src="cover-sello.jpg" alt="Sello Cielo Efata"/>
 <h1>CIELO EFATA</h1>
-<p class="lead">Observa. Lee. Confronta. El texto manda.</p>
-<div class="doors">
-<a class="door" href="#metodo"><strong>Como leer</strong>V.E.R.D.A.D.</a>
-<a class="door" href="2-pedro-1.html"><strong>Laboratorio</strong>2 Pedro 1</a>
-<a class="door" href="#obras"><strong>Obras</strong>El sello</a>
-<a class="door" href="https://revelatio.app"><strong>Lenguas</strong>RevelatiO</a>
-</div>
+<p class="lead">Dios no exhala versículos sueltos. Exhala un consejo.</p>
+<p class="why">Vienes aquí si ya te cansaste del «solo cree», del versículo de nevera y de la fe como técnica mental. Aquí se abre el texto. Se confronta. Se obedece.</p>
+<a class="btn" href="2-pedro-1.html">Entrar al laboratorio</a>
+<a class="btn ghost" href="#metodo">Cómo leemos</a>
 </header>
+
 <main>
-<section id="metodo">
-<h2>Como leer</h2>
-<ol><li>Ver</li><li>Entorno</li><li>Revelacion</li><li>Doctrina</li><li>Argumento</li><li>Decision</li></ol>
-<p><a class="btn" href="2-pedro-1.html">Laboratorio 2 Pedro 1</a></p>
+<section id="por-que">
+<h2>Qué te da esta visita</h2>
+<p>No un feed. Tres instrumentos y un juicio:</p>
+<div class="grid3">
+<div class="card"><strong>Un método</strong>Seis pasos que no te dejan en el sentimiento. Ver. Entorno. Revelación. Doctrina. Argumento. Decisión.</div>
+<div class="card"><strong>Un laboratorio</strong>Un pasaje disecado: 2 Pedro 1:5–7. La fe no basta como eslogan. La fe gasta.</div>
+<div class="card"><strong>Un sello</strong>Tratados que no masajean el yo. Apuntan al arrepentimiento y a la perseverancia.</div>
+</div>
 </section>
+
+<section id="mentiras">
+<h2>Lo que esta casa no concede</h2>
+<div class="lie"><strong>La fe basta como grito.</strong> 2 Pedro 1:5 ordena añadir. Quien no añade no está «descansando en gracia»: está estéril.</div>
+<div class="lie"><strong>El mindfulness es el nuevo dominio propio.</strong> El texto pide ἐγκράτεια, no anestesia del juicio.</div>
+<div class="lie"><strong>La neurociencia predica.</strong> Puede describir un hábito. No puede regenerar. El nuevo nacimiento no es plasticidad.</div>
+<div class="truth"><strong>Sola Scriptura no es sola ocurrencia.</strong> El texto primero. El léxico sirve. El comentario se sienta atrás. La decisión se toma delante de Dios.</div>
+</section>
+
+<section id="metodo">
+<h2>Cómo se lee aquí — V.E.R.D.A.D.</h2>
+<ol class="met">
+<li><strong>Ver</strong> — el pasaje entero, en voz alta, sin saltar al devocional.</li>
+<li><strong>Entorno</strong> — autor, género, qué viene antes y después.</li>
+<li><strong>Revelación</strong> — lenguas. RevelatiO o léxico. No el influencer.</li>
+<li><strong>Doctrina</strong> — qué dice de Dios, del pecado, de Cristo, del pueblo.</li>
+<li><strong>Argumento</strong> — la objeción honesta. Si no duele, no diseccionaste.</li>
+<li><strong>Decisión</strong> — un acto concreto esta semana, o una confesión.</li>
+</ol>
+<p><a class="btn" href="2-pedro-1.html">Ver el método sobre 2 Pedro 1</a></p>
+</section>
+
 <section id="obras">
 <h2>Obras del sello</h2>
+<p>Éfata está viva en Amazon. El resto entra en reedición bajo este sello. Las tapas ya hablan. El índice, después.</p>
 <div class="books">
-<a class="book" href="https://www.amazon.com/dp/B0HJ15ZXL3"><strong>Efata</strong><br/>La Escritura Abierta</a>
+<a class="book" href="https://www.amazon.com/dp/B0HJ15ZXL3"><strong>Éfata</strong><span>La Escritura Abierta</span></a>
 <a class="book" href="2-pedro-1.html"><img src="cover-fe.png" alt="La fe no basta"/><strong>La fe no basta</strong></a>
 <div class="book"><img src="cover-cielo.png" alt="Cuando el cielo se cae"/><strong>Cuando el cielo se cae</strong></div>
-<div class="book"><img src="cover-golgota.png" alt="El codigo del Golgota"/><strong>El codigo del Golgota</strong></div>
+<div class="book"><img src="cover-golgota.png" alt="El código del Gólgota"/><strong>El código del Gólgota</strong></div>
 <div class="book"><img src="cover-espejo.png" alt="El altar del espejo"/><strong>El altar del espejo</strong></div>
 <div class="book"><img src="cover-callar.png" alt="Callar para ganar"/><strong>Callar para ganar</strong></div>
 </div>
 </section>
-<section>
+
+<section id="revelatio">
 <h2>RevelatiO</h2>
-<p><a class="btn" href="https://revelatio.app">revelatio.app</a></p>
+<p>Herramienta de lenguas. No púlpito. El texto manda; la app sirve. Si RevelatiO te sustituye la Biblia abierta, ciérrala.</p>
+<p><a class="btn" href="https://revelatio.app">Abrir revelatio.app</a></p>
 </section>
-<p><a href="mailto:alejandro.sirit@gmail.com">alejandro.sirit@gmail.com</a></p>
+
+<section>
+<h2>Correspondencia</h2>
+<p>No hay formularios. Hay nombre y cargo.</p>
+<p><a href="mailto:alejandro.sirit@gmail.com">alejandro.sirit@gmail.com</a><br/>
+<a href="https://wa.me/584247637691">WhatsApp +58 424 763 7691</a></p>
+</section>
 </main>
-<footer><img src="cover-sello.jpg" alt=""/> SOLI DEO GLORIA · CIELO EFATA</footer>
+
+<footer>
+<img src="cover-sello.jpg" alt=""/>
+<div>CIELO EFATA · SOLI DEO GLORIA · 2026</div>
+</footer>
 </body>
 </html>
