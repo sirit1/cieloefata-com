@@ -3,132 +3,67 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Cielo Efata — El texto manda</title>
-<meta name="description" content="Sello de lectura bíblica. Confrontación, método y tratados. El texto primero."/>
-<link rel="canonical" href="https://www.cieloefata.com"/>
+<base href="https://cdn.jsdelivr.net/gh/sirit1/cieloefata-com@preview/"/>
+<title>PREVIEW — Cielo Efata</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
-:root{--ink:#0f2033;--gold:#b38728;--parch:#efe3c6;--paper:#fffaf0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--parch);color:#1a2433;font-family:Source Sans 3,sans-serif}
+body{margin:0;background:#efe3c6;font-family:Source Sans 3,sans-serif;color:#1a2433}
 a{color:#8a6418;text-decoration:none}
-nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px 22px;gap:10px}
-.brand{display:flex;align-items:center;gap:10px;color:#efe3c6;letter-spacing:.16em;font-size:12px;text-transform:uppercase}
-.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
-nav .links{display:flex;flex-wrap:wrap;gap:16px}
-nav .links a{color:#efe3c6;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:48px 20px;background:radial-gradient(ellipse at center,#1a3654 0%,#0c1724 70%)}
-.hero img{width:92px;height:92px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);background:#fff}
-.kicker{letter-spacing:.22em;text-transform:uppercase;color:#d4b56a;font-size:11px;margin:18px 0 10px}
-h1{font-family:Cormorant Garamond,serif;font-weight:600;font-size:clamp(40px,8vw,72px);color:#f6ecd4;letter-spacing:.04em;line-height:.95;margin:0}
-.hero em{display:block;font-family:Cormorant Garamond,serif;font-style:italic;font-size:clamp(20px,3.2vw,28px);color:#d4b56a;margin:16px auto 28px;max-width:22em;font-weight:500}
-.cta{display:inline-block;border:1px solid var(--gold);color:#f6ecd4;padding:12px 18px;margin:4px;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.cta.fill{background:var(--gold);color:#0c1724;border:0}
-main{max-width:1080px;margin:0 auto;padding:0 20px 80px}
-.strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d9c594;border-bottom:1px solid #d9c594;margin:0 -20px 0}
-.strip a{padding:22px;color:#1a2433;border-right:1px solid #d9c594}
-.strip a:last-child{border-right:0}
-.strip small{display:block;letter-spacing:.16em;text-transform:uppercase;font-size:10px;color:#8a6418}
-.strip b{display:block;font-family:Cormorant Garamond,serif;font-size:22px;font-weight:600;margin-top:6px}
-section{padding:64px 0 20px}
-h2{font-family:Cormorant Garamond,serif;font-size:clamp(28px,4vw,40px);margin:0 0 8px;color:var(--ink)}
-.lede{font-family:Cormorant Garamond,serif;font-style:italic;font-size:22px;color:#3d4a5c;max-width:34em}
-.two{display:grid;grid-template-columns:1.15fr .85fr;gap:28px;margin-top:28px}
-.feature{background:#0f2033;color:#f6ecd4;padding:28px 26px;min-height:280px}
-.feature small{letter-spacing:.16em;text-transform:uppercase;color:#d4b56a;font-size:10px}
-.feature h3{font-family:Cormorant Garamond,serif;font-size:32px;margin:10px 0;font-weight:600}
-.feature p{color:#c9d3de;line-height:1.65}
-.stack .row{display:block;padding:16px 0;border-bottom:1px solid #d9c594;color:inherit}
-.stack small{letter-spacing:.14em;text-transform:uppercase;font-size:10px;color:#8a6418}
-.stack b{display:block;font-family:Cormorant Garamond,serif;font-size:22px}
-.books{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:24px}
-.book{background:#fffaf0}
+.banner{background:#8b2e2e;color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.08em}
+nav{background:#0f2033;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;padding:10px}
+nav img{height:34px;width:34px;border-radius:50%;object-fit:cover;background:#fff}
+nav a{color:#efe3c6;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.hero{background:#0c1724;text-align:center;padding:48px 16px;color:#f6ecd4}
+.hero img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid #b38728;background:#fff}
+h1{font-family:Cormorant Garamond,serif;letter-spacing:.12em}
+.lead{font-family:Cormorant Garamond,serif;font-style:italic;color:#d4b56a;font-size:22px}
+.btn{display:inline-block;background:#b38728;color:#0c1724;padding:10px 14px;margin:4px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+main{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.card{background:#fffaf0;border:1px solid #d9c594;padding:16px}
+.card b{display:block;font-family:Cormorant Garamond,serif;font-size:20px}
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
 .book img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
-.book span{display:block;padding:8px 6px 12px;font-size:12px;text-align:center}
-.manifest{columns:2;column-gap:32px;font-size:16px;line-height:1.7;color:#3d4a5c}
-footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;letter-spacing:.12em;font-size:11px;text-transform:uppercase}
-@media(max-width:800px){
-.strip,.two,.books,.manifest{grid-template-columns:1fr;columns:1}
-.strip a{border-right:0;border-bottom:1px solid #d9c594}
-.books{grid-template-columns:repeat(2,1fr)}
-}
+footer{background:#0f2033;color:#d4b56a;text-align:center;padding:20px}
 </style>
 </head>
 <body>
+<div class="banner">PREVIEW · rama preview · no es www.cieloefata.com</div>
 <nav>
-<a class="brand" href="/"><img src="cover-sello.jpg" alt=""/> Cielo Efata</a>
-<div class="links">
-<a href="#leer">Cómo leer</a>
+<img src="cover-sello.jpg" alt="sello"/>
+<a href="index.html">Inicio</a>
+<a href="biblioteca.html">Biblioteca</a>
+<a href="guias.html">Guías</a>
 <a href="estudios.html">Estudios</a>
-<a href="#obras">Obras</a>
+<a href="diccionarios.html">Diccionarios</a>
 <a href="agente.html">Agente</a>
-</div>
+<a href="2-pedro-1.html">2 Pedro</a>
+<a href="pdfs/2-pedro-1.html">Hoja PDF</a>
 </nav>
-
 <header class="hero">
-<img src="cover-sello.jpg" alt="Sello"/>
-<div class="kicker">Sello editorial · Sola Scriptura</div>
+<img src="cover-sello.jpg" alt=""/>
 <h1>ÉFATA</h1>
-<em>No viniste a coleccionar versículos.<br/>Viniste a que se te abra la Escritura.</em>
-<a class="cta fill" href="estudios.html">Entrar a los estudios</a>
-<a class="cta" href="agente.html">Consultar el texto</a>
+<p class="lead">Revisa tapas, biblioteca, guías y la hoja de estudio.</p>
+<a class="btn" href="biblioteca.html">Biblioteca</a>
+<a class="btn" href="guias.html">Guías</a>
 </header>
-
-<div class="strip">
-<a href="#leer"><small>01</small><b>Cómo se lee</b></a>
-<a href="estudios.html"><small>02</small><b>El taller</b></a>
-<a href="agente.html"><small>03</small><b>El agente</b></a>
-</div>
-
 <main>
-<section id="leer">
-<h2>Esta casa no predica eslóganes.</h2>
-<p class="lede">La fe que no añade se vuelve estéril. El mindfulness no es dominio propio. La neurociencia no regenera. El texto manda; lo demás se sienta atrás.</p>
-<div class="manifest" style="margin-top:24px">
-<p><strong>Ver</strong> el pasaje entero, en voz alta.</p>
-<p><strong>Entorno</strong> — quién escribe, a quién, qué viene antes.</p>
-<p><strong>Revelación</strong> — lenguas. No el influencer.</p>
-<p><strong>Doctrina</strong> — Dios, pecado, Cristo, pueblo.</p>
-<p><strong>Argumento</strong> — la objeción que duele.</p>
-<p><strong>Decisión</strong> — un acto esta semana, o una confesión.</p>
+<div class="grid">
+<a class="card" href="biblioteca.html"><b>Biblioteca</b>Leer · hoja · compartir</a>
+<a class="card" href="guias.html"><b>Guía 01</b>7 días · 2 Pedro 1</a>
+<a class="card" href="pdfs/2-pedro-1.html"><b>Hoja / PDF</b>Imprimir una cara</a>
+<a class="card" href="diccionarios.html"><b>Diccionarios</b>El léxico no predica</a>
+<a class="card" href="2-pedro-1.html"><b>Corte</b>La fe que no añade</a>
+<a class="card" href="agente.html"><b>Agente</b>RevelatiO</a>
 </div>
-</section>
-
-<section>
-<h2>El taller no es un versículo.</h2>
-<p class="lede">Es el lugar donde un pasaje se abre hasta que exige algo. Hoy hay un corte publicado. Los demás entran con las reediciones.</p>
-<div class="two">
-<a class="feature" href="2-pedro-1.html">
-<small>Corte publicado</small>
-<h3>La fe que no añade</h3>
-<p>2 Pedro 1 no es un poster de virtudes. Es una cadena contra la libertad barata. Siete eslabones. Un solo pendiente.</p>
-<p style="color:#d4b56a">Leer el corte →</p>
-</a>
-<div class="stack">
-<a class="row" href="estudios.html"><small>Archivo</small><b>Todos los estudios</b></a>
-<div class="row"><small>Siguiente</small><b>Filipenses 2 — el himno que humilla al yo</b></div>
-<div class="row"><small>Reedición</small><b>El altar del espejo — Santiago 1</b></div>
-</div>
-</div>
-</section>
-
-<section id="obras">
-<h2>Obras</h2>
-<p class="lede">Éfata ya está en Amazon. El resto se reescribe bajo este sello. Las tapas ya confrontan.</p>
+<h2 style="font-family:Cormorant Garamond,serif">Tapas</h2>
 <div class="books">
-<a class="book" href="https://www.amazon.com/dp/B0HJ15ZXL3"><span>Éfata · viva</span></a>
-<a class="book" href="2-pedro-1.html"><img src="cover-fe.png" alt="La fe no basta"/><span>La fe no basta</span></a>
-<div class="book"><img src="cover-cielo.png" alt=""/><span>Cuando el cielo se cae</span></div>
-<div class="book"><img src="cover-golgota.png" alt=""/><span>El código del Gólgota</span></div>
-<div class="book"><img src="cover-espejo.png" alt=""/><span>El altar del espejo</span></div>
-<div class="book"><img src="cover-callar.png" alt=""/><span>Callar para ganar</span></div>
+<div class="book"><img src="cover-fe.png" alt="fe"/></div>
+<div class="book"><img src="cover-cielo.png" alt="cielo"/></div>
+<div class="book"><img src="cover-golgota.png" alt="golgota"/></div>
+<div class="book"><img src="cover-espejo.png" alt="espejo"/></div>
+<div class="book"><img src="cover-callar.png" alt="callar"/></div>
 </div>
-</section>
-
-<section>
-<h2>Correspondencia</h2>
-<p><a href="mailto:alejandro.sirit@gmail.com">alejandro.sirit@gmail.com</a> · <a href="https://wa.me/584247637691">WhatsApp</a></p>
-</section>
 </main>
-<footer>Soli Deo Gloria · Cielo Efata · 2026</footer>
+<footer>preview · Cielo Efata</footer>
 </body></html>
