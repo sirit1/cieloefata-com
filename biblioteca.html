@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Biblioteca | Cielo Efata</title>
+<meta name="description" content="Estudios para leer, descargar y compartir. Diccionarios para consultar. El texto manda."/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+body{margin:0;background:#efe3c6;font-family:Source Sans 3,sans-serif;color:#1a2433}
+a{color:#8a6418;text-decoration:none}
+nav{background:#0f2033;display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;padding:10px}
+nav img{height:32px;width:32px;border-radius:50%;object-fit:cover;background:#fff}
+nav a{color:#efe3c6;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+main{max-width:900px;margin:0 auto;padding:40px 18px 72px}
+h1,h2{font-family:Cormorant Garamond,serif;color:#0f2033}
+.lede{font-family:Cormorant Garamond,serif;font-style:italic;font-size:22px;color:#3d4a5c}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:22px 0}
+.card{background:#fffaf0;border:1px solid #d9c594;padding:18px}
+.card b{display:block;font-family:Cormorant Garamond,serif;font-size:22px}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.btn{display:inline-block;background:#b38728;color:#0c1724;padding:8px 12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.btn.ghost{background:transparent;border:1px solid #b38728}
+footer{background:#0f2033;color:#d4b56a;text-align:center;padding:18px;font-size:12px}
+</style>
+</head>
+<body>
+<nav>
+<img src="cover-sello.jpg" alt=""/>
+<a href="index.html">Inicio</a>
+<a href="estudios.html">Estudios</a>
+<a href="diccionarios.html">Diccionarios</a>
+<a href="agente.html">Agente</a>
+</nav>
+<main>
+<p style="letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:#8a6418">Consulta</p>
+<h1>Biblioteca</h1>
+<p class="lede">Leer en pantalla. Bajar para el estudio. Compartir el corte. Consultar la lengua. Nada de feed.</p>
+
+<h2>Estudios para leer</h2>
+<div class="card">
+<b>La fe que no añade</b>
+<p>2 Pedro 1:5–7. Cadena de resistencia. Antídoto de la libertad barata.</p>
+<div class="row">
+<a class="btn" href="2-pedro-1.html">Leer</a>
+<a class="btn ghost" href="2-pedro-1.html" download>Descargar</a>
+<button class="btn ghost" type="button" onclick="shareEstudio()">Compartir</button>
+</div>
+</div>
+
+<h2>Diccionarios y lenguas</h2>
+<div class="grid">
+<a class="card" href="diccionarios.html"><b>Sala de consulta</b>Cómo usar léxico sin que el léxico predique.</a>
+<a class="card" href="agente.html"><b>RevelatiO</b>Agente de lenguas bajo yugo de Sola Scriptura.</a>
+</div>
+
+<h2>Qué vendrá al estante</h2>
+<div class="grid">
+<div class="card"><b>Filipenses 2</b>Carmen Christi. Corte siguiente.</div>
+<div class="card"><b>Santiago 1</b>El altar del espejo. Reedición.</div>
+<div class="card"><b>PDFs del sello</b>Cuando KDP suelte el interior, aquí se baja.</div>
+</div>
+</main>
+<footer>El comentario se sienta atrás</footer>
+<script>
+function shareEstudio(){
+  const data={title:'La fe que no añade — Cielo Efata',text:'Corte de 2 Pedro 1:5-7',url:location.origin+'/2-pedro-1.html'};
+  if(navigator.share){navigator.share(data).catch(()=>{});}
+  else{navigator.clipboard.writeText(data.url);alert('Enlace copiado');}
+}
+</script>
+</body></html>
