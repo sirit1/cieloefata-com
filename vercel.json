@@ -1,4 +1,8 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/biblioteca", "destination": "/estudios", "permanent": true },
+    { "source": "/biblioteca.html", "destination": "/estudios", "permanent": true }
+  ]
 }
