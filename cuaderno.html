@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cuaderno · Cielo Efata</title>
+    <meta name="description" content="El cuaderno de estudio. Texto, voz, idea. La misma libreta de RevelatiO, viva en Cielo Efata." />
+    <link rel="canonical" href="https://www.cieloefata.com/cuaderno.html" />
+    <link rel="icon" href="cover-sello.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root { --ink:#0f2033; --gold:#905a17; --gold-soft:#c9a24a; --parch:#efe3c6; --paper:#fffaf0; --muted:#3d4a5c; --rule:#9a7020; }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--parch); color: var(--ink); font-family: "Source Sans 3", "Segoe UI", sans-serif; line-height: 1.6; }
+      body { min-height: 100dvh; }
+      a { color: var(--gold); }
+      button, input, textarea { font: inherit; }
+      button { cursor: pointer; }
+      nav { position: sticky; top: 0; z-index: 20; background: rgba(15,32,51,.96); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 8px 18px; gap: 8px; }
+      .brand { display: flex; align-items: center; gap: 10px; color: var(--parch); letter-spacing: .16em; font-size: 12px; text-transform: uppercase; text-decoration: none; }
+      .brand img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: #fff; }
+      nav .links { display: flex; flex-wrap: wrap; gap: 4px; }
+      nav .links a { color: var(--parch); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; padding: 8px 8px; }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 1.25rem 1rem 4rem; }
+      header.hero { background: var(--ink); color: var(--parch); border-radius: 1rem; padding: 1.4rem 1.3rem 1.5rem; }
+      .kicker { letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.72rem; color: var(--gold-soft); margin: 0; }
+      h1 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.8rem, 5vw, 2.4rem); margin: 0.3rem 0 0; font-weight: 600; }
+      .lede { margin: 0.7rem 0 0; color: rgba(239, 227, 198, 0.82); max-width: 38em; }
+      .sync { margin-top: 0.8rem; font-size: 0.85rem; color: var(--gold-soft); }
+      .row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 2.75rem; padding: 0.55rem 1.1rem; border: 0; border-radius: 0.5rem; font-weight: 500; text-decoration: none; }
+      .btn-primary { background: var(--gold-soft); color: var(--ink); }
+      .btn-ghost { background: transparent; color: var(--parch); box-shadow: inset 0 0 0 1px rgba(239, 227, 198, 0.28); }
+      .card { background: var(--paper); border-radius: 0.85rem; padding: 1.1rem 1.15rem; margin-top: 1rem; box-shadow: 0 10px 28px -16px rgba(15, 32, 51, 0.3); }
+      .chip { min-height: 2.45rem; padding: 0.3rem 0.85rem; border: 0; border-radius: 999px; background: var(--paper); box-shadow: inset 0 0 0 1px rgba(15, 32, 51, 0.1); color: var(--ink); }
+      .chip.on { background: var(--ink); color: var(--parch); box-shadow: none; }
+      input, textarea { width: 100%; background: var(--parch); border: 1px solid var(--rule); border-radius: 0.5rem; padding: 0.75rem 0.85rem; color: var(--ink); }
+      textarea { min-height: 7rem; resize: vertical; }
+      .gold { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; margin: 0; }
+      .verse { border-left: 3px solid var(--gold); padding-left: 0.75rem; font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 1.15rem; }
+      .muted { color: var(--muted); font-size: 0.9rem; }
+      .note h3 { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.35rem; margin: 0.2rem 0 0; }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+      .icon { min-height: 2.5rem; min-width: 2.5rem; padding: 0 0.7rem; background: var(--parch); border: 0; border-radius: 0.45rem; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; }
+      .toast { position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--parch); padding: 0.7rem 1.1rem; border-radius: 999px; font-size: 0.9rem; display: none; z-index: 20; }
+      audio { width: 100%; margin-top: 0.6rem; }
+      .search { margin-top: 1rem; }
+      footer { background: var(--ink); color: var(--gold-soft); text-align: center; padding: 28px 16px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+      footer a { color: var(--parch); margin: 0 8px; text-transform: none; letter-spacing: 0; font-size: 14px; }
+    a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2px}
+</style>
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="index.html"><img src="cover-sello.jpg" alt="Cielo Efata" /> Cielo Efata</a>
+      <div class="links">
+        <a href="metodo.html">Método</a>
+        <a href="estudios.html">Estudios</a>
+        <a href="cuaderno.html">Cuaderno</a>
+        <a href="https://revelatio.app/leer">Laboratorio</a>
+      </div>
+    </nav>
+    <div class="wrap">
+      <header class="hero">
+        <p class="kicker">Cielo Efata · RevelatiO</p>
+        <h1>Cuaderno</h1>
+        <p class="lede">Texto, voz, idea. El acto del corte se queda aquí. Con tu cuenta es la misma libreta del laboratorio.</p>
+        <p class="sync" id="sync">Puedes escribir ya. Enlaza la cuenta para que viva en las dos casas.</p>
+        <div class="row">
+          <a class="btn btn-primary" href="https://revelatio.app/login?next=/cuaderno?casa=1">Enlazar mi cuenta</a>
+          <a class="btn btn-ghost" href="https://revelatio.app/cuaderno">El laboratorio</a>
+        </div>
+      </header>
+
+      <div id="gate" class="card">
+        <p class="gold">Una sola libreta</p>
+        <p>Escribe el acto, la objeción, la idea. Si enlazas RevelatiO, lo que queda aquí aparece allá, y al revés. Sin cuenta, queda en este aparato.</p>
+      </div>
+
+      <div id="app">
+        <section class="card">
+          <p class="gold">Nueva nota</p>
+          <div class="row" id="kinds">
+            <button type="button" class="chip on" data-kind="texto">Texto</button>
+            <button type="button" class="chip" data-kind="idea">Idea</button>
+            <button type="button" class="chip" data-kind="voz">Voz</button>
+          </div>
+          <input id="ref" class="search" placeholder="Referencia · Juan 3:16, o un título" />
+          <textarea id="body" class="search" placeholder="El acto, la objeción, la idea. El pasaje manda; el cuaderno recuerda."></textarea>
+          <div class="row">
+            <button type="button" class="btn btn-primary" id="save">Guardar</button>
+            <button type="button" class="btn icon" id="paste">Pegar</button>
+            <button type="button" class="btn icon" id="copyDraft">Copiar</button>
+            <button type="button" class="btn icon" id="rec">Nota de voz</button>
+          </div>
+          <p class="muted" id="voiceHint" hidden>Hay una nota de voz lista para guardar.</p>
+        </section>
+
+        <div class="row search">
+          <input id="q" placeholder="Buscar en la libreta" style="flex:1;min-width:12rem" />
+        </div>
+        <div class="row" id="filters">
+          <button type="button" class="chip on" data-f="todas">Todas</button>
+          <button type="button" class="chip" data-f="texto">Texto</button>
+          <button type="button" class="chip" data-f="idea">Idea</button>
+          <button type="button" class="chip" data-f="voz">Voz</button>
+          <button type="button" class="chip" data-f="recorte">Recorte</button>
+        </div>
+        <div class="row">
+          <button type="button" class="btn icon" id="shareAll">Compartir</button>
+          <button type="button" class="btn icon" id="copyAll">Copiar todo</button>
+          <a class="btn icon" id="waAll" target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+        <div id="list"></div>
+      </div>
+    </div>
+    <footer>
+      <p><a href="index.html">Cielo Efata</a> · <a href="estudios.html">Estudios</a> · <a href="https://revelatio.app/cuaderno">Laboratorio</a></p>
+      <p style="margin-top:12px">Soli Deo Gloria · Cielo Efata · El texto manda</p>
+    </footer>
+    <div class="toast" id="toast"></div>
+    <script>
+      const LABELS = { texto: "Texto", voz: "Voz", idea: "Idea", recorte: "Recorte" };
+      const host = location.hostname;
+      const onCasa = /cieloefata/.test(host);
+      const API = onCasa || !/revelatio/.test(host) ? "https://revelatio.app/api/casa/cuaderno" : "/api/casa/cuaderno";
+      const KEY = "cielo-cuaderno";
+      const TOK = "cielo-casa-token";
+      const ENT = { "&": "&#38;", "<": "&#60;", ">": "&#62;", '"': "&#34;" };
+
+      const $ = (id) => document.getElementById(id);
+      const toastEl = $("toast");
+      let kind = "texto";
+      let filtro = "todas";
+      let audio = null;
+      let rec = null;
+      let notes = [];
+      let token = "";
+
+      function toast(msg) {
+        toastEl.textContent = msg;
+        toastEl.style.display = "block";
+        clearTimeout(toast.t);
+        toast.t = setTimeout(() => (toastEl.style.display = "none"), 2400);
+      }
+      function escapeHtml(s) {
+        return String(s || "").replace(/[&<>"]/g, (c) => ENT[c]);
+      }
+      function uid() { return Date.now() + "-" + Math.random().toString(36).slice(2, 9); }
+      function live() {
+        return notes
+          .filter((n) => !n.deleted)
+          .sort((a, b) => (Boolean(a.pinned) === Boolean(b.pinned) ? b.at - a.at : a.pinned ? -1 : 1));
+      }
+      function format(n) {
+        return [n.ref + " · " + (LABELS[n.kind] || n.kind), n.verse, n.body].filter(Boolean).join("\n");
+      }
+      function loadLocal() {
+        try { notes = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { notes = []; }
+        if (!Array.isArray(notes)) notes = [];
+      }
+      function saveLocal() { localStorage.setItem(KEY, JSON.stringify(notes.slice(0, 400))); }
+      function merge(remote) {
+        const map = new Map();
+        for (const n of [...remote, ...notes]) {
+          const prev = map.get(n.id);
+          if (!prev || (n.updated || n.at) >= (prev.updated || prev.at)) map.set(n.id, n);
+        }
+        notes = [...map.values()].sort((a, b) => b.at - a.at).slice(0, 400);
+        saveLocal();
+      }
+      function tokenFromHash() {
+        const h = location.hash || "";
+        const m = h.match(/casa=([^&]+)/);
+        if (m) {
+          token = decodeURIComponent(m[1]);
+          localStorage.setItem(TOK, token);
+          history.replaceState(null, "", location.pathname + location.search);
+        } else {
+          token = localStorage.getItem(TOK) || "";
+        }
+      }
+      async function pull() {
+        if (!token) return;
+        $("sync").textContent = "Leyendo la libreta…";
+        const r = await fetch(API, { headers: { Authorization: "Bearer " + token } });
+        if (r.status === 401) {
+          localStorage.removeItem(TOK);
+          token = "";
+          $("sync").textContent = "El enlace caducó. Entra otra vez en RevelatiO y ábrelo desde el cuaderno.";
+          $("gate").hidden = false;
+          return;
+        }
+        const j = await r.json();
+        if (Array.isArray(j.notes)) merge(j.notes);
+        $("sync").textContent = "Vivo en Cielo Efata y en RevelatiO.";
+        $("gate").hidden = true;
+        render();
+      }
+      async function push() {
+        if (!token) return;
+        const r = await fetch(API, {
+          method: "POST",
+          headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" },
+          body: JSON.stringify({ notes: notes.map((n) => ({ ...n, via: n.via || "escuela" })) }),
+        });
+        if (!r.ok) throw new Error("sync");
+        const j = await r.json();
+        if (Array.isArray(j.notes)) merge(j.notes);
+        $("sync").textContent = "Vivo en Cielo Efata y en RevelatiO.";
+        render();
+      }
+      function shown() {
+        const needle = $("q").value.trim().toLowerCase();
+        return live().filter((n) => {
+          if (filtro !== "todas" && n.kind !== filtro) return false;
+          if (!needle) return true;
+          return (n.ref + " " + (n.body || "") + " " + (n.verse || "")).toLowerCase().includes(needle);
+        });
+      }
+      function render() {
+        const list = $("list");
+        const rows = shown();
+        $("waAll").href = "https://wa.me/?text=" + encodeURIComponent(rows.map(format).join("\n\n—\n\n"));
+        if (!rows.length) {
+          list.innerHTML = '<p class="card muted">Todavía no hay notas. El acto del corte, la objeción, la idea: escríbela, pégala o grábala.</p>';
+          return;
+        }
+        list.innerHTML = rows.map((n) => `
+          <article class="card note" data-id="${escapeHtml(n.id)}">
+            <p class="gold">${escapeHtml(LABELS[n.kind] || n.kind)}${n.pinned ? " · fijo" : ""}${n.via === "lab" ? " · laboratorio" : " · escuela"}</p>
+            <h3>${escapeHtml(n.ref)}</h3>
+            ${n.verse ? `<p class="verse">${escapeHtml(n.verse)}</p>` : ""}
+            ${n.body ? `<p>${escapeHtml(n.body).replace(/\n/g, "<br/>")}</p>` : ""}
+            ${n.audio ? `<audio controls src="${n.audio}" preload="metadata"></audio>` : ""}
+            <div class="actions">
+              <button type="button" class="icon" data-act="pin">${n.pinned ? "Soltar" : "Fijar"}</button>
+              <button type="button" class="icon" data-act="copy">Copiar</button>
+              <button type="button" class="icon" data-act="share">Compartir</button>
+              <a class="icon" href="https://wa.me/?text=${encodeURIComponent(format(n))}" target="_blank" rel="noreferrer">WhatsApp</a>
+              <button type="button" class="icon" data-act="del">Quitar</button>
+            </div>
+          </article>`).join("");
+      }
+
+      $("kinds").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-kind]");
+        if (!b) return;
+        kind = b.dataset.kind;
+        $("kinds").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b));
+      });
+      $("filters").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-f]");
+        if (!b) return;
+        filtro = b.dataset.f;
+        $("filters").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b));
+        render();
+      });
+      $("q").addEventListener("input", render);
+      $("save").addEventListener("click", async () => {
+        const body = $("body").value.trim();
+        if (!body && !audio) { toast("Escribe, pega o graba primero."); return; }
+        const k = audio && !body ? "voz" : kind;
+        notes.unshift({
+          id: uid(),
+          ref: $("ref").value.trim() || (k === "idea" ? "Idea" : k === "voz" ? "Voz" : "Nota"),
+          body, kind: k, via: "escuela", audio: audio || undefined,
+          at: Date.now(), updated: Date.now(),
+        });
+        $("body").value = ""; $("ref").value = ""; audio = null; $("voiceHint").hidden = true;
+        saveLocal(); render(); toast("Quedó en el cuaderno.");
+        try { await push(); } catch { toast("Guardado aquí. Se sube cuando haya red y cuenta."); }
+      });
+      $("paste").addEventListener("click", async () => {
+        try {
+          const t = await navigator.clipboard.readText();
+          if (!t.trim()) { toast("El portapapeles está vacío."); return; }
+          $("body").value = $("body").value ? $("body").value + "\n" + t : t;
+          toast("Pegado.");
+        } catch { toast("Pega con el teclado."); }
+      });
+      $("copyDraft").addEventListener("click", async () => {
+        const t = [$("ref").value, $("body").value].filter(Boolean).join("\n");
+        try { await navigator.clipboard.writeText(t); toast("Copiado."); } catch { toast("No se pudo copiar."); }
+      });
+      $("copyAll").addEventListener("click", async () => {
+        const t = shown().map(format).join("\n\n—\n\n");
+        try { await navigator.clipboard.writeText(t); toast("Cuaderno copiado."); } catch { toast("No se pudo copiar."); }
+      });
+      $("shareAll").addEventListener("click", async () => {
+        const text = shown().map(format).join("\n\n—\n\n");
+        if (navigator.share) {
+          try { await navigator.share({ title: "Cuaderno · Cielo Efata", text }); return; } catch (e) { if (e.name === "AbortError") return; }
+        }
+        try { await navigator.clipboard.writeText(text); toast("Copiado."); } catch { toast("No se pudo compartir."); }
+      });
+      $("list").addEventListener("click", async (e) => {
+        const btn = e.target.closest("[data-act]");
+        const art = e.target.closest("[data-id]");
+        if (!btn || !art) return;
+        const n = notes.find((x) => x.id === art.dataset.id);
+        if (!n) return;
+        if (btn.dataset.act === "copy") {
+          try { await navigator.clipboard.writeText(format(n)); toast("Copiada."); } catch { toast("No se pudo copiar."); }
+        }
+        if (btn.dataset.act === "share") {
+          if (navigator.share) { try { await navigator.share({ title: n.ref, text: format(n) }); } catch (er) { if (er.name !== "AbortError") toast("No se pudo compartir."); } }
+          else { try { await navigator.clipboard.writeText(format(n)); toast("Copiada."); } catch {} }
+        }
+        if (btn.dataset.act === "pin") {
+          n.pinned = !n.pinned; n.updated = Date.now(); saveLocal(); render();
+          try { await push(); } catch {}
+        }
+        if (btn.dataset.act === "del") {
+          n.deleted = true; n.updated = Date.now(); saveLocal(); render();
+          try { await push(); } catch {}
+        }
+      });
+      $("rec").addEventListener("click", async () => {
+        if (rec) { rec.stop(); rec = null; $("rec").textContent = "Nota de voz"; return; }
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          const mime = MediaRecorder.isTypeSupported("audio/webm;codecs=opus") ? "audio/webm;codecs=opus" : "audio/webm";
+          const mr = new MediaRecorder(stream, { mimeType: mime });
+          const chunks = [];
+          mr.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data); };
+          mr.onstop = () => {
+            stream.getTracks().forEach((t) => t.stop());
+            const blob = new Blob(chunks, { type: mime });
+            const reader = new FileReader();
+            reader.onload = () => {
+              audio = String(reader.result);
+              if (audio.length > 390000) { audio = null; toast("La voz quedó larga. Acórtala."); return; }
+              kind = "voz";
+              $("kinds").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c.dataset.kind === "voz"));
+              $("voiceHint").hidden = false;
+              toast("Voz lista. Guarda la nota.");
+            };
+            reader.readAsDataURL(blob);
+          };
+          rec = mr; mr.start(); $("rec").textContent = "Detener";
+          setTimeout(() => { if (rec) { rec.stop(); rec = null; $("rec").textContent = "Nota de voz"; } }, 45000);
+        } catch { toast("No se pudo abrir el micrófono."); }
+      });
+      $("body").addEventListener("keydown", (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === "Enter") $("save").click();
+      });
+
+      tokenFromHash();
+      loadLocal();
+      (function fromQuery() {
+        const p = new URLSearchParams(location.search);
+        const ref = (p.get("ref") || "").slice(0, 180);
+        const acto = (p.get("acto") || "").slice(0, 4000);
+        if (ref) $("ref").value = ref;
+        if (acto) $("body").value = acto;
+      })();
+      if (!onCasa && !token && /revelatio/.test(host)) {
+        location.replace("/cuaderno");
+      } else {
+        $("app").hidden = false;
+        $("gate").hidden = Boolean(token);
+        if (token) $("sync").textContent = "Vivo en las dos casas.";
+        render();
+        if (token) pull().catch(() => { $("sync").textContent = "Sin red. Queda en este aparato."; render(); });
+      }
+    </script>
+  </body>
+</html>
