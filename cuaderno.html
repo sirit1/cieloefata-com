@@ -59,24 +59,24 @@
         <a href="metodo.html">Método</a>
         <a href="estudios.html">Estudios</a>
         <a href="cuaderno.html">Cuaderno</a>
-        <a href="https://revelatio.app/leer">Laboratorio</a>
+        <a href="https://revelatio.app/leer">Leer la Biblia</a>
       </div>
     </nav>
     <div class="wrap">
       <header class="hero">
         <p class="kicker">Cielo Efata · RevelatiO</p>
         <h1>Cuaderno</h1>
-        <p class="lede">Texto, voz, idea. El acto del corte se queda aquí. Con tu cuenta es la misma libreta del laboratorio.</p>
-        <p class="sync" id="sync">Puedes escribir ya. Enlaza la cuenta para que viva en las dos casas.</p>
+        <p class="lede">Aquí se guarda lo que el pasaje te pide: una nota escrita, una idea o una grabación de voz. Con tu cuenta, la misma libreta vive aquí y en RevelatiO.</p>
+        <p class="sync" id="sync">Puedes escribir ya. Entra a tu cuenta para que la misma libreta viva aquí y en RevelatiO.</p>
         <div class="row">
-          <a class="btn btn-primary" href="https://revelatio.app/login?next=/cuaderno?casa=1">Enlazar mi cuenta</a>
-          <a class="btn btn-ghost" href="https://revelatio.app/cuaderno">El laboratorio</a>
+          <a class="btn btn-primary" href="https://revelatio.app/login?next=/cuaderno?casa=1">Entrar a mi cuenta</a>
+          <a class="btn btn-ghost" href="https://revelatio.app/cuaderno">Abrir el cuaderno en RevelatiO</a>
         </div>
       </header>
 
       <div id="gate" class="card">
         <p class="gold">Una sola libreta</p>
-        <p>Escribe el acto, la objeción, la idea. Si enlazas RevelatiO, lo que queda aquí aparece allá, y al revés. Sin cuenta, queda en este aparato.</p>
+        <p>Escribe lo que el pasaje te pide, la pregunta o la idea. Si entras a tu cuenta, lo que queda aquí aparece en RevelatiO, y al revés. Sin cuenta, queda en este aparato.</p>
       </div>
 
       <div id="app">
@@ -88,7 +88,7 @@
             <button type="button" class="chip" data-kind="voz">Voz</button>
           </div>
           <input id="ref" class="search" placeholder="Referencia · Juan 3:16, o un título" />
-          <textarea id="body" class="search" placeholder="El acto, la objeción, la idea. El pasaje manda; el cuaderno recuerda."></textarea>
+          <textarea id="body" class="search" placeholder="Escribe lo que el pasaje te pide hacer, una pregunta o una idea."></textarea>
           <div class="row">
             <button type="button" class="btn btn-primary" id="save">Guardar</button>
             <button type="button" class="btn icon" id="paste">Pegar</button>
@@ -117,7 +117,7 @@
       </div>
     </div>
     <footer>
-      <p><a href="index.html">Cielo Efata</a> · <a href="estudios.html">Estudios</a> · <a href="https://revelatio.app/cuaderno">Laboratorio</a></p>
+      <p><a href="index.html">Cielo Efata</a> · <a href="estudios.html">Estudios</a> · <a href="https://revelatio.app/cuaderno">El cuaderno en RevelatiO</a></p>
       <p style="margin-top:12px">Soli Deo Gloria · Cielo Efata · El texto manda</p>
     </footer>
     <div class="toast" id="toast"></div>
@@ -225,7 +225,7 @@
         const rows = shown();
         $("waAll").href = "https://wa.me/?text=" + encodeURIComponent(rows.map(format).join("\n\n—\n\n"));
         if (!rows.length) {
-          list.innerHTML = '<p class="card muted">Todavía no hay notas. El acto del corte, la objeción, la idea: escríbela, pégala o grábala.</p>';
+          list.innerHTML = '<p class="card muted">Todavía no hay notas. Escríbela, pégala o grábala.</p>';
           return;
         }
         list.innerHTML = rows.map((n) => `
