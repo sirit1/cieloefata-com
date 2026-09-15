@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" href="cover-sello.jpg"/>
 <meta name="theme-color" content="#0f2033"/>
-<title>Seis pasos para abrir un pasaje | Cielo Efata</title>
-<meta name="description" content="El método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión) enseña a abrir un capítulo entero y salir con un paso concreto para esta semana."/>
+<title>Cómo se estudia un pasaje | Cielo Efata</title>
+<meta name="description" content="El método VERDAD enseña a leer un pasaje entero de la Biblia con seis preguntas, y a salir con un solo paso concreto para esta semana. Lo explica el Dr. Alejandro Sirit."/>
 <link rel="canonical" href="https://www.cieloefata.com/metodo.html"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -16,21 +16,33 @@ nav img{height:32px;width:32px;border-radius:50%;object-fit:cover;background:#ff
 nav a{color:#f3e6c8;text-decoration:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 6px}
 main{max-width:720px;margin:0 auto;padding:40px 18px 72px}
 h1,h2,h3{font-family:Cormorant Garamond,serif;color:#0f2033}
-h1{font-size:clamp(32px,6vw,48px);line-height:1.1}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.1;margin:.35rem 0 0}
+h2{font-size:1.7rem;margin:2.2rem 0 .6rem}
 .kicker{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#b38728}
-p,li{line-height:1.75;color:#3d4a5c}
+p,li{line-height:1.8;color:#3d4a5c}
 a{color:#8a6418}
-.paso{background:#fffaf0;padding:20px 18px;margin:12px 0}
+.intro p{margin:1rem 0 0;max-width:40em}
+.abecedario{display:grid;grid-template-columns:repeat(6,1fr);gap:.35rem;margin:1.4rem 0 0;padding:0;list-style:none}
+.abecedario a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:3.5rem;padding:.45rem .2rem;border-radius:.5rem;background:#fffaf0;text-decoration:none;color:#0f2033}
+.abecedario b{font-family:Cormorant Garamond,serif;font-size:1.55rem;color:#b38728;font-weight:600;line-height:1}
+.abecedario span{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:#3d4a5c;margin-top:.2rem;text-align:center}
+.paso{background:#fffaf0;padding:22px 20px;margin:14px 0;border-radius:.75rem;scroll-margin-top:4.5rem}
 .paso small{color:#b38728;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
-.lie{background:#fff4ea;border-left:3px solid #8b2e2e;padding:12px 14px}
-.btn{display:inline-block;background:#b38728;color:#0f2033;text-decoration:none;padding:12px 16px;min-height:44px;display:inline-flex;align-items:center;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.paso h3{font-size:1.45rem;margin:.35rem 0 0}
+.pregunta{font-family:Cormorant Garamond,serif;font-style:italic;color:#b38728;margin:.55rem 0 0}
+.paso p{margin:.75rem 0 0}
+.lie{background:#fff4ea;border-left:3px solid #8b2e2e;padding:12px 14px;margin-top:.9rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:#b38728;color:#0f2033;text-decoration:none;padding:12px 16px;margin:8px 8px 0 0;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.btn.ghost{background:transparent;box-shadow:inset 0 0 0 1px #b38728}
 footer{background:#0f2033;color:#d4b56a;text-align:center;padding:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
 a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2px}
+@media(max-width:640px){.abecedario{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <nav>
-<img src="cover-sello.jpg" alt=""/>
+<img src="cover-sello.jpg" alt="Cielo Efata"/>
 <a href="index.html">Inicio</a>
 <a href="estudios.html">Estudios</a>
 <a href="cuaderno.html">Cuaderno</a>
@@ -39,22 +51,87 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <a href="https://revelatio.app/leer">Leer la Biblia</a>
 </nav>
 <main>
-<p class="kicker">La Biblia se estudia</p>
-<h1>Seis pasos para abrir un pasaje</h1>
-<p>Recopilado por el Dr. Alejandro Sirit. Esta casa usa el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión): seis pasos para abrir un pasaje hasta que pide algo concreto. En RevelatiO las preguntas están junto al versículo. Aquí está la escuela: qué es cada paso, dónde suele fallar el estudio y por qué el Argumento no se puede saltar.</p>
-<div class="paso"><small>1 · Ver</small><h3>Qué dice, línea por línea</h3><p>Lee el capítulo entero, en voz alta si puedes. El riesgo es recortar un versículo para que quepa en una frase.</p></div>
-<div class="paso"><small>2 · Entorno</small><h3>Quién escribe, a quién, en qué hora</h3><p>Pregunta qué hay antes y después. El riesgo es que la arqueología sustituya a la lectura, o que el versículo viaje solo.</p></div>
-<div class="paso"><small>3 · Revelación</small><h3>Hebreo o griego, con honestidad</h3><p>Si no hay certeza, se dice. El riesgo es tratar una raíz como si fuera una revelación, o convertir el diccionario en oráculo. La palabra de hoy enseña esa disciplina.</p></div>
-<div class="paso"><small>4 · Doctrina</small><h3>Dios, pecado, Cristo, pueblo</h3><p>Di lo que este pasaje no permite callar. El riesgo es imponer un sistema, o salir solo con un consejo útil. Ninguna denominación manda aquí: cierra el texto.</p></div>
-<div class="paso"><small>5 · Argumento</small><h3>La objeción que te alcanza</h3><p>Nómbrala en una frase de cocina, no de aula. Responde con este pasaje, no con uno más cómodo. Lutero llamó a algo más grande <em>tentatio</em>: la Palabra que te combate. El Argumento es el borde de ese combate; no es un asalto.</p>
-<div class="lie">Si la objeción no te alcanza de verdad, todavía no es la tuya. Los planes de lectura que solo piden observar y aplicar no tienen este paso. Si lo saltas, la doctrina queda limpia y la decisión, genérica.</div></div>
-<div class="paso"><small>6 · Decisión</small><h3>Un paso esta semana</h3><p>Uno, no siete. ¿A quién se lo vas a decir? El riesgo es el moralismo sin Cristo, o la doctrina sin obediencia.</p><p><a href="cuaderno.html?ref=Decisi%C3%B3n">Escribir en el cuaderno</a></p></div>
-<h2>Dónde se rompe</h2>
-<p>Seis letras no oyen por ti. Si las rellenas solo para terminar, no has estudiado: has tachado casillas. Doctrina y Decisión no son la misma: una es lo que el pasaje no permite callar; la otra es lo que tú no puedes aplazar. Quien acaba de descubrir los números Strong se queda en Revelación. Una glosa no es el estudio.</p>
-<h2>No es lectio divina ni un sello de seis casillas</h2>
-<p>La lectio monástica —leer, meditar, orar, contemplar— es otro orden, de otro siglo. El método VERDAD no la sustituye ni la bautiza. Tampoco es un sacramento de seis casillas. Es un trabajo: abrir el texto hasta que pide algo, y no fingir que ya se abrió.</p>
-<p><a class="btn" href="juan-1.html">Ver el método en Juan 1</a> <a class="btn" href="isaias-53.html">Y en Isaías 53</a> <a class="btn" href="cuaderno.html">Abrir el cuaderno</a></p>
-<p><a href="https://revelatio.app/lema">La palabra de hoy</a> · <a href="https://revelatio.app/leer?libro=2-pedro&cap=1">Abrir el capítulo y responder las seis preguntas</a></p>
+<p class="kicker">Cómo se estudia aquí</p>
+<h1>Seis preguntas para abrir un pasaje</h1>
+<div class="intro">
+<p>Si es la primera vez que entras, conviene decirlo con calma. Cielo Efata es una escuela de estudio bíblico. No leemos un versículo suelto para consolar el ánimo. Leemos un pasaje entero —casi siempre un capítulo, o los versículos que forman una unidad— y lo recorremos con seis preguntas. Esas seis preguntas se recuerdan con una sola palabra: <strong>VERDAD</strong>. Cada letra es un paso: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión.</p>
+<p>El método lo enseña el Dr. Alejandro Sirit. No es un acrónimo para tachar casillas. Es un orden. Primero oyes lo que el texto dice, sin tu comentario. Después lo sitúas: quién escribe, a quién, en qué hora, y qué hay antes y después. Atiendes a lo que el hebreo o el griego dejan ver, con honestidad. Extraes lo que el pasaje no permite callar acerca de Dios, del pecado, de Cristo y del pueblo. Nombras la objeción que te resiste. Y cierras con un solo acto para esta semana, dicho a alguien de confianza.</p>
+<p>Hay dos puertas de la misma obra. <strong>RevelatiO</strong> es el lugar donde se abre la Biblia: allí las seis preguntas aparecen junto al versículo. <strong>Cielo Efata</strong> es la escuela: aquí te explicamos qué es cada paso, en qué suele equivocarse quien estudia, y por qué no conviene saltarse el Argumento. Los ensayos de esta casa recorren un pasaje con ese mismo orden, y cierran con una conclusión firmada.</p>
+</div>
+
+<nav class="abecedario" aria-label="Los seis pasos del método VERDAD">
+<a href="#paso-ver"><b>V</b><span>Ver</span></a>
+<a href="#paso-entorno"><b>E</b><span>Entorno</span></a>
+<a href="#paso-revelacion"><b>R</b><span>Revelación</span></a>
+<a href="#paso-doctrina"><b>D</b><span>Doctrina</span></a>
+<a href="#paso-argumento"><b>A</b><span>Argumento</span></a>
+<a href="#paso-decision"><b>D</b><span>Decisión</span></a>
+</nav>
+
+<article class="paso" id="paso-ver">
+<small>1 · Ver</small>
+<h3>Oír el pasaje, no recortarlo</h3>
+<p class="pregunta">¿Qué dice el pasaje, línea por línea, sin tu comentario?</p>
+<p>El primer paso es el más sencillo y el que más se salta. Lees el pasaje entero, en voz alta si puedes, y dejas que hable hasta el punto. No buscas todavía una idea para llevarte. No subrayas un versículo para que quepa en una frase. El texto que no se oye completo se convierte en un lema, y el lema ya no es el pasaje.</p>
+<p>Conviene vigilar esto: recortar un versículo para que encaje en lo que ya pensabas. Si sales de la lectura con una consigna y sin el capítulo, todavía no has visto.</p>
+</article>
+
+<article class="paso" id="paso-entorno">
+<small>2 · Entorno</small>
+<h3>Quién escribe, a quién, en qué hora</h3>
+<p class="pregunta">¿Quién escribe, a quién, en qué hora, y qué hay antes y después?</p>
+<p>Un versículo no viaja solo. Pregunta quién escribe, a quién se dirige, en qué momento de la historia de Israel o de la Iglesia, y qué hay inmediatamente antes y después. Génesis no es un proverbio suelto. Romanos no es una consigna. Un salmo no se lee como una ley. El entorno protege al texto de nuestro ánimo.</p>
+<p>Conviene vigilar dos excesos. Uno: que la arqueología o la historia sustituyan a la lectura. Otro: que el versículo viaje solo, sin capítulo. El entorno sirve al pasaje; no lo reemplaza.</p>
+</article>
+
+<article class="paso" id="paso-revelacion">
+<small>3 · Revelación</small>
+<h3>Lo que el hebreo o el griego dejan ver</h3>
+<p class="pregunta">¿Qué deja ver el hebreo o el griego que la traducción ya no muestra? Si no hay certeza, dilo.</p>
+<p>Las lenguas originales son siervas, no una segunda Biblia. Una glosa, un tiempo verbal, una repetición pueden iluminar lo que la traducción ya dijo. Si no hay certeza, se dice. No se fabrica una revelación privada con el diccionario.</p>
+<p>Conviene vigilar la falacia etimológica: una raíz no es una revelación, y el diccionario no es un oráculo. El número Strong es un índice para hallar una palabra, no un púlpito. Si la glosa contradice el pasaje entero, gana el pasaje.</p>
+</article>
+
+<article class="paso" id="paso-doctrina">
+<small>4 · Doctrina</small>
+<h3>Lo que este pasaje no permite callar</h3>
+<p class="pregunta">¿Qué dice este pasaje de Dios, del pecado, de Cristo y del pueblo que no puedes callar?</p>
+<p>La doctrina, aquí, no es un sistema que se impone al texto. Es la carga del pasaje: lo que dice de Dios, del pecado, de Cristo y del pueblo. No es el lema que nos gustaría llevarnos, ni un consejo útil que serviría para cualquier capítulo.</p>
+<p>Conviene vigilar dos extremos. Uno: imponer un sistema y hacer que el pasaje lo confirme. Otro: salir solo con un consejo práctico y dejar callado lo que el texto afirma. Ninguna denominación manda aquí. Cierra el texto.</p>
+</article>
+
+<article class="paso" id="paso-argumento">
+<small>5 · Argumento</small>
+<h3>La objeción que te alcanza</h3>
+<p class="pregunta">Nombra la objeción en una frase que dirías en la cocina, no en el aula. Luego responde con este pasaje, no con uno mejor.</p>
+<p>Este es el paso que los planes de lectura suelen omitir. Ya viste el pasaje, su entorno, lo que la lengua muestra y lo que no se puede callar. Ahora nombras la resistencia. Puede ser la del texto contra ti, o la tuya contra el texto. Alguien dirá «eso es legalismo», «eso es imposible», «eso no va conmigo». Esa voz se escribe en una frase de cocina, no de aula, y se responde con este mismo pasaje, no con uno más cómodo.</p>
+<div class="lie">Si la objeción no te alcanza de verdad, todavía no es la tuya. Si saltas este paso, la doctrina queda limpia y la decisión, genérica. El texto no te tocó: tú lo usaste.</div>
+</article>
+
+<article class="paso" id="paso-decision">
+<small>6 · Decisión</small>
+<h3>Un solo paso esta semana</h3>
+<p class="pregunta">¿Qué acto o confesión, uno solo, pide esta semana? ¿A quién se lo vas a decir?</p>
+<p>El estudio que no pide nada todavía no se abrió. La decisión es un acto o una confesión para esta semana. Uno, no siete. Se dice en voz alta a alguien que pueda preguntarte el domingo. Si no hay quién, queda escrito en el cuaderno.</p>
+<p>Conviene vigilar dos riesgos. Uno: el moralismo sin Cristo, una lista de propósitos que el pasaje no pidió. Otro: la doctrina sin obediencia, un estudio admirable que no cambia nada. Un paso concreto, dicho a alguien de confianza, cierra el método.</p>
+<p><a href="cuaderno.html?ref=Decisi%C3%B3n">Escribir el paso en el cuaderno</a></p>
+</article>
+
+<h2>Dónde suele fallar el estudio</h2>
+<p>Seis letras no oyen por ti. Si las rellenas solo para terminar, no has estudiado: has tachado casillas. VERDAD es un orden, no un sacramento.</p>
+<p>Doctrina y Decisión se confunden a la primera, porque las dos empiezan con D. No son la misma. La doctrina es lo que el pasaje no permite callar. La decisión es lo que tú no puedes aplazar. Juntas impiden la doctrina estéril y la obediencia inventada.</p>
+<p>Quien acaba de descubrir los números Strong se queda en Revelación. Una glosa no es el estudio. Las lenguas sirven; no oraculan. Y un salmo no se «decide» como una ley: el entorno incluye el género del texto.</p>
+<p>La oración no es un séptimo paso de la lista. El Salmo 119 pide ojos abiertos antes de leer. Si el método se vuelve técnica y la oración desaparece, el orden ha fallado aunque las seis cajas estén llenas.</p>
+
+<h2>Qué no es este método</h2>
+<p>No es la lectio divina monástica —leer, meditar, orar, contemplar—, que es otro orden, de otro siglo. VERDAD no la sustituye ni la bautiza. Tampoco es un plan de hábitos ni un devocional de un versículo al día. Es un trabajo: abrir el texto hasta que pide algo, y no fingir que ya se abrió.</p>
+
+<p style="margin-top:1.8rem">
+<a class="btn" href="juan-1.html">Ver el método en Juan 1</a>
+<a class="btn" href="isaias-53.html">Y en Isaías 53</a>
+<a class="btn ghost" href="https://revelatio.app/umbral">Si es la primera vez</a>
+</p>
+<p>Si quieres practicar tú, abre un capítulo en RevelatiO: las seis preguntas están junto al versículo. <a href="https://revelatio.app/leer?libro=juan&cap=1&metodo=true">Abrir Juan 1 en la Biblia</a> · <a href="cuaderno.html">Abrir el cuaderno</a> · <a href="estudios.html">Todos los estudios</a></p>
 </main>
 <footer>Soli Deo Gloria · Cielo Efata · La Biblia se estudia</footer>
 </body>
