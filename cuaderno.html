@@ -49,27 +49,33 @@
       .search { margin-top: 1rem; }
       footer { background: var(--ink); color: var(--gold-soft); text-align: center; padding: 28px 16px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
       footer a { color: var(--parch); margin: 0 8px; text-transform: none; letter-spacing: 0; font-size: 14px; }
-    a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2px}
+    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #b38728;outline-offset:2px}
+    .skip-link{position:absolute;left:12px;top:-48px;z-index:40;background:#0f2033;color:#efe3c6;padding:.6rem 1rem;border-radius:.5rem}
+    .skip-link:focus{top:12px}
+    .err{color:#8b2e2e;font-size:.9rem;margin:.4rem 0 0}
+    label.field{display:block;margin-top:.85rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
   </head>
   <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <nav>
       <a class="brand" href="index.html"><img src="cover-sello.jpg" alt="Cielo Efata" /> Cielo Efata</a>
       <div class="links">
         <a href="metodo.html">Método</a>
         <a href="estudios.html">Estudios</a>
-        <a href="cuaderno.html">Cuaderno</a>
+        <a href="cuaderno.html" aria-current="page">Cuaderno</a>
         <a href="https://revelatio.app/leer">Leer la Biblia</a>
       </div>
     </nav>
-    <div class="wrap">
+    <div class="wrap" id="contenido" tabindex="-1">
       <header class="hero">
         <p class="kicker">Cielo Efata · RevelatiO</p>
         <h1>Cuaderno</h1>
         <p class="lede">Aquí se guarda lo que el pasaje te pide: una nota escrita, una idea o una grabación de voz. Con tu cuenta, la misma libreta vive aquí y en RevelatiO.</p>
         <p class="sync" id="sync">Puedes escribir ya. Entra a tu cuenta para que la misma libreta viva aquí y en RevelatiO.</p>
         <div class="row">
-          <a class="btn btn-primary" href="https://revelatio.app/login?next=/cuaderno?casa=1">Entrar a mi cuenta</a>
+          <a class="btn btn-primary" href="https://revelatio.app/login?next=https%3A%2F%2Fwww.cieloefata.com%2Fcuaderno.html">Entrar a mi cuenta</a>
           <a class="btn btn-ghost" href="https://revelatio.app/cuaderno">Abrir el cuaderno en RevelatiO</a>
         </div>
       </header>
@@ -82,13 +88,16 @@
       <div id="app">
         <section class="card">
           <p class="gold">Nueva nota</p>
-          <div class="row" id="kinds">
-            <button type="button" class="chip on" data-kind="texto">Texto</button>
-            <button type="button" class="chip" data-kind="idea">Idea</button>
-            <button type="button" class="chip" data-kind="voz">Voz</button>
+          <div class="row" id="kinds" role="group" aria-label="Tipo de nota">
+            <button type="button" class="chip on" data-kind="texto" aria-pressed="true">Texto</button>
+            <button type="button" class="chip" data-kind="idea" aria-pressed="false">Idea</button>
+            <button type="button" class="chip" data-kind="voz" aria-pressed="false">Voz</button>
           </div>
-          <input id="ref" class="search" placeholder="Referencia · Juan 3:16, o un título" />
-          <textarea id="body" class="search" placeholder="Escribe lo que el pasaje te pide hacer, una pregunta o una idea."></textarea>
+          <label class="field" for="ref">Referencia</label>
+          <input id="ref" class="search" placeholder="Juan 3:16, o un título" />
+          <label class="field" for="body">Nota</label>
+          <textarea id="body" class="search" placeholder="Escribe lo que el pasaje te pide hacer, una pregunta o una idea." aria-describedby="draft-err"></textarea>
+          <p class="err" id="draft-err" role="alert" hidden></p>
           <div class="row">
             <button type="button" class="btn btn-primary" id="save">Guardar</button>
             <button type="button" class="btn icon" id="paste">Pegar</button>
@@ -99,14 +108,16 @@
         </section>
 
         <div class="row search">
-          <input id="q" placeholder="Buscar en la libreta" style="flex:1;min-width:12rem" />
+          <label class="field" for="q" style="margin:0;flex:1">Buscar en la libreta
+            <input id="q" placeholder="Una palabra, una referencia" style="margin-top:.35rem" />
+          </label>
         </div>
-        <div class="row" id="filters">
-          <button type="button" class="chip on" data-f="todas">Todas</button>
-          <button type="button" class="chip" data-f="texto">Texto</button>
-          <button type="button" class="chip" data-f="idea">Idea</button>
-          <button type="button" class="chip" data-f="voz">Voz</button>
-          <button type="button" class="chip" data-f="recorte">Recorte</button>
+        <div class="row" id="filters" role="group" aria-label="Filtrar notas">
+          <button type="button" class="chip on" data-f="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-f="texto" aria-pressed="false">Texto</button>
+          <button type="button" class="chip" data-f="idea" aria-pressed="false">Idea</button>
+          <button type="button" class="chip" data-f="voz" aria-pressed="false">Voz</button>
+          <button type="button" class="chip" data-f="recorte" aria-pressed="false">Recorte</button>
         </div>
         <div class="row">
           <button type="button" class="btn icon" id="shareAll">Compartir</button>
@@ -117,7 +128,7 @@
       </div>
     </div>
     <footer>
-      <p><a href="index.html">Cielo Efata</a> · <a href="estudios.html">Estudios</a> · <a href="https://revelatio.app/cuaderno">El cuaderno en RevelatiO</a></p>
+      <p><a href="index.html">Cielo Efata</a> · <a href="estudios.html">Estudios</a> · <a href="https://revelatio.app/cuaderno">El cuaderno en RevelatiO</a> · <a href="https://revelatio.app/admin">Administración</a></p>
       <p style="margin-top:12px">Soli Deo Gloria · Cielo Efata · El texto manda</p>
     </footer>
     <div class="toast" id="toast"></div>
@@ -249,19 +260,37 @@
         const b = e.target.closest("[data-kind]");
         if (!b) return;
         kind = b.dataset.kind;
-        $("kinds").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b));
+        $("kinds").querySelectorAll(".chip").forEach((c) => {
+          const on = c === b;
+          c.classList.toggle("on", on);
+          c.setAttribute("aria-pressed", on ? "true" : "false");
+        });
       });
       $("filters").addEventListener("click", (e) => {
         const b = e.target.closest("[data-f]");
         if (!b) return;
         filtro = b.dataset.f;
-        $("filters").querySelectorAll(".chip").forEach((c) => c.classList.toggle("on", c === b));
+        $("filters").querySelectorAll(".chip").forEach((c) => {
+          const on = c === b;
+          c.classList.toggle("on", on);
+          c.setAttribute("aria-pressed", on ? "true" : "false");
+        });
         render();
       });
       $("q").addEventListener("input", render);
       $("save").addEventListener("click", async () => {
         const body = $("body").value.trim();
-        if (!body && !audio) { toast("Escribe, pega o graba primero."); return; }
+        const err = $("draft-err");
+        if (!body && !audio) {
+          err.hidden = false;
+          err.textContent = "Escribe la nota, pégala o graba la voz antes de guardar.";
+          $("body").setAttribute("aria-invalid", "true");
+          $("body").focus();
+          toast("Escribe, pega o graba primero.");
+          return;
+        }
+        err.hidden = true;
+        $("body").removeAttribute("aria-invalid");
         const k = audio && !body ? "voz" : kind;
         notes.unshift({
           id: uid(),
