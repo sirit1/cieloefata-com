@@ -76,7 +76,7 @@ footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;lett
 <div class="kicker">Sello editorial · Sola Scriptura</div>
 <h1>La Biblia no se lee.<br/>La Biblia se estudia.</h1>
 <em>No viniste a coleccionar versículos.<br/>Viniste a que se abra tu entendimiento a la luz de las Escrituras.</em>
-<a class="cta fill" href="estudios.html">Entrar a los estudios</a>
+<a class="cta fill" href="https://revelatio.app/umbral">Estoy cerrado</a>
 <a class="cta" href="https://revelatio.app/lema">El lema de hoy</a>
 </header>
 <div class="strip">
@@ -86,6 +86,16 @@ footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;lett
 <a href="https://revelatio.app/leer"><small>04</small><b>El laboratorio</b></a>
 </div>
 <main>
+<section>
+<h2>Tres puertas. No un menú.</h2>
+<p class="lede">El cerrado oye Marcos. El que ya sabe, Juan 3. El que pregunta qué hacer, Hechos 2. No es un botón de salvación. Es un pasaje, un acto y un nombre el domingo.</p>
+<div class="salas">
+<a class="sala" href="marcos-1.html"><small>Puerta 1</small><b>Arrepentíos</b><p>Marcos 1:14–15. El evangelio no abre con un consuelo. Abre con un mandato.</p></a>
+<a class="sala" href="juan-3.html"><small>Puerta 2</small><b>De nuevo</b><p>Juan 3. Nicodemo ya sabe. Jesús no le mejora el oficio: le pide nacer.</p></a>
+<a class="sala" href="hechos-2.html"><small>Puerta 3</small><b>¿Qué haremos?</b><p>Hechos 2:37–38. El corazón se corta. No preguntan qué sentir. Preguntan qué hacer.</p></a>
+</div>
+<p style="margin-top:16px"><a href="https://revelatio.app/umbral">Las tres puertas, en el laboratorio →</a></p>
+</section>
 <section>
 <h2>Tres relojes. Una casa.</h2>
 <p class="lede">Un lema Strong cada día. Un corte VERDAD cada semana. Un tratado cada mes. No es un verso del día. No es un devocional. Es el oficio.</p>
@@ -118,7 +128,7 @@ footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;lett
 </section>
 <section>
 <h2>El taller no es un versículo.</h2>
-<p class="lede">Es el lugar donde un pasaje se abre hasta que exige algo. Seis cortes publicados. El capítulo, en RevelatiO. El corte, aquí o en la app.</p>
+<p class="lede">Es el lugar donde un pasaje se abre hasta que exige algo. Tres puertas. Seis cortes publicados. Cincuenta y dos semanas, el mismo lomo para todos. El capítulo, en RevelatiO.</p>
 <div class="two">
 <a class="feature" href="2-pedro-1.html">
 <small>Corte publicado</small>
@@ -169,13 +179,60 @@ footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;lett
 <footer>Soli Deo Gloria · Cielo Efata · 2026 · La Biblia se estudia en RevelatiO</footer>
 <script>
 (function(){
+  var R="https://revelatio.app/estudio/";
   var cortes=[
-    {t:"La fe no basta", r:"2 Pedro 1:5–7", href:"2-pedro-1.html"},
-    {t:"Carmen Christi", r:"Filipenses 2:5–11", href:"filipenses-2.html"},
-    {t:"El altar del espejo", r:"Santiago 1:22–25", href:"santiago-1.html"},
-    {t:"No os conforméis", r:"Romanos 12:1–2", href:"romanos-12.html"},
-    {t:"El único camino", r:"Juan 14:6", href:"juan-14.html"},
-    {t:"Nada me faltará", r:"Salmo 23", href:"salmo-23.html"}
+    {t:"Arrepentíos",r:"Marcos 1:14–15",href:"marcos-1.html"},
+    {t:"En el principio",r:"Génesis 1",href:R+"genesis-1"},
+    {t:"¿Dónde estás tú?",r:"Génesis 3",href:R+"genesis-3"},
+    {t:"Le fue contado",r:"Génesis 15",href:R+"genesis-15"},
+    {t:"La sangre",r:"Éxodo 12",href:R+"exodo-12"},
+    {t:"Oye, Israel",r:"Deuteronomio 6",href:R+"deuteronomio-6"},
+    {t:"Vuelve",r:"Deuteronomio 30",href:R+"deuteronomio-30"},
+    {t:"Esta ley no se apartará",r:"Josué 1",href:R+"josue-1"},
+    {t:"Casa",r:"2 Samuel 7",href:R+"2-samuel-7"},
+    {t:"Dos caminos",r:"Salmo 1",href:R+"salmo-1"},
+    {t:"Contra ti solo",r:"Salmo 51",href:R+"salmo-51"},
+    {t:"Nada me faltará",r:"Salmo 23",href:"salmo-23.html"},
+    {t:"Ay de mí",r:"Isaías 6",href:R+"isaias-6"},
+    {t:"El Siervo",r:"Isaías 53",href:R+"isaias-53"},
+    {t:"Mientras puede ser hallado",r:"Isaías 55",href:R+"isaias-55"},
+    {t:"Pacto nuevo",r:"Jeremías 31",href:R+"jeremias-31"},
+    {t:"Corazón de carne",r:"Ezequiel 36",href:R+"ezequiel-36"},
+    {t:"Rasgad el corazón",r:"Joel 2",href:R+"joel-2"},
+    {t:"Qué pide Jehová",r:"Miqueas 6:8",href:R+"miqueas-6"},
+    {t:"El justo por la fe",r:"Habacuc 2:4",href:R+"habacuc-2"},
+    {t:"De nuevo",r:"Juan 3:1–16",href:"juan-3.html"},
+    {t:"El Verbo",r:"Juan 1",href:R+"juan-1"},
+    {t:"El único camino",r:"Juan 14:6",href:"juan-14.html"},
+    {t:"El hijo que volvió",r:"Lucas 15",href:R+"lucas-15"},
+    {t:"Les abría el sentido",r:"Lucas 24",href:R+"lucas-24"},
+    {t:"Bienaventurados",r:"Mateo 5",href:R+"mateo-5"},
+    {t:"¿Quién dices que soy?",r:"Mateo 16",href:R+"mateo-16"},
+    {t:"Id",r:"Mateo 28",href:R+"mateo-28"},
+    {t:"Nieguese a sí mismo",r:"Marcos 8",href:R+"marcos-8"},
+    {t:"¿Qué haremos?",r:"Hechos 2:37–38",href:"hechos-2.html"},
+    {t:"¿Entiendes lo que lees?",r:"Hechos 8",href:R+"hechos-8"},
+    {t:"No me avergüenzo",r:"Romanos 1",href:R+"romanos-1"},
+    {t:"No hay justo",r:"Romanos 3",href:R+"romanos-3"},
+    {t:"Siendo aún pecadores",r:"Romanos 5",href:R+"romanos-5"},
+    {t:"Ninguna condenación",r:"Romanos 8",href:R+"romanos-8"},
+    {t:"No os conforméis",r:"Romanos 12:1–2",href:"romanos-12.html"},
+    {t:"Si no hay resurrección",r:"1 Corintios 15",href:R+"1-corintios-15"},
+    {t:"Nueva criatura",r:"2 Corintios 5",href:"2-corintios-5.html"},
+    {t:"Con Cristo estoy",r:"Gálatas 2:20",href:R+"galatas-2"},
+    {t:"Por gracia",r:"Efesios 2",href:R+"efesios-2"},
+    {t:"Carmen Christi",r:"Filipenses 2:5–11",href:"filipenses-2.html"},
+    {t:"La imagen",r:"Colosenses 1",href:R+"colosenses-1"},
+    {t:"La gracia adiestra",r:"Tito 2:11–12",href:R+"tito-2"},
+    {t:"Es, pues, la fe",r:"Hebreos 11",href:R+"hebreos-11"},
+    {t:"El altar del espejo",r:"Santiago 1:22–25",href:"santiago-1.html"},
+    {t:"La fe sin obras",r:"Santiago 2",href:R+"santiago-2"},
+    {t:"Nacidos de nuevo",r:"1 Pedro 1",href:R+"1-pedro-1"},
+    {t:"La fe que no añade",r:"2 Pedro 1:5–7",href:"2-pedro-1.html"},
+    {t:"Si decimos que no tenemos",r:"1 Juan 1",href:R+"1-juan-1"},
+    {t:"Ponían el sentido",r:"Nehemías 8",href:R+"nehemias-8"},
+    {t:"Toda la Escritura",r:"2 Timoteo 3",href:R+"2-timoteo-3"},
+    {t:"Hago nuevas",r:"Apocalipsis 21",href:R+"apocalipsis-21"}
   ];
   var d=new Date();
   var t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));
