@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<link rel="icon" href="cielo-mark-color.png?v=2"/>
+<link rel="icon" href="cielo-mark-color.png"/>
 <meta name="theme-color" content="#0f2033"/>
 <title>Cielo Efata — La Biblia se estudia</title>
 <meta name="description" content="Bienvenido a Cielo Efata. Aquí se estudia la Biblia por capítulos, con el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión), y se sale con un paso concreto para esta semana."/>
@@ -19,18 +19,19 @@ nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
 nav .links{display:flex;flex-wrap:wrap;gap:16px}
 nav .links a{color:#efe3c6;font-size:13px;letter-spacing:.1em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 8px}
-.hero{position:relative;overflow:hidden;padding:36px 18px 42px;background:
-  radial-gradient(ellipse at 12% 30%,rgba(232,201,138,.28),transparent 42%),
-  radial-gradient(ellipse at 88% 18%,rgba(179,135,40,.22),transparent 40%),
-  radial-gradient(ellipse at 50% 100%,rgba(212,181,106,.12),transparent 46%),
-  #08111b}
-.hero .dust{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;opacity:.95}
-.hero .seal{position:relative;z-index:1;display:block;width:min(100%,52rem);height:auto;margin:0 auto;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.4)}
-.kicker{letter-spacing:.22em;text-transform:uppercase;color:#d4b56a;font-size:11px;margin:18px 0 10px}
-h1{font-family:Cormorant Garamond,serif;font-weight:600;font-size:clamp(34px,7vw,64px);color:#f6ecd4;letter-spacing:.03em;line-height:.95;margin:0}
-.hero em{display:block;font-family:Cormorant Garamond,serif;font-style:italic;font-size:clamp(20px,3.2vw,28px);color:#d4b56a;margin:16px auto 28px;max-width:24em;font-weight:500}
-.cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--gold);color:#f6ecd4;padding:12px 20px;margin:4px;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
-.cta.fill{background:var(--gold);color:#0c1724;border:0}
+.hero{position:relative;overflow:hidden;padding:48px 16px 56px;background:#070c14}
+.hero .dust{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;opacity:.9}
+.hero-card{position:relative;z-index:1;max-width:42rem;margin:0 auto;background:#fbf6ee;border-radius:1.35rem;padding:28px 22px 32px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.45)}
+.hero .seal{display:block;width:min(100%,28rem);height:auto;margin:0 auto;border-radius:12px}
+.hero .kicker{letter-spacing:.22em;text-transform:uppercase;color:#8a6418;font-size:11px;margin:22px 0 10px}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.85rem,4.6vw,2.65rem);color:#1a120c;letter-spacing:.01em;line-height:1.15;margin:0}
+.hero h1 em{font-style:normal;color:#c45c12}
+.hero .lead{margin:14px auto 0;max-width:28em;color:#4a433c;font-size:1.05rem;line-height:1.65}
+.hero .actions{margin-top:22px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero .cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #7a1f1a;color:#7a1f1a;background:transparent;padding:10px 20px;font-size:14px;border-radius:999px}
+.hero .cta.fill{background:#7a1f1a;color:#fbf6ee;border-color:#7a1f1a}
+.kicker{letter-spacing:.22em;text-transform:uppercase;color:#8a6418;font-size:11px;margin:18px 0 10px}
+h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,4.5vw,40px);color:var(--ink);letter-spacing:.01em;line-height:1.12;margin:0}
 main{max-width:1080px;margin:0 auto;padding:0 20px 80px}
 .strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #d9c594;border-bottom:1px solid #d9c594;margin:0 -20px 0}
 .strip a{padding:22px;color:#1a2433;border-right:1px solid #d9c594}
@@ -76,7 +77,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </head>
 <body>
 <nav>
-<a class="brand" href="/"><img src="cielo-mark-color.png?v=2" alt="Cielo Efata"/> Cielo Efata</a>
+<a class="brand" href="/"><img src="cielo-mark-color.png" alt="Cielo Efata"/> Cielo Efata</a>
 <div class="links">
 <a href="metodo.html">Método</a>
 <a href="estudios.html">Estudios</a>
@@ -87,8 +88,17 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </div>
 </nav>
 <header class="hero">
-<img class="dust" src="cielo-dust.png?v=8" alt=""/>
-<img class="seal" src="cielo-oficial.jpg?v=8" alt="Cielo Efata. El león y el cordero." width="1440" height="900"/>
+<img class="dust" src="cielo-dust.png?v=9" alt=""/>
+<div class="hero-card">
+<img class="seal" src="cielo-oficial.jpg?v=9" alt="Cielo Efata. El león y el cordero." width="1440" height="900"/>
+<p class="kicker">Confesión · Conversión · Firmeza</p>
+<h1>Para todo aquel que está buscando <em>conocer a Dios</em></h1>
+<p class="lead">La Palabra abierta, profunda y viva. Se estudia la Escritura con el texto delante, y se sale a obedecer.</p>
+<div class="actions">
+<a class="cta fill" href="https://revelatio.app/discipulado">Cómo empezar</a>
+<a class="cta" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Leer la Biblia</a>
+</div>
+</div>
 </header>
 <main>
 <section id="canon" style="padding-top:40px">
@@ -258,7 +268,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <h2>Obras</h2>
 <p class="lede">Hay siete tomos. Bástate es el séptimo, no un anexo aparte. Cada tapa, con su sinopsis, se lee junto al capítulo en RevelatiO. Lo que importa es el texto, no la tienda.</p>
 <div class="books">
-<a class="book" href="https://revelatio.app/obras"><img src="cielo-mark-color.png?v=2" alt="Éfata"/><span>Éfata</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cielo-mark-color.png" alt="Éfata"/><span>Éfata</span></a>
 <a class="book" href="https://revelatio.app/obras"><img src="cover-golgota.png" alt="El código del Gólgota"/><span>El código del Gólgota</span></a>
 <a class="book" href="https://revelatio.app/obras"><span class="plate">Bástate</span><span>Bástate · tomo 7</span></a>
 <a class="book" href="https://revelatio.app/obras"><img src="cover-cielo.png" alt="Cuando el cielo se cae"/><span>Cuando el cielo se cae</span></a>
