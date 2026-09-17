@@ -12,16 +12,20 @@
 <style>
 :root{--ink:#0f2033;--gold:#b38728;--parch:#efe3c6;--paper:#fffaf0}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--parch);color:#1a2433;font-family:Source Sans 3,sans-serif}
+body{margin:0;background:var(--parch);color:#1a2433;font-family:"Source Sans 3",sans-serif;font-size:17px;line-height:1.7}
 a{color:#8a6418;text-decoration:none}
 nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px 22px;gap:10px}
 .brand{display:flex;align-items:center;gap:10px;color:#efe3c6;letter-spacing:.16em;font-size:12px;text-transform:uppercase}
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
 nav .links{display:flex;flex-wrap:wrap;gap:16px}
 nav .links a{color:#efe3c6;font-size:13px;letter-spacing:.1em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 8px}
-.hero{position:relative;overflow:hidden;padding:22px 16px 26px;background:#08111b}
-.hero .dust{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none}
-.hero .seal{position:relative;z-index:1;display:block;width:min(100%,58rem);height:auto;margin:0 auto;border-radius:12px}
+.hero{position:relative;overflow:hidden;padding:36px 18px 42px;background:
+  radial-gradient(ellipse at 12% 30%,rgba(232,201,138,.28),transparent 42%),
+  radial-gradient(ellipse at 88% 18%,rgba(179,135,40,.22),transparent 40%),
+  radial-gradient(ellipse at 50% 100%,rgba(212,181,106,.12),transparent 46%),
+  #08111b}
+.hero .dust{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none;opacity:.95}
+.hero .seal{position:relative;z-index:1;display:block;width:min(100%,52rem);height:auto;margin:0 auto;border-radius:14px;box-shadow:0 18px 48px rgba(0,0,0,.4)}
 .kicker{letter-spacing:.22em;text-transform:uppercase;color:#d4b56a;font-size:11px;margin:18px 0 10px}
 h1{font-family:Cormorant Garamond,serif;font-weight:600;font-size:clamp(34px,7vw,64px);color:#f6ecd4;letter-spacing:.03em;line-height:.95;margin:0}
 .hero em{display:block;font-family:Cormorant Garamond,serif;font-style:italic;font-size:clamp(20px,3.2vw,28px);color:#d4b56a;margin:16px auto 28px;max-width:24em;font-weight:500}
@@ -56,10 +60,11 @@ h2{font-family:Cormorant Garamond,serif;font-size:clamp(28px,4vw,40px);margin:0 
 .sala b{display:block;font-family:Cormorant Garamond,serif;font-size:24px;margin:6px 0;color:var(--ink)}
 .sala p{margin:0;color:#3d4a5c;line-height:1.6;font-size:15px}
 footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;letter-spacing:.12em;font-size:11px;text-transform:uppercase}
-.puertas{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:22px}
-.puerta{display:block;padding:12px 10px;border-left:2px solid #b38728;color:inherit;background:#fffaf0}
-.puerta b{display:block;font-family:Cormorant Garamond,serif;font-size:22px;color:var(--ink);font-weight:600}
-.puerta span{display:block;margin-top:4px;font-size:14px;line-height:1.45;color:#3d4a5c}
+.puertas{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:12px;margin-top:28px}
+.puerta{display:block;padding:16px 16px 18px;border-left:3px solid #b38728;color:inherit;background:#fffaf0;min-height:7.5rem}
+.puerta b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.55rem;color:var(--ink);font-weight:600;line-height:1.15}
+.puerta span{display:block;margin-top:8px;font-size:15px;line-height:1.5;color:#3d4a5c}
+#canon h1{color:var(--ink);font-size:clamp(2rem,5vw,2.85rem);line-height:1.12;letter-spacing:.01em}
 @media(max-width:800px){
 .strip,.two,.manifest,.salas,.puertas{grid-template-columns:1fr;columns:1}
 .puertas{grid-template-columns:1fr 1fr}
@@ -82,14 +87,14 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </div>
 </nav>
 <header class="hero">
-<img class="dust" src="cielo-dust.png" alt=""/>
-<img class="seal" src="cielo-oficial.jpg" alt="Cielo Efata. El león y el cordero."/>
+<img class="dust" src="cielo-dust.png?v=8" alt=""/>
+<img class="seal" src="cielo-oficial.jpg?v=8" alt="Cielo Efata. El león y el cordero." width="1440" height="900"/>
 </header>
 <main>
-<section id="canon" style="padding-top:36px">
+<section id="canon" style="padding-top:40px">
 <p class="kicker" style="color:#8a6418">Qué es la Biblia</p>
-<h2>Sesenta y seis libros, la Escritura de la Iglesia</h2>
-<p class="lede">La Biblia no es una antología de genios religiosos. Es el conjunto de libros que la Iglesia recibió como Palabra de Dios: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Siete puertas abren el mapa. Un toque abre el primer capítulo.</p>
+<h1>Sesenta y seis libros, la Escritura de la Iglesia</h1>
+<p class="lede">La Biblia no es una antología de genios religiosos ni un almanaque de consuelos. Es el conjunto de libros que la Iglesia recibió como Palabra de Dios: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Siete puertas abren el mapa. Un toque abre el primer capítulo.</p>
 <div class="puertas">
 <a class="puerta" href="https://revelatio.app/leer?libro=genesis&cap=1&casa=1"><b>Génesis</b><span>Dios crea, el hombre cae, y Abraham recibe una promesa.</span></a>
 <a class="puerta" href="https://revelatio.app/leer?libro=salmos&cap=1&casa=1"><b>Salmos</b><span>Ciento cincuenta oraciones: alabanza, lamento, reino.</span></a>
@@ -99,7 +104,23 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <a class="puerta" href="https://revelatio.app/leer?libro=romanos&cap=1&casa=1"><b>Romanos</b><span>No hay justo. La justicia de Dios se manifiesta sin la ley.</span></a>
 <a class="puerta" href="https://revelatio.app/leer?libro=apocalipsis&cap=1&casa=1"><b>Apocalipsis</b><span>El Cordero está en el trono. Las iglesias son nombradas.</span></a>
 </div>
-<p style="margin-top:16px"><a href="canon.html">Los sesenta y seis, libro por libro</a></p>
+<p style="margin-top:18px"><a href="canon.html">Los sesenta y seis, libro por libro</a></p>
+</section>
+<section id="caminos" style="padding-top:28px">
+<div class="two">
+<a class="feature" href="https://revelatio.app/discipulado">
+<small>Si nunca has leído</small>
+<h3>Tres pasajes te reciben</h3>
+<p>Marcos pide volverte. Juan, nacer de nuevo. Hechos, qué hacer después de oír. No hace falta conocer el método: al leerlos, se ve usado.</p>
+<p style="color:#d4b56a">Cómo empezar</p>
+</a>
+<a class="feature" href="estudios.html">
+<small>Si ya estudias</small>
+<h3>La semana y el mes</h3>
+<p>Un mismo pasaje para todos esta semana. Un tratado este mes: el versículo que se cita de memoria, leído otra vez dentro de su capítulo.</p>
+<p style="color:#d4b56a">Abrir los estudios</p>
+</a>
+</div>
 </section>
 <div class="strip">
 <a href="metodo.html"><small>01</small><b>El método</b></a>
