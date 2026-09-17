@@ -6,7 +6,7 @@
 <link rel="icon" href="cover-sello.jpg"/>
 <meta name="theme-color" content="#0f2033"/>
 <title>Cielo Efata — La Biblia se estudia</title>
-<meta name="description" content="Bienvenido a Cielo Efata, escuela de estudio bíblico del Dr. Alejandro Sirit. Se lee un pasaje completo, con seis preguntas, y se sale con un paso para esta semana."/>
+<meta name="description" content="Bienvenido a Cielo Efata. Aquí se estudia la Biblia por capítulos, con el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión), y se sale con un paso concreto para esta semana."/>
 <link rel="canonical" href="https://www.cieloefata.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -19,8 +19,9 @@ nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
 nav .links{display:flex;flex-wrap:wrap;gap:16px}
 nav .links a{color:#efe3c6;font-size:13px;letter-spacing:.1em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 8px}
-.hero{min-height:68vh;display:grid;place-items:center;text-align:center;padding:48px 20px;background:radial-gradient(ellipse at center,#1a3654 0%,#0c1724 70%)}
-.hero img{width:92px;height:92px;border-radius:50%;object-fit:cover;border:1px solid var(--gold);background:#fff}
+.hero{position:relative;overflow:hidden;padding:22px 16px 26px;background:#08111b}
+.hero .dust{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;pointer-events:none}
+.hero .seal{position:relative;z-index:1;display:block;width:min(100%,58rem);height:auto;margin:0 auto;border-radius:12px}
 .kicker{letter-spacing:.22em;text-transform:uppercase;color:#d4b56a;font-size:11px;margin:18px 0 10px}
 h1{font-family:Cormorant Garamond,serif;font-weight:600;font-size:clamp(34px,7vw,64px);color:#f6ecd4;letter-spacing:.03em;line-height:.95;margin:0}
 .hero em{display:block;font-family:Cormorant Garamond,serif;font-style:italic;font-size:clamp(20px,3.2vw,28px);color:#d4b56a;margin:16px auto 28px;max-width:24em;font-weight:500}
@@ -55,8 +56,13 @@ h2{font-family:Cormorant Garamond,serif;font-size:clamp(28px,4vw,40px);margin:0 
 .sala b{display:block;font-family:Cormorant Garamond,serif;font-size:24px;margin:6px 0;color:var(--ink)}
 .sala p{margin:0;color:#3d4a5c;line-height:1.6;font-size:15px}
 footer{background:#0f2033;color:#d4b56a;text-align:center;padding:36px 16px;letter-spacing:.12em;font-size:11px;text-transform:uppercase}
+.puertas{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:22px}
+.puerta{display:block;padding:12px 10px;border-left:2px solid #b38728;color:inherit;background:#fffaf0}
+.puerta b{display:block;font-family:Cormorant Garamond,serif;font-size:22px;color:var(--ink);font-weight:600}
+.puerta span{display:block;margin-top:4px;font-size:14px;line-height:1.45;color:#3d4a5c}
 @media(max-width:800px){
-.strip,.two,.manifest,.salas{grid-template-columns:1fr;columns:1}
+.strip,.two,.manifest,.salas,.puertas{grid-template-columns:1fr;columns:1}
+.puertas{grid-template-columns:1fr 1fr}
 .strip a{border-right:0;border-bottom:1px solid #d9c594}
 .books{grid-template-columns:repeat(2,1fr)}
 }
@@ -69,55 +75,58 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <div class="links">
 <a href="metodo.html">Método</a>
 <a href="estudios.html">Estudios</a>
-<a href="tratados.html">Tratados</a>
 <a href="cuaderno.html">Cuaderno</a>
 <a href="canon.html">Canon</a>
-<a href="https://revelatio.app/umbral">Cómo empezar</a>
+<a href="https://revelatio.app/oficio">Guías</a>
 <a href="https://revelatio.app/leer">Leer la Biblia</a>
 </div>
 </nav>
 <header class="hero">
-<img src="cover-sello.jpg" alt="Sello"/>
-<div class="kicker">Bienvenido · Cielo Efata</div>
-<h1>La Biblia se estudia aquí</h1>
-<em>Bienvenido. Cielo Efata es una escuela de estudio bíblico, dirigida por el Dr. Alejandro Sirit. Aquí lees un pasaje completo, lo estudias con seis preguntas y sales con una sola cosa que hacer esta semana. El método se llama VERDAD.</em>
-<a class="cta fill" href="https://revelatio.app/umbral">Cómo empezar</a>
-<a class="cta" href="cuaderno.html">Abrir el cuaderno</a>
-<p style="margin-top:10px"><a href="https://revelatio.app/lema" style="color:#d4b56a;font-size:14px;letter-spacing:.08em">Ver la palabra de hoy</a></p>
+<img class="dust" src="cielo-dust.png" alt=""/>
+<img class="seal" src="cielo-oficial.jpg" alt="Cielo Efata. El león y el cordero."/>
 </header>
+<main>
+<section id="canon" style="padding-top:36px">
+<p class="kicker" style="color:#8a6418">Qué es la Biblia</p>
+<h2>Sesenta y seis libros, la Escritura de la Iglesia</h2>
+<p class="lede">La Biblia no es una antología de genios religiosos. Es el conjunto de libros que la Iglesia recibió como Palabra de Dios: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Siete puertas abren el mapa. Un toque abre el primer capítulo.</p>
+<div class="puertas">
+<a class="puerta" href="https://revelatio.app/leer?libro=genesis&cap=1&casa=1"><b>Génesis</b><span>Dios crea, el hombre cae, y Abraham recibe una promesa.</span></a>
+<a class="puerta" href="https://revelatio.app/leer?libro=salmos&cap=1&casa=1"><b>Salmos</b><span>Ciento cincuenta oraciones: alabanza, lamento, reino.</span></a>
+<a class="puerta" href="https://revelatio.app/leer?libro=isaias&cap=1&casa=1"><b>Isaías</b><span>El Santo de Israel, el niño del trono y el Siervo herido.</span></a>
+<a class="puerta" href="https://revelatio.app/leer?libro=mateo&cap=1&casa=1"><b>Mateo</b><span>Jesús, hijo de David, cumple la Ley y los Profetas.</span></a>
+<a class="puerta" href="https://revelatio.app/leer?libro=juan&cap=1&casa=1"><b>Juan</b><span>En el principio era el Verbo. El Verbo se hizo carne.</span></a>
+<a class="puerta" href="https://revelatio.app/leer?libro=romanos&cap=1&casa=1"><b>Romanos</b><span>No hay justo. La justicia de Dios se manifiesta sin la ley.</span></a>
+<a class="puerta" href="https://revelatio.app/leer?libro=apocalipsis&cap=1&casa=1"><b>Apocalipsis</b><span>El Cordero está en el trono. Las iglesias son nombradas.</span></a>
+</div>
+<p style="margin-top:16px"><a href="canon.html">Los sesenta y seis, libro por libro</a></p>
+</section>
 <div class="strip">
 <a href="metodo.html"><small>01</small><b>El método</b></a>
 <a href="estudios.html"><small>02</small><b>Los estudios</b></a>
 <a href="cuaderno.html"><small>03</small><b>El cuaderno</b></a>
 <a href="https://revelatio.app/leer"><small>04</small><b>La Biblia</b></a>
 </div>
-<main>
 <section>
-<h2>Si es la primera vez</h2>
-<p class="lede">Cielo Efata es la escuela. RevelatiO es el lugar donde se abre la Biblia. Las dos son una sola obra, con la misma cuenta y el mismo cuaderno.</p>
-<p>No leemos un versículo suelto para animarnos. Leemos un pasaje completo y lo estudiamos con seis preguntas: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. Al terminar, escribimos un solo paso para esta semana. Si no sabes por dónde empezar, hay tres pasajes: Marcos 1, Juan 3 y Hechos 2. Si ya estudias con rigor, abre Juan 1 o Isaías 53.</p>
-<p style="margin-top:16px"><a href="metodo.html">Leer cómo se estudia</a> · <a href="https://revelatio.app/umbral">Cómo empezar en RevelatiO</a></p>
-</section>
-<section>
-<h2>Los ensayos que conviene leer</h2>
-<p class="lede">Tres ensayos para quien ya lee con exigencia: el Verbo era Dios y se hizo carne; el Siervo herido por nuestras rebeliones; y la justicia de Dios, sin la ley, en la sangre de Cristo. Cada uno recorre las seis preguntas. Cada uno cierra con una conclusión del Dr. Alejandro Sirit.</p>
+<h2>Los ensayos que hay que leer</h2>
+<p class="lede">Para el estudioso bíblico, la casa no abre con un versículo de consuelo. Abre con dos materias: el Verbo era Dios y se hizo carne, y el Siervo herido por nuestras rebeliones. Seis pasos del método VERDAD. Una conclusión del Dr. Alejandro Sirit.</p>
 <div class="two">
 <a class="feature" href="juan-1.html">
 <small>Cristología · Juan 1:1–18</small>
 <h3>El Verbo se hizo carne</h3>
 <p>El prólogo no es un poema para abrir el libro: es la tesis. Quien lo recorta a un versículo de diciembre no ha leído. Aquí hay eternidad, creación, rechazo, tabernáculo y el Unigénito que declara al Padre.</p>
-<p style="color:#d4b56a">Leer el ensayo</p>
+<p style="color:#d4b56a">Leer el ensayo denso</p>
 </a>
 <div class="stack">
 <a class="row" href="isaias-53.html"><small>Expiación · Gólgota</small><b>Isaías 53 · el Siervo herido</b></a>
-<a class="row" href="romanos-3.html"><small>Justificación · Romanos 3</small><b>Justicia de Dios, sin la ley</b></a>
-<a class="row" href="estudios.html"><small>El año · 52 semanas</small><b>Materias con el método VERDAD</b></a>
+<a class="row" href="estudios.html"><small>Doce ensayos</small><b>Materias con el método VERDAD</b></a>
+<a class="row" href="filipenses-2.html"><small>Himno</small><b>Filipenses 2 · forma de siervo</b></a>
 </div>
 </div>
 </section>
 <section>
 <h2>Por dónde empezar</h2>
-<p class="lede">Si es la primera vez, empieza por uno de estos tres pasajes. El primero pide volverse. El segundo pide nacer de nuevo. El tercero pregunta qué hacer después de oír. Cada uno se lee completo y se cierra con un paso para esta semana.</p>
+<p class="lede">Si es la primera vez, no hace falta un menú infinito. Hay tres pasajes: el que pide volverse, el que pide nacer de nuevo y el que pregunta qué hacer después de oír. Cada uno se lee entero y se cierra con algo concreto para esta semana.</p>
 <div class="salas">
 <a class="sala" href="marcos-1.html"><small>Empezar · Marcos 1</small><b>Arrepentíos</b><p>Jesús anuncia que el reino de Dios se acercó y pide que te vuelvas y creas. Si estás empezando, este es el lugar.</p></a>
 <a class="sala" href="juan-3.html"><small>Juan 3</small><b>Nacer de nuevo</b><p>Nicodemo era maestro y aún así Jesús le dijo que necesitaba nacer de nuevo. Para quien ya conoce y todavía no ha nacido de lo alto.</p></a>
@@ -145,8 +154,8 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </div>
 </section>
 <section>
-<h2>El cuaderno, en los dos lugares</h2>
-<p class="lede">Lo que el pasaje te pide no se queda solo en la cabeza. Se escribe: una nota, una idea o una grabación. Con tu cuenta, la misma libreta vive aquí y en RevelatiO. Sin cuenta, queda en este aparato hasta que entres.</p>
+<h2>Una sola libreta en las dos casas</h2>
+<p class="lede">Lo que el pasaje te pide no se queda solo en la cabeza. Se escribe: una nota, una idea o una grabación. Con tu cuenta vive aquí y en RevelatiO. Sin cuenta, queda en este aparato hasta que entres.</p>
 <div class="two">
 <a class="feature" href="cuaderno.html">
 <small>El cuaderno</small>
@@ -162,8 +171,8 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </div>
 </section>
 <section>
-<h2>El ritmo de esta escuela</h2>
-<p class="lede">Cada día, la misma palabra hebrea o griega para todos. Cada semana, un pasaje estudiado con las seis preguntas. Cada mes, un ensayo largo. No es un versículo de consuelo: es el ritmo de estudio.</p>
+<h2>Tres ritmos. Una casa.</h2>
+<p class="lede">Cada día, la misma palabra hebrea o griega para todos. Cada semana, un pasaje estudiado con el método. Cada mes, un ensayo largo. No es un versículo de consuelo ni un devocional: es el ritmo de estudio de esta casa.</p>
 <div class="two">
 <a class="feature" id="hoy" href="https://revelatio.app/lema">
 <small>Hoy · la palabra</small>
@@ -173,14 +182,14 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </a>
 <div class="stack">
 <a class="row" id="semana" href="estudios.html"><small>Esta semana · el estudio</small><b>El método de seis pasos</b></a>
-<a class="row" href="tratados.html"><small>Este mes · el ensayo</small><b>El ensayo de este mes</b></a>
-<a class="row" href="https://revelatio.app/umbral"><small>Las puertas</small><b>Cómo empezar, con tres pasajes</b></a>
+<a class="row" href="https://revelatio.app/tratados"><small>Este mes · el ensayo</small><b>El ensayo de este mes</b></a>
+<a class="row" href="https://revelatio.app/oficio"><small>Las guías</small><b>Cómo leer, cómo hablar, cómo responder</b></a>
 </div>
 </div>
 </section>
 <section>
 <h2>Cómo se abre un pasaje</h2>
-<p class="lede">La fe que no se ejercita se vuelve estéril. La Escritura tiene la última palabra; lo demás se sienta atrás. Esta escuela usa el método VERDAD: seis preguntas, siempre sobre un capítulo, nunca sobre un tema suelto.</p>
+<p class="lede">La fe que no se ejercita se vuelve estéril. El texto manda; lo demás se sienta atrás. Esta casa usa el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión): seis pasos, siempre sobre un capítulo, nunca sobre un tema suelto.</p>
 <div class="manifest" style="margin-top:24px">
 <p><strong>Ver</strong> el pasaje entero, en voz alta si puedes.</p>
 <p><strong>Entorno</strong> — quién escribe, a quién, qué viene antes y después.</p>
@@ -193,7 +202,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </section>
 <section>
 <h2>El estudio no es un versículo suelto</h2>
-<p class="lede">Es el lugar donde un pasaje se abre hasta que pide algo concreto. Tres textos para empezar. El prólogo de Juan, Isaías 53 y Romanos 3 para quien estudia con rigor. El año entero está escrito: cincuenta y dos semanas, el mismo pasaje para todos, con las seis preguntas y una conclusión. El capítulo se lee en RevelatiO.</p>
+<p class="lede">Es el lugar donde un pasaje se abre hasta que pide algo concreto. Tres textos para empezar. El prólogo de Juan para quien estudia de verdad. Once ensayos ya escritos. Cincuenta y dos semanas, el mismo pasaje para todos. El capítulo se lee en RevelatiO.</p>
 <div class="two">
 <a class="feature" href="2-pedro-1.html">
 <small>Estudio publicado</small>
@@ -203,7 +212,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </a>
 <div class="stack">
 <a class="row" href="juan-1.html"><small>Prólogo · Juan 1</small><b>El Verbo se hizo carne</b></a>
-<a class="row" href="romanos-3.html"><small>Justificación · Romanos 3</small><b>Justicia de Dios, sin la ley</b></a>
 <a class="row" href="filipenses-2.html"><small>Himno · Filipenses 2</small><b>El himno de Cristo</b></a>
 <a class="row" href="santiago-1.html"><small>Espejo · Santiago 1</small><b>El altar del espejo</b></a>
 <a class="row" href="romanos-12.html"><small>Culto · Romanos 12</small><b>No os conforméis</b></a>
@@ -215,27 +223,27 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </section>
 <section>
 <h2>Las guías</h2>
-<p class="lede">Páginas que no caducan. Explican cómo se lee, cómo se predica y cómo se responde una objeción. Quien llega aprende. El capítulo está al lado, en RevelatiO.</p>
+<p class="lede">Páginas que no caducan. El que ya estudió las marca. Quien llega aprende. El capítulo está al lado, en RevelatiO.</p>
 <div class="salas">
 <a class="sala" href="https://revelatio.app/strong"><small>Índice</small><b>Números Strong</b><p>Qué es un número. Qué no es. Cómo usar el original sin que el diccionario predique.</p></a>
 <a class="sala" href="https://revelatio.app/hermeneutica"><small>Reglas</small><b>Cómo leer</b><p>El texto manda. El versículo no viaja solo. Las lenguas originales sirven al pasaje.</p></a>
 <a class="sala" href="https://revelatio.app/homiletica"><small>Si vas a hablar</small><b>Del pasaje a la palabra</b><p>Un texto, un solo punto. Del pasaje al paso concreto, sin consejos genéricos.</p></a>
 <a class="sala" href="https://revelatio.app/argumento"><small>Si alguien objeta</small><b>La pregunta difícil</b><p>Alguien objeta. Este pasaje responde. No uno más cómodo.</p></a>
 <a class="sala" href="https://revelatio.app/lema"><small>Diario</small><b>La palabra de hoy</b><p>La misma palabra hebrea o griega para todos. Se lee en tres pasajes, no como un versículo de consuelo.</p></a>
-<a class="sala" href="tratados.html"><small>Mensual</small><b>Tratados</b><p>Un ensayo largo, una vez al mes. Se lee aquí, como un libro, con el pase de la hoja.</p></a>
+<a class="sala" href="https://revelatio.app/tratados"><small>Mensual</small><b>Tratados</b><p>Un ensayo largo, una vez al mes, cuando está listo.</p></a>
 </div>
 </section>
 <section id="obras">
 <h2>Obras</h2>
 <p class="lede">Hay siete tomos. Bástate es el séptimo, no un anexo aparte. Cada tapa, con su sinopsis, se lee junto al capítulo en RevelatiO. Lo que importa es el texto, no la tienda.</p>
 <div class="books">
-<a class="book" href="https://revelatio.app/obras"><img src="cover-efata.jpg" alt="Éfata"/><span>Éfata</span></a>
-<a class="book" href="https://revelatio.app/obras"><img src="cover-golgota.jpg" alt="El código del Gólgota"/><span>El código del Gólgota</span></a>
-<a class="book" href="https://revelatio.app/obras"><img src="cover-bastate.jpg" alt="Bástate"/><span>Bástate</span></a>
-<a class="book" href="https://revelatio.app/obras"><img src="cover-cielo.jpg" alt="Cuando el cielo se cae"/><span>Cuando el cielo se cae</span></a>
-<a class="book" href="https://revelatio.app/obras"><img src="cover-fe.jpg" alt="La fe no basta"/><span>La fe no basta</span></a>
-<a class="book" href="https://revelatio.app/obras"><img src="cover-espejo.jpg" alt="El altar del espejo"/><span>El altar del espejo</span></a>
-<a class="book" href="https://revelatio.app/obras"><img src="cover-callar.jpg" alt="Callar para ganar"/><span>Callar para ganar</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cover-sello.jpg" alt="Éfata"/><span>Éfata</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cover-golgota.png" alt="El código del Gólgota"/><span>El código del Gólgota</span></a>
+<a class="book" href="https://revelatio.app/obras"><span class="plate">Bástate</span><span>Bástate · tomo 7</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cover-cielo.png" alt="Cuando el cielo se cae"/><span>Cuando el cielo se cae</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cover-fe.png" alt="La fe no basta"/><span>La fe no basta</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cover-espejo.png" alt="El altar del espejo"/><span>El altar del espejo</span></a>
+<a class="book" href="https://revelatio.app/obras"><img src="cover-callar.png" alt="Callar para ganar"/><span>Callar para ganar</span></a>
 </div>
 </section>
 <section>
