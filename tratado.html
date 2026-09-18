@@ -62,16 +62,11 @@ a{color:var(--gold)}
 </div>
 <script type="module">
 const BOOKS = {
-  "buscad-primeramente": { n:"01", mes:"Abril 2026", title:"Buscad primeramente", ref:"Mateo 6:33", drive:"1frg3NNHYvNlrY6h3O95et3IA4TxQTbIT", cap:"https://www.revelatio.app/leer?libro=mateo&cap=6&vs=33" },
-  "todo-lo-puedo": { n:"02", mes:"Mayo 2026", title:"Todo lo puedo", ref:"Filipenses 4:13", drive:"1XDPq40BhiRJhrkS61dUFaEhBOuI333l9", cap:"https://www.revelatio.app/leer?libro=filipenses&cap=4&vs=13" },
-  "pensamientos-de-paz": { n:"03", mes:"Junio 2026", title:"Pensamientos de paz", ref:"Jeremías 29:11", drive:"1LV232uCcx1gAq6Ly1-08i_QqbnOjKuB_", cap:"https://www.revelatio.app/leer?libro=jeremias&cap=29&vs=11" },
-  "prospere-tu-alma": { n:"04", mes:"Julio 2026", title:"Prospere tu alma", ref:"3 Juan 2", drive:"1sAb36AU8P1AL5Gd87OAduiX7RWu1Oh8b", cap:"https://www.revelatio.app/leer?libro=3-juan&cap=1&vs=2" },
-  "ventanas-de-los-cielos": { n:"05", mes:"Agosto 2026", title:"Las ventanas de los cielos", ref:"Malaquías 3:10", drive:"1-3UWt8aXSd3h-vkAjPQiZj4P26vySZf5", cap:"https://www.revelatio.app/leer?libro=malaquias&cap=3&vs=10" },
-  "muerte-y-vida": { n:"06", mes:"Septiembre 2026", title:"La muerte y la vida", ref:"Proverbios 18:21", drive:"1q0kGx52F0masbOjpRUcQVpRdF5iUC_Qe", cap:"https://www.revelatio.app/leer?libro=proverbios&cap=18&vs=21" }
+  "muerte-y-vida": { n:"06", mes:"Septiembre 2026", title:"La muerte y la vida", ref:"Proverbios 18:21", drive:"1JQrDjcNJtt6yeZ-nKErkc2k6xFBDXSwL", cap:"https://www.revelatio.app/leer?libro=proverbios&cap=18&vs=21" }
 };
 
 const q = new URLSearchParams(location.search);
-const slug = q.get("slug") || (location.hash || "").replace(/^#/, "") || "";
+const slug = q.get("slug") || (location.hash || "").replace(/^#/, "") || "muerte-y-vida";
 const book = BOOKS[slug];
 const leafEl = document.getElementById("leaf");
 const underEl = document.getElementById("under");
@@ -86,7 +81,7 @@ let total = 0;
 
 if (!book) {
   kicker.textContent = "Tratado";
-  leafEl.innerHTML = `<div class="cover"><p>Ese tratado no está en esta casa.</p><a class="btn" href="tratados.html">Volver a Tratados</a></div>`;
+  leafEl.innerHTML = `<div class="cover"><p>Este mes se lee La muerte y la vida.</p><a class="btn" href="tratados.html">Volver a Tratados</a></div>`;
 } else {
   document.title = book.title + " | Cielo Efata";
   kicker.textContent = `Tratado ${book.n} · ${book.mes} · ${book.ref}`;
