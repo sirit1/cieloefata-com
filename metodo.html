@@ -3,157 +3,245 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<link rel="icon" href="cover-sello.jpg"/>
+<link rel="icon" href="cielo-mark-color.png"/>
 <meta name="theme-color" content="#0f2033"/>
-<title>Cómo se estudia un pasaje | Cielo Efata</title>
-<meta name="description" content="El método VERDAD enseña a leer un pasaje completo de la Biblia con seis preguntas, y a salir con un solo paso para esta semana. Lo explica el Dr. Alejandro Sirit."/>
+<title>Cómo se estudia un pasaje · Cielo Efata</title>
+<meta name="description" content="El oficio de esta escuela: tres pasajes para quien nunca ha leído, y seis preguntas llamadas VERDAD para quien ya estudia. Se enseña con Marcos 1, no se lista."/>
 <link rel="canonical" href="https://www.cieloefata.com/metodo.html"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
-body{margin:0;background:#efe3c6;font-family:Source Sans 3,sans-serif;color:#1a2433}
-nav{background:#0f2033;display:flex;gap:14px;justify-content:center;align-items:center;padding:10px;flex-wrap:wrap}
-nav img{height:32px;width:32px;border-radius:50%;object-fit:cover;background:#fff}
-nav a{color:#f3e6c8;text-decoration:none;font-size:13px;letter-spacing:.08em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 6px}
-main{max-width:720px;margin:0 auto;padding:40px 18px 72px}
-h1,h2,h3{font-family:Cormorant Garamond,serif;color:#0f2033}
-h1{font-size:clamp(32px,6vw,48px);line-height:1.1;margin:.35rem 0 0}
-h2{font-size:1.7rem;margin:2.2rem 0 .6rem}
-.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#b38728}
-p,li{line-height:1.8;color:#3d4a5c}
-a{color:#8a6418}
-.intro p{margin:1rem 0 0;max-width:40em}
-.resumen{margin:1.4rem 0 0;padding:0;list-style:none}
-.resumen li{background:#fffaf0;padding:12px 16px;margin:8px 0;border-radius:.5rem}
-.resumen b{color:#0f2033;font-family:Cormorant Garamond,serif;font-size:1.15rem}
-.abecedario{display:grid;grid-template-columns:repeat(6,1fr);gap:.35rem;margin:1.4rem 0 0;padding:0;list-style:none}
-.abecedario a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:3.5rem;padding:.45rem .2rem;border-radius:.5rem;background:#fffaf0;text-decoration:none;color:#0f2033}
-.abecedario b{font-family:Cormorant Garamond,serif;font-size:1.55rem;color:#b38728;font-weight:600;line-height:1}
-.abecedario span{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:#3d4a5c;margin-top:.2rem;text-align:center}
-.paso{background:#fffaf0;padding:22px 20px;margin:14px 0;border-radius:.75rem;scroll-margin-top:4.5rem}
-.paso small{color:#b38728;letter-spacing:.12em;text-transform:uppercase;font-size:11px}
-.paso h3{font-size:1.45rem;margin:.35rem 0 0}
-.pregunta{font-family:Cormorant Garamond,serif;font-style:italic;color:#b38728;margin:.55rem 0 0;font-size:1.2rem}
-.paso p{margin:.75rem 0 0}
-.lie{background:#fff4ea;border-left:3px solid #8b2e2e;padding:12px 14px;margin-top:.9rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;background:#b38728;color:#0f2033;text-decoration:none;padding:12px 16px;margin:8px 8px 0 0;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
-.btn.ghost{background:transparent;box-shadow:inset 0 0 0 1px #b38728}
-footer{background:#0f2033;color:#d4b56a;text-align:center;padding:20px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
-a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2px}
-@media(max-width:640px){.abecedario{grid-template-columns:repeat(3,1fr)}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+:root{--ink:#0f2033;--gold:#b38728;--parch:#efe3c6;--paper:#fffaf0;--muted:#3d4a5c;--lie:#8b2e2e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--parch);color:#1a2433;font-family:"Source Sans 3",sans-serif;font-size:17px;line-height:1.7}
+a{color:#8a6418;text-decoration:none}
+nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px 22px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;color:#efe3c6;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+.brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
+nav .links{display:flex;flex-wrap:wrap;gap:8px 14px}
+nav .links a{color:#efe3c6;font-size:12px;letter-spacing:.08em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 6px}
+.hero{position:relative;overflow:hidden;background:#08111b;padding:14px 18px}
+.hero .dust{position:absolute;inset:0;pointer-events:none;opacity:.95;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='135' viewBox='0 0 240 135'><g fill='%23e8c978'><circle cx='14' cy='18' r='0.7' opacity='0.5'/><circle cx='38' cy='54' r='0.45' opacity='0.32'/><circle cx='62' cy='14' r='0.6' opacity='0.42'/><circle cx='86' cy='78' r='0.4' opacity='0.28'/><circle cx='110' cy='32' r='0.75' opacity='0.48'/><circle cx='134' cy='66' r='0.4' opacity='0.26'/><circle cx='158' cy='12' r='0.55' opacity='0.38'/><circle cx='182' cy='48' r='0.45' opacity='0.3'/><circle cx='206' cy='96' r='0.65' opacity='0.44'/><circle cx='222' cy='28' r='0.35' opacity='0.24'/><circle cx='24' cy='110' r='0.5' opacity='0.33'/><circle cx='72' cy='98' r='0.7' opacity='0.46'/><circle cx='118' cy='118' r='0.4' opacity='0.27'/><circle cx='164' cy='108' r='0.55' opacity='0.36'/><circle cx='210' cy='122' r='0.45' opacity='0.3'/></g></svg>");background-repeat:repeat;background-size:240px 135px}
+.hero .row{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.hero .seal{display:block;height:72px;width:auto;max-height:72px;object-fit:contain}
+.hero .slogan{margin:0;max-width:16em;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.05rem,2.5vw,1.4rem);line-height:1.3;color:#e4c888;text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.kicker{letter-spacing:.2em;text-transform:uppercase;color:#8a6418;font-size:11px;margin:14px 0 8px}
+h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,5.6vw,52px);color:var(--ink);letter-spacing:.02em;line-height:1.05;margin:0}
+h2{font-family:"Cormorant Garamond",serif;font-size:clamp(26px,3.6vw,36px);margin:0 0 8px;color:var(--ink)}
+h3{font-family:"Cormorant Garamond",serif;font-size:22px;margin:4px 0 6px;color:var(--ink)}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--gold);color:var(--ink);padding:12px 18px;margin:6px 6px 6px 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.cta.fill{background:var(--gold);color:#0c1724;border:0}
+main{max-width:1080px;margin:0 auto;padding:0 20px 64px}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #d9c594;border-bottom:1px solid #d9c594;margin:0 -20px}
+.strip a{padding:18px 16px;color:#1a2433;border-right:1px solid #d9c594}
+.strip a:last-child{border-right:0}
+.strip small{display:block;letter-spacing:.14em;text-transform:uppercase;font-size:10px;color:#8a6418}
+.strip b{display:block;font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;margin-top:4px}
+section{padding:40px 0 8px}
+.lede{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:20px;color:var(--muted);max-width:36em;line-height:1.45}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.atlas{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:28px}
+.grupo{margin:0 0 22px}
+.grupo p.g{margin:0 0 8px;color:var(--muted);font-size:14px;line-height:1.5}
+.libro{display:block;padding:8px 0;border-top:1px solid #e6d3a6;color:inherit}
+.libro strong{display:block;font-family:"Cormorant Garamond",serif;font-size:18px;color:var(--ink);font-weight:600}
+.libro span{display:block;font-size:14px;color:var(--muted);line-height:1.45;margin-top:2px}
+.sala{display:block;background:#fffaf0;padding:18px 16px;margin:0}
+.sala small{letter-spacing:.14em;text-transform:uppercase;font-size:10px;color:#8a6418}
+.sala b{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;margin:6px 0;color:var(--ink)}
+.sala p{margin:0;color:var(--muted);line-height:1.6;font-size:15px}
+.salas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.item{display:block;background:#fff8ea;padding:16px 18px;margin:10px 0;color:inherit}
+.item em{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8a6418}
+.item strong{display:block;font-family:"Cormorant Garamond",serif;font-size:22px;color:#12263a;margin:4px 0}
+.item.door{background:#0f2033;color:#f6ecd4}
+.item.door strong{color:#f6ecd4}
+.item.door span{color:#c9d3de}
+.feature{background:#0f2033;color:#f6ecd4;padding:28px 26px;display:block}
+.feature small{letter-spacing:.16em;text-transform:uppercase;color:#d4b56a;font-size:10px}
+.feature h3{font-family:"Cormorant Garamond",serif;font-size:32px;margin:10px 0;font-weight:600;color:#f6ecd4}
+.feature p{color:#c9d3de;line-height:1.65}
+.paso{background:#fffaf0;padding:1.35rem 1.2rem;margin:1.1rem 0;border-radius:.75rem}
+.paso header{display:flex;gap:.9rem;align-items:flex-start}
+.paso .letra{font-family:"Cormorant Garamond",serif;font-size:3.2rem;color:var(--gold);line-height:.9;font-weight:600}
+.paso small{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.paso h2{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--ink);font-size:clamp(1.2rem,3.4vw,1.55rem);font-weight:500;line-height:1.35;margin:.4rem 0 0}
+.trampa{color:var(--muted);margin:.7rem 0 0}
+.lie{background:#fff4ea;border-left:3px solid var(--lie);padding:12px 14px;color:var(--ink);margin:10px 0}
+.oracion{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.2rem;color:var(--muted);max-width:36em}
+.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px;margin-top:24px}
+.book{background:#fffaf0;color:inherit;display:block}
+.book img,.book .plate{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+.book .plate{display:flex;align-items:flex-end;background:#0f2033;color:#f6ecd4;padding:12px;font-family:"Cormorant Garamond",serif;font-size:22px}
+.book span{display:block;padding:8px 6px 12px;font-size:12px;text-align:center}
+footer{background:#0f2033;color:#d4b56a;text-align:center;padding:28px 16px;letter-spacing:.12em;font-size:11px;text-transform:uppercase}
+footer a{color:#f6ecd4}
+@media(max-width:800px){.strip,.two,.atlas,.salas{grid-template-columns:1fr}.strip a{border-right:0;border-bottom:1px solid #d9c594}}
+a:focus-visible{outline:2px solid #b38728;outline-offset:2px}
 </style>
 </head>
 <body>
+
 <nav>
-<img src="cover-sello.jpg" alt="Cielo Efata"/>
-<a href="index.html">Inicio</a>
-<a href="estudios.html">Estudios</a>
-<a href="cuaderno.html">Cuaderno</a>
-<a href="canon.html">Canon</a>
-<a href="https://revelatio.app/umbral">Cómo empezar</a>
-<a href="https://revelatio.app/leer">Leer la Biblia</a>
-</nav>
-<main>
-<p class="kicker">Cómo se estudia aquí</p>
-<h1>Seis preguntas para leer un pasaje</h1>
-<div class="intro">
-<p>Bienvenido. Cielo Efata es una escuela de estudio bíblico. La dirige el Dr. Alejandro Sirit.</p>
-<p>Aquí no leemos un versículo suelto para animarnos. Leemos un pasaje completo —casi siempre un capítulo— y lo estudiamos con seis preguntas. Al terminar, escribimos una sola cosa que vamos a hacer esta semana, y se la decimos a alguien de confianza.</p>
-<p>Para no olvidar el orden, usamos una palabra de seis letras: <strong>VERDAD</strong>. Cada letra es un paso.</p>
+<a class="brand" href="index.html"><img src="cielo-mark-color.png" alt="Cielo Efata"/> Cielo Efata</a>
+<div class="links">
+<a href="metodo.html">Cómo leer</a>
+<a href="canon.html">Los 66 libros</a>
+<a href="estudios.html">El estudio</a>
+<a href="tratados.html">El tratado</a>
+<a href="https://revelatio.app/cuaderno?casa=1">Tu cuaderno</a>
+<a href="https://revelatio.app/leer?casa=1">Leer la Biblia</a>
 </div>
-
-<ul class="resumen">
-<li><b>V · Ver.</b> Lee el pasaje completo. Anota lo que dice, sin tu opinión todavía.</li>
-<li><b>E · Entorno.</b> Pregunta quién escribió, a quién, y qué hay antes y después.</li>
-<li><b>R · Revelación.</b> Mira si el hebreo o el griego muestran algo que la traducción no alcanza a decir.</li>
-<li><b>D · Doctrina.</b> Di qué afirma este pasaje de Dios, del pecado, de Cristo y de su pueblo.</li>
-<li><b>A · Argumento.</b> Escribe la objeción que te nace al leer, con palabras sencillas, y respóndela con este mismo texto.</li>
-<li><b>D · Decisión.</b> Elige un solo paso para esta semana. Dilo a alguien de confianza, o escríbelo en el cuaderno.</li>
-</ul>
-
-<nav class="abecedario" aria-label="Los seis pasos del método VERDAD">
-<a href="#paso-ver"><b>V</b><span>Ver</span></a>
-<a href="#paso-entorno"><b>E</b><span>Entorno</span></a>
-<a href="#paso-revelacion"><b>R</b><span>Revelación</span></a>
-<a href="#paso-doctrina"><b>D</b><span>Doctrina</span></a>
-<a href="#paso-argumento"><b>A</b><span>Argumento</span></a>
-<a href="#paso-decision"><b>D</b><span>Decisión</span></a>
 </nav>
-
-<article class="paso" id="paso-ver">
-<small>1 · Ver</small>
-<h3>Lee el pasaje completo</h3>
-<p class="pregunta">¿Qué dice el pasaje, línea por línea, sin añadir todavía tu opinión?</p>
-<p>El primer paso es el más sencillo y el que más se salta. Lees el pasaje entero, en voz alta si puedes. Anotas lo que dice, línea por línea. Todavía no interpretas. Todavía no buscas una frase para recordar. Solo oyes el texto.</p>
-<p>Si sales de la lectura con una frase memorable y sin el capítulo, todavía no has leído. Un versículo recortado para que encaje en lo que ya pensabas no es estudio.</p>
+<header class="hero">
+<span class="dust" aria-hidden="true"></span>
+<div class="row">
+<img class="seal" src="cielo-sello.png?v=8" alt="Cielo Efata: el león y el cordero"/>
+<p class="slogan">La Escritura manda sobre el comentario.</p>
+</div>
+</header>
+<main>
+<p class="kicker">Cómo leer</p>
+<h1>El oficio de esta escuela</h1>
+<p class="lede">Si nunca has leído la Biblia, tres pasajes te reciben y no piden erudición: Marcos pide volverte, Juan pide nacer de nuevo, Hechos pregunta qué hacer después de oír. Si ya lees, el mismo oficio se recorre entero: seis preguntas llamadas VERDAD. El que empieza hace tres gestos. El estudio de la semana hace las seis.</p>
+<p class="oracion">Antes de leer: «Ábreme los ojos, y miraré las maravillas de tu ley.» No es una técnica. Es pedir oír, porque el oído no se fabrica.</p>
+<p>Si estás solo, el ritmo sirve igual: la pregunta y el acto se escriben y se vuelven a leer el domingo. Si enseñas a alguien, este es el orden.</p>
+<h2>Si nunca has leído</h2>
+<p>Empieza por uno de estos tres. Cada estudio abre el capítulo entero, nombra quién escribe y a quién, y termina pidiendo un acto. No son resúmenes. Son lecturas.</p>
+<div class="salas">
+<a class="sala" href="marcos-1.html"><small>1 · Marcos 1</small><b>Arrepentíos</b><p>Jesús anuncia que el reino se acercó y pide que te vuelvas y creas.</p></a>
+<a class="sala" href="juan-3.html"><small>2 · Juan 3</small><b>Nacer de nuevo</b><p>Nicodemo era maestro. Jesús no le mejora el oficio: le pide nacer de lo alto.</p></a>
+<a class="sala" href="hechos-2.html"><small>3 · Hechos 2</small><b>¿Qué haremos?</b><p>Los que oyeron no preguntaron qué sentir. Preguntaron qué hacer.</p></a>
+</div>
+<h2>VERDAD breve</h2>
+<p>El que empieza no recorre las seis letras con la densidad de un tratado. Recorre el mismo oficio en tres gestos: oye el capítulo entero, hace una pregunta honesta al texto —no al ánimo— y elige un acto, uno solo, dicho a alguien que pueda preguntarlo el domingo. Ver, una pregunta, un acto. Las seis esperan en el estudio de la semana.</p>
+<article class="paso"><h3>1. Lee el capítulo entero</h3><p>En voz alta, si puedes. No recortes un versículo para que quede bien en una imagen. El texto pide el contexto: quién escribe, a quién, en qué hora, qué clase de escrito es. Puedes empezar por <a href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Marcos 1</a>.</p></article>
+<article class="paso"><h3>2. Hazle una pregunta al pasaje</h3><p>No le preguntes a tu ánimo. Pregúntale al texto: qué dice, a quién, qué exige. Escríbela. Si no cabe en una frase entera, aún no está lista.</p></article>
+<article class="paso"><h3>3. Elige un acto para esta semana</h3><p>Uno solo. Una obediencia, una confesión, una restitución. Si el texto pide fe, la fe es el acto. Díselo a alguien que pueda preguntártelo el domingo. Si no hay a quién, déjalo escrito y vuélvelo a leer.</p></article>
+<section id="metodo">
+<p class="kicker">El método de esta escuela</p>
+<h2>VERDAD: seis preguntas, siempre el mismo orden</h2>
+<p>El estudio de la semana y el tratado del mes recorren las seis: Ver, Entorno, lengua original, Doctrina, Argumento y un acto. No es otro método. Es el mismo, oído hasta el fondo. Quien ya lee no sustituye el capítulo por el ensayo: el ensayo sirve al capítulo.</p>
+<p>Las dos des no son la misma letra dos veces. Doctrina es lo que el pasaje no permite callar. Decisión es lo que tú no puedes aplazar. Se subtitulan para que no se confundan.</p>
+<article class="paso" id="ver">
+<header><span class="letra">V</span><div>
+<small>1 · Ver el capítulo</small>
+<h2>¿Qué dice el pasaje, línea por línea, sin tu comentario?</h2>
+</div></header>
+<p>Se lee el pasaje entero, en voz alta si se puede, sin recortar el versículo para que encaje en una frase. Luego se pregunta: quién habla, a quién, qué se repite, qué se opone, dónde corta, qué clase de escrito es. El texto que no se oye completo se convierte en un lema.</p>
+<p>¿Quién habla y a quién? ¿Qué se repite, qué se opone, dónde corta el relato o el argumento? ¿Qué clase de escrito es: narración, ley, salmo, profecía, carta, visión? ¿Qué no hace el texto, aunque tú lo esperarías?</p>
+<p class="trampa">Trampa: Recortar un versículo para que quepa en una frase. El texto se vuelve lema.</p>
 </article>
-
-<article class="paso" id="paso-entorno">
-<small>2 · Entorno</small>
-<h3>Sitúa el texto</h3>
-<p class="pregunta">¿Quién escribe, a quién, en qué momento, y qué hay antes y después?</p>
-<p>Un versículo no se entiende solo. Pregunta quién lo escribió, a quién se dirigía, en qué momento de la historia de Israel o de la Iglesia, y qué hay inmediatamente antes y después. El capítulo y el libro protegen al texto de nuestro ánimo.</p>
-<p>Hay dos excesos. Uno: convertir el estudio en una clase de historia y no volver al pasaje. Otro: leer el versículo como si viajara solo. El entorno sirve al texto; no lo reemplaza.</p>
+<article class="paso" id="entorno">
+<header><span class="letra">E</span><div>
+<small>2 · El entorno del libro</small>
+<h2>¿Quién escribe, a quién, en qué hora, qué clase de escrito es, y qué hay antes y después?</h2>
+</div></header>
+<p>Quién escribe, a quién, en qué año, qué clase de escrito es, qué viene antes y qué sigue. Un versículo no viaja solo. Un salmo no se lee como una ley. Génesis no es un proverbio suelto; Romanos no es una consigna. El entorno protege al texto del ánimo de quien lee.</p>
+<p>Autor, destinatarios, fecha, lugar, propósito, ocasión. Qué género es, y qué no se le puede pedir. Qué hay en el pasaje anterior y en el que sigue.</p>
+<p class="trampa">Trampa: La arqueología sustituye a la lectura, o el versículo viaja solo. Un salmo se lee como una ley.</p>
 </article>
-
-<article class="paso" id="paso-revelacion">
-<small>3 · Revelación</small>
-<h3>Atiende a las lenguas originales</h3>
-<p class="pregunta">¿Qué muestra el hebreo o el griego que la traducción no alcanza a decir? Si no estás seguro, dilo con honestidad.</p>
-<p>A veces una palabra, un tiempo verbal o una repetición en hebreo o en griego aclaran lo que la traducción ya dijo. Eso se anota. Si no hay certeza, también se anota: «no estoy seguro». El diccionario ayuda a ver; no predica.</p>
-<p>Una raíz de diccionario no es una revelación. El número Strong es un índice para hallar una palabra, no un púlpito. Si lo que hallaste contradice el pasaje entero, gana el pasaje.</p>
+<article class="paso" id="revelacion">
+<header><span class="letra">R</span><div>
+<small>3 · La lengua original</small>
+<h2>¿Qué deja ver el hebreo o el griego que la traducción ya no muestra? Si no hay certeza, dilo.</h2>
+</div></header>
+<p>Lo que el hebreo o el griego dejan ver, con honestidad. Una glosa, un tiempo verbal, una repetición. Si no hay certeza del vocablo, se dice. No se fabrica una revelación privada: se atiende a lo que la lengua ya mostró.</p>
+<p>Una o dos palabras, no un desfile de raíces. Tiempo verbal, repetición, conector. Si no hay certeza, se escribe la duda.</p>
+<p class="trampa">Trampa: La falacia etimológica: una raíz no es una revelación. El diccionario se vuelve oráculo.</p>
 </article>
-
-<article class="paso" id="paso-doctrina">
-<small>4 · Doctrina</small>
-<h3>Di lo que este pasaje afirma</h3>
-<p class="pregunta">¿Qué dice este pasaje de Dios, del pecado, de Cristo y de su pueblo que no puedes callar?</p>
-<p>La doctrina, aquí, no es un sistema que se impone al texto. Es lo que este pasaje afirma: de Dios, del pecado, de Cristo y de su pueblo. No es el consejo práctico que serviría para cualquier capítulo, ni la frase que nos gustaría llevarnos.</p>
-<p>Hay dos extremos. Uno: hacer que el pasaje confirme lo que ya creías. Otro: salir solo con un consejo útil y dejar callado lo que el texto dice. Aquí cierra el texto, no una denominación.</p>
+<article class="paso" id="doctrina">
+<header><span class="letra">D</span><div>
+<small>4 · Doctrina · lo que el texto enseña</small>
+<h2>¿Qué dice este pasaje de Dios, del pecado, de Cristo y del pueblo que no puedes callar?</h2>
+</div></header>
+<p>Qué dice el pasaje de Dios, del pecado, de Cristo y del pueblo. Si el propio canon muestra al Hijo, se nombra; no se inventa. La carga del texto, no el lema que nos gustaría llevarnos. La doctrina aquí no es un sistema que se impone: es lo que el pasaje no permite callar.</p>
+<p>¿Qué de Dios? ¿Qué del pecado? ¿Qué de Cristo, si el propio canon lo muestra? ¿Qué del pueblo? ¿Qué de la consumación?</p>
+<p class="trampa">Trampa: Imponer un sistema. O al revés: salir solo con un consejo útil. Hallar a Cristo donde el canon no lo muestra, o no hallarlo donde sí.</p>
 </article>
-
-<article class="paso" id="paso-argumento">
-<small>5 · Argumento</small>
-<h3>Nombra la objeción</h3>
-<p class="pregunta">¿Qué objeción te nace al leerlo? Escríbela con palabras sencillas. Luego responde con este mismo pasaje, no con otro más cómodo.</p>
-<p>Este es el paso que los planes de lectura suelen omitir, y no se salta. Ya viste el texto, su entorno, lo que la lengua muestra y lo que afirma. Ahora escribes la resistencia. Puede ser la del texto contra ti, o la tuya contra el texto. Alguien dirá: «eso no va conmigo», «eso es imposible», «eso es legalismo». Esa voz se escribe con palabras sencillas y se responde con este mismo pasaje.</p>
-<div class="lie">Si la objeción no te alcanza de verdad, todavía no es la tuya. Si saltas este paso, la doctrina queda limpia y la decisión, genérica. El texto no te tocó: tú lo usaste.</div>
+<article class="paso" id="argumento">
+<header><span class="letra">A</span><div>
+<small>5 · La objeción</small>
+<h2>Nombra la objeción en una frase que dirías en la cocina, no en el aula. Luego responde con este pasaje, no con uno mejor.</h2>
+</div></header>
+<p>La resistencia que duele: la del texto contra ti, o la tuya contra el texto. Si no hay resistencia, el estudio aún no empezó. Alguien dirá que eso es legalismo, que es imposible, que no va con él. Esa voz se nombra y se responde con el mismo pasaje.</p>
+<p>¿La objeción se diría en una cocina? ¿La respuesta cita este pasaje, o huye a otro? ¿Concedes lo que la objeción tiene de cierto?</p>
+<p class="trampa">Trampa: Pelear contra un espantapájaros. Huir a otro versículo. O no pelear: el estudio queda tierno y no empezó.</p>
 </article>
-
-<article class="paso" id="paso-decision">
-<small>6 · Decisión</small>
-<h3>Un solo paso esta semana</h3>
-<p class="pregunta">¿Qué acto o confesión, uno solo, pide esta semana? ¿A quién se lo vas a decir?</p>
-<p>El estudio que no pide nada todavía no terminó. La decisión es un acto o una confesión para esta semana. Uno, no siete. Se dice en voz alta a alguien que pueda preguntarte el domingo. Si no hay quién, queda escrito en el cuaderno.</p>
-<p>Hay dos riesgos. Uno: una lista de propósitos que el pasaje no pidió. Otro: un estudio admirable que no cambia nada. Un paso concreto, dicho a alguien de confianza, cierra el método.</p>
-<p><a href="cuaderno.html?ref=Decisi%C3%B3n">Escribir el paso en el cuaderno</a></p>
+<article class="paso" id="decision">
+<header><span class="letra">D</span><div>
+<small>6 · Decisión · un acto</small>
+<h2>¿Qué acto o confesión, uno solo, pide esta semana? ¿A quién se lo vas a decir?</h2>
+</div></header>
+<p>Una obediencia o una confesión para esta semana. Una, no siete. Si el texto pide fe, la fe es el acto. El texto que no pide nada todavía no se abrió. La decisión se dice en voz alta a alguien que pueda preguntarte el domingo; si no hay quién, queda escrita.</p>
+<p>Uno solo, no siete. Obediencia o confesión, dicha a un testigo. Si el texto pide fe, la fe es el acto; no se sustituye por un sentimiento.</p>
+<p class="trampa">Trampa: Siete propósitos. O ninguno. Moralismo sin Cristo, o doctrina sin obediencia.</p>
 </article>
-
-<h2>Dónde se usa</h2>
-<p>Hay dos lugares, y son la misma obra.</p>
-<p><strong>RevelatiO</strong> es donde se abre la Biblia. Allí las seis preguntas aparecen junto al versículo, para que las respondas tú.</p>
-<p><strong>Cielo Efata</strong> es la escuela. Aquí te explicamos cada paso y publicamos los ensayos largos. Cada ensayo cierra con una conclusión firmada por el Dr. Alejandro Sirit.</p>
-<p>Nuestra regla es sencilla: el texto manda. La Escritura tiene la última palabra, no el ánimo, no el púlpito, no una frase memorable.</p>
-
-<h2>Dónde suele fallar el estudio</h2>
-<p>Las letras no oyen por ti. Si las rellenas solo para terminar, no has estudiado: has tachado una lista. VERDAD es un orden de trabajo, no un rito.</p>
-<p>Doctrina y Decisión no son lo mismo. Las dos empiezan con D y se confunden. La doctrina es lo que el pasaje afirma y no te deja callar. La decisión es lo que tú vas a hacer esta semana.</p>
-<p>El diccionario no predica. Una palabra griega no es el estudio. Si lo que hallaste contradice el capítulo, gana el capítulo.</p>
-<p>El Argumento es el paso que más se omite. Si lo saltas, la doctrina queda limpia y la decisión, genérica.</p>
-<p>No todos los textos se leen igual. Un salmo no se lee como una ley. Una parábola no se lee como una carta.</p>
-<p>El método no sustituye la oración. El Salmo 119 pide ojos abiertos antes de leer. Si el método se vuelve técnica y la oración desaparece, el orden ha fallado.</p>
-
-<h2>Qué no es este método</h2>
-<p>No es un versículo del día. No es un plan de hábitos. No es la lectio divina monástica —leer, meditar, orar, contemplar—, que es otro orden, de otro siglo. VERDAD no la sustituye. Es un trabajo concreto: leer el pasaje, entenderlo en su contexto y salir con un paso para esta semana.</p>
-
-<p style="margin-top:1.8rem">
-<a class="btn" href="juan-1.html">Ver el método en Juan 1</a>
-<a class="btn" href="isaias-53.html">Y en Isaías 53</a>
-<a class="btn ghost" href="https://revelatio.app/umbral">Si es la primera vez</a>
-</p>
-<p>Si quieres practicar tú, abre un capítulo en RevelatiO: las seis preguntas están junto al versículo. <a href="https://revelatio.app/leer?libro=juan&cap=1&metodo=true">Abrir Juan 1 en la Biblia</a> · <a href="cuaderno.html">Abrir el cuaderno</a> · <a href="estudios.html">Todos los estudios</a></p>
+</section>
+<section>
+<p class="kicker">El oficio, en un texto</p>
+<h2>Marcos 1, recorrido entero</h2>
+<p class="lede">El método no se entiende en un esquema. Se entiende en un capítulo. Este es el primer pasaje de la escuela.</p>
+<article class="paso">
+<small>V · Ver</small>
+<p>Marcos 1 se oye entero, no el versículo 15 suelto. Juan el Bautista prepara; Jesús es bautizado; el cielo se rasga; el Espíritu le impulsa al desierto; después de que Juan es preso, Jesús entra en Galilea y predica: el tiempo se ha cumplido, el reino se ha acercado, arrepentíos y creed en el evangelio. Llama a cuatro pescadores. Enseña en Cafarnaún, echa un demonio, sana a la suegra de Simón, se retira a orar, limpia a un leproso. Quien se lleva solo «cambia tu mentalidad» aún no ha visto al Rey que manda, ni al desierto, ni al leproso.</p>
+</article>
+<article class="paso">
+<small>E · Entorno</small>
+<p>Marcos es evangelio, no epístola ni manual. Anónimo en el texto; la tradición lo pone en boca de Juan Marcos, intérprete de Pedro, hacia los años 55–65, a menudo para gentiles en Roma, porque explica costumbres judías. El propósito se oye en 1:1: Jesús, Cristo, Hijo de Dios. El Mesías se oculta hasta que la cruz lo declara. El capítulo 1 no es un prólogo filosófico: es el arranque oral de un relato que irá a Jerusalén.</p>
+</article>
+<article class="paso">
+<small>R · Revelación</small>
+<p>εὐαγγέλιον: buena noticia, no consejo de vida mejor. πεπλήρωται ὁ καιρός: el tiempo se ha cumplido —plazo de Dios, no reloj de Galilea. ἤγγικεν: el reino se ha acercado porque el Rey está ahí. μετανοεῖτε καὶ πιστεύετε: dos presentes de mandato, juntos. Arrepentirse no es un cambio de humor; creer no es un sentimiento. Quien no está seguro de una glosa, lo dice. El diccionario no oracula.</p>
+</article>
+<article class="paso">
+<small>D · Doctrina</small>
+<p>Dios no espera a que Galilea se prepare: el reino se acerca porque el Hijo está. El pecado se nombra con dos verbos: no se admira el reino; se deja el reino antiguo. Cristo no es un maestro que ofrece consejos espirituales: es el Rey que exige arrepentimiento y fe, el Santo de Dios a quien los demonios reconocen, el que toca al leproso. El pueblo que llama no son eruditos: pescadores. La consumación ya irrumpe; aún no se consuma. Quien predica el reino sin arrepentimiento, o la fe sin este Rey, ya no predica Marcos 1.</p>
+</article>
+<article class="paso">
+<small>A · Argumento</small>
+<p>Alguien objeta: «eso es legalismo; el reino es aceptación, no arrepentimiento». Marcos 1 no deja el reino sin los dos verbos. Juan ya había predicado arrepentimiento; Jesús añade el evangelio y se pone a sí mismo como cumplimiento. Otra voz: «yo ya creo; no necesito volverme». El texto no ofrece fe sin volverse, ni volverse sin este evangelio. Quien quiere el reino sin el Rey, o el Rey sin la corona, aún no ha oído Galilea.</p>
+</article>
+<article class="paso">
+<small>D · Decisión</small>
+<p>Esta semana, un solo acto: lee Marcos 1 entero, en voz alta, y nombra delante de alguien el reino antiguo que todavía no has dejado —un pecado con nombre, una justicia propia, un Cristo sin corona—. No un resumen. El capítulo. El domingo, que te pregunten si lo leíste y si lo nombraste.</p>
+</article>
+<p><a class="cta fill" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Leer Marcos 1 entero</a></p>
+</section>
+<section>
+<p class="kicker">La objeción, a la vista</p>
+<h2>El Argumento es la quinta letra.</h2>
+<p>El Argumento es la quinta letra. Ya viste el pasaje, su entorno, lo que la lengua muestra y lo que no se puede callar. Ahora nombra la resistencia. Sin esa resistencia el estudio no empezó: solo se ordenó.</p>
+<div class="two">
+<article class="sala"><b>El texto contra ti</b><p>El pasaje te contradice. «Añadid a vuestra fe» contra la fe barata. «Nacer de nuevo» contra el que ya se cree bueno. Aquí no inventas un adversario: el adversario eres tú, y el texto no pide permiso.</p></article>
+<article class="sala"><b>Tú contra el texto</b><p>La voz que ya tienes lista: «eso es legalismo», «eso es perfeccionismo», «eso no va conmigo», «Dios no puede pedir eso». Se escribe en una frase que dirías en la cocina. Luego se responde con este pasaje, no con uno más cómodo.</p></article>
+</div>
+<div class="lie"><small>2 Pedro 1:5</small><p>Alguien objeta: «Eso es perfeccionismo.» Pedro no mide tu racha. Mide si suministras. El estéril del versículo 8 y 9 olvidó la purificación, no un hábito de productividad.</p><p><a href="https://revelatio.app/leer?libro=2-pedro&cap=1&vs=5&casa=1">Abrir el pasaje</a></p></div>
+<div class="lie"><small>Filipenses 4:13</small><p>Alguien objeta: «Entonces visualiza tu victoria.» El entorno es una cárcel. Pablo acaba de decir que sabe abundar y saber tener escasez. Cristo fortalece para el contentamiento, no para el récord.</p><p><a href="https://revelatio.app/leer?libro=filipenses&cap=4&vs=13&casa=1">Abrir el pasaje</a></p></div>
+<div class="lie"><small>Juan 3:16</small><p>Alguien objeta: «Dios acepta a cada uno como está.» El mismo capítulo exige nacer de nuevo. El amor del Padre envía al Hijo para que el que cree no perezca. El «de tal manera» no anula el «es necesario».</p><p><a href="https://revelatio.app/leer?libro=juan&cap=3&vs=16&casa=1">Abrir el pasaje</a></p></div>
+<div class="lie"><small>Salmo 51:4</small><p>Alguien objeta: «Primero tengo que perdonarme a mí mismo.» «Contra ti, contra ti solo he pecado.» El salmo no niega el daño a Betsabé y a Urías. Pone el tribunal donde está: delante de Dios. El perdón que el alma fabrica no lava.</p><p><a href="https://revelatio.app/leer?libro=salmos&cap=51&vs=4&casa=1">Abrir el pasaje</a></p></div>
+<div class="lie"><small>Marcos 1:15</small><p>Alguien objeta: «Eso es legalismo; el reino es aceptación.» Jesús no ofrece el reino sin arrepentimiento, ni arrepentimiento sin este evangelio. Los dos verbos van juntos. El Rey está ahí; la corona no se negocia.</p><p><a href="https://revelatio.app/leer?libro=marcos&cap=1&vs=15&casa=1">Abrir el pasaje</a></p></div>
+</section>
+<section>
+<h2>Si venías de otro oficio</h2>
+<p>Hay quien llega con un diario de cuatro letras: escribir un versículo, observar, aplicar, orar. Aquí el capítulo sustituye al versículo; el entorno y la lengua sustituyen a la ocurrencia; la objeción sustituye a la lista de propósitos; y la oración no es un recuadro: es el aire al abrir y al cerrar. Hay quien llega con observar, interpretar y aplicar. Ver y Entorno observan; la lengua y la Doctrina interpretan; el Argumento prueba si la interpretación duele; el acto recorta la aplicación a uno. Hay quien llega rezando el texto. No se le quita la rodilla. Se le niega que «lo que me dice a mí» sea el tribunal de lo que el texto dijo.</p>
+</section>
+<section>
+<h2>Trampas del oficio</h2>
+<article class="paso"><h3>El acrónimo como liturgia</h3><p>Seis letras no oyen por ti. Si las rellenas para terminar, el método ya mintió. VERDAD es un orden, no un sacramento.</p></article>
+<article class="paso"><h3>Las dos des</h3><p>Doctrina y Decisión se confunden a la primera. No son la misma: una es lo que el pasaje no permite callar; la otra es lo que tú no puedes aplazar. Se subtitulan siempre: Doctrina, lo que el texto enseña; Decisión, un acto. Juntas impiden la doctrina estéril y la obediencia inventada.</p></article>
+<article class="paso"><h3>Revelación hipertrofiada</h3><p>Quien acaba de descubrir el diccionario se queda en la lengua. Una glosa no es el estudio. Las lenguas sirven; no oraculan. Para quien empieza: una sola palabra, una glosa, y el permiso de no saber.</p></article>
+<article class="paso"><h3>El Argumento saltado</h3><p>Es el paso que los diarios de versículo no tienen. Si lo saltas, la doctrina queda linda y la decisión genérica. El texto no te tocó: tú lo usaste.</p></article>
+<article class="paso"><h3>El género aplastado</h3><p>La misma grilla sobre un lamento, una genealogía y una parábola puede aplanarlos. El entorno incluye el género. Un salmo no se «decide» como una ley.</p></article>
+<article class="paso"><h3>Sin oración nombrada</h3><p>VERDAD es orden de estudio, no regla de oración. El Salmo 119 pide ojos abiertos antes de leer. La oración no es un paso extra: es el aire. Si no está, el método se vuelve técnica.</p></article>
+</section>
+<p class="oracion">Al terminar: «Habla, que tu siervo oye.» El acto de esta semana es la respuesta. Si no hay acto, aún se está en el umbral.</p>
+<h2>Mateo, Marcos y Lucas</h2>
+<p>Se llaman sinópticos porque, puestos en columnas, se ven a un golpe de vista. Cuentan la misma vida de Jesús con voces distintas. No se funden. Se lee cada evangelio entero; luego se compara el mismo episodio en los tres. Juan se estudia aparte.</p>
+<p><a class="cta" href="https://revelatio.app/leer?libro=mateo&cap=1&casa=1">Mateo 1</a>
+<a class="cta" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Marcos 1</a>
+<a class="cta" href="https://revelatio.app/leer?libro=lucas&cap=1&casa=1">Lucas 1</a>
+<a class="cta fill" href="https://revelatio.app/sinopticos">Cómo se comparan los tres</a></p>
 </main>
-<footer>Soli Deo Gloria · Cielo Efata · La Biblia se estudia</footer>
-<script src="escritura.js" defer></script>
+<footer>Soli Deo Gloria · Cielo Efata · La Escritura manda sobre el comentario · <a href="https://revelatio.app/leer?casa=1">RevelatiO, la lectura</a></footer>
 </body>
 </html>
