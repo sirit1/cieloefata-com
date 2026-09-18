@@ -6,14 +6,26 @@
 <link rel="icon" href="cielo-mark-color.png"/>
 <meta name="theme-color" content="#0f2033"/>
 <title>Cielo Efata — La Biblia, para ser leída</title>
-<meta name="description" content="Escuela de lectura de la Escritura. El capítulo se lee entero, el estudio recorre seis preguntas, el tratado del mes es un ensayo largo. RevelatiO es la lectura de esta misma obra."/>
+<meta name="description" content="Escuela de lectura de la Escritura. Arrepentimiento, conversión, bautismo y firmeza. El capítulo se lee entero; el estudio recorre seis preguntas; el tratado del mes es un ensayo largo."/>
 <link rel="canonical" href="https://www.cieloefata.com/"/>
+<meta property="og:site_name" content="Cielo Efata"/>
+<meta property="og:title" content="Cielo Efata — La Biblia, para ser leída"/>
+<meta property="og:description" content="Escuela de lectura de la Escritura. Arrepentimiento, conversión, bautismo y firmeza. El capítulo se lee entero; el estudio recorre seis preguntas; el tratado del mes es un ensayo largo."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.cieloefata.com/"/>
+<meta property="og:image" content="https://www.cieloefata.com/cielo-sello.png"/>
+<meta property="og:locale" content="es_VE"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cielo Efata — La Biblia, para ser leída"/>
+<meta name="twitter:description" content="Escuela de lectura de la Escritura. Arrepentimiento, conversión, bautismo y firmeza. El capítulo se lee entero; el estudio recorre seis preguntas; el tratado del mes es un ensayo largo."/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 :root{--ink:#0f2033;--gold:#b38728;--parch:#efe3c6;--paper:#fffaf0;--muted:#3d4a5c;--lie:#8b2e2e}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--parch);color:#1a2433;font-family:"Source Sans 3",sans-serif;font-size:17px;line-height:1.7}
 a{color:#8a6418;text-decoration:none}
+.skip-link{position:absolute;left:12px;top:-48px;z-index:50;background:var(--ink);color:var(--parch);padding:.6rem 1rem}
+.skip-link:focus{top:12px}
 nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:10px 22px;gap:10px}
 .brand{display:flex;align-items:center;gap:10px;color:#efe3c6;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
@@ -60,6 +72,23 @@ section{padding:40px 0 8px}
 .feature small{letter-spacing:.16em;text-transform:uppercase;color:#d4b56a;font-size:10px}
 .feature h3{font-family:"Cormorant Garamond",serif;font-size:32px;margin:10px 0;font-weight:600;color:#f6ecd4}
 .feature p{color:#c9d3de;line-height:1.65}
+.hoy{background:#0f2033;color:#f6ecd4;padding:28px 26px;margin:0}
+.hoy small{letter-spacing:.16em;text-transform:uppercase;color:#d4b56a;font-size:10px}
+.hoy h2{color:#f6ecd4;margin:8px 0 6px}
+.hoy p{color:#c9d3de;max-width:36em}
+.hoy .cta{border-color:#d4b56a;color:#f6ecd4}
+.hoy .cta.fill{background:var(--gold);color:#0c1724;border:0}
+.seguir{background:#12263a;color:#efe3c6;text-align:center;padding:12px 16px;font-size:15px}
+.seguir a{color:#e4c888}
+.estantes{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:12px;margin-top:20px}
+.estante{display:block;background:#fffaf0;padding:16px 14px;min-height:6.5rem;color:inherit}
+.estante small{display:block;letter-spacing:.12em;text-transform:uppercase;font-size:10px;color:#8a6418}
+.estante b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.35rem;margin:6px 0 4px;color:var(--ink)}
+.estante span{color:var(--muted);font-size:14px}
+.siete{display:grid;grid-template-columns:repeat(auto-fit,minmax(13.5rem,1fr));gap:12px;margin-top:20px}
+.gesto{background:#fffaf0;padding:18px 16px}
+.gesto b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.35rem;color:var(--ink);margin-bottom:6px}
+.sostener{margin-top:1.4rem;color:var(--muted);max-width:36em}
 .paso{background:#fffaf0;padding:1.35rem 1.2rem;margin:1.1rem 0;border-radius:.75rem}
 .paso header{display:flex;gap:.9rem;align-items:flex-start}
 .paso .letra{font-family:"Cormorant Garamond",serif;font-size:3.2rem;color:var(--gold);line-height:.9;font-weight:600}
@@ -77,9 +106,11 @@ footer{background:#0f2033;color:#d4b56a;text-align:center;padding:28px 16px;lett
 footer a{color:#f6ecd4}
 @media(max-width:800px){.strip,.two,.atlas,.salas{grid-template-columns:1fr}.strip a{border-right:0;border-bottom:1px solid #d9c594}}
 a:focus-visible{outline:2px solid #b38728;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 <nav>
 <a class="brand" href="index.html"><img src="cielo-mark-color.png" alt="Cielo Efata"/> Cielo Efata</a>
@@ -87,31 +118,32 @@ a:focus-visible{outline:2px solid #b38728;outline-offset:2px}
 <a href="metodo.html">Cómo leer</a>
 <a href="canon.html">Los 66 libros</a>
 <a href="estudios.html">El estudio</a>
-<a href="tratados.html">El tratado</a>
-<a href="https://revelatio.app/cuaderno?casa=1">Tu cuaderno</a>
 <a href="https://revelatio.app/leer?casa=1">Leer la Biblia</a>
 </div>
 </nav>
 <header class="hero">
 <span class="dust" aria-hidden="true"></span>
 <div class="row">
-<img class="seal" src="cielo-sello.png?v=8" alt="Cielo Efata: el león y el cordero"/>
+<img class="seal" src="cielo-sello.png?v=10" alt="Cielo Efata: el león y el cordero"/>
 <p class="slogan">La Escritura manda sobre el comentario.</p>
 </div>
 </header>
-<div class="strip">
-<a id="semana" href="estudios.html"><small>Esta semana · el estudio</small><b>El método de seis preguntas</b></a>
-<a href="https://revelatio.app/tratados"><small>Este mes · el tratado</small><b>El ensayo de este mes</b></a>
-<a href="metodo.html"><small>Cómo leer</small><b>El oficio</b></a>
-</div>
-<main>
+<p class="seguir" id="seguir" hidden><a class="seguir-link" href="#"><span class="seguir-txt">Seguir la lectura</span></a></p>
+<aside class="hoy" id="tarjeta-semana">
+<small>Esta semana · el mismo pasaje para todos</small>
+<h2 id="hoy-titulo">El estudio de esta escuela</h2>
+<p id="hoy-pasaje">Un pasaje se abre entero. Se estudia. Se sale con un acto, uno solo, dicho a alguien de confianza.</p>
+<p style="margin-top:18px">
+<a class="cta fill" id="hoy-capitulo" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Leer el capítulo entero</a>
+<a class="cta" id="hoy-leer" href="estudios.html">Abrir el estudio</a>
+<a class="cta" href="https://revelatio.app/cuaderno?casa=1">Escribir el acto</a>
+</p>
+</aside>
+<main id="contenido">
 <section>
 <p class="kicker">Escuela de lectura de la Escritura</p>
 <h1>La Biblia, para ser leída</h1>
-<p class="lede">Cielo Efata recibe a quien abre la Biblia por primera vez y a quien ya la estudia: el mismo texto, un camino distinto. El capítulo se lee entero en RevelatiO. Aquí viven el estudio de la semana, el tratado del mes —un ensayo largo sobre un versículo mal citado— y el método de seis preguntas.</p>
-<p id="hoy-pasaje" style="margin-top:16px;color:#3d4a5c"></p>
-<p style="margin-top:16px"><a class="cta fill" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Leer Marcos 1 entero</a>
-<a class="cta" href="metodo.html">Cómo se estudia aquí</a></p>
+<p class="lede">Cielo Efata recibe a quien abre la Escritura. El llamado es el de siempre: arrepentimiento, conversión, bautismo y firmeza en la fe. El mismo texto, un camino distinto para quien nunca ha leído y para quien ya estudia. El capítulo se lee entero en RevelatiO. Aquí viven el estudio de la semana y el tratado del mes.</p>
 </section>
 <section>
 <div class="two">
@@ -120,143 +152,38 @@ a:focus-visible{outline:2px solid #b38728;outline-offset:2px}
 <h3>Marcos 1</h3>
 <p>El Evangelio según Marcos abre con un mandato: volverse y creer. Es el primer pasaje de esta escuela. Cuando termines el capítulo, Juan 3 y Hechos 2 esperan. No piden erudición. Piden oír.</p>
 </a>
-<a class="feature" href="estudios.html">
+<a class="feature" id="ya-leer" href="estudios.html">
 <small>Si ya estudias</small>
-<h3>La semana y el mes</h3>
-<p>Un mismo pasaje para todos esta semana. Un tratado este mes: el versículo que se cita de memoria, leído otra vez dentro de su capítulo.</p>
+<h3 id="ya-titulo">La semana y el mes</h3>
+<p id="ya-ref">Un mismo pasaje para todos esta semana. Un tratado este mes: el versículo que se cita de memoria, leído otra vez dentro de su capítulo.</p>
 </a>
 </div>
+</section>
+<section>
+<p class="kicker">Tres gestos para empezar</p>
+<h2>Oír, preguntar, un acto</h2>
+<p class="oracion">Antes de leer: «Ábreme los ojos, y miraré las maravillas de tu ley.» No es una técnica. Es pedir oír, porque el oído no se fabrica.</p>
+<p class="lede">El que empieza no recorre las seis letras con la densidad de un tratado. Recorre el mismo oficio en tres gestos: oye el capítulo entero, hace una pregunta honesta al texto —no al ánimo— y elige un acto, uno solo, dicho a alguien que pueda preguntarlo el domingo. Ver, una pregunta, un acto. Las seis esperan en el estudio de la semana.</p>
+<div class="salas">
+<article class="gesto"><b>1. Lee el capítulo entero</b><p>En voz alta, si puedes. No recortes un versículo para que quede bien en una imagen.</p></article>
+<article class="gesto"><b>2. Una pregunta al pasaje</b><p>No al ánimo. Qué dice, a quién, qué exige. Si no cabe en una frase, aún no está lista.</p></article>
+<article class="gesto"><b>3. Un acto esta semana</b><p>Uno solo. Si el texto pide fe, la fe es el acto. Díselo a alguien que pueda preguntártelo el domingo.</p></article>
+</div>
+<p style="margin-top:16px"><a href="metodo.html">Las seis preguntas, Marcos 1 recorrido entero, las trampas y el puente</a></p>
 </section>
 <section id="canon">
 <p class="kicker">Qué es la Biblia</p>
 <h2>Sesenta y seis libros</h2>
-<p class="lede">La Escritura de la Iglesia: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Debajo está el mapa, a la vista. Un toque abre el primer capítulo de ese libro.</p>
-<div class="atlas"><div><p class="kicker">Treinta y nueve libros</p><h2>Antiguo Testamento</h2><div class="grupo"><h3>La Ley</h3><p class="g">Cinco libros. El mundo se abre, un pueblo nace, y Dios habla en el monte.</p><a class="libro" href="https://revelatio.app/leer?libro=genesis&cap=1&casa=1"><strong>Génesis</strong><span>Dios crea, el hombre cae, y Abraham recibe una promesa de la que nacerá un pueblo.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=exodo&cap=1&casa=1"><strong>Éxodo</strong><span>Jehová oye el clamor, saca a Israel de Egipto y habla diez palabras en el monte.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=levitico&cap=1&casa=1"><strong>Levítico</strong><span>Un Dios santo habita en medio de un pueblo pecador: hay sangre, hay distinciones, hay un día de expiación.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=numeros&cap=1&casa=1"><strong>Números</strong><span>El desierto cuenta cómo un pueblo censado, quejado y perdonado llega al umbral de la tierra.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=deuteronomio&cap=1&casa=1"><strong>Deuteronomio</strong><span>Moisés predica la Ley otra vez: oye, Israel; ama; enseña a tus hijos; elige la vida.</span></a></div>
-<div class="grupo"><h3>Los históricos</h3><p class="g">De la tierra prometida al destierro. Reyes, jueces, un templo que se levanta y se cae.</p><a class="libro" href="https://revelatio.app/leer?libro=josue&cap=1&casa=1"><strong>Josué</strong><span>La tierra se toma. La Ley no se aparta de la boca. Jehová pelea, y hay que escoger a quién servir.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=jueces&cap=1&casa=1"><strong>Jueces</strong><span>Cada uno hacía lo que bien le parecía. Un ciclo de infidelidad, clamor y un libertador que no basta.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=rut&cap=1&casa=1"><strong>Rut</strong><span>Una moabita se pega a Israel y entra en la línea de David. La redención tiene un pariente cercano.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-samuel&cap=1&casa=1"><strong>1 Samuel</strong><span>El pueblo pide rey. Saúl cae. David es ungido. Dios no mira lo que mira el hombre.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-samuel&cap=1&casa=1"><strong>2 Samuel</strong><span>David reina, peca y es perdonado. Dios le promete una casa y una simiente para siempre.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-reyes&cap=1&casa=1"><strong>1 Reyes</strong><span>Salomón construye el templo. El reino se parte. Elías se para delante de Jehová.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-reyes&cap=1&casa=1"><strong>2 Reyes</strong><span>Israel y Judá caen. El templo se quema. El destierro no anula la Palabra.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-cronicas&cap=1&casa=1"><strong>1 Crónicas</strong><span>Genealogías y el culto. El cronista mira a David para que el pueblo vuelto no olvide el trono.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-cronicas&cap=1&casa=1"><strong>2 Crónicas</strong><span>Del templo de Salomón a la ruina, y un edicto de Ciro: suba a Jerusalén el que quiera.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=esdras&cap=1&casa=1"><strong>Esdras</strong><span>Vuelven del destierro. Se reedifica el altar. Esdras lee la Ley y el pueblo llora.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=nehemias&cap=1&casa=1"><strong>Nehemías</strong><span>Se levantan los muros. Se lee el libro y se pone el sentido, para que el pueblo entienda.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=ester&cap=1&casa=1"><strong>Ester</strong><span>Dios no se nombra y no está ausente. Una reina judía, un decreto de muerte, y el pueblo vive.</span></a></div>
-<div class="grupo"><h3>Los poéticos</h3><p class="g">Oración, sabiduría y lamento. No son adornos: son la voz de quien está delante de Dios.</p><a class="libro" href="https://revelatio.app/leer?libro=job&cap=1&casa=1"><strong>Job</strong><span>El justo sufre. Los amigos explican mal. Dios habla desde el torbellino y no debe explicaciones.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=salmos&cap=1&casa=1"><strong>Salmos</strong><span>Ciento cincuenta oraciones: alabanza, lamento, reino. El Nuevo las cita como voz de Cristo.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=proverbios&cap=1&casa=1"><strong>Proverbios</strong><span>El temor de Jehová es el principio. La lengua, la mesa y el perezoso se juzgan aquí.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=eclesiastes&cap=1&casa=1"><strong>Eclesiastés</strong><span>Vanidad bajo el sol. Al fin: teme a Dios y guarda sus mandamientos.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=cantares&cap=1&casa=1"><strong>Cantares</strong><span>El amor de un esposo y una esposa. La Iglesia lo leyó también como el amor de Cristo.</span></a></div>
-<div class="grupo"><h3>Profetas mayores</h3><p class="g">Isaías, Jeremías, Ezequiel, Daniel. El Santo de Israel, el pacto roto, el trono en el exilio.</p><a class="libro" href="https://revelatio.app/leer?libro=isaias&cap=1&casa=1"><strong>Isaías</strong><span>El Santo de Israel, el niño del trono y el Siervo herido por nuestras rebeliones.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=jeremias&cap=1&casa=1"><strong>Jeremías</strong><span>El pacto se rompe. Jerusalén cae. Se promete un pacto nuevo, escrito en el corazón.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=lamentaciones&cap=1&casa=1"><strong>Lamentaciones</strong><span>La ciudad llora. Las misericordias de Jehová son nuevas cada mañana, en medio de las ruinas.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=ezequiel&cap=1&casa=1"><strong>Ezequiel</strong><span>La gloria se va del templo. Dios da un corazón de carne y promete volver a habitar.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=daniel&cap=1&casa=1"><strong>Daniel</strong><span>En Babilonia, un joven no se contamina. Reinos se levantan y caen. El Hijo del Hombre recibe dominio.</span></a></div>
-<div class="grupo"><h3>Profetas menores</h3><p class="g">Doce voces cortas. El día de Jehová, la esposa infiel, el que traga un profeta.</p><a class="libro" href="https://revelatio.app/leer?libro=oseas&cap=1&casa=1"><strong>Oseas</strong><span>El profeta toma una esposa infiel para mostrar a un Dios que no suelta a su pueblo.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=joel&cap=1&casa=1"><strong>Joel</strong><span>Una plaga de langostas. Rasgad el corazón, no el vestido. El Espíritu se derramará.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=amos&cap=1&casa=1"><strong>Amós</strong><span>El pastor de Tecoa anuncia juicio contra la injusticia de un culto que no oye al pobre.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=abdias&cap=1&casa=1"><strong>Abdías</strong><span>Edom se ríe de Jerusalén. El día de Jehová llega también para el hermano que no socorrió.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=jonas&cap=1&casa=1"><strong>Jonás</strong><span>Un profeta huye. Nínive se arrepiente. A Jonás le duele la misericordia de Dios.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=miqueas&cap=1&casa=1"><strong>Miqueas</strong><span>De Belén saldrá el gobernante. Se pide justicia, misericordia y humillarte ante tu Dios.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=nahum&cap=1&casa=1"><strong>Nahúm</strong><span>Nínive caerá. Jehová es tardo para la ira, y no tiene por inocente al culpable.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=habacuc&cap=1&casa=1"><strong>Habacuc</strong><span>El justo por su fe vivirá. La visión no miente aunque el higueral no brote.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=sofonias&cap=1&casa=1"><strong>Sofonías</strong><span>El día de Jehová es grande. Un resto humilde se refugia en el nombre del Señor.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=hageo&cap=1&casa=1"><strong>Hageo</strong><span>El templo está en ruinas y las casas están enlucidas. Es tiempo de edificar la casa de Dios.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=zacarias&cap=1&casa=1"><strong>Zacarías</strong><span>El rey humilde entra sobre un asno. Una fuente se abre para el pecado. El herido es el pastor.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=malaquias&cap=1&casa=1"><strong>Malaquías</strong><span>El último de los profetas. Elías vendrá. El culto robado no se disfraza de piedad.</span></a></div></div><div><p class="kicker">Veintisiete libros</p><h2>Nuevo Testamento</h2><div class="grupo"><h3>Los Evangelios</h3><p class="g">Cuatro testigos de un solo Señor. No son biografías rivales: son el mismo Cristo, de cerca.</p><a class="libro" href="https://revelatio.app/leer?libro=mateo&cap=1&casa=1"><strong>Mateo</strong><span>Jesús, hijo de David, cumple la Ley y los Profetas. El sermón del monte y el id hasta el fin.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1"><strong>Marcos</strong><span>El evangelio no abre con un consuelo: abre con un mandato. El Hijo del Hombre vino a servir y a dar su vida.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=lucas&cap=1&casa=1"><strong>Lucas</strong><span>Un médico ordena el relato. El Padre corre hacia el hijo que vuelve. El Resucitado abre el sentido de las Escrituras.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=juan&cap=1&casa=1"><strong>Juan</strong><span>En el principio era el Verbo. El Verbo se hizo carne. Estas se han escrito para que creáis.</span></a></div>
-<div class="grupo"><h3>Hechos</h3><p class="g">El Espíritu, la Iglesia, y la Palabra que no se detiene en Jerusalén.</p><a class="libro" href="https://revelatio.app/leer?libro=hechos&cap=1&casa=1"><strong>Hechos</strong><span>El Espíritu desciende. La Iglesia nace. Felipe se sube al carro. Pablo llega a Roma. La Palabra no está presa.</span></a></div>
-<div class="grupo"><h3>Cartas de Pablo</h3><p class="g">De la justificación a la mesa de una casa. El apóstol escribe a iglesias y a hombres con nombre.</p><a class="libro" href="https://revelatio.app/leer?libro=romanos&cap=1&casa=1"><strong>Romanos</strong><span>No hay justo. La justicia de Dios se manifiesta sin la ley, en la sangre de Cristo, para el que cree.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-corintios&cap=1&casa=1"><strong>1 Corintios</strong><span>Una iglesia dividida. La cruz es locura. Si no hay resurrección, vana es la fe.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-corintios&cap=1&casa=1"><strong>2 Corintios</strong><span>Si alguno está en Cristo, nueva criatura es. El tesoro está en vasos de barro.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=galatas&cap=1&casa=1"><strong>Gálatas</strong><span>No hay otro evangelio. Con Cristo estoy juntamente crucificado. La fe obra por el amor.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=efesios&cap=1&casa=1"><strong>Efesios</strong><span>Muertos en delitos, vivificados por gracia. Un solo cuerpo. La armadura de Dios.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=filipenses&cap=1&casa=1"><strong>Filipenses</strong><span>El himno de Cristo: se humilló hasta la cruz. El que empezó la buena obra la perfeccionará.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=colosenses&cap=1&casa=1"><strong>Colosenses</strong><span>El Hijo es la imagen del Dios invisible. En Él está la plenitud. La cruz reconcilia.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-tesalonicenses&cap=1&casa=1"><strong>1 Tesalonicenses</strong><span>Una iglesia nacida en aflicción. El Señor vendrá. Consolaos unos a otros con estas palabras.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-tesalonicenses&cap=1&casa=1"><strong>2 Tesalonicenses</strong><span>No os mováis de vuestro modo de pensar. El que no quiere trabajar, que tampoco coma.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-timoteo&cap=1&casa=1"><strong>1 Timoteo</strong><span>Cómo debe conducirse uno en la casa de Dios. Un solo mediador. Guarda lo que se te ha encomendado.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-timoteo&cap=1&casa=1"><strong>2 Timoteo</strong><span>Toda la Escritura es inspirada. Predica la palabra. He peleado la buena batalla.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=tito&cap=1&casa=1"><strong>Tito</strong><span>La gracia que salva también enseña a renunciar. Ancianos irreprensibles. Palabra sana.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=filemon&cap=1&casa=1"><strong>Filemón</strong><span>Un esclavo vuelve. Pablo no manda: pide. Recíbelo como a mí.</span></a></div>
-<div class="grupo"><h3>Cartas generales</h3><p class="g">Hebreos, Santiago, Pedro, Juan, Judas. Fe que obra, esperanza que no se avergüenza.</p><a class="libro" href="https://revelatio.app/leer?libro=hebreos&cap=1&casa=1"><strong>Hebreos</strong><span>Dios habló en el Hijo. El sacerdocio de Melquisedec. La fe es sustancia de lo que se espera.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=santiago&cap=1&casa=1"><strong>Santiago</strong><span>Sed hacedores de la palabra. La fe sin obras está muerta. El que se mira al espejo y se va, se olvida.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-pedro&cap=1&casa=1"><strong>1 Pedro</strong><span>Nacidos de nuevo para una esperanza viva. Padecéis un poco. Sed santos, porque yo soy santo.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-pedro&cap=1&casa=1"><strong>2 Pedro</strong><span>Añadid a vuestra fe. La fe que no se ejercita se vuelve estéril. Vendrán burladores.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=1-juan&cap=1&casa=1"><strong>1 Juan</strong><span>Si decimos que no tenemos pecado, nos engañamos. Dios es luz. Quien ama es nacido de Dios.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=2-juan&cap=1&casa=1"><strong>2 Juan</strong><span>Andad en verdad. No recibáis al que no trae esta doctrina.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=3-juan&cap=1&casa=1"><strong>3 Juan</strong><span>Que te vaya bien, así como ya prospera tu alma. No imites lo malo, sino lo bueno.</span></a>
-<a class="libro" href="https://revelatio.app/leer?libro=judas&cap=1&casa=1"><strong>Judas</strong><span>Contendiendo por la fe una vez dada. Algunos se han infiltrado. Al que es poderoso para guardaros.</span></a></div>
-<div class="grupo"><h3>Apocalipsis</h3><p class="g">El Cordero en el trono. No es un código para calendarios: es consuelo para una Iglesia perseguida.</p><a class="libro" href="https://revelatio.app/leer?libro=apocalipsis&cap=1&casa=1"><strong>Apocalipsis</strong><span>El Cordero está en el trono. Las iglesias son nombradas. No habrá más muerte, y el que tiene sed, venga.</span></a></div></div></div>
-<p style="margin-top:18px"><a href="canon.html">Cómo se recibió este canon</a> · <a href="https://revelatio.app/libros">Autor, fecha y propósito de cada libro</a></p>
-</section>
-<section id="metodo">
-<p class="kicker">El método de esta escuela</p>
-<h2>VERDAD: seis preguntas, siempre el mismo orden</h2>
-<p class="oracion">Antes de leer: «Ábreme los ojos, y miraré las maravillas de tu ley.» No es una técnica. Es pedir oír, porque el oído no se fabrica.</p>
-<p class="lede" style="margin-top:14px">El que empieza no recorre las seis letras con la densidad de un tratado. Recorre el mismo oficio en tres gestos: oye el capítulo entero, hace una pregunta honesta al texto —no al ánimo— y elige un acto, uno solo, dicho a alguien que pueda preguntarlo el domingo. Ver, una pregunta, un acto. Las seis esperan en el estudio de la semana.</p>
-<p style="max-width:42em">El estudio de la semana y el tratado del mes recorren las seis: Ver, Entorno, lengua original, Doctrina, Argumento y un acto. No es otro método. Es el mismo, oído hasta el fondo. Quien ya lee no sustituye el capítulo por el ensayo: el ensayo sirve al capítulo. Las dos des no son la misma letra dos veces. Doctrina es lo que el pasaje no permite callar. Decisión es lo que tú no puedes aplazar.</p>
-<article class="paso">
-<header><span class="letra">V</span><div>
-<small>1 · Ver el capítulo</small>
-<h2>¿Qué dice el pasaje, línea por línea, sin tu comentario?</h2>
-</div></header>
-<p>Se lee el pasaje entero, en voz alta si se puede, sin recortar el versículo para que encaje en una frase. Luego se pregunta: quién habla, a quién, qué se repite, qué se opone, dónde corta, qué clase de escrito es. El texto que no se oye completo se convierte en un lema.</p>
-<p class="trampa">Trampa: Recortar un versículo para que quepa en una frase. El texto se vuelve lema.</p>
-</article>
-<article class="paso">
-<header><span class="letra">E</span><div>
-<small>2 · El entorno del libro</small>
-<h2>¿Quién escribe, a quién, en qué hora, qué clase de escrito es, y qué hay antes y después?</h2>
-</div></header>
-<p>Quién escribe, a quién, en qué año, qué clase de escrito es, qué viene antes y qué sigue. Un versículo no viaja solo. Un salmo no se lee como una ley. Génesis no es un proverbio suelto; Romanos no es una consigna. El entorno protege al texto del ánimo de quien lee.</p>
-<p class="trampa">Trampa: La arqueología sustituye a la lectura, o el versículo viaja solo. Un salmo se lee como una ley.</p>
-</article>
-<article class="paso">
-<header><span class="letra">R</span><div>
-<small>3 · La lengua original</small>
-<h2>¿Qué deja ver el hebreo o el griego que la traducción ya no muestra? Si no hay certeza, dilo.</h2>
-</div></header>
-<p>Lo que el hebreo o el griego dejan ver, con honestidad. Una glosa, un tiempo verbal, una repetición. Si no hay certeza del vocablo, se dice. No se fabrica una revelación privada: se atiende a lo que la lengua ya mostró.</p>
-<p class="trampa">Trampa: La falacia etimológica: una raíz no es una revelación. El diccionario se vuelve oráculo.</p>
-</article>
-<article class="paso">
-<header><span class="letra">D</span><div>
-<small>4 · Doctrina · lo que el texto enseña</small>
-<h2>¿Qué dice este pasaje de Dios, del pecado, de Cristo y del pueblo que no puedes callar?</h2>
-</div></header>
-<p>Qué dice el pasaje de Dios, del pecado, de Cristo y del pueblo. Si el propio canon muestra al Hijo, se nombra; no se inventa. La carga del texto, no el lema que nos gustaría llevarnos. La doctrina aquí no es un sistema que se impone: es lo que el pasaje no permite callar.</p>
-<p class="trampa">Trampa: Imponer un sistema. O al revés: salir solo con un consejo útil. Hallar a Cristo donde el canon no lo muestra, o no hallarlo donde sí.</p>
-</article>
-<article class="paso">
-<header><span class="letra">A</span><div>
-<small>5 · La objeción</small>
-<h2>Nombra la objeción en una frase que dirías en la cocina, no en el aula. Luego responde con este pasaje, no con uno mejor.</h2>
-</div></header>
-<p>La resistencia que duele: la del texto contra ti, o la tuya contra el texto. Si no hay resistencia, el estudio aún no empezó. Alguien dirá que eso es legalismo, que es imposible, que no va con él. Esa voz se nombra y se responde con el mismo pasaje.</p>
-<p class="trampa">Trampa: Pelear contra un espantapájaros. Huir a otro versículo. O no pelear: el estudio queda tierno y no empezó.</p>
-</article>
-<article class="paso">
-<header><span class="letra">D</span><div>
-<small>6 · Decisión · un acto</small>
-<h2>¿Qué acto o confesión, uno solo, pide esta semana? ¿A quién se lo vas a decir?</h2>
-</div></header>
-<p>Una obediencia o una confesión para esta semana. Una, no siete. Si el texto pide fe, la fe es el acto. El texto que no pide nada todavía no se abrió. La decisión se dice en voz alta a alguien que pueda preguntarte el domingo; si no hay quién, queda escrita.</p>
-<p class="trampa">Trampa: Siete propósitos. O ninguno. Moralismo sin Cristo, o doctrina sin obediencia.</p>
-</article>
-<p style="margin-top:8px"><a class="cta fill" href="metodo.html">Marcos 1 recorrido entero, las trampas y el puente</a></p>
+<p class="lede">La Escritura de la Iglesia: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Es el canon recibido, no una antología. Siete libros abren el mapa. Los estantes llevan al resto.</p>
+<p class="kicker">Siete libros para empezar</p>
+<div class="siete"><a class="sala" href="https://revelatio.app/leer?libro=genesis&cap=1&casa=1"><small>Génesis</small><b>Génesis</b><p>Dios crea, el hombre cae, y Abraham recibe una promesa de la que nacerá un pueblo.</p></a><a class="sala" href="https://revelatio.app/leer?libro=salmos&cap=1&casa=1"><small>Salmos</small><b>Salmos</b><p>Ciento cincuenta oraciones: alabanza, lamento, reino. El Nuevo las cita como voz de Cristo.</p></a><a class="sala" href="https://revelatio.app/leer?libro=isaias&cap=1&casa=1"><small>Isaías</small><b>Isaías</b><p>El Santo de Israel, el niño del trono y el Siervo herido por nuestras rebeliones.</p></a><a class="sala" href="https://revelatio.app/leer?libro=mateo&cap=1&casa=1"><small>Mateo</small><b>Mateo</b><p>Jesús, hijo de David, cumple la Ley y los Profetas. El sermón del monte y el id hasta el fin.</p></a><a class="sala" href="https://revelatio.app/leer?libro=juan&cap=1&casa=1"><small>Juan</small><b>Juan</b><p>En el principio era el Verbo. El Verbo se hizo carne. Estas se han escrito para que creáis.</p></a><a class="sala" href="https://revelatio.app/leer?libro=romanos&cap=1&casa=1"><small>Romanos</small><b>Romanos</b><p>No hay justo. La justicia de Dios se manifiesta sin la ley, en la sangre de Cristo, para el que cree.</p></a><a class="sala" href="https://revelatio.app/leer?libro=apocalipsis&cap=1&casa=1"><small>Apocalipsis</small><b>Apocalipsis</b><p>El Cordero está en el trono. Las iglesias son nombradas. No habrá más muerte, y el que tiene sed, venga.</p></a></div>
+<p class="kicker" style="margin-top:28px">Los estantes</p>
+<div class="estantes"><a class="estante" href="canon.html#grupo-ley"><small>Antiguo Testamento</small><b>La Ley</b><span>5 libros</span></a><a class="estante" href="canon.html#grupo-hist"><small>Antiguo Testamento</small><b>Los históricos</b><span>12 libros</span></a><a class="estante" href="canon.html#grupo-poet"><small>Antiguo Testamento</small><b>Los poéticos</b><span>5 libros</span></a><a class="estante" href="canon.html#grupo-may"><small>Antiguo Testamento</small><b>Profetas mayores</b><span>5 libros</span></a><a class="estante" href="canon.html#grupo-men"><small>Antiguo Testamento</small><b>Profetas menores</b><span>12 libros</span></a><a class="estante" href="canon.html#grupo-ev"><small>Nuevo Testamento</small><b>Los Evangelios</b><span>4 libros</span></a><a class="estante" href="canon.html#grupo-hech"><small>Nuevo Testamento</small><b>Hechos</b><span>1 libros</span></a><a class="estante" href="canon.html#grupo-pablo"><small>Nuevo Testamento</small><b>Cartas de Pablo</b><span>13 libros</span></a><a class="estante" href="canon.html#grupo-gen"><small>Nuevo Testamento</small><b>Cartas generales</b><span>8 libros</span></a><a class="estante" href="canon.html#grupo-apoc"><small>Nuevo Testamento</small><b>Apocalipsis</b><span>1 libros</span></a></div>
+<p style="margin-top:18px"><a href="canon.html">Los sesenta y seis, libro por libro</a> · <a href="https://revelatio.app/libros">Autor, fecha y propósito de cada libro</a></p>
 </section>
 <section id="obras">
 <h2>Obras</h2>
-<p class="lede">Hay siete tomos. Bástate es el séptimo. Cada tapa se lee junto al capítulo en RevelatiO. Lo que importa es el texto, no la tienda.</p>
+<p class="lede">Hay siete tomos. Bástate es el séptimo. Cada tapa se lee junto al capítulo. Lo que importa es el texto, no la tienda.</p>
 <div class="books">
 <a class="book" href="https://revelatio.app/obras"><img src="cielo-mark-color.png" alt="Éfata"/><span>Éfata</span></a>
 <a class="book" href="https://revelatio.app/obras"><img src="cover-golgota.png" alt="El código del Gólgota"/><span>El código del Gólgota</span></a>
@@ -268,67 +195,14 @@ a:focus-visible{outline:2px solid #b38728;outline-offset:2px}
 </div>
 </section>
 <section>
+<p class="sostener">El capítulo, el estudio y el tratado no se cobran. Si el oficio te sostuvo, puedes <a href="https://wa.me/584241674909?text=Paz.%20Quiero%20sostener%20el%20trabajo%20de%20Cielo%20Efata.%20La%20Escritura%20no%20se%20cobra.">sostener el trabajo</a>. El pasaje permanece abierto.</p>
 <h2>Correspondencia</h2>
 <p><a href="mailto:alejandro.sirit@gmail.com">alejandro.sirit@gmail.com</a> · <a href="https://wa.me/584247637691">WhatsApp</a></p>
 </section>
 </main>
 <script>
 (function(){
-  var R="https://revelatio.app/estudio/";
-  var cortes=[
-    {t:"Arrepentíos",r:"Marcos 1:14–15",href:"marcos-1.html"},
-    {t:"En el principio",r:"Génesis 1",href:R+"genesis-1"},
-    {t:"¿Dónde estás tú?",r:"Génesis 3",href:R+"genesis-3"},
-    {t:"Le fue contado",r:"Génesis 15",href:R+"genesis-15"},
-    {t:"La sangre",r:"Éxodo 12",href:R+"exodo-12"},
-    {t:"Oye, Israel",r:"Deuteronomio 6",href:R+"deuteronomio-6"},
-    {t:"Vuelve",r:"Deuteronomio 30",href:R+"deuteronomio-30"},
-    {t:"Esta ley no se apartará",r:"Josué 1",href:R+"josue-1"},
-    {t:"Casa",r:"2 Samuel 7",href:R+"2-samuel-7"},
-    {t:"Dos caminos",r:"Salmo 1",href:R+"salmo-1"},
-    {t:"Contra ti solo",r:"Salmo 51",href:R+"salmo-51"},
-    {t:"Nada me faltará",r:"Salmo 23",href:"salmo-23.html"},
-    {t:"Ay de mí",r:"Isaías 6",href:R+"isaias-6"},
-    {t:"El Siervo",r:"Isaías 53",href:"isaias-53.html"},
-    {t:"Mientras puede ser hallado",r:"Isaías 55",href:R+"isaias-55"},
-    {t:"Pacto nuevo",r:"Jeremías 31",href:R+"jeremias-31"},
-    {t:"Corazón de carne",r:"Ezequiel 36",href:R+"ezequiel-36"},
-    {t:"Rasgad el corazón",r:"Joel 2",href:R+"joel-2"},
-    {t:"Qué pide Jehová",r:"Miqueas 6:8",href:R+"miqueas-6"},
-    {t:"El justo por la fe",r:"Habacuc 2:4",href:R+"habacuc-2"},
-    {t:"De nuevo",r:"Juan 3:1–16",href:"juan-3.html"},
-    {t:"El Verbo",r:"Juan 1",href:"juan-1.html"},
-    {t:"El único camino",r:"Juan 14:6",href:"juan-14.html"},
-    {t:"El hijo que volvió",r:"Lucas 15",href:R+"lucas-15"},
-    {t:"Les abría el sentido",r:"Lucas 24",href:R+"lucas-24"},
-    {t:"Bienaventurados",r:"Mateo 5",href:R+"mateo-5"},
-    {t:"¿Quién dices que soy?",r:"Mateo 16",href:R+"mateo-16"},
-    {t:"Id",r:"Mateo 28",href:R+"mateo-28"},
-    {t:"Nieguese a sí mismo",r:"Marcos 8",href:R+"marcos-8"},
-    {t:"¿Qué haremos?",r:"Hechos 2:37–38",href:"hechos-2.html"},
-    {t:"¿Entiendes lo que lees?",r:"Hechos 8",href:R+"hechos-8"},
-    {t:"No me avergüenzo",r:"Romanos 1",href:R+"romanos-1"},
-    {t:"No hay justo",r:"Romanos 3",href:"romanos-3.html"},
-    {t:"Siendo aún pecadores",r:"Romanos 5",href:R+"romanos-5"},
-    {t:"Ninguna condenación",r:"Romanos 8",href:R+"romanos-8"},
-    {t:"No os conforméis",r:"Romanos 12:1–2",href:"romanos-12.html"},
-    {t:"Si no hay resurrección",r:"1 Corintios 15",href:R+"1-corintios-15"},
-    {t:"Nueva criatura",r:"2 Corintios 5",href:"2-corintios-5.html"},
-    {t:"Con Cristo estoy",r:"Gálatas 2:20",href:R+"galatas-2"},
-    {t:"Por gracia",r:"Efesios 2",href:R+"efesios-2"},
-    {t:"El himno de Cristo",r:"Filipenses 2:5–11",href:"filipenses-2.html"},
-    {t:"La imagen",r:"Colosenses 1",href:R+"colosenses-1"},
-    {t:"La gracia adiestra",r:"Tito 2:11–12",href:R+"tito-2"},
-    {t:"Es, pues, la fe",r:"Hebreos 11",href:R+"hebreos-11"},
-    {t:"El altar del espejo",r:"Santiago 1:22–25",href:"santiago-1.html"},
-    {t:"La fe sin obras",r:"Santiago 2",href:R+"santiago-2"},
-    {t:"Nacidos de nuevo",r:"1 Pedro 1",href:R+"1-pedro-1"},
-    {t:"La fe que no añade",r:"2 Pedro 1:5–7",href:"2-pedro-1.html"},
-    {t:"Si decimos que no tenemos",r:"1 Juan 1",href:R+"1-juan-1"},
-    {t:"Ponían el sentido",r:"Nehemías 8",href:R+"nehemias-8"},
-    {t:"Toda la Escritura",r:"2 Timoteo 3",href:R+"2-timoteo-3"},
-    {t:"Hago nuevas",r:"Apocalipsis 21",href:R+"apocalipsis-21"}
-  ];
+  var cortes=[{"t":"El Verbo se hizo carne","r":"Juan 1:1–18","href":"juan-1.html","libro":"juan","cap":1},{"t":"Arrepentíos","r":"Marcos 1:14–15","href":"marcos-1.html","libro":"marcos","cap":1},{"t":"De nuevo","r":"Juan 3:1–16","href":"juan-3.html","libro":"juan","cap":3},{"t":"¿Qué haremos?","r":"Hechos 2:37–38","href":"hechos-2.html","libro":"hechos","cap":2},{"t":"Nueva criatura","r":"2 Corintios 5:17–21","href":"2-corintios-5.html","libro":"2-corintios","cap":5},{"t":"La fe no basta","r":"2 Pedro 1:5–7","href":"2-pedro-1.html","libro":"2-pedro","cap":1},{"t":"El himno de Cristo","r":"Filipenses 2:5–11","href":"filipenses-2.html","libro":"filipenses","cap":2},{"t":"El altar del espejo","r":"Santiago 1:22–25","href":"santiago-1.html","libro":"santiago","cap":1},{"t":"No os conforméis","r":"Romanos 12:1–2","href":"romanos-12.html","libro":"romanos","cap":12},{"t":"El único camino","r":"Juan 14:6","href":"juan-14.html","libro":"juan","cap":14},{"t":"Nada me faltará","r":"Salmo 23","href":"salmo-23.html","libro":"salmos","cap":23},{"t":"Herido por nuestras rebeliones","r":"Isaías 53","href":"isaias-53.html","libro":"isaias","cap":53},{"t":"Justicia de Dios, sin la ley","r":"Romanos 3:21–26","href":"romanos-3.html","libro":"romanos","cap":3},{"t":"En el principio","r":"Génesis 1","href":"genesis-1.html","libro":"genesis","cap":1},{"t":"¿Dónde estás tú?","r":"Génesis 3","href":"genesis-3.html","libro":"genesis","cap":3},{"t":"Le fue contado","r":"Génesis 15","href":"genesis-15.html","libro":"genesis","cap":15},{"t":"La sangre","r":"Éxodo 12","href":"exodo-12.html","libro":"exodo","cap":12},{"t":"Oye, Israel","r":"Deuteronomio 6","href":"deuteronomio-6.html","libro":"deuteronomio","cap":6},{"t":"Vuelve","r":"Deuteronomio 30","href":"deuteronomio-30.html","libro":"deuteronomio","cap":30},{"t":"Esta ley no se apartará","r":"Josué 1","href":"josue-1.html","libro":"josue","cap":1},{"t":"Casa","r":"2 Samuel 7","href":"2-samuel-7.html","libro":"2-samuel","cap":7},{"t":"Dos caminos","r":"Salmo 1","href":"salmo-1.html","libro":"salmos","cap":1},{"t":"Contra ti solo","r":"Salmo 51","href":"salmo-51.html","libro":"salmos","cap":51},{"t":"Ay de mí","r":"Isaías 6","href":"isaias-6.html","libro":"isaias","cap":6},{"t":"Mientras puede ser hallado","r":"Isaías 55","href":"isaias-55.html","libro":"isaias","cap":55},{"t":"Pacto nuevo","r":"Jeremías 31","href":"jeremias-31.html","libro":"jeremias","cap":31},{"t":"Corazón de carne","r":"Ezequiel 36","href":"ezequiel-36.html","libro":"ezequiel","cap":36},{"t":"Rasgad el corazón","r":"Joel 2","href":"joel-2.html","libro":"joel","cap":2},{"t":"Qué pide Jehová","r":"Miqueas 6:8","href":"miqueas-6.html","libro":"miqueas","cap":6},{"t":"El justo por la fe","r":"Habacuc 2:4","href":"habacuc-2.html","libro":"habacuc","cap":2},{"t":"El hijo que volvió","r":"Lucas 15","href":"lucas-15.html","libro":"lucas","cap":15},{"t":"Les abría el sentido","r":"Lucas 24","href":"lucas-24.html","libro":"lucas","cap":24},{"t":"Bienaventurados","r":"Mateo 5","href":"mateo-5.html","libro":"mateo","cap":5},{"t":"¿Quién dices que soy?","r":"Mateo 16","href":"mateo-16.html","libro":"mateo","cap":16},{"t":"Id","r":"Mateo 28","href":"mateo-28.html","libro":"mateo","cap":28},{"t":"Nieguese a sí mismo","r":"Marcos 8","href":"marcos-8.html","libro":"marcos","cap":8},{"t":"¿Entiendes lo que lees?","r":"Hechos 8","href":"hechos-8.html","libro":"hechos","cap":8},{"t":"No me avergüenzo","r":"Romanos 1","href":"romanos-1.html","libro":"romanos","cap":1},{"t":"Siendo aún pecadores","r":"Romanos 5","href":"romanos-5.html","libro":"romanos","cap":5},{"t":"Ninguna condenación","r":"Romanos 8","href":"romanos-8.html","libro":"romanos","cap":8},{"t":"Si no hay resurrección","r":"1 Corintios 15","href":"1-corintios-15.html","libro":"1-corintios","cap":15},{"t":"Con Cristo estoy","r":"Gálatas 2:20","href":"galatas-2.html","libro":"galatas","cap":2},{"t":"Por gracia","r":"Efesios 2","href":"efesios-2.html","libro":"efesios","cap":2},{"t":"La imagen","r":"Colosenses 1","href":"colosenses-1.html","libro":"colosenses","cap":1},{"t":"La gracia adiestra","r":"Tito 2:11–12","href":"tito-2.html","libro":"tito","cap":2},{"t":"Es, pues, la fe","r":"Hebreos 11","href":"hebreos-11.html","libro":"hebreos","cap":11},{"t":"La fe sin obras","r":"Santiago 2","href":"santiago-2.html","libro":"santiago","cap":2},{"t":"Nacidos de nuevo","r":"1 Pedro 1","href":"1-pedro-1.html","libro":"1-pedro","cap":1},{"t":"Si decimos que no tenemos","r":"1 Juan 1","href":"1-juan-1.html","libro":"1-juan","cap":1},{"t":"Ponían el sentido","r":"Nehemías 8","href":"nehemias-8.html","libro":"nehemias","cap":8},{"t":"Toda la Escritura","r":"2 Timoteo 3","href":"2-timoteo-3.html","libro":"2-timoteo","cap":3},{"t":"Hago nuevas","r":"Apocalipsis 21","href":"apocalipsis-21.html","libro":"apocalipsis","cap":21}];
   var d=new Date();
   var t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));
   var day=t.getUTCDay()||7;
@@ -336,17 +210,59 @@ a:focus-visible{outline:2px solid #b38728;outline-offset:2px}
   var y0=new Date(Date.UTC(t.getUTCFullYear(),0,1));
   var w=Math.ceil(((t-y0)/86400000+1)/7);
   var c=cortes[(w-1)%cortes.length];
-  var el=document.getElementById("semana");
-  if(el&&c){
-    el.href=c.href;
-    el.innerHTML="<small>Esta semana · el estudio</small><b>"+c.t+"</b>";
-  }
+  if(!c) return;
+  var titulo=document.getElementById("hoy-titulo");
+  if(titulo) titulo.textContent=c.t;
   var hoy=document.getElementById("hoy-pasaje");
-  if(hoy&&c){
-    hoy.textContent="Esta semana el mundo de esta escuela lee "+c.r+": «"+c.t+"».";
+  if(hoy) hoy.textContent="Esta semana el mundo de esta escuela lee "+c.r+": «"+c.t+"».";
+  var leer=document.getElementById("hoy-leer");
+  if(leer) leer.href=c.href;
+  var cap=document.getElementById("hoy-capitulo");
+  if(cap && c.libro){
+    cap.href="https://revelatio.app/leer?libro="+encodeURIComponent(c.libro)+"&cap="+c.cap+"&casa=1";
+    var libroRef=c.r.split(":")[0];
+    cap.textContent="Leer "+libroRef+" entero";
   }
+  var ya=document.getElementById("ya-leer");
+  if(ya) ya.href=c.href;
+  var yt=document.getElementById("ya-titulo");
+  if(yt) yt.textContent=c.t;
+  var yr=document.getElementById("ya-ref");
+  if(yr) yr.textContent=c.r+". Un tratado este mes: el versículo que se cita de memoria, leído otra vez dentro de su capítulo.";
 })();
 </script>
 <footer>Soli Deo Gloria · Cielo Efata · La Escritura manda sobre el comentario · <a href="https://revelatio.app/leer?casa=1">RevelatiO, la lectura</a></footer>
+<script>
+(function(){
+  var KEY="cielo_seguir";
+  function pretty(s){
+    return String(s||"").replace(/-/g," ").replace(/\b\w/g, function(c){ return c.toUpperCase(); });
+  }
+  document.addEventListener("click", function(ev){
+    var a=ev.target && ev.target.closest && ev.target.closest("a");
+    if(!a || !a.href) return;
+    try{
+      var u=new URL(a.href, location.href);
+      if(u.hostname.indexOf("revelatio.app")>=0 && u.pathname.indexOf("/leer")===0){
+        var libro=u.searchParams.get("libro")||"";
+        var cap=u.searchParams.get("cap")||"1";
+        if(libro) localStorage.setItem(KEY, JSON.stringify({libro:libro, cap:cap, href:u.href}));
+      }
+    }catch(e){}
+  });
+  var bar=document.getElementById("seguir");
+  if(!bar) return;
+  try{
+    var s=JSON.parse(localStorage.getItem(KEY)||"null");
+    if(s && s.href && s.libro){
+      bar.hidden=false;
+      var link=bar.querySelector(".seguir-link");
+      var txt=bar.querySelector(".seguir-txt");
+      if(link) link.href=s.href;
+      if(txt) txt.textContent="Seguir "+pretty(s.libro)+" "+s.cap;
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
