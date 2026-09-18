@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <link rel="icon" href="cielo-mark-color.png"/>
 <meta name="theme-color" content="#0f2033"/>
-<title>Cielo Efata — La Biblia se estudia</title>
-<meta name="description" content="Bienvenido a Cielo Efata. Aquí se estudia la Biblia por capítulos, con el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión), y se sale con un paso concreto para esta semana."/>
+<title>Cielo Efata — La Biblia, para ser leída</title>
+<meta name="description" content="Escuela de lectura de la Escritura. El capítulo se lee entero, el estudio recorre seis preguntas, el tratado del mes es un ensayo largo. RevelatiO es la lectura de esta misma obra."/>
 <link rel="canonical" href="https://www.cieloefata.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -19,17 +19,13 @@ nav{position:sticky;top:0;z-index:20;background:rgba(15,32,51,.96);display:flex;
 .brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;background:#fff}
 nav .links{display:flex;flex-wrap:wrap;gap:16px}
 nav .links a{color:#efe3c6;font-size:13px;letter-spacing:.1em;text-transform:uppercase;min-height:44px;display:inline-flex;align-items:center;padding:8px 8px}
-.hero{position:relative;overflow:hidden;padding:48px 16px 56px;background:#070c14}
-.hero .dust{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;opacity:.9}
-.hero-card{position:relative;z-index:1;max-width:42rem;margin:0 auto;background:#fbf6ee;border-radius:1.35rem;padding:28px 22px 32px;text-align:center;box-shadow:0 24px 64px rgba(0,0,0,.45)}
-.hero .seal{display:block;width:min(100%,18.5rem);height:auto;margin:0 auto}
-.hero .kicker{letter-spacing:.22em;text-transform:uppercase;color:#8a6418;font-size:11px;margin:22px 0 10px}
-.hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(1.85rem,4.6vw,2.65rem);color:#1a120c;letter-spacing:.01em;line-height:1.15;margin:0}
-.hero h1 em{font-style:normal;color:#c45c12}
-.hero .lead{margin:14px auto 0;max-width:28em;color:#4a433c;font-size:1.05rem;line-height:1.65}
-.hero .actions{margin-top:22px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.hero .cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #7a1f1a;color:#7a1f1a;background:transparent;padding:10px 20px;font-size:14px;border-radius:999px}
-.hero .cta.fill{background:#7a1f1a;color:#fbf6ee;border-color:#7a1f1a}
+.hero{position:relative;overflow:hidden;background:#08111b;padding:14px 18px}
+.hero .dust{position:absolute;inset:0;pointer-events:none;opacity:.95;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='135' viewBox='0 0 240 135'><g fill='%23e8c978'><circle cx='14' cy='18' r='0.7' opacity='0.5'/><circle cx='38' cy='54' r='0.45' opacity='0.32'/><circle cx='62' cy='14' r='0.6' opacity='0.42'/><circle cx='86' cy='78' r='0.4' opacity='0.28'/><circle cx='110' cy='32' r='0.75' opacity='0.48'/><circle cx='134' cy='66' r='0.4' opacity='0.26'/><circle cx='158' cy='12' r='0.55' opacity='0.38'/><circle cx='182' cy='48' r='0.45' opacity='0.3'/><circle cx='206' cy='96' r='0.65' opacity='0.44'/><circle cx='222' cy='28' r='0.35' opacity='0.24'/><circle cx='24' cy='110' r='0.5' opacity='0.33'/><circle cx='72' cy='98' r='0.7' opacity='0.46'/><circle cx='118' cy='118' r='0.4' opacity='0.27'/><circle cx='164' cy='108' r='0.55' opacity='0.36'/><circle cx='210' cy='122' r='0.45' opacity='0.3'/></g></svg>");background-repeat:repeat;background-size:240px 135px}
+.hero .row{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.hero .seal{display:block;height:72px;width:auto;max-height:72px;object-fit:contain}
+.hero .slogan{margin:0;max-width:16em;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(1.05rem,2.5vw,1.4rem);line-height:1.3;color:#e4c888;text-shadow:0 1px 12px rgba(0,0,0,.55)}
+.cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--gold);color:var(--ink);padding:12px 18px;margin:6px 6px 6px 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.cta.fill{background:var(--gold);color:#0c1724;border:0}
 .kicker{letter-spacing:.22em;text-transform:uppercase;color:#8a6418;font-size:11px;margin:18px 0 10px}
 h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(28px,4.5vw,40px);color:var(--ink);letter-spacing:.01em;line-height:1.12;margin:0}
 main{max-width:1080px;margin:0 auto;padding:0 20px 80px}
@@ -84,28 +80,29 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <a href="estudios.html">Estudios</a>
 <a href="cuaderno.html">Cuaderno</a>
 <a href="canon.html">Canon</a>
-<a href="https://revelatio.app/oficio">Guías</a>
+<a href="https://revelatio.app/discipulado">Cómo leer</a>
 <a href="https://revelatio.app/leer">Leer la Biblia</a>
 </div>
 </nav>
 <header class="hero">
-<img class="dust" src="cielo-dust.png?v=9" alt=""/>
-<div class="hero-card">
-<img class="seal" src="cielo-sello.png?v=1" alt="Cielo Efata. El león y el cordero." width="891" height="1100"/>
-<p class="kicker">Confesión · Conversión · Firmeza</p>
-<h1>Para todo aquel que está buscando <em>conocer a Dios</em></h1>
-<p class="lead">La Palabra abierta, profunda y viva. Se estudia la Escritura con el texto delante, y se sale a obedecer.</p>
-<div class="actions">
-<a class="cta fill" href="https://revelatio.app/discipulado">Cómo empezar</a>
-<a class="cta" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Leer la Biblia</a>
-</div>
+<span class="dust" aria-hidden="true"></span>
+<div class="row">
+<img class="seal" src="cielo-sello.png?v=8" alt="Cielo Efata: el león y el cordero"/>
+<p class="slogan">La Escritura manda sobre el comentario.</p>
 </div>
 </header>
 <main>
+<section id="umbral" style="padding-top:36px;padding-bottom:8px">
+<p class="kicker">Escuela de lectura de la Escritura</p>
+<h1>La Biblia, para ser leída</h1>
+<p class="lede">Cielo Efata recibe a quien abre la Biblia por primera vez y a quien ya la estudia: el mismo texto, un camino distinto. El capítulo se lee entero en RevelatiO. Aquí viven el estudio de la semana, el tratado del mes y el método de seis preguntas.</p>
+<p style="margin-top:16px"><a class="cta fill" href="https://revelatio.app/leer?libro=marcos&cap=1&casa=1">Leer Marcos 1 entero</a>
+<a class="cta" href="https://revelatio.app/discipulado">Cómo se estudia aquí</a></p>
+</section>
 <section id="canon" style="padding-top:40px">
 <p class="kicker" style="color:#8a6418">Qué es la Biblia</p>
 <h2>Sesenta y seis libros, la Escritura de la Iglesia</h2>
-<p class="lede">La Biblia no es una antología de genios religiosos ni un almanaque de consuelos. Es el conjunto de libros que la Iglesia recibió como Palabra de Dios: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Siete puertas abren el mapa. Un toque abre el primer capítulo.</p>
+<p class="lede">La Biblia no es una antología de genios religiosos ni un almanaque de consuelos. Es el conjunto de libros que la Iglesia recibió como Palabra de Dios: treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. Siete libros abren el mapa. Un toque abre el primer capítulo.</p>
 <div class="puertas">
 <a class="puerta" href="https://revelatio.app/leer?libro=genesis&cap=1&casa=1"><b>Génesis</b><span>Dios crea, el hombre cae, y Abraham recibe una promesa.</span></a>
 <a class="puerta" href="https://revelatio.app/leer?libro=salmos&cap=1&casa=1"><b>Salmos</b><span>Ciento cincuenta oraciones: alabanza, lamento, reino.</span></a>
@@ -164,7 +161,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <a class="sala" href="juan-3.html"><small>Juan 3</small><b>Nacer de nuevo</b><p>Nicodemo era maestro y aún así Jesús le dijo que necesitaba nacer de nuevo. Para quien ya conoce y todavía no ha nacido de lo alto.</p></a>
 <a class="sala" href="hechos-2.html"><small>Hechos 2</small><b>¿Qué haremos?</b><p>Los que oyeron a Pedro preguntaron qué debían hacer. Para quien ya oyó y quiere el siguiente paso.</p></a>
 </div>
-<p style="margin-top:16px"><a href="https://revelatio.app/umbral">Leer cómo empezar en RevelatiO</a></p>
+<p style="margin-top:16px"><a href="https://revelatio.app/discipulado">Cómo se estudia aquí</a></p>
 </section>
 
 
@@ -221,7 +218,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 </section>
 <section>
 <h2>Cómo se abre un pasaje</h2>
-<p class="lede">La fe que no se ejercita se vuelve estéril. El texto manda; lo demás se sienta atrás. Esta casa usa el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión): seis pasos, siempre sobre un capítulo, nunca sobre un tema suelto.</p>
+<p class="lede">La fe que no se ejercita se vuelve estéril. La Escritura manda sobre el comentario. Esta casa usa el método VERDAD (Ver, Entorno, Revelación, Doctrina, Argumento y Decisión): seis pasos, siempre sobre un capítulo, nunca sobre un tema suelto.</p>
 <div class="manifest" style="margin-top:24px">
 <p><strong>Ver</strong> el pasaje entero, en voz alta si puedes.</p>
 <p><strong>Entorno</strong> — quién escribe, a quién, qué viene antes y después.</p>
@@ -283,7 +280,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #b38728;outline-offset:2p
 <p><a href="mailto:alejandro.sirit@gmail.com">alejandro.sirit@gmail.com</a> · <a href="https://wa.me/584247637691">WhatsApp</a></p>
 </section>
 </main>
-<footer><p><a href="cuaderno.html" style="color:#f6ecd4">Cuaderno</a> · <a href="https://revelatio.app/leer" style="color:#f6ecd4">Leer la Biblia</a> · <a href="mailto:alejandro.sirit@gmail.com" style="color:#f6ecd4">Correo</a></p><p style="margin-top:12px">Soli Deo Gloria · Cielo Efata · 2026 · La Biblia se estudia</p></footer>
+<footer><p><a href="cuaderno.html" style="color:#f6ecd4">Cuaderno</a> · <a href="https://revelatio.app/leer" style="color:#f6ecd4">Leer la Biblia</a> · <a href="mailto:alejandro.sirit@gmail.com" style="color:#f6ecd4">Correo</a></p><p style="margin-top:12px">Soli Deo Gloria · Cielo Efata · La Escritura manda sobre el comentario</p></footer>
 <script>
 (function(){
   var R="https://revelatio.app/estudio/";
