@@ -1,8 +1,6 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    { "source": "/biblioteca", "destination": "/estudios", "permanent": true },
-    { "source": "/biblioteca.html", "destination": "/estudios", "permanent": true }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "installCommand": "npm ci"
 }
