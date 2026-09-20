@@ -241,6 +241,13 @@
     outline: none;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    .cv-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 40rem;
+    }
+  }
+
   .marca-agua {
     position: relative;
     overflow: hidden;

@@ -3,7 +3,7 @@ import { DOS_CASAS } from "@/lib/pilar";
 
 export function BannerRevelatio() {
   return (
-    <aside className="bg-navy text-parchment">
+    <aside className="cv-auto bg-navy text-parchment">
       <div className="mx-auto grid max-w-5xl items-center gap-10 px-4 py-14 md:grid-cols-[1fr_auto] md:py-16">
         <div>
           <a

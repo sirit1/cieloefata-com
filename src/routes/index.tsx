@@ -101,7 +101,7 @@ function Home() {
 
       <BannerRevelatio />
 
-      <section className="mx-auto max-w-5xl px-4 py-20 md:py-28">
+      <section className="cv-auto mx-auto max-w-5xl px-4 py-20 md:py-28">
         <div className="grid gap-10 lg:grid-cols-2">
           <article className="marca-agua marca-agua-navy flex flex-col bg-navy px-6 py-10 text-parchment md:px-9">
             <p className="font-serif text-lg italic text-gold-soft">El primer pasaje</p>
@@ -205,7 +205,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-t border-rule/40 px-4 py-20 md:py-28">
+      <section className="cv-auto border-t border-rule/40 px-4 py-20 md:py-28">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-[40em]">
             <h2 className="font-serif text-3xl">{CORPUS.title}</h2>

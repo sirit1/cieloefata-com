@@ -161,6 +161,8 @@ const PREVIEW: Record<string, string> = {
   "1 Corintios 15:22": "Porque así como en Adán todos mueren, también en Cristo todos serán vivificados.",
   "Romanos 5:12": "Por tanto, como el pecado entró en el mundo por un hombre, y por el pecado la muerte.",
   "Gálatas 2:20": "Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí.",
+  "Gálatas 6:6": "El que es enseñado en la palabra, haga partícipe de toda cosa buena al que lo instruye.",
+  "2 Corintios 9:7": "Cada uno dé como propuso en su corazón: no con tristeza, ni por necesidad, porque Dios ama al dador alegre.",
   "Lucas 9:23": "Si alguno quiere venir en pos de mí, niéguese a sí mismo, tome su cruz cada día, y sígame.",
   "Lucas 22:42": "Padre, si quieres, pasa de mí esta copa; pero no se haga mi voluntad, sino la tuya.",
   "2 Timoteo 3:1": "En los postreros días vendrán tiempos peligrosos.",

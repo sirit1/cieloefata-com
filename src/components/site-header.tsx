@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Seal } from "@/components/seal";
+import { SostenerBoton } from "@/components/sostener";
 import { school } from "@/lib/content";
 
 const nav = [
@@ -76,6 +77,7 @@ export function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <SostenerBoton className="ml-2 inline-flex min-h-11 items-center border border-gold-soft px-3 font-sans text-xs tracking-[0.14em] text-parchment uppercase hover:bg-gold-soft hover:text-navy" />
         </nav>
         <button
           type="button"
@@ -104,6 +106,12 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
+            <li>
+              <SostenerBoton
+                className="flex min-h-11 items-center tracking-wide text-gold-soft"
+                onClick={() => setOpen(false)}
+              />
+            </li>
           </ul>
           <p className="mx-auto mt-4 max-w-5xl font-serif text-sm text-parchment/80">
             {school.tagline}

@@ -1,7 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
+import { IdleBar } from "@/components/idle-bar";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
-import { SelectionBar } from "@/components/selection-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import appCss from "../styles.css?url";
@@ -50,7 +50,7 @@ export const Route = createRootRoute({
       </head>
       <body className="min-h-dvh bg-parchment text-ink">
         <PreviewHostBridge />
-        <SelectionBar />
+        <IdleBar />
         <AuthProvider>
           <div className="flex min-h-dvh flex-col">
             <SiteHeader />

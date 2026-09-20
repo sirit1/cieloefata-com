@@ -105,7 +105,11 @@ export function UserButton() {
         <img
           src={user.profileImageUrl}
           alt=""
+          width={32}
+          height={32}
           className="h-8 w-8 rounded-full object-cover"
+          decoding="async"
+          loading="lazy"
         />
       ) : (
         <span className="grid h-8 w-8 place-items-center rounded-full bg-black/10 text-sm font-medium dark:bg-white/20">
