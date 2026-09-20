@@ -58,7 +58,7 @@ export function SiteHeader() {
           className="flex min-h-11 min-w-0 items-center gap-3 text-parchment"
           onClick={() => setOpen(false)}
         >
-          <Seal variant="onNavy" size={44} decorative className="h-11 w-11 shrink-0" />
+          <Seal variant="onNavy" size={44} decorative priority className="h-11 w-11 shrink-0" />
           <span className="wordmark text-base leading-none">Cielo Efata</span>
         </Link>
         <nav

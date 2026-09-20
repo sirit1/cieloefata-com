@@ -3,16 +3,23 @@ type SealProps = {
   className?: string;
   size?: number;
   decorative?: boolean;
+  priority?: boolean;
 };
 
 const src = {
-  mark: "/brand/seal-mark.png",
-  full: "/brand/seal-full.png",
-  bw: "/brand/seal-bw-on-navy.png",
-  onNavy: "/brand/seal-on-navy.png",
+  mark: "/brand/seal-colophon.webp",
+  full: "/brand/seal-full.webp",
+  bw: "/brand/seal-bw.webp",
+  onNavy: "/brand/seal-header.webp",
 } as const;
 
-export function Seal({ variant = "mark", className = "", size = 48, decorative = false }: SealProps) {
+export function Seal({
+  variant = "mark",
+  className = "",
+  size = 48,
+  decorative = false,
+  priority = false,
+}: SealProps) {
   return (
     <img
       src={src[variant]}
@@ -20,6 +27,9 @@ export function Seal({ variant = "mark", className = "", size = 48, decorative =
       width={size}
       height={size}
       className={`object-contain ${className}`}
+      decoding="async"
+      fetchPriority={priority ? "high" : "low"}
+      loading={priority ? "eager" : "lazy"}
       {...(decorative ? { "aria-hidden": true } : {})}
     />
   );

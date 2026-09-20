@@ -12,11 +12,14 @@ export function BannerRevelatio() {
             className="inline-flex items-center gap-3 text-parchment"
           >
             <img
-              src="/brand/revelatio-book.png"
+              src="/brand/revelatio-book.webp"
               alt=""
               width={56}
               height={56}
               className="h-12 w-auto object-contain sm:h-14"
+              decoding="async"
+              loading="lazy"
+              fetchPriority="low"
             />
             <span className="leading-none">
               <span className="block font-serif text-2xl tracking-[0.16em] sm:text-3xl">
@@ -52,11 +55,14 @@ export function BannerRevelatio() {
           aria-label="Escanear para instalar revelatio.app"
         >
           <img
-            src="/brand/revelatio-qr.png"
+            src="/brand/revelatio-qr.webp"
             alt="Código QR para instalar revelatio.app"
             width={176}
             height={176}
             className="h-40 w-40 bg-parchment p-2 sm:h-44 sm:w-44"
+            decoding="async"
+            loading="lazy"
+            fetchPriority="low"
           />
           <p className="mt-2 text-center font-sans text-[0.65rem] tracking-[0.16em] text-gold-soft uppercase">
             Escanea e instala

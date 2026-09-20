@@ -15,7 +15,7 @@ function SelloPage() {
           <Volver />
         </div>
         <div className="mx-auto max-w-[40em] text-center">
-          <Seal variant="full" size={280} className="mx-auto mb-10 h-auto w-[13rem] md:w-[16rem]" />
+          <Seal variant="full" size={280} priority className="mx-auto mb-10 h-auto w-[13rem] md:w-[16rem]" />
           <p className="lema-latin glosa" tabIndex={0}>
             {SELLO.latin}
             <span className="glosa-card" role="tooltip">
