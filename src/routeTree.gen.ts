@@ -23,7 +23,6 @@ import { Route as LibrosRouteImport } from './routes/libros'
 import { Route as MetodoRouteImport } from './routes/metodo'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ObjecionesRouteImport } from './routes/objeciones'
-import { Route as ObrasRouteImport } from './routes/obras'
 import { Route as PalabraRouteImport } from './routes/palabra'
 import { Route as SelloRouteImport } from './routes/sello'
 import { Route as SostenerRouteImport } from './routes/sostener'
@@ -32,8 +31,9 @@ import { Route as ApiVozRouteImport } from './routes/api/voz'
 import { Route as EstudiosIndexRouteImport } from './routes/estudios/index'
 import { Route as EstudiosSlugRouteImport } from './routes/estudios/$slug'
 import { Route as EstudiosHechos1314RouteImport } from './routes/estudios/hechos-13-14'
-import { Route as ObrasSlugRouteImport } from './routes/obras.$slug'
-import { Route as ObrasElSiervoRouteImport } from './routes/obras.el-siervo'
+import { Route as ObrasIndexRouteImport } from './routes/obras/index'
+import { Route as ObrasSlugRouteImport } from './routes/obras/$slug'
+import { Route as ObrasElSiervoRouteImport } from './routes/obras/el-siervo'
 import { Route as TratadosSlugRouteImport } from './routes/tratados/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -106,11 +106,6 @@ const ObjecionesRoute = ObjecionesRouteImport.update({
   path: '/objeciones',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ObrasRoute = ObrasRouteImport.update({
-  id: '/obras',
-  path: '/obras',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const PalabraRoute = PalabraRouteImport.update({
   id: '/palabra',
   path: '/palabra',
@@ -151,15 +146,20 @@ const EstudiosHechos1314Route = EstudiosHechos1314RouteImport.update({
   path: '/estudios/hechos-13-14',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObrasIndexRoute = ObrasIndexRouteImport.update({
+  id: '/obras/',
+  path: '/obras/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ObrasSlugRoute = ObrasSlugRouteImport.update({
-  id: '/$slug',
-  path: '/$slug',
-  getParentRoute: () => ObrasRoute,
+  id: '/obras/$slug',
+  path: '/obras/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const ObrasElSiervoRoute = ObrasElSiervoRouteImport.update({
-  id: '/el-siervo',
-  path: '/el-siervo',
-  getParentRoute: () => ObrasRoute,
+  id: '/obras/el-siervo',
+  path: '/obras/el-siervo',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const TratadosSlugRoute = TratadosSlugRouteImport.update({
   id: '/$slug',
@@ -182,7 +182,6 @@ export interface FileRoutesByFullPath {
   '/metodo': typeof MetodoRoute
   '/nosotros': typeof NosotrosRoute
   '/objeciones': typeof ObjecionesRoute
-  '/obras': typeof ObrasRouteWithChildren
   '/palabra': typeof PalabraRoute
   '/sello': typeof SelloRoute
   '/sostener': typeof SostenerRoute
@@ -194,6 +193,7 @@ export interface FileRoutesByFullPath {
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/estudios/': typeof EstudiosIndexRoute
+  '/obras/': typeof ObrasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -210,7 +210,6 @@ export interface FileRoutesByTo {
   '/metodo': typeof MetodoRoute
   '/nosotros': typeof NosotrosRoute
   '/objeciones': typeof ObjecionesRoute
-  '/obras': typeof ObrasRouteWithChildren
   '/palabra': typeof PalabraRoute
   '/sello': typeof SelloRoute
   '/sostener': typeof SostenerRoute
@@ -222,6 +221,7 @@ export interface FileRoutesByTo {
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/estudios': typeof EstudiosIndexRoute
+  '/obras': typeof ObrasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -239,7 +239,6 @@ export interface FileRoutesById {
   '/metodo': typeof MetodoRoute
   '/nosotros': typeof NosotrosRoute
   '/objeciones': typeof ObjecionesRoute
-  '/obras': typeof ObrasRouteWithChildren
   '/palabra': typeof PalabraRoute
   '/sello': typeof SelloRoute
   '/sostener': typeof SostenerRoute
@@ -251,6 +250,7 @@ export interface FileRoutesById {
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/estudios/': typeof EstudiosIndexRoute
+  '/obras/': typeof ObrasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -269,7 +269,6 @@ export interface FileRouteTypes {
     | '/metodo'
     | '/nosotros'
     | '/objeciones'
-    | '/obras'
     | '/palabra'
     | '/sello'
     | '/sostener'
@@ -281,6 +280,7 @@ export interface FileRouteTypes {
     | '/obras/el-siervo'
     | '/tratados/$slug'
     | '/estudios/'
+    | '/obras/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -297,7 +297,6 @@ export interface FileRouteTypes {
     | '/metodo'
     | '/nosotros'
     | '/objeciones'
-    | '/obras'
     | '/palabra'
     | '/sello'
     | '/sostener'
@@ -309,6 +308,7 @@ export interface FileRouteTypes {
     | '/obras/el-siervo'
     | '/tratados/$slug'
     | '/estudios'
+    | '/obras'
   id:
     | '__root__'
     | '/'
@@ -325,7 +325,6 @@ export interface FileRouteTypes {
     | '/metodo'
     | '/nosotros'
     | '/objeciones'
-    | '/obras'
     | '/palabra'
     | '/sello'
     | '/sostener'
@@ -337,6 +336,7 @@ export interface FileRouteTypes {
     | '/obras/el-siervo'
     | '/tratados/$slug'
     | '/estudios/'
+    | '/obras/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -354,7 +354,6 @@ export interface RootRouteChildren {
   MetodoRoute: typeof MetodoRoute
   NosotrosRoute: typeof NosotrosRoute
   ObjecionesRoute: typeof ObjecionesRoute
-  ObrasRoute: typeof ObrasRouteWithChildren
   PalabraRoute: typeof PalabraRoute
   SelloRoute: typeof SelloRoute
   SostenerRoute: typeof SostenerRoute
@@ -362,7 +361,10 @@ export interface RootRouteChildren {
   ApiVozRoute: typeof ApiVozRoute
   EstudiosSlugRoute: typeof EstudiosSlugRoute
   EstudiosHechos1314Route: typeof EstudiosHechos1314Route
+  ObrasSlugRoute: typeof ObrasSlugRoute
+  ObrasElSiervoRoute: typeof ObrasElSiervoRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
+  ObrasIndexRoute: typeof ObrasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -465,13 +467,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ObjecionesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/obras': {
-      id: '/obras'
-      path: '/obras'
-      fullPath: '/obras'
-      preLoaderRoute: typeof ObrasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/palabra': {
       id: '/palabra'
       path: '/palabra'
@@ -528,19 +523,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EstudiosHechos1314RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obras/': {
+      id: '/obras/'
+      path: '/obras'
+      fullPath: '/obras/'
+      preLoaderRoute: typeof ObrasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/obras/$slug': {
       id: '/obras/$slug'
-      path: '/$slug'
+      path: '/obras/$slug'
       fullPath: '/obras/$slug'
       preLoaderRoute: typeof ObrasSlugRouteImport
-      parentRoute: typeof ObrasRoute
+      parentRoute: typeof rootRouteImport
     }
     '/obras/el-siervo': {
       id: '/obras/el-siervo'
-      path: '/el-siervo'
+      path: '/obras/el-siervo'
       fullPath: '/obras/el-siervo'
       preLoaderRoute: typeof ObrasElSiervoRouteImport
-      parentRoute: typeof ObrasRoute
+      parentRoute: typeof rootRouteImport
     }
     '/tratados/$slug': {
       id: '/tratados/$slug'
@@ -551,18 +553,6 @@ declare module '@tanstack/react-router' {
     }
   }
 }
-
-interface ObrasRouteChildren {
-  ObrasSlugRoute: typeof ObrasSlugRoute
-  ObrasElSiervoRoute: typeof ObrasElSiervoRoute
-}
-
-const ObrasRouteChildren: ObrasRouteChildren = {
-  ObrasSlugRoute: ObrasSlugRoute,
-  ObrasElSiervoRoute: ObrasElSiervoRoute,
-}
-
-const ObrasRouteWithChildren = ObrasRoute._addFileChildren(ObrasRouteChildren)
 
 interface TratadosRouteChildren {
   TratadosSlugRoute: typeof TratadosSlugRoute
@@ -591,7 +581,6 @@ const rootRouteChildren: RootRouteChildren = {
   MetodoRoute: MetodoRoute,
   NosotrosRoute: NosotrosRoute,
   ObjecionesRoute: ObjecionesRoute,
-  ObrasRoute: ObrasRouteWithChildren,
   PalabraRoute: PalabraRoute,
   SelloRoute: SelloRoute,
   SostenerRoute: SostenerRoute,
@@ -599,7 +588,10 @@ const rootRouteChildren: RootRouteChildren = {
   ApiVozRoute: ApiVozRoute,
   EstudiosSlugRoute: EstudiosSlugRoute,
   EstudiosHechos1314Route: EstudiosHechos1314Route,
+  ObrasSlugRoute: ObrasSlugRoute,
+  ObrasElSiervoRoute: ObrasElSiervoRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
+  ObrasIndexRoute: ObrasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

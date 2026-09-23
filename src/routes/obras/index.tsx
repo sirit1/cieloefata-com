@@ -10,7 +10,7 @@ import { CORPUS, obras, ROMANO, type Obra } from "@/lib/content";
 import { pageHead } from "@/lib/seo";
 import { studyBySlug } from "@/lib/studies";
 
-export const Route = createFileRoute("/obras")({
+export const Route = createFileRoute("/obras/")({
   component: ObrasPage,
   head: () =>
     pageHead({
@@ -98,7 +98,7 @@ function TomoCard({
         <Cite>{obra.ref}</Cite>
       </p>
       {obra.studyNote ? <p className="mt-3 leading-relaxed text-ink-soft">{obra.studyNote}</p> : null}
-      {"crisol" in obra && obra.crisol ? (
+      {obra.crisol ? (
         <p className="mt-3 font-sans text-sm">
           <Link to="/crisol" className="text-link underline">
             C.R.I.S.O.L.™ en El Altar del Espejo
