@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Refs } from "@/components/cite";
 import { BtnArrow } from "@/components/motif";
 import { Volver } from "@/components/volver";
-import { CAMINO } from "@/lib/camino";
+import { CAMINO, CAMINO_INTRO } from "@/lib/camino";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/camino")({
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/camino")({
       path: "/camino",
       title: "El camino · Cielo Efata",
       description:
-        "Conocer a Dios, convicción, arrepentimiento, bautismo, conversión y permanecer. Cada paso oye un pasaje ya escrito en la escuela.",
+        "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe. Cada etapa oye un pasaje ya escrito en la escuela.",
     }),
 });
 
@@ -22,13 +22,7 @@ function CaminoPage() {
       <Volver />
       <p className="kicker">Pastoral</p>
       <h1 className="mt-2 font-serif text-4xl">El camino</h1>
-      <p className="mt-6 text-lg leading-relaxed">
-        La doctrina de esta casa ya toca el pecado, el arrepentimiento, el Espíritu y el bautismo.
-        Faltaba oírlo como un solo itinerario, no como un cartel de pasos. Quien llega no recibe
-        una lista de hábitos. Recibe pasajes. El orden no es un embudo de venta: es el modo en que
-        la Escritura suele abrir el oído —conocer a Dios, ser convencido, volverse, bajar al agua,
-        nacer de lo alto y permanecer— hasta que la vocación se hace firme.
-      </p>
+      <p className="mt-6 text-lg leading-relaxed">{CAMINO_INTRO}</p>
       <Refs refs="Jn. 1:14 · Ro. 1:16 · Mr. 1:15 · Hch. 2:38 · Jn. 3:3 · 2 P. 1:5–10" />
       <ol className="mt-12 space-y-12">
         {CAMINO.map((paso, i) => (
@@ -39,23 +33,30 @@ function CaminoPage() {
             <h2 className="mt-2 font-serif text-3xl">{paso.name}</h2>
             <p className="mt-1 text-gold">{paso.ref}</p>
             <p className="mt-4 leading-relaxed">{paso.body}</p>
-            <Link
-              to="/estudios/$slug"
-              params={{ slug: paso.studySlug }}
-              className="btn btn-ink mt-5"
-            >
-              Escudriñar {paso.ref}
-              <BtnArrow />
-            </Link>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                to="/estudios/$slug"
+                params={{ slug: paso.studySlug }}
+                className="btn btn-ink"
+              >
+                Escudriñar {paso.ref}
+                <BtnArrow />
+              </Link>
+              {paso.also?.map((otro) => (
+                <Link
+                  key={otro.slug}
+                  to="/estudios/$slug"
+                  params={{ slug: otro.slug }}
+                  className="btn btn-ghost"
+                >
+                  También {otro.label}
+                </Link>
+              ))}
+            </div>
           </li>
         ))}
       </ol>
-      <p className="mt-14 leading-relaxed text-ink-soft">
-        Marcos 1, Juan 3 y Hechos 2 permanecen como clases en preparación: se pueden abrir como
-        fichas. El umbral con pack sigue siendo Marcos 7. El que camina no espera a que el Drive
-        esté completo: oye el pasaje en RevelatiO y escribe el acto en el cuaderno.
-      </p>
-      <p className="mt-6 font-sans text-sm">
+      <p className="mt-14 font-sans text-sm">
         <Link to="/metodo" className="text-link underline">
           Cómo se recorre un pasaje
         </Link>

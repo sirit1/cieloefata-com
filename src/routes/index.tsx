@@ -41,6 +41,9 @@ function Home() {
             <ConLemas>{ESCRITURA.gate}</ConLemas>
           </p>
           <Refs refs={ESCRITURA.refs} />
+          <p className="mt-8 text-lg leading-relaxed">
+            <ConLemas>{ESCRITURA.oficio}</ConLemas>
+          </p>
           <UmbralTresCaminos />
           </div>
           <SlotsSemanaMes />

@@ -108,8 +108,15 @@ function CuadernoPage() {
         <aside className="mt-8 border border-rule bg-paper px-5 py-6">
           <p className="font-serif text-xl">Aún no hay un paso escrito</p>
           <p className="mt-3 leading-relaxed">
-            El cuaderno no se rellena solo. No se pone un pasaje de memoria —ni Nehemías 8:8— a
-            menos que el aula o el estudio de esta semana lo hayan pedido, y se nombre como tal.
+            El cuaderno no guarda impresiones: guarda el acto que el aula pidió —indicativo oído,
+            un verbo del pasaje, testigo de carne y, si hace falta, una nota breve—. Si nunca se
+            ha leído en esta escuela, se empieza por Marcos 7 (Éfata). Si ya se oyó la clase de
+            esta semana, se escribe el acto de Filipenses 2 antes de coleccionar otro capítulo.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            Cuando el aula te envíe aquí con un pasaje en la barra, ese campo no es decoración: es
+            el texto que manda sobre lo que vas a firmar. No guardes un propósito genérico. Nombra
+            lo que el indicativo ya dijo.
           </p>
           {actoSemana ? (
             <p className="mt-4 leading-relaxed text-ink-soft">
@@ -123,9 +130,23 @@ function CuadernoPage() {
             </p>
           ) : null}
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              to="/estudios/$slug"
+              params={{ slug: semana.slug }}
+              className="btn btn-ink"
+            >
+              Abrir estudio de esta semana
+            </Link>
+            <Link
+              to="/estudios/$slug"
+              params={{ slug: PRIMERA_VEZ.slug }}
+              className="btn btn-ghost"
+            >
+              Abrir Éfata
+            </Link>
             <button
               type="button"
-              className="btn btn-ink"
+              className="btn btn-ghost"
               onClick={() => setPassage(semana.ref)}
             >
               Usar el pasaje de esta semana
@@ -139,20 +160,6 @@ function CuadernoPage() {
                 Usar el pasaje del aula
               </button>
             ) : null}
-            <Link
-              to="/estudios/$slug"
-              params={{ slug: semana.slug }}
-              className="btn btn-ghost"
-            >
-              Abrir {semana.title}
-            </Link>
-            <Link
-              to="/estudios/$slug"
-              params={{ slug: PRIMERA_VEZ.slug }}
-              className="btn btn-ghost"
-            >
-              Empezar por {PRIMERA_VEZ.title}
-            </Link>
           </div>
         </aside>
       ) : null}

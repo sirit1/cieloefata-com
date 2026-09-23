@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Refs } from "@/components/cite";
 import { Volver } from "@/components/volver";
-import { OBJECIONES } from "@/lib/objeciones";
+import { OBJECIONES, OBJECIONES_INTRO } from "@/lib/objeciones";
 import { pageHead } from "@/lib/seo";
 import { tratadoDe } from "@/lib/tratados";
 
@@ -21,23 +20,15 @@ function ObjecionesPage() {
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
       <p className="kicker">Anti-versiculitis</p>
-      <h1 className="mt-2 font-serif text-4xl">Los versículos que viajan solos</h1>
-      <p className="mt-6 text-lg leading-relaxed">
-        Hay un versículo que se recita para no leer el capítulo. La versiculitis extrae una unidad
-        delimitada por la numeración tardía y la desgaja del párrafo, del pacto y del canon. Un
-        texto fuera de su contexto se convierte en pretexto. Esta página no inventa preguntas: abre
-        la puerta a los tratados que ya existen, para que Filipenses 4:13 vuelva a la cárcel y
-        Jeremías 29:11 vuelva al destierro.
-      </p>
-      <Refs refs="Neh. 8:8 · 2 P. 3:16 · 2 Ti. 2:15" />
+      <h1 className="mt-2 font-serif text-4xl">Objeciones</h1>
+      <p className="mt-6 text-lg leading-relaxed">{OBJECIONES_INTRO}</p>
       <ul className="mt-12 divide-y divide-rule border-y border-rule">
         {OBJECIONES.map((item) => {
           const tratado = tratadoDe(item.tratadoSlug);
           return (
-            <li key={item.verse} className="py-6">
+            <li key={item.tratadoSlug} className="py-6">
               <p className="font-sans text-sm tracking-wide text-gold">{item.verse}</p>
               <h2 className="mt-1 font-serif text-2xl">{item.lemma}</h2>
-              <p className="mt-3 leading-relaxed text-ink-soft">{item.line}</p>
               {tratado ? (
                 <Link
                   to="/tratados/$slug"

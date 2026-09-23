@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite } from "@/components/cite";
-import { ConLemas } from "@/components/lema";
 import { BtnArrow } from "@/components/motif";
 import { Seal } from "@/components/seal";
 import { Volver } from "@/components/volver";
@@ -25,13 +24,21 @@ function NosotrosPage() {
       <Seal size={96} className="h-24 w-24" />
       <p className="kicker mt-6">{NOSOTROS.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl">{NOSOTROS.title}</h1>
-      <p className="mt-6 text-lg leading-relaxed">
-        <ConLemas>{NOSOTROS.lead}</ConLemas>
-      </p>
-      <p className="mt-5 text-lg leading-relaxed">{NOSOTROS.bio}</p>
-      <p className="mt-5 leading-relaxed">{NOSOTROS.revelatio}</p>
-      <p className="mt-5 leading-relaxed">{NOSOTROS.contacto}</p>
-      <p className="mt-6 font-serif text-2xl tracking-wide">{NOSOTROS.phone}</p>
+
+      <h2 className="mt-12 font-serif text-3xl">{NOSOTROS.escribe.title}</h2>
+      {NOSOTROS.escribe.body.map((p) => (
+        <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
+          {p}
+        </p>
+      ))}
+
+      <h2 className="mt-12 font-serif text-3xl">{NOSOTROS.editorial.title}</h2>
+      <p className="mt-5 text-lg leading-relaxed">{NOSOTROS.editorial.body}</p>
+
+      <h2 className="mt-12 font-serif text-3xl">{NOSOTROS.revelatio.title}</h2>
+      <p className="mt-5 text-lg leading-relaxed">{NOSOTROS.revelatio.body}</p>
+
+      <p className="mt-8 font-serif text-2xl tracking-wide">{NOSOTROS.phone}</p>
       <p className="mt-1 font-sans text-sm tracking-wide text-gold">{NOSOTROS.phoneNote}</p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <a href={NOSOTROS.wa} rel="noopener noreferrer" target="_blank" className="btn btn-ink">

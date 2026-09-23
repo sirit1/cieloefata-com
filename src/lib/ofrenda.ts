@@ -5,9 +5,9 @@ const TEXTO_WA =
 
 export const OFRENDA = {
   title: "Sostener este trabajo",
-  gate: "Esta casa no cobra la lectura de la Biblia. El capítulo, los estudios ya escritos y el tratado del mes permanecen abiertos. Si el oficio te sostuvo, sostiene el trabajo para el que viene detrás: escribe por WhatsApp.",
+  gate: "Esta casa no cobra la lectura de la Biblia. El capítulo, los estudios ya escritos y el tratado del mes permanecen abiertos porque la Escritura no se vende por ración. El que es enseñado en la palabra hace partícipe de toda cosa buena al que lo instruye; y cada uno da como propuso en su corazón, no con tristeza ni por necesidad, porque Dios ama al dador alegre.",
   mission:
-    "La ofrenda no compra un versículo ni adelanta un favor. Sostiene la consulta que responde con el texto primero, los packs que ya existen en Drive, y la impresión de los tomos cuando hay que ponerlos en una mesa. No hay montos anunciados, ni recibo automático, ni un tono que apremie. Cada uno dé como propuso en su corazón, no con tristeza ni por necesidad.",
+    "Si el oficio te sostuvo —si un pasaje te atravesó, si un tratado te quitó un lema y te devolvió un capítulo—, sostiene el trabajo para el que viene detrás. La ofrenda no compra bendición ni abre ventanas de los cielos como contrato: sostiene la consulta, el aula y el yunque. Escribe por WhatsApp. El texto sigue libre; la casa, no se sostiene sola.",
   phone: "+58 424 167 4909",
   phoneNote: "WhatsApp · Venezuela",
   wa: "https://wa.me/584241674909?text=" + encodeURIComponent(TEXTO_WA),
