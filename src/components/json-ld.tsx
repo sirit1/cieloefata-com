@@ -1,5 +1,5 @@
 import { AMAZON_AUTHOR } from "@/lib/amazon";
-import { obras } from "@/lib/content";
+import { obras, tapaPath } from "@/lib/content";
 import { SITE_NAME, SITE_ORIGIN, canonicalUrl } from "@/lib/seo";
 
 function JsonLdScript({ data }: { data: unknown }) {
@@ -50,6 +50,7 @@ export function BookJsonLd({ slug }: { slug: string }) {
         author: { "@type": "Person", name: "Dr. Alejandro Sirit" },
         publisher: { "@type": "Organization", name: "Editorial Cielo Efata" },
         url: canonicalUrl(`/obras/${obra.slug}`),
+        image: canonicalUrl(tapaPath(obra.slug)),
         description: obra.line,
         inLanguage: "es",
         ...(identifier ? { identifier } : {}),
@@ -75,6 +76,7 @@ export function CorpusJsonLd() {
           item: {
             "@type": "Book",
             name: obra.title,
+            image: canonicalUrl(tapaPath(obra.slug)),
             author: { "@type": "Person", name: "Dr. Alejandro Sirit" },
           },
         })),

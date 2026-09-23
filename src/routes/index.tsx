@@ -5,6 +5,7 @@ import { Cite, Refs } from "@/components/cite";
 import { Datos } from "@/components/datos";
 import { ConLemas } from "@/components/lema";
 import { Motif } from "@/components/motif";
+import { Tapa } from "@/components/tapa";
 import { SlotsSemanaMes, UmbralTresCaminos } from "@/components/umbral";
 import { canonDoors, CORPUS, obras, ROMANO } from "@/lib/content";
 import { SELLO } from "@/lib/identidad";
@@ -172,6 +173,15 @@ function Home() {
           <ol className="tomo-grid mt-6">
             {obras.map((o) => (
               <li key={o.title}>
+                <Link
+                  to="/obras/$slug"
+                  params={{ slug: o.slug }}
+                  className="mb-3 inline-block"
+                  aria-hidden
+                  tabIndex={-1}
+                >
+                  <Tapa obra={o} size="rejilla" />
+                </Link>
                 <p className="kicker">{ROMANO[o.lectura]}</p>
                 <p className="tomo-title mt-2">{o.title}</p>
                 <p className="prosa mt-3 text-ink-soft">{o.line}</p>

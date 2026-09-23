@@ -7,7 +7,7 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
-import { obraBySlug, obras, obraVecina, ROMANO } from "@/lib/content";
+import { obraBySlug, obras, obraVecina, ROMANO, tapaPath } from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
 import { pageHead } from "@/lib/seo";
 import { studyBySlug } from "@/lib/studies";
@@ -26,6 +26,7 @@ export const Route = createFileRoute("/obras/$slug")({
       path: `/obras/${obra?.slug ?? ""}`,
       title: obra ? `${obra.title} · Cielo Efata` : "Obra · Cielo Efata",
       description: obra?.line,
+      image: obra ? tapaPath(obra.slug) : undefined,
     });
   },
 });
@@ -51,9 +52,12 @@ export function ObraPage() {
         Capítulo ancla: {obra.pasaje}
       </p>
 
-      <div className="mt-10">
-        <Tapa obra={obra} />
-      </div>
+      <figure className="mt-10 m-0 max-w-xs">
+        <Tapa obra={obra} size="lg" priority />
+        <figcaption className="mt-3 font-sans text-sm leading-relaxed text-ink-soft">
+          Tapa del tomo. Se abre junto a {obra.pasaje}, no en lugar de él.
+        </figcaption>
+      </figure>
 
       <p className="mt-10 text-lg leading-relaxed">
         <ConLemas>{obra.line}</ConLemas>
@@ -106,6 +110,7 @@ export function ObraPage() {
       </p>
       <Adquirir
         title={obra.title}
+        amazonTitle={obra.amazonTitle}
         slug={obra.slug}
         asinEbook={obra.asinEbook}
         isbnPrint={obra.isbnPrint}

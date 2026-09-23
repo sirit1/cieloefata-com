@@ -2,4 +2,4 @@
 
 Casa de estudio bíblico. El texto manda.
 
-Sitio: [cieloefata.com](https://cieloefata.com)
+Sitio: [www.cieloefata.com](https://www.cieloefata.com)

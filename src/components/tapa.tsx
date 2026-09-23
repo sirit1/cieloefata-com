@@ -1,52 +1,36 @@
-import { Seal } from "@/components/seal";
-import { ROMANO, type Obra } from "@/lib/content";
+import { tapaPath, type Obra } from "@/lib/content";
 
-/** Cubiertas reales, solo si el archivo existe en /public. Hoy no hay tapas KDP. */
-export const TAPAS: Partial<Record<string, string>> = {
-  // "efata": "/covers/efata.webp",
-};
+const SIZE = {
+  lg: "w-full max-w-xs",
+  pdp: "w-full max-w-xs",
+  sm: "w-[7.75rem] shrink-0 sm:w-[8.75rem]",
+  lista: "w-[7.75rem] shrink-0 sm:w-[8.75rem]",
+  umbral: "w-[9.25rem] shrink-0 sm:w-[11rem]",
+  rejilla: "w-[7.25rem]",
+} as const;
 
-export function tapaSrc(slug: string): string | undefined {
-  return TAPAS[slug];
+export function tapaSrc(slug: string) {
+  return tapaPath(slug);
 }
 
-export function Tapa({
-  obra,
-  size = "lg",
-}: {
-  obra: Obra;
-  size?: "lg" | "sm";
-}) {
-  const src = tapaSrc(obra.slug);
-  const alto = size === "lg" ? "max-w-sm" : "max-w-[9.5rem]";
-  const titulo = size === "lg" ? "text-3xl md:text-4xl" : "text-lg";
+type TapaProps = {
+  obra: Pick<Obra, "slug" | "title">;
+  size?: keyof typeof SIZE;
+  className?: string;
+  priority?: boolean;
+};
 
-  if (src) {
-    return (
-      <img
-        src={src}
-        alt={`Cubierta de ${obra.title}, Dr. Alejandro Sirit`}
-        width={size === "lg" ? 360 : 152}
-        height={size === "lg" ? 540 : 228}
-        className={`${alto} w-full border border-gold-soft/40 object-cover`}
-      />
-    );
-  }
-
+export function Tapa({ obra, size = "lg", className = "", priority = false }: TapaProps) {
   return (
-    <div
-      className={`${alto} relative flex aspect-[3/4] w-full flex-col justify-between border border-gold-soft/50 bg-navy px-5 py-6 text-parchment md:px-6`}
-      role="img"
-      aria-label={`Cubierta tipográfica de ${obra.title}, con el sello de Cielo Efata`}
-    >
-      <Seal variant="onNavy" size={size === "lg" ? 64 : 40} decorative className="opacity-90" />
-      <div>
-        <p className="font-sans text-[0.65rem] tracking-[0.2em] text-gold-soft uppercase">
-          Serie Cielo Efata · {ROMANO[obra.lectura]}
-        </p>
-        <p className={`mt-3 font-serif leading-tight ${titulo}`}>{obra.title}</p>
-        <p className="mt-4 font-sans text-sm tracking-wide text-gold-soft">Dr. Alejandro Sirit</p>
-      </div>
-    </div>
+    <img
+      src={tapaPath(obra.slug)}
+      alt={`Tapa de ${obra.title}, Dr. Alejandro Sirit. Editorial Cielo Efata.`}
+      width={900}
+      height={1440}
+      decoding="async"
+      fetchPriority={priority ? "high" : "low"}
+      loading={priority ? "eager" : "lazy"}
+      className={`h-auto border border-gold-soft/40 bg-navy object-cover shadow-[0_12px_28px_-18px_rgba(26,35,64,0.55)] ${SIZE[size]} ${className}`}
+    />
   );
 }
