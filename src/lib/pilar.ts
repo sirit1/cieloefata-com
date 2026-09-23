@@ -3,7 +3,7 @@ export const OFICIO = {
   gate: "Esta casa es escuela, no almanaque. RevelatiO abre el capítulo entero; aquí se recorre la clase de la semana, el tratado del mes, seis géneros en el yunque y un acto escrito. El método no se recita como talismán: se usa, de rodillas, hasta que el oído ceda.",
   refs: "Neh. 8:8 · 2 Ti. 2:15 · Stg. 1:22",
   camino:
-    "Si nunca se ha leído, se empieza por Marcos 1, donde el reino se acerca con dos verbos y no con un consuelo. La clase de esta semana es Romanos 1. Poseído el método, el yunque. Cada tapa de la colección se lee junto al capítulo que la sostiene, no en lugar de él.",
+    "Si nunca se ha leído, se empieza por Marcos 7, donde el Hijo dice Éfata y el oído cede. La clase de esta semana es el himno del Siervo, Filipenses 2. Poseído el método, el yunque. Cada tapa de la colección se lee junto al capítulo que la sostiene, no en lugar de él.",
 };
 
 export const ESCRITURA = {
@@ -121,12 +121,12 @@ export const TESTIGO = {
 };
 
 export const semana = {
-  slug: "romanos-1",
-  ref: "Romanos 1:16–17",
-  title: "No me avergüenzo",
-  verse: "Ro. 1:16–17",
+  slug: "filipenses-2",
+  ref: "Filipenses 2:5–11",
+  title: "El himno del Siervo",
+  verse: "Fil. 2:5–11",
   impacto:
-    "Pablo no abre con una técnica de crecimiento ni con una disculpa por el escándalo de la cruz. Abre con un evangelio del que no se avergüenza, porque es poder de Dios para salvación a todo aquel que cree, al judío primeramente y también al griego. La justicia de Dios se revela en ese anuncio, por fe y para fe, y Habacuc entra en la carta para que nadie convierta la fe en un mérito.",
+    "El himno humilla al yo antes de exaltarlo. Forma de siervo, muerte de cruz, el Nombre sobre todo nombre. Filipenses 2 no se escribió para que el seminario aplaudiera la kénosis: se escribió para que Evodia y Síntique dejaran de pelearse el primer asiento. El credo está metido en la ética. Quien canta 2:9–11 sin 2:7 no ha leído: ha cantado.",
 };
 
 export const DOS_CASAS = {
@@ -145,9 +145,9 @@ export const DOS_CASAS = {
 };
 
 export const PRIMERA_VEZ = {
-  slug: "marcos-1",
-  ref: "Marcos 1",
-  title: "Marcos 1",
-  lead: "El Evangelio no abre con un consuelo: abre con un mandato. Después que Juan fue encarcelado, Jesús vino a Galilea predicando el evangelio del reino: el tiempo se ha cumplido, arrepentíos y creed. Es el primer pasaje de esta escuela. Cuando ese capítulo se haya leído entero, Juan 3 y Hechos 2 esperan, porque el que se vuelve todavía debe nacer de lo alto, y el que nace pregunta qué hacer.",
-  refs: "Mr. 1:15 · Jn. 3:3 · Hch. 2:37–38",
+  slug: "marcos-7",
+  ref: "Marcos 7",
+  title: "Éfata",
+  lead: "El primer pasaje de esta escuela no es un consuelo: es un milagro. En la Decápolis el Hijo toma a un sordo, alza los ojos, gime y dice Éfata, que es: Sé abierto. El oído cede, la lengua se desata, y el oficio empieza: leer el capítulo entero una vez que el oído ha cedido. Marcos 1, Juan 3 y Hechos 2 permanecen como clases en preparación; el umbral con pack es este.",
+  refs: "Mr. 7:34 · Is. 35:5–6 · Lc. 24:45",
 };

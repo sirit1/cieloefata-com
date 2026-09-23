@@ -108,6 +108,12 @@ function StudyPage() {
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
         Aula · {etiquetaEstudio(study.slug)} · {study.ref}
       </p>
+      {etiquetaEstudio(study.slug).includes("Próximamente") ? (
+        <p className="mt-4 leading-relaxed text-ink-soft">
+          Esta clase se puede leer como ficha de aula. No tiene pack en Drive: no se presenta
+          como estudio publicado de la serie.
+        </p>
+      ) : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
       <Verso texto={study.passage} voz={study.voz} />
       <p className="mt-6">

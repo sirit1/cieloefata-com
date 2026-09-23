@@ -21,10 +21,10 @@ export const VERDAD_ORIGEN = {
 };
 
 export const REGLA_DE_ORO = {
-  title: "Regla de oro",
+  title: "A la ley y al testimonio",
   epigrafe: "A la ley y al testimonio. Si no dijeren conforme a esto, es porque no les ha amanecido.",
   ref: "Is. 8:20",
-  body: "Este método no añade un oráculo al canon. Somete cada diccionario y cada padre de la Iglesia a la analogía de la fe. El hebreo y el griego no son amos de la Palabra: son siervos para oírla sin recorte. Calvino, Lightfoot, Owen o Calcedonia solo tienen peso cuando dicen lo que ya dice el texto. Norma normans non normata: la Escritura norma y no es normada.",
+  body: "Isaías 8:20 no es un eslogan de casa: es el criterio. «A la ley y al testimonio…» Por consiguiente, este método no añade un oráculo al canon; somete diccionario y tradición a la analogía de la fe. El hebreo y el griego no son amos de la Palabra: son siervos para oírla sin recorte. Calvino, Lightfoot, Owen o Calcedonia solo tienen peso cuando dicen lo que ya dice el texto. Norma normans non normata: la Escritura norma y no es normada.",
   segunda:
     "La analogía antecedente tutela a Revelación. Lo ya dado hasta este punto del canon ilumina el párrafo, sin hurtarle la voz. La analogía plena resume al final de Revelación y gobierna Doctrina; no invade el vocablo. El sistema entra después, y entra etiquetado.",
 };
@@ -230,7 +230,7 @@ export const LABORATORIOS = [
     n: "V",
     slug: "filipenses-2",
     ref: "Filipenses 2:5–11",
-    title: "Carmen Christi",
+    title: "El himno del Siervo",
     genero: "Epístola · himno",
     lead: "Filipenses 2 no se escribió para que el seminario aplaudiera la kénosis. Se escribió para que Evodia y Síntique dejaran de pelearse el primer asiento. El himno es la medida, no el adorno.",
     refs: "Fil. 2:5–11 · Is. 45:23 · He. 5:8",
@@ -239,7 +239,7 @@ export const LABORATORIOS = [
     n: "VI",
     slug: "apocalipsis-5",
     ref: "Apocalipsis 5",
-    title: "León y Cordero",
+    title: "El Cordero y el rollo",
     genero: "Apocalipsis",
     lead: "Nadie en el cielo, ni en la tierra, ni debajo de la tierra era digno. El llanto de Juan termina cuando el Cordero toma el libro, y el que vence es el que fue degollado.",
     refs: "Ap. 5:5–6 · Gn. 49:9–10 · Ap. 5:9",
@@ -281,7 +281,7 @@ export const CATECISMO = [
   },
   {
     n: "25",
-    q: "¿Cuál es la regla de oro de Ver?",
+    q: "¿Cuál es el criterio de Ver?",
     a: "Tus ojos no interpretan lo que todavía no han aprendido a mirar. No se formula aplicación mientras se registra lo escrito.",
     ref: "Sal. 119:18",
   },
