@@ -4,8 +4,17 @@ import { ConLemas } from "@/components/lema";
 import { Seal } from "@/components/seal";
 import { Volver } from "@/components/volver";
 import { FIGURAS, SELLO, TINTAS, TIPOS, USO } from "@/lib/identidad";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/sello")({ component: SelloPage });
+export const Route = createFileRoute("/sello")({
+  component: SelloPage,
+  head: () =>
+    pageHead({
+      path: "/sello",
+      title: "El sello · Cielo Efata",
+      description: "Post tenebras lux. El sello no es un logotipo: es una confesión.",
+    }),
+});
 
 function SelloPage() {
   return (

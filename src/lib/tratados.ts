@@ -212,7 +212,7 @@ export const tratados: Tratado[] = [
     ref: "Isaías 53:5",
     title: "Herido por nuestras rebeliones",
     blurb:
-      "La llaga del Siervo no es póliza de sanidad automática ni poesía de resiliencia. Isaías 53:5 vuelve al Cántico entero: herido por nuestras rebeliones, ofrenda por la culpa, justificación de muchos. El lector no es el Siervo.",
+      "La llaga del Siervo no es póliza de sanidad automática ni poesía de resiliencia. Isaías 53:5 vuelve al Cántico entero: herido por nuestras rebeliones, ofrenda por la culpa, justificación de muchos. El lector no es el Siervo. Este tratado restituye el versículo al capítulo que lo sostiene y conduce, sin prisa de mercado, al tomo El Siervo, no tú.",
     pack: true,
     cuerpo: [
       "«Por su llaga fuimos nosotros curados» circula como amuleto clínico y como consuelo sin sangre. Este tratado restituye Isaías 53:5 a Isaías 52:13–53:12: el Siervo exaltado y desfigurado, el «nosotros» descarriado, el castigo de nuestra paz sobre él, el אשם (ofrenda por la culpa). La Escritura interpreta la Escritura —Hechos 8, 1 Pedro 2, Mateo 8— y derriba la prosperidad de las heridas, la empatía vaga y la autoexpiación. Conduce al tomo *El Siervo, no tú* y, mientras el cuerpo gime, a *Bástate mi gracia*.",

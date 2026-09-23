@@ -1,6 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/guias")({ component: GuiasPage });
+import { pageHead } from "@/lib/seo";
+
+export const Route = createFileRoute("/guias")({
+  component: GuiasPage,
+  head: () =>
+    pageHead({
+      path: "/guias",
+      title: "Guías · Cielo Efata",
+      description:
+        "Strong, cómo se lee, del pasaje a la palabra dicha, y la pregunta difícil. El capítulo sigue siendo el señor de la casa.",
+    }),
+});
 
 const guias = [
   {

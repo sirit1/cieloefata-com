@@ -1,3 +1,5 @@
+import { AMAZON_AUTHOR, whatsappColeccion } from "@/lib/amazon";
+
 export const school = {
   name: "Cielo Efata",
   tagline: "La Escritura manda sobre el comentario.",
@@ -14,12 +16,10 @@ export const school = {
 };
 
 export const adquisicion = {
-  amazon: "https://www.amazon.com/Alejandro-Sirit/e/B0GWKX4RCV",
-  whatsapp:
-    "https://wa.me/584241674909?text=" +
-    encodeURIComponent(
-      "Paz. Solicito la colección impresa de Editorial Cielo Efata, siete tomos del Dr. Alejandro Sirit.",
-    ),
+  // Primary author hub (merge in progress).
+  // Fallback during the merge: https://www.amazon.com/Alejandro-Sirit/e/B0GWKX4RCV
+  amazon: AMAZON_AUTHOR,
+  whatsapp: whatsappColeccion(),
 };
 
 export const CORPUS = {
@@ -135,36 +135,65 @@ export const canonDoors = [
 
 export const ROMANO = ["", "I", "II", "III", "IV", "V", "VI", "VII"] as const;
 
-export const obras = [
+export type Obra = {
+  n: number;
+  lectura: number;
+  slug: string;
+  title: string;
+  line: string;
+  thesis: string;
+  sample: string;
+  ref: string;
+  pasaje: string;
+  studySlug: string;
+  tratadoSlug?: string;
+  studyNote?: string;
+  crisol?: boolean;
+  asinEbook?: string;
+  isbnPrint?: string;
+};
+
+export const obras: Obra[] = [
   {
     n: 6,
     lectura: 1,
+    slug: "efata",
     title: "Éfata",
     line: "«Éfata» —sé abierto— no es un lema de marca ni una técnica de escucha interior. En Marcos 7 el Hijo toma a un sordo, alza los ojos, gime y manda que el oído y la lengua cedan. Por consiguiente, este tomo no administra un rito de atención plena: pide el milagro que solo Cristo hace, y el oficio de leer el capítulo entero una vez que el oído ha cedido.",
     thesis:
       "Jesús tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Este tomo no ofrece técnicas de escucha interior ni un lema de marca. Pide el milagro que solo el Hijo hace: oídos que oyen la Palabra y lengua que la confiesa. Quien ya oye, no se pavonea. Quien no oye, no se administra un rito. El Espíritu, enviado por ese mismo Señor, sigue abriendo. El sordo no se abre: es abierto.",
+    sample:
+      "Jesús tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Este tomo no ofrece técnicas de escucha interior ni un lema de marca. Pide el milagro que solo el Hijo hace: oídos que oyen la Palabra y lengua que la confiesa.",
     ref: "Mr. 7:34 · Hch. 2:4",
     pasaje: "Marcos 7",
     studySlug: "marcos-7",
+    asinEbook: "B0HJ15ZXL3",
   },
   {
     n: 5,
     lectura: 2,
+    slug: "el-siervo-no-tu",
     title: "El Siervo, no tú",
     line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. Isaías vio al Siervo herido por nuestras rebeliones; nosotros éramos. Por tanto, este tomo rehúsa la autoexpiación piadosa: el justo muere por los injustos, y el lector no se sube al versículo como si fuera el Siervo.",
     thesis:
       "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este tomo rehúsa la autoexpiación piadosa y recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
+    sample:
+      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros.",
     ref: "Is. 53:5 · 1 P. 3:18",
     pasaje: "Isaías 53",
     studySlug: "isaias-53",
+    asinEbook: "B0HKQGBYV4",
   },
   {
     n: 7,
     lectura: 3,
+    slug: "bastate-mi-gracia",
     title: "Bástate mi gracia",
     line: "«Bástate mi gracia.» El lector recibe la palabra dicha a Pablo en la flaqueza: el poder se perfecciona donde ya no se puede. El aguijón permanece; el Señor también.",
     thesis:
       "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa: es sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
+    sample:
+      "A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa: es sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas.",
     ref: "2 Co. 12:9",
     pasaje: "2 Corintios 12",
     studySlug: "2-corintios-12",
@@ -172,49 +201,80 @@ export const obras = [
   {
     n: 4,
     lectura: 4,
+    slug: "cuando-el-cielo-se-cae",
     title: "Cuando el cielo se cae",
     line: "El lector recibe un lamento que no se recablea para que duela menos. Job no obtiene un manual: obtiene a Dios en el valle.",
     thesis:
       "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos. Este tomo enseña a llorar sin apostatar, y a no convertir el lamento en un ídolo de la queja. El «tú» llega en el valle: el Pastor no niega la sombra; la atraviesa con el que clama.",
+    sample:
+      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos.",
     ref: "Job 42:5–6 · Lm. 3:22–23",
     pasaje: "Job 42",
-    studySlug: "salmo-22",
+    studySlug: "",
+    studyNote:
+      "No hay aún una clase de Job en el aula. El lamento se oye en este tomo, junto al capítulo. Salmo 22 permanece como laboratorio en preparación: es el clamor del abandonado, no un sustituto del libro de Job.",
+    isbnPrint: "9798176466690",
   },
   {
     n: 3,
     lectura: 5,
+    slug: "la-fe-no-basta",
     title: "La fe no basta",
     line: "El lector recibe el espejo de Santiago. La fe que no obra está muerta, aunque recite a Pablo para no obedecer.",
     thesis:
       "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro. El que oye y no hace se engaña a sí mismo, y el engaño no es un retraso inocente. Este tomo no discute a Pablo: desnuda al que cita a Pablo para no obedecer.",
+    sample:
+      "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro.",
     ref: "Stg. 2:17 · Stg. 1:23–24",
     pasaje: "Santiago 2",
-    studySlug: "2-pedro-1",
+    studySlug: "santiago-1",
+    asinEbook: "B0GYFR8YDQ",
   },
   {
     n: 2,
     lectura: 6,
+    slug: "el-altar-del-espejo",
     title: "El altar del espejo",
     line: "El lector recibe la compuerta entre oír y hacer. Quien mira el espejo y se va olvida el rostro; quien permanece, es hacedor de la obra.",
     thesis:
       "El que oye y no hace se parece al que mira su rostro natural en un espejo y se va, y luego olvida. El altar no es el sentimiento de haber oído, ni la liturgia de un estudio bien anotado. Es el hombre que permanece en la ley perfecta, la de la libertad, y es hacedor de la obra. C.R.I.S.O.L.™ vive aquí: la compuerta pastoral de Decisión, para que la cadena no se vuelva un cadáver erudito.",
+    sample:
+      "El que oye y no hace se parece al que mira su rostro natural en un espejo y se va, y luego olvida. El altar no es el sentimiento de haber oído, ni la liturgia de un estudio bien anotado. Es el hombre que permanece en la ley perfecta, la de la libertad, y es hacedor de la obra.",
     ref: "Stg. 1:22–25",
     pasaje: "Santiago 1",
     studySlug: "santiago-1",
     crisol: true,
+    isbnPrint: "9798176414967",
   },
   {
     n: 1,
     lectura: 7,
+    slug: "callar-para-ganar",
     title: "Callar para ganar",
     line: "El lector recibe el dominio de la lengua. Callar no es huir: es no encender el bosque, y hablar cuando el pasaje manda hablar.",
     thesis:
       "La lengua es un fuego. El que no ofende en palabra, es varón perfecto. Este tomo no enseña la cobardía ni el silencio cómplice: enseña el dominio que el Espíritu da, para no encender el bosque por una chispa, y para hablar cuando el pasaje manda hablar. Callar no es huir. Callar, aquí, es no pelear el primer asiento, y no convertir la doctrina en un deporte de redes.",
+    sample:
+      "La lengua es un fuego. El que no ofende en palabra, es varón perfecto. Este tomo no enseña la cobardía ni el silencio cómplice: enseña el dominio que el Espíritu da, para no encender el bosque por una chispa, y para hablar cuando el pasaje manda hablar.",
     ref: "Stg. 3:2–6 · Pr. 17:27",
     pasaje: "Santiago 3",
     studySlug: "",
+    tratadoSlug: "la-muerte-y-la-vida",
+    asinEbook: "B0GPF3NHQT",
+    isbnPrint: "9798253959213",
   },
-] as const;
+];
+
+export function obraBySlug(slug: string) {
+  return obras.find((o) => o.slug === slug);
+}
+
+export function obraVecina(lectura: number) {
+  return {
+    prev: obras.find((o) => o.lectura === lectura - 1),
+    next: obras.find((o) => o.lectura === lectura + 1),
+  };
+}
 
 export const words = [
   {

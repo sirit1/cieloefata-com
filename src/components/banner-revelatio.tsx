@@ -13,7 +13,7 @@ export function BannerRevelatio() {
           >
             <img
               src="/brand/revelatio-book.webp"
-              alt=""
+              alt="RevelatiO, el lector de la Escritura de Cielo Efata"
               width={56}
               height={56}
               className="h-12 w-auto object-contain sm:h-14"

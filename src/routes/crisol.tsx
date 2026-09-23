@@ -10,11 +10,17 @@ import {
   CRISOL_PESTILLOS,
 } from "@/lib/crisol";
 
+import { pageHead } from "@/lib/seo";
+
 export const Route = createFileRoute("/crisol")({
   component: CrisolPage,
-  head: () => ({
-    meta: [{ title: "C.R.I.S.O.L.™ · Cielo Efata" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/crisol",
+      title: "C.R.I.S.O.L.™ · Cielo Efata",
+      description:
+        "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.",
+    }),
 });
 
 function CrisolPage() {

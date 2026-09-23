@@ -4,8 +4,18 @@ import { Datos } from "@/components/datos";
 import { bible, canonDoors } from "@/lib/content";
 import { fichasPorEstante } from "@/lib/canon-fichas";
 import { ESCRITURA, PERSONAS, TESTIGO, TRINIDAD } from "@/lib/pilar";
+import { pageHead } from "@/lib/seo";
 
-export const Route = createFileRoute("/canon")({ component: CanonPage });
+export const Route = createFileRoute("/canon")({
+  component: CanonPage,
+  head: () =>
+    pageHead({
+      path: "/canon",
+      title: "Canon · Cielo Efata",
+      description:
+        "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.",
+    }),
+});
 
 function CanonPage() {
   return (

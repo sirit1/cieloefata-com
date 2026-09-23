@@ -3,20 +3,30 @@ import { useEffect, useState } from "react";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
 import { aulaSinActo, cerrarAulaSiEscrito, type AulaAbierta } from "@/lib/aula-abierta";
+import { actoDe } from "@/lib/actos";
 import { loadCuaderno, saveCuaderno, type CuadernoEntry } from "@/lib/cuaderno-store";
 import { Motif } from "@/components/motif";
 import { PRIMERA_VEZ, semana } from "@/lib/pilar";
+import { pageHead } from "@/lib/seo";
 import { MANUAL_CAMPO } from "@/lib/verdad";
 
 export const Route = createFileRoute("/cuaderno")({
-  validateSearch: (raw: Record<string, unknown>) => ({
-    ref: typeof raw.ref === "string" ? raw.ref : "",
-  }),
+  validateSearch: (raw: Record<string, unknown>): { ref?: string } => {
+    if (typeof raw.ref === "string" && raw.ref.trim()) return { ref: raw.ref };
+    return {};
+  },
+  head: () =>
+    pageHead({
+      path: "/cuaderno",
+      title: "Cuaderno · Cielo Efata",
+      description:
+        "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.",
+    }),
   component: CuadernoPage,
 });
 
 function CuadernoPage() {
-  const { ref } = Route.useSearch();
+  const { ref = "" } = Route.useSearch();
   const [items, setItems] = useState<CuadernoEntry[]>([]);
   const [indicativo, setIndicativo] = useState("");
   const [decision, setDecision] = useState("");
@@ -28,9 +38,7 @@ function CuadernoPage() {
 
   useEffect(() => {
     setItems(loadCuaderno());
-    const abierta = aulaSinActo();
-    setPendiente(abierta);
-    if (!ref && abierta) setPassage(abierta.pasaje);
+    setPendiente(aulaSinActo());
   }, [ref]);
 
   useEffect(() => {
@@ -62,6 +70,9 @@ function CuadernoPage() {
     setGuardado(passage.trim() || "Sin referencia");
   }
 
+  const actoSemana = actoDe(semana.slug);
+  const vacio = items.length === 0;
+
   return (
     <main className="mx-auto max-w-2xl px-4 py-16 md:py-24">
       <Motif kind="flame" />
@@ -92,12 +103,74 @@ function CuadernoPage() {
           C.R.I.S.O.L.™ en El Altar del Espejo
         </Link>
       </p>
+
+      {vacio ? (
+        <aside className="mt-8 border border-rule bg-paper px-5 py-6">
+          <p className="font-serif text-xl">Aún no hay un paso escrito</p>
+          <p className="mt-3 leading-relaxed">
+            El cuaderno no guarda impresiones: guarda el acto que el aula pidió —indicativo oído,
+            un verbo del pasaje, testigo de carne y, si hace falta, una nota breve—. Si nunca se
+            ha leído en esta escuela, se empieza por Marcos 7 (Éfata). Si ya se oyó la clase de
+            esta semana, se escribe el acto de Filipenses 2 antes de coleccionar otro capítulo.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            Cuando el aula te envíe aquí con un pasaje en la barra, ese campo no es decoración: es
+            el texto que manda sobre lo que vas a firmar. No guardes un propósito genérico. Nombra
+            lo que el indicativo ya dijo.
+          </p>
+          {actoSemana ? (
+            <p className="mt-4 leading-relaxed text-ink-soft">
+              El acto de esta semana, {semana.ref}: {actoSemana.escrito}
+            </p>
+          ) : null}
+          {pendiente ? (
+            <p className="mt-4 leading-relaxed">
+              El aula de {pendiente.titulo} se oyó. El acto de {pendiente.pasaje} aún no está
+              escrito.
+            </p>
+          ) : null}
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Link
+              to="/estudios/$slug"
+              params={{ slug: semana.slug }}
+              className="btn btn-ink"
+            >
+              Abrir estudio de esta semana
+            </Link>
+            <Link
+              to="/estudios/$slug"
+              params={{ slug: PRIMERA_VEZ.slug }}
+              className="btn btn-ghost"
+            >
+              Abrir Éfata
+            </Link>
+            <button
+              type="button"
+              className="btn btn-ghost"
+              onClick={() => setPassage(semana.ref)}
+            >
+              Usar el pasaje de esta semana
+            </button>
+            {pendiente ? (
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => setPassage(pendiente.pasaje)}
+              >
+                Usar el pasaje del aula
+              </button>
+            ) : null}
+          </div>
+        </aside>
+      ) : null}
+
       <form onSubmit={save} className="mt-8 space-y-4 border border-rule bg-parchment p-5">
         <label className="block font-sans text-xs tracking-widest text-muted uppercase">
           Pasaje
           <input
             value={passage}
             onChange={(e) => setPassage(e.target.value)}
+            placeholder="El capítulo que se oyó. Vacío hasta que se elija."
             className="mt-2 min-h-11 w-full border border-rule bg-paper px-3 font-serif text-base"
           />
         </label>
@@ -158,34 +231,10 @@ function CuadernoPage() {
       <section className="mt-12">
         <h2 className="font-serif text-2xl">Lo escrito</h2>
         {items.length === 0 ? (
-          pendiente ? (
-            <p className="mt-4 leading-relaxed text-ink-soft">
-              El aula de {pendiente.titulo} se oyó. El acto de {pendiente.pasaje} aún no está
-              escrito.
-            </p>
-          ) : (
-            <p className="mt-4 leading-relaxed text-ink-soft">
-              Aún no hay un paso escrito. La clase de esta semana es {semana.ref}. Si nunca se ha
-              leído, se empieza por {PRIMERA_VEZ.ref}.
-              <span className="mt-3 block">
-                <Link
-                  to="/estudios/$slug"
-                  params={{ slug: semana.slug }}
-                  className="text-link underline"
-                >
-                  Abrir {semana.title}
-                </Link>
-                {" · "}
-                <Link
-                  to="/estudios/$slug"
-                  params={{ slug: PRIMERA_VEZ.slug }}
-                  className="text-link underline"
-                >
-                  Abrir {PRIMERA_VEZ.title}
-                </Link>
-              </span>
-            </p>
-          )
+          <p className="mt-4 leading-relaxed text-ink-soft">
+            Cuando se guarde el primer acto, quedará aquí. El navegador lo recuerda; no se envía a
+            otra parte.
+          </p>
         ) : (
           <ul className="mt-6 space-y-6">
             {items.map((item) => (

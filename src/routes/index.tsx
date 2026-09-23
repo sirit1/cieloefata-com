@@ -3,30 +3,31 @@ import { Adquirir } from "@/components/adquirir";
 import { BannerRevelatio } from "@/components/banner-revelatio";
 import { Cite, Refs } from "@/components/cite";
 import { Datos } from "@/components/datos";
-import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ConLemas } from "@/components/lema";
-import { Motif, BtnArrow } from "@/components/motif";
-import { SeguirActo } from "@/components/seguir-acto";
+import { Motif } from "@/components/motif";
+import { SlotsSemanaMes, UmbralTresCaminos } from "@/components/umbral";
 import { canonDoors, CORPUS, obras, ROMANO } from "@/lib/content";
-import { tratadoDelMes } from "@/lib/tratados";
 import { SELLO } from "@/lib/identidad";
-import {
-  ESCRITURA,
-  PERSONAS_PUERTA,
-  PRIMERA_VEZ,
-  TESTIGO,
-  TRINIDAD,
-  semana,
-} from "@/lib/pilar";
+import { ESCRITURA, PERSONAS_PUERTA, TESTIGO, TRINIDAD } from "@/lib/pilar";
+import { pageHead, SITE_TITLE } from "@/lib/seo";
 
-export const Route = createFileRoute("/")({ component: Home });
+export const Route = createFileRoute("/")({
+  component: Home,
+  head: () =>
+    pageHead({
+      path: "/",
+      title: SITE_TITLE,
+      description:
+        "Escuela de lectura de la Escritura. RevelatiO abre el capítulo. Aquí se estudia: el método, el estudio de la semana y el tratado del mes.",
+    }),
+});
 
 function Home() {
-  const mes = tratadoDelMes();
   return (
     <main className="pb-24">
       <section className="scroll-mt-24 px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-[40em]">
+        <div className="mx-auto max-w-5xl">
+          <div className="max-w-[40em]">
           <p className="lema-latin glosa" tabIndex={0}>
             {SELLO.latin}
             <span className="glosa-card" role="tooltip">
@@ -40,6 +41,12 @@ function Home() {
             <ConLemas>{ESCRITURA.gate}</ConLemas>
           </p>
           <Refs refs={ESCRITURA.refs} />
+          <p className="mt-8 text-lg leading-relaxed">
+            <ConLemas>{ESCRITURA.oficio}</ConLemas>
+          </p>
+          <UmbralTresCaminos />
+          </div>
+          <SlotsSemanaMes />
           <ul className="mt-20 grid gap-16 sm:grid-cols-3">
             <li>
               <Link to="/estudios" className="group flex flex-col items-start">
@@ -102,74 +109,6 @@ function Home() {
       </section>
 
       <BannerRevelatio />
-
-      <section className="cv-auto mx-auto max-w-5xl px-4 py-20 md:py-28">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <article className="marca-agua marca-agua-navy flex flex-col bg-navy px-6 py-10 text-parchment md:px-9">
-            <p className="font-serif text-lg italic text-gold-soft">El primer pasaje</p>
-            <h2 className="mt-3 font-serif text-3xl">{PRIMERA_VEZ.title}</h2>
-            <p className="mt-5 flex-1 text-parchment/90">{PRIMERA_VEZ.lead}</p>
-            <p className="mt-4 font-sans text-sm tracking-wide text-gold-soft">
-              <Cite>{PRIMERA_VEZ.refs}</Cite>
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/estudios/$slug"
-                params={{ slug: PRIMERA_VEZ.slug }}
-                className="btn btn-gold"
-              >
-                Escudriñar el estudio
-                <span className="sr-only"> de {PRIMERA_VEZ.title}</span>
-                <BtnArrow />
-              </Link>
-              <LeerCapitulo
-                ref={PRIMERA_VEZ.ref}
-                className="btn btn-ghost btn-ghost-navy"
-              />
-            </div>
-          </article>
-          <article className="flex flex-col border border-rule bg-paper px-6 py-10 md:px-9">
-            <p className="font-serif text-lg italic text-gold">El estudio de esta semana</p>
-            <h2 className="mt-3 font-serif text-3xl">{semana.title}</h2>
-            <p className="mt-1 text-gold">{semana.ref}</p>
-            <p className="mt-5 flex-1">{semana.impacto}</p>
-            <p className="mt-4 font-sans text-sm tracking-wide text-gold">
-              <Cite>{semana.verse}</Cite>
-            </p>
-            <SeguirActo />
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                to="/estudios/$slug"
-                params={{ slug: semana.slug }}
-                className="btn btn-ink"
-              >
-                Escudriñar el estudio
-                <span className="sr-only"> de {semana.title}</span>
-                <BtnArrow />
-              </Link>
-              <LeerCapitulo ref={semana.ref} />
-            </div>
-          </article>
-        </div>
-
-        {mes ? (
-        <article className="mt-10 border border-rule bg-paper px-6 py-10 md:px-9">
-          <p className="font-serif text-lg italic text-gold">El tratado de este mes</p>
-          <h2 className="mt-3 font-serif text-3xl">{mes.title}</h2>
-          <p className="mt-1 text-gold">{mes.ref}</p>
-          <p className="mt-4 max-w-[40em]">{mes.blurb}</p>
-          <Link
-            to="/tratados/$slug"
-            params={{ slug: mes.slug }}
-            className="btn btn-ink mt-8"
-          >
-            Escudriñar el tratado
-            <span className="sr-only"> {mes.title}</span>
-            <BtnArrow />
-          </Link>
-        </article>
-        ) : null}
-      </section>
 
       <section id="testigo" className="marca-agua bg-navy px-4 py-20 text-parchment md:py-28">
         <div className="mx-auto max-w-5xl">
@@ -236,7 +175,11 @@ function Home() {
                 <p className="kicker">{ROMANO[o.lectura]}</p>
                 <p className="tomo-title mt-2">{o.title}</p>
                 <p className="prosa mt-3 text-ink-soft">{o.line}</p>
-                <Link to="/obras" hash={`lectura-${o.lectura}`} className="examinar hover:text-ink">
+                <Link
+                  to="/obras/$slug"
+                  params={{ slug: o.slug }}
+                  className="examinar hover:text-ink"
+                >
                   Examinar este tomo
                 </Link>
               </li>

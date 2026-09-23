@@ -3,6 +3,18 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "installCommand": "npm ci",
+  "redirects": [
+    { "source": "/libros", "destination": "/obras", "statusCode": 308, "permanent": true },
+    { "source": "/contacto", "destination": "/nosotros", "statusCode": 308, "permanent": true },
+    { "source": "/about", "destination": "/nosotros", "statusCode": 308, "permanent": true },
+    { "source": "/donar", "destination": "/sostener", "statusCode": 308, "permanent": true },
+    {
+      "source": "/estudios/hechos-13-14",
+      "destination": "/estudios/viajes-de-pablo",
+      "statusCode": 308,
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/brand/(.*)",
