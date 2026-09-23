@@ -396,6 +396,7 @@ export function studyBySlug(slug: string) {
 }
 
 export function etiquetaEstudio(slug: string) {
+  if (slug === "viajes-de-pablo") return "Estudio · pack · Hechos 13–14";
   if (slug === ESTUDIO_SEMANA_SLUG) return "Estudio · esta semana";
   if (estudioTienePack(slug) && (LAB_SLUGS as readonly string[]).includes(slug)) {
     return "Estudio · pack · yunque";

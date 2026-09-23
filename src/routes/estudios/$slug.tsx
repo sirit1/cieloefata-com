@@ -10,6 +10,7 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { PasosNav, pasoId } from "@/components/pasos-nav";
 import { RedCanon } from "@/components/red-canon";
 import { laboratorioDe, profundoDe, textoParaOir, type LabExtra } from "@/lib/escuela";
+import { pageHead } from "@/lib/seo";
 import { etiquetaEstudio, studyBySlug } from "@/lib/studies";
 import { VERDAD_PASOS } from "@/lib/verdad";
 import { vocesDe } from "@/lib/voces";
@@ -21,9 +22,12 @@ export const Route = createFileRoute("/estudios/$slug")({
     if (!study) throw notFound();
     return { study };
   },
-  head: ({ loaderData }) => ({
-    meta: [{ title: `${loaderData?.study.title ?? "Estudio"} · Cielo Efata` }],
-  }),
+  head: ({ loaderData }) =>
+    pageHead({
+      path: `/estudios/${loaderData?.study.slug ?? ""}`,
+      title: `${loaderData?.study.title ?? "Estudio"} · Cielo Efata`,
+      description: loaderData?.study.ref,
+    }),
 });
 
 const KEYS = ["ver", "entorno", "revelacion", "doctrina", "argumento", "decision"] as const;

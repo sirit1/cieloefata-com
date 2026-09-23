@@ -17,7 +17,6 @@ const SHARE_META_KEYS = new Set([
   "og:image:width",
   "og:image:height",
   "og:type",
-  "og:url",
   "og:site_name",
   "twitter:card",
   "twitter:title",
@@ -157,8 +156,13 @@ export function renderInstallPageHtml(template, { host, url } = {}) {
     .replaceAll("{{APP_URL}}", escapeHtml(stripInstallParams(url)));
 }
 
-export function renderWebManifest(hostHeader) {
-  const name = appNameFromHost(hostHeader);
+export function renderWebManifest(hostHeader, appName) {
+  const hostName = appNameFromHost(hostHeader);
+  const siteTitle = String(readOgSite().title ?? "").trim();
+  const name =
+    String(appName ?? "").trim() ||
+    (hostName !== DEFAULT_APP_NAME ? hostName : siteTitle) ||
+    DEFAULT_APP_NAME;
   return JSON.stringify(
     {
       name,
@@ -167,8 +171,8 @@ export function renderWebManifest(hostHeader) {
       start_url: "/",
       scope: "/",
       display: "standalone",
-      background_color: "#000000",
-      theme_color: "#000000",
+      background_color: "#F4EFE4",
+      theme_color: "#1A2340",
       icons: [
         {
           src: "/__grok/icon-180.png",
@@ -342,10 +346,14 @@ export function grokOgHeadTags({
 } = {}) {
   const title = resolveOgTitle(site, appName, host, documentTitle);
   const publicHost = resolvePublicHost(host);
+  const siteName = String(site.title ?? "").trim();
   const tags = [
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta property="og:title" content="${escapeHtml(title)}">`,
   ];
+  if (siteName) {
+    tags.push(`<meta property="og:site_name" content="${escapeHtml(siteName)}">`);
+  }
   const description = String(site.description ?? "").trim();
   if (description) {
     tags.push(`<meta property="og:description" content="${escapeHtml(description)}">`);

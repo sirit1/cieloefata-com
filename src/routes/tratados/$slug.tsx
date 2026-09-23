@@ -5,6 +5,7 @@ import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { textoParaOir } from "@/lib/escuela";
+import { pageHead } from "@/lib/seo";
 import { tratadoDe } from "@/lib/tratados";
 
 export const Route = createFileRoute("/tratados/$slug")({
@@ -14,9 +15,12 @@ export const Route = createFileRoute("/tratados/$slug")({
     if (!t) throw notFound();
     return { tratado: t };
   },
-  head: ({ loaderData }) => ({
-    meta: [{ title: `${loaderData?.tratado.title ?? "Tratado"} · Cielo Efata` }],
-  }),
+  head: ({ loaderData }) =>
+    pageHead({
+      path: `/tratados/${loaderData?.tratado.slug ?? ""}`,
+      title: `${loaderData?.tratado.title ?? "Tratado"} · Cielo Efata`,
+      description: loaderData?.tratado.blurb,
+    }),
 });
 
 function TratadoPage() {

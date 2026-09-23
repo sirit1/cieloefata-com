@@ -2,7 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lema } from "@/components/lema";
 import { wordOfDay } from "@/lib/content";
 
-export const Route = createFileRoute("/palabra")({ component: PalabraPage });
+import { pageHead } from "@/lib/seo";
+
+export const Route = createFileRoute("/palabra")({
+  component: PalabraPage,
+  head: () =>
+    pageHead({
+      path: "/palabra",
+      title: "Palabra · Cielo Efata",
+      description:
+        "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.",
+    }),
+});
 
 function PalabraPage() {
   const word = wordOfDay();

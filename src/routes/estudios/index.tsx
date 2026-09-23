@@ -14,7 +14,18 @@ import {
 } from "@/lib/studies";
 import { LABORATORIOS } from "@/lib/verdad";
 
-export const Route = createFileRoute("/estudios/")({ component: EstudiosPage });
+import { pageHead } from "@/lib/seo";
+
+export const Route = createFileRoute("/estudios/")({
+  component: EstudiosPage,
+  head: () =>
+    pageHead({
+      path: "/estudios",
+      title: "Estudios · Cielo Efata",
+      description:
+        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Trece packs reales en Drive.",
+    }),
+});
 
 function EstudiosPage() {
   const semana = studyBySlug(ESTUDIO_SEMANA_SLUG);

@@ -480,6 +480,15 @@ test("renders the manifest with the per-app name", () => {
   assert.equal(manifest.icons[0].src, "/__grok/icon-180.png");
 });
 
+test("house site names the manifest Cielo Efata, not Grok App", () => {
+  const www = JSON.parse(renderWebManifest("www.cieloefata.com"));
+  assert.equal(www.name, "Cielo Efata");
+  assert.equal(www.short_name, "Cielo Efata");
+  const explicit = JSON.parse(renderWebManifest("localhost:8080", "Cielo Efata"));
+  assert.equal(explicit.name, "Cielo Efata");
+  assert.notEqual(explicit.name, "Grok App");
+});
+
 // Tripwires: the deployed-app path only works if Nitro scans server/ — an
 // accidental edit that drops serverDir or the middleware file would otherwise
 // fail silently (published apps would just render the app for ?install=1).

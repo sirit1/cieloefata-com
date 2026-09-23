@@ -11,7 +11,18 @@ import {
   type Tratado,
 } from "@/lib/tratados";
 
-export const Route = createFileRoute("/tratados")({ component: TratadosPage });
+import { pageHead } from "@/lib/seo";
+
+export const Route = createFileRoute("/tratados")({
+  component: TratadosPage,
+  head: () =>
+    pageHead({
+      path: "/tratados",
+      title: "Tratados · Cielo Efata",
+      description:
+        "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
+    }),
+});
 
 function TratadosPage() {
   const mes = tratadoDelMes();
@@ -52,9 +63,15 @@ function TratadosPage() {
 
       <Lista titulo="Los catorce tratados con pack" items={publicados} />
       <Lista titulo="En preparación — sin pack en Drive" items={proximos} proximo />
-      <Link to="/estudios" className="mt-10 inline-block font-sans text-sm text-link underline">
-        Escudriñar las clases
-      </Link>
+      <p className="mt-10 font-sans text-sm">
+        <Link to="/estudios" className="text-link underline">
+          Escudriñar las clases
+        </Link>
+        {" · "}
+        <Link to="/objeciones" className="text-link underline">
+          Versículos que viajan solos
+        </Link>
+      </p>
       <Outlet />
     </main>
   );
