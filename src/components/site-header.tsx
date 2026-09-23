@@ -59,7 +59,7 @@ export function SiteHeader() {
           className="flex min-h-11 min-w-0 items-center gap-3 text-parchment"
           onClick={() => setOpen(false)}
         >
-          <Seal variant="onNavy" size={44} decorative priority className="h-11 w-11 shrink-0" />
+          <Seal variant="onNavy" size={44} priority className="h-11 w-11 shrink-0" />
           <span className="wordmark text-base leading-none">Cielo Efata</span>
         </Link>
         <nav
@@ -70,14 +70,17 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              search={item.to === "/cuaderno" ? { ref: "" } : undefined}
               aria-current={isCurrent(pathname, item.to) ? "page" : undefined}
               className="inline-flex min-h-11 items-center px-2.5 font-sans text-xs tracking-[0.14em] text-parchment uppercase hover:text-gold-soft aria-[current=page]:text-gold-soft"
             >
               {item.label}
             </Link>
           ))}
-          <SostenerBoton className="ml-2 inline-flex min-h-11 items-center border border-gold-soft px-3 font-sans text-xs tracking-[0.14em] text-parchment uppercase hover:bg-gold-soft hover:text-navy" />
+          <SostenerBoton
+            className={`ml-2 inline-flex min-h-11 items-center border border-gold-soft px-3 font-sans text-xs tracking-[0.14em] uppercase hover:bg-gold-soft hover:text-navy ${
+              pathname === "/sostener" ? "bg-gold-soft text-navy" : "text-parchment"
+            }`}
+          />
         </nav>
         <button
           type="button"
@@ -97,7 +100,6 @@ export function SiteHeader() {
               <li key={item.to}>
                 <Link
                   to={item.to}
-                  search={item.to === "/cuaderno" ? { ref: "" } : undefined}
                   aria-current={isCurrent(pathname, item.to) ? "page" : undefined}
                   className="flex min-h-11 items-center tracking-wide text-parchment hover:text-gold-soft aria-[current=page]:text-gold-soft"
                   onClick={() => setOpen(false)}
@@ -111,6 +113,24 @@ export function SiteHeader() {
                 className="flex min-h-11 items-center tracking-wide text-gold-soft"
                 onClick={() => setOpen(false)}
               />
+            </li>
+            <li>
+              <Link
+                to="/nosotros"
+                className="flex min-h-11 items-center tracking-wide text-parchment hover:text-gold-soft"
+                onClick={() => setOpen(false)}
+              >
+                Nosotros
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/camino"
+                className="flex min-h-11 items-center tracking-wide text-parchment hover:text-gold-soft"
+                onClick={() => setOpen(false)}
+              >
+                El camino
+              </Link>
             </li>
           </ul>
           <p className="mx-auto mt-4 max-w-5xl font-serif text-sm text-parchment/80">

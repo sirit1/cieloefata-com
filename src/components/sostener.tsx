@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Cite } from "@/components/cite";
 import { BtnArrow } from "@/components/motif";
 import { OFRENDA } from "@/lib/ofrenda";
@@ -37,7 +38,7 @@ export function Sostener() {
         >
           <img
             src={OFRENDA.qr}
-            alt=""
+            alt="Código QR para sostener este trabajo por WhatsApp"
             width={176}
             height={176}
             className="h-40 w-40 bg-parchment p-2 sm:h-44 sm:w-44"
@@ -62,8 +63,8 @@ export function SostenerBoton({
   onClick?: () => void;
 }) {
   return (
-    <a href="#sostener" className={className} onClick={onClick}>
+    <Link to="/sostener" className={className} onClick={onClick}>
       Sostener
-    </a>
+    </Link>
   );
 }

@@ -18,7 +18,18 @@ import {
   VERDAD_PASOS,
 } from "@/lib/verdad";
 
-export const Route = createFileRoute("/metodo")({ component: MetodoPage });
+import { pageHead } from "@/lib/seo";
+
+export const Route = createFileRoute("/metodo")({
+  component: MetodoPage,
+  head: () =>
+    pageHead({
+      path: "/metodo",
+      title: "Cómo leer · Cielo Efata",
+      description:
+        "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás.",
+    }),
+});
 
 function MetodoPage() {
   return (
@@ -243,14 +254,20 @@ function MetodoPage() {
         <Refs refs={MANUAL_CAMPO.refs} />
       </section>
 
-      <Link
-        to="/cuaderno"
-        search={{ ref: "" }}
-        className="btn btn-gold mt-12"
-      >
-        Escribir el acto
-        <BtnArrow />
-      </Link>
+      <p className="mt-10 leading-relaxed">
+        El método no sustituye el camino. Quien aún pregunta por dónde se entra —conocer a Dios,
+        convicción, arrepentimiento, bautismo, conversión, permanecer— tiene una página para oír
+        esos pasajes en orden.
+      </p>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <Link to="/cuaderno" className="btn btn-gold">
+          Escribir el acto
+          <BtnArrow />
+        </Link>
+        <Link to="/camino" className="btn btn-ghost">
+          El camino
+        </Link>
+      </div>
     </main>
   );
 }
