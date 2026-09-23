@@ -3,13 +3,21 @@ import { Refs } from "@/components/cite";
 import { BtnArrow, Motif } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
-import { essays } from "@/lib/content";
-import { etiquetaTratado } from "@/lib/tratados";
+import {
+  etiquetaTratado,
+  tratadoDelMes,
+  tratadosProximos,
+  tratadosPublicados,
+  type Tratado,
+} from "@/lib/tratados";
 
 export const Route = createFileRoute("/tratados")({ component: TratadosPage });
 
 function TratadosPage() {
-  const mes = essays[0];
+  const mes = tratadoDelMes();
+  const publicados = tratadosPublicados();
+  const proximos = tratadosProximos();
+
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
@@ -19,33 +27,64 @@ function TratadosPage() {
         Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un
         versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo
         sostiene, hasta que la jactancia se calle o el Siervo cargue lo que se había llamado
-        herida. El estudio de la semana es la clase. Esto es el tratado: el yunque de un párrafo,
-        no el archivo de una idea.
+        herida. El catálogo que sigue es el de Drive: catorce packs reales —el umbral V.E.R.D.A.D.,
+        el crisol de lo oído y los doce numerados—, no una vitrina de ensayos sin manuscrito.
       </p>
       <Refs refs="Neh. 8:8 · 2 P. 3:16" />
 
-      <article className="mt-16 border border-rule bg-paper px-6 py-10 md:px-9">
-        <p className="font-serif text-lg italic text-gold">El tratado de este mes</p>
-        <h2 className="mt-2 font-serif text-3xl">{mes.title}</h2>
-        <p className="mt-1 text-gold">{mes.ref}</p>
-        <p className="mt-4 leading-relaxed">{mes.blurb}</p>
-        <SeguirActo />
-        <Link
-          to="/tratados/$slug"
-          params={{ slug: mes.slug }}
-          className="btn btn-ink mt-6"
-        >
-          Escudriñar el tratado
-          <BtnArrow />
-        </Link>
-      </article>
+      {mes ? (
+        <article className="mt-16 border border-rule bg-paper px-6 py-10 md:px-9">
+          <p className="font-serif text-lg italic text-gold">El tratado de este mes</p>
+          <h2 className="mt-2 font-serif text-3xl">{mes.title}</h2>
+          <p className="mt-1 text-gold">{mes.ref}</p>
+          <p className="mt-4 leading-relaxed">{mes.blurb}</p>
+          <SeguirActo />
+          <Link
+            to="/tratados/$slug"
+            params={{ slug: mes.slug }}
+            className="btn btn-ink mt-6"
+          >
+            Escudriñar el tratado
+            <BtnArrow />
+          </Link>
+        </article>
+      ) : null}
 
-      <h2 className="mt-14 font-serif text-3xl">Los tratados que conviene leer</h2>
+      <Lista titulo="Los catorce tratados con pack" items={publicados} />
+      <Lista titulo="En preparación — sin pack en Drive" items={proximos} proximo />
+      <Link to="/estudios" className="mt-10 inline-block font-sans text-sm text-link underline">
+        Escudriñar las clases
+      </Link>
+      <Outlet />
+    </main>
+  );
+}
+
+function Lista({
+  titulo,
+  items,
+  proximo = false,
+}: {
+  titulo: string;
+  items: Tratado[];
+  proximo?: boolean;
+}) {
+  if (items.length === 0) return null;
+  return (
+    <section className="mt-14">
+      <h2 className="font-serif text-3xl">{titulo}</h2>
+      {proximo ? (
+        <p className="mt-4 leading-relaxed text-ink-soft">
+          Estas fichas se pueden leer, y no se presentan como tratados de la serie. Falta el pack
+          en Drive: no hay que inventar un PDF que no existe.
+        </p>
+      ) : null}
       <ul className="mt-8 space-y-8">
-        {essays.map((e) => (
+        {items.map((e) => (
           <li key={e.slug} className="border-t border-rule pt-6">
             <p className="font-sans text-xs tracking-widest text-gold uppercase">
-              {etiquetaTratado(e.slug)} · {e.ref}
+              {etiquetaTratado(e.slug)}
+              {e.n !== "—" ? ` · ${e.n}` : ""} · {e.ref}
             </p>
             <h3 className="mt-1 font-serif text-2xl">{e.title}</h3>
             <p className="mt-3 leading-relaxed">{e.blurb}</p>
@@ -54,12 +93,11 @@ function TratadosPage() {
               params={{ slug: e.slug }}
               className="mt-3 inline-flex items-center font-sans text-sm text-link underline"
             >
-              Escudriñar el tratado
+              {proximo ? "Leer la ficha en preparación" : "Escudriñar el tratado"}
             </Link>
           </li>
         ))}
       </ul>
-      <Outlet />
-    </main>
+    </section>
   );
 }

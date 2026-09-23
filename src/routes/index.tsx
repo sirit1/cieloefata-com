@@ -7,7 +7,8 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ConLemas } from "@/components/lema";
 import { Motif, BtnArrow } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
-import { canonDoors, CORPUS, essays, obras, ROMANO } from "@/lib/content";
+import { canonDoors, CORPUS, obras, ROMANO } from "@/lib/content";
+import { tratadoDelMes } from "@/lib/tratados";
 import { SELLO } from "@/lib/identidad";
 import {
   ESCRITURA,
@@ -21,7 +22,7 @@ import {
 export const Route = createFileRoute("/")({ component: Home });
 
 function Home() {
-  const mes = essays[0];
+  const mes = tratadoDelMes();
   return (
     <main className="pb-24">
       <section className="scroll-mt-24 px-4 py-20 md:py-28">
@@ -45,8 +46,8 @@ function Home() {
                 <Motif kind="lion" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Estudios</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
-                  Se recorre un pasaje entero, se oye la cadena, y se sale con un solo acto para
-                  esta semana.
+                  El León nombra los estudios: se recorre un pasaje entero, se oye la cadena
+                  V.E.R.D.A.D. y se sale con un solo acto para esta semana.
                 </span>
               </Link>
             </li>
@@ -55,8 +56,8 @@ function Home() {
                 <Motif kind="lamb" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Tratados</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
-                  Se toma el versículo que se cita de memoria y se vuelve a oír dentro del capítulo
-                  que lo sostiene.
+                  El Cordero nombra los tratados: el versículo citado de memoria vuelve al
+                  capítulo que lo sostiene, hasta que la jactancia se calle.
                 </span>
               </Link>
             </li>
@@ -65,7 +66,8 @@ function Home() {
                 <Motif kind="flame" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Cómo leer</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
-                  El Espíritu abre el oído. La cadena no se recita como talismán: se usa de rodillas.
+                  El Fuego nombra el método: el Espíritu abre el oído; por consiguiente, la cadena
+                  no se recita como talismán, sino de rodillas.
                 </span>
               </Link>
             </li>
@@ -150,6 +152,7 @@ function Home() {
           </article>
         </div>
 
+        {mes ? (
         <article className="mt-10 border border-rule bg-paper px-6 py-10 md:px-9">
           <p className="font-serif text-lg italic text-gold">El tratado de este mes</p>
           <h2 className="mt-3 font-serif text-3xl">{mes.title}</h2>
@@ -165,6 +168,7 @@ function Home() {
             <BtnArrow />
           </Link>
         </article>
+        ) : null}
       </section>
 
       <section id="testigo" className="marca-agua bg-navy px-4 py-20 text-parchment md:py-28">

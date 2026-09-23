@@ -33,7 +33,8 @@ function TratadoPage() {
       slug={tratado.slug}
     >
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        Tratado · {tratado.kicker} · {tratado.ref}
+        {tratado.pack ? "Tratado" : "Próximamente"}
+        {tratado.n !== "—" ? ` · ${tratado.n}` : ""} · {tratado.kicker} · {tratado.ref}
       </p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
       <p className="mt-6">

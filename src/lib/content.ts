@@ -24,10 +24,10 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Siete tomos",
-  gate: "Este corpus teológico, forjado por el Dr. Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda, sino un arsenal exegético. Siete tratados diseñados para someter el intelecto a la Escritura y derribar la religión de consumo.",
+  gate: "Este corpus teológico, forjado por el Dr. Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono: es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
   efata:
     "Éfata es el primer tomo y el long seller de la casa. En él el Dr. Alejandro Sirit entregó el Método V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. No es un lema de marca: es el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
-  line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo: son libros. El orden de publicación no es el de lectura. Se entra por el oído y se sale por la lengua: I Éfata, II El código del Gólgota, III Bástate, IV Cuando el cielo se cae, V La fe no basta, VI El altar del espejo, VII Callar para ganar. Bástate, publicado como tomo séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
+  line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo: son libros. El orden de publicación no es el de lectura. Se entra por el oído y se sale por la lengua. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V La fe no basta; VI El altar del espejo; VII Callar para ganar. Bástate, publicado como séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
 
@@ -72,32 +72,7 @@ export const bible = {
   closeRef: "Jos. 1:8 · Sal. 1:2",
 };
 
-export const essays = [
-  {
-    slug: "juan-1",
-    kicker: "Cristología",
-    ref: "Juan 1:1–18",
-    title: "El Verbo se hizo carne",
-    blurb:
-      "El prólogo no es un poema para abrir el libro ni un villancico de diciembre: es la tesis. Eternidad, carne, rechazo, tabernáculo y la gloria del Unigénito que declara al Padre.",
-  },
-  {
-    slug: "isaias-53",
-    kicker: "Expiación · Gólgota",
-    ref: "Isaías 53",
-    title: "Herido por nuestras rebeliones",
-    blurb:
-      "El Siervo no es un poema de resiliencia. Carga lo que no es suyo. El hebreo nombra la ofrenda por la culpa; la analogía de la fe nombra la cruz; el eunuco lee el rollo y Felipe le abre a Jesús.",
-  },
-  {
-    slug: "romanos-3",
-    kicker: "Justificación",
-    ref: "Romanos 3:21–26",
-    title: "Justicia de Dios, sin la ley",
-    blurb:
-      "Toda boca se cierra. Entonces se manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica al que cree.",
-  },
-] as const;
+export { tratados as essays } from "@/lib/tratados";
 
 export const canonDoors = [
   {
@@ -165,7 +140,7 @@ export const obras = [
     n: 6,
     lectura: 1,
     title: "Éfata",
-    line: "«Sé abierto.» El lector recibe el milagro de Marcos 7: oídos que oyen la Palabra y lengua que la confiesa. No una técnica de escucha interior.",
+    line: "«Éfata» —sé abierto— no es un lema de marca ni una técnica de escucha interior. En Marcos 7 el Hijo toma a un sordo, alza los ojos, gime y manda que el oído y la lengua cedan. Por consiguiente, este tomo no administra un rito de atención plena: pide el milagro que solo Cristo hace, y el oficio de leer el capítulo entero una vez que el oído ha cedido.",
     thesis:
       "Jesús tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Este tomo no ofrece técnicas de escucha interior ni un lema de marca. Pide el milagro que solo el Hijo hace: oídos que oyen la Palabra y lengua que la confiesa. Quien ya oye, no se pavonea. Quien no oye, no se administra un rito. El Espíritu, enviado por ese mismo Señor, sigue abriendo. El sordo no se abre: es abierto.",
     ref: "Mr. 7:34 · Hch. 2:4",
@@ -175,10 +150,10 @@ export const obras = [
   {
     n: 5,
     lectura: 2,
-    title: "El código del Gólgota",
-    line: "El lector recibe una cruz con lugar, prefecto y sangre. El Siervo carga lo que no es suyo. No un emblema de resiliencia.",
+    title: "El Siervo, no tú",
+    line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. Isaías vio al Siervo herido por nuestras rebeliones; nosotros éramos. Por tanto, este tomo rehúsa la autoexpiación piadosa: el justo muere por los injustos, y el lector no se sube al versículo como si fuera el Siervo.",
     thesis:
-      "El Gólgota no es un símbolo de resiliencia ni una lección moral sobre el amor que se entrega. Tiene un lugar, un prefecto, un cargo y una sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este tomo rehúsa recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo.",
+      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este tomo rehúsa la autoexpiación piadosa y recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
     ref: "Is. 53:5 · 1 P. 3:18",
     pasaje: "Isaías 53",
     studySlug: "isaias-53",
@@ -186,13 +161,13 @@ export const obras = [
   {
     n: 7,
     lectura: 3,
-    title: "Bástate",
+    title: "Bástate mi gracia",
     line: "«Bástate mi gracia.» El lector recibe la palabra dicha a Pablo en la flaqueza: el poder se perfecciona donde ya no se puede. El aguijón permanece; el Señor también.",
     thesis:
       "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa: es sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
     ref: "2 Co. 12:9",
     pasaje: "2 Corintios 12",
-    studySlug: "",
+    studySlug: "2-corintios-12",
   },
   {
     n: 4,

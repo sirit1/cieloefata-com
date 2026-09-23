@@ -95,6 +95,24 @@ export type CitaAbierta = {
 };
 
 const PREVIEW: Record<string, string> = {
+  "2 Corintios 12:9": "Bástate mi gracia; porque mi poder se perfecciona en la debilidad.",
+  "Mateo 6:33": "Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.",
+  "Filipenses 4:13": "Todo lo puedo en Cristo que me fortalece.",
+  "Jeremías 29:11": "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal.",
+  "3 Juan 2": "Amado, yo deseo que tú seas prosperado en todas las cosas, y que tengas salud, así como prospera tu alma.",
+  "Malaquías 3:10": "Traed todos los diezmos al alfolí… y probadme ahora en esto, dice Jehová de los ejércitos.",
+  "Proverbios 18:21": "La muerte y la vida están en poder de la lengua, y el que la ama comerá de sus frutos.",
+  "Marcos 11:23": "Cualquiera que dijere a este monte: Quítate y échate en el mar, y no dudare en su corazón…",
+  "Romanos 8:28": "Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien.",
+  "Romanos 8:31": "Si Dios es por nosotros, ¿quién contra nosotros?",
+  "Romanos 8:17": "Y si hijos, también herederos; herederos de Dios y coherederos con Cristo, si es que padecemos juntamente con él.",
+  "2 Timoteo 1:7": "Porque no nos ha dado Dios espíritu de cobardía, sino de poder, de amor y de dominio propio.",
+  "Mateo 18:18": "Todo lo que atéis en la tierra, será atado en el cielo; y todo lo que desatéis en la tierra, será desatado en el cielo.",
+  "Gálatas 5:22": "Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe.",
+  "1 Corintios 1:18": "Porque la palabra de la cruz es locura a los que se pierden; pero a los que se salvan… es poder de Dios.",
+  "1 Corintios 12:4": "Ahora bien, hay diversidad de dones, pero el Espíritu es el mismo.",
+  "Hechos 14:22": "Es necesario que a través de muchas tribulaciones entremos en el reino de Dios.",
+  "1 Pedro 3:18": "Porque también Cristo padeció una sola vez por los pecados, el justo por los injustos.",
   "2 Timoteo 3:16": "Toda la Escritura es inspirada por Dios, y útil para enseñar.",
   "Hebreos 1:1": "Dios, habiendo hablado muchas veces y de muchas maneras… nos ha hablado por el Hijo.",
   "Lucas 24:27": "Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían.",
@@ -202,7 +220,7 @@ function previewOf(full: string): string {
   if (PREVIEW[cut]) return PREVIEW[cut];
   const chap = cut.replace(/:\d+$/, "");
   const hit = Object.entries(PREVIEW).find(([k]) => k.startsWith(chap + ":") || k === chap);
-  return hit?.[1] ?? "Pasaje de la Escritura. El texto manda.";
+  return hit?.[1] ?? "";
 }
 
 function studyHref(full: string): string | null {

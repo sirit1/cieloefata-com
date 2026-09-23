@@ -4,17 +4,29 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow, Motif } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
-import { etiquetaEstudio, studies } from "@/lib/studies";
-import { LABORATORIOS, LAB_SLUGS } from "@/lib/verdad";
+import { ESTUDIO_SEMANA_SLUG, estudioTienePack } from "@/lib/catalogo";
+import {
+  etiquetaEstudio,
+  estudiosProximos,
+  estudiosPublicados,
+  studyBySlug,
+  type Study,
+} from "@/lib/studies";
+import { LABORATORIOS } from "@/lib/verdad";
 
 export const Route = createFileRoute("/estudios/")({ component: EstudiosPage });
 
 function EstudiosPage() {
-  const semana = studies.find((s) => s.slug === "romanos-1");
-  const yunque = LAB_SLUGS.map((slug) => studies.find((s) => s.slug === slug)).filter(
-    (s): s is NonNullable<typeof s> => Boolean(s),
+  const semana = studyBySlug(ESTUDIO_SEMANA_SLUG);
+  const publicados = estudiosPublicados();
+  const labs = LABORATORIOS.map((lab) => ({
+    lab,
+    study: studyBySlug(lab.slug),
+    pack: estudioTienePack(lab.slug),
+  }));
+  const proximos = estudiosProximos().filter(
+    (s) => !LABORATORIOS.some((lab) => lab.slug === s.slug),
   );
-  const demas = studies.filter((s) => s.slug !== "romanos-1" && !(LAB_SLUGS as readonly string[]).includes(s.slug));
 
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
@@ -22,11 +34,11 @@ function EstudiosPage() {
       <Motif kind="lion" />
       <h1 className="mt-2 font-serif text-4xl">Las clases de la escuela</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ y un solo paso, dicho
-        a alguien que pueda preguntar mañana. No es un tratado breve, ni un devocional de
-        versículo suelto, ni un taller de autoestima con léxico de cruz. Los laboratorios son el
-        yunque: seis géneros, recorridos después de poseer el método, para que la cadena se pruebe
-        donde el texto no se deja recortar.
+        Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno,
+        Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda
+        preguntar mañana. El catálogo publicado es el de Drive: trece packs reales. Las clases
+        que la web listaba sin manuscrito —Marcos 1, Juan 3, Hechos 2, Juan 1, Romanos 3 y las
+        demás— quedan marcadas como próximamente. No se inventa un PDF que no existe.
       </p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
       <p className="mt-4 font-sans text-sm">
@@ -57,37 +69,47 @@ function EstudiosPage() {
         </article>
       ) : null}
 
+      <Lista titulo="Los trece estudios con pack" items={publicados} />
+
       <section className="mt-14">
         <h2 className="font-serif text-3xl">Seis laboratorios, seis géneros</h2>
         <p className="mt-4 leading-relaxed">
-          Génesis 3, Salmo 22, Isaías 53, Marcos 7, Filipenses 2, Apocalipsis 5. Narración,
-          lamento, cántico del Siervo, evangelio, himno y apocalipsis. Si la cadena no sobrevive a
-          esos seis géneros, no merece un solo discípulo, porque el método que solo funciona en un
-          género favorito no es método: es capricho.
+          El yunque del método recorre seis géneros: narración, lamento, cántico del Siervo,
+          evangelio, himno y apocalipsis. Tres de esos pasajes tienen pack en Drive —Marcos 7,
+          Filipenses 2, Apocalipsis 5—. Génesis 3, Salmo 22 e Isaías 53, como clase, permanecen
+          en preparación: Isaías 53 se escudriña ya como tratado restaurado.
         </p>
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
-          {yunque.map((s) => {
-            const lab = LABORATORIOS.find((l) => l.slug === s.slug);
-            return (
-              <li key={s.slug}>
+          {labs.map(({ lab, study, pack }) => (
+            <li key={lab.slug}>
+              {study ? (
                 <Link
                   to="/estudios/$slug"
-                  params={{ slug: s.slug }}
+                  params={{ slug: study.slug }}
                   className="block py-5 hover:text-gold"
                 >
                   <span className="flex min-w-0 flex-col gap-1">
                     <span className="font-sans text-sm text-gold">
-                      {lab?.genero} · {s.ref}
+                      {lab.genero} · {lab.ref}
+                      {pack ? "" : " · Próximamente"}
                     </span>
-                    <span className="font-serif text-2xl">{s.title}</span>
+                    <span className="font-serif text-2xl">{lab.title}</span>
                   </span>
                 </Link>
-              </li>
-            );
-          })}
+              ) : (
+                <span className="block py-5">
+                  <span className="font-sans text-sm text-gold">
+                    {lab.genero} · {lab.ref} · Próximamente
+                  </span>
+                  <span className="mt-1 block font-serif text-2xl">{lab.title}</span>
+                </span>
+              )}
+            </li>
+          ))}
         </ul>
       </section>
-      <Lista titulo="Las demás clases" items={demas} />
+
+      <Lista titulo="Clases en preparación — sin pack en Drive" items={proximos} proximo />
       <Link to="/tratados" className="mt-10 inline-block font-sans text-sm text-link underline">
         Escudriñar el tratado
       </Link>
@@ -98,14 +120,22 @@ function EstudiosPage() {
 function Lista({
   titulo,
   items,
+  proximo = false,
 }: {
   titulo: string;
-  items: typeof studies;
+  items: Study[];
+  proximo?: boolean;
 }) {
   if (items.length === 0) return null;
   return (
     <section className="mt-14">
       <h2 className="font-serif text-3xl">{titulo}</h2>
+      {proximo ? (
+        <p className="mt-4 leading-relaxed text-ink-soft">
+          Se pueden abrir como fichas de aula. No se presentan como clases publicadas: falta el
+          pack en Drive.
+        </p>
+      ) : null}
       <ul className="mt-8 divide-y divide-rule border-y border-rule">
         {items.map((s) => (
           <li key={s.slug}>

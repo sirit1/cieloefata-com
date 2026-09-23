@@ -11,9 +11,9 @@ function Card({ texto }: { texto: string }) {
 
 function CiteOne({ raw }: { raw: string }) {
   const c = abrirCita(raw);
-  const title = `${c.full}: ${c.preview}`;
+  const title = c.preview ? `${c.full}: ${c.preview}` : c.full;
   const slug = c.internal ? c.href.replace("/estudios/", "") : "";
-  const name = `${c.raw}. ${c.preview}`;
+  const name = c.preview ? `${c.raw}. ${c.preview}` : c.raw;
 
   if (c.internal && slug) {
     return (
