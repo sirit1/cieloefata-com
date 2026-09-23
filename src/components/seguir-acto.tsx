@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { aulaSinActo, type AulaAbierta } from "@/lib/aula-abierta";
+import { semanaVigente } from "@/lib/calendario";
 import { loadCuaderno, type CuadernoEntry } from "@/lib/cuaderno-store";
-import { semana } from "@/lib/pilar";
+import { studyBySlug } from "@/lib/studies";
 
 export function SeguirActo() {
   const [last, setLast] = useState<CuadernoEntry | null>(null);
@@ -12,6 +13,8 @@ export function SeguirActo() {
     setLast(loadCuaderno()[0] ?? null);
     setPendiente(aulaSinActo());
   }, []);
+
+  const study = studyBySlug(semanaVigente().studySlug);
 
   if (pendiente) {
     return (
@@ -32,9 +35,7 @@ export function SeguirActo() {
       <Link to="/cuaderno" search={{ ref: last.ref }} className="text-link underline">
         Seguir {last.ref}
       </Link>
-      {last.ref.toLowerCase().includes("romanos 1") ? null : (
-        <> El pasaje de esta semana sigue siendo {semana.ref}.</>
-      )}
+      {study ? <> El pasaje de esta semana sigue siendo {study.ref}.</> : null}
     </p>
   );
 }

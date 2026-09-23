@@ -182,6 +182,7 @@ export const obras: Obra[] = [
     ref: "Is. 53:5 · 1 P. 3:18",
     pasaje: "Isaías 53",
     studySlug: "isaias-53",
+    tratadoSlug: "isaias-53",
     asinEbook: "B0HKQGBYV4",
   },
   {
@@ -228,6 +229,7 @@ export const obras: Obra[] = [
     ref: "Stg. 2:17 · Stg. 1:23–24",
     pasaje: "Santiago 2",
     studySlug: "santiago-1",
+    tratadoSlug: "el-crisol-de-lo-oido",
     asinEbook: "B0GYFR8YDQ",
   },
   {
@@ -243,6 +245,7 @@ export const obras: Obra[] = [
     ref: "Stg. 1:22–25",
     pasaje: "Santiago 1",
     studySlug: "santiago-1",
+    tratadoSlug: "el-crisol-de-lo-oido",
     crisol: true,
     isbnPrint: "9798176414967",
   },

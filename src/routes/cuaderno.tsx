@@ -2,12 +2,25 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
+import { Retomar } from "@/components/retomar";
 import { aulaSinActo, cerrarAulaSiEscrito, type AulaAbierta } from "@/lib/aula-abierta";
 import { actoDe } from "@/lib/actos";
-import { loadCuaderno, saveCuaderno, type CuadernoEntry } from "@/lib/cuaderno-store";
+import { useCurrentUser } from "@/lib/auth/use-current-user";
+import {
+  clearBorrador,
+  loadBorrador,
+  loadCuaderno,
+  saveBorrador,
+  saveCuaderno,
+  type CuadernoDraft,
+  type CuadernoEntry,
+} from "@/lib/cuaderno-store";
 import { Motif } from "@/components/motif";
-import { PRIMERA_VEZ, semana } from "@/lib/pilar";
+import { semanaVigente } from "@/lib/calendario";
+import { CUADERNO_VACIO } from "@/lib/copy-nivel";
+import { PRIMERA_VEZ } from "@/lib/pilar";
 import { pageHead } from "@/lib/seo";
+import { studyBySlug } from "@/lib/studies";
 import { MANUAL_CAMPO } from "@/lib/verdad";
 
 export const Route = createFileRoute("/cuaderno")({
@@ -27,6 +40,8 @@ export const Route = createFileRoute("/cuaderno")({
 
 function CuadernoPage() {
   const { ref = "" } = Route.useSearch();
+  const user = useCurrentUser();
+  const userId = user && !user.isDevFallback ? user.id : null;
   const [items, setItems] = useState<CuadernoEntry[]>([]);
   const [indicativo, setIndicativo] = useState("");
   const [decision, setDecision] = useState("");
@@ -35,15 +50,46 @@ function CuadernoPage() {
   const [passage, setPassage] = useState(ref);
   const [pendiente, setPendiente] = useState<AulaAbierta | null>(null);
   const [guardado, setGuardado] = useState("");
+  const [hidratado, setHidratado] = useState(false);
 
   useEffect(() => {
-    setItems(loadCuaderno());
+    setHidratado(false);
+    setItems(loadCuaderno(userId));
     setPendiente(aulaSinActo());
-  }, [ref]);
+    const draft = loadBorrador(userId);
+    if (ref) {
+      setPassage(ref);
+      if (draft && draft.ref === ref) {
+        setIndicativo(draft.indicativo);
+        setDecision(draft.decision);
+        setTestigo(draft.testigo);
+        setNote(draft.note);
+      }
+    } else if (draft) {
+      setPassage(draft.ref);
+      setIndicativo(draft.indicativo);
+      setDecision(draft.decision);
+      setTestigo(draft.testigo);
+      setNote(draft.note);
+    }
+    const t = window.setTimeout(() => setHidratado(true), 0);
+    return () => window.clearTimeout(t);
+  }, [ref, userId]);
 
   useEffect(() => {
-    if (ref) setPassage(ref);
-  }, [ref]);
+    if (!hidratado) return;
+    saveBorrador({ ref: passage, indicativo, decision, testigo, note }, userId);
+  }, [hidratado, passage, indicativo, decision, testigo, note, userId]);
+
+  function aplicar(draft: CuadernoDraft | { ref: string }) {
+    setPassage(draft.ref);
+    if ("indicativo" in draft) {
+      setIndicativo(draft.indicativo);
+      setDecision(draft.decision);
+      setTestigo(draft.testigo);
+      setNote(draft.note);
+    }
+  }
 
   function save(e: React.FormEvent) {
     e.preventDefault();
@@ -59,19 +105,26 @@ function CuadernoPage() {
       },
       ...items,
     ];
-    saveCuaderno(next);
+    saveCuaderno(next, userId);
     setItems(next);
     setIndicativo("");
     setDecision("");
     setTestigo("");
     setNote("");
+    setPassage("");
+    clearBorrador(userId);
     cerrarAulaSiEscrito(passage.trim() || "Sin referencia");
     setPendiente(aulaSinActo());
     setGuardado(passage.trim() || "Sin referencia");
   }
 
-  const actoSemana = actoDe(semana.slug);
+  const semana = semanaVigente();
+  const study = studyBySlug(semana.studySlug);
+  const actoSemana = actoDe(semana.studySlug);
   const vacio = items.length === 0;
+  const persistencia = userId
+    ? "Lo escrito queda en este navegador, bajo tu sesión. No se envía a otra casa."
+    : "Lo escrito queda en este navegador. No se envía a otra parte. Quien entre con cuenta propia no mezcla este cuaderno con el del huésped.";
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-16 md:py-24">
@@ -104,23 +157,15 @@ function CuadernoPage() {
         </Link>
       </p>
 
+      <Retomar userId={userId} onContinuar={aplicar} />
+
       {vacio ? (
         <aside className="mt-8 border border-rule bg-paper px-5 py-6">
           <p className="font-serif text-xl">Aún no hay un paso escrito</p>
-          <p className="mt-3 leading-relaxed">
-            El cuaderno no guarda impresiones: guarda el acto que el aula pidió —indicativo oído,
-            un verbo del pasaje, testigo de carne y, si hace falta, una nota breve—. Si nunca se
-            ha leído en esta escuela, se empieza por Marcos 7 (Éfata). Si ya se oyó la clase de
-            esta semana, se escribe el acto de Filipenses 2 antes de coleccionar otro capítulo.
-          </p>
-          <p className="mt-4 leading-relaxed">
-            Cuando el aula te envíe aquí con un pasaje en la barra, ese campo no es decoración: es
-            el texto que manda sobre lo que vas a firmar. No guardes un propósito genérico. Nombra
-            lo que el indicativo ya dijo.
-          </p>
-          {actoSemana ? (
+          <p className="mt-3 leading-relaxed">{CUADERNO_VACIO}</p>
+          {actoSemana && study ? (
             <p className="mt-4 leading-relaxed text-ink-soft">
-              El acto de esta semana, {semana.ref}: {actoSemana.escrito}
+              El acto de esta semana, {study.ref}: {actoSemana.escrito}
             </p>
           ) : null}
           {pendiente ? (
@@ -132,7 +177,7 @@ function CuadernoPage() {
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link
               to="/estudios/$slug"
-              params={{ slug: semana.slug }}
+              params={{ slug: semana.studySlug }}
               className="btn btn-ink"
             >
               Abrir estudio de esta semana
@@ -144,13 +189,15 @@ function CuadernoPage() {
             >
               Abrir Éfata
             </Link>
-            <button
-              type="button"
-              className="btn btn-ghost"
-              onClick={() => setPassage(semana.ref)}
-            >
-              Usar el pasaje de esta semana
-            </button>
+            {study ? (
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => setPassage(study.ref)}
+              >
+                Usar el pasaje de esta semana
+              </button>
+            ) : null}
             {pendiente ? (
               <button
                 type="button"
@@ -230,17 +277,22 @@ function CuadernoPage() {
       ) : null}
       <section className="mt-12">
         <h2 className="font-serif text-2xl">Lo escrito</h2>
+        <p className="mt-3 font-sans text-sm text-ink-soft">{persistencia}</p>
         {items.length === 0 ? (
           <p className="mt-4 leading-relaxed text-ink-soft">
-            Cuando se guarde el primer acto, quedará aquí. El navegador lo recuerda; no se envía a
-            otra parte.
+            Cuando se guarde el primer acto, quedará aquí, con fecha. El navegador lo recuerda.
           </p>
         ) : (
           <ul className="mt-6 space-y-6">
             {items.map((item) => (
               <li key={item.at} className="border-t border-rule pt-4">
                 <p className="font-sans text-xs text-muted">
-                  {item.ref} · {new Date(item.at).toLocaleDateString("es")}
+                  {item.ref} ·{" "}
+                  {new Date(item.at).toLocaleDateString("es", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
                 </p>
                 {item.indicativo ? (
                   <p className="mt-2 italic text-ink-soft">{item.indicativo}</p>
@@ -252,6 +304,13 @@ function CuadernoPage() {
                   </p>
                 ) : null}
                 {item.note ? <p className="mt-1 text-ink-soft">{item.note}</p> : null}
+                <button
+                  type="button"
+                  className="mt-3 font-sans text-sm text-link underline"
+                  onClick={() => setPassage(item.ref)}
+                >
+                  Continuar desde {item.ref}
+                </button>
               </li>
             ))}
           </ul>

@@ -1,4 +1,5 @@
-import { ESTUDIO_SEMANA_SLUG, ESTUDIOS_DRIVE, estudioTienePack } from "@/lib/catalogo";
+import { estudioSemanaSlug } from "@/lib/calendario";
+import { ESTUDIOS_DRIVE, estudioTienePack } from "@/lib/catalogo";
 import { LAB_SLUGS } from "@/lib/verdad";
 
 export type Study = {
@@ -397,7 +398,7 @@ export function studyBySlug(slug: string) {
 
 export function etiquetaEstudio(slug: string) {
   if (slug === "viajes-de-pablo") return "Estudio · pack · Hechos 13–14";
-  if (slug === ESTUDIO_SEMANA_SLUG) return "Estudio · esta semana";
+  if (slug === estudioSemanaSlug()) return "Estudio · esta semana";
   if (estudioTienePack(slug) && (LAB_SLUGS as readonly string[]).includes(slug)) {
     return "Estudio · pack · yunque";
   }

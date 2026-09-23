@@ -1,10 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite, Refs } from "@/components/cite";
 import { Datos } from "@/components/datos";
+import { FichaEnlaces } from "@/components/ficha-enlaces";
 import { bible, canonDoors } from "@/lib/content";
 import { fichasPorEstante } from "@/lib/canon-fichas";
+import { semanaVigente } from "@/lib/calendario";
 import { ESCRITURA, PERSONAS, TESTIGO, TRINIDAD } from "@/lib/pilar";
 import { pageHead } from "@/lib/seo";
+import { studyBySlug } from "@/lib/studies";
 
 export const Route = createFileRoute("/canon")({
   component: CanonPage,
@@ -81,6 +84,7 @@ function CanonPage() {
                   <p className="mt-2 font-sans text-sm tracking-wide text-gold">
                     <Cite>{f.ref}</Cite>
                   </p>
+                  <FichaEnlaces ficha={f} />
                 </li>
               ))}
             </ul>
@@ -88,8 +92,12 @@ function CanonPage() {
         ))}
       </ol>
 
-      <Link to="/" className="mt-12 inline-block font-sans text-sm text-link underline">
-        Romanos 1, el pasaje de esta semana
+      <Link
+        to="/estudios/$slug"
+        params={{ slug: semanaVigente().studySlug }}
+        className="mt-12 inline-block font-sans text-sm text-link underline"
+      >
+        {studyBySlug(semanaVigente().studySlug)?.ref ?? "El pasaje de esta semana"}
       </Link>
     </main>
   );

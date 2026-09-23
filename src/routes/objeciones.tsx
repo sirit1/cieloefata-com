@@ -26,16 +26,17 @@ function ObjecionesPage() {
         {OBJECIONES.map((item) => {
           const tratado = tratadoDe(item.tratadoSlug);
           return (
-            <li key={item.tratadoSlug} className="py-6">
+            <li key={item.tratadoSlug} id={item.tratadoSlug} className="scroll-mt-24 py-6">
               <p className="font-sans text-sm tracking-wide text-gold">{item.verse}</p>
               <h2 className="mt-1 font-serif text-2xl">{item.lemma}</h2>
+              <p className="mt-3 leading-relaxed">{item.lead}</p>
               {tratado ? (
                 <Link
                   to="/tratados/$slug"
                   params={{ slug: tratado.slug }}
                   className="mt-3 inline-block font-sans text-sm text-link underline"
                 >
-                  {tratado.title}
+                  Escudriñar el tratado · {tratado.title}
                 </Link>
               ) : null}
             </li>
@@ -49,6 +50,10 @@ function ObjecionesPage() {
         {" · "}
         <Link to="/metodo" className="text-link underline">
           El método que restituye el párrafo
+        </Link>
+        {" · "}
+        <Link to="/buscar" className="text-link underline">
+          Buscar por pasaje o tema
         </Link>
       </p>
     </main>

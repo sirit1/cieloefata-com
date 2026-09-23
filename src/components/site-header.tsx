@@ -12,6 +12,7 @@ const nav = [
   { to: "/metodo", label: "Cómo leer" },
   { to: "/cuaderno", label: "Cuaderno" },
   { to: "/obras", label: "Obras" },
+  { to: "/buscar", label: "Buscar" },
 ] as const;
 
 function isCurrent(pathname: string, to: string) {

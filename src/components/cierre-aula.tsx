@@ -45,12 +45,17 @@ export function CierreAula({
         </>
       ) : null}
 
+      <p className="mt-6 leading-relaxed">
+        El cuaderno espera el acto de {pasaje}. No un propósito genérico: el verbo que este texto
+        conjugó. El campo del pasaje llegará prefijado; no se rellena con otro capítulo para
+        decorar la página.
+      </p>
       <p className="mt-4 font-sans text-sm tracking-wide">
         <Cite>Stg. 1:22 · Lc. 8:15</Cite>
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <Link to="/cuaderno" search={{ ref: pasaje }} className="btn btn-gold">
-          Escribir el acto
+          Escribir el acto de {pasaje}
         </Link>
         <LeerCapitulo ref={pasaje} />
       </div>

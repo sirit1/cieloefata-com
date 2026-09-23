@@ -1,8 +1,10 @@
 /** Inventario Drive 2026-09-23: TRATADOS (14) + 08 Estudios bíblicos (13). */
 
-export const ESTUDIO_SEMANA_SLUG = "filipenses-2";
-export const ESTUDIO_UMBRAL_SLUG = "marcos-7";
-export const TRATADO_MES_SLUG = "isaias-53";
+export {
+  ESTUDIO_SEMANA_SLUG,
+  ESTUDIO_UMBRAL_SLUG,
+  TRATADO_MES_SLUG,
+} from "@/lib/calendario";
 
 /** Los trece packs reales de `08 Estudios biblicos`. */
 export const ESTUDIOS_DRIVE = [

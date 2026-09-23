@@ -4,7 +4,8 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow, Motif } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
-import { ESTUDIO_SEMANA_SLUG, estudioTienePack } from "@/lib/catalogo";
+import { estudioSemanaSlug } from "@/lib/calendario";
+import { estudioTienePack } from "@/lib/catalogo";
 import {
   etiquetaEstudio,
   estudiosProximos,
@@ -28,7 +29,7 @@ export const Route = createFileRoute("/estudios/")({
 });
 
 function EstudiosPage() {
-  const semana = studyBySlug(ESTUDIO_SEMANA_SLUG);
+  const semana = studyBySlug(estudioSemanaSlug());
   const publicados = estudiosPublicados();
   const labs = LABORATORIOS.map((lab) => ({
     lab,
