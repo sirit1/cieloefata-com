@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as BuscarRouteImport } from './routes/buscar'
 import { Route as CaminoRouteImport } from './routes/camino'
 import { Route as CanonRouteImport } from './routes/canon'
 import { Route as CasaRouteImport } from './routes/casa'
@@ -45,6 +46,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuscarRoute = BuscarRouteImport.update({
+  id: '/buscar',
+  path: '/buscar',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CaminoRoute = CaminoRouteImport.update({
@@ -176,6 +182,7 @@ const TratadosSlugRoute = TratadosSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/buscar': typeof BuscarRoute
   '/camino': typeof CaminoRoute
   '/canon': typeof CanonRoute
   '/casa': typeof CasaRoute
@@ -205,6 +212,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/buscar': typeof BuscarRoute
   '/camino': typeof CaminoRoute
   '/canon': typeof CanonRoute
   '/casa': typeof CasaRoute
@@ -235,6 +243,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/buscar': typeof BuscarRoute
   '/camino': typeof CaminoRoute
   '/canon': typeof CanonRoute
   '/casa': typeof CasaRoute
@@ -266,6 +275,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/buscar'
     | '/camino'
     | '/canon'
     | '/casa'
@@ -295,6 +305,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/buscar'
     | '/camino'
     | '/canon'
     | '/casa'
@@ -324,6 +335,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/buscar'
     | '/camino'
     | '/canon'
     | '/casa'
@@ -354,6 +366,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BuscarRoute: typeof BuscarRoute
   CaminoRoute: typeof CaminoRoute
   CanonRoute: typeof CanonRoute
   CasaRoute: typeof CasaRoute
@@ -394,6 +407,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/buscar': {
+      id: '/buscar'
+      path: '/buscar'
+      fullPath: '/buscar'
+      preLoaderRoute: typeof BuscarRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/camino': {
@@ -589,6 +609,7 @@ const TratadosRouteWithChildren = TratadosRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BuscarRoute: BuscarRoute,
   CaminoRoute: CaminoRoute,
   CanonRoute: CanonRoute,
   CasaRoute: CasaRoute,

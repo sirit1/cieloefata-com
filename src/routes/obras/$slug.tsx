@@ -5,8 +5,10 @@ import { BookJsonLd } from "@/components/json-ld";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
+import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
 import { obraBySlug, obras, obraVecina, ROMANO } from "@/lib/content";
+import { primerasPaginas } from "@/lib/muestras";
 import { pageHead } from "@/lib/seo";
 import { studyBySlug } from "@/lib/studies";
 import { tratadoDe } from "@/lib/tratados";
@@ -34,6 +36,7 @@ export function ObraPage() {
   const tratado = obra.tratadoSlug ? tratadoDe(obra.tratadoSlug) : undefined;
   const { prev, next } = obraVecina(obra.lectura);
   const lecturaDe = obras.length;
+  const muestra = primerasPaginas(obra);
 
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
@@ -48,16 +51,8 @@ export function ObraPage() {
         Capítulo ancla: {obra.pasaje}
       </p>
 
-      <div
-        className="mt-10 flex aspect-[3/4] max-w-xs flex-col justify-end border border-gold-soft/50 bg-navy px-6 py-8 text-parchment"
-        role="img"
-        aria-label={`Cubierta tipográfica de ${obra.title}`}
-      >
-        <p className="font-sans text-[0.65rem] tracking-[0.2em] text-gold-soft uppercase">
-          Serie Cielo Efata
-        </p>
-        <p className="mt-4 font-serif text-3xl leading-tight">{obra.title}</p>
-        <p className="mt-6 font-sans text-sm tracking-wide text-gold-soft">Dr. Alejandro Sirit</p>
+      <div className="mt-10">
+        <Tapa obra={obra} />
       </div>
 
       <p className="mt-10 text-lg leading-relaxed">
@@ -87,13 +82,17 @@ export function ObraPage() {
         ))}
       </ol>
 
-      <h2 className="mt-12 font-serif text-3xl">Una muestra</h2>
-      <p className="mt-4 text-lg leading-relaxed italic">
-        <ConLemas>{obra.sample}</ConLemas>
+      <h2 className="mt-12 font-serif text-3xl">Una muestra de las primeras páginas</h2>
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        Estas líneas ya viven en el aula o en el tratado que sostiene el tomo. No son un capítulo
+        inventado para vender: son el mismo oficio, oído otra vez, hasta que el lector decida si
+        abre el libro entero junto a {obra.pasaje}.
       </p>
-      <p className="mt-3 font-sans text-sm text-ink-soft">
-        Párrafo de la tesis del tomo. El libro entero se lee junto a {obra.pasaje}.
-      </p>
+      {muestra.map((p) => (
+        <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
+          <ConLemas>{p}</ConLemas>
+        </p>
+      ))}
 
       <h2 className="mt-12 font-serif text-3xl">Adquirir</h2>
       <p className="mt-4 leading-relaxed">
@@ -101,7 +100,17 @@ export function ObraPage() {
         conocido, se busca el título exacto con el nombre del autor, sin inventar un código.
         WhatsApp queda como canal segundo, para la colección impresa en Venezuela.
       </p>
-      <Adquirir title={obra.title} asinEbook={obra.asinEbook} isbnPrint={obra.isbnPrint} />
+      <p className="mt-4 leading-relaxed text-ink-soft">
+        El pack de casa no se finge. En este repositorio no hay un enlace público de Drive para
+        descargar el tomo. Si se pide el pack, se solicita por WhatsApp con el nombre de{" "}
+        {obra.title}, y la casa responde. No se publica un botón de descarga que no abre nada.
+      </p>
+      <Adquirir
+        title={obra.title}
+        asinEbook={obra.asinEbook}
+        isbnPrint={obra.isbnPrint}
+        pack
+      />
 
       {obra.studyNote ? (
         <p className="mt-8 leading-relaxed text-ink-soft">{obra.studyNote}</p>
@@ -117,7 +126,7 @@ export function ObraPage() {
         ) : null}
         {tratado ? (
           <Link to="/tratados/$slug" params={{ slug: tratado.slug }} className="btn btn-gold">
-            El tratado que oye la lengua
+            El tratado que oye este tomo
             <BtnArrow />
           </Link>
         ) : null}

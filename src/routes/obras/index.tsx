@@ -5,10 +5,12 @@ import { CorpusJsonLd } from "@/components/json-ld";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
+import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
 import { CORPUS, obras, ROMANO, type Obra } from "@/lib/content";
 import { pageHead } from "@/lib/seo";
 import { studyBySlug } from "@/lib/studies";
+import { tratadoDe } from "@/lib/tratados";
 
 export const Route = createFileRoute("/obras/")({
   component: ObrasPage,
@@ -67,6 +69,7 @@ function TomoCard({
   destacado?: boolean;
 }) {
   const study = obra.studySlug ? studyBySlug(obra.studySlug) : undefined;
+  const tratado = obra.tratadoSlug ? tratadoDe(obra.tratadoSlug) : undefined;
 
   return (
     <article
@@ -80,6 +83,9 @@ function TomoCard({
       {destacado ? (
         <p className="font-serif text-lg italic text-gold">El primer tomo · long seller</p>
       ) : null}
+      <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-start">
+        <Tapa obra={obra} size="sm" />
+        <div className="min-w-0 flex-1">
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
         Lectura {ROMANO[obra.lectura]}
       </p>
@@ -117,7 +123,14 @@ function TomoCard({
             <BtnArrow />
           </Link>
         ) : null}
+        {tratado ? (
+          <Link to="/tratados/$slug" params={{ slug: tratado.slug }} className="btn btn-ghost">
+            Tratado
+          </Link>
+        ) : null}
         <LeerCapitulo ref={obra.pasaje} />
+      </div>
+        </div>
       </div>
     </article>
   );

@@ -29,3 +29,13 @@ export function whatsappTomo(title: string): string {
     )
   );
 }
+
+/** No hay URL pública de Drive en el repo: el pack se solicita, no se finge. */
+export function whatsappPack(title: string): string {
+  return (
+    "https://wa.me/584241674909?text=" +
+    encodeURIComponent(
+      `Paz. Solicito el pack de casa del tomo «${title}» del Dr. Alejandro Sirit, Editorial Cielo Efata. No hallé un enlace público de descarga.`,
+    )
+  );
+}
