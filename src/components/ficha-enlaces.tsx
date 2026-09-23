@@ -4,7 +4,12 @@ import {
   revelatioDeLibro,
   tratadosDeLibro,
 } from "@/lib/descubrimiento";
+import { CANON_ESTUDIO, CANON_LEER, CANON_TRATADO } from "@/lib/copy-nivel";
 import type { Ficha } from "@/lib/canon-fichas";
+
+function etiqueta(oracion: string, titulo?: string, varios = false) {
+  return varios && titulo ? `${oracion} · ${titulo}` : oracion;
+}
 
 export function FichaEnlaces({ ficha }: { ficha: Ficha }) {
   const href = revelatioDeLibro(ficha.name, ficha.ref);
@@ -13,10 +18,10 @@ export function FichaEnlaces({ ficha }: { ficha: Ficha }) {
   if (!href && estudios.length === 0 && tratados.length === 0) return null;
 
   return (
-    <div className="mt-3 flex flex-col gap-1 font-sans text-sm">
+    <div className="mt-3 flex flex-col gap-2 font-sans text-sm leading-relaxed">
       {href ? (
         <a href={href} rel="noopener noreferrer" className="text-link underline">
-          Leer en RevelatiO
+          {CANON_LEER}
         </a>
       ) : null}
       {estudios.map((s) => (
@@ -26,7 +31,7 @@ export function FichaEnlaces({ ficha }: { ficha: Ficha }) {
           params={{ slug: s.slug }}
           className="text-link underline"
         >
-          Estudio de este libro · {s.title}
+          {etiqueta(CANON_ESTUDIO, s.title, estudios.length > 1)}
         </Link>
       ))}
       {tratados.map((t) => (
@@ -36,7 +41,7 @@ export function FichaEnlaces({ ficha }: { ficha: Ficha }) {
           params={{ slug: t.slug }}
           className="text-link underline"
         >
-          Tratado relacionado · {t.title}
+          {etiqueta(CANON_TRATADO, t.title, tratados.length > 1)}
         </Link>
       ))}
     </div>

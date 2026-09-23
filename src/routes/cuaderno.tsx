@@ -17,6 +17,7 @@ import {
 } from "@/lib/cuaderno-store";
 import { Motif } from "@/components/motif";
 import { semanaVigente } from "@/lib/calendario";
+import { CUADERNO_VACIO } from "@/lib/copy-nivel";
 import { PRIMERA_VEZ } from "@/lib/pilar";
 import { pageHead } from "@/lib/seo";
 import { studyBySlug } from "@/lib/studies";
@@ -161,19 +162,7 @@ function CuadernoPage() {
       {vacio ? (
         <aside className="mt-8 border border-rule bg-paper px-5 py-6">
           <p className="font-serif text-xl">Aún no hay un paso escrito</p>
-          <p className="mt-3 leading-relaxed">
-            El cuaderno no guarda impresiones: guarda el acto que el aula pidió —indicativo oído,
-            un verbo del pasaje, testigo de carne y, si hace falta, una nota breve—. Si nunca se
-            ha leído en esta escuela, se empieza por Marcos 7 (Éfata). Si ya se oyó la clase de
-            esta semana, se escribe el acto de {study?.ref ?? "este pasaje"} antes de coleccionar
-            otro capítulo.
-          </p>
-          <p className="mt-4 leading-relaxed">
-            Cuando el aula te envíe aquí con un pasaje en la barra, ese campo no es decoración: es
-            el texto que manda sobre lo que vas a firmar. No guardes un propósito genérico. Nombra
-            lo que el indicativo ya dijo. El campo llega vacío si nadie lo trajo: no se finge
-            Nehemías 8:8 como oficio silencioso.
-          </p>
+          <p className="mt-3 leading-relaxed">{CUADERNO_VACIO}</p>
           {actoSemana && study ? (
             <p className="mt-4 leading-relaxed text-ink-soft">
               El acto de esta semana, {study.ref}: {actoSemana.escrito}

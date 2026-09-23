@@ -1,3 +1,5 @@
+import { textoPackWhatsApp } from "@/lib/copy-nivel";
+
 /**
  * Author hub: B0GVH9VW7M is the primary page (merge in progress).
  * Fallback during the merge: https://www.amazon.com/Alejandro-Sirit/e/B0GWKX4RCV
@@ -30,12 +32,10 @@ export function whatsappTomo(title: string): string {
   );
 }
 
-/** No hay URL pública de Drive en el repo: el pack se solicita, no se finge. */
-export function whatsappPack(title: string): string {
+/** Prefill NIVEL+ por slug. No hay URL pública de Drive: el pack se solicita, no se finge. */
+export function whatsappPack(title: string, slug?: string): string {
   return (
     "https://wa.me/584241674909?text=" +
-    encodeURIComponent(
-      `Paz. Solicito el pack de casa del tomo «${title}» del Dr. Alejandro Sirit, Editorial Cielo Efata. No hallé un enlace público de descarga.`,
-    )
+    encodeURIComponent(textoPackWhatsApp(slug ?? "", title))
   );
 }

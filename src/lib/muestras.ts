@@ -1,9 +1,13 @@
 import { type Obra } from "@/lib/content";
+import { MUESTRAS_TOMO } from "@/lib/copy-nivel";
 import { studyBySlug } from "@/lib/studies";
 import { tratadoDe } from "@/lib/tratados";
 
-/** Primeras páginas: prosa ya publicada en el aula o el tratado. No se inventa doctrina. */
+/** Primeras páginas: COPY PACK NIVEL+ manda. Si falta, se oye el aula o el tratado. */
 export function primerasPaginas(obra: Obra): string[] {
+  const delPack = MUESTRAS_TOMO[obra.slug]?.trim();
+  if (delPack) return [delPack];
+
   const study = obra.studySlug ? studyBySlug(obra.studySlug) : undefined;
   const tratado = obra.tratadoSlug ? tratadoDe(obra.tratadoSlug) : undefined;
   const delAula = study

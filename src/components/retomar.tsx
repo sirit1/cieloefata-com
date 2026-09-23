@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 import { aulaSinActo, type AulaAbierta } from "@/lib/aula-abierta";
 import { semanaVigente } from "@/lib/calendario";
 import {
+  RETOMAR_TITULO,
+  retomarAulaSinActo,
+  retomarEnlace,
+  retomarObediencia,
+} from "@/lib/copy-nivel";
+import {
   loadBorrador,
   ultimoActo,
   type CuadernoDraft,
@@ -48,12 +54,7 @@ export function Retomar({
 
   return (
     <aside className="mt-8 border border-rule bg-paper px-5 py-6">
-      <p className="font-serif text-xl">Retomar</p>
-      <p className="mt-3 leading-relaxed text-ink-soft">
-        El cuaderno no empieza de cero cada vez que se abre. Recuerda el aula oída, el borrador
-        que quedó a medias y el último acto firmado. El pasaje no se rellena con Nehemías 8:8:
-        llega cuando el aula o el lector lo traen.
-      </p>
+      <p className="font-serif text-xl">{RETOMAR_TITULO}</p>
       <ul className="mt-5 space-y-4">
         {pendiente ? (
           <li>
@@ -61,7 +62,7 @@ export function Retomar({
               Aula sin acto · {fechaCorta(pendiente.at)}
             </p>
             <p className="mt-1 leading-relaxed">
-              Se oyó {pendiente.titulo}. El acto de {pendiente.pasaje} aún no está escrito.
+              {retomarAulaSinActo(pendiente.titulo, pendiente.pasaje)}
             </p>
             <div className="mt-3 flex flex-col gap-2 sm:flex-row">
               <Link
@@ -70,7 +71,7 @@ export function Retomar({
                 className="btn btn-ink"
                 onClick={() => onContinuar?.({ ref: pendiente.pasaje })}
               >
-                Continuar la decisión
+                {retomarEnlace(pendiente.pasaje)}
               </Link>
               {pendiente.kind === "estudio" ? (
                 <Link
@@ -103,7 +104,7 @@ export function Retomar({
             </p>
             {onContinuar ? (
               <button type="button" className="btn btn-ink mt-3" onClick={() => onContinuar(borrador)}>
-                Seguir el borrador
+                {retomarEnlace(borrador.ref || "el borrador")}
               </button>
             ) : (
               <Link
@@ -111,7 +112,7 @@ export function Retomar({
                 search={borrador.ref ? { ref: borrador.ref } : undefined}
                 className="btn btn-ink mt-3"
               >
-                Seguir el borrador
+                {retomarEnlace(borrador.ref || "el borrador")}
               </Link>
             )}
           </li>
@@ -122,9 +123,19 @@ export function Retomar({
               Último acto · {fechaCorta(ultimo.at)}
             </p>
             <p className="mt-1 leading-relaxed">
-              {ultimo.ref}: «{ultimo.decision}»
-              {ultimo.testigo ? ` · testigo: ${ultimo.testigo}` : ""}
+              {retomarObediencia(ultimo.ref, ultimo.decision)}
             </p>
+            {ultimo.testigo ? (
+              <p className="mt-1 font-sans text-sm text-gold">Testigo: {ultimo.testigo}</p>
+            ) : null}
+            <Link
+              to="/cuaderno"
+              search={{ ref: ultimo.ref }}
+              className="btn btn-ghost mt-3"
+              onClick={() => onContinuar?.({ ref: ultimo.ref })}
+            >
+              {retomarEnlace(ultimo.ref)}
+            </Link>
           </li>
         ) : null}
         {acto && study ? (
@@ -141,7 +152,7 @@ export function Retomar({
               className="btn btn-ghost mt-3"
               onClick={() => onContinuar?.({ ref: study.ref })}
             >
-              Continuar la decisión de {study.ref}
+              {retomarEnlace(study.ref)}
             </Link>
           </li>
         ) : null}

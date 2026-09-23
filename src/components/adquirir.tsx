@@ -4,6 +4,7 @@ import { adquisicion } from "@/lib/content";
 type AdquirirProps = {
   className?: string;
   title?: string;
+  slug?: string;
   asinEbook?: string;
   isbnPrint?: string;
   pack?: boolean;
@@ -12,6 +13,7 @@ type AdquirirProps = {
 export function Adquirir({
   className = "mt-8",
   title,
+  slug,
   asinEbook,
   isbnPrint,
   pack = false,
@@ -62,7 +64,12 @@ export function Adquirir({
         {title ? "Colección impresa, Venezuela (WhatsApp)" : "Solicitud directa (WhatsApp)"}
       </a>
       {pack && title ? (
-        <a href={whatsappPack(title)} rel="noopener noreferrer" target="_blank" className="btn btn-ghost">
+        <a
+          href={whatsappPack(title, slug)}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="btn btn-ghost"
+        >
           Solicitar pack por WhatsApp
         </a>
       ) : null}

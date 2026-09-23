@@ -12,6 +12,14 @@ import {
   semanaProxima,
   semanaVigente,
 } from "@/lib/calendario";
+import {
+  ETIQUETA_ESTA_SEMANA,
+  ETIQUETA_TRATADO_MES,
+  GLOSA_ESTA_SEMANA,
+  GLOSA_TRATADO_MES,
+  MARCO_HOY,
+  MARCO_RITMO,
+} from "@/lib/copy-nivel";
 import { DOS_CASAS, PRIMERA_VEZ } from "@/lib/pilar";
 import { studyBySlug } from "@/lib/studies";
 import { tratadoDe } from "@/lib/tratados";
@@ -84,10 +92,16 @@ export function SlotsSemanaMes() {
   const tratadoNext = mesNext ? tratadoDe(mesNext.tratadoSlug) : undefined;
 
   return (
-    <section className="mt-16 grid gap-10 lg:grid-cols-2" aria-label="Calendario editorial">
-      <article className="flex flex-col border border-rule bg-paper px-6 py-10 md:px-9">
-        <p className="font-serif text-lg italic text-gold">Esta semana</p>
-        <p className="mt-2 font-sans text-xs tracking-[0.16em] text-gold uppercase">
+    <section className="mt-16" aria-label="Calendario editorial">
+      <div className="max-w-[40em]">
+        <p className="text-lg leading-relaxed">{MARCO_RITMO}</p>
+        <p className="mt-6 leading-relaxed">{MARCO_HOY}</p>
+      </div>
+      <div className="mt-10 grid gap-10 lg:grid-cols-2">
+        <article className="flex flex-col border border-rule bg-paper px-6 py-10 md:px-9">
+        <p className="font-serif text-lg italic text-gold">{ETIQUETA_ESTA_SEMANA}</p>
+        <p className="mt-2 leading-relaxed text-ink-soft">{GLOSA_ESTA_SEMANA}</p>
+        <p className="mt-3 font-sans text-xs tracking-[0.16em] text-gold uppercase">
           {etiquetaRango(semana.desde, semana.hasta)}
         </p>
         <h2 className="mt-3 font-serif text-3xl">{study?.title ?? "El aula"}</h2>
@@ -116,8 +130,9 @@ export function SlotsSemanaMes() {
       </article>
       {tratado ? (
         <article className="flex flex-col border border-rule bg-paper px-6 py-10 md:px-9">
-          <p className="font-serif text-lg italic text-gold">Tratado del mes</p>
-          <p className="mt-2 font-sans text-xs tracking-[0.16em] text-gold uppercase">
+          <p className="font-serif text-lg italic text-gold">{ETIQUETA_TRATADO_MES}</p>
+          <p className="mt-2 leading-relaxed text-ink-soft">{GLOSA_TRATADO_MES}</p>
+          <p className="mt-3 font-sans text-xs tracking-[0.16em] text-gold uppercase">
             {nombreMes(mes.mes)}
           </p>
           <h2 className="mt-3 font-serif text-3xl">{tratado.title}</h2>
@@ -155,6 +170,7 @@ export function SlotsSemanaMes() {
           </Link>
         </article>
       )}
+      </div>
     </section>
   );
 }

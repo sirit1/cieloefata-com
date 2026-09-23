@@ -84,9 +84,8 @@ export function ObraPage() {
 
       <h2 className="mt-12 font-serif text-3xl">Una muestra de las primeras páginas</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
-        Estas líneas ya viven en el aula o en el tratado que sostiene el tomo. No son un capítulo
-        inventado para vender: son el mismo oficio, oído otra vez, hasta que el lector decida si
-        abre el libro entero junto a {obra.pasaje}.
+        Estas líneas no son un capítulo inventado para vender: son la muestra de las primeras
+        páginas, oídas junto a {obra.pasaje}.
       </p>
       {muestra.map((p) => (
         <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
@@ -107,6 +106,7 @@ export function ObraPage() {
       </p>
       <Adquirir
         title={obra.title}
+        slug={obra.slug}
         asinEbook={obra.asinEbook}
         isbnPrint={obra.isbnPrint}
         pack
