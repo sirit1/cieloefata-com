@@ -11,9 +11,10 @@ import { pageHead } from "@/lib/seo";
 import { MANUAL_CAMPO } from "@/lib/verdad";
 
 export const Route = createFileRoute("/cuaderno")({
-  validateSearch: (raw: Record<string, unknown>) => ({
-    ref: typeof raw.ref === "string" ? raw.ref : "",
-  }),
+  validateSearch: (raw: Record<string, unknown>): { ref?: string } => {
+    if (typeof raw.ref === "string" && raw.ref.trim()) return { ref: raw.ref };
+    return {};
+  },
   head: () =>
     pageHead({
       path: "/cuaderno",
@@ -25,7 +26,7 @@ export const Route = createFileRoute("/cuaderno")({
 });
 
 function CuadernoPage() {
-  const { ref } = Route.useSearch();
+  const { ref = "" } = Route.useSearch();
   const [items, setItems] = useState<CuadernoEntry[]>([]);
   const [indicativo, setIndicativo] = useState("");
   const [decision, setDecision] = useState("");
