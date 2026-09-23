@@ -14,18 +14,31 @@ export function pageHead({
   path,
   title,
   description,
+  image,
 }: {
   path: string;
   title?: string;
   description?: string;
+  image?: string;
 }) {
   const url = canonicalUrl(path);
+  const imageUrl = image
+    ? image.startsWith("http")
+      ? image
+      : canonicalUrl(image)
+    : undefined;
   return {
     meta: [
       ...(title ? [{ title }] : []),
       ...(description ? [{ name: "description" as const, content: description }] : []),
       { property: "og:url", content: url },
       { property: "og:site_name", content: SITE_NAME },
+      ...(imageUrl
+        ? [
+            { property: "og:image" as const, content: imageUrl },
+            { name: "twitter:image" as const, content: imageUrl },
+          ]
+        : []),
     ],
     links: [{ rel: "canonical" as const, href: url }],
   };

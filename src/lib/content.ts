@@ -151,7 +151,14 @@ export type Obra = {
   crisol?: boolean;
   asinEbook?: string;
   isbnPrint?: string;
+  /** Published Amazon title when it differs from the house reading-order title. Never an invented ASIN. */
+  amazonTitle?: string;
 };
+
+/** Front covers from Drive KDP packs under 00_Cielo_Efata/01_LIBROS, file 04_portada.jpg. */
+export function tapaPath(slug: string) {
+  return `/TAPAS/${slug}.jpg`;
+}
 
 export const obras: Obra[] = [
   {
@@ -189,7 +196,8 @@ export const obras: Obra[] = [
     n: 7,
     lectura: 3,
     slug: "bastate-mi-gracia",
-    title: "Bástate mi gracia",
+    title: "Bástate",
+    amazonTitle: "Bástate mi gracia",
     line: "«Bástate mi gracia.» El lector recibe la palabra dicha a Pablo en la flaqueza: el poder se perfecciona donde ya no se puede. El aguijón permanece; el Señor también.",
     thesis:
       "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa: es sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",

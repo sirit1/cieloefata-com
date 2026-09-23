@@ -5,6 +5,7 @@ type AdquirirProps = {
   className?: string;
   title?: string;
   slug?: string;
+  amazonTitle?: string;
   asinEbook?: string;
   isbnPrint?: string;
   pack?: boolean;
@@ -14,6 +15,7 @@ export function Adquirir({
   className = "mt-8",
   title,
   slug,
+  amazonTitle,
   asinEbook,
   isbnPrint,
   pack = false,
@@ -21,7 +23,9 @@ export function Adquirir({
   const ebookHref = asinEbook ? amazonDp(asinEbook) : undefined;
   const printHref = isbnPrint ? amazonDp(isbnPrint) : undefined;
   const wa = title ? whatsappTomo(title) : adquisicion.whatsapp;
-  const searchHref = title && !ebookHref && !printHref ? amazonBusqueda(title) : undefined;
+  const searchTitle = amazonTitle ?? title;
+  const searchHref =
+    searchTitle && !ebookHref && !printHref ? amazonBusqueda(searchTitle) : undefined;
 
   return (
     <div className={`${className} flex flex-col gap-3 sm:flex-row sm:flex-wrap`}>
