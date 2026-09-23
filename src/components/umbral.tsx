@@ -123,15 +123,17 @@ export function SlotsSemanaMes() {
           <h2 className="mt-3 font-serif text-3xl">{tratado.title}</h2>
           <p className="mt-1 text-gold">{tratado.ref}</p>
           <p className="mt-5 flex-1 leading-relaxed">{mes.impacto ?? tratado.blurb}</p>
-          <Link
-            to="/tratados/$slug"
-            params={{ slug: tratado.slug }}
-            className="btn btn-ink mt-8"
-          >
-            Escudriñar
-            <span className="sr-only"> el tratado {tratado.title}</span>
-            <BtnArrow />
-          </Link>
+          <div className="mt-8 flex w-fit flex-col gap-3 sm:flex-row">
+            <Link
+              to="/tratados/$slug"
+              params={{ slug: tratado.slug }}
+              className="btn btn-ink"
+            >
+              Escudriñar
+              <span className="sr-only"> el tratado {tratado.title}</span>
+              <BtnArrow />
+            </Link>
+          </div>
           {mesNext && tratadoNext ? (
             <p className="mt-6 text-sm leading-relaxed text-ink-soft/80">
               Próximo: {nombreMes(mesNext.mes)} · {tratadoNext.title}.
