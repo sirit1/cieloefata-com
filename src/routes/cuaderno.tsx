@@ -3,15 +3,24 @@ import { useEffect, useState } from "react";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
 import { aulaSinActo, cerrarAulaSiEscrito, type AulaAbierta } from "@/lib/aula-abierta";
+import { actoDe } from "@/lib/actos";
 import { loadCuaderno, saveCuaderno, type CuadernoEntry } from "@/lib/cuaderno-store";
 import { Motif } from "@/components/motif";
 import { PRIMERA_VEZ, semana } from "@/lib/pilar";
+import { pageHead } from "@/lib/seo";
 import { MANUAL_CAMPO } from "@/lib/verdad";
 
 export const Route = createFileRoute("/cuaderno")({
   validateSearch: (raw: Record<string, unknown>) => ({
     ref: typeof raw.ref === "string" ? raw.ref : "",
   }),
+  head: () =>
+    pageHead({
+      path: "/cuaderno",
+      title: "Cuaderno · Cielo Efata",
+      description:
+        "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.",
+    }),
   component: CuadernoPage,
 });
 
@@ -28,9 +37,7 @@ function CuadernoPage() {
 
   useEffect(() => {
     setItems(loadCuaderno());
-    const abierta = aulaSinActo();
-    setPendiente(abierta);
-    if (!ref && abierta) setPassage(abierta.pasaje);
+    setPendiente(aulaSinActo());
   }, [ref]);
 
   useEffect(() => {
@@ -62,6 +69,9 @@ function CuadernoPage() {
     setGuardado(passage.trim() || "Sin referencia");
   }
 
+  const actoSemana = actoDe(semana.slug);
+  const vacio = items.length === 0;
+
   return (
     <main className="mx-auto max-w-2xl px-4 py-16 md:py-24">
       <Motif kind="flame" />
@@ -92,12 +102,67 @@ function CuadernoPage() {
           C.R.I.S.O.L.™ en El Altar del Espejo
         </Link>
       </p>
+
+      {vacio ? (
+        <aside className="mt-8 border border-rule bg-paper px-5 py-6">
+          <p className="font-serif text-xl">Aún no hay un paso escrito</p>
+          <p className="mt-3 leading-relaxed">
+            El cuaderno no se rellena solo. No se pone un pasaje de memoria —ni Nehemías 8:8— a
+            menos que el aula o el estudio de esta semana lo hayan pedido, y se nombre como tal.
+          </p>
+          {actoSemana ? (
+            <p className="mt-4 leading-relaxed text-ink-soft">
+              El acto de esta semana, {semana.ref}: {actoSemana.escrito}
+            </p>
+          ) : null}
+          {pendiente ? (
+            <p className="mt-4 leading-relaxed">
+              El aula de {pendiente.titulo} se oyó. El acto de {pendiente.pasaje} aún no está
+              escrito.
+            </p>
+          ) : null}
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <button
+              type="button"
+              className="btn btn-ink"
+              onClick={() => setPassage(semana.ref)}
+            >
+              Usar el pasaje de esta semana
+            </button>
+            {pendiente ? (
+              <button
+                type="button"
+                className="btn btn-ghost"
+                onClick={() => setPassage(pendiente.pasaje)}
+              >
+                Usar el pasaje del aula
+              </button>
+            ) : null}
+            <Link
+              to="/estudios/$slug"
+              params={{ slug: semana.slug }}
+              className="btn btn-ghost"
+            >
+              Abrir {semana.title}
+            </Link>
+            <Link
+              to="/estudios/$slug"
+              params={{ slug: PRIMERA_VEZ.slug }}
+              className="btn btn-ghost"
+            >
+              Empezar por {PRIMERA_VEZ.title}
+            </Link>
+          </div>
+        </aside>
+      ) : null}
+
       <form onSubmit={save} className="mt-8 space-y-4 border border-rule bg-parchment p-5">
         <label className="block font-sans text-xs tracking-widest text-muted uppercase">
           Pasaje
           <input
             value={passage}
             onChange={(e) => setPassage(e.target.value)}
+            placeholder="El capítulo que se oyó. Vacío hasta que se elija."
             className="mt-2 min-h-11 w-full border border-rule bg-paper px-3 font-serif text-base"
           />
         </label>
@@ -158,34 +223,10 @@ function CuadernoPage() {
       <section className="mt-12">
         <h2 className="font-serif text-2xl">Lo escrito</h2>
         {items.length === 0 ? (
-          pendiente ? (
-            <p className="mt-4 leading-relaxed text-ink-soft">
-              El aula de {pendiente.titulo} se oyó. El acto de {pendiente.pasaje} aún no está
-              escrito.
-            </p>
-          ) : (
-            <p className="mt-4 leading-relaxed text-ink-soft">
-              Aún no hay un paso escrito. La clase de esta semana es {semana.ref}. Si nunca se ha
-              leído, se empieza por {PRIMERA_VEZ.ref}.
-              <span className="mt-3 block">
-                <Link
-                  to="/estudios/$slug"
-                  params={{ slug: semana.slug }}
-                  className="text-link underline"
-                >
-                  Abrir {semana.title}
-                </Link>
-                {" · "}
-                <Link
-                  to="/estudios/$slug"
-                  params={{ slug: PRIMERA_VEZ.slug }}
-                  className="text-link underline"
-                >
-                  Abrir {PRIMERA_VEZ.title}
-                </Link>
-              </span>
-            </p>
-          )
+          <p className="mt-4 leading-relaxed text-ink-soft">
+            Cuando se guarde el primer acto, quedará aquí. El navegador lo recuerda; no se envía a
+            otra parte.
+          </p>
         ) : (
           <ul className="mt-6 space-y-6">
             {items.map((item) => (
