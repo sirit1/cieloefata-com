@@ -12,7 +12,7 @@ export const NOSOTROS = {
   },
   editorial: {
     title: "Qué es Editorial Cielo Efata",
-    body: "Editorial Cielo Efata es la casa que sostiene esta escuela. No es un portal de consuelo ni una vitrina de lemas. Publica el corpus teológico de la serie Cielo Efata y mantiene el aula abierta: estudios semanales, tratados que restituyen versículos hurtados a su contexto, el método V.E.R.D.A.D. y el cuaderno donde el acto se escribe con fecha y testigo. El orden de lectura —no el de publicación— empieza por el oído: se entra por Éfata y se sale por la lengua sometida.",
+    body: "Editorial Cielo Efata es la casa que sostiene esta escuela. No es un portal de consuelo ni una vitrina de lemas. Publica el corpus teológico de la serie Cielo Efata y mantiene el aula abierta: estudios semanales, tratados que restituyen versículos hurtados a su contexto, el método V.E.R.D.A.D. y el cuaderno donde el acto se escribe con fecha y testigo. El orden de lectura —no el de publicación— comienza por Éfata y sigue el currículo de la casa. Quien empieza por ese umbral aprende primero a leer el capítulo entero, y solo después habla.",
   },
   revelatio: {
     title: "Relación con RevelatiO",
