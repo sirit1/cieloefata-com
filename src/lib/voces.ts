@@ -11,11 +11,11 @@ const COMUN: Voz[] = [
   },
   {
     name: "Charles Spurgeon",
-    body: "Spurgeon predica para que alguien se vuelva. El púlpito no es un aula de curiosos: es el lugar donde Cristo se ofrece a pecadores. La doctrina que no llega al corazón todavía no se oyó. La emoción que no nace del texto es teatro.\n\nPor tanto no se le pide a Spurgeon que sustituya la exégesis. Se le pide que recuerde el fin: el pecador oye, se compunge y pregunta qué hacer. Si el estudio cierra sin ese corte, se ha hecho erudición. Si cierra solo con el corte y sin el párrafo, se ha hecho espectáculo. El pasaje manda los dos.",
+    body: "Spurgeon predica para que alguien se vuelva. El púlpito no es un aula de curiosos, sino el lugar donde Cristo se ofrece a pecadores. La doctrina que no llega al corazón todavía no se oyó. La emoción que no nace del texto es teatro.\n\nPor tanto no se le pide a Spurgeon que sustituya la exégesis. Se le pide que recuerde el fin: el pecador oye, se compunge y pregunta qué hacer. Si el estudio cierra sin ese corte, se ha hecho erudición. Si cierra solo con el corte y sin el párrafo, se ha hecho espectáculo. El pasaje manda los dos.",
   },
   {
     name: "John MacArthur",
-    body: "MacArthur insiste en lo que el griego y el hebreo ya dijeron, sin convertir el léxico en un segundo evangelio. El señorío de Cristo no es un anexo opcional. El pasaje manda la aplicación; la aplicación no elige otro versículo más cómodo.\n\nEl número de Strong, en su mano, no es talismán: es freno. Impide que se predique una palabra que el texto no conjuga. Quien lo imite solo en la dureza y no en la sumisión al párrafo habrá tomado el tono y dejado el oído.",
+    body: "MacArthur insiste en lo que el griego y el hebreo ya dijeron, sin convertir el léxico en un segundo evangelio. El señorío de Cristo no es un anexo opcional. El pasaje manda la aplicación; la aplicación no elige otro versículo más cómodo.\n\nEl número de Strong, en su mano, no es talismán, sino freno. Impide que se predique una palabra que el texto no conjuga. Quien lo imite solo en la dureza y no en la sumisión al párrafo habrá tomado el tono y dejado el oído.",
   },
 ];
 
@@ -23,11 +23,11 @@ const POR_SLUG: Record<string, Voz[]> = {
   "romanos-1": [
     {
       name: "Matthew Henry",
-      body: "Henry oye en Romanos 1 el evangelio como poder, no como consejo. La vergüenza que Pablo rechaza no es un rubor de temperamento: es la de recortar a Cristo para que Roma no se moleste. La justicia de Dios se revela; no se fabrica en el oyente. Habacuc entra en la carta y no sale como lema de superación.\n\nEl campo que Henry recorre incluye el 18, que muchos dejan fuera del cartel. La ira también se revela. Por consiguiente el que cita el 16 para valentía y silencia el 18 ha fabricado un evangelio sin juicio, y un poder sin cruz. Henry no permite ese recorte: el indicativo es salvación, y el horizonte es la impiedad del mundo que el evangelio confronta.",
+      body: "Henry oye en Romanos 1 el evangelio como poder, no como consejo. La vergüenza que Pablo rechaza no es un rubor de temperamento, sino la de recortar a Cristo para que Roma no se moleste. La justicia de Dios se revela; no se fabrica en el oyente. Habacuc entra en la carta y no sale como lema de superación.\n\nEl campo que Henry recorre incluye el 18, que muchos dejan fuera del cartel. La ira también se revela. Por consiguiente el que cita el 16 para valentía y silencia el 18 ha fabricado un evangelio sin juicio, y un poder sin cruz. Henry no permite ese recorte: el indicativo es salvación, y el horizonte es la impiedad del mundo que el evangelio confronta.",
     },
     {
       name: "Juan Calvino",
-      body: "Calvino lee «poder de Dios para salvación» como obra de Dios, no como técnica del predicador. Al judío primeramente: la historia de Israel no se borra. Al griego también: no hay un segundo camino. La fe es el medio; la justicia es de Dios.\n\nAhora bien, esa δικαιοσύνη no es una ficción piadosa. Se revela ἐκ πίστεως εἰς πίστιν, por fe y para fe, porque el justo vivirá por la fe. Calvino no deja que Habacuc 2:4 se vuelva consigna de victoria interior. Es el umbral de la justificación que 3:21–26 pondrá sobre el propiciatorio. Quien convierta la fe en mérito ya no está leyendo a Pablo: está leyendo su hoja de servicios.",
+      body: "Calvino lee «poder de Dios para salvación» como obra de Dios, no como técnica del predicador. Al judío primeramente: la historia de Israel no se borra. Al griego también: no hay un segundo camino. La fe es el medio; la justicia es de Dios.\n\nAhora bien, esa δικαιοσύνη no es una ficción piadosa. Se revela ἐκ πίστεως εἰς πίστιν, por fe y para fe, porque el justo vivirá por la fe. Calvino no deja que Habacuc 2:4 se vuelva consigna de victoria interior. Es el umbral de la justificación que 3:21–26 pondrá sobre el propiciatorio. Quien convierta la fe en mérito ya no está leyendo a Pablo, sino su hoja de servicios.",
     },
     {
       name: "Charles Spurgeon",
@@ -59,11 +59,11 @@ const POR_SLUG: Record<string, Voz[]> = {
   "juan-3": [
     {
       name: "Matthew Henry",
-      body: "Henry ve a Nicodemo llegar de noche con oficio y sin vida. El nacer ἄνωθεν no es una mejora del maestro: es el umbral del reino. El que enseña y no ha nacido sigue muerto, con vocabulario santo.\n\nEl diálogo no es un café teológico. Jesús no mejora el currículo: pide un nacimiento que el hombre no se da. Henry recorre hasta 3:21 y no deja el «de lo alto» como lema de enero.",
+      body: "Henry ve a Nicodemo llegar de noche con oficio y sin vida. El nacer ἄνωθεν no es una mejora del maestro, sino el umbral del reino. El que enseña y no ha nacido sigue muerto, con vocabulario santo.\n\nEl diálogo no es un café teológico. Jesús no mejora el currículo: pide un nacimiento que el hombre no se da. Henry recorre hasta 3:21 y no deja el «de lo alto» como lema de enero.",
     },
     {
       name: "Juan Calvino",
-      body: "Calvino guarda los dos sentidos de ἄνωθεν: de nuevo y de lo alto. El Espíritu sopla donde quiere. Nadie programa el nacimiento. El agua y el Espíritu no se reducen a un rito que el hombre se administra.\n\nNicodemo oye «nacer» y pregunta por el vientre. Jesús oye a Ezequiel 36 y habla de agua y Espíritu. El malentendido no es torpeza: es la carne intentando administrar lo que solo Dios da.",
+      body: "Calvino guarda los dos sentidos de ἄνωθεν: de nuevo y de lo alto. El Espíritu sopla donde quiere. Nadie programa el nacimiento. El agua y el Espíritu no se reducen a un rito que el hombre se administra.\n\nNicodemo oye «nacer» y pregunta por el vientre. Jesús oye a Ezequiel 36 y habla de agua y Espíritu. El malentendido no es torpeza, sino la carne intentando administrar lo que solo Dios da.",
     },
     {
       name: "Charles Spurgeon",
@@ -131,7 +131,7 @@ const POR_SLUG: Record<string, Voz[]> = {
   "romanos-3": [
     {
       name: "Matthew Henry",
-      body: "Henry oye que toda boca se cierra. Luego se manifiesta la justicia de Dios, sin la ley, por la fe en Jesucristo. El ἱλαστήριον no es un adorno cultual: es sangre.\n\nNadie llega a 3:21 sin haber oído que no hay justo ni aun uno. El que mezcla su hoja de servicios con este párrafo todavía tiene la boca abierta. Henry recorre el cierre de la boca hasta el propiciatorio.",
+      body: "Henry oye que toda boca se cierra. Luego se manifiesta la justicia de Dios, sin la ley, por la fe en Jesucristo. El ἱλαστήριον no es un adorno cultual, sino sangre.\n\nNadie llega a 3:21 sin haber oído que no hay justo ni aun uno. El que mezcla su hoja de servicios con este párrafo todavía tiene la boca abierta. Henry recorre el cierre de la boca hasta el propiciatorio.",
     },
     {
       name: "Juan Calvino",
@@ -143,13 +143,13 @@ const POR_SLUG: Record<string, Voz[]> = {
     },
     {
       name: "John MacArthur",
-      body: "MacArthur detiene la palabra ἱλαστήριον (G2435): propiciación, el lugar de la sangre. Romanos 3:26 impide un evangelio que perdone sin justicia. La cruz no es un gesto: es juicio llevado.\n\nδικαιοσύνη θεοῦ, sin la ley como escalera, en la sangre de Cristo. El léxico cierra dos puertas: el mérito y el perdón barato. Dios es justo cuando justifica al que es de la fe de Jesús.",
+      body: "MacArthur detiene la palabra ἱλαστήριον (G2435): propiciación, el lugar de la sangre. Romanos 3:26 impide un evangelio que perdone sin justicia. La cruz no es un gesto, sino juicio llevado.\n\nδικαιοσύνη θεοῦ, sin la ley como escalera, en la sangre de Cristo. El léxico cierra dos puertas: el mérito y el perdón barato. Dios es justo cuando justifica al que es de la fe de Jesús.",
     },
   ],
   "genesis-3": [
     {
       name: "Matthew Henry",
-      body: "Henry oye que la primera herida no es la mordedura: es la pregunta. La serpiente pone en boca de Dios lo que Dios no dijo. La mujer cede el texto. El hombre calla. El juicio sigue el orden de la transgresión, y la simiente ya está anunciada antes de que se cosean las hojas.\n\nEl campo de Génesis 3 no es un taller de autoestima. Es pacto quebrantado, glosa, silencio, acusación y cubierta. Henry no deja que el lector se lleve solo la fruta.",
+      body: "Henry oye que la primera herida no es la mordedura, sino la pregunta. La serpiente pone en boca de Dios lo que Dios no dijo. La mujer cede el texto. El hombre calla. El juicio sigue el orden de la transgresión, y la simiente ya está anunciada antes de que se cosean las hojas.\n\nEl campo de Génesis 3 no es un taller de autoestima. Es pacto quebrantado, glosa, silencio, acusación y cubierta. Henry no deja que el lector se lleve solo la fruta.",
     },
     {
       name: "Juan Calvino",
@@ -161,7 +161,7 @@ const POR_SLUG: Record<string, Voz[]> = {
     },
     {
       name: "John MacArthur",
-      body: "MacArthur ata Génesis 3 a Romanos 5. El pecado entra por un hombre; la justificación, por Otro. La analogía no es capricho paulino: es el texto leyéndose a sí mismo.\n\nEl hebreo de 3:1 no legislado por Wellhausen. El נָחָשׁ es criatura, no símbolo suelto. Si la serpiente dice verdad, Dios miente. Si Adán no cayó, Cristo no es último Adán. El criticismo que disuelve Génesis 3 disuelve el evangelio.",
+      body: "MacArthur ata Génesis 3 a Romanos 5. El pecado entra por un hombre; la justificación, por Otro. La analogía no es capricho paulino, sino el texto leyéndose a sí mismo.\n\nEl hebreo de 3:1 no legislado por Wellhausen. El נָחָשׁ es criatura, no símbolo suelto. Si la serpiente dice verdad, Dios miente. Si Adán no cayó, Cristo no es último Adán. El criticismo que disuelve Génesis 3 disuelve el evangelio.",
     },
   ],
   "salmo-22": [
@@ -175,7 +175,7 @@ const POR_SLUG: Record<string, Voz[]> = {
     },
     {
       name: "Charles Spurgeon",
-      body: "Spurgeon se arrodillaría en el «¿por qué me has desamparado?» sin convertirlo en terapia del ánimo. El justo rodeado no es el lector disfrazado: es el que lleva el pecado ajeno.\n\nEl púlpito que usa este clamor para consolar un ego herido hurta el salmo. Spurgeon lo pondría en la cruz, donde Mateo lo puso, y luego en la asamblea, donde el abandonado promete anunciar el Nombre.",
+      body: "Spurgeon se arrodillaría en el «¿por qué me has desamparado?» sin convertirlo en terapia del ánimo. El justo rodeado no es el lector disfrazado, sino el que lleva el pecado ajeno.\n\nEl púlpito que usa este clamor para consolar un ego herido hurta el salmo. Spurgeon lo pondría en la cruz, donde Mateo lo puso, y luego en la asamblea, donde el abandonado promete anunciar el Nombre.",
     },
     {
       name: "John MacArthur",
@@ -215,7 +215,7 @@ const POR_SLUG: Record<string, Voz[]> = {
     },
     {
       name: "John MacArthur",
-      body: "MacArthur sirve μορφὴ θεοῦ y μορφὴ δούλου. El ἁρπαγμόν no se resuelve con un grito piadoso. El indicativo produce el imperativo: haya este sentir, porque Él se despojó.\n\nG3444, G2758, G1401. El léxico impide dos errores: que el Hijo dejara de ser Dios, y que la iglesia cante el himno sin bajar. Filipenses 2 no es un tratado de cristología para el archivo: es medida de la mente de Filipos.",
+      body: "MacArthur sirve μορφὴ θεοῦ y μορφὴ δούλου. El ἁρπαγμόν no se resuelve con un grito piadoso. El indicativo produce el imperativo: haya este sentir, porque Él se despojó.\n\nG3444, G2758, G1401. El léxico impide dos errores: que el Hijo dejara de ser Dios, y que la iglesia cante el himno sin bajar. Filipenses 2 no es un tratado de cristología para el archivo, sino medida de la mente de Filipos.",
     },
   ],
   "apocalipsis-5": [
@@ -239,7 +239,7 @@ const POR_SLUG: Record<string, Voz[]> = {
   "2-pedro-1": [
     {
       name: "Matthew Henry",
-      body: "Henry oye que se añade a la fe, a costa propia. No es un cartel de virtudes. Es lo que el capítulo 2 exigirá cuando desenmascare a quienes prometen libertad siendo esclavos. El que no añade no es humilde: es ciego, y se olvidó de la purificación de sus antiguos pecados.\n\nDios dio todo lo que concierne a la vida y a la piedad. Ahora se suministra. Henry no deja que la ociosidad se llame gracia.",
+      body: "Henry oye que se añade a la fe, a costa propia. No es un cartel de virtudes. Es lo que el capítulo 2 exigirá cuando desenmascare a quienes prometen libertad siendo esclavos. El que no añade no es humilde, sino ciego, y se olvidó de la purificación de sus antiguos pecados.\n\nDios dio todo lo que concierne a la vida y a la piedad. Ahora se suministra. Henry no deja que la ociosidad se llame gracia.",
     },
     {
       name: "Juan Calvino",
@@ -261,7 +261,7 @@ const POR_SLUG: Record<string, Voz[]> = {
     },
     {
       name: "Juan Calvino",
-      body: "Calvino no deja que la novedad se vuelva un tatuaje de conversión. El que fue hecho pecado es el indicativo. La justicia de Dios en él es el fruto. La imputación no es una ficción: es el acto de no contar los pecados porque otro los llevó.\n\nEl ministerio de la reconciliación no es un anexo del yo nuevo. Es su origen. Calvino sienta el comentario atrás de 5:21.",
+      body: "Calvino no deja que la novedad se vuelva un tatuaje de conversión. El que fue hecho pecado es el indicativo. La justicia de Dios en él es el fruto. La imputación no es una ficción, sino el acto de no contar los pecados porque otro los llevó.\n\nEl ministerio de la reconciliación no es un anexo del yo nuevo. Es su origen. Calvino sienta el comentario atrás de 5:21.",
     },
     {
       name: "Charles Spurgeon",
@@ -279,7 +279,7 @@ const POR_SLUG: Record<string, Voz[]> = {
     },
     {
       name: "Juan Calvino",
-      body: "Calvino no discute a Pablo cuando Santiago manda hacer. El autoengaño es liturgia de los que solo escuchan. La libertad no es huir de la ley: es permanecer en ella.\n\nMateo 7:24–27 está debajo: el que oye y no hace es casa sobre arena. Calvino oye la analogía. El Señor que dijo Éfata no deja el oído abierto para el archivo.",
+      body: "Calvino no discute a Pablo cuando Santiago manda hacer. El autoengaño es liturgia de los que solo escuchan. La libertad no es huir de la ley, sino permanecer en ella.\n\nMateo 7:24–27 está debajo: el que oye y no hace es casa sobre arena. Calvino oye la analogía. El Señor que dijo Éfata no deja el oído abierto para el archivo.",
     },
     {
       name: "Charles Spurgeon",
@@ -293,7 +293,7 @@ const POR_SLUG: Record<string, Voz[]> = {
   "romanos-12": [
     {
       name: "Matthew Henry",
-      body: "Henry oye el «así que». No es un giro moralista: es consecuencia de once capítulos de misericordia. Nadie presenta el cuerpo si aún discute la justificación como si fuera un taller.\n\nLas misericordias preceden al mandato. Quien convierte este párrafo en un manual de hábitos ha cortado el «por las misericordias». Henry recorre el cuerpo como altar.",
+      body: "Henry oye el «así que». No es un giro moralista, sino consecuencia de once capítulos de misericordia. Nadie presenta el cuerpo si aún discute la justificación como si fuera un taller.\n\nLas misericordias preceden al mandato. Quien convierte este párrafo en un manual de hábitos ha cortado el «por las misericordias». Henry recorre el cuerpo como altar.",
     },
     {
       name: "Juan Calvino",
@@ -311,7 +311,7 @@ const POR_SLUG: Record<string, Voz[]> = {
   "juan-14": [
     {
       name: "Matthew Henry",
-      body: "Henry oye a Tomás y oye a una Persona, no un mapa. Jesús no señala un camino. Él es el camino, la verdad y la vida. «Nadie viene» no es un tono: es la gramática.\n\nLa noche de la traición. Judas salió. El Padre tiene casa. Henry no deja que se suavice οὐδεὶς para no ofender. Quien suaviza ya eligió ofender al que habla.",
+      body: "Henry oye a Tomás y oye a una Persona, no un mapa. Jesús no señala un camino. Él es el camino, la verdad y la vida. «Nadie viene» no es un tono, sino la gramática.\n\nLa noche de la traición. Judas salió. El Padre tiene casa. Henry no deja que se suavice οὐδεὶς para no ofender. Quien suaviza ya eligió ofender al que habla.",
     },
     {
       name: "Juan Calvino",

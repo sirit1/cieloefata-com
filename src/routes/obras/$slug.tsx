@@ -89,7 +89,7 @@ export function ObraPage() {
 
       <h2 className="mt-12 font-serif text-3xl">Una muestra de las primeras páginas</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
-        Estas líneas no son un capítulo inventado para vender: son la muestra de las primeras
+        Estas líneas no son un capítulo inventado para vender, sino la muestra de las primeras
         páginas, oídas junto a {obra.pasaje}.
       </p>
       {muestra.map((p) => (

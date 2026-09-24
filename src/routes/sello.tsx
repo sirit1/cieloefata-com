@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sello")({
     pageHead({
       path: "/sello",
       title: "El sello · Cielo Efata",
-      description: "Post tenebras lux. El sello no es un logotipo: es una confesión.",
+      description: "Post tenebras lux. El sello no es un logotipo, sino una confesión.",
     }),
 });
 
@@ -47,7 +47,7 @@ function SelloPage() {
           <h2 className="font-serif text-3xl">Tres figuras, un Nombre</h2>
           <p className="mt-4 max-w-[40em] leading-relaxed">
             El sello no inventa un dios. Nombra al que ya está en el libro. El León y el Cordero
-            no son dos cristos: son el mismo, visto de dos lados, como Apocalipsis 5 los anuncia
+            no son dos cristos, sino el mismo, visto de dos lados, como Apocalipsis 5 los anuncia
             y los ve. El Fuego no es un clima de reunión. Es el Espíritu Santo: el que Juan
             anunció —bautizará en Espíritu Santo y fuego— y el que en Pentecostés se apareció
             como lenguas de fuego. El que dijo Éfata en Galilea es el León y el Cordero; el

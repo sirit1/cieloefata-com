@@ -24,16 +24,16 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Siete tomos",
-  gate: "Este corpus teológico, forjado por el Dr. Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono: es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
+  gate: "Este corpus teológico, forjado por el Dr. Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
   efata:
-    "Éfata es el primer tomo y el long seller de la casa. En él el Dr. Alejandro Sirit entregó el Método V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. No es un lema de marca: es el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
-  line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo: son libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V La fe no basta; VI El altar del espejo; VII Callar para ganar. Bástate, publicado como séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
+    "Éfata es el primer tomo y el long seller de la casa. En él el Dr. Alejandro Sirit entregó el Método V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
+  line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V La fe no basta; VI El altar del espejo; VII Callar para ganar. Bástate, publicado como séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
 
 export const bible = {
   title: "Qué es la Biblia",
-  lead: "Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia. No es una antología de genios religiosos ni un almanaque de consuelos: es Palabra de Dios, y se lee como se oye a quien manda.",
+  lead: "Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia. No es una antología de genios religiosos ni un almanaque de consuelos, sino Palabra de Dios, y se lee como se oye a quien manda.",
   leadRef: "2 Ti. 3:16",
   facts: [
     {
@@ -58,17 +58,17 @@ export const bible = {
     },
     {
       k: "Un relato",
-      v: "Creación, caída, promesa, redención, consumación. Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían. El hilo no es una idea: es una Persona.",
+      v: "Creación, caída, promesa, redención, consumación. Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían. El hilo no es una idea; es una Persona.",
       ref: "Lc. 24:27",
     },
     {
       k: "Autoridad",
-      v: "Hombres hablaron de parte de Dios, siendo inspirados por el Espíritu Santo. La autoridad no es el lector ni el predicador de moda: es el texto. El comentario se sienta atrás.",
+      v: "Hombres hablaron de parte de Dios, siendo inspirados por el Espíritu Santo. La autoridad no es el lector ni el predicador de moda, sino el texto. El comentario se sienta atrás.",
       ref: "2 P. 1:21 · 2 Ti. 3:16",
     },
   ],
   close:
-    "Siete estantes abren el mapa del canon. No hay que saberlos todos para empezar. Hay que saber que esto no es un libro de frases: es Escritura, y se estudia hasta que pida una obediencia.",
+    "Siete estantes abren el mapa del canon. No hay que saberlos todos para empezar. Hay que saber que esto no es un libro de frases, sino Escritura, y se estudia hasta que pida una obediencia.",
   closeRef: "Jos. 1:8 · Sal. 1:2",
 };
 
@@ -80,7 +80,7 @@ export const canonDoors = [
     span: "Génesis — Deuteronomio",
     author: "Moisés",
     line: "Dios crea, promete, liberta y da la ley. El que dijo «sea la luz» es el Verbo que era en el principio, y el cordero de la noche de Egipto ya espera al que ha de ser inmolado.",
-    link: "Gn. 1:3 habla con Jn. 1:1–3. El cordero de Éx. 12 espera al de Ap. 5. La simiente de Gn. 3:15 no es un mito de origen: es la primera promesa.",
+    link: "Gn. 1:3 habla con Jn. 1:1–3. El cordero de Éx. 12 espera al de Ap. 5. La simiente de Gn. 3:15 no es un mito de origen, sino la primera promesa.",
     ref: "Lc. 24:44",
   },
   {
@@ -200,9 +200,9 @@ export const obras: Obra[] = [
     amazonTitle: "Bástate mi gracia",
     line: "«Bástate mi gracia.» El lector recibe la palabra dicha a Pablo en la flaqueza: el poder se perfecciona donde ya no se puede. El aguijón permanece; el Señor también.",
     thesis:
-      "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa: es sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
+      "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa, sino sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
     sample:
-      "A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa: es sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas.",
+      "A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa, sino sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas.",
     ref: "2 Co. 12:9",
     pasaje: "2 Corintios 12",
     studySlug: "2-corintios-12",
@@ -262,7 +262,7 @@ export const obras: Obra[] = [
     lectura: 7,
     slug: "callar-para-ganar",
     title: "Callar para ganar",
-    line: "El lector recibe el dominio de la lengua. Callar no es huir: es no encender el bosque, y hablar cuando el pasaje manda hablar.",
+    line: "El lector recibe el dominio de la lengua. Callar no es huir, sino no encender el bosque, y hablar cuando el pasaje manda hablar.",
     thesis:
       "La lengua es un fuego. El que no ofende en palabra, es varón perfecto. Este tomo no enseña la cobardía ni el silencio cómplice: enseña el dominio que el Espíritu da, para no encender el bosque por una chispa, y para hablar cuando el pasaje manda hablar. Callar no es huir. Callar, aquí, es no pelear el primer asiento, y no convertir la doctrina en un deporte de redes.",
     sample:

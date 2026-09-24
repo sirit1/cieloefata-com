@@ -39,7 +39,7 @@ export const CAMINO: PasoCamino[] = [
     name: "Arrepentimiento",
     studySlug: "marcos-1",
     ref: "Marcos 1:14–15",
-    body: "En Galilea el Reino se acerca con dos verbos: arrepentíos y creed en el evangelio. No es un ánimo de grupo ni una mejora del yo: es volverse al Señor que ya está cerca. El mandato no espera a que el lector se sienta listo.",
+    body: "En Galilea el Reino se acerca con dos verbos: arrepentíos y creed en el evangelio. Ahora bien, eso no es un ánimo de grupo ni una mejora del yo; es volverse al Señor que ya está cerca. El mandato no espera a que el lector se sienta listo.",
   },
   {
     slug: "bautismo",

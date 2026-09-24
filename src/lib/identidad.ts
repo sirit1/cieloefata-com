@@ -12,7 +12,7 @@ export const FIGURAS = [
   {
     kind: "lion" as const,
     name: "El León",
-    line: "Ha vencido para abrir el libro y desatar sus siete sellos. No es heráldica de imperio ni un emblema de fuerza humana: es Judá, la raíz de David, el que toma el rollo porque fue digno.",
+    line: "Ha vencido para abrir el libro y desatar sus siete sellos. No es heráldica de imperio ni un emblema de fuerza humana, sino Judá, la raíz de David, el que toma el rollo porque fue digno.",
     ref: "Ap. 5:5",
   },
   {
@@ -34,7 +34,7 @@ export const TINTAS = [
     name: "Tinta",
     token: "navy" as const,
     hex: "#1A2340",
-    role: "El campo del sello. Encabezado. La voz que manda. No es un azul decorativo: es el marino sobre el cual el oro y el pergamino pueden hablar.",
+    role: "El campo del sello. Encabezado. La voz que manda. No es un azul decorativo, sino el marino sobre el cual el oro y el pergamino pueden hablar.",
   },
   {
     name: "Oro",

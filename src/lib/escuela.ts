@@ -101,7 +101,7 @@ export const profundo: Record<string, Profundo> = {
     epoca: "Finales del siglo I. La Iglesia ya enfrenta lecturas que recortan al Hijo.",
     audiencia: "Creyentes que necesitan saber quién es Jesús, y un maestro de Israel que vino de noche.",
     genero: "Evangelio. Diálogo que es umbral, no café teológico.",
-    literario: "Juan 2:24–25 acaba de decir que Jesús conoce lo que hay en el hombre. Nicodemo es el caso. Fariseo, principal, maestro de Israel. El diálogo corre hasta 3:21. Luego Juan el Bautista cede: es menester que él crezca. El «de lo alto» de 3:3 no es un lema de enero: es la condición para ver el reino.",
+    literario: "Juan 2:24–25 acaba de decir que Jesús conoce lo que hay en el hombre. Nicodemo es el caso. Fariseo, principal, maestro de Israel. El diálogo corre hasta 3:21. Luego Juan el Bautista cede: es menester que él crezca. El «de lo alto» de 3:3 no es un lema de enero, sino la condición para ver el reino.",
     lemmas: [
       {
         orig: "ἄνωθεν",
@@ -120,7 +120,7 @@ export const profundo: Record<string, Profundo> = {
         sense: "viento y Espíritu: sopla donde quiere. No se programa."
       }
     ],
-    cristo: "El que habla es el que bajó del cielo (3:13). El Hijo del hombre será levantado como la serpiente en el desierto (3:14–15; Nm. 21). Juan 3:16 no es un cartel suelto: es la lógica del que debe nacer de lo alto porque el Hijo fue dado. El nuevo nacimiento no es un anexo de la cruz: es lo que la cruz produce por el Espíritu. Nicodemo, de noche, oye al que es la luz.",
+    cristo: "El que habla es el que bajó del cielo (3:13). El Hijo del hombre será levantado como la serpiente en el desierto (3:14–15; Nm. 21). Juan 3:16 no es un cartel suelto, sino la lógica del que debe nacer de lo alto porque el Hijo fue dado. El nuevo nacimiento no es un anexo de la cruz, sino lo que la cruz produce por el Espíritu. Nicodemo, de noche, oye al que es la luz.",
     cruces: "Nm. 21:8–9 · Ez. 36:25–27 · Jn. 1:12–13 · Jn. 3:13–16 · Tit. 3:5 · 1 P. 1:3",
     preguntas: [
       "¿Estoy tratando el nuevo nacimiento como metáfora de un cambio de hábitos?",
@@ -261,7 +261,7 @@ export const profundo: Record<string, Profundo> = {
     epoca: "Cerca de su muerte (1:14). Segunda carta. Hay maestros que prometen libertad y son esclavos.",
     audiencia: "Los que han recibido una fe igualmente preciosa: creyentes que pueden volverse ociosos.",
     genero: "Carta. Testamento pastoral. El capítulo 2 desenmascara a quienes prometen libertad siendo esclavos de corrupción.",
-    literario: "1:1–2 saluda. 1:3–11 es la pendiente: Dios dio todo; ahora añadid. 1:12–15 es el memorial antes de morir. 1:16–21 es el origen de la profecía. El capítulo 2 espera con los falsos maestros. El 1 no es un listado de hábitos: es lo que evita caer en esa esclavitud.",
+    literario: "1:1–2 saluda. 1:3–11 es la pendiente: Dios dio todo; ahora añadid. 1:12–15 es el memorial antes de morir. 1:16–21 es el origen de la profecía. El capítulo 2 espera con los falsos maestros. El 1 no es un listado de hábitos, sino lo que evita caer en esa esclavitud.",
     lemmas: [
       {
         orig: "ἐπιχορηγήσατε",
@@ -280,7 +280,7 @@ export const profundo: Record<string, Profundo> = {
         sense: "hacer firme el llamamiento y la elección. Se confirma en el camino, no en el eslogan."
       }
     ],
-    cristo: "El que nos llamó por su gloria y excelencia es el Señor (1:3). Participar de la naturaleza divina no es fusión panteísta: es huir de la corrupción y ser hechos semejantes al Hijo. Las virtudes no sustituyen a Cristo: las da el que ya nos dio todo. El que no añade no es humilde. Es ciego, y se olvidó de la purificación de sus antiguos pecados.",
+    cristo: "El que nos llamó por su gloria y excelencia es el Señor (1:3). Participar de la naturaleza divina no es fusión panteísta, sino huir de la corrupción y ser hechos semejantes al Hijo. Las virtudes no sustituyen a Cristo: las da el que ya nos dio todo. El que no añade no es humilde. Es ciego, y se olvidó de la purificación de sus antiguos pecados.",
     cruces: "Jn. 15:1–8 · Gá. 5:22–23 · Stg. 2:17 · 2 P. 1:3–11 · 2 P. 2:19 · Jud. 3",
     preguntas: [
       "¿Cuál es el eslabón que no estoy costeando?",
@@ -325,7 +325,7 @@ export const profundo: Record<string, Profundo> = {
     epoca: "Hacia el 60–62 d. C.",
     audiencia: "Filipos, iglesia querida con grietas de vanagloria (2:1–4).",
     genero: "Carta. El himno (2:6–11) es credo metido en la ética.",
-    literario: "2:1–4 pide un mismo sentir. El himno no es adorno: es la medida. 2:12–18 pide ocupar la salvación con temor. Timoteo y Epafrodito encarnan el himno. El que canta 2:9–11 sin 2:7 no ha leído.",
+    literario: "2:1–4 pide un mismo sentir. El himno no es adorno, sino la medida. 2:12–18 pide ocupar la salvación con temor. Timoteo y Epafrodito encarnan el himno. El que canta 2:9–11 sin 2:7 no ha leído.",
     lemmas: [
       {
         orig: "μορφὴ θεοῦ / μορφὴ δούλου",
@@ -357,7 +357,7 @@ export const profundo: Record<string, Profundo> = {
     epoca: "Temprana, quizá los años 40–50. A las doce tribus en la dispersión.",
     audiencia: "Creyentes pobres y tentados, que oyen mucho y hacen poco.",
     genero: "Carta sapiencial. Espejo, no consigna.",
-    literario: "1:19–21 pide recibir con mansedumbre la palabra implantada. El 22–25 es el espejo. El 26–27 es la religión pura. La ira del hombre no obra la justicia. La lengua espera en el capítulo 3. El que se mira y se va no es un caso clínico: es el oyente de esta escuela si cierra el cuaderno sin acto.",
+    literario: "1:19–21 pide recibir con mansedumbre la palabra implantada. El 22–25 es el espejo. El 26–27 es la religión pura. La ira del hombre no obra la justicia. La lengua espera en el capítulo 3. El que se mira y se va no es un caso clínico, sino el oyente de esta escuela si cierra el cuaderno sin acto.",
     lemmas: [
       {
         orig: "ποιηταὶ λόγου",
@@ -376,7 +376,7 @@ export const profundo: Record<string, Profundo> = {
         sense: "la ley perfecta, la de la libertad. Permanecer, no huir."
       }
     ],
-    cristo: "La palabra implantada es la que salva las almas (1:21). El Padre de las luces nos engendró por la palabra de verdad (1:18). El espejo no es un método: es oír a Cristo y no irse. Mateo 7:24–27 está debajo: el que oye y no hace es casa sobre arena. El Señor que dijo Éfata no deja el oído abierto para el archivo. Lo deja abierto para el acto.",
+    cristo: "La palabra implantada es la que salva las almas (1:21). El Padre de las luces nos engendró por la palabra de verdad (1:18). El espejo no es un método, sino oír a Cristo y no irse. Mateo 7:24–27 está debajo: el que oye y no hace es casa sobre arena. El Señor que dijo Éfata no deja el oído abierto para el archivo. Lo deja abierto para el acto.",
     cruces: "Ez. 33:31–32 · Mt. 7:24–27 · Jn. 13:17 · Stg. 1:18–25 · Stg. 2:17 · Ro. 2:13",
     preguntas: [
       "¿Qué me mostró el espejo, y lo haré antes de siete días?",
@@ -386,7 +386,7 @@ export const profundo: Record<string, Profundo> = {
   },
   "romanos-12": {
     autor: "Pablo.",
-    epoca: "La misma carta. El «así que» de 12:1 no es un giro moralista: es consecuencia de once capítulos de misericordia.",
+    epoca: "La misma carta. El «así que» de 12:1 no es un giro moralista, sino consecuencia de once capítulos de misericordia.",
     audiencia: "Hermanos en Roma. El culto sale del templo y se pone sobre el cuerpo.",
     genero: "Carta. Exhortación que nace de la doctrina.",
     literario: "Romanos 9–11 acaba de tratar a Israel y la misericordia. El 12:1–2 es el umbral de la ética. Luego el cuerpo, los dones, el amor, las autoridades. Nadie presenta el cuerpo si aún discute la justificación como si fuera un taller. Las misericordias preceden al mandato.",
@@ -558,7 +558,7 @@ export const profundo: Record<string, Profundo> = {
         sense: "anunciaré tu nombre a mis hermanos. Hebreos 2:12 oye esto en Cristo."
       }
     ],
-    cristo: "Mateo 27 clava el clamor. Juan 19 sortea las vestiduras. Hebreos 2:12 pone al Hijo en la asamblea. El salmo no es crónica del Gólgota escrita como reportaje: es oración que el Espíritu destinó al Gólgota. Quien tome cada «yo» como autobiografía del lector hurta al Mesías.",
+    cristo: "Mateo 27 clava el clamor. Juan 19 sortea las vestiduras. Hebreos 2:12 pone al Hijo en la asamblea. El salmo no es crónica del Gólgota escrita como reportaje, sino oración que el Espíritu destinó al Gólgota. Quien tome cada «yo» como autobiografía del lector hurta al Mesías.",
     cruces: "Sal. 22 · Mt. 27:35, 46 · Jn. 19:24 · He. 2:12 · Sal. 22:22",
     preguntas: [
       "¿He usado el versículo 1 como amuleto de abandono, sin oír el 24?",
@@ -622,7 +622,7 @@ export const profundo: Record<string, Profundo> = {
         sense: "no llores. El primer imperativo del laboratorio es al que llora porque el libro está cerrado."
       }
     ],
-    cristo: "Génesis 49: el cetro de Judá. El go'el de Levítico 25 y Rut: pariente de sangre que paga. Hebreos 2:14–15: toma carne para redimir. El Cordero recibe la adoración que el ángel rechaza. El que abre el libro es el que abre al sordo. León, Cordero y Fuego no son adorno del sello: son este capítulo.",
+    cristo: "Génesis 49: el cetro de Judá. El go'el de Levítico 25 y Rut: pariente de sangre que paga. Hebreos 2:14–15: toma carne para redimir. El Cordero recibe la adoración que el ángel rechaza. El que abre el libro es el que abre al sordo. León, Cordero y Fuego no son adorno del sello, sino este capítulo.",
     cruces: "Gn. 49:9–10 · Lv. 25:25 · Rt. 4 · Dn. 7:13–14 · Ap. 5:5–6 · Ap. 5:9",
     preguntas: [
       "¿Pongo el cetro de la historia en el César, o en las manos atravesadas?",
@@ -714,7 +714,7 @@ export const laboratoriosExtra: Record<string, LabExtra> = {
       },
       {
         name: "Pecado",
-        body: "Rodea como toros y perros. Sortea vestiduras. Se relame. No es un ánimo: es un cerco.",
+        body: "Rodea como toros y perros. Sortea vestiduras. Se relame. Ahora bien, eso no es un ánimo, sino un cerco.",
       },
       {
         name: "Cristo",
@@ -728,7 +728,7 @@ export const laboratoriosExtra: Record<string, LabExtra> = {
     analogiaAntecedente:
       "David primero. El justo perseguido ya conocido en la historia del rey. El paralelismo hebreo estrecha; no rellena. El Salmo 23 y el 24 esperan: Pastor y Rey. Nadie llega al Gólgota sin haber oído a David.",
     analogiaPlena:
-      "Mateo 27. Juan 19. Hebreos 2:12. El salmo no es crónica del Gólgota escrita como reportaje: es oración que el Espíritu destinó al Gólgota. El Nuevo Testamento no cita un adorno.",
+      "Mateo 27. Juan 19. Hebreos 2:12. El salmo no es crónica del Gólgota escrita como reportaje, sino oración que el Espíritu destinó al Gólgota. El Nuevo Testamento no cita un adorno.",
     status: "¿Oración de David, o del Hijo?",
     distingo:
       "De David, y del Hijo con autoridad canónica. El «yo» no es autobiografía del lector. Quien se vista con este clamor para no oír al Mesías hurta el salmo.",
@@ -778,7 +778,7 @@ export const laboratoriosExtra: Record<string, LabExtra> = {
       "Hechos 8:32–35. 1 Pedro 2:24. 2 Corintios 5:21. El eunuco lee este rollo y Felipe le abre a Jesús. El Gran Rollo de Qumrán (~125 a. C.) quita la coartada de un canto inventado después de Gólgota.",
     status: "¿Poema de resiliencia, o sustitución?",
     distingo:
-      "Hay dolor, y hay cargo. El silencio ante los trasquiladores no es estoicismo: es obediencia. La curación nace de la herida ajena, no de la nuestra bien contada.",
+      "Hay dolor, y hay cargo. El silencio ante los trasquiladores no es estoicismo, sino obediencia. La curación nace de la herida ajena, no de la nuestra bien contada.",
     fontes:
       "El texto. El hebreo: נָשָׂא, סָבַל, אָשָׁם. Hechos 8. 1 Pedro 2. 2 Corintios 5. El Gran Rollo. Qumrán no legisla el evangelio: quita la coartada.",
     reductio:
@@ -867,12 +867,12 @@ export const laboratoriosExtra: Record<string, LabExtra> = {
       },
     ],
     analogiaAntecedente:
-      "Filipenses 2:1–4 pide un mismo sentir. El himno no es adorno: es la medida. Nadie canta 2:9 si aún pelea el primer asiento. El 2:12–18 pide ocupar la salvación con temor.",
+      "Filipenses 2:1–4 pide un mismo sentir. El himno no es adorno, sino la medida. Nadie canta 2:9 si aún pelea el primer asiento. El 2:12–18 pide ocupar la salvación con temor.",
     analogiaPlena:
       "Isaías 45:23: a mí se doblará toda rodilla. Marcos 10:45. Juan 13. Hebreos 12:2. Apocalipsis 5:12. El Nombre es el del Siervo exaltado, no un lema de culto.",
     status: "¿Himno de kénosis para el seminario, o medida de la mente de Filipos?",
     distingo:
-      "ἐκένωσεν no es dejar de ser quién es: es tomar lo que no debía. La infamia de la cruz es el punto, no un detalle. Toda rodilla es escatología, no eslogan.",
+      "ἐκένωσεν no es dejar de ser quién es, sino tomar lo que no debía. La infamia de la cruz es el punto, no un detalle. Toda rodilla es escatología, no eslogan.",
     fontes:
       "El texto. Isaías 45:23. Marcos 10:45. Juan 13:3–5. Hebreos 12:2. El himno (2:6–11) se oye dentro de 2:1–18, no recortado.",
     reductio:

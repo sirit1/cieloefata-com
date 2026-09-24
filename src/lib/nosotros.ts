@@ -7,7 +7,7 @@ export const NOSOTROS = {
     title: "Quién escribe",
     body: [
       "Dr. Alejandro Sirit escribe para que el texto mande otra vez: oído a la Escritura, rodilla al cierre, sin autoayuda bautizada ni versiculitis. Bajo el sello de Editorial Cielo Efata entrega tratados y estudios pastorales —Éfata con el método V.E.R.D.A.D., El Siervo, no tú, Bástate, Cuando el cielo se cae, La fe no basta, El altar del espejo, Callar para ganar— con una sola brújula: conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe.",
-      "No ofrece un dios doméstico ni un Jesús útil. Confiesa al Padre que habla, al Hijo que fue hecho carne y al Espíritu que convence de pecado y abre el oído que el pecado había cerrado. El arma no es el tono: es el capítulo entero, leído de rodillas.",
+      "No ofrece un dios doméstico ni un Jesús útil. Confiesa al Padre que habla, al Hijo que fue hecho carne y al Espíritu que convence de pecado y abre el oído que el pecado había cerrado. El arma, sin embargo, no es el tono; es el capítulo entero, leído de rodillas.",
     ],
   },
   editorial: {

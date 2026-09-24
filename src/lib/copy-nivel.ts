@@ -50,7 +50,7 @@ export function retomarEnlace(pasaje: string): string {
 }
 
 export const CUADERNO_VACIO =
-  "Aún no hay un paso escrito. El cuaderno de esta casa no es un diario de sensaciones ni un tablero de propósitos genéricos: es el lugar donde el indicativo del texto se vuelve acto. Se oye lo que Dios ha hecho; se nombra un verbo que el pasaje conjuga; se pone un testigo; se firma con fecha. Si nunca se ha leído en esta escuela, se empieza por Marcos 7 (Éfata), donde el oído cede antes de que la lengua se desate. Si ya se oyó la clase de esta semana, se escribe el acto de Filipenses 2 antes de coleccionar otro capítulo. Cuando el aula te envíe aquí con un pasaje en la barra, ese campo no es decoración: es el texto que manda sobre lo que vas a firmar.";
+  "Aún no hay un paso escrito. El cuaderno de esta casa no es un diario de sensaciones ni un tablero de propósitos genéricos, sino el lugar donde el indicativo del texto se vuelve acto. Se oye lo que Dios ha hecho; se nombra un verbo que el pasaje conjuga; se pone un testigo; se firma con fecha. Si nunca se ha leído en esta escuela, se empieza por Marcos 7 (Éfata), donde el oído cede antes de que la lengua se desate. Si ya se oyó la clase de esta semana, se escribe el acto de Filipenses 2 antes de coleccionar otro capítulo. Cuando el aula te envíe aquí con un pasaje en la barra, ese campo no es decoración, sino el texto que manda sobre lo que vas a firmar.";
 
 export const CANON_LEER =
   "Leer el capítulo. Abre este pasaje entero en RevelatiO, el lector compañero de esta casa, para que la Escritura vaya delante del comentario.";

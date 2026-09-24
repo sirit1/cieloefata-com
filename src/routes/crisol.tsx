@@ -130,7 +130,7 @@ function CrisolPage() {
 
       <p className="mt-16 leading-relaxed italic text-ink-soft">
         Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí. El último
-        eslabón no es el aplauso: es la rodilla.{" "}
+        eslabón no es el aplauso, sino la rodilla.{" "}
         <Term title="Éfata: sé abierto (Marcos 7:34)">Éfata</Term>: sé abierto.
       </p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">
