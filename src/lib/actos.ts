@@ -62,7 +62,7 @@ export const ACTOS: Record<string, ActoEscrito> = {
   },
   "filipenses-2": {
     prohibido:
-      "No escribas «seré más humilde» ni «hoy muero al ego». El himno no pide un anuncio de kénosis. Cristo se despojó, tomó forma de siervo y fue obediente hasta la muerte de cruz. El acto no es un cartel de humildad: es un derecho cedido y no publicado.",
+      "No escribas «seré más humilde» ni «hoy muero al ego». El himno no pide un anuncio de kénosis. Cristo se despojó, tomó forma de siervo y fue obediente hasta la muerte de cruz. El acto no es un cartel de humildad, sino un derecho cedido y no publicado.",
     escrito:
       "Cede un derecho esta semana —uno que te estaba inflando— y no lo anuncies. Hazlo porque el himno manda, no porque quieras parecer siervo. Evodia y Síntique no necesitaban otro taller: necesitaban este Cristo.",
   },

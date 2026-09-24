@@ -24,14 +24,14 @@ export const SITIO: Record<string, Sitio> = {
   "juan-3": {
     lugar: "Jerusalén, de noche. El evangelio se escribe a finales del siglo I, cuando ya hay lecturas que recortan al Hijo.",
     situacion:
-      "Nicodemo es fariseo, principal, maestro de Israel. Viene con oficio intacto y con la pregunta a medias. Jesús acaba de decir que conoce lo que hay en el hombre. El diálogo no es un café teológico: es el umbral del reino.",
+      "Nicodemo es fariseo, principal, maestro de Israel. Viene con oficio intacto y con la pregunta a medias. Jesús acaba de decir que conoce lo que hay en el hombre. El diálogo no es un café teológico, sino el umbral del reino.",
     proposito:
       "Juan no mejora el currículo del maestro. Declara que hay que nacer de lo alto para ver el reino. El que enseña y no ha nacido sigue de noche, aunque hable de Dios con soltura.",
   },
   "hechos-2": {
     lugar: "Jerusalén, el día de Pentecostés, en la ciudad que había entregado al Justo. Lucas escribe a Teófilo para que conozca la verdad con orden.",
     situacion:
-      "El Espíritu desciende. Pedro predica a la casa de Israel. El sermón atraviesa el corazón: «a este Jesús a quien vosotros crucificasteis, Dios le ha hecho Señor y Cristo». La pregunta no es qué sentir: es qué haremos.",
+      "El Espíritu desciende. Pedro predica a la casa de Israel. El sermón atraviesa el corazón: «a este Jesús a quien vosotros crucificasteis, Dios le ha hecho Señor y Cristo». La pregunta no es qué sentir, sino qué haremos.",
     proposito:
       "Lucas muestra cómo nace la Iglesia: no de un taller de autoestima, sino de un corte. Arrepentimiento, bautismo en el nombre de Jesús, don del Espíritu. El que oye y no pregunta todavía no ha oído; ha asistido.",
   },
@@ -45,7 +45,7 @@ export const SITIO: Record<string, Sitio> = {
   "isaias-53": {
     lugar: "Judá, siglo VIII a. C., en la órbita de la corte y del templo, cuando el pueblo todavía puede oír a un profeta y ya está aprendiendo a no oírlo.",
     situacion:
-      "El Siervo es despreciado y desechado. Las naciones y Israel tropiezan con un justificado que no parece rey. Jehová quiso quebrantarlo. El canto no es un poema de resiliencia: es cargo, sangre y resultado.",
+      "El Siervo es despreciado y desechado. Las naciones y Israel tropiezan con un justificado que no parece rey. Jehová quiso quebrantarlo. El canto no es un poema de resiliencia, sino cargo, sangre y resultado.",
     proposito:
       "Isaías no consuela con una lección moral. Anuncia al que lleva iniquidades ajenas para que muchos sean justificados. El «todos» no admite excepciones piadosas. El eunuco, siglos después, leerá hasta que Felipe le abra a Cristo.",
   },
@@ -54,14 +54,14 @@ export const SITIO: Record<string, Sitio> = {
     situacion:
       "Toda boca se cerró. Nadie llega a 3:21 sin haber oído que no hay justo ni aun uno. Hay quienes mezclan su hoja de servicios con este párrafo y todavía tienen la boca abierta.",
     proposito:
-      "Pablo manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica. El ἱλαστήριον no es un adorno cultual: es el lugar de la sangre.",
+      "Pablo manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica. El ἱλαστήριον no es un adorno cultual, sino el lugar de la sangre.",
   },
   "2-pedro-1": {
     lugar: "Segunda carta de Pedro, hacia el final de su vida, a creyentes que ya recibieron una fe igualmente preciosa.",
     situacion:
       "Pedro va a morir. Hay maestros que prometen libertad y son esclavos. El pueblo puede volverse ocioso y llamar a esa ociosidad gracia. El capítulo 2 espera con los falsos.",
     proposito:
-      "Pedir que se añada a la fe, a costa propia, una cadena de virtudes. No es un cartel. Es lo que el capítulo 2 exigirá cuando desenmascare a quienes prometen libertad siendo esclavos. El que no añade no es humilde: es ciego, y se olvidó de la purificación de sus antiguos pecados.",
+      "Pedir que se añada a la fe, a costa propia, una cadena de virtudes. No es un cartel. Es lo que el capítulo 2 exigirá cuando desenmascare a quienes prometen libertad siendo esclavos. El que no añade no es humilde, sino ciego, y se olvidó de la purificación de sus antiguos pecados.",
   },
   "2-corintios-5": {
     lugar: "Corinto, iglesia turbulenta que discute el apostolado de Pablo y confunde la novedad con un yo recableado.",
@@ -85,7 +85,7 @@ export const SITIO: Record<string, Sitio> = {
       "Mandar: sed hacedores, y no tan solamente oidores. El que permanece en la ley perfecta, la de la libertad, este será bienaventurado en lo que hace. El altar no es el sentimiento de haber oído.",
   },
   "romanos-12": {
-    lugar: "Roma, después de once capítulos de misericordia. El «así que» no es un giro moralista: es consecuencia.",
+    lugar: "Roma, después de once capítulos de misericordia. El «así que» no es un giro moralista, sino consecuencia.",
     situacion:
       "Hay quien quiere un culto de emoción sin cuerpo y sin un no al siglo. Hay quien convierte el párrafo en un manual de hábitos y corta «por las misericordias».",
     proposito:
@@ -108,7 +108,7 @@ export const SITIO: Record<string, Sitio> = {
   "genesis-3": {
     lugar: "Edén, al principio. Moisés escribe para un pueblo sacado de Egipto, que debe saber cómo se quebró el pacto antes de oír el Sinaí.",
     situacion:
-      "Hay cuatro bocas: la serpiente, la mujer, el hombre y Jehová Dios. El verbo decisivo del versículo 1 no es comer: es «dijo». La primera herida es hermenéutica. El animal habla y el hombre calla.",
+      "Hay cuatro bocas: la serpiente, la mujer, el hombre y Jehová Dios. El verbo decisivo del versículo 1 no es comer, sino «dijo». La primera herida es hermenéutica. El animal habla y el hombre calla.",
     proposito:
       "Narrar la transgresión del pacto, el juicio y la promesa de la simiente. No es mito de autoestima ni saga etiológica que se evapore. Jesús toma Génesis 2 como Palabra del Creador. Quien disuelva a Adán disuelve a Cristo.",
   },

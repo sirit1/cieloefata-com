@@ -14,7 +14,7 @@ export const VERDAD_ORIGEN = {
   paraQue:
     "Para devolver el oído. El milagro sigue siendo de Marcos 7: Éfata. Sé abierto. El método es el cauce, no el milagro. El acrónimo es siervo. Si se sienta en el trono, se ha vuelto a la sordera con más libros. Quien cierre el estudio sabiendo más griego y menos Cristo habrá invertido el orden.",
   cadena:
-    "V.E.R.D.A.D.™ es una cadena, no un abanico. Cada eslabón depende del anterior y prepara el posterior. Invertir el orden no es adaptar: es eiségesis. Nadie llega a Decisión sin haber pasado por Ver. Nadie invoca Doctrina para ahorrarse Revelación. Nadie usa Argumento como primer movimiento. El que empieza por A para ganar una polémica no está haciendo Éfata: está haciendo teatro.",
+    "V.E.R.D.A.D.™ es una cadena, no un abanico. Cada eslabón depende del anterior y prepara el posterior. Invertir el orden no es adaptar, sino eiségesis. Nadie llega a Decisión sin haber pasado por Ver. Nadie invoca Doctrina para ahorrarse Revelación. Nadie usa Argumento como primer movimiento. El que empieza por A para ganar una polémica no está haciendo Éfata, sino teatro.",
   catedral:
     "Observar. Contextualizar. Extraer. Sistematizar. Defender. Encarnar. Esa es la catedral, no un abanico de técnicas. Si se rompe un solo eslabón, el oído vuelve a cerrarse, y el estudio se convierte otra vez en el versículo suelto que el siglo ya sabe recitar.",
   refs: "Mr. 7:34 · Neh. 8:8 · 2 Ti. 3:16 · Hch. 20:27 · Is. 8:20 · Stg. 1:22",
@@ -24,7 +24,7 @@ export const REGLA_DE_ORO = {
   title: "A la ley y al testimonio",
   epigrafe: "A la ley y al testimonio. Si no dijeren conforme a esto, es porque no les ha amanecido.",
   ref: "Is. 8:20",
-  body: "Isaías 8:20 no es un eslogan de casa: es el criterio. «A la ley y al testimonio…» Por consiguiente, este método no añade un oráculo al canon; somete diccionario y tradición a la analogía de la fe. El hebreo y el griego no son amos de la Palabra: son siervos para oírla sin recorte. Calvino, Lightfoot, Owen o Calcedonia solo tienen peso cuando dicen lo que ya dice el texto. Norma normans non normata: la Escritura norma y no es normada.",
+  body: "Isaías 8:20 no es un eslogan de casa, sino el criterio. «A la ley y al testimonio…» Por consiguiente, este método no añade un oráculo al canon; somete diccionario y tradición a la analogía de la fe. El hebreo y el griego no son amos de la Palabra, sino siervos para oírla sin recorte. Calvino, Lightfoot, Owen o Calcedonia solo tienen peso cuando dicen lo que ya dice el texto. Norma normans non normata: la Escritura norma y no es normada.",
   segunda:
     "La analogía antecedente tutela a Revelación. Lo ya dado hasta este punto del canon ilumina el párrafo, sin hurtarle la voz. La analogía plena resume al final de Revelación y gobierna Doctrina; no invade el vocablo. El sistema entra después, y entra etiquetado.",
 };
@@ -56,7 +56,7 @@ export const VERDAD_PASOS = [
     d: "E",
     pregunta: "¿Sitz im Leben, género, geografía, pacto? ¿Qué hay antes y después?",
     regla: "La Biblia fue escrita para nosotros; no fue dirigida primariamente a nosotros.",
-    body: "Tres anillos: historia y geografía; destinatarios y ocasión; género literario. Un salmo no se lee como una ley. Génesis no es un proverbio suelto. El género no es un efecto que se elige: es una ley que se obedece. Sin este anclaje, el siglo XXI dicta al texto lo que el texto nunca dijo, y el versículo viaja solo, como si Moisés y Pablo hubieran escrito para el ánimo de esta semana.",
+    body: "Tres anillos: historia y geografía; destinatarios y ocasión; género literario. Un salmo no se lee como una ley. Génesis no es un proverbio suelto. El género no es un efecto que se elige, sino una ley que se obedece. Sin este anclaje, el siglo XXI dicta al texto lo que el texto nunca dijo, y el versículo viaja solo, como si Moisés y Pablo hubieran escrito para el ánimo de esta semana.",
     riesgo: "La arqueología sustituye a la lectura, o el versículo viaja solo.",
     clasico: "Gramática e historia. El esqueleto del método gramático-histórico.",
     marcos:
@@ -98,7 +98,7 @@ export const VERDAD_PASOS = [
     d: "A",
     pregunta: "¿Qué se afirma, contra quién, con qué textos, y qué se sigue si se niega?",
     regla: "Nuestra fe no descansa en fábulas artificiosamente compuestas.",
-    body: "Apología y demolición de la altivez que se levanta contra el conocimiento de Dios. No es un arsenal para redes. Status quaestionis, distingos, fontes, reductio. El aparato es siervo: se usa la variante; no se bautiza la duda. Sin resistencia el estudio no empezó: solo se ordenó. El que empieza por este eslabón para ganar una polémica no está haciendo Éfata: está haciendo teatro, y el conocimiento que envanece es su contrahechura.",
+    body: "Apología y demolición de la altivez que se levanta contra el conocimiento de Dios. No es un arsenal para redes. Status quaestionis, distingos, fontes, reductio. El aparato es siervo: se usa la variante; no se bautiza la duda. Sin resistencia el estudio no empezó: solo se ordenó. El que empieza por este eslabón para ganar una polémica no está haciendo Éfata, sino teatro, y el conocimiento que envanece es su contrahechura.",
     riesgo: "Empezar por A. Coleccionar gotchas. La disputa como deporte.",
     clasico: "La elénctica de Turretin. 2 Corintios 10:5. 1 Pedro 3:15.",
     marcos:
@@ -114,7 +114,7 @@ export const VERDAD_PASOS = [
     regla: "La teología que no culmina de rodillas es aberración. El indicativo gobierna el imperativo.",
     body: "Doxología y obediencia. Sin esto, la cadena es un cadáver erudito. Una obediencia o una confesión para esta semana, dicha a alguien. Queda prohibido un «hoy muero a…» que el pasaje no conjuga. Si el verbo es «se despojó», se habla de despojo. Si el verbo es «fueron abiertos», se pide oído. C.R.I.S.O.L.™ —expuesto en El Altar del Espejo— es la compuerta pastoral de este eslabón, no un método rival. La teología que no culmina de rodillas es aberración, porque el indicativo gobierna el imperativo, y no al revés.",
     riesgo: "Siete propósitos. O ninguno. Moralismo sin Cristo, o doctrina sin rodilla.",
-    clasico: "Santiago 1:22. El último eslabón no es el aplauso: es la rodilla.",
+    clasico: "Santiago 1:22. El último eslabón no es el aplauso, sino la rodilla.",
     marcos:
       "Un solo acto: lee el capítulo entero, en voz alta, y nombra delante de alguien lo que el texto ha desnudado. El domingo, que te pregunten.",
     ref: "Stg. 1:22 · Lc. 8:15 · Ro. 12:1",
@@ -135,7 +135,7 @@ export const ANATOMIA = [
 export const ESTUDIO_Y_TRATADO = {
   title: "Tres oficios, un solo tratado",
   estudio:
-    "El discípulo lee para ser desarmado. Recorre los seis eslabones con lentitud, un pasaje a la vez —eso es el estudio de la semana—. Su acto no es publicar: es obedecer. Si al cabo de un mes no ha confesado un pecado concreto, no ha leído: ha coleccionado frases. El que empieza no recorre las seis con la densidad del ensayo: oye, pregunta, un acto. Las seis esperan enteras en el aula.",
+    "El discípulo lee para ser desarmado. Recorre los seis eslabones con lentitud, un pasaje a la vez —eso es el estudio de la semana—. Su acto no es publicar, sino obedecer. Si al cabo de un mes no ha confesado un pecado concreto, no ha leído: ha coleccionado frases. El que empieza no recorre las seis con la densidad del ensayo: oye, pregunta, un acto. Las seis esperan enteras en el aula.",
   tratado:
     "El tratado —Éfata es el de este método— es el ensayo largo. El pastor lee para alimentar al rebaño sin adulterar el pienso: no predica lo que aún no ha observado, situado, desentrañado, calibrado y defendido. El maestro lee para formar a otros en el mismo oído: corregirá el salto prematuro a la aplicación y se negará a certificar como «estudio bíblico» cualquier ejercicio que omita la filología, el entorno o la doctrina. El ensayo sirve al capítulo. No lo sustituye.",
   noEs:
@@ -150,7 +150,7 @@ export const VERDAD_FALLOS = [
   },
   {
     title: "Empezar por Argumento",
-    body: "El que empieza por A para ganar una polémica no está haciendo Éfata: está haciendo teatro. El conocimiento que envanece no es el fruto de este método; es su contrahechura.",
+    body: "El que empieza por A para ganar una polémica no está haciendo Éfata, sino teatro. El conocimiento que envanece no es el fruto de este método; es su contrahechura.",
   },
   {
     title: "Saltar al laboratorio",
@@ -170,7 +170,7 @@ export const MARCO_ORACION = {
   abrir:
     "Antes de leer: «Ábreme los ojos, y miraré las maravillas de tu ley.» El suspiro precede al milagro. El mandato precede a la audición.",
   cerrar:
-    "Al terminar: «Habla, que tu siervo oye.» El último eslabón no es el aplauso: es la rodilla. Si no hay acto, aún se está en el umbral.",
+    "Al terminar: «Habla, que tu siervo oye.» El último eslabón no es el aplauso, sino la rodilla. Si no hay acto, aún se está en el umbral.",
 };
 
 export const CRISOL_COMPUERTA = {
@@ -318,7 +318,7 @@ export const CATECISMO = [
   {
     n: "49",
     q: "¿Por qué la erudición sin piedad es un peligro?",
-    a: "Los demonios conocen la gramática y tiemblan. Acumular doctrina mientras se vive en amargura no es oír: es el sordo ilustrado.",
+    a: "Los demonios conocen la gramática y tiemblan. Acumular doctrina mientras se vive en amargura no es oír, sino el sordo ilustrado.",
     ref: "Stg. 2:19 · 1 Co. 8:1",
   },
 ] as const;

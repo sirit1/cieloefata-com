@@ -21,7 +21,7 @@ export const CRISOL_PESTILLOS = [
     letter: "C",
     name: "Cotejo canónico",
     pregunta: "¿El acto que me propongo está en este párrafo, y no lo contradice el resto de la Escritura?",
-    body: "Isaías 8:20 dice: a la ley y al testimonio. Si no dijeren conforme a esto, es porque no les ha amanecido. Antes de escribir un propósito, se vuelve al versículo. Si el texto no pide ese verbo, el propósito no es obediencia: es un injerto. Génesis 3 no pide «hoy muero a la fruta». El pecado del huerto fue otro: se puso el mandato de Dios entre comillas y se negoció. El cotejo oye el verbo que está escrito, no el que el yo prefiere.",
+    body: "Isaías 8:20 dice: a la ley y al testimonio. Si no dijeren conforme a esto, es porque no les ha amanecido. Antes de escribir un propósito, se vuelve al versículo. Si el texto no pide ese verbo, el propósito no es obediencia, sino un injerto. Génesis 3 no pide «hoy muero a la fruta». El pecado del huerto fue otro: se puso el mandato de Dios entre comillas y se negoció. El cotejo oye el verbo que está escrito, no el que el yo prefiere.",
     ref: "Is. 8:20 · Gn. 3:1",
   },
   {
@@ -42,7 +42,7 @@ export const CRISOL_PESTILLOS = [
     letter: "S",
     name: "Sometimiento afectivo",
     pregunta: "¿Obedezco porque el texto manda, o porque «siento paz»?",
-    body: "Jeremías 17:9: engañoso es el corazón más que todas las cosas. La carne también siente paz cuando nadie va a incomodarla. Adán se escondió entre los árboles y llamó a eso cobijo. El escondite no es paz: es liturgia del yo. El afecto no legisla. Se somete. Primero manda el texto; después, si hay paz, es fruto, no brújula.",
+    body: "Jeremías 17:9: engañoso es el corazón más que todas las cosas. La carne también siente paz cuando nadie va a incomodarla. Adán se escondió entre los árboles y llamó a eso cobijo. El escondite no es paz, sino liturgia del yo. El afecto no legisla. Se somete. Primero manda el texto; después, si hay paz, es fruto, no brújula.",
     ref: "Jer. 17:9 · Gn. 3:8",
   },
   {
