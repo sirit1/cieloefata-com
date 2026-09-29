@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { abrirCita, partirCitas } from "@/lib/citas";
 
 function Card({ texto }: { texto: string }) {
@@ -9,8 +9,8 @@ function Card({ texto }: { texto: string }) {
   );
 }
 
-function CiteOne({ raw }: { raw: string }) {
-  const c = abrirCita(raw);
+function CiteOne({ raw, desde }: { raw: string; desde: string }) {
+  const c = abrirCita(raw, desde);
   const title = c.preview ? `${c.full}: ${c.preview}` : c.full;
   const slug = c.internal ? c.href.replace("/estudios/", "") : "";
   const name = c.preview ? `${c.raw}. ${c.preview}` : c.raw;
@@ -25,7 +25,12 @@ function CiteOne({ raw }: { raw: string }) {
   }
 
   return (
-    <a href={c.href} className="cite" aria-label={name}>
+    <a
+      href={c.href}
+      rel={/^https?:/.test(c.href) ? "noopener noreferrer" : undefined}
+      className="cite"
+      aria-label={name}
+    >
       {c.raw}
       <Card texto={title} />
     </a>
@@ -33,6 +38,8 @@ function CiteOne({ raw }: { raw: string }) {
 }
 
 export function Cite({ children }: { children: React.ReactNode }) {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const desde = pathname === "/" ? "" : pathname;
   const parts = partirCitas(String(children ?? ""));
   if (parts.length === 0) return null;
   return (
@@ -40,7 +47,7 @@ export function Cite({ children }: { children: React.ReactNode }) {
       {parts.map((raw, i) => (
         <span key={`${raw}-${i}`}>
           {i === 0 ? " " : " · "}
-          <CiteOne raw={raw} />
+          <CiteOne raw={raw} desde={desde} />
         </span>
       ))}
     </>

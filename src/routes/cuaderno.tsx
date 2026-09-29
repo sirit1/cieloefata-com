@@ -271,7 +271,7 @@ function CuadernoPage() {
         <p className="mt-6 leading-relaxed">
           El acto de {guardado} quedó escrito. El capítulo sigue abierto.
           <span className="mt-3 block">
-            <LeerCapitulo ref={guardado} />
+            <LeerCapitulo ref={guardado} desde={`/cuaderno?ref=${guardado}`} />
           </span>
         </p>
       ) : null}

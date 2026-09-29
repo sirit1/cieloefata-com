@@ -76,7 +76,7 @@ function EstudiosPage() {
               <span className="sr-only"> de {semana.title}</span>
               <BtnArrow />
             </Link>
-            <LeerCapitulo ref={semana.ref} />
+            <LeerCapitulo ref={semana.ref} desde={`/estudios/${semana.slug}`} />
           </div>
         </article>
       ) : null}

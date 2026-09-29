@@ -1,90 +1,6 @@
-import { revelatioLeer, parseRef } from "@/lib/leer";
+import { expandirCita, parseRef } from "@/lib/leer";
+import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
 import { studies } from "@/lib/studies";
-
-const ABBR: [string, string][] = [
-  ["2 Tesalonicenses", "2 Tesalonicenses"],
-  ["1 Tesalonicenses", "1 Tesalonicenses"],
-  ["2 Corintios", "2 Corintios"],
-  ["1 Corintios", "1 Corintios"],
-  ["2 Crónicas", "2 Crónicas"],
-  ["1 Crónicas", "1 Crónicas"],
-  ["2 Timoteo", "2 Timoteo"],
-  ["1 Timoteo", "1 Timoteo"],
-  ["Deuteronomio", "Deuteronomio"],
-  ["Lamentaciones", "Lamentaciones"],
-  ["Apocalipsis", "Apocalipsis"],
-  ["2 Tes.", "2 Tesalonicenses"],
-  ["1 Tes.", "1 Tesalonicenses"],
-  ["2 Co.", "2 Corintios"],
-  ["1 Co.", "1 Corintios"],
-  ["2 Cr.", "2 Crónicas"],
-  ["1 Cr.", "1 Crónicas"],
-  ["2 Ti.", "2 Timoteo"],
-  ["1 Ti.", "1 Timoteo"],
-  ["2 Ts.", "2 Tesalonicenses"],
-  ["1 Ts.", "1 Tesalonicenses"],
-  ["2 R.", "2 Reyes"],
-  ["1 R.", "1 Reyes"],
-  ["2 S.", "2 Samuel"],
-  ["1 S.", "1 Samuel"],
-  ["2 P.", "2 Pedro"],
-  ["1 P.", "1 Pedro"],
-  ["2 Jn.", "2 Juan"],
-  ["3 Jn.", "3 Juan"],
-  ["1 Jn.", "1 Juan"],
-  ["Dt.", "Deuteronomio"],
-  ["Gn.", "Génesis"],
-  ["Éx.", "Éxodo"],
-  ["Ex.", "Éxodo"],
-  ["Lv.", "Levítico"],
-  ["Nm.", "Números"],
-  ["Jos.", "Josué"],
-  ["Jue.", "Jueces"],
-  ["Rt.", "Rut"],
-  ["Esd.", "Esdras"],
-  ["Neh.", "Nehemías"],
-  ["Est.", "Ester"],
-  ["Sal.", "Salmos"],
-  ["Pr.", "Proverbios"],
-  ["Ec.", "Eclesiastés"],
-  ["Cnt.", "Cantares"],
-  ["Is.", "Isaías"],
-  ["Jer.", "Jeremías"],
-  ["Lm.", "Lamentaciones"],
-  ["Ez.", "Ezequiel"],
-  ["Dn.", "Daniel"],
-  ["Os.", "Oseas"],
-  ["Jl.", "Joel"],
-  ["Am.", "Amós"],
-  ["Abd.", "Abdías"],
-  ["Jon.", "Jonás"],
-  ["Mi.", "Miqueas"],
-  ["Nah.", "Nahúm"],
-  ["Hab.", "Habacuc"],
-  ["Sof.", "Sofonías"],
-  ["Hag.", "Hageo"],
-  ["Zac.", "Zacarías"],
-  ["Mal.", "Malaquías"],
-  ["Mt.", "Mateo"],
-  ["Mr.", "Marcos"],
-  ["Lc.", "Lucas"],
-  ["Jn.", "Juan"],
-  ["Hch.", "Hechos"],
-  ["Ro.", "Romanos"],
-  ["Gá.", "Gálatas"],
-  ["Ef.", "Efesios"],
-  ["Fil.", "Filipenses"],
-  ["Col.", "Colosenses"],
-  ["Tit.", "Tito"],
-  ["Flm.", "Filemón"],
-  ["He.", "Hebreos"],
-  ["Stg.", "Santiago"],
-  ["Jud.", "Judas"],
-  ["Ap.", "Apocalipsis"],
-  ["Job", "Job"],
-];
-
-ABBR.sort((a, b) => b[0].length - a[0].length);
 
 export type CitaAbierta = {
   raw: string;
@@ -204,13 +120,7 @@ const PREVIEW: Record<string, string> = {
 };
 
 function expandRaw(raw: string): string {
-  const t = raw.trim();
-  for (const [abbr, full] of ABBR) {
-    if (t === abbr || t.startsWith(abbr + " ") || t.startsWith(abbr)) {
-      return t.replace(abbr, full).replace(/\s+/g, " ").trim();
-    }
-  }
-  return t;
+  return expandirCita(raw);
 }
 
 function previewOf(full: string): string {
@@ -233,10 +143,10 @@ function studyHref(full: string): string | null {
   return found ? `/estudios/${found.slug}` : null;
 }
 
-export function abrirCita(raw: string): CitaAbierta {
+export function abrirCita(raw: string, desde = ""): CitaAbierta {
   const full = expandRaw(raw);
   const internal = studyHref(full);
-  const ext = revelatioLeer(full);
+  const ext = urlPuenteRevelatio({ ref: full, desde });
   return {
     raw,
     full,

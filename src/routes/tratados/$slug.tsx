@@ -42,7 +42,7 @@ function TratadoPage() {
       </p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
       <p className="mt-6">
-        <LeerCapitulo ref={tratado.ref} />
+        <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />
       </p>
       <div className="mt-10 space-y-6">
         {tratado.cuerpo.map((p) => (
@@ -52,7 +52,7 @@ function TratadoPage() {
         ))}
       </div>
       <Refs refs="2 P. 3:16 · Neh. 8:8" />
-      <CierreAula pasaje={tratado.ref} slug={tratado.slug} acto={tratado.cuerpo.at(-1)} />
+      <CierreAula pasaje={tratado.ref} slug={tratado.slug} acto={tratado.cuerpo.at(-1)} desde={`/tratados/${tratado.slug}`} />
     </Aula>
   );
 }
