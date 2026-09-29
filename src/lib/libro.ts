@@ -1,4 +1,5 @@
-import { parseRef, revelatioLeer } from "./leer.ts";
+import { parseRef } from "./leer.ts";
+import { urlPuenteRevelatio } from "./puente-revelatio.ts";
 
 const ALIAS_LIBRO: Record<string, string> = {
   salmo: "salmos",
@@ -29,11 +30,11 @@ export function mismoLibro(ref: string, libro: string): boolean {
   return Boolean(a && (a === alias || a === b));
 }
 
-export function revelatioDeLibro(libro: string, ref?: string): string | null {
+export function revelatioDeLibro(libro: string, ref?: string, desde = "/canon"): string | null {
   if (ref) {
-    const directo = revelatioLeer(ref);
+    const directo = urlPuenteRevelatio({ ref, desde });
     if (directo) return directo;
   }
   const cap = ref?.match(/(\d+)/)?.[1] ?? "1";
-  return revelatioLeer(`${libro} ${cap}`);
+  return urlPuenteRevelatio({ ref: `${libro} ${cap}`, desde });
 }

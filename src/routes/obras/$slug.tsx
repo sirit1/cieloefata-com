@@ -136,7 +136,7 @@ export function ObraPage() {
             <BtnArrow />
           </Link>
         ) : null}
-        <LeerCapitulo ref={obra.pasaje} />
+        <LeerCapitulo ref={obra.pasaje} desde={`/obras/${obra.slug}`} companeros={[study?.ref, tratado?.ref]} />
         {obra.crisol ? (
           <Link to="/crisol" className="btn btn-ghost">
             C.R.I.S.O.L.™

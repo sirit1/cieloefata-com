@@ -119,7 +119,7 @@ export function SlotsSemanaMes() {
             <span className="sr-only"> el estudio de {study?.title}</span>
             <BtnArrow />
           </Link>
-          {study ? <LeerCapitulo ref={study.ref} /> : null}
+          {study ? <LeerCapitulo ref={study.ref} desde={`/estudios/${study.slug}`} /> : null}
         </div>
         {proxima && studyNext ? (
           <p className="mt-6 text-sm leading-relaxed text-ink-soft/80">

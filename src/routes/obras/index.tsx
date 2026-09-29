@@ -82,7 +82,7 @@ function TomoCard({
       }
     >
       {destacado ? (
-        <p className="font-serif text-lg italic text-gold">El primer tomo · long seller</p>
+        <p className="font-serif text-lg italic text-gold">El primer tomo de la serie</p>
       ) : null}
       <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-start">
         <Link
@@ -139,7 +139,7 @@ function TomoCard({
                 Tratado
               </Link>
             ) : null}
-            <LeerCapitulo ref={obra.pasaje} />
+            <LeerCapitulo ref={obra.pasaje} desde={`/obras/${obra.slug}`} companeros={[study?.ref, tratado?.ref]} />
           </div>
         </div>
       </div>

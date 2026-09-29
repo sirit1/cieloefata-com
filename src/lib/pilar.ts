@@ -1,3 +1,5 @@
+import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
+
 /** Cómo se recorre esta casa: no es un almanaque. */
 export const OFICIO = {
   gate: "Esta casa es escuela, no almanaque. RevelatiO abre el capítulo entero; aquí se recorre la clase de la semana, el tratado del mes, seis géneros en el yunque y un acto escrito. El método no se recita como talismán: se usa, de rodillas, hasta que el oído ceda.",
@@ -141,7 +143,7 @@ export const DOS_CASAS = {
   ],
   refs: "Neh. 8:8 · 2 Ti. 3:16 · Hch. 17:11",
   appHref: "https://revelatio.app",
-  leerHref: "https://revelatio.app/leer?libro=marcos&cap=1&casa=1",
+  leerHref: urlPuenteRevelatio({ ref: "Marcos 1", desde: "/estudios/marcos-1" })!,
   leerLabel: "Leer en la web",
   instalarLabel: "Instalar la app",
 };

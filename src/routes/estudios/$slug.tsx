@@ -121,7 +121,7 @@ function StudyPage() {
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
       <Verso texto={study.passage} voz={study.voz} />
       <p className="mt-6">
-        <LeerCapitulo ref={study.ref} />
+        <LeerCapitulo ref={study.ref} desde={`/estudios/${study.slug}`} />
       </p>
       <p className="mt-4 font-sans text-sm">
         <Link to="/metodo" className="text-link underline">
@@ -225,7 +225,7 @@ function StudyPage() {
       <p className="mt-12 border-t border-rule pt-8 text-ink-soft italic">
         <ConLemas>{study.conclusion}</ConLemas>
       </p>
-      <CierreAula pasaje={study.ref} slug={study.slug} acto={study.decision} />
+      <CierreAula pasaje={study.ref} slug={study.slug} acto={study.decision} desde={`/estudios/${study.slug}`} />
     </Aula>
   );
 }

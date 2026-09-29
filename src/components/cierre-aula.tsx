@@ -8,10 +8,12 @@ export function CierreAula({
   pasaje,
   slug,
   acto,
+  desde,
 }: {
   pasaje: string;
   slug?: string;
   acto?: string;
+  desde?: string;
 }) {
   const sig = slug ? siguienteEstudio(slug) : undefined;
   const ejemplo = actoDe(slug);
@@ -57,7 +59,7 @@ export function CierreAula({
         <Link to="/cuaderno" search={{ ref: pasaje }} className="btn btn-gold">
           Escribir el acto de {pasaje}
         </Link>
-        <LeerCapitulo ref={pasaje} />
+        <LeerCapitulo ref={pasaje} desde={desde} />
       </div>
       {sig ? (
         <p className="mt-6 leading-relaxed text-ink-soft">
