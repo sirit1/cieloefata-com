@@ -76,6 +76,52 @@ export const MESES: MesEditorial[] = [
   },
 ];
 
+/** Día en que el inventario Drive declaró los packs reales (catalogo.ts). */
+export const FECHA_PACKS = "2026-09-23";
+/** Última revisión de la prosa de aulas y tratados. */
+export const FECHA_PROSA = "2026-09-24";
+
+export type FechasArticulo = { published: string; modified: string };
+
+function cerrar(published: string): FechasArticulo {
+  const modified = FECHA_PROSA > published ? FECHA_PROSA : published;
+  return { published, modified };
+}
+
+/**
+ * Alta de un aula o tratado que ya tiene pack.
+ * Si el calendario abrió el estudio antes del inventario, manda ese lunes.
+ * El mes editorial no adelanta ni retrasa la existencia del pack.
+ */
+export function fechasDePack(slug: string, clase: "estudio" | "tratado"): FechasArticulo {
+  if (clase === "estudio") {
+    const semana = SEMANAS.find((s) => s.studySlug === slug);
+    if (semana && semana.desde < FECHA_PACKS) return cerrar(semana.desde);
+  }
+  return cerrar(FECHA_PACKS);
+}
+
+export function fechaLegible(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("es", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+export function lineaFechas(f: FechasArticulo): string {
+  const pub = `Publicado el ${fechaLegible(f.published)}`;
+  if (f.modified === f.published) return `${pub}.`;
+  return `${pub}. Revisado el ${fechaLegible(f.modified)}.`;
+}
+
+/** ISO 8601 en el huso de la casa (America/Caracas, UTC−4, sin horario de verano). */
+export function isoCaracas(yyyyMmDd: string): string {
+  return `${yyyyMmDd}T00:00:00-04:00`;
+}
+
 export function fechaCasa(d = new Date()): string {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: CASA_TZ,

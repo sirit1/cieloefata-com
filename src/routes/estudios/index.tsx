@@ -5,39 +5,41 @@ import { BtnArrow, Motif } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { estudioSemanaSlug } from "@/lib/calendario";
-import { estudioTienePack } from "@/lib/catalogo";
-import {
-  etiquetaEstudio,
-  estudiosProximos,
-  estudiosPublicados,
-  studyBySlug,
-  type Study,
-} from "@/lib/studies";
+import { ESTUDIOS_DRIVE, estudioTienePack } from "@/lib/catalogo";
+import { decisionAula } from "@/lib/decisiones-aula";
+import { ESTUDIOS_INDICE, indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
+import { etiquetaEstudio } from "@/lib/etiquetas";
 import { LABORATORIOS } from "@/lib/verdad";
 
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/estudios/")({
   component: EstudiosPage,
   head: () =>
     pageHead({
       path: "/estudios",
-      title: "Estudios · Cielo Efata",
+      title: tituloSeccion("Estudios"),
       description:
         "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Trece packs reales en Drive.",
+      detalle:
+        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. El catálogo publicado es el de Drive: trece packs reales. Las clases que la web listaba sin manuscrito —Marcos 1, Juan 3, Hechos 2, Juan 1, Romanos 3 y las demás— quedan marcadas como próximamente. No se inventa un PDF que no existe.",
     }),
 });
 
 function EstudiosPage() {
-  const semana = studyBySlug(estudioSemanaSlug());
-  const publicados = estudiosPublicados();
+  const slugSemana = estudioSemanaSlug();
+  const semana = indiceEstudio(slugSemana);
+  const decision = decisionAula(slugSemana);
+  const publicados = ESTUDIOS_DRIVE.map((slug) => indiceEstudio(slug)).filter(
+    (s): s is IndiceEstudio => Boolean(s),
+  );
   const labs = LABORATORIOS.map((lab) => ({
     lab,
-    study: studyBySlug(lab.slug),
+    study: indiceEstudio(lab.slug),
     pack: estudioTienePack(lab.slug),
   }));
-  const proximos = estudiosProximos().filter(
-    (s) => !LABORATORIOS.some((lab) => lab.slug === s.slug),
+  const proximos = ESTUDIOS_INDICE.filter(
+    (s) => !estudioTienePack(s.slug) && !LABORATORIOS.some((lab) => lab.slug === s.slug),
   );
 
   return (
@@ -64,7 +66,7 @@ function EstudiosPage() {
           <p className="font-serif text-lg italic text-gold">El estudio de esta semana</p>
           <h2 className="mt-2 font-serif text-3xl">{semana.title}</h2>
           <p className="mt-1 text-gold">{semana.ref}</p>
-          <p className="mt-4 leading-relaxed">{semana.decision}</p>
+          {decision ? <p className="mt-4 leading-relaxed">{decision}</p> : null}
           <SeguirActo />
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -135,7 +137,7 @@ function Lista({
   proximo = false,
 }: {
   titulo: string;
-  items: Study[];
+  items: IndiceEstudio[];
   proximo?: boolean;
 }) {
   if (items.length === 0) return null;

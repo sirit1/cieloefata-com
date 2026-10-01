@@ -1,6 +1,13 @@
 import { AMAZON_AUTHOR } from "@/lib/amazon";
 import { obras, tapaPath } from "@/lib/content";
-import { SITE_NAME, SITE_ORIGIN, canonicalUrl } from "@/lib/seo";
+import {
+  PERSONA_AUTOR,
+  SITE_NAME,
+  SITE_ORIGIN,
+  amazonDeObra,
+  canonicalUrl,
+} from "@/lib/seo";
+import { isoCaracas } from "@/lib/calendario";
 
 function JsonLdScript({ data }: { data: unknown }) {
   return (
@@ -11,50 +18,76 @@ function JsonLdScript({ data }: { data: unknown }) {
   );
 }
 
-export function OrganizationJsonLd() {
+/** Solo en la portada: una persona y un sitio. No se repite en el resto de páginas. */
+export function HomeJsonLd() {
   return (
-    <JsonLdScript
-      data={{
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        name: "Editorial Cielo Efata",
-        alternateName: SITE_NAME,
-        url: `${SITE_ORIGIN}/`,
-        founder: {
+    <>
+      <JsonLdScript
+        data={{
+          "@context": "https://schema.org",
           "@type": "Person",
-          name: "Dr. Alejandro Sirit",
-          url: AMAZON_AUTHOR,
-        },
-        sameAs: [AMAZON_AUTHOR],
-        description:
-          "Escuela de estudio bíblico. La Escritura manda sobre el comentario. RevelatiO es el lector compañero en revelatio.app.",
-      }}
-    />
+          name: "Alejandro Sirit",
+          url: PERSONA_AUTOR.url,
+          sameAs: [AMAZON_AUTHOR],
+        }}
+      />
+      <JsonLdScript
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: SITE_NAME,
+          url: `${SITE_ORIGIN}/`,
+          inLanguage: "es",
+        }}
+      />
+    </>
   );
 }
 
 export function BookJsonLd({ slug }: { slug: string }) {
   const obra = obras.find((o) => o.slug === slug);
   if (!obra) return null;
-  const identifier = obra.isbnPrint
-    ? { "@type": "PropertyValue", propertyID: "ISBN", value: obra.isbnPrint }
-    : obra.asinEbook
-      ? { "@type": "PropertyValue", propertyID: "ASIN", value: obra.asinEbook }
-      : undefined;
+  const sameAs = amazonDeObra(obra);
   return (
     <JsonLdScript
       data={{
         "@context": "https://schema.org",
         "@type": "Book",
         name: obra.title,
-        author: { "@type": "Person", name: "Dr. Alejandro Sirit" },
-        publisher: { "@type": "Organization", name: "Editorial Cielo Efata" },
-        url: canonicalUrl(`/obras/${obra.slug}`),
-        image: canonicalUrl(tapaPath(obra.slug)),
-        description: obra.line,
+        author: PERSONA_AUTOR,
         inLanguage: "es",
-        ...(identifier ? { identifier } : {}),
-        ...(obra.isbnPrint ? { isbn: obra.isbnPrint } : {}),
+        image: canonicalUrl(tapaPath(obra.slug)),
+        url: canonicalUrl(`/obras/${obra.slug}`),
+        ...(sameAs ? { sameAs } : {}),
+      }}
+    />
+  );
+}
+
+export function ArticleJsonLd({
+  headline,
+  path,
+  published,
+  modified,
+}: {
+  headline: string;
+  path: string;
+  published?: string;
+  modified?: string;
+}) {
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline,
+        ...(published ? { datePublished: isoCaracas(published) } : {}),
+        ...(modified ? { dateModified: isoCaracas(modified) } : {}),
+        author: { "@type": "Person", name: "Alejandro Sirit", url: PERSONA_AUTOR.url },
+        publisher: { "@type": "Organization", name: SITE_NAME },
+        url: canonicalUrl(path),
+        mainEntityOfPage: canonicalUrl(path),
+        inLanguage: "es",
       }}
     />
   );
@@ -77,7 +110,7 @@ export function CorpusJsonLd() {
             "@type": "Book",
             name: obra.title,
             image: canonicalUrl(tapaPath(obra.slug)),
-            author: { "@type": "Person", name: "Dr. Alejandro Sirit" },
+            author: { "@type": "Person", name: "Alejandro Sirit" },
           },
         })),
       }}

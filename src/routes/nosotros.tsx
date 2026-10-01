@@ -4,14 +4,14 @@ import { BtnArrow } from "@/components/motif";
 import { Seal } from "@/components/seal";
 import { Volver } from "@/components/volver";
 import { NOSOTROS } from "@/lib/nosotros";
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/nosotros")({
   component: NosotrosPage,
   head: () =>
     pageHead({
       path: "/nosotros",
-      title: "Nosotros · Cielo Efata",
+      title: tituloSeccion("Nosotros"),
       description:
         "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. RevelatiO es el lector compañero en revelatio.app. WhatsApp +58 424 167 4909.",
     }),

@@ -4,13 +4,19 @@ import { CierreAula } from "@/components/cierre-aula";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
-import { textoParaOir } from "@/lib/escuela";
-import { pageHead } from "@/lib/seo";
-import { tratadoDe } from "@/lib/tratados";
+import { ArticleJsonLd } from "@/components/json-ld";
+import { fechasDePack, lineaFechas } from "@/lib/calendario";
+import { tratadoTienePack } from "@/lib/catalogo";
+import { pageHead, tituloTratado } from "@/lib/seo";
+
+function textoParaOir(parts: string[]) {
+  return parts.filter(Boolean).join("\n\n");
+}
 
 export const Route = createFileRoute("/tratados/$slug")({
   component: TratadoPage,
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    const { tratadoDe } = await import("@/lib/tratados");
     const t = tratadoDe(params.slug);
     if (!t) throw notFound();
     return { tratado: t };
@@ -18,13 +24,15 @@ export const Route = createFileRoute("/tratados/$slug")({
   head: ({ loaderData }) =>
     pageHead({
       path: `/tratados/${loaderData?.tratado.slug ?? ""}`,
-      title: `${loaderData?.tratado.title ?? "Tratado"} · Cielo Efata`,
+      title: tituloTratado(loaderData?.tratado.title ?? "Tratado"),
       description: loaderData?.tratado.blurb,
+      detalle: loaderData?.tratado.cuerpo[0],
     }),
 });
 
 function TratadoPage() {
   const { tratado } = Route.useLoaderData();
+  const fechas = tratadoTienePack(tratado.slug) ? fechasDePack(tratado.slug, "tratado") : null;
   const oir = textoParaOir([tratado.title, tratado.ref, ...tratado.cuerpo]);
 
   return (
@@ -36,10 +44,17 @@ function TratadoPage() {
       pasaje={tratado.ref}
       slug={tratado.slug}
     >
+      <ArticleJsonLd
+        headline={tituloTratado(tratado.title)}
+        path={`/tratados/${tratado.slug}`}
+        published={fechas?.published}
+        modified={fechas?.modified}
+      />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
         {tratado.pack ? "Tratado" : "Próximamente"}
         {tratado.n !== "—" ? ` · ${tratado.n}` : ""} · {tratado.kicker} · {tratado.ref}
       </p>
+      {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
       <p className="mt-6">
         <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />

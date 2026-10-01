@@ -1,5 +1,4 @@
 import { tratadoMesSlug } from "@/lib/calendario";
-import { tratadoTienePack } from "@/lib/catalogo";
 
 export type Tratado = {
   slug: string;
@@ -286,11 +285,7 @@ export function tratadoDe(slug: string) {
   return tratados.find((t) => t.slug === slug);
 }
 
-export function etiquetaTratado(slug: string) {
-  if (slug === tratadoMesSlug()) return "Tratado · este mes";
-  if (tratadoTienePack(slug)) return "Tratado";
-  return "Próximamente";
-}
+export { etiquetaTratado } from "@/lib/etiquetas";
 
 export function tratadoDelMes() {
   return tratados.find((t) => t.slug === tratadoMesSlug()) ?? tratados.find((t) => t.pack);

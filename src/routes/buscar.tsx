@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { Volver } from "@/components/volver";
 import { buscarCasa, type Hallazgo } from "@/lib/descubrimiento";
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/buscar")({
   validateSearch: (raw: Record<string, unknown>): { q?: string } => {
@@ -12,9 +12,11 @@ export const Route = createFileRoute("/buscar")({
   head: () =>
     pageHead({
       path: "/buscar",
-      title: "Buscar · Cielo Efata",
+      title: tituloSeccion("Buscar"),
       description:
         "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.",
+      detalle:
+        "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda.",
     }),
   component: BuscarPage,
 });

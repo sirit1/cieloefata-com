@@ -1,15 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Volver } from "@/components/volver";
 import { OBJECIONES, OBJECIONES_INTRO } from "@/lib/objeciones";
-import { pageHead } from "@/lib/seo";
-import { tratadoDe } from "@/lib/tratados";
+import { pageHead, tituloSeccion } from "@/lib/seo";
+import { indiceTratado } from "@/lib/tratados-indice";
 
 export const Route = createFileRoute("/objeciones")({
   component: ObjecionesPage,
   head: () =>
     pageHead({
       path: "/objeciones",
-      title: "Objeciones · Cielo Efata",
+      title: tituloSeccion("Objeciones"),
       description:
         "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa.",
     }),
@@ -24,7 +24,7 @@ function ObjecionesPage() {
       <p className="mt-6 text-lg leading-relaxed">{OBJECIONES_INTRO}</p>
       <ul className="mt-12 divide-y divide-rule border-y border-rule">
         {OBJECIONES.map((item) => {
-          const tratado = tratadoDe(item.tratadoSlug);
+          const tratado = indiceTratado(item.tratadoSlug);
           return (
             <li key={item.tratadoSlug} id={item.tratadoSlug} className="scroll-mt-24 py-6">
               <p className="font-sans text-sm tracking-wide text-gold">{item.verse}</p>

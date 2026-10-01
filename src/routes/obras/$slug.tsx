@@ -9,9 +9,9 @@ import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
 import { obraBySlug, obras, obraVecina, ROMANO, tapaPath } from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
-import { pageHead } from "@/lib/seo";
-import { studyBySlug } from "@/lib/studies";
-import { tratadoDe } from "@/lib/tratados";
+import { pageHead, tituloObra } from "@/lib/seo";
+import { indiceEstudio } from "@/lib/estudios-indice";
+import { indiceTratado } from "@/lib/tratados-indice";
 
 export const Route = createFileRoute("/obras/$slug")({
   component: ObraPage,
@@ -24,8 +24,9 @@ export const Route = createFileRoute("/obras/$slug")({
     const obra = loaderData?.obra;
     return pageHead({
       path: `/obras/${obra?.slug ?? ""}`,
-      title: obra ? `${obra.title} · Cielo Efata` : "Obra · Cielo Efata",
+      title: obra ? tituloObra(obra.title) : tituloObra("Obra"),
       description: obra?.line,
+      detalle: obra?.thesis,
       image: obra ? tapaPath(obra.slug) : undefined,
     });
   },
@@ -33,8 +34,8 @@ export const Route = createFileRoute("/obras/$slug")({
 
 export function ObraPage() {
   const { obra } = Route.useLoaderData();
-  const study = obra.studySlug ? studyBySlug(obra.studySlug) : undefined;
-  const tratado = obra.tratadoSlug ? tratadoDe(obra.tratadoSlug) : undefined;
+  const study = obra.studySlug ? indiceEstudio(obra.studySlug) : undefined;
+  const tratado = obra.tratadoSlug ? indiceTratado(obra.tratadoSlug) : undefined;
   const { prev, next } = obraVecina(obra.lectura);
   const lecturaDe = obras.length;
   const muestra = primerasPaginas(obra);

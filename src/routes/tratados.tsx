@@ -3,31 +3,32 @@ import { Refs } from "@/components/cite";
 import { BtnArrow, Motif } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
-import {
-  etiquetaTratado,
-  tratadoDelMes,
-  tratadosProximos,
-  tratadosPublicados,
-  type Tratado,
-} from "@/lib/tratados";
+import { tratadoMesSlug } from "@/lib/calendario";
+import { etiquetaTratado } from "@/lib/etiquetas";
+import { indiceTratado, TRATADOS_INDICE, type IndiceTratado } from "@/lib/tratados-indice";
 
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/tratados")({
   component: TratadosPage,
-  head: () =>
-    pageHead({
+  head: ({ matches }) => {
+    const leaf = matches.at(-1)?.pathname;
+    if (leaf !== "/tratados") return {};
+    return pageHead({
       path: "/tratados",
-      title: "Tratados · Cielo Efata",
+      title: tituloSeccion("Tratados"),
       description:
         "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
-    }),
+      detalle:
+        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene, hasta que la jactancia se calle o el Siervo cargue lo que se había llamado herida. El catálogo que sigue es el de Drive: catorce packs reales —el umbral V.E.R.D.A.D., el crisol de lo oído y los doce numerados—, no una vitrina de ensayos sin manuscrito.",
+    });
+  },
 });
 
 function TratadosPage() {
-  const mes = tratadoDelMes();
-  const publicados = tratadosPublicados();
-  const proximos = tratadosProximos();
+  const mes = indiceTratado(tratadoMesSlug()) ?? TRATADOS_INDICE.find((t) => t.pack);
+  const publicados = TRATADOS_INDICE.filter((t) => t.pack);
+  const proximos = TRATADOS_INDICE.filter((t) => !t.pack);
 
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
@@ -83,7 +84,7 @@ function Lista({
   proximo = false,
 }: {
   titulo: string;
-  items: Tratado[];
+  items: IndiceTratado[];
   proximo?: boolean;
 }) {
   if (items.length === 0) return null;

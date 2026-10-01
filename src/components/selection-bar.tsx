@@ -68,7 +68,15 @@ export function SelectionBar() {
         type="button"
         className="inline-flex min-h-11 items-center gap-2 px-3 font-sans text-xs tracking-wide text-ink"
         onClick={() => {
-          addMarca(document.title.replace(" · Cielo Efata", ""), sel.text);
+          addMarca(
+            document.title
+              .replace(/ — libro de Alejandro Sirit \| Cielo Efata$/, "")
+              .replace(/ — Estudio bíblico \| Cielo Efata$/, "")
+              .replace(/ — Tratado \| Cielo Efata$/, "")
+              .replace(/ \| Cielo Efata$/, "")
+              .replace(" · Cielo Efata", ""),
+            sel.text,
+          );
           setOk(true);
           setSel(null);
         }}

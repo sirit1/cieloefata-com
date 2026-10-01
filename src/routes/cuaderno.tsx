@@ -19,8 +19,8 @@ import { Motif } from "@/components/motif";
 import { semanaVigente } from "@/lib/calendario";
 import { CUADERNO_VACIO } from "@/lib/copy-nivel";
 import { PRIMERA_VEZ } from "@/lib/pilar";
-import { pageHead } from "@/lib/seo";
-import { studyBySlug } from "@/lib/studies";
+import { pageHead, tituloSeccion } from "@/lib/seo";
+import { fichaEstudio } from "@/lib/fichas-portada";
 import { MANUAL_CAMPO } from "@/lib/verdad";
 
 export const Route = createFileRoute("/cuaderno")({
@@ -31,9 +31,10 @@ export const Route = createFileRoute("/cuaderno")({
   head: () =>
     pageHead({
       path: "/cuaderno",
-      title: "Cuaderno · Cielo Efata",
+      title: tituloSeccion("Cuaderno"),
       description:
         "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.",
+      detalle: CUADERNO_VACIO,
     }),
   component: CuadernoPage,
 });
@@ -119,7 +120,7 @@ function CuadernoPage() {
   }
 
   const semana = semanaVigente();
-  const study = studyBySlug(semana.studySlug);
+  const ficha = fichaEstudio(semana.studySlug);
   const actoSemana = actoDe(semana.studySlug);
   const vacio = items.length === 0;
   const persistencia = userId
@@ -163,9 +164,9 @@ function CuadernoPage() {
         <aside className="mt-8 border border-rule bg-paper px-5 py-6">
           <p className="font-serif text-xl">Aún no hay un paso escrito</p>
           <p className="mt-3 leading-relaxed">{CUADERNO_VACIO}</p>
-          {actoSemana && study ? (
+          {actoSemana && ficha ? (
             <p className="mt-4 leading-relaxed text-ink-soft">
-              El acto de esta semana, {study.ref}: {actoSemana.escrito}
+              El acto de esta semana, {ficha.ref}: {actoSemana.escrito}
             </p>
           ) : null}
           {pendiente ? (
@@ -189,11 +190,11 @@ function CuadernoPage() {
             >
               Abrir Éfata
             </Link>
-            {study ? (
+            {ficha ? (
               <button
                 type="button"
                 className="btn btn-ghost"
-                onClick={() => setPassage(study.ref)}
+                onClick={() => setPassage(ficha.ref)}
               >
                 Usar el pasaje de esta semana
               </button>

@@ -15,7 +15,7 @@ import {
   type CuadernoEntry,
 } from "@/lib/cuaderno-store";
 import { actoDe } from "@/lib/actos";
-import { studyBySlug } from "@/lib/studies";
+import { fichaEstudio } from "@/lib/fichas-portada";
 
 function fechaCorta(iso: string) {
   try {
@@ -47,7 +47,7 @@ export function Retomar({
   }, [userId]);
 
   const semana = semanaVigente();
-  const study = studyBySlug(semana.studySlug);
+  const ficha = fichaEstudio(semana.studySlug);
   const acto = actoDe(semana.studySlug);
 
   if (!pendiente && !borrador && !ultimo && !acto) return null;
@@ -138,21 +138,21 @@ export function Retomar({
             </Link>
           </li>
         ) : null}
-        {acto && study ? (
+        {acto && ficha ? (
           <li>
             <p className="font-sans text-xs tracking-[0.16em] text-gold uppercase">
               Decisión de esta semana
             </p>
             <p className="mt-1 leading-relaxed">
-              {study.ref} · {study.title}. {acto.escrito}
+              {ficha.ref} · {ficha.title}. {acto.escrito}
             </p>
             <Link
               to="/cuaderno"
-              search={{ ref: study.ref }}
+              search={{ ref: ficha.ref }}
               className="btn btn-ghost mt-3"
-              onClick={() => onContinuar?.({ ref: study.ref })}
+              onClick={() => onContinuar?.({ ref: ficha.ref })}
             >
-              {retomarEnlace(study.ref)}
+              {retomarEnlace(ficha.ref)}
             </Link>
           </li>
         ) : null}

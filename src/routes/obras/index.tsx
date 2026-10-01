@@ -8,18 +8,19 @@ import { BtnArrow } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
 import { CORPUS, obras, ROMANO, tapaPath, type Obra } from "@/lib/content";
-import { pageHead } from "@/lib/seo";
-import { studyBySlug } from "@/lib/studies";
-import { tratadoDe } from "@/lib/tratados";
+import { pageHead, tituloSeccion } from "@/lib/seo";
+import { indiceEstudio } from "@/lib/estudios-indice";
+import { indiceTratado } from "@/lib/tratados-indice";
 
 export const Route = createFileRoute("/obras/")({
   component: ObrasPage,
   head: () =>
     pageHead({
       path: "/obras",
-      title: "Siete tomos · Cielo Efata",
+      title: tituloSeccion("Siete tomos"),
       description:
         "Orden de lectura de los siete tomos del Dr. Alejandro Sirit. Éfata abre; El Siervo, no tú sigue. Editorial Cielo Efata.",
+      detalle: CORPUS.gate,
       image: tapaPath("efata"),
     }),
 });
@@ -69,8 +70,8 @@ function TomoCard({
   obra: Obra;
   destacado?: boolean;
 }) {
-  const study = obra.studySlug ? studyBySlug(obra.studySlug) : undefined;
-  const tratado = obra.tratadoSlug ? tratadoDe(obra.tratadoSlug) : undefined;
+  const study = obra.studySlug ? indiceEstudio(obra.studySlug) : undefined;
+  const tratado = obra.tratadoSlug ? indiceTratado(obra.tratadoSlug) : undefined;
 
   return (
     <article

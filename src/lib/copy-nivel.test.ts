@@ -22,8 +22,8 @@ import {
 describe("COPY PACK NIVEL+", () => {
   it("guarda el marco del calendario sin recortar las glosas", () => {
     assert.match(MARCO_RITMO, /ritmo de ministerio/);
-    assert.match(MARCO_HOY, /Filipenses 2/);
-    assert.match(MARCO_HOY, /Isaías 53/);
+    assert.match(MARCO_HOY, /2 Pedro 1/);
+    assert.match(MARCO_HOY, /El texto manda/);
     assert.match(GLOSA_ESTA_SEMANA, /V\.E\.R\.D\.A\.D/);
     assert.match(GLOSA_TRATADO_MES, /versículo que viajaba solo/);
   });
@@ -51,7 +51,8 @@ describe("COPY PACK NIVEL+", () => {
     );
     assert.equal(retomarEnlace("Filipenses 2"), "Retomar el acto · Seguir Filipenses 2");
     assert.match(CUADERNO_VACIO, /Aún no hay un paso escrito/);
-    assert.match(CUADERNO_VACIO, /Filipenses 2/);
+    assert.match(CUADERNO_VACIO, /Marcos 7/);
+    assert.match(CUADERNO_VACIO, /acto de esa aula/);
   });
 
   it("guarda las tres oraciones de Canon y el prefill de Éfata", () => {

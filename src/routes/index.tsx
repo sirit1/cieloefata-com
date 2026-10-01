@@ -7,9 +7,11 @@ import { ConLemas } from "@/components/lema";
 import { Motif } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { SlotsSemanaMes, UmbralTresCaminos } from "@/components/umbral";
+import { PuertaRegreso } from "@/components/seguir-acto";
 import { canonDoors, CORPUS, obras, ROMANO } from "@/lib/content";
 import { SELLO } from "@/lib/identidad";
 import { ESCRITURA, PERSONAS_PUERTA, TESTIGO, TRINIDAD } from "@/lib/pilar";
+import { HomeJsonLd } from "@/components/json-ld";
 import { pageHead, SITE_TITLE } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -26,6 +28,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <main className="pb-24">
+      <HomeJsonLd />
       <section className="scroll-mt-24 px-4 py-20 md:py-28">
         <div className="mx-auto max-w-5xl">
           <div className="max-w-[40em]">
@@ -38,6 +41,7 @@ function Home() {
           <p className="lema-romance">{SELLO.romance}</p>
           <h1 className="mt-10 font-serif text-4xl leading-tight md:text-5xl">{ESCRITURA.title}</h1>
           <p className="mt-5 font-serif text-xl italic text-ink-soft">{ESCRITURA.motto}</p>
+          <PuertaRegreso />
           <p className="mt-8 text-lg">
             <ConLemas>{ESCRITURA.gate}</ConLemas>
           </p>

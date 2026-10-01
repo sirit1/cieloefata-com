@@ -3,14 +3,14 @@ import { Refs } from "@/components/cite";
 import { BtnArrow } from "@/components/motif";
 import { Volver } from "@/components/volver";
 import { CAMINO, CAMINO_INTRO } from "@/lib/camino";
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/camino")({
   component: CaminoPage,
   head: () =>
     pageHead({
       path: "/camino",
-      title: "El camino · Cielo Efata",
+      title: tituloSeccion("El camino"),
       description:
         "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe. Cada etapa oye un pasaje ya escrito en la escuela.",
     }),

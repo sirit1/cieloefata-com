@@ -9,24 +9,40 @@ import { LabYunque } from "@/components/lab-yunque";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { PasosNav, pasoId } from "@/components/pasos-nav";
 import { RedCanon } from "@/components/red-canon";
-import { laboratorioDe, profundoDe, textoParaOir, type LabExtra } from "@/lib/escuela";
-import { pageHead } from "@/lib/seo";
-import { etiquetaEstudio, studyBySlug } from "@/lib/studies";
+import type { LabExtra } from "@/lib/escuela";
+import { ArticleJsonLd } from "@/components/json-ld";
+import { fechasDePack, lineaFechas } from "@/lib/calendario";
+import { estudioTienePack } from "@/lib/catalogo";
+import { etiquetaEstudio } from "@/lib/etiquetas";
+import { pageHead, tituloEstudio } from "@/lib/seo";
 import { VERDAD_PASOS } from "@/lib/verdad";
 import { vocesDe } from "@/lib/voces";
 
+function textoParaOir(parts: string[]) {
+  return parts.filter(Boolean).join("\n\n");
+}
+
 export const Route = createFileRoute("/estudios/$slug")({
   component: StudyPage,
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
+    const [{ studyBySlug }, { profundoDe, laboratorioDe }] = await Promise.all([
+      import("@/lib/studies"),
+      import("@/lib/escuela"),
+    ]);
     const study = studyBySlug(params.slug);
     if (!study) throw notFound();
-    return { study };
+    return {
+      study,
+      profundo: profundoDe(study.slug) ?? null,
+      lab: laboratorioDe(study.slug) ?? null,
+    };
   },
   head: ({ loaderData }) =>
     pageHead({
       path: `/estudios/${loaderData?.study.slug ?? ""}`,
-      title: `${loaderData?.study.title ?? "Estudio"} · Cielo Efata`,
-      description: loaderData?.study.ref,
+      title: tituloEstudio(loaderData?.study.ref ?? "Estudio"),
+      description: loaderData ? `${loaderData.study.ref}. ${loaderData.study.ver}` : undefined,
+      detalle: loaderData?.study.passage,
     }),
 });
 
@@ -70,10 +86,9 @@ function LabCasillas({ lab }: { lab: LabExtra }) {
 }
 
 function StudyPage() {
-  const { study } = Route.useLoaderData();
+  const { study, profundo: p, lab } = Route.useLoaderData();
   const voces = vocesDe(study.slug);
-  const p = profundoDe(study.slug);
-  const lab = laboratorioDe(study.slug);
+  const fechas = estudioTienePack(study.slug) ? fechasDePack(study.slug, "estudio") : null;
   const oir = textoParaOir([
     study.title,
     study.ref,
@@ -109,9 +124,16 @@ function StudyPage() {
       pasaje={study.ref}
       slug={study.slug}
     >
+      <ArticleJsonLd
+        headline={tituloEstudio(study.ref)}
+        path={`/estudios/${study.slug}`}
+        published={fechas?.published}
+        modified={fechas?.modified}
+      />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
         Aula · {etiquetaEstudio(study.slug)} · {study.ref}
       </p>
+      {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       {etiquetaEstudio(study.slug).includes("Próximamente") ? (
         <p className="mt-4 leading-relaxed text-ink-soft">
           Esta clase se puede leer como ficha de aula. No tiene pack en Drive: no se presenta

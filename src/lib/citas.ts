@@ -1,6 +1,6 @@
 import { expandirCita, parseRef } from "@/lib/leer";
 import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
-import { studies } from "@/lib/studies";
+import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
 
 export type CitaAbierta = {
   raw: string;
@@ -136,7 +136,7 @@ function previewOf(full: string): string {
 function studyHref(full: string): string | null {
   const p = parseRef(full);
   if (!p) return null;
-  const found = studies.find((s) => {
+  const found = ESTUDIOS_INDICE.find((s) => {
     const sp = parseRef(s.ref);
     return sp && sp.slug === p.slug && sp.cap === p.cap;
   });

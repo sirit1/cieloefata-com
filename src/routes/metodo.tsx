@@ -18,14 +18,14 @@ import {
   VERDAD_PASOS,
 } from "@/lib/verdad";
 
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/metodo")({
   component: MetodoPage,
   head: () =>
     pageHead({
       path: "/metodo",
-      title: "Cómo leer · Cielo Efata",
+      title: tituloSeccion("Cómo leer"),
       description:
         "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás.",
     }),

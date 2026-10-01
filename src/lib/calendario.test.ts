@@ -5,6 +5,9 @@ import {
   TRATADO_MES_SLUG,
   etiquetaRango,
   fechaCasa,
+  fechaLegible,
+  fechasDePack,
+  lineaFechas,
   mesProximo,
   mesVigente,
   nombreMes,
@@ -33,6 +36,23 @@ describe("calendario editorial", () => {
     assert.equal(mesVigente(d).tratadoSlug, TRATADO_MES_SLUG);
     assert.equal(mesProximo(d)?.tratadoSlug, "el-texto-manda");
     assert.match(nombreMes("2026-09"), /septiembre/i);
+  });
+
+  it("fecha el aula con el lunes del calendario o con el inventario, sin adelantar el mes", () => {
+    assert.deepEqual(fechasDePack("marcos-7", "estudio"), {
+      published: "2026-09-15",
+      modified: "2026-09-24",
+    });
+    assert.deepEqual(fechasDePack("filipenses-2", "estudio"), {
+      published: "2026-09-22",
+      modified: "2026-09-24",
+    });
+    assert.equal(fechasDePack("2-pedro-1", "estudio").published, "2026-09-23");
+    assert.equal(fechasDePack("isaias-53", "tratado").published, "2026-09-23");
+    assert.equal(fechasDePack("el-texto-manda", "tratado").published, "2026-09-23");
+    assert.match(fechaLegible("2026-09-15"), /15 de septiembre de 2026/);
+    assert.match(lineaFechas(fechasDePack("marcos-7", "estudio")), /Publicado el 15 de septiembre de 2026/);
+    assert.match(lineaFechas(fechasDePack("marcos-7", "estudio")), /Revisado el 24 de septiembre de 2026/);
   });
 
   it("formatea la fecha de casa en YYYY-MM-DD", () => {

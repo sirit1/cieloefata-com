@@ -1,0 +1,71 @@
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import { CORPUS } from "./content.ts";
+import { CRISOL_ORIGEN } from "./crisol.ts";
+import { CUADERNO_VACIO } from "./copy-nivel.ts";
+import { SELLO } from "./identidad.ts";
+import { ESCRITURA } from "./pilar.ts";
+import { obras } from "./content.ts";
+import { studies } from "./studies.ts";
+import { tratados } from "./tratados.ts";
+import {
+  SITE_TITLE,
+  amazonDeObra,
+  metaDescription,
+  tituloEstudio,
+  tituloObra,
+  tituloSeccion,
+  tituloTratado,
+} from "./seo.ts";
+
+const secciones: Array<[string, string, string, string?]> = [
+  ["/", SITE_TITLE, "Escuela de lectura de la Escritura. RevelatiO abre el capítulo. Aquí se estudia: el método, el estudio de la semana y el tratado del mes."],
+  ["/canon", tituloSeccion("Canon"), "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.", ESCRITURA.body[0]],
+  ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
+  ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Trece packs reales en Drive.", "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. El catálogo publicado es el de Drive: trece packs reales. Las clases que la web listaba sin manuscrito —Marcos 1, Juan 3, Hechos 2, Juan 1, Romanos 3 y las demás— quedan marcadas como próximamente. No se inventa un PDF que no existe."],
+  ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene, hasta que la jactancia se calle o el Siervo cargue lo que se había llamado herida. El catálogo que sigue es el de Drive: catorce packs reales —el umbral V.E.R.D.A.D., el crisol de lo oído y los doce numerados—, no una vitrina de ensayos sin manuscrito."],
+  ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos del Dr. Alejandro Sirit. Éfata abre; El Siervo, no tú sigue. Editorial Cielo Efata.", CORPUS.gate],
+  ["/sello", tituloSeccion("El sello"), "Post tenebras lux. El sello no es un logotipo, sino una confesión.", SELLO.gate],
+  ["/palabra", tituloSeccion("Palabra"), "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.", "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong."],
+  ["/cuaderno", tituloSeccion("Cuaderno"), "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.", CUADERNO_VACIO],
+  ["/crisol", tituloSeccion("C.R.I.S.O.L.™"), "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.", `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`],
+  ["/guias", tituloSeccion("Guías"), "Strong, cómo se lee, del pasaje a la palabra dicha, y la pregunta difícil. El capítulo sigue siendo el señor de la casa."],
+  ["/sostener", tituloSeccion("Sostener"), "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909."],
+  ["/buscar", tituloSeccion("Buscar"), "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.", "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda."],
+  ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe. Cada etapa oye un pasaje ya escrito en la escuela."],
+  ["/nosotros", tituloSeccion("Nosotros"), "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. RevelatiO es el lector compañero en revelatio.app. WhatsApp +58 424 167 4909."],
+  ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa."],
+];
+
+test("títulos únicos y descripciones de 120 a 160", () => {
+  const titles = new Map<string, string>();
+  const fails: string[] = [];
+  function note(label: string, title: string, desc: string) {
+    const prev = titles.get(title);
+    if (prev) fails.push(`título repetido «${title}» en ${prev} y ${label}`);
+    titles.set(title, label);
+    if (desc.length < 120 || desc.length > 160 || !/[.!?]$/.test(desc)) {
+      fails.push(`${label} ${desc.length}: ${desc}`);
+    }
+  }
+  for (const [path, title, raw, detalle] of secciones) note(path, title, metaDescription(raw, detalle ?? ""));
+  for (const obra of obras) {
+    note(`/obras/${obra.slug}`, tituloObra(obra.title), metaDescription(obra.line, obra.thesis));
+  }
+  for (const study of studies) {
+    note(
+      `/estudios/${study.slug}`,
+      tituloEstudio(study.ref),
+      metaDescription(`${study.ref}. ${study.ver}`, study.passage),
+    );
+  }
+  for (const t of tratados) {
+    note(`/tratados/${t.slug}`, tituloTratado(t.title), metaDescription(t.blurb, t.cuerpo[0] ?? ""));
+  }
+  assert.deepEqual(fails, []);
+});
+
+test("Bástate no tiene ficha de Amazon", () => {
+  const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
+  assert.deepEqual(sin, ["bastate-mi-gracia"]);
+});

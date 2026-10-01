@@ -72,7 +72,6 @@ export const bible = {
   closeRef: "Jos. 1:8 · Sal. 1:2",
 };
 
-export { tratados as essays } from "@/lib/tratados";
 
 export const canonDoors = [
   {

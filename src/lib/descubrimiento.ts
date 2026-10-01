@@ -1,16 +1,16 @@
 import { OBJECIONES } from "@/lib/objeciones";
 import { mismoLibro, pliegue, revelatioDeLibro } from "@/lib/libro";
-import { studies } from "@/lib/studies";
-import { tratados } from "@/lib/tratados";
+import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
+import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 
 export { revelatioDeLibro, mismoLibro, nombreLibro, pliegue } from "@/lib/libro";
 
 export function estudiosDeLibro(libro: string) {
-  return studies.filter((s) => mismoLibro(s.ref, libro));
+  return ESTUDIOS_INDICE.filter((s) => mismoLibro(s.ref, libro));
 }
 
 export function tratadosDeLibro(libro: string) {
-  return tratados.filter((t) => mismoLibro(t.ref, libro));
+  return TRATADOS_INDICE.filter((t) => mismoLibro(t.ref, libro));
 }
 
 export type Hallazgo = {
@@ -23,15 +23,15 @@ export type Hallazgo = {
 };
 
 export function indiceBusqueda(): Hallazgo[] {
-  const estudios: Hallazgo[] = studies.map((s) => ({
+  const estudios: Hallazgo[] = ESTUDIOS_INDICE.map((s) => ({
     kind: "estudio",
     slug: s.slug,
     title: s.title,
     ref: s.ref,
-    blurb: s.ver.slice(0, 220),
+    blurb: s.busca,
     href: `/estudios/${s.slug}`,
   }));
-  const ensay: Hallazgo[] = tratados.map((t) => ({
+  const ensay: Hallazgo[] = TRATADOS_INDICE.map((t) => ({
     kind: "tratado",
     slug: t.slug,
     title: t.title,

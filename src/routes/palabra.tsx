@@ -2,16 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lema } from "@/components/lema";
 import { wordOfDay } from "@/lib/content";
 
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/palabra")({
   component: PalabraPage,
   head: () =>
     pageHead({
       path: "/palabra",
-      title: "Palabra · Cielo Efata",
+      title: tituloSeccion("Palabra"),
       description:
         "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.",
+      detalle:
+        "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong.",
     }),
 });
 

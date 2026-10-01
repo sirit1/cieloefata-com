@@ -2,7 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { Cite } from "@/components/cite";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { actoDe } from "@/lib/actos";
-import { siguienteEstudio } from "@/lib/studies";
+import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
+import { indiceEstudio } from "@/lib/estudios-indice";
 
 export function CierreAula({
   pasaje,
@@ -15,7 +16,9 @@ export function CierreAula({
   acto?: string;
   desde?: string;
 }) {
-  const sig = slug ? siguienteEstudio(slug) : undefined;
+  const lista = ESTUDIOS_DRIVE as readonly string[];
+  const i = slug ? lista.indexOf(slug) : -1;
+  const sig = i >= 0 && i < lista.length - 1 ? indiceEstudio(lista[i + 1]) : undefined;
   const ejemplo = actoDe(slug);
 
   return (

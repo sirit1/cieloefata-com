@@ -166,7 +166,12 @@ export default defineConfig(({ command, isPreview }) => ({
     // PWA head + ?install=1 tutorial page; runs before Start/Nitro.
     grokPwaPlugin(),
     tailwindcss(),
-    tanstackStart(),
+    tanstackStart({
+      router: {
+        // El árbol de rutas no arrastra el cuerpo de las aulas al primer JavaScript.
+        autoCodeSplitting: true,
+      },
+    }),
     ...(command === "build" || isPreview
       ? [
           nitro({

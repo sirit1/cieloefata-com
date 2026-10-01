@@ -6,17 +6,18 @@ import { bible, canonDoors } from "@/lib/content";
 import { fichasPorEstante } from "@/lib/canon-fichas";
 import { semanaVigente } from "@/lib/calendario";
 import { ESCRITURA, PERSONAS, TESTIGO, TRINIDAD } from "@/lib/pilar";
-import { pageHead } from "@/lib/seo";
-import { studyBySlug } from "@/lib/studies";
+import { pageHead, tituloSeccion } from "@/lib/seo";
+import { fichaEstudio } from "@/lib/fichas-portada";
 
 export const Route = createFileRoute("/canon")({
   component: CanonPage,
   head: () =>
     pageHead({
       path: "/canon",
-      title: "Canon · Cielo Efata",
+      title: tituloSeccion("Canon"),
       description:
         "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.",
+      detalle: ESCRITURA.body[0],
     }),
 });
 
@@ -97,7 +98,7 @@ function CanonPage() {
         params={{ slug: semanaVigente().studySlug }}
         className="mt-12 inline-block font-sans text-sm text-link underline"
       >
-        {studyBySlug(semanaVigente().studySlug)?.ref ?? "El pasaje de esta semana"}
+        {fichaEstudio(semanaVigente().studySlug)?.ref ?? "El pasaje de esta semana"}
       </Link>
     </main>
   );

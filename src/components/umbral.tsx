@@ -21,12 +21,11 @@ import {
   MARCO_RITMO,
 } from "@/lib/copy-nivel";
 import { DOS_CASAS, PRIMERA_VEZ } from "@/lib/pilar";
-import { studyBySlug } from "@/lib/studies";
-import { tratadoDe } from "@/lib/tratados";
+import { fichaEstudio, fichaTratado } from "@/lib/fichas-portada";
 
 export function UmbralTresCaminos() {
   const semana = semanaVigente();
-  const study = studyBySlug(semana.studySlug);
+  const study = fichaEstudio(semana.studySlug);
   const puerta =
     semana.puerta ??
     `Entra al aula de ${study?.title ?? "esta semana"}, y sal con un solo acto escrito.`;
@@ -83,13 +82,13 @@ export function UmbralTresCaminos() {
 
 export function SlotsSemanaMes() {
   const semana = semanaVigente();
-  const study = studyBySlug(semana.studySlug);
+  const study = fichaEstudio(semana.studySlug);
   const proxima = semanaProxima();
-  const studyNext = proxima ? studyBySlug(proxima.studySlug) : undefined;
+  const studyNext = proxima ? fichaEstudio(proxima.studySlug) : undefined;
   const mes = mesVigente();
-  const tratado = tratadoDe(mes.tratadoSlug);
+  const tratado = fichaTratado(mes.tratadoSlug);
   const mesNext = mesProximo();
-  const tratadoNext = mesNext ? tratadoDe(mesNext.tratadoSlug) : undefined;
+  const tratadoNext = mesNext ? fichaTratado(mesNext.tratadoSlug) : undefined;
 
   return (
     <section className="mt-16" aria-label="Calendario editorial">
@@ -106,7 +105,7 @@ export function SlotsSemanaMes() {
         </p>
         <h2 className="mt-3 font-serif text-3xl">{study?.title ?? "El aula"}</h2>
         <p className="mt-1 text-gold">{study?.ref}</p>
-        <p className="mt-5 flex-1 leading-relaxed">{semana.impacto ?? study?.ver}</p>
+        <p className="mt-5 flex-1 leading-relaxed">{semana.impacto}</p>
         {study?.ref ? (
           <p className="mt-4 font-sans text-sm tracking-wide text-gold">
             <Cite>{study.ref}</Cite>
@@ -119,7 +118,7 @@ export function SlotsSemanaMes() {
             <span className="sr-only"> el estudio de {study?.title}</span>
             <BtnArrow />
           </Link>
-          {study ? <LeerCapitulo ref={study.ref} desde={`/estudios/${study.slug}`} /> : null}
+          {study ? <LeerCapitulo ref={study.ref} desde={`/estudios/${semana.studySlug}`} /> : null}
         </div>
         {proxima && studyNext ? (
           <p className="mt-6 text-sm leading-relaxed text-ink-soft/80">
@@ -137,11 +136,11 @@ export function SlotsSemanaMes() {
           </p>
           <h2 className="mt-3 font-serif text-3xl">{tratado.title}</h2>
           <p className="mt-1 text-gold">{tratado.ref}</p>
-          <p className="mt-5 flex-1 leading-relaxed">{mes.impacto ?? tratado.blurb}</p>
+          <p className="mt-5 flex-1 leading-relaxed">{mes.impacto}</p>
           <div className="mt-8 flex w-fit flex-col gap-3 sm:flex-row">
             <Link
               to="/tratados/$slug"
-              params={{ slug: tratado.slug }}
+              params={{ slug: mes.tratadoSlug }}
               className="btn btn-ink"
             >
               Escudriñar

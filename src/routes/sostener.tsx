@@ -3,14 +3,14 @@ import { Cite } from "@/components/cite";
 import { BtnArrow } from "@/components/motif";
 import { Volver } from "@/components/volver";
 import { OFRENDA } from "@/lib/ofrenda";
-import { pageHead } from "@/lib/seo";
+import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/sostener")({
   component: SostenerPage,
   head: () =>
     pageHead({
       path: "/sostener",
-      title: "Sostener · Cielo Efata",
+      title: tituloSeccion("Sostener"),
       description:
         "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909.",
     }),
