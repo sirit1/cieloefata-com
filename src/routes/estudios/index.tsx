@@ -8,8 +8,9 @@ import { estudioSemanaSlug } from "@/lib/calendario";
 import { ESTUDIOS_DRIVE, estudioTienePack } from "@/lib/catalogo";
 import { decisionAula } from "@/lib/decisiones-aula";
 import { ESTUDIOS_INDICE, indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
-import { etiquetaEstudio } from "@/lib/etiquetas";
+import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
 import { LABORATORIOS } from "@/lib/verdad";
+import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
@@ -22,7 +23,7 @@ export const Route = createFileRoute("/estudios/")({
       description:
         "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí; RevelatiO abre el capítulo.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. Estudios bíblicos son los trece con manuscrito. Al lado, los estudios sueltos se leen en la misma escuela, sin un PDF inventado.",
+        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. Estudios junta las dos carpetas, con los sueltos al lado: TRATADOS es el ensayo y Estudios bíblicos es la clase.",
     }),
 });
 
@@ -30,6 +31,7 @@ function EstudiosPage() {
   const slugSemana = estudioSemanaSlug();
   const semana = indiceEstudio(slugSemana);
   const decision = decisionAula(slugSemana);
+  const tratados = TRATADOS_INDICE.filter((t) => t.pack);
   const publicados = ESTUDIOS_DRIVE.map((slug) => indiceEstudio(slug)).filter(
     (s): s is IndiceEstudio => Boolean(s),
   );
@@ -49,8 +51,8 @@ function EstudiosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno,
         Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda
-        preguntar mañana. Estudios bíblicos son los trece con manuscrito. Al lado, los estudios
-        sueltos se leen en la misma escuela, sin un PDF inventado.
+        preguntar mañana. Estudios junta las dos carpetas, con los sueltos al lado. TRATADOS es
+        el ensayo. Estudios bíblicos es la clase.
       </p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
       <p className="mt-4 font-sans text-sm">
@@ -81,7 +83,37 @@ function EstudiosPage() {
         </article>
       ) : null}
 
+      <section className="mt-14">
+        <h2 className="font-serif text-3xl">TRATADOS</h2>
+        <p className="mt-4 leading-relaxed text-ink-soft">
+          El ensayo con manuscrito. La serie del mapa, del trece al cincuenta, sigue en{" "}
+          <Link to="/tratados" className="text-link underline">
+            Tratados
+          </Link>
+          .
+        </p>
+        <ul className="mt-8 divide-y divide-rule border-y border-rule">
+          {tratados.map((t) => (
+            <li key={t.slug}>
+              <Link
+                to="/tratados/$slug"
+                params={{ slug: t.slug }}
+                className="block py-5 hover:text-gold"
+              >
+                <span className="flex min-w-0 flex-col gap-1">
+                  <span className="font-sans text-sm text-gold">
+                    {etiquetaTratado(t.slug)} · {t.ref}
+                  </span>
+                  <span className="font-serif text-2xl">{t.title}</span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <Lista titulo="Estudios bíblicos" items={publicados} />
+      <Lista titulo="Estudios sueltos" items={proximos} sinPack />
 
       <section className="mt-14">
         <h2 className="font-serif text-3xl">Seis laboratorios, seis géneros</h2>
@@ -119,11 +151,6 @@ function EstudiosPage() {
           ))}
         </ul>
       </section>
-
-      <Lista titulo="Estudios sueltos" items={proximos} sinPack />
-      <Link to="/tratados" className="mt-10 inline-block font-sans text-sm text-link underline">
-        Escudriñar el tratado
-      </Link>
     </main>
   );
 }
@@ -143,8 +170,8 @@ function Lista({
       <h2 className="font-serif text-3xl">{titulo}</h2>
       {sinPack ? (
         <p className="mt-4 leading-relaxed text-ink-soft">
-          Están al lado de Estudios bíblicos, en la misma escuela. No tienen carpeta de pack: no se
-          pide un PDF que no existe.
+          Quedan al lado de TRATADOS y de Estudios bíblicos. No tienen manuscrito: no se pide un PDF
+          que no existe.
         </p>
       ) : null}
       <ul className="mt-8 divide-y divide-rule border-y border-rule">

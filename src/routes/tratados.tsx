@@ -20,7 +20,7 @@ export const Route = createFileRoute("/tratados")({
       description:
         "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
       detalle:
-        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. TRATADOS guarda catorce manuscritos. La serie del mapa sigue hasta cincuenta, sin un PDF fingido.",
+        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. TRATADOS está dentro de Estudios, al lado de Estudios bíblicos. Catorce tienen manuscrito. La serie del mapa sigue hasta cincuenta, sin un PDF fingido.",
     });
   },
 });
@@ -45,8 +45,8 @@ function TratadosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un
         versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo
-        sostiene. TRATADOS guarda catorce manuscritos. La serie del mapa sigue hasta cincuenta,
-        sin un PDF fingido.
+        sostiene. TRATADOS está dentro de Estudios, al lado de Estudios bíblicos. Catorce tienen
+        manuscrito. La serie del mapa sigue hasta cincuenta, sin un PDF fingido.
       </p>
       <Refs refs="Neh. 8:8 · 2 P. 3:16" />
 
