@@ -94,18 +94,38 @@ export const PERSONA_AUTOR = {
   url: AUTHOR_URL,
 };
 
+export function camposLibro(obra: {
+  title: string;
+  slug: string;
+  isbnPrint?: string;
+  asinEbook?: string;
+}) {
+  const sameAs = amazonDeObra(obra);
+  return {
+    name: obra.title,
+    author: PERSONA_AUTOR,
+    inLanguage: "es" as const,
+    url: canonicalUrl(`/obras/${obra.slug}`),
+    ...(obra.isbnPrint ? { isbn: obra.isbnPrint } : {}),
+    ...(sameAs ? { sameAs } : {}),
+  };
+}
+
 export function pageHead({
   path,
   title,
   description,
   detalle,
   image,
+  index = true,
 }: {
   path: string;
   title?: string;
   description?: string;
   detalle?: string;
   image?: string;
+  /** false: la ficha se puede leer, pero no entra en el índice. */
+  index?: boolean;
 }) {
   const url = canonicalUrl(path);
   const imageUrl = image
@@ -118,6 +138,7 @@ export function pageHead({
     meta: [
       ...(title ? [{ title }] : []),
       ...(desc ? [{ name: "description" as const, content: desc }] : []),
+      ...(!index ? [{ name: "robots" as const, content: "noindex" }] : []),
       { property: "og:url", content: url },
       { property: "og:site_name", content: SITE_NAME },
       ...(imageUrl

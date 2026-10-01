@@ -4,7 +4,7 @@ import {
   PERSONA_AUTOR,
   SITE_NAME,
   SITE_ORIGIN,
-  amazonDeObra,
+  camposLibro,
   canonicalUrl,
 } from "@/lib/seo";
 import { isoCaracas } from "@/lib/calendario";
@@ -47,18 +47,13 @@ export function HomeJsonLd() {
 export function BookJsonLd({ slug }: { slug: string }) {
   const obra = obras.find((o) => o.slug === slug);
   if (!obra) return null;
-  const sameAs = amazonDeObra(obra);
   return (
     <JsonLdScript
       data={{
         "@context": "https://schema.org",
         "@type": "Book",
-        name: obra.title,
-        author: PERSONA_AUTOR,
-        inLanguage: "es",
+        ...camposLibro(obra),
         image: canonicalUrl(tapaPath(obra.slug)),
-        url: canonicalUrl(`/obras/${obra.slug}`),
-        ...(sameAs ? { sameAs } : {}),
       }}
     />
   );

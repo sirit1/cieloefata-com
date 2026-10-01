@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { CORPUS } from "./content.ts";
 import { CRISOL_ORIGEN } from "./crisol.ts";
@@ -8,10 +9,15 @@ import { ESCRITURA } from "./pilar.ts";
 import { obras } from "./content.ts";
 import { studies } from "./studies.ts";
 import { tratados } from "./tratados.ts";
+import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack, tratadoTienePack } from "./catalogo.ts";
+import { fechasDePack } from "./calendario.ts";
 import {
+  SITE_ORIGIN,
   SITE_TITLE,
   amazonDeObra,
+  camposLibro,
   metaDescription,
+  pageHead,
   tituloEstudio,
   tituloObra,
   tituloSeccion,
@@ -68,4 +74,90 @@ test("títulos únicos y descripciones de 120 a 160", () => {
 test("Bástate no tiene ficha de Amazon", () => {
   const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
   assert.deepEqual(sin, ["bastate-mi-gracia"]);
+});
+
+test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
+  const conIsbn = obras.filter((o) => o.isbnPrint).map((o) => [o.slug, camposLibro(o).isbn]);
+  assert.deepEqual(conIsbn, [
+    ["cuando-el-cielo-se-cae", "9798176466690"],
+    ["el-altar-del-espejo", "9798176414967"],
+    ["callar-para-ganar", "9798253959213"],
+  ]);
+  const basta = camposLibro(obras.find((o) => o.slug === "bastate-mi-gracia")!);
+  assert.equal("isbn" in basta, false);
+  assert.equal("sameAs" in basta, false);
+  const efata = camposLibro(obras.find((o) => o.slug === "efata")!);
+  assert.equal("isbn" in efata, false);
+  assert.equal(efata.sameAs, "https://www.amazon.com/dp/B0HJ15ZXL3");
+  const callar = camposLibro(obras.find((o) => o.slug === "callar-para-ganar")!);
+  assert.equal(callar.isbn, "9798253959213");
+  assert.equal(callar.sameAs, "https://www.amazon.com/dp/B0GPF3NHQT");
+  assert.equal(callar.isbn?.startsWith("B"), false);
+});
+
+function robotsDe(head: ReturnType<typeof pageHead>) {
+  const tag = head.meta.find((m) => "name" in m && m.name === "robots");
+  return tag && "content" in tag ? tag.content : undefined;
+}
+
+test("sin pack la ficha no se indexa y conserva su canónico", () => {
+  const cerrada = pageHead({ path: "/estudios/romanos-1", index: false });
+  assert.equal(robotsDe(cerrada), "noindex");
+  assert.equal(cerrada.links[0]?.href, `${SITE_ORIGIN}/estudios/romanos-1`);
+  const abierta = pageHead({ path: "/estudios/marcos-7" });
+  assert.equal(robotsDe(abierta), undefined);
+  assert.equal(abierta.links[0]?.href, `${SITE_ORIGIN}/estudios/marcos-7`);
+});
+
+test("el sitemap lista los packs y calla las fichas sin manuscrito", () => {
+  const xml = readFileSync(new URL("../../public/sitemap.xml", import.meta.url), "utf8");
+  const bloques = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => {
+    const cuerpo = m[1] ?? "";
+    return {
+      loc: cuerpo.match(/<loc>([^<]+)<\/loc>/)?.[1] ?? "",
+      lastmod: cuerpo.match(/<lastmod>([^<]+)<\/lastmod>/)?.[1],
+    };
+  });
+  const locs = new Set(bloques.map((b) => b.loc));
+
+  for (const slug of ESTUDIOS_DRIVE) {
+    const loc = `${SITE_ORIGIN}/estudios/${slug}`;
+    const bloque = bloques.find((b) => b.loc === loc);
+    assert.ok(bloque, loc);
+    assert.equal(bloque.lastmod, fechasDePack(slug, "estudio").modified);
+  }
+  for (const slug of TRATADOS_DRIVE) {
+    const loc = `${SITE_ORIGIN}/tratados/${slug}`;
+    const bloque = bloques.find((b) => b.loc === loc);
+    assert.ok(bloque, loc);
+    assert.equal(bloque.lastmod, fechasDePack(slug, "tratado").modified);
+  }
+  for (const obra of obras) {
+    const loc = `${SITE_ORIGIN}/obras/${obra.slug}`;
+    const bloque = bloques.find((b) => b.loc === loc);
+    assert.ok(bloque, loc);
+    assert.equal(bloque.lastmod, undefined);
+  }
+
+  const estudios = bloques.filter((b) => /\/estudios\/[^/]+$/.test(b.loc));
+  const tratadosEnMapa = bloques.filter((b) => /\/tratados\/[^/]+$/.test(b.loc));
+  assert.equal(estudios.length, ESTUDIOS_DRIVE.length);
+  assert.equal(tratadosEnMapa.length, TRATADOS_DRIVE.length);
+
+  for (const study of studies) {
+    const loc = `${SITE_ORIGIN}/estudios/${study.slug}`;
+    assert.equal(locs.has(loc), estudioTienePack(study.slug), loc);
+  }
+  for (const t of tratados) {
+    const loc = `${SITE_ORIGIN}/tratados/${t.slug}`;
+    assert.equal(locs.has(loc), tratadoTienePack(t.slug), loc);
+  }
+
+  assert.equal(locs.has(`${SITE_ORIGIN}/estudios/isaias-53`), false);
+  assert.equal(locs.has(`${SITE_ORIGIN}/tratados/isaias-53`), true);
+  assert.equal(locs.has(`${SITE_ORIGIN}/`), true);
+  assert.equal(
+    bloques.filter((b) => b.lastmod).length,
+    ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length,
+  );
 });

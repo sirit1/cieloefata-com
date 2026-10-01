@@ -37,13 +37,16 @@ export const Route = createFileRoute("/estudios/$slug")({
       lab: laboratorioDe(study.slug) ?? null,
     };
   },
-  head: ({ loaderData }) =>
-    pageHead({
-      path: `/estudios/${loaderData?.study.slug ?? ""}`,
-      title: tituloEstudio(loaderData?.study.ref ?? "Estudio"),
-      description: loaderData ? `${loaderData.study.ref}. ${loaderData.study.ver}` : undefined,
-      detalle: loaderData?.study.passage,
-    }),
+  head: ({ loaderData }) => {
+    const study = loaderData?.study;
+    return pageHead({
+      path: `/estudios/${study?.slug ?? ""}`,
+      title: tituloEstudio(study?.ref ?? "Estudio"),
+      description: study ? `${study.ref}. ${study.ver}` : undefined,
+      detalle: study?.passage,
+      index: !study || estudioTienePack(study.slug),
+    });
+  },
 });
 
 const KEYS = ["ver", "entorno", "revelacion", "doctrina", "argumento", "decision"] as const;

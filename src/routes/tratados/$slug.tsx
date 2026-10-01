@@ -21,13 +21,16 @@ export const Route = createFileRoute("/tratados/$slug")({
     if (!t) throw notFound();
     return { tratado: t };
   },
-  head: ({ loaderData }) =>
-    pageHead({
-      path: `/tratados/${loaderData?.tratado.slug ?? ""}`,
-      title: tituloTratado(loaderData?.tratado.title ?? "Tratado"),
-      description: loaderData?.tratado.blurb,
-      detalle: loaderData?.tratado.cuerpo[0],
-    }),
+  head: ({ loaderData }) => {
+    const tratado = loaderData?.tratado;
+    return pageHead({
+      path: `/tratados/${tratado?.slug ?? ""}`,
+      title: tituloTratado(tratado?.title ?? "Tratado"),
+      description: tratado?.blurb,
+      detalle: tratado?.cuerpo[0],
+      index: !tratado || tratadoTienePack(tratado.slug),
+    });
+  },
 });
 
 function TratadoPage() {
