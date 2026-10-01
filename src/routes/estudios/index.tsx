@@ -5,9 +5,9 @@ import { BtnArrow, Motif } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { estudioSemanaSlug } from "@/lib/calendario";
-import { ESTUDIOS_DRIVE, estudioTienePack } from "@/lib/catalogo";
+import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
 import { decisionAula } from "@/lib/decisiones-aula";
-import { ESTUDIOS_INDICE, indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
+import { indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
 import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
 import { LABORATORIOS } from "@/lib/verdad";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/estudios/")({
       description:
         "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí; RevelatiO abre el capítulo.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. Estudios junta las dos carpetas, con los sueltos al lado: TRATADOS es el ensayo y Estudios bíblicos es la clase.",
+        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. La escuela publica lo que Drive ya cerró: trece estudios con manuscrito y catorce tratados con portada.",
     }),
 });
 
@@ -31,17 +31,14 @@ function EstudiosPage() {
   const slugSemana = estudioSemanaSlug();
   const semana = indiceEstudio(slugSemana);
   const decision = decisionAula(slugSemana);
-  const tratados = TRATADOS_INDICE.filter((t) => t.pack);
   const publicados = ESTUDIOS_DRIVE.map((slug) => indiceEstudio(slug)).filter(
     (s): s is IndiceEstudio => Boolean(s),
   );
+  const tratados = TRATADOS_INDICE;
   const labs = LABORATORIOS.map((lab) => ({
     lab,
     study: indiceEstudio(lab.slug),
   }));
-  const proximos = ESTUDIOS_INDICE.filter(
-    (s) => !estudioTienePack(s.slug) && !LABORATORIOS.some((lab) => lab.slug === s.slug),
-  );
 
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
@@ -51,8 +48,8 @@ function EstudiosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno,
         Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda
-        preguntar mañana. Estudios junta las dos carpetas, con los sueltos al lado. TRATADOS es
-        el ensayo. Estudios bíblicos es la clase.
+        preguntar mañana. La escuela publica lo que Drive ya cerró: trece estudios con
+        manuscrito y catorce tratados con portada.
       </p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
       <p className="mt-4 font-sans text-sm">
@@ -86,11 +83,7 @@ function EstudiosPage() {
       <section className="mt-14">
         <h2 className="font-serif text-3xl">TRATADOS</h2>
         <p className="mt-4 leading-relaxed text-ink-soft">
-          El ensayo con manuscrito. La serie del mapa, del trece al cincuenta, sigue en{" "}
-          <Link to="/tratados" className="text-link underline">
-            Tratados
-          </Link>
-          .
+          Los catorce con manuscrito, PDF y portada.
         </p>
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
           {tratados.map((t) => (
@@ -113,7 +106,6 @@ function EstudiosPage() {
       </section>
 
       <Lista titulo="Estudios bíblicos" items={publicados} />
-      <Lista titulo="Estudios sueltos" items={proximos} sinPack />
 
       <section className="mt-14">
         <h2 className="font-serif text-3xl">Seis laboratorios, seis géneros</h2>
@@ -155,25 +147,11 @@ function EstudiosPage() {
   );
 }
 
-function Lista({
-  titulo,
-  items,
-  sinPack = false,
-}: {
-  titulo: string;
-  items: IndiceEstudio[];
-  sinPack?: boolean;
-}) {
+function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
   if (items.length === 0) return null;
   return (
     <section className="mt-14">
       <h2 className="font-serif text-3xl">{titulo}</h2>
-      {sinPack ? (
-        <p className="mt-4 leading-relaxed text-ink-soft">
-          Quedan al lado de TRATADOS y de Estudios bíblicos. No tienen manuscrito: no se pide un PDF
-          que no existe.
-        </p>
-      ) : null}
       <ul className="mt-8 divide-y divide-rule border-y border-rule">
         {items.map((s) => (
           <li key={s.slug}>

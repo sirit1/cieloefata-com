@@ -1,5 +1,4 @@
 /** Índice de tratados: número, título, cita y tesis. El cuerpo se carga al abrir el tratado. */
-import { SERIE_FICHAS } from "@/lib/serie-50";
 export type IndiceTratado = {
   slug: string;
   n: string;
@@ -122,30 +121,6 @@ export const TRATADOS_INDICE: IndiceTratado[] = [
     "blurb": "«Todo lo que atéis en la tierra» no es una fórmula de guerra espiritual ni un hechizo de dos o tres. Jesús habla a la iglesia que corrige al hermano, y el atar y desatar es disciplina y perdón, no un decreto contra el aire.",
     "pack": true
   },
-  {
-    "slug": "juan-1",
-    "n": "—",
-    "title": "El Verbo se hizo carne",
-    "ref": "Juan 1:1–18",
-    "blurb": "El prólogo de Juan no es un poema para abrir el libro ni un villancico de diciembre, sino la tesis del Evangelio. Ahora bien, esa tesis no viaja en consignas sueltas. Dice que el Verbo era Dios, que fue hecho carne, que los suyos no le recibieron, que plantó tabernáculo entre nosotros y que el Unigénito declara al Padre. Por tanto, quien cita «el Verbo se hizo carne» sin Juan 1:1–18 aún no ha oído el tratado: ha oído un lema.",
-    "pack": false
-  },
-  {
-    "slug": "romanos-3",
-    "n": "—",
-    "title": "Justicia de Dios, sin la ley",
-    "ref": "Romanos 3:21–26",
-    "blurb": "Toda boca se cerró. Entonces —pero ahora— se manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica al que cree. El «aparte» no despide a Moisés: lo pone a testificar.",
-    "pack": false
-  },
-  ...SERIE_FICHAS.map((f) => ({
-    slug: f.slug,
-    n: f.n,
-    title: f.title,
-    ref: f.ref,
-    blurb: f.blurb,
-    pack: false,
-  })),
 ];
 
 export function indiceTratado(slug: string) {

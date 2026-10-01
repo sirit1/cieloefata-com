@@ -20,7 +20,7 @@ export const Route = createFileRoute("/tratados")({
       description:
         "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
       detalle:
-        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. TRATADOS está dentro de Estudios, al lado de Estudios bíblicos. Catorce tienen manuscrito. La serie del mapa sigue hasta cincuenta, sin un PDF fingido.",
+        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. Entran los catorce que ya tienen manuscrito, PDF y portada. Lo que no tiene carpeta no se finge.",
     });
   },
 });
@@ -28,14 +28,6 @@ export const Route = createFileRoute("/tratados")({
 function TratadosPage() {
   const mes = indiceTratado(tratadoMesSlug()) ?? TRATADOS_INDICE.find((t) => t.pack);
   const publicados = TRATADOS_INDICE.filter((t) => t.pack);
-  const serie = TRATADOS_INDICE.filter((t) => !t.pack).sort((a, b) => {
-    const na = Number(a.n);
-    const nb = Number(b.n);
-    if (Number.isFinite(na) && Number.isFinite(nb)) return na - nb;
-    if (Number.isFinite(na)) return -1;
-    if (Number.isFinite(nb)) return 1;
-    return 0;
-  });
 
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
@@ -45,8 +37,8 @@ function TratadosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un
         versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo
-        sostiene. TRATADOS está dentro de Estudios, al lado de Estudios bíblicos. Catorce tienen
-        manuscrito. La serie del mapa sigue hasta cincuenta, sin un PDF fingido.
+        sostiene. Entran los catorce que ya tienen manuscrito, PDF y portada. Lo que no tiene
+        carpeta no se finge.
       </p>
       <Refs refs="Neh. 8:8 · 2 P. 3:16" />
 
@@ -69,7 +61,6 @@ function TratadosPage() {
       ) : null}
 
       <Lista titulo="TRATADOS" items={publicados} />
-      <Lista titulo="La serie, en la escuela" items={serie} sinPack />
       <p className="mt-10 font-sans text-sm">
         <Link to="/estudios" className="text-link underline">
           Escudriñar las clases
@@ -84,25 +75,11 @@ function TratadosPage() {
   );
 }
 
-function Lista({
-  titulo,
-  items,
-  sinPack = false,
-}: {
-  titulo: string;
-  items: IndiceTratado[];
-  sinPack?: boolean;
-}) {
+function Lista({ titulo, items }: { titulo: string; items: IndiceTratado[] }) {
   if (items.length === 0) return null;
   return (
     <section className="mt-14">
       <h2 className="font-serif text-3xl">{titulo}</h2>
-      {sinPack ? (
-        <p className="mt-4 leading-relaxed text-ink-soft">
-          Del trece al cincuenta, la restitución que el mapa ya fijó. Juan 1 y Romanos 3 se leen
-          también. El manuscrito de Drive, cuando no está, no se finge.
-        </p>
-      ) : null}
       <ul className="mt-8 space-y-8">
         {items.map((e) => (
           <li key={e.slug} className="border-t border-rule pt-6">

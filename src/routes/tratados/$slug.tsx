@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { Refs } from "@/components/cite";
@@ -73,20 +73,6 @@ function TratadoPage() {
             </p>
         ))}
       </div>
-      {tratado.casa?.length ? (
-        <p className="mt-8 leading-relaxed">
-          Este versículo mira a{" "}
-          {tratado.casa.map((c, i) => (
-            <span key={c.slug}>
-              {i > 0 ? " y a " : ""}
-              <Link to="/obras/$slug" params={{ slug: c.slug }} className="text-link underline">
-                {c.title}
-              </Link>
-            </span>
-          ))}
-          .
-        </p>
-      ) : null}
       <Refs refs="2 P. 3:16 · Neh. 8:8" />
       <CierreAula pasaje={tratado.ref} slug={tratado.slug} acto={tratado.cuerpo.at(-1)} desde={`/tratados/${tratado.slug}`} />
     </Aula>

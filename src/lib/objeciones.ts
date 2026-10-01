@@ -1,7 +1,5 @@
 /** Versículos que viajan solos → el tratado que los restituye al capítulo. */
 
-import { SERIE_FICHAS } from "@/lib/serie-50";
-
 export type Objecion = {
   verse: string;
   lemma: string;
@@ -111,10 +109,4 @@ export const OBJECIONES: Objecion[] = [
     lead:
       "Oír y no hacer no es un retraso inocente, sino engaño de sí. El que se mira en el espejo y se va olvida el rostro. El crisol prueba el acto que el texto ya pidió, no fabrica un propósito genérico.",
   },
-  ...SERIE_FICHAS.map((f) => ({
-    verse: f.ref,
-    lemma: f.lemma,
-    tratadoSlug: f.slug,
-    lead: f.blurb,
-  })),
 ];

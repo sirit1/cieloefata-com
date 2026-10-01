@@ -44,6 +44,7 @@ export const Route = createFileRoute("/estudios/$slug")({
       title: tituloEstudio(study?.ref ?? "Estudio"),
       description: study ? `${study.ref}. ${study.ver}` : undefined,
       detalle: study?.passage,
+      index: !study || estudioTienePack(study.slug),
     });
   },
 });
