@@ -80,6 +80,8 @@ export const MESES: MesEditorial[] = [
 export const FECHA_PACKS = "2026-09-23";
 /** Última revisión de la prosa de aulas y tratados. */
 export const FECHA_PROSA = "2026-09-24";
+/** Día en que el mapa de la serie (13–50) entró en la escuela, sin manuscrito de Drive. */
+export const FECHA_SERIE = "2026-10-01";
 
 export type FechasArticulo = { published: string; modified: string };
 
@@ -99,6 +101,29 @@ export function fechasDePack(slug: string, clase: "estudio" | "tratado"): Fechas
     if (semana && semana.desde < FECHA_PACKS) return cerrar(semana.desde);
   }
   return cerrar(FECHA_PACKS);
+}
+
+/** Prosa ya escrita que no tiene pack: la revisión del 24 de septiembre. */
+export function fechasDeProsa(): FechasArticulo {
+  return { published: FECHA_PROSA, modified: FECHA_PROSA };
+}
+
+/** Ficha 13–50: el día en que la restitución del mapa entró en la escuela. */
+export function fechasDeFichaSerie(): FechasArticulo {
+  return { published: FECHA_SERIE, modified: FECHA_SERIE };
+}
+
+export function fechasArticulo(opts: {
+  clase: "estudio" | "tratado";
+  slug: string;
+  pack: boolean;
+  n?: string;
+}): FechasArticulo {
+  if (opts.pack) return fechasDePack(opts.slug, opts.clase);
+  if (opts.clase === "tratado" && opts.n && opts.n !== "—" && Number(opts.n) >= 13) {
+    return fechasDeFichaSerie();
+  }
+  return fechasDeProsa();
 }
 
 export function fechaLegible(iso: string): string {

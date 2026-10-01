@@ -9,8 +9,9 @@ import { ESCRITURA } from "./pilar.ts";
 import { obras } from "./content.ts";
 import { studies } from "./studies.ts";
 import { tratados } from "./tratados.ts";
-import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack, tratadoTienePack } from "./catalogo.ts";
-import { fechasDePack } from "./calendario.ts";
+import { fechasArticulo } from "./calendario.ts";
+import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack } from "./catalogo.ts";
+import { SERIE_FICHAS } from "./serie-50.ts";
 import {
   SITE_ORIGIN,
   SITE_TITLE,
@@ -28,8 +29,8 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/", SITE_TITLE, "Escuela de lectura de la Escritura. RevelatiO abre el capítulo. Aquí se estudia: el método, el estudio de la semana y el tratado del mes."],
   ["/canon", tituloSeccion("Canon"), "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.", ESCRITURA.body[0]],
   ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
-  ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Trece packs reales en Drive.", "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. El catálogo publicado es el de Drive: trece packs reales. Las clases que la web listaba sin manuscrito —Marcos 1, Juan 3, Hechos 2, Juan 1, Romanos 3 y las demás— quedan marcadas como próximamente. No se inventa un PDF que no existe."],
-  ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene, hasta que la jactancia se calle o el Siervo cargue lo que se había llamado herida. El catálogo que sigue es el de Drive: catorce packs reales —el umbral V.E.R.D.A.D., el crisol de lo oído y los doce numerados—, no una vitrina de ensayos sin manuscrito."],
+  ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí; RevelatiO abre el capítulo.", "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. Estudios bíblicos son los trece con manuscrito. Al lado, los estudios sueltos se leen en la misma escuela, sin un PDF inventado."],
+  ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. TRATADOS guarda catorce manuscritos. La serie del mapa sigue hasta cincuenta, sin un PDF fingido."],
   ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos del Dr. Alejandro Sirit. Éfata abre; El Siervo, no tú sigue. Editorial Cielo Efata.", CORPUS.gate],
   ["/sello", tituloSeccion("El sello"), "Post tenebras lux. El sello no es un logotipo, sino una confesión.", SELLO.gate],
   ["/palabra", tituloSeccion("Palabra"), "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.", "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong."],
@@ -100,16 +101,16 @@ function robotsDe(head: ReturnType<typeof pageHead>) {
   return tag && "content" in tag ? tag.content : undefined;
 }
 
-test("sin pack la ficha no se indexa y conserva su canónico", () => {
-  const cerrada = pageHead({ path: "/estudios/romanos-1", index: false });
-  assert.equal(robotsDe(cerrada), "noindex");
-  assert.equal(cerrada.links[0]?.href, `${SITE_ORIGIN}/estudios/romanos-1`);
-  const abierta = pageHead({ path: "/estudios/marcos-7" });
+test("toda ficha escrita se indexa y conserva su canónico", () => {
+  const abierta = pageHead({ path: "/estudios/romanos-1" });
   assert.equal(robotsDe(abierta), undefined);
-  assert.equal(abierta.links[0]?.href, `${SITE_ORIGIN}/estudios/marcos-7`);
+  assert.equal(abierta.links[0]?.href, `${SITE_ORIGIN}/estudios/romanos-1`);
+  const serie = pageHead({ path: "/tratados/no-juzgueis" });
+  assert.equal(robotsDe(serie), undefined);
+  assert.equal(serie.links[0]?.href, `${SITE_ORIGIN}/tratados/no-juzgueis`);
 });
 
-test("el sitemap lista los packs y calla las fichas sin manuscrito", () => {
+test("el sitemap lista la escuela entera y fecha solo lo que tiene fecha real", () => {
   const xml = readFileSync(new URL("../../public/sitemap.xml", import.meta.url), "utf8");
   const bloques = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => {
     const cuerpo = m[1] ?? "";
@@ -120,17 +121,23 @@ test("el sitemap lista los packs y calla las fichas sin manuscrito", () => {
   });
   const locs = new Set(bloques.map((b) => b.loc));
 
-  for (const slug of ESTUDIOS_DRIVE) {
-    const loc = `${SITE_ORIGIN}/estudios/${slug}`;
+  for (const study of studies) {
+    const loc = `${SITE_ORIGIN}/estudios/${study.slug}`;
     const bloque = bloques.find((b) => b.loc === loc);
     assert.ok(bloque, loc);
-    assert.equal(bloque.lastmod, fechasDePack(slug, "estudio").modified);
+    assert.equal(
+      bloque.lastmod,
+      fechasArticulo({ clase: "estudio", slug: study.slug, pack: estudioTienePack(study.slug) }).modified,
+    );
   }
-  for (const slug of TRATADOS_DRIVE) {
-    const loc = `${SITE_ORIGIN}/tratados/${slug}`;
+  for (const t of tratados) {
+    const loc = `${SITE_ORIGIN}/tratados/${t.slug}`;
     const bloque = bloques.find((b) => b.loc === loc);
     assert.ok(bloque, loc);
-    assert.equal(bloque.lastmod, fechasDePack(slug, "tratado").modified);
+    assert.equal(
+      bloque.lastmod,
+      fechasArticulo({ clase: "tratado", slug: t.slug, pack: t.pack, n: t.n }).modified,
+    );
   }
   for (const obra of obras) {
     const loc = `${SITE_ORIGIN}/obras/${obra.slug}`;
@@ -139,25 +146,15 @@ test("el sitemap lista los packs y calla las fichas sin manuscrito", () => {
     assert.equal(bloque.lastmod, undefined);
   }
 
-  const estudios = bloques.filter((b) => /\/estudios\/[^/]+$/.test(b.loc));
-  const tratadosEnMapa = bloques.filter((b) => /\/tratados\/[^/]+$/.test(b.loc));
-  assert.equal(estudios.length, ESTUDIOS_DRIVE.length);
-  assert.equal(tratadosEnMapa.length, TRATADOS_DRIVE.length);
-
-  for (const study of studies) {
-    const loc = `${SITE_ORIGIN}/estudios/${study.slug}`;
-    assert.equal(locs.has(loc), estudioTienePack(study.slug), loc);
-  }
-  for (const t of tratados) {
-    const loc = `${SITE_ORIGIN}/tratados/${t.slug}`;
-    assert.equal(locs.has(loc), tratadoTienePack(t.slug), loc);
-  }
-
-  assert.equal(locs.has(`${SITE_ORIGIN}/estudios/isaias-53`), false);
+  assert.equal(locs.has(`${SITE_ORIGIN}/estudios/romanos-1`), true);
+  assert.equal(locs.has(`${SITE_ORIGIN}/estudios/isaias-53`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/tratados/isaias-53`), true);
+  assert.equal(locs.has(`${SITE_ORIGIN}/tratados/no-juzgueis`), true);
+  assert.equal(locs.has(`${SITE_ORIGIN}/tratados/las-llaves-del-reino`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/`), true);
-  assert.equal(
-    bloques.filter((b) => b.lastmod).length,
-    ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length,
-  );
+  assert.equal(SERIE_FICHAS.length, 38);
+  assert.equal(ESTUDIOS_DRIVE.length, 13);
+  assert.equal(TRATADOS_DRIVE.length, 14);
+  const conFecha = bloques.filter((b) => b.lastmod);
+  assert.equal(conFecha.length, studies.length + tratados.length);
 });

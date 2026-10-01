@@ -20,7 +20,7 @@ export const Route = createFileRoute("/tratados")({
       description:
         "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
       detalle:
-        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene, hasta que la jactancia se calle o el Siervo cargue lo que se había llamado herida. El catálogo que sigue es el de Drive: catorce packs reales —el umbral V.E.R.D.A.D., el crisol de lo oído y los doce numerados—, no una vitrina de ensayos sin manuscrito.",
+        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. TRATADOS guarda catorce manuscritos. La serie del mapa sigue hasta cincuenta, sin un PDF fingido.",
     });
   },
 });
@@ -28,7 +28,14 @@ export const Route = createFileRoute("/tratados")({
 function TratadosPage() {
   const mes = indiceTratado(tratadoMesSlug()) ?? TRATADOS_INDICE.find((t) => t.pack);
   const publicados = TRATADOS_INDICE.filter((t) => t.pack);
-  const proximos = TRATADOS_INDICE.filter((t) => !t.pack);
+  const serie = TRATADOS_INDICE.filter((t) => !t.pack).sort((a, b) => {
+    const na = Number(a.n);
+    const nb = Number(b.n);
+    if (Number.isFinite(na) && Number.isFinite(nb)) return na - nb;
+    if (Number.isFinite(na)) return -1;
+    if (Number.isFinite(nb)) return 1;
+    return 0;
+  });
 
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
@@ -38,9 +45,8 @@ function TratadosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un
         versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo
-        sostiene, hasta que la jactancia se calle o el Siervo cargue lo que se había llamado
-        herida. El catálogo que sigue es el de Drive: catorce packs reales —el umbral V.E.R.D.A.D.,
-        el crisol de lo oído y los doce numerados—, no una vitrina de ensayos sin manuscrito.
+        sostiene. TRATADOS guarda catorce manuscritos. La serie del mapa sigue hasta cincuenta,
+        sin un PDF fingido.
       </p>
       <Refs refs="Neh. 8:8 · 2 P. 3:16" />
 
@@ -62,8 +68,8 @@ function TratadosPage() {
         </article>
       ) : null}
 
-      <Lista titulo="Los catorce tratados con pack" items={publicados} />
-      <Lista titulo="En preparación — sin pack en Drive" items={proximos} proximo />
+      <Lista titulo="TRATADOS" items={publicados} />
+      <Lista titulo="La serie, en la escuela" items={serie} sinPack />
       <p className="mt-10 font-sans text-sm">
         <Link to="/estudios" className="text-link underline">
           Escudriñar las clases
@@ -81,20 +87,20 @@ function TratadosPage() {
 function Lista({
   titulo,
   items,
-  proximo = false,
+  sinPack = false,
 }: {
   titulo: string;
   items: IndiceTratado[];
-  proximo?: boolean;
+  sinPack?: boolean;
 }) {
   if (items.length === 0) return null;
   return (
     <section className="mt-14">
       <h2 className="font-serif text-3xl">{titulo}</h2>
-      {proximo ? (
+      {sinPack ? (
         <p className="mt-4 leading-relaxed text-ink-soft">
-          Estas fichas se pueden leer, y no se presentan como tratados de la serie. Falta el pack
-          en Drive: no hay que inventar un PDF que no existe.
+          Del trece al cincuenta, la restitución que el mapa ya fijó. Juan 1 y Romanos 3 se leen
+          también. El manuscrito de Drive, cuando no está, no se finge.
         </p>
       ) : null}
       <ul className="mt-8 space-y-8">
@@ -111,7 +117,7 @@ function Lista({
               params={{ slug: e.slug }}
               className="mt-3 inline-flex items-center font-sans text-sm text-link underline"
             >
-              {proximo ? "Leer la ficha en preparación" : "Escudriñar el tratado"}
+              Escudriñar el tratado
             </Link>
           </li>
         ))}

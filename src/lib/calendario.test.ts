@@ -6,6 +6,7 @@ import {
   etiquetaRango,
   fechaCasa,
   fechaLegible,
+  fechasArticulo,
   fechasDePack,
   lineaFechas,
   mesProximo,
@@ -53,6 +54,14 @@ describe("calendario editorial", () => {
     assert.match(fechaLegible("2026-09-15"), /15 de septiembre de 2026/);
     assert.match(lineaFechas(fechasDePack("marcos-7", "estudio")), /Publicado el 15 de septiembre de 2026/);
     assert.match(lineaFechas(fechasDePack("marcos-7", "estudio")), /Revisado el 24 de septiembre de 2026/);
+    assert.deepEqual(fechasArticulo({ clase: "estudio", slug: "romanos-1", pack: false }), {
+      published: "2026-09-24",
+      modified: "2026-09-24",
+    });
+    assert.deepEqual(
+      fechasArticulo({ clase: "tratado", slug: "no-juzgueis", pack: false, n: "13" }),
+      { published: "2026-10-01", modified: "2026-10-01" },
+    );
   });
 
   it("formatea la fecha de casa en YYYY-MM-DD", () => {

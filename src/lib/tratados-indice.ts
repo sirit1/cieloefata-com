@@ -1,4 +1,5 @@
 /** Índice de tratados: número, título, cita y tesis. El cuerpo se carga al abrir el tratado. */
+import { SERIE_FICHAS } from "@/lib/serie-50";
 export type IndiceTratado = {
   slug: string;
   n: string;
@@ -134,9 +135,17 @@ export const TRATADOS_INDICE: IndiceTratado[] = [
     "n": "—",
     "title": "Justicia de Dios, sin la ley",
     "ref": "Romanos 3:21–26",
-    "blurb": "Toda boca se cierra. Entonces se manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica al que cree. Este ensayo aún no tiene pack en Drive: se lee como preparación, no como tratado numerado de la serie.",
+    "blurb": "Toda boca se cerró. Entonces —pero ahora— se manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica al que cree. El «aparte» no despide a Moisés: lo pone a testificar.",
     "pack": false
-  }
+  },
+  ...SERIE_FICHAS.map((f) => ({
+    slug: f.slug,
+    n: f.n,
+    title: f.title,
+    ref: f.ref,
+    blurb: f.blurb,
+    pack: false,
+  })),
 ];
 
 export function indiceTratado(slug: string) {

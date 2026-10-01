@@ -5,7 +5,7 @@ import { DECISION_AULA } from "./decisiones-aula.ts";
 import { ESTUDIOS_INDICE } from "./estudios-indice.ts";
 import { FICHA_ESTUDIO, FICHA_TRATADO } from "./fichas-portada.ts";
 import { studies } from "./studies.ts";
-import { tratadoDe } from "./tratados.ts";
+import { tratados } from "./tratados.ts";
 import { TRATADOS_INDICE } from "./tratados-indice.ts";
 
 describe("fichas de portada", () => {
@@ -25,7 +25,7 @@ describe("fichas de portada", () => {
     for (const mes of MESES) {
       assert.ok(mes.impacto && mes.impacto.length > 40);
       const ficha = FICHA_TRATADO[mes.tratadoSlug];
-      const tratado = tratadoDe(mes.tratadoSlug);
+      const tratado = tratados.find((t) => t.slug === mes.tratadoSlug);
       assert.ok(ficha, mes.tratadoSlug);
       assert.ok(tratado, mes.tratadoSlug);
       assert.equal(ficha.title, tratado.title);
@@ -46,9 +46,9 @@ describe("fichas de portada", () => {
   });
 
   it("el índice de tratados no se desalinea del corpus", () => {
-    assert.equal(TRATADOS_INDICE.length, 16);
+    assert.equal(TRATADOS_INDICE.length, tratados.length);
     for (const row of TRATADOS_INDICE) {
-      const tratado = tratadoDe(row.slug);
+      const tratado = tratados.find((t) => t.slug === row.slug);
       assert.ok(tratado, row.slug);
       assert.equal(row.n, tratado.n);
       assert.equal(row.title, tratado.title);

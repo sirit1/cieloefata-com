@@ -152,6 +152,6 @@ export const PRIMERA_VEZ = {
   slug: "marcos-7",
   ref: "Marcos 7",
   title: "Éfata",
-  lead: "El primer pasaje de esta escuela no es un consuelo; es un milagro. En la Decápolis el Hijo toma a un sordo, alza los ojos, gime y dice Éfata, que es: Sé abierto. El oído cede, la lengua se desata, y el oficio empieza: leer el capítulo entero una vez que el oído ha cedido. Marcos 1, Juan 3 y Hechos 2 permanecen como clases en preparación; el umbral con pack es este.",
+  lead: "El primer pasaje de esta escuela no es un consuelo; es un milagro. En la Decápolis el Hijo toma a un sordo, alza los ojos, gime y dice Éfata, que es: Sé abierto. El oído cede, la lengua se desata, y el oficio empieza: leer el capítulo entero una vez que el oído ha cedido.",
   refs: "Mr. 7:34 · Is. 35:5–6 · Lc. 24:45",
 };

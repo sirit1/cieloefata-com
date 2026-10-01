@@ -1,4 +1,6 @@
 import { tratadoMesSlug } from "@/lib/calendario";
+import { SERIE_CUERPOS } from "@/lib/serie-50-cuerpo";
+import { SERIE_FICHAS, type CasaTomo } from "@/lib/serie-50";
 
 export type Tratado = {
   slug: string;
@@ -9,6 +11,7 @@ export type Tratado = {
   blurb: string;
   cuerpo: string[];
   pack: boolean;
+  casa?: CasaTomo[];
 };
 
 export const tratados: Tratado[] = [
@@ -267,7 +270,7 @@ export const tratados: Tratado[] = [
     ref: "Romanos 3:21–26",
     title: "Justicia de Dios, sin la ley",
     blurb:
-      "Toda boca se cierra. Entonces se manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica al que cree. Este ensayo aún no tiene pack en Drive: se lee como preparación, no como tratado numerado de la serie.",
+      "Toda boca se cerró. Entonces —pero ahora— se manifiesta la justicia de Dios, sin la ley como escalera, en la sangre de Cristo, para que Dios sea justo y el que justifica al que cree. El «aparte» no despide a Moisés: lo pone a testificar.",
     pack: false,
     cuerpo: [
       "Toda boca se cerró. Romanos 3:19 no es un adorno retórico ni un golpe de efecto para abrir un sermón. Es el umbral. Judío y gentil, bajo pecado, sin jactancia, sin una hoja de servicios que se pueda presentar como moneda. Entonces —pero ahora— se manifiesta la justicia de Dios, aparte de la ley, testificada por la ley y por los profetas. El «aparte» no despide a Moisés: lo pone a testificar. Habacuc 2:4 ya estaba en 1:17. Llega aquí a su claridad. El justo por la fe vivirá, no porque la fe merezca, sino porque Dios justifica.",
@@ -279,6 +282,17 @@ export const tratados: Tratado[] = [
       "Esta semana, deja de mezclar tu hoja de servicios con la justificación. Di a alguien, sin teatro y sin disculpa: soy justificado por la fe en Jesús, sin la ley. Luego lee 3:21–26 dentro de 3:9–31. RevelatiO abre el capítulo. Aquí se sostiene el oído hasta que la boca, que 3:19 cerró, se abra otra vez solo para confesar al que es justo y justifica.",
     ],
   },
+  ...SERIE_FICHAS.map((f) => ({
+    slug: f.slug,
+    n: f.n,
+    kicker: "Serie",
+    ref: f.ref,
+    title: f.title,
+    blurb: f.blurb,
+    cuerpo: SERIE_CUERPOS[f.slug] ?? [f.blurb],
+    pack: false,
+    casa: f.casa,
+  })),
 ];
 
 export function tratadoDe(slug: string) {

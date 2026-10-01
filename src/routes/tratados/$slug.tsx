@@ -1,12 +1,12 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
-import { fechasDePack, lineaFechas } from "@/lib/calendario";
-import { tratadoTienePack } from "@/lib/catalogo";
+import { fechasArticulo, lineaFechas } from "@/lib/calendario";
+import { etiquetaTratado } from "@/lib/etiquetas";
 import { pageHead, tituloTratado } from "@/lib/seo";
 
 function textoParaOir(parts: string[]) {
@@ -28,14 +28,18 @@ export const Route = createFileRoute("/tratados/$slug")({
       title: tituloTratado(tratado?.title ?? "Tratado"),
       description: tratado?.blurb,
       detalle: tratado?.cuerpo[0],
-      index: !tratado || tratadoTienePack(tratado.slug),
     });
   },
 });
 
 function TratadoPage() {
   const { tratado } = Route.useLoaderData();
-  const fechas = tratadoTienePack(tratado.slug) ? fechasDePack(tratado.slug, "tratado") : null;
+  const fechas = fechasArticulo({
+    clase: "tratado",
+    slug: tratado.slug,
+    pack: tratado.pack,
+    n: tratado.n,
+  });
   const oir = textoParaOir([tratado.title, tratado.ref, ...tratado.cuerpo]);
 
   return (
@@ -54,7 +58,7 @@ function TratadoPage() {
         modified={fechas?.modified}
       />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        {tratado.pack ? "Tratado" : "Próximamente"}
+        {etiquetaTratado(tratado.slug)}
         {tratado.n !== "—" ? ` · ${tratado.n}` : ""} · {tratado.kicker} · {tratado.ref}
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
@@ -69,6 +73,20 @@ function TratadoPage() {
             </p>
         ))}
       </div>
+      {tratado.casa?.length ? (
+        <p className="mt-8 leading-relaxed">
+          Este versículo mira a{" "}
+          {tratado.casa.map((c, i) => (
+            <span key={c.slug}>
+              {i > 0 ? " y a " : ""}
+              <Link to="/obras/$slug" params={{ slug: c.slug }} className="text-link underline">
+                {c.title}
+              </Link>
+            </span>
+          ))}
+          .
+        </p>
+      ) : null}
       <Refs refs="2 P. 3:16 · Neh. 8:8" />
       <CierreAula pasaje={tratado.ref} slug={tratado.slug} acto={tratado.cuerpo.at(-1)} desde={`/tratados/${tratado.slug}`} />
     </Aula>

@@ -220,7 +220,7 @@ export const obras: Obra[] = [
     pasaje: "Job 42",
     studySlug: "",
     studyNote:
-      "No hay aún una clase de Job en el aula. El lamento se oye en este tomo, junto al capítulo. Salmo 22 permanece como laboratorio en preparación: es el clamor del abandonado, no un sustituto del libro de Job.",
+      "No hay aún una clase de Job en el aula. El lamento se oye en este tomo, junto al capítulo. Salmo 22 se lee como clase: es el clamor del abandonado, no un sustituto del libro de Job.",
     isbnPrint: "9798176466690",
   },
   {

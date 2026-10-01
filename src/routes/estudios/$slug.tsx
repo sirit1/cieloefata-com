@@ -11,7 +11,7 @@ import { PasosNav, pasoId } from "@/components/pasos-nav";
 import { RedCanon } from "@/components/red-canon";
 import type { LabExtra } from "@/lib/escuela";
 import { ArticleJsonLd } from "@/components/json-ld";
-import { fechasDePack, lineaFechas } from "@/lib/calendario";
+import { fechasArticulo, lineaFechas } from "@/lib/calendario";
 import { estudioTienePack } from "@/lib/catalogo";
 import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
@@ -44,7 +44,6 @@ export const Route = createFileRoute("/estudios/$slug")({
       title: tituloEstudio(study?.ref ?? "Estudio"),
       description: study ? `${study.ref}. ${study.ver}` : undefined,
       detalle: study?.passage,
-      index: !study || estudioTienePack(study.slug),
     });
   },
 });
@@ -91,7 +90,11 @@ function LabCasillas({ lab }: { lab: LabExtra }) {
 function StudyPage() {
   const { study, profundo: p, lab } = Route.useLoaderData();
   const voces = vocesDe(study.slug);
-  const fechas = estudioTienePack(study.slug) ? fechasDePack(study.slug, "estudio") : null;
+  const fechas = fechasArticulo({
+    clase: "estudio",
+    slug: study.slug,
+    pack: estudioTienePack(study.slug),
+  });
   const oir = textoParaOir([
     study.title,
     study.ref,
@@ -137,12 +140,6 @@ function StudyPage() {
         Aula · {etiquetaEstudio(study.slug)} · {study.ref}
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
-      {etiquetaEstudio(study.slug).includes("Próximamente") ? (
-        <p className="mt-4 leading-relaxed text-ink-soft">
-          Esta clase se puede leer como ficha de aula. No tiene pack en Drive: no se presenta
-          como estudio publicado de la serie.
-        </p>
-      ) : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
       <Verso texto={study.passage} voz={study.voz} />
       <p className="mt-6">

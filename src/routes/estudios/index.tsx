@@ -20,9 +20,9 @@ export const Route = createFileRoute("/estudios/")({
       path: "/estudios",
       title: tituloSeccion("Estudios"),
       description:
-        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Trece packs reales en Drive.",
+        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí; RevelatiO abre el capítulo.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. El catálogo publicado es el de Drive: trece packs reales. Las clases que la web listaba sin manuscrito —Marcos 1, Juan 3, Hechos 2, Juan 1, Romanos 3 y las demás— quedan marcadas como próximamente. No se inventa un PDF que no existe.",
+        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. Estudios bíblicos son los trece con manuscrito. Al lado, los estudios sueltos se leen en la misma escuela, sin un PDF inventado.",
     }),
 });
 
@@ -36,7 +36,6 @@ function EstudiosPage() {
   const labs = LABORATORIOS.map((lab) => ({
     lab,
     study: indiceEstudio(lab.slug),
-    pack: estudioTienePack(lab.slug),
   }));
   const proximos = ESTUDIOS_INDICE.filter(
     (s) => !estudioTienePack(s.slug) && !LABORATORIOS.some((lab) => lab.slug === s.slug),
@@ -50,9 +49,8 @@ function EstudiosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno,
         Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda
-        preguntar mañana. El catálogo publicado es el de Drive: trece packs reales. Las clases
-        que la web listaba sin manuscrito —Marcos 1, Juan 3, Hechos 2, Juan 1, Romanos 3 y las
-        demás— quedan marcadas como próximamente. No se inventa un PDF que no existe.
+        preguntar mañana. Estudios bíblicos son los trece con manuscrito. Al lado, los estudios
+        sueltos se leen en la misma escuela, sin un PDF inventado.
       </p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
       <p className="mt-4 font-sans text-sm">
@@ -83,18 +81,18 @@ function EstudiosPage() {
         </article>
       ) : null}
 
-      <Lista titulo="Los trece estudios con pack" items={publicados} />
+      <Lista titulo="Estudios bíblicos" items={publicados} />
 
       <section className="mt-14">
         <h2 className="font-serif text-3xl">Seis laboratorios, seis géneros</h2>
         <p className="mt-4 leading-relaxed">
           El yunque del método recorre seis géneros: narración, lamento, cántico del Siervo,
-          evangelio, himno y apocalipsis. Tres de esos pasajes tienen pack en Drive —Marcos 7,
-          Filipenses 2, Apocalipsis 5—. Génesis 3, Salmo 22 e Isaías 53, como clase, permanecen
-          en preparación: Isaías 53 se escudriña ya como tratado restaurado.
+          evangelio, himno y apocalipsis. Marcos 7, Filipenses 2 y Apocalipsis 5 tienen pack en
+          Drive. Génesis 3, Salmo 22 e Isaías 53 se leen como clase; Isaías 53 se escudriña
+          además como tratado.
         </p>
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
-          {labs.map(({ lab, study, pack }) => (
+          {labs.map(({ lab, study }) => (
             <li key={lab.slug}>
               {study ? (
                 <Link
@@ -105,7 +103,6 @@ function EstudiosPage() {
                   <span className="flex min-w-0 flex-col gap-1">
                     <span className="font-sans text-sm text-gold">
                       {lab.genero} · {lab.ref}
-                      {pack ? "" : " · Próximamente"}
                     </span>
                     <span className="font-serif text-2xl">{lab.title}</span>
                   </span>
@@ -113,7 +110,7 @@ function EstudiosPage() {
               ) : (
                 <span className="block py-5">
                   <span className="font-sans text-sm text-gold">
-                    {lab.genero} · {lab.ref} · Próximamente
+                    {lab.genero} · {lab.ref}
                   </span>
                   <span className="mt-1 block font-serif text-2xl">{lab.title}</span>
                 </span>
@@ -123,7 +120,7 @@ function EstudiosPage() {
         </ul>
       </section>
 
-      <Lista titulo="Clases en preparación — sin pack en Drive" items={proximos} proximo />
+      <Lista titulo="Estudios sueltos" items={proximos} sinPack />
       <Link to="/tratados" className="mt-10 inline-block font-sans text-sm text-link underline">
         Escudriñar el tratado
       </Link>
@@ -134,20 +131,20 @@ function EstudiosPage() {
 function Lista({
   titulo,
   items,
-  proximo = false,
+  sinPack = false,
 }: {
   titulo: string;
   items: IndiceEstudio[];
-  proximo?: boolean;
+  sinPack?: boolean;
 }) {
   if (items.length === 0) return null;
   return (
     <section className="mt-14">
       <h2 className="font-serif text-3xl">{titulo}</h2>
-      {proximo ? (
+      {sinPack ? (
         <p className="mt-4 leading-relaxed text-ink-soft">
-          Se pueden abrir como fichas de aula. No se presentan como clases publicadas: falta el
-          pack en Drive.
+          Están al lado de Estudios bíblicos, en la misma escuela. No tienen carpeta de pack: no se
+          pide un PDF que no existe.
         </p>
       ) : null}
       <ul className="mt-8 divide-y divide-rule border-y border-rule">
