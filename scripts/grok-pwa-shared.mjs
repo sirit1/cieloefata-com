@@ -296,9 +296,22 @@ export function ogServiceUrl() {
   return (fromEnv || OG_SERVICE_URL_DEFAULT).replace(/\/+$/, "");
 }
 
+/** Text inside `<title>`, unescaped. Empty if the document has none. */
 export function titleFromDocument(html) {
   const match = String(html ?? "").match(/<title\b[^>]*>([^<]*)<\/title>/i);
   return match ? unescapeHtml(match[1]).trim() : "";
+}
+
+/** `meta name=description`, unescaped. Empty if the document has none. */
+export function descriptionFromDocument(html) {
+  const tags = String(html ?? "").match(/<meta\b[^>]*>/gi) ?? [];
+  for (const tag of tags) {
+    const name = tag.match(/\bname\s*=\s*["']([^"']+)["']/i);
+    if (!name || name[1].toLowerCase() !== "description") continue;
+    const content = tag.match(/\bcontent\s*=\s*["']([^"']*)["']/i);
+    if (content) return unescapeHtml(content[1]).trim();
+  }
+  return "";
 }
 
 export function resolveOgTitle(
@@ -337,26 +350,45 @@ function applyCustomCardFromFs(site, cwd) {
   return { ...site, card: "custom", image: disk };
 }
 
+/**
+ * Unfurl title. The page `<title>` wins when it exists, so a study shares
+ * as the passage and not as the house name. `site.title` remains the
+ * fallback and `og:site_name` (PWA name does not use this).
+ */
+export function resolveShareTitle(
+  site = {},
+  appName = DEFAULT_APP_NAME,
+  host = "",
+  documentTitle = "",
+) {
+  const fromDoc = String(documentTitle ?? "").trim();
+  if (fromDoc) return fromDoc;
+  return resolveOgTitle(site, appName, host, "");
+}
 export function grokOgHeadTags({
   host = "",
   appName = DEFAULT_APP_NAME,
   site = {},
   documentTitle = "",
+  documentDescription = "",
   cwd = process.cwd(),
 } = {}) {
-  const title = resolveOgTitle(site, appName, host, documentTitle);
+  const title = resolveShareTitle(site, appName, host, documentTitle);
   const publicHost = resolvePublicHost(host);
   const siteName = String(site.title ?? "").trim();
   const tags = [
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta property="og:title" content="${escapeHtml(title)}">`,
+    `<meta name="twitter:title" content="${escapeHtml(title)}">`,
   ];
   if (siteName) {
     tags.push(`<meta property="og:site_name" content="${escapeHtml(siteName)}">`);
   }
-  const description = String(site.description ?? "").trim();
+  const description =
+    String(documentDescription ?? "").trim() || String(site.description ?? "").trim();
   if (description) {
     tags.push(`<meta property="og:description" content="${escapeHtml(description)}">`);
+    tags.push(`<meta name="twitter:description" content="${escapeHtml(description)}">`);
   }
   if (String(site.type ?? "").toLowerCase() === "x:game") {
     tags.push(`<meta property="og:type" content="x:game">`);
@@ -434,6 +466,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
   if (typeof html !== "string") return html;
   const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
   const documentTitle = titleFromDocument(html);
+  const documentDescription = descriptionFromDocument(html);
   const appName = resolveOgTitle(
     site,
     ctx.appName ?? DEFAULT_APP_NAME,
@@ -452,7 +485,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
 
   next = insertAfterHeadOpen(
     next,
-    grokOgHeadTags({ host, appName, site, documentTitle, cwd }).join(""),
+    grokOgHeadTags({ host, appName, site, documentTitle, documentDescription, cwd }).join(""),
   );
 
   if (!next.includes("/grok-app-builder/extensions.js")) {

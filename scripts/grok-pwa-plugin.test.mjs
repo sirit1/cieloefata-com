@@ -362,6 +362,39 @@ test("site.json title wins over the host slug", () => {
   assert.match(out, /property="og:title" content="Pixel Nova"/);
 });
 
+test("a page title and description win the unfurl; the house card stays", () => {
+  const html =
+    '<html><head><title>Marcos 7:31–37 — Estudio bíblico | Cielo Efata</title>' +
+    '<meta name="description" content="Marcos 7:31–37. El párrafo entero, no el vocablo.">' +
+    '<meta property="og:image" content="https://www.cieloefata.com/TAPAS/efata.jpg">' +
+    "</head></html>";
+  const out = injectGrokPwaHead(html, {
+    host: "www.cieloefata.com",
+    site: { title: "Cielo Efata", card: "custom", image: "/og.jpg" },
+  });
+  assert.match(
+    out,
+    /property="og:title" content="Marcos 7:31–37 — Estudio bíblico \| Cielo Efata"/,
+  );
+  assert.match(
+    out,
+    /name="twitter:title" content="Marcos 7:31–37 — Estudio bíblico \| Cielo Efata"/,
+  );
+  assert.match(out, /property="og:site_name" content="Cielo Efata"/);
+  assert.match(
+    out,
+    /property="og:description" content="Marcos 7:31–37\. El párrafo entero, no el vocablo\."/,
+  );
+  assert.match(
+    out,
+    /name="twitter:description" content="Marcos 7:31–37\. El párrafo entero, no el vocablo\."/,
+  );
+  assert.match(out, /property="og:image" content="https:\/\/www\.cieloefata\.com\/og\.jpg"/);
+  assert.doesNotMatch(out, /TAPAS\/efata/);
+  assert.equal(out.split('property="og:title"').length - 1, 1);
+  assert.equal(out.split('property="og:image"').length - 1, 1);
+});
+
 test("injects into documents with no head element", () => {
   const out = injectGrokPwaHead("<html><body>hi</body></html>", { appName: "Solo" });
   assert.match(out, /<head>/);
