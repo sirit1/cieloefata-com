@@ -180,6 +180,16 @@ describe("puente a RevelatiO", () => {
     assert.equal(sin.get("intencion"), null);
   });
 
+  it("una cita llegada al cuaderno abre ese versículo en el lector", () => {
+    const p = q(urlPuenteRevelatio({ ref: "Juan 3:16", desde: "/cuaderno" }));
+    assert.equal(p.get("libro"), "juan");
+    assert.equal(p.get("cap"), "3");
+    assert.equal(p.get("vs"), "16");
+    assert.equal(p.get("casa"), "1");
+    assert.equal(p.get("vuelta"), "/cuaderno");
+    assert.equal(urlPuenteRevelatio({ ref: "no es una cita", desde: "/cuaderno" }), null);
+  });
+
   it("el cuaderno vuelve al cuaderno con la cita, no al inicio", () => {
     const p = q(
       urlPuenteRevelatio({

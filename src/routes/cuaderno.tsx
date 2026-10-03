@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
@@ -20,13 +20,22 @@ import { semanaVigente } from "@/lib/calendario";
 import { CUADERNO_VACIO } from "@/lib/copy-nivel";
 import { PRIMERA_VEZ } from "@/lib/pilar";
 import { pageHead, tituloSeccion } from "@/lib/seo";
+import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
 import { fichaEstudio } from "@/lib/fichas-portada";
 import { MANUAL_CAMPO } from "@/lib/verdad";
 
 export const Route = createFileRoute("/cuaderno")({
-  validateSearch: (raw: Record<string, unknown>): { ref?: string } => {
-    if (typeof raw.ref === "string" && raw.ref.trim()) return { ref: raw.ref };
-    return {};
+  validateSearch: (raw: Record<string, unknown>): { ref?: string; cita?: string } => {
+    const search: { ref?: string; cita?: string } = {};
+    if (typeof raw.ref === "string" && raw.ref.trim()) search.ref = raw.ref.trim();
+    if (typeof raw.cita === "string" && raw.cita.trim()) search.cita = raw.cita.trim();
+    return search;
+  },
+  beforeLoad: ({ search }) => {
+    if (!search.cita) return;
+    const href = urlPuenteRevelatio({ ref: search.cita, desde: "/cuaderno" });
+    if (!href) return;
+    throw redirect({ href });
   },
   head: () =>
     pageHead({
