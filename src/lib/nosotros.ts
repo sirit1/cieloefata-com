@@ -2,7 +2,7 @@
 
 export const NOSOTROS = {
   title: "Nosotros",
-  kicker: "Editorial Cielo Efata · Dr. Alejandro Sirit",
+  kicker: "Editorial Cielo Efata · Alejandro Sirit",
   escribe: {
     title: "Quién escribe",
     body: [

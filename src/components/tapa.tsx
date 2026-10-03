@@ -24,7 +24,7 @@ export function Tapa({ obra, size = "lg", className = "", priority = false }: Ta
   return (
     <img
       src={tapaPath(obra.slug)}
-      alt={`Tapa de ${obra.title}, Dr. Alejandro Sirit. Editorial Cielo Efata.`}
+      alt={`Tapa de ${obra.title}, Alejandro Sirit. Editorial Cielo Efata.`}
       width={900}
       height={1440}
       decoding="async"

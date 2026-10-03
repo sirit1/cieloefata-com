@@ -1,6 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
+import { ColofonTratado } from "@/components/colofon-tratado";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
@@ -74,6 +75,7 @@ function TratadoPage() {
             </p>
         ))}
       </div>
+      <ColofonTratado />
       <Refs refs="2 P. 3:16 · Neh. 8:8" />
       <CierreAula
         kind="tratado"
