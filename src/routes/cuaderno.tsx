@@ -6,6 +6,9 @@ import { Retomar } from "@/components/retomar";
 import { aulaSinActo, cerrarAulaSiEscrito, type AulaAbierta } from "@/lib/aula-abierta";
 import { actoDe } from "@/lib/actos";
 import { useCurrentUser } from "@/lib/auth/use-current-user";
+import { authEnabled, signIn } from "@/lib/auth/client";
+import { GROK_PROVIDERS } from "@/lib/auth/providers";
+import { guardarActo, leerActos } from "@/lib/cuaderno.functions";
 import {
   clearBorrador,
   loadBorrador,
@@ -64,9 +67,27 @@ function CuadernoPage() {
 
   useEffect(() => {
     setHidratado(false);
-    setItems(loadCuaderno(userId));
+    const local = loadCuaderno(userId);
+    setItems(local);
     setPendiente(aulaSinActo());
     const draft = loadBorrador(userId);
+    if (userId) {
+      leerActos()
+        .then((rows) => {
+          const byAt = new Map<string, CuadernoEntry>();
+          for (const row of rows) byAt.set(row.at, row);
+          for (const row of local) {
+            if (!byAt.has(row.at)) {
+              byAt.set(row.at, row);
+              void guardarActo({ data: row }).catch(() => undefined);
+            }
+          }
+          const merged = [...byAt.values()].sort((a, b) => b.at.localeCompare(a.at));
+          saveCuaderno(merged, userId);
+          setItems(merged);
+        })
+        .catch(() => undefined);
+    }
     if (ref) {
       setPassage(ref);
       if (draft && draft.ref === ref) {
@@ -116,6 +137,7 @@ function CuadernoPage() {
       ...items,
     ];
     saveCuaderno(next, userId);
+    if (userId) void guardarActo({ data: next[0] }).catch(() => undefined);
     setItems(next);
     setIndicativo("");
     setDecision("");
@@ -133,8 +155,8 @@ function CuadernoPage() {
   const actoSemana = actoDe(semana.studySlug);
   const vacio = items.length === 0;
   const persistencia = userId
-    ? "Lo escrito queda en este navegador, bajo tu sesión. No se envía a otra casa."
-    : "Lo escrito queda en este navegador. No se envía a otra parte. Quien entre con cuenta propia no mezcla este cuaderno con el del huésped.";
+    ? "El acto queda en tu cuenta. Otro teléfono, con la misma sesión, lo encuentra. No se envía a otra casa."
+    : "El acto queda en este navegador hasta que entres. Con la sesión, te sigue. Sin ella, el otro teléfono no lo ve.";
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-16 md:py-24">
@@ -288,9 +310,26 @@ function CuadernoPage() {
       <section className="mt-12">
         <h2 className="font-serif text-2xl">Lo escrito</h2>
         <p className="mt-3 font-sans text-sm text-ink-soft">{persistencia}</p>
+        {authEnabled && !userId ? (
+          <p className="mt-3 font-sans text-sm">
+            {GROK_PROVIDERS.map((p, i) => (
+              <span key={p.providerId}>
+                {i > 0 ? " · " : null}
+                <button
+                  type="button"
+                  className="text-link underline"
+                  onClick={() => signIn(p.providerId, { callbackURL: "/cuaderno" })}
+                >
+                  Entrar con {p.label}
+                </button>
+              </span>
+            ))}
+          </p>
+        ) : null}
         {items.length === 0 ? (
           <p className="mt-4 leading-relaxed text-ink-soft">
-            Cuando se guarde el primer acto, quedará aquí, con fecha. El navegador lo recuerda.
+            Cuando se guarde el primer acto, quedará aquí, con fecha.
+            {userId ? " La cuenta lo guarda." : " Este navegador lo recuerda hasta que entres."}
           </p>
         ) : (
           <ul className="mt-6 space-y-6">
