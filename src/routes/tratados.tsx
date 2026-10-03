@@ -20,7 +20,7 @@ export const Route = createFileRoute("/tratados")({
       description:
         "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
       detalle:
-        "Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo sostiene. Entran los catorce que ya tienen manuscrito, PDF y portada. Lo que no tiene carpeta no se finge.",
+        "Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle. RevelatiO abre ese capítulo; el tratado se sienta atrás, y no se finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada.",
     });
   },
 });
@@ -35,10 +35,10 @@ function TratadosPage() {
       <Motif kind="lamb" />
       <h1 className="mt-2 font-serif text-4xl">El ensayo del mes</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        Un tratado no es un estudio breve ni un devocional. Es el ensayo largo de la escuela: un
-        versículo que a menudo se cita de memoria, leído otra vez dentro del capítulo que lo
-        sostiene. Entran los catorce que ya tienen manuscrito, PDF y portada. Lo que no tiene
-        carpeta no se finge.
+        Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo
+        citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle.
+        RevelatiO abre ese capítulo; el tratado se sienta atrás, y no se finge un manuscrito que
+        no existe. Entran los catorce que ya tienen manuscrito, PDF y portada.
       </p>
       <Refs refs="Neh. 8:8 · 2 P. 3:16" />
 

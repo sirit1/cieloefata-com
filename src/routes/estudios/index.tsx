@@ -23,7 +23,7 @@ export const Route = createFileRoute("/estudios/")({
       description:
         "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí; RevelatiO abre el capítulo.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda preguntar mañana. La escuela publica lo que Drive ya cerró: trece estudios con manuscrito y catorce tratados con portada.",
+        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. RevelatiO abre el capítulo entero; esta casa no lo sustituye: lo escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
     }),
 });
 
@@ -46,10 +46,12 @@ function EstudiosPage() {
       <Motif kind="lion" />
       <h1 className="mt-2 font-serif text-4xl">Las clases de la escuela</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        Un estudio es la clase: un pasaje completo, la cadena V.E.R.D.A.D.™ —Ver, Entorno,
-        Revelación, Doctrina, Argumento y Decisión— y un solo paso, dicho a alguien que pueda
-        preguntar mañana. La escuela publica lo que Drive ya cerró: trece estudios con
-        manuscrito y catorce tratados con portada.
+        Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver,
+        Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien
+        que pueda preguntar mañana. RevelatiO abre el capítulo entero; esta casa no lo sustituye:
+        lo escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia.
+        Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen
+        portada.
       </p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
       <p className="mt-4 font-sans text-sm">
