@@ -158,7 +158,7 @@ function Home() {
           <div className="max-w-[40em]">
             <h2 className="font-serif text-3xl">{CORPUS.title}</h2>
             <p className="kicker mt-4">
-              Dr. Alejandro Sirit · Editorial Cielo Efata
+              Alejandro Sirit · Editorial Cielo Efata
             </p>
             <p className="mt-6 text-lg">
               <ConLemas>{CORPUS.gate}</ConLemas>

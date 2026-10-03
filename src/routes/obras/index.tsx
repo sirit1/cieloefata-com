@@ -33,7 +33,7 @@ function ObrasPage() {
       <CorpusJsonLd />
       <Volver />
       <h1 className="mt-2 font-serif text-4xl">{CORPUS.title}</h1>
-      <p className="kicker mt-4">Dr. Alejandro Sirit · Editorial Cielo Efata</p>
+      <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
       <p className="mt-5 text-lg">
         <ConLemas>{CORPUS.gate}</ConLemas>
       </p>

@@ -49,7 +49,7 @@ export function ObraPage() {
       </p>
       <h1 className="mt-3 font-serif text-4xl md:text-5xl">{obra.title}</h1>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>
-      <p className="kicker mt-4">Dr. Alejandro Sirit · Editorial Cielo Efata</p>
+      <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">
         Capítulo ancla: {obra.pasaje}
       </p>

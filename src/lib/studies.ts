@@ -29,7 +29,7 @@ export const studies: Study[] = [
 		doctrina: "Dios salva con poder, no con mejora del yo. La justicia que salva no nace en el oyente: se revela en el evangelio, y se revela porque el Padre no deja de ser justo para poder perdonar. La fe no es un mérito; es el medio. El pueblo de Dios cruza judío y griego sin borrar la historia de Israel, y sin convertir al gentil en el nuevo centro. El Hijo declarado en 1:3–4 —nacido de la simiente de David, declarado Hijo de Dios con poder por la resurrección— es el contenido de ese poder. El que se avergüenza de este evangelio se avergüenza de Cristo.",
 		argumento: "El texto te niega dos vergüenzas: la de recortar el evangelio para que no moleste, y la de convertirlo en una técnica. Si es poder de Dios, no se negocia. Si es para el que cree, no se hereda por sangre ni por aparato. Status quaestionis: ¿es el evangelio un consejo de vida mejor, o el poder de Dios para salvación? Distingo: hay ética en Romanos 12, y nace de las misericordias, no las sustituye. Reductio: si el 16 se cita sin el 18, se ha fabricado un evangelio sin ira, y por tanto sin cruz.",
 		decision: "Esta semana, nombra delante de alguien de confianza de qué evangelio te has avergonzado —qué has recortado para no ofender, o qué has convertido en técnica— y cree en voz alta el que Pablo no recorta. Un acto. No una lista. El domingo, que te pregunten si todavía estás negociando el poder como si fuera consejo.",
-		conclusion: "El evangelio no es un adorno de la casa, sino poder de Dios para salvación. Quien se avergüenza de él ya eligió otro señor, aunque conserve el vocabulario de la cruz. — Dr. Alejandro Sirit"
+		conclusion: "El evangelio no es un adorno de la casa, sino poder de Dios para salvación. Quien se avergüenza de él ya eligió otro señor, aunque conserve el vocabulario de la cruz. — Alejandro Sirit"
 	},
 	{
 		slug: "marcos-1",
@@ -44,7 +44,7 @@ export const studies: Study[] = [
 		doctrina: "Dios reina y llama. El pecado no se administra: se deja. Cristo no mejora el yo: exige fe en la buena noticia, y la buena noticia es él, el Hijo amado del bautismo (1:11). El pueblo de Dios empieza donde alguien se vuelve, no donde alguien se informa. Isaías 40:3 ya abrió el libro: preparad el camino del Señor. El Señor que llega no ofrece una técnica. En 7:34 dirá Éfata. Aquí, en Galilea, pide los dos verbos que el resto del evangelio no suaviza. Nadie se vuelve a un reino abstracto: se vuelve a este Jesús.",
 		argumento: "El texto te niega el aplazamiento. Si el reino se acercó, no hay un tercer verbo. O te vuelves, o sigues de espaldas con un vocabulario piadoso. Status quaestionis: ¿es este anuncio una invitación blanda, o un decreto del Rey? Distingo: hay misericordia en el evangelio, y nace de que el tiempo se cumplió en Cristo, no de que el oyente esté listo. Reductio: si «más tarde» cabe, el καιρός no se ha cumplido, y Marcos ha mentido en el primer anuncio del Señor.",
 		decision: "Esta semana, nombra delante de alguien de confianza de qué te estás volviendo —con nombre, no con niebla— y cree el evangelio en voz alta. Un paso. No una lista. El que añade un tercer verbo para aplazar el mandato todavía no ha oído a Galilea.",
-		conclusion: "El evangelio no abre con un consuelo: abre con un mandato. El reino se acercó, y hay que volverse y creer. — Dr. Alejandro Sirit"
+		conclusion: "El evangelio no abre con un consuelo: abre con un mandato. El reino se acercó, y hay que volverse y creer. — Alejandro Sirit"
 	},
 	{
 		slug: "juan-3",
@@ -59,7 +59,7 @@ export const studies: Study[] = [
 		doctrina: "El reino no se ve por erudición. Hay que nacer. Dios da vida; el pecado no se educa hasta la salvación. Cristo habla como quien está arriba y vino abajo: el que bajó del cielo (3:13) es el que exige el nacimiento, y el Hijo del hombre será levantado como la serpiente en el desierto (3:14–15; Nm. 21). Juan 3:16 no es un cartel suelto, sino la lógica del que debe nacer de lo alto porque el Hijo fue dado. La Iglesia no fabrica hijos: los recibe del Espíritu. El nuevo nacimiento no es un anexo de la cruz, sino lo que la cruz produce por el Espíritu.",
 		argumento: "Si ya enseñas y todavía no has nacido, el texto te deja sin oficio. El problema no es que te falte un curso. Es que estás muerto y hablas de Dios. Status quaestionis: ¿es el nuevo nacimiento un hábito renovado, o una generación que el hombre no se da? Distingo: hay crecimiento, y hay nacimiento; el segundo no se improvisa con el primero. Reductio: si Nicodemo puede ver el reino por ser maestro de Israel, Jesús ha mentido, y Ezequiel 36 era un adorno.",
 		decision: "Esta semana, deja de negociar el nuevo nacimiento como metáfora. Ora con alguien que ya cree, y pregunta en serio si has nacido de lo alto. Si la respuesta es niebla, no añadas un curso: pide el milagro que el viento da donde quiere, y no te administres un rito para no nacer.",
-		conclusion: "Nicodemo ya sabe y ya enseña; de noche pregunta. Jesús no le mejora el oficio: le pide nacer de nuevo. — Dr. Alejandro Sirit"
+		conclusion: "Nicodemo ya sabe y ya enseña; de noche pregunta. Jesús no le mejora el oficio: le pide nacer de nuevo. — Alejandro Sirit"
 	},
 	{
 		slug: "hechos-2",
@@ -73,7 +73,7 @@ export const studies: Study[] = [
 		doctrina: "Cristo es Señor porque Dios lo hizo. El pecado tiene nombre y fecha: vosotros crucificasteis. La conversión se oye, se vuelve y se bautiza. El Espíritu es don, no premio. El sermón es cristología pública: el Jesús crucificado es el Señor del Salmo 110 y el Santo que no vio corrupción (Sal. 16). Pentecostés no desplaza a Cristo: lo declara. El Espíritu convence, como el Señor prometió en Juan 16:8. Los tres mil no recibieron un lema: recibieron al Señor y Cristo, el perdón y el don.",
 		argumento: "Si oíste y no preguntas «qué haremos», no oíste. El texto no te deja en la emoción del sermón. Te pone en la calle hacia el agua. Status quaestionis: ¿es Pentecostés un espectáculo de poder, o el cumplimiento que produce arrepentimiento y bautismo? Distingo: hay poder, y hay corte; el segundo verifica al primero. Reductio: si el don se recibe sin μετανοήσατε, Pedro ha mentido, y Joel ha sido citado para un clima.",
 		decision: "Si aún no has sido bautizado en el nombre de Jesucristo, habla esta semana con quien pueda administrarlo. Si ya lo fuiste, di a alguien el siguiente acto de obediencia, no un sentimiento. El que se queda en la emoción del sermón ha oído a Pedro como se oye un concierto.",
-		conclusion: "Los que oyeron preguntaron qué debían hacer. Pedro no suaviza la respuesta. — Dr. Alejandro Sirit"
+		conclusion: "Los que oyeron preguntaron qué debían hacer. Pedro no suaviza la respuesta. — Alejandro Sirit"
 	},
 	{
 		slug: "juan-1",
@@ -87,7 +87,7 @@ export const studies: Study[] = [
 		doctrina: "Cristo es Dios y está con Dios. La creación es suya. La encarnación es carne, no disfraz. La gloria se ve en el Unigénito. Nadie ha visto a Dios; el Hijo lo da a conocer. A los que le reciben, les da autoridad de ser hechos hijos de Dios, no de sangre ni de voluntad de varón, sino de Dios. El nuevo nacimiento de Juan 3 ya está aquí. El Verbo no mejora oficios. Da vida. El prólogo ya contiene la cruz: el rechazo. Y ya contiene la gloria: la del Unigénito.",
 		argumento: "Quien recorta Juan 1:1 a un adorno de diciembre no ha leído. El texto no te deja un Jesús útil. Te deja al Verbo que te hizo y al que tus rechazos no deshacen. Status quaestionis: ¿es el Verbo un símbolo de iluminación, o Dios hecho carne? Distingo: hay luz, y hay Persona; la primera no sustituye a la segunda. Reductio: si 1:1 se suaviza para no ofender, ya se eligió otro señor, aunque se conserve el villancico.",
 		decision: "Lee Juan 1:1–18 entero, en voz alta, dos veces esta semana. Escribe una frase: qué afirma de Cristo que tú habías dejado blando. El tratado del mes sostiene este mismo prólogo. El capítulo espera. No memorices el himno: óyelo hasta que el tabernáculo te deje sin un Jesús de diciembre.",
-		conclusion: "Quien lo recorta a un versículo de diciembre no ha leído. Aquí hay eternidad, creación, rechazo, tabernáculo y el Unigénito que declara al Padre. — Dr. Alejandro Sirit"
+		conclusion: "Quien lo recorta a un versículo de diciembre no ha leído. Aquí hay eternidad, creación, rechazo, tabernáculo y el Unigénito que declara al Padre. — Alejandro Sirit"
 	},
 	{
 		slug: "isaias-53",
@@ -101,7 +101,7 @@ export const studies: Study[] = [
 		doctrina: "El pecado es rebelión y se carga. Dios no mira a otro lado: pone el pecado sobre el Siervo. Cristo justifica a muchos porque lleva iniquidades. El pueblo queda sano por llaga ajena, no por técnica interior. El cordero de Éxodo 12, el macho cabrío de Levítico 16, el justo de Isaías 53 y el Cordero de Apocalipsis 5 son un solo hilo. Jesús no cabe aquí como ejemplo de amor sin cargo. Cabe como el que fue hecho pecado por nosotros (2 Co. 5:21).",
 		argumento: "Si tu cruz es un ejemplo de amor sin cargo, no es Isaías 53. El texto te quita el derecho de decir «yo me curo a mí mismo». Status quaestionis: ¿poema de resiliencia, o sustitución? Distingo: hay dolor, y hay cargo; el primero no agota al segundo. Reductio: si el Siervo no lleva iniquidades, el pueblo no queda sano, y Hechos 8 ha anunciado a otro Jesús.",
 		decision: "Confiesa esta semana, a Dios y a una persona, un pecado que has llamado «herida» para no llamarlo rebelión. Nómbralo bajo la llaga del Siervo, sin eufemismo. Luego el capítulo entero. El tratado no sustituye a Isaías 53. Lo sirve, y se sienta atrás.",
-		conclusion: "El Siervo carga lo que no es suyo. Hebreo, analogía de la fe y una cruz con nombre. — Dr. Alejandro Sirit"
+		conclusion: "El Siervo carga lo que no es suyo. Hebreo, analogía de la fe y una cruz con nombre. — Alejandro Sirit"
 	},
 	{
 		slug: "romanos-3",
@@ -115,7 +115,7 @@ export const studies: Study[] = [
 		doctrina: "La justicia de Dios no es un ánimo. Se manifiesta en Cristo. La fe no es meritoria: recibe. Dios no deja de ser justo para perdonar: justifica por la sangre. No hay distinción: todos pecaron. Romanos 3:26 impide dos herejías: la del perdón sin juicio, y la del juicio sin cruz. El Hijo es el lugar donde la ira y la misericordia se encuentran sin mentira. El evangelio que salva al que ya mejoró no es este evangelio.",
 		argumento: "Si tu evangelio salva sin propiciatorio, no es Romanos 3. El texto cierra la boca que aún quiere aportar ley como moneda. Status quaestionis: ¿perdón barato, o justificación por la sangre? Distingo: hay ley que testifica, y hay ley que no justifica. Reductio: si la jactancia no se excluyó, 3:27 ha fallado, y Habacuc entra en vano.",
 		decision: "Esta semana, deja de mezclar tu hoja de servicios con la justificación. Di a alguien: soy justificado por la fe en Jesús, sin la ley. Luego lee 3:21–26 dentro de 3:9–31. El tratado del mes sostiene este mismo párrafo. RevelatiO abre el capítulo.",
-		conclusion: "Griego, Habacuc, el propiciatorio y un Dios que es justo y justifica. — Dr. Alejandro Sirit"
+		conclusion: "Griego, Habacuc, el propiciatorio y un Dios que es justo y justifica. — Alejandro Sirit"
 	},
 	{
 		slug: "2-pedro-1",
@@ -129,7 +129,7 @@ export const studies: Study[] = [
 		doctrina: "Dios dio todo lo que concierne a la vida y a la piedad. El creyente no improvisa el carácter: lo suministra. La elección se confirma en el camino, no en el eslogan. El pueblo que no añade se vuelve estéril. Las virtudes no sustituyen a Cristo: las da el que ya nos dio todo. Santiago 2 y Judas 3 leen el mismo peligro: llamar fe a un asentimiento que no se mueve, y llamar libertad a la esclavitud. Este tomo, en la colección, se llama La fe no basta, y no discute a Pablo: desnuda al que cita a Pablo para no añadir.",
 		argumento: "La fe que no se ejercita no es humildad. Es ceguera. El texto te niega el «ya creí, ya está». Status quaestionis: ¿ociosidad piadosa, o diligencia que costea? Distingo: hay descanso en Cristo, y hay suministro; el primero no anula al segundo. Reductio: si no añadir es gracia, el capítulo 2 no desenmascara a nadie, y Pedro ha escrito en vano.",
 		decision: "Elige un eslabón para esta semana. Escríbelo en el cuaderno y dilo a alguien de confianza. Uno. Costealo. El que elige siete no ha elegido ninguno. El que no lo dice a un testigo lo ha dejado en el eslogan.",
-		conclusion: "Siete eslabones y una sola pendiente. La fe que no añade se vuelve estéril. — Dr. Alejandro Sirit"
+		conclusion: "Siete eslabones y una sola pendiente. La fe que no añade se vuelve estéril. — Alejandro Sirit"
 	},
 	{
 		slug: "2-corintios-5",
@@ -143,7 +143,7 @@ export const studies: Study[] = [
 		doctrina: "Estar en Cristo es el umbral. El pecado de él no era suyo. Nuestra justicia no es nuestra. El pueblo no improvisó un mensaje: recibió uno de reconciliación. La justicia de Dios en él es Romanos 3 leído desde el ministerio. El embajador no recablea al enemigo: le ruega que se reconcilie. El tribunal de 5:10 impide que la nueva creación se vuelva un clima interior sin cuerpo y sin juicio.",
 		argumento: "Si «nueva criatura» te deja igual de enemigo y solo más inspirado, no leíste el versículo 21. Status quaestionis: ¿recableado del yo, o reconciliación por el que fue hecho pecado? Distingo: hay novedad, y hay cargo; la primera nace del segundo. Reductio: si el 21 no está, el 17 es un lema, y el embajador no tiene nada que decir.",
 		decision: "Esta semana, habla como embajador una vez: di a alguien concreto que Dios llama a reconciliarse, no a recablearse. Un nombre. Un ruego. No un hilo. El que se queda en el 17 sin el 21 ha convertido la nueva creación en un espejo.",
-		conclusion: "No es un yo recableado, sino reconciliación, y somos embajadores. — Dr. Alejandro Sirit"
+		conclusion: "No es un yo recableado, sino reconciliación, y somos embajadores. — Alejandro Sirit"
 	},
 	{
 		slug: "filipenses-2",
@@ -157,7 +157,7 @@ export const studies: Study[] = [
 		doctrina: "Cristo es igual a Dios y se hizo siervo. La cruz es obediencia, no accidente. La exaltación es del Padre. Toda rodilla es escatología, no eslogan. El Nombre sobre todo nombre es YHWH dado al Hijo. El sentir que se pide a Filipos es este Cristo, no un talante amable. El himno no es un poema de autoayuda sobre bajar el ego. Es el camino del Hijo: igualdad no aferrada, siervo, cruz, exaltación.",
 		argumento: "Si tu «sentir de Cristo» no baja, no es este himno. El texto no te pide una marca de siervo: te pide la forma. Status quaestionis: ¿himno de kénosis para el seminario, o medida de la mente de Filipos? Distingo: ἐκένωσεν no es dejar de ser quién es. Reductio: si se canta la exaltación y se evita la forma de siervo, se ha cambiado de señor.",
 		decision: "Cede un derecho esta semana —uno que te estaba inflando— y no lo anuncies. Hazlo porque el himno manda. Evodia y Síntique no necesitan otro taller: necesitan este Cristo. El que anuncia el despojo ya lo ha convertido en teatro.",
-		conclusion: "El himno que humilla al yo antes de exaltarlo. — Dr. Alejandro Sirit"
+		conclusion: "El himno que humilla al yo antes de exaltarlo. — Alejandro Sirit"
 	},
 	{
 		slug: "santiago-1",
@@ -171,7 +171,7 @@ export const studies: Study[] = [
 		doctrina: "La Palabra que se oye obliga. El autoengaño es liturgia de los que solo escuchan. La libertad no es huir de la ley, sino permanecer en ella y ser bienaventurado en el hacer. Mateo 7:24–27 está debajo: el que oye y no hace es casa sobre arena. El Señor que dijo Éfata no deja el oído abierto para el archivo. Lo deja abierto para el acto. C.R.I.S.O.L.™, expuesto en El Altar del Espejo, es la compuerta de este eslabón.",
 		argumento: "El estudio que no decide es el hombre del espejo. Este sitio no te deja el pasaje en la cabeza. Status quaestionis: ¿retraso inocente, o engaño de sí? Distingo: hay oír, y hay hacer; el primero sin el segundo es παραλογισμός. Reductio: si el cuaderno basta, Santiago ha llamado bienaventuranza a lo que es olvido, y el espejo no era altar: era tocador.",
 		decision: "Lo que este texto te mostró, hazlo antes de siete días. Anótalo. Dilo a un testigo. Si se queda en el cuaderno sin acto, volviste a mirarte y te fuiste. Queda prohibido un «hoy muero a…» que el pasaje no conjuga. El verbo aquí es hacer, no morir a un ego genérico.",
-		conclusion: "Oír y no hacer es engaño de sí, no un retraso inocente. — Dr. Alejandro Sirit"
+		conclusion: "Oír y no hacer es engaño de sí, no un retraso inocente. — Alejandro Sirit"
 	},
 	{
 		slug: "romanos-12",
@@ -185,7 +185,7 @@ export const studies: Study[] = [
 		doctrina: "Las misericordias preceden al mandato. El culto es el cuerpo. El siglo tiene molde. Dios renueva la mente. El pueblo discernirá la voluntad cuando no se deje vaciar en el molde. El sacrificio vivo es posible porque el Hijo se ofreció (Ro. 3:25; 8:32; Ef. 5:2). La mente renovada discierne porque ha oído las misericordias, no porque haya leído un manual de hábitos. El pueblo no se conforma: se presenta.",
 		argumento: "Si tu culto es emoción sin cuerpo y sin no al siglo, no es Romanos 12. Status quaestionis: ¿recableado interior, o presentación del cuerpo por las misericordias? Distingo: hay transformación, y hay molde; la primera no se fabrica ensamblándose al segundo. Reductio: si el «así que» se corta, el mandato nace de la voluntad, no de la misericordia, y se ha vuelto a la ley.",
 		decision: "Nombra un molde de este siglo al que te estás adaptando. Preséntalo esta semana: un no concreto, dicho a alguien. El cuerpo es el altar. El que se queda en la emoción del culto sin un no ha oído Romanos 12 como se oye un himno, no como se oye un ruego.",
-		conclusion: "La mente nueva es culto a Dios, no un recableado interior. — Dr. Alejandro Sirit"
+		conclusion: "La mente nueva es culto a Dios, no un recableado interior. — Alejandro Sirit"
 	},
 	{
 		slug: "juan-14",
@@ -201,7 +201,7 @@ export const studies: Study[] = [
 		doctrina: "El Padre se alcanza por el Hijo. Cristo es verdad, no un recurso. La vida no se añade al camino: es Él. El pueblo no inventa sendas paralelas. Hebreos 10:19–20 llama a su carne el velo recién abierto. Hechos 4:12 niega otro nombre. El Paráclito no es un atajo, sino el que toma de lo que es de Cristo y lo hace saber. Tomás recibió una persona, no un diagrama. «Muchos caminos» no sobrevive a Juan 14:6.",
 		argumento: "«Muchos caminos» no sobrevive a Juan 14:6. El texto te obliga a ofender o a creer. Status quaestionis: ¿un recurso entre otros, o el único camino al Padre? Distingo: hay gentileza, y hay verdad; la primera no autoriza a recortar οὐδεὶς. Reductio: si hay otro camino, Tomás recibió un mapa, y el velo de Hebreos 10 era un adorno.",
 		decision: "Esta semana, deja de suavizar «nadie viene». Di a una persona, sin grosería y sin rebaja, que el Padre se alcanza por Jesús. El que busca un mapa todavía no ha oído a Tomás. El que ha oído, habla, o sigue de noche con un vocabulario inclusivo.",
-		conclusion: "Él es el camino, la verdad y la vida. — Dr. Alejandro Sirit"
+		conclusion: "Él es el camino, la verdad y la vida. — Alejandro Sirit"
 	},
 	{
 		slug: "salmo-23",
@@ -215,7 +215,7 @@ export const studies: Study[] = [
 		doctrina: "El Señor pastorea. La falta se mide por Él, no por el siglo. La muerte tiene valle y no tiene la última palabra. Juan 10: el Buen Pastor da la vida por las ovejas. Hebreos 13:20: el Dios de paz trajo de los muertos a nuestro Señor Jesucristo, el gran Pastor. Apocalipsis 7:17: el Cordero los pastoreará. El Salmo 23 no es mindfulness hebreo. Es el Nombre que pastorea, y el Hijo que entra al valle hasta la cruz, y sale.",
 		argumento: "Si usas el Salmo 23 para negar el valle, lo invertiste. El texto pone al Pastor dentro, no al valle fuera. Status quaestionis: ¿postal de consuelo, o pastoreo del Nombre en la sombra? Distingo: hay descanso, y hay valle; el primero no evapora al segundo. Reductio: si el valle se medita hasta desaparecer, el «tú estás conmigo» sobra, y Juan 10 da la vida por un paisaje.",
 		decision: "Donde ahora tienes miedo, nombra al Pastor en segunda persona esta semana: «tú estás conmigo». Dilo a alguien que camine el mismo valle. El que reza el salmo para que el valle se vaya aún no ha llegado al «tú». El que ha llegado, no niega la sombra: la atraviesa.",
-		conclusion: "El valle se atraviesa con el Pastor, no se medita para que desaparezca. — Dr. Alejandro Sirit"
+		conclusion: "El valle se atraviesa con el Pastor, no se medita para que desaparezca. — Alejandro Sirit"
 	},
 	{
 		slug: "genesis-3",
@@ -230,7 +230,7 @@ export const studies: Study[] = [
 		doctrina: "De este párrafo, y no de un sistema traído de otra página, se oye qué se afirma de Dios, del pecado, de Cristo y del pueblo. Dios habla, viste, pone enemistad y anuncia la simiente. El pecado tuerce la Palabra antes de morder, cose hojas, se esconde y acusa. Cristo está en la simiente que herirá la cabeza. El pueblo es expulsado y cubierto.\n\nLa analogía antecedente oye solo Génesis 1–2: don, imagen, mandato, desnudez sin vergüenza, oficio de guardar. Eso basta para oír la transgresión. Quien llene esas cuatro voces con Calcedonia antes de oír a Moisés usa a Moisés como ventrílocuo.\n\nLa analogía plena se etiqueta y llega después: Romanos 5:12–19, 1 Corintios 15:21–22, Filipenses 2, Romanos 16:20, Apocalipsis 12:9. El protoevangelio se oye como promesa de simiente y de herida, no como folleto de soteriología. El que predica un ordo salutis en 3:6 aún no ha hecho Doctrina: ha hecho contrabando.",
 		argumento: "La cuestión que hay que plantear es esta: ¿es Génesis 3 saga etiológica, mito de origen, o historia del pacto quebrantado?\n\nHay etiología literaria —el texto explica por qué hay dolor, tierra dura, querubines— y no hay mito ontológico. El género es narración, no reportaje moderno, y eso no la vuelve fábula. Mateo 19:4–6: Jesús toma Génesis 2 como Palabra del Creador, no como poema tribal. Oseas 6:7 nombra a Adán como transgresor del pacto.\n\nLa fuente es el texto. Wellhausen y Gunkel no legislan. Ireneo, Adversus Haereses III.23, oye la recapitulatio y no sustituye al párrafo. Calvino, Institución II.i, ata la caída a la cabeza. Hamilton sirve el hebreo; no legisla.\n\nSi la serpiente dice verdad, Dios miente. Si Adán no cayó, Cristo no es último Adán: Romanos 5 compara al Hijo con una alegoría. El criticismo que disuelve Génesis 3 disuelve el evangelio. La forma cultual de 3:1, hoy, no pregunta por el fruto: pregunta «¿Conque esto ocurrió?»",
 		decision: "El indicativo no es «fuisteis informados». Dios cubre, pone enemistad y anuncia la simiente. Nadie mortifica para unirse: se mortifica porque ha sido hallado y vestido.\n\nQueda prohibido «hoy muero a la fruta», porque ese verbo no está. El verbo de 3:1 es la glosa: el אַף que puso el mandato entre comillas. Se toma un mandato de esta semana que se ha suavizado, y se le quita la partícula.\n\n«Hoy muero a las hojas de higuera» sí se conjuga: 3:7 las nombra. El escondite de 3:8 también, y la acusación de 3:12. Se leen y se nombran; no se importa un ego genérico.\n\nUn acto, no una lista: leer Génesis 3 entero, en voz alta; confesar delante de un testigo la negociación; quitar el אַף de un mandato que esta semana se ha puesto entre comillas. C.R.I.S.O.L.™, expuesto en El Altar del Espejo, guarda este eslabón: no es un método segundo.",
-		conclusion: "Antes de que hubiera ídolo de madera, hubo glosa. El primer atentado contra la Palabra no fue un silencio: fue un comentario. — Dr. Alejandro Sirit"
+		conclusion: "Antes de que hubiera ídolo de madera, hubo glosa. El primer atentado contra la Palabra no fue un silencio: fue un comentario. — Alejandro Sirit"
 	},
 	{
 		slug: "salmo-22",
@@ -245,7 +245,7 @@ export const studies: Study[] = [
 		doctrina: "Analogía antecedente: el justo perseguido ya conocido en la historia de David. Analogía plena: los evangelios de la Pasión. No se silencia el Mesías donde el Nuevo Testamento lo nombra. No se toma cada «yo» como autobiografía del lector. Juan 19 sortea las vestiduras. Hebreos 2:12 pone al Hijo en la asamblea. El salmo no es crónica del Gólgota escrita como reportaje, sino oración que el Espíritu destinó al Gólgota. Quien se vista con este clamor para no oír al Mesías hurta el salmo.",
 		argumento: "La precisión no es coincidencia. El crítico que reduce el salmo a «relectura cristiana» miente contra Mateo 27. Status quaestionis: ¿oración de David, o del Hijo? Distingo: de David, y del Hijo con autoridad canónica. Reductio: si el clamor de la cruz es cita ornamental, Mateo testifica en vano, y el 24 —no me has despreciado— queda como un consuelo privado que la Pasión no puede sostener.",
 		decision: "El indicativo es «me has oído». El imperativo es proclamar, no «hoy muero a mis sentimientos de abandono» sin el verbo del texto. Lee el salmo entero, en voz alta, y di a alguien la alabanza que el abandonado promete a la asamblea. Quien se quede en el versículo 1 como amuleto de abandono aún no ha llegado al 24.",
-		conclusion: "David primero; el Hijo de David con autoridad canónica. El «yo» del salmo no es el lector disfrazado. — Dr. Alejandro Sirit"
+		conclusion: "David primero; el Hijo de David con autoridad canónica. El «yo» del salmo no es el lector disfrazado. — Alejandro Sirit"
 	},
 	{
 		slug: "marcos-7",
@@ -260,7 +260,7 @@ export const studies: Study[] = [
 		doctrina: "Dios abre. El hombre está cerrado. Cristo toca porque es hombre y ordena porque es Dios. El pueblo trae al sordo y luego desobedece. Analogía antecedente: Marcos 4, el que tiene oídos para oír. Canon pleno: el Shemá, Isaías 6, Isaías 35, Isaías 50, Emaús, Lidia, Romanos 10:17, las siete iglesias, el Cordero que abre el libro. Este tratado se llama Éfata porque el oído y el libro coinciden. No porque el vocablo sea hermoso. El oído abierto y el libro abierto son el mismo misterio: Dios no deja cerrado lo que ha decidido abrir.",
 		argumento: "Objeción primera: «Éfata es un lema de marca». Respondeo: en Marcos 7:34 es palabra de Cristo a un sordo; como título, es sierva de esa palabra, no dueña. Si la marca va primero, el sordo sigue sordo. Objeción segunda: «el milagro es metáfora de inclusión». Reductio: si se evapora el cuerpo, se evapora Isaías 35 y se queda un eslogan. Si Éfata es técnica de escucha interior, el milagro ya no es del Hijo.",
 		decision: "El sordo de Marcos 7 no «murió hoy a su sordera»: fue abierto. Esa es la gramática de la gracia. Un acto: lee Marcos 7 entero, en voz alta, y nombra delante de alguien lo que aún no oyes. Mañana se vuelve. El oído no se abre una sola vez. El que convierte Éfata en marca y deja al sordo cerrado ha tomado el nombre del milagro en vano.",
-		conclusion: "Jesús no le explicó al sordo el método. Le metió los dedos en los oídos, tocó la lengua, miró al cielo, suspiró y habló. El método solo enseña a no usurparle el gesto. — Dr. Alejandro Sirit"
+		conclusion: "Jesús no le explicó al sordo el método. Le metió los dedos en los oídos, tocó la lengua, miró al cielo, suspiró y habló. El método solo enseña a no usurparle el gesto. — Alejandro Sirit"
 	},
 	{
 		slug: "apocalipsis-5",
@@ -274,7 +274,7 @@ export const studies: Study[] = [
 		doctrina: "Génesis 49: el cetro de Judá. El go'el: ningún ángel es pariente de Adán; el Verbo toma carne para redimir (He. 2:14–15). El Cordero recibe adoración que el ángel de Apocalipsis 19 y 22 rechaza: no es criatura. Analogía plena: el que abre el libro es el que abre al sordo. León, Cordero y Fuego no son adorno del sello, sino este capítulo. Majestad sin cruz sería condenación; cruz sin majestad, tragedia. El que abre la historia es el que fue degollado.",
 		argumento: "Contra el pánico profético: el cántico nuevo declara por qué es digno —porque fue inmolado— no porque un rapto futuro lo habilite. Contra el escepticismo: la literatura de resistencia judía quería un mesías militar; este rollo subvierte esa fantasía. Status quaestionis: ¿quién abre la historia? Distingo: se anuncia un León; se ve un Cordero. Reductio: si el Cordero no es Dios, el cielo comete idolatría. Si el cetro está en el César, Juan lloró con razón.",
 		decision: "El indicativo es «ha vencido» y «tomó el libro». El imperativo del anciano es el nuestro: no llores. Un acto: cesa esta semana una lectura de la historia que pone el cetro en el César, y di a alguien que el rollo está en las manos atravesadas. El llanto por el libro cerrado termina cuando se adora al que lo tomó.",
-		conclusion: "El llanto de Juan ha terminado. El rollo no está cerrado: ha sido tomado por el Redentor. — Dr. Alejandro Sirit"
+		conclusion: "El llanto de Juan ha terminado. El rollo no está cerrado: ha sido tomado por el Redentor. — Alejandro Sirit"
 	},
 	{
 		slug: "1-corintios-12-14",
@@ -288,7 +288,7 @@ export const studies: Study[] = [
 		doctrina: "El Espíritu reparte. El Hijo es el Señor de los ministerios. El Padre opera. El pueblo es un cuerpo, no un escenario. Los dones no miden santidad: miden servicio. El amor permanece cuando las lenguas cesen. Analogía plena: Hechos 2 no es un clima; Romanos 12 pide el cuerpo; Efesios 4 da apóstoles, profetas, evangelistas, pastores y maestros para la edificación. El que apaga el Espíritu para no desordenarse, y el que desordena para no apagar, han leído a medias.",
 		argumento: "Status quaestionis: ¿son los dones un trofeo, o un servicio al cuerpo? Distingo: hay manifestación, y hay edificación; la primera sin la segunda es cimbalo. Reductio: si el don se exhibe y el hermano no se edifica, 14:26 ha fallado, y el Espíritu habría repartido para el yo. Si el 13 se cita para no desear dones, Pablo ha escrito en vano el 14.",
 		decision: "Esta semana, nombra un don —el tuyo o el que envidias— y ponlo al servicio de un hermano concreto, no de un escenario. Un acto. El que busca lengua para ser visto, o silencio para no servir, todavía no ha oído a Corinto.",
-		conclusion: "Un solo Espíritu, un solo cuerpo, y un amor que no deja que el don se vuelva cimbalo. — Dr. Alejandro Sirit"
+		conclusion: "Un solo Espíritu, un solo cuerpo, y un amor que no deja que el don se vuelva cimbalo. — Alejandro Sirit"
 	},
 	{
 		slug: "galatas-5",
@@ -302,7 +302,7 @@ export const studies: Study[] = [
 		doctrina: "El Espíritu produce lo que la ley pedía y la carne no podía. Cristo libertó; la libertad no es licencia. El pueblo no improvisa el carácter: lo recibe y lo anda. Juan 15 está debajo: el pámpano no da fruto separado de la vid. El que predica las nueve palabras como técnica de mejora ha vuelto a la carne con vocabulario santo. El que predica la libertad para no crucificar nada ha vuelto a la carne con vocabulario de gracia.",
 		argumento: "Status quaestionis: ¿lista de hábitos, o fruto de un Señor? Distingo: hay ejercicio, y hay producción; el primero no fabrica al segundo. Reductio: si el fruto se administra sin la crucifixión del 24, Gálatas 3 ha sido en vano, y el Espíritu sería un entrenador, no el que da vida.",
 		decision: "Elige un nombre del fruto que el texto ha desnudado —uno, no nueve— y nombra delante de un testigo dónde la carne lo estaba sustituyendo. Anda. El que elige los nueve no ha elegido ninguno. El que no lo dice lo ha dejado en el cartel.",
-		conclusion: "Un fruto, no un cartel. El Espíritu produce; la carne no fabrica. — Dr. Alejandro Sirit"
+		conclusion: "Un fruto, no un cartel. El Espíritu produce; la carne no fabrica. — Alejandro Sirit"
 	},
 	{
 		slug: "2-corintios-12",
@@ -317,7 +317,7 @@ export const studies: Study[] = [
 		doctrina: "La gracia no es un adorno del fuerte. Es el poder del que ya no puede. Cristo more en la flaqueza; no la evapora para que el ministerio luzca. El pueblo no despide al que tiene aguijón: oye en él al Señor. Este tomo, en la colección, se llama *Bástate*, y se lee en el tercer puesto: no es un satélite. Isaías 53 carga la rebelión; 2 Corintios 12 sostiene al cuerpo que todavía gime. El que predica una gracia que siempre quita el aguijón ha cambiado de Señor.",
 		argumento: "Status quaestionis: ¿es el aguijón un fracaso de fe, o el lugar donde el poder se perfecciona? Distingo: hay sanidad, y hay palabra que no quita; la primera no anula a la segunda. Reductio: si el 9 se cita para extraer todo aguijón, Pablo habría desobedecido al rogar solo tres veces, y el poder de Cristo no moraría en la debilidad.",
 		decision: "Nombra el aguijón que has tratado como prueba de que Dios no basta. Esta semana, deja de rogar solo para que se quite, y oye la palabra que permanece: bástate mi gracia. Dilo a alguien. El que convierte el 9 en un lema y niega la flaqueza aún no ha sido respondido: ha sido entretenido.",
-		conclusion: "El aguijón permanece; el Señor también. La gracia basta donde el yo ya no puede. — Dr. Alejandro Sirit"
+		conclusion: "El aguijón permanece; el Señor también. La gracia basta donde el yo ya no puede. — Alejandro Sirit"
 	},
 	{
 		slug: "viajes-de-pablo",
@@ -331,7 +331,7 @@ export const studies: Study[] = [
 		doctrina: "El Espíritu envía. El Hijo es el contenido del anuncio —el que no vio corrupción, el que justifica—. El pueblo se confirma en la fe y recibe ancianos. La analogía plena oye Mateo 28 y Romanos 15: no hay misión que no pase por la Palabra, ni Palabra que prometa un camino sin tribulación. El que predica viajes como técnica de expansión ha cambiado de libro: ha leído un informe, no a Lucas.",
 		argumento: "Status quaestionis: ¿itinerario de éxito, o envío con tribulación? Distingo: hay fruto, y hay piedras; el primero no anula a las segundas. Reductio: si el viaje se cita para prometernos un siglo sin θλῖψις, 14:22 ha mentido, y el reino se habría vuelto un destino turístico.",
 		decision: "Esta semana, nombra un envío concreto —una Palabra que debías anunciar, un hermano que debías confirmar— y no lo midas por la facilidad. El que espera un mapa sin Listra todavía no ha sido apartado: ha sido entretenido.",
-		conclusion: "El Espíritu aparta. La Palabra se anuncia. El reino se entra con muchas tribulaciones. — Dr. Alejandro Sirit"
+		conclusion: "El Espíritu aparta. La Palabra se anuncia. El reino se entra con muchas tribulaciones. — Alejandro Sirit"
 	},
 	{
 		slug: "1-corintios-1-2",
@@ -345,7 +345,7 @@ export const studies: Study[] = [
 		doctrina: "Cristo no envió a bautizar facciones, sino a predicar. El Padre eligió lo necio del mundo. El Espíritu revela lo que el hombre natural no recibe. El pueblo no se gloria en el predicador: el que se gloria, gloríese en el Señor. Jeremías 9:24 está debajo. El que predica la cruz con el tono del ágora ha cambiado de poder. El que predica la tosquedad como virtud ha cambiado de oficio: Pablo no se niega a hablar; se niega a vaciar.",
 		argumento: "Status quaestionis: ¿es la predicación un arte que convence, o un anuncio que el Espíritu demuestra? Distingo: hay palabras, y hay sabiduría de palabras; las primeras sirven, la segunda vacía. Reductio: si el 2:4 se cita para no estudiar, 2:6 ha sobrado. Si el 1:17 se cita para lucir, la cruz ya se vació.",
 		decision: "Esta semana, nombra una frase tuya —en el púlpito, en la mesa, en la red— que estaba luciendo más que el madero. Quítala. El que se reforma el estilo y no se arrodilla ante la locura de la cruz todavía está en el ágora.",
-		conclusion: "La cruz no se adorna para convencer. Se anuncia, y el Espíritu demuestra. — Dr. Alejandro Sirit"
+		conclusion: "La cruz no se adorna para convencer. Se anuncia, y el Espíritu demuestra. — Alejandro Sirit"
 	},
 	{
 		slug: "teologia-de-la-cruz",
@@ -359,7 +359,7 @@ export const studies: Study[] = [
 		doctrina: "Dios salva por lo que el siglo desprecia. El Hijo crucificado es el poder y la sabiduría de Dios. El pueblo no se jacta: el que se gloria, gloríese en el Señor. La analogía plena oye Isaías 29:14 y Jeremías 9:24. *El Siervo, no tú* lee el mismo tajo desde Isaías 53: el justo muere por los injustos, y el lector no se sube al madero como si fuera el Siervo. El que predica una cruz que no avergüenza al sabio ha cambiado de cruz.",
 		argumento: "Status quaestionis: ¿es la cruz un tropiezo que Dios eligió, o un emblema que el siglo puede aplaudir? Distingo: hay sabiduría de Dios, y hay sabiduría del mundo; la primera se revela en lo necio. Reductio: si la cruz se adorna hasta que deje de ser locura, 1:21 ha fallado, y nadie se habría salvado por la predicación.",
 		decision: "Esta semana, nombra una jactancia —oficio, púlpito, herida bien contada— que estabas usando para no quedar en «lo que no es». Déjala. Gloríate en el Señor. El que se queda en el desprecio de los sabios y no se queda en Cristo aún no ha oído el 30.",
-		conclusion: "La cruz parte. Locura o poder. Nadie se jacta, sino en el Señor. — Dr. Alejandro Sirit"
+		conclusion: "La cruz parte. Locura o poder. Nadie se jacta, sino en el Señor. — Alejandro Sirit"
 	},
 	{
 		slug: "teologia-de-la-gloria",
@@ -373,7 +373,7 @@ export const studies: Study[] = [
 		doctrina: "La gloria es real, y es futura. El Hijo reinará; aún no se ve que todas las cosas le sean sujetas. El pueblo padece, espera y no se corona a sí mismo. Romanos 8:17 está debajo: herederos, si es que padecemos con él. *El Siervo, no tú* quita la autoexpiación; este estudio quita la autocoronación. El que predica un reino ya cobrado, sin padecimiento y sin apóstoles últimos, ha cambiado de tiempo: ha leído Apocalipsis 21 en 1 Corintios 4.",
 		argumento: "Status quaestionis: ¿ya reinamos, o somos espectáculo? Distingo: hay primicias, y hay adelanto soberbio; las primeras gimen, el segundo se sacia. Reductio: si Corinto ya reina, los apóstoles son un anacronismo, y 4:8 es elogio, no ironía.",
 		decision: "Nombra un «ya» que te estabas coronando —un ministerio que ya llegó, una herida que ya te hace rey, un escenario que ya te aplaude—. Esta semana, bájalo. El que se niega a ser último todavía está saciado. El texto pide espectáculo al mundo, no trono.",
-		conclusion: "La gloria que se adelanta es teatro. Los apóstoles fueron exhibidos como últimos. — Dr. Alejandro Sirit"
+		conclusion: "La gloria que se adelanta es teatro. Los apóstoles fueron exhibidos como últimos. — Alejandro Sirit"
 	},
 	{
 		slug: "romanos-8-17",
@@ -387,7 +387,7 @@ export const studies: Study[] = [
 		doctrina: "El Padre adopta. El Hijo comparte herencia y padecimiento. El Espíritu es primicias, no consumación. El pueblo gime y espera. La analogía plena oye 2 Timoteo 2:12 y 1 Pedro 4:13. *Cuando el cielo se cae* enseña a llorar sin apostatar; este estudio enseña a heredar sin adelantar la gloria. El que predica filiación para no padecer ha recortado el εἴπερ. El que predica padecimiento para merecer la herencia ha recortado la adopción.",
 		argumento: "Status quaestionis: ¿es la herencia un derecho sin cruz, o una co-herencia que padece? Distingo: hay filiación segura, y hay camino de Hijo; la primera no evapora al segundo. Reductio: si el 17 se cita sin συμπάσχομεν, el 18 sobra, y la creación gime en vano.",
 		decision: "Esta semana, nombra un padecimiento que habías tratado como prueba de que no eres hijo. Somételo al εἴπερ: padece con él, no contra la adopción. Dilo a alguien que gima contigo. El que se corona sin gemir todavía no es coheredero, sino un espectador del 17.",
-		conclusion: "Hijos, herederos, coherederos: si es que padecemos con él. La gloria espera. — Dr. Alejandro Sirit"
+		conclusion: "Hijos, herederos, coherederos: si es que padecemos con él. La gloria espera. — Alejandro Sirit"
 	}
 ];
 export function studyBySlug(slug: string) {
