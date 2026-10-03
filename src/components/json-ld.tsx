@@ -38,6 +38,16 @@ export function HomeJsonLd() {
           name: SITE_NAME,
           url: `${SITE_ORIGIN}/`,
           inLanguage: "es",
+          publisher: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: `${SITE_ORIGIN}/`,
+            subOrganization: {
+              "@type": "Organization",
+              name: "RevelatiO by Cielo Efata",
+              url: "https://revelatio.app/",
+            },
+          },
         }}
       />
     </>
