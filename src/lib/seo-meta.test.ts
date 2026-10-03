@@ -6,7 +6,7 @@ import { CRISOL_ORIGEN } from "./crisol.ts";
 import { CUADERNO_VACIO } from "./copy-nivel.ts";
 import { SELLO } from "./identidad.ts";
 import { ESCRITURA } from "./pilar.ts";
-import { obras } from "./content.ts";
+import { obras, obrasDesdeAula } from "./content.ts";
 import { studies } from "./studies.ts";
 import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
 import { fechasArticulo } from "./calendario.ts";
@@ -19,7 +19,6 @@ import {
   metaDescription,
   pageHead,
   tituloEstudio,
-  tituloObra,
   tituloSeccion,
   tituloTratado,
 } from "./seo.ts";
@@ -56,7 +55,7 @@ test("títulos únicos y descripciones de 120 a 160", () => {
   }
   for (const [path, title, raw, detalle] of secciones) note(path, title, metaDescription(raw, detalle ?? ""));
   for (const obra of obras) {
-    note(`/obras/${obra.slug}`, tituloObra(obra.title), metaDescription(obra.line, obra.thesis));
+    note(`/obras/${obra.slug}`, obra.seoTitle, obra.seoDescription);
   }
   for (const study of studies) {
     note(
@@ -160,4 +159,66 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
   assert.equal(tratados.length, 14);
   const conFecha = bloques.filter((b) => b.lastmod);
   assert.equal(conFecha.length, ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length);
+});
+
+function metaDe(head: ReturnType<typeof pageHead>, name: string) {
+  const tag = head.meta.find((m) => "name" in m && m.name === name);
+  return tag && "content" in tag ? tag.content : undefined;
+}
+
+function propDe(head: ReturnType<typeof pageHead>, property: string) {
+  const tag = head.meta.find((m) => "property" in m && m.property === property);
+  return tag && "content" in tag ? tag.content : undefined;
+}
+
+test("cada tomo tiene title, description y subtítulo SEO, y el Book conserva el nombre llano", () => {
+  assert.equal(obras.length, 7);
+  for (const obra of obras) {
+    assert.ok(obra.seoTitle.includes(obra.title) || obra.slug === "bastate-mi-gracia");
+    assert.ok(obra.subtitulo.length > 0);
+    assert.notEqual(obra.seoTitle, obra.title);
+    assert.equal(obra.seoTitle.includes("Dr."), false);
+    const head = pageHead({
+      path: `/obras/${obra.slug}`,
+      title: obra.seoTitle,
+      description: obra.seoDescription,
+      exact: true,
+    });
+    const titleTag = head.meta.find((m) => "title" in m && !("property" in m) && !("name" in m));
+    assert.equal(titleTag && "title" in titleTag ? titleTag.title : undefined, obra.seoTitle);
+    assert.equal(metaDe(head, "description"), obra.seoDescription);
+    assert.equal(propDe(head, "og:title"), obra.seoTitle);
+    assert.equal(propDe(head, "og:description"), obra.seoDescription);
+    assert.equal(metaDe(head, "twitter:title"), obra.seoTitle);
+    assert.equal(metaDe(head, "twitter:description"), obra.seoDescription);
+    assert.equal(head.links.length, 1);
+    assert.equal(head.links[0]?.href, `${SITE_ORIGIN}/obras/${obra.slug}`);
+    const libro = camposLibro(obra);
+    assert.equal(libro.name, obra.title);
+    assert.equal(libro.author.name, "Alejandro Sirit");
+    assert.equal(libro.author.name.startsWith("Dr."), false);
+  }
+  assert.equal(obras.find((o) => o.slug === "bastate-mi-gracia")?.title, "Bástate");
+  assert.match(obras.find((o) => o.slug === "bastate-mi-gracia")!.seoTitle, /Bástate mi gracia/);
+});
+
+test("el aula cierra con las obras pedidas, sin mezclar el estudio y el tratado de Isaías 53", () => {
+  const slugs = (kind: "estudio" | "tratado", slug: string) =>
+    obrasDesdeAula(kind, slug).map((o) => o.slug);
+  assert.deepEqual(slugs("estudio", "marcos-7"), ["efata"]);
+  assert.deepEqual(slugs("tratado", "el-texto-manda"), ["efata"]);
+  assert.deepEqual(slugs("tratado", "isaias-53"), ["el-siervo-no-tu"]);
+  assert.deepEqual(slugs("estudio", "teologia-de-la-cruz"), ["el-siervo-no-tu"]);
+  assert.deepEqual(slugs("estudio", "isaias-53"), []);
+  assert.deepEqual(slugs("estudio", "2-corintios-12"), ["bastate-mi-gracia"]);
+  assert.deepEqual(slugs("tratado", "todo-lo-puedo"), ["bastate-mi-gracia"]);
+  assert.deepEqual(slugs("tratado", "la-muerte-y-la-vida"), ["cuando-el-cielo-se-cae"]);
+  assert.deepEqual(slugs("tratado", "para-bien"), ["cuando-el-cielo-se-cae"]);
+  assert.deepEqual(slugs("estudio", "santiago-1"), [
+    "la-fe-no-basta",
+    "el-altar-del-espejo",
+    "callar-para-ganar",
+  ]);
+  assert.deepEqual(slugs("estudio", "galatas-5"), ["la-fe-no-basta"]);
+  assert.deepEqual(slugs("tratado", "el-crisol-de-lo-oido"), ["el-altar-del-espejo"]);
 });

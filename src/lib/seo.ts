@@ -118,6 +118,7 @@ export function pageHead({
   detalle,
   image,
   index = true,
+  exact = false,
 }: {
   path: string;
   title?: string;
@@ -126,6 +127,8 @@ export function pageHead({
   image?: string;
   /** false: la ficha se puede leer, pero no entra en el índice. */
   index?: boolean;
+  /** true: usa `description` tal cual, sin recortar frases. */
+  exact?: boolean;
 }) {
   const url = canonicalUrl(path);
   const imageUrl = image
@@ -133,7 +136,11 @@ export function pageHead({
       ? image
       : canonicalUrl(image)
     : undefined;
-  const desc = description ? metaDescription(description, detalle ?? "") : "";
+  const desc = description
+    ? exact
+      ? norm(description)
+      : metaDescription(description, detalle ?? "")
+    : "";
   return {
     meta: [
       ...(title ? [{ title }] : []),
@@ -141,6 +148,18 @@ export function pageHead({
       ...(!index ? [{ name: "robots" as const, content: "noindex" }] : []),
       { property: "og:url", content: url },
       { property: "og:site_name", content: SITE_NAME },
+      ...(title
+        ? [
+            { property: "og:title" as const, content: title },
+            { name: "twitter:title" as const, content: title },
+          ]
+        : []),
+      ...(desc
+        ? [
+            { property: "og:description" as const, content: desc },
+            { name: "twitter:description" as const, content: desc },
+          ]
+        : []),
       ...(imageUrl
         ? [
             { property: "og:image" as const, content: imageUrl },
