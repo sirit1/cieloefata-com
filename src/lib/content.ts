@@ -139,6 +139,10 @@ export type Obra = {
   lectura: number;
   slug: string;
   title: string;
+  /** Visible under the H1. Does not replace `pasaje` (capítulo ancla / LeerCapitulo). */
+  subtitulo: string;
+  seoTitle: string;
+  seoDescription: string;
   line: string;
   thesis: string;
   sample: string;
@@ -154,6 +158,23 @@ export type Obra = {
   amazonTitle?: string;
 };
 
+export type AulaKind = "estudio" | "tratado";
+
+/** Aulas that close with a line to a tomo. Keyed by kind so `isaias-53` (estudio y tratado) no se confunde. */
+const OBRAS_DESDE_AULA: Record<`${AulaKind}:${string}`, readonly string[]> = {
+  "estudio:marcos-7": ["efata"],
+  "tratado:el-texto-manda": ["efata"],
+  "tratado:isaias-53": ["el-siervo-no-tu"],
+  "estudio:teologia-de-la-cruz": ["el-siervo-no-tu"],
+  "estudio:2-corintios-12": ["bastate-mi-gracia"],
+  "tratado:todo-lo-puedo": ["bastate-mi-gracia"],
+  "tratado:la-muerte-y-la-vida": ["cuando-el-cielo-se-cae"],
+  "tratado:para-bien": ["cuando-el-cielo-se-cae"],
+  "estudio:santiago-1": ["la-fe-no-basta", "el-altar-del-espejo", "callar-para-ganar"],
+  "estudio:galatas-5": ["la-fe-no-basta"],
+  "tratado:el-crisol-de-lo-oido": ["el-altar-del-espejo"],
+};
+
 /** Front covers from Drive KDP packs under 00_Cielo_Efata/01_LIBROS, file 04_portada.jpg. */
 export function tapaPath(slug: string) {
   return `/TAPAS/${slug}.jpg`;
@@ -165,6 +186,10 @@ export const obras: Obra[] = [
     lectura: 1,
     slug: "efata",
     title: "Éfata",
+    subtitulo: "Marcos 7:31–37",
+    seoTitle: "Éfata: significado de Marcos 7:34 | Alejandro Sirit",
+    seoDescription:
+      "Qué significa «Éfata» en Marcos 7:31-37: Cristo abre el oído y desata la lengua. Un libro de Alejandro Sirit para oír la Palabra y confesarla.",
     line: "«Éfata» —sé abierto— no es un lema de marca ni una técnica de escucha interior. En Marcos 7 el Hijo toma a un sordo, alza los ojos, gime y manda que el oído y la lengua cedan. Por consiguiente, este tomo no administra un rito de atención plena: pide el milagro que solo Cristo hace, y el oficio de leer el capítulo entero una vez que el oído ha cedido.",
     thesis:
       "Jesús tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Este tomo no ofrece técnicas de escucha interior ni un lema de marca. Pide el milagro que solo el Hijo hace: oídos que oyen la Palabra y lengua que la confiesa. Quien ya oye, no se pavonea. Quien no oye, no se administra un rito. El Espíritu, enviado por ese mismo Señor, sigue abriendo. El sordo no se abre: es abierto.",
@@ -180,6 +205,10 @@ export const obras: Obra[] = [
     lectura: 2,
     slug: "el-siervo-no-tu",
     title: "El Siervo, no tú",
+    subtitulo: "Isaías 52:13 – 53:12",
+    seoTitle: "El Siervo, no tú: Isaías 53:5 | Alejandro Sirit",
+    seoDescription:
+      "Isaías 53:5 y el Siervo herido por nuestras rebeliones. Alejandro Sirit presenta la cruz como sacrificio sustitutivo, no como autoexpiación.",
     line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. Isaías vio al Siervo herido por nuestras rebeliones; nosotros éramos. Por tanto, este tomo rehúsa la autoexpiación piadosa: el justo muere por los injustos, y el lector no se sube al versículo como si fuera el Siervo.",
     thesis:
       "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este tomo rehúsa la autoexpiación piadosa y recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
@@ -197,6 +226,10 @@ export const obras: Obra[] = [
     slug: "bastate-mi-gracia",
     title: "Bástate",
     amazonTitle: "Bástate mi gracia",
+    subtitulo: "2 Corintios 12:1–10",
+    seoTitle: "Bástate mi gracia: 2 Corintios 12:9 | Alejandro Sirit",
+    seoDescription:
+      "Qué significa «Bástate mi gracia»: Alejandro Sirit lee 2 Corintios 12:9-10, donde la gracia sostiene y el poder de Cristo se perfecciona en la debilidad.",
     line: "«Bástate mi gracia.» El lector recibe la palabra dicha a Pablo en la flaqueza: el poder se perfecciona donde ya no se puede. El aguijón permanece; el Señor también.",
     thesis:
       "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa, sino sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
@@ -211,6 +244,10 @@ export const obras: Obra[] = [
     lectura: 4,
     slug: "cuando-el-cielo-se-cae",
     title: "Cuando el cielo se cae",
+    subtitulo: "El libro de Job",
+    seoTitle: "Cuando el cielo se cae: Job 42:5 | Alejandro Sirit",
+    seoDescription:
+      "Una lectura de Job 42:5-6 sobre el sufrimiento, el lamento y el encuentro con Dios. Alejandro Sirit no ofrece respuestas rápidas, sino la presencia del Señor.",
     line: "El lector recibe un lamento que no se recablea para que duela menos. Job no obtiene un manual: obtiene a Dios en el valle.",
     thesis:
       "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos. Este tomo enseña a llorar sin apostatar, y a no convertir el lamento en un ídolo de la queja. El «tú» llega en el valle: el Pastor no niega la sombra; la atraviesa con el que clama.",
@@ -228,6 +265,10 @@ export const obras: Obra[] = [
     lectura: 5,
     slug: "la-fe-no-basta",
     title: "La fe no basta",
+    subtitulo: "Santiago 2:14–26",
+    seoTitle: "La fe no basta: Santiago 2:17 | Alejandro Sirit",
+    seoDescription:
+      "Qué significa que la fe sin obras está muerta. Alejandro Sirit lee Santiago 2:14-26 sin oponerlo a Pablo: la fe viva se reconoce por sus frutos.",
     line: "El lector recibe el espejo de Santiago. La fe que no obra está muerta, aunque recite a Pablo para no obedecer.",
     thesis:
       "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro. El que oye y no hace se engaña a sí mismo, y el engaño no es un retraso inocente. Este tomo no discute a Pablo: desnuda al que cita a Pablo para no obedecer.",
@@ -244,6 +285,10 @@ export const obras: Obra[] = [
     lectura: 6,
     slug: "el-altar-del-espejo",
     title: "El altar del espejo",
+    subtitulo: "Santiago 1:22–25",
+    seoTitle: "El altar del espejo: Santiago 1:22-25 | Alejandro Sirit",
+    seoDescription:
+      "Santiago 1:22-25 llama a ser hacedores de la Palabra y no solo oidores. Alejandro Sirit trata la obediencia que permanece frente al espejo.",
     line: "El lector recibe la compuerta entre oír y hacer. Quien mira el espejo y se va olvida el rostro; quien permanece, es hacedor de la obra.",
     thesis:
       "El que oye y no hace se parece al que mira su rostro natural en un espejo y se va, y luego olvida. El altar no es el sentimiento de haber oído, ni la liturgia de un estudio bien anotado. Es el hombre que permanece en la ley perfecta, la de la libertad, y es hacedor de la obra. C.R.I.S.O.L.™ vive aquí: la compuerta pastoral de Decisión, para que la cadena no se vuelva un cadáver erudito.",
@@ -261,6 +306,10 @@ export const obras: Obra[] = [
     lectura: 7,
     slug: "callar-para-ganar",
     title: "Callar para ganar",
+    subtitulo: "Santiago 3:1–12",
+    seoTitle: "Callar para ganar: Santiago 3:2 | Alejandro Sirit",
+    seoDescription:
+      "Santiago 3 y el dominio de la lengua según la Biblia: callar con sabiduría, hablar cuando el pasaje lo manda y no encender el fuego del conflicto.",
     line: "El lector recibe el dominio de la lengua. Callar no es huir, sino no encender el bosque, y hablar cuando el pasaje manda hablar.",
     thesis:
       "La lengua es un fuego. El que no ofende en palabra, es varón perfecto. Este tomo no enseña la cobardía ni el silencio cómplice: enseña el dominio que el Espíritu da, para no encender el bosque por una chispa, y para hablar cuando el pasaje manda hablar. Callar no es huir. Callar, aquí, es no pelear el primer asiento, y no convertir la doctrina en un deporte de redes.",
@@ -277,6 +326,12 @@ export const obras: Obra[] = [
 
 export function obraBySlug(slug: string) {
   return obras.find((o) => o.slug === slug);
+}
+
+export function obrasDesdeAula(kind: AulaKind, slug: string) {
+  return (OBRAS_DESDE_AULA[`${kind}:${slug}`] ?? [])
+    .map((s) => obraBySlug(s))
+    .filter((o): o is Obra => Boolean(o));
 }
 
 export function obraVecina(lectura: number) {

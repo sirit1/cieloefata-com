@@ -75,7 +75,13 @@ function TratadoPage() {
         ))}
       </div>
       <Refs refs="2 P. 3:16 · Neh. 8:8" />
-      <CierreAula pasaje={tratado.ref} slug={tratado.slug} acto={tratado.cuerpo.at(-1)} desde={`/tratados/${tratado.slug}`} />
+      <CierreAula
+        kind="tratado"
+        pasaje={tratado.ref}
+        slug={tratado.slug}
+        acto={tratado.cuerpo.at(-1)}
+        desde={`/tratados/${tratado.slug}`}
+      />
     </Aula>
   );
 }

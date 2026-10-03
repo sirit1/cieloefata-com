@@ -24,9 +24,9 @@ export const Route = createFileRoute("/obras/$slug")({
     const obra = loaderData?.obra;
     return pageHead({
       path: `/obras/${obra?.slug ?? ""}`,
-      title: obra ? tituloObra(obra.title) : tituloObra("Obra"),
-      description: obra?.line,
-      detalle: obra?.thesis,
+      title: obra?.seoTitle ?? tituloObra("Obra"),
+      description: obra?.seoDescription,
+      exact: Boolean(obra?.seoDescription),
       image: obra ? tapaPath(obra.slug) : undefined,
     });
   },
@@ -48,6 +48,7 @@ export function ObraPage() {
         Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
       </p>
       <h1 className="mt-3 font-serif text-4xl md:text-5xl">{obra.title}</h1>
+      <p className="mt-2 font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>
       <p className="kicker mt-4">Dr. Alejandro Sirit · Editorial Cielo Efata</p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">
         Capítulo ancla: {obra.pasaje}

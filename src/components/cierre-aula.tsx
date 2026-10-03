@@ -3,6 +3,7 @@ import { Cite } from "@/components/cite";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { actoDe } from "@/lib/actos";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
+import { type AulaKind, obrasDesdeAula } from "@/lib/content";
 import { indiceEstudio } from "@/lib/estudios-indice";
 
 export function CierreAula({
@@ -10,16 +11,19 @@ export function CierreAula({
   slug,
   acto,
   desde,
+  kind,
 }: {
   pasaje: string;
   slug?: string;
   acto?: string;
   desde?: string;
+  kind?: AulaKind;
 }) {
   const lista = ESTUDIOS_DRIVE as readonly string[];
   const i = slug ? lista.indexOf(slug) : -1;
   const sig = i >= 0 && i < lista.length - 1 ? indiceEstudio(lista[i + 1]) : undefined;
   const ejemplo = actoDe(slug);
+  const relacionadas = kind && slug ? obrasDesdeAula(kind, slug) : [];
 
   return (
     <section className="mt-14 border-t border-rule pt-10">
@@ -71,6 +75,18 @@ export function CierreAula({
             Escudriñar {sig.title}
           </Link>
         </p>
+      ) : null}
+      {relacionadas.length ? (
+        <div className="mt-6 space-y-2">
+          {relacionadas.map((obra) => (
+            <p key={obra.slug} className="leading-relaxed text-ink-soft">
+              Para profundizar:{" "}
+              <Link to="/obras/$slug" params={{ slug: obra.slug }} className="text-link underline">
+                {obra.title}
+              </Link>
+            </p>
+          ))}
+        </div>
       ) : null}
     </section>
   );

@@ -260,7 +260,13 @@ function StudyPage() {
       <p className="mt-12 border-t border-rule pt-8 text-ink-soft italic">
         <ConLemas>{study.conclusion}</ConLemas>
       </p>
-      <CierreAula pasaje={study.ref} slug={study.slug} acto={study.decision} desde={`/estudios/${study.slug}`} />
+      <CierreAula
+        kind="estudio"
+        pasaje={study.ref}
+        slug={study.slug}
+        acto={study.decision}
+        desde={`/estudios/${study.slug}`}
+      />
     </Aula>
   );
 }
