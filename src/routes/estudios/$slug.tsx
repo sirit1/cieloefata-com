@@ -17,6 +17,7 @@ import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
 import { VERDAD_PASOS } from "@/lib/verdad";
 import { vocesDe } from "@/lib/voces";
+import { OPUSCULOS } from "@/lib/opusculos";
 
 function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
@@ -91,6 +92,7 @@ function LabCasillas({ lab }: { lab: LabExtra }) {
 function StudyPage() {
   const { study, profundo: p, lab } = Route.useLoaderData();
   const voces = vocesDe(study.slug);
+  const opusculo = OPUSCULOS[study.slug] ?? [];
   const fechas = fechasArticulo({
     clase: "estudio",
     slug: study.slug,
@@ -117,7 +119,7 @@ function StudyPage() {
         ].join("\n\n")
       : "",
     p?.cristo ?? "",
-    study.conclusion,
+    ...opusculo,
   ]);
 
   return (
@@ -152,6 +154,16 @@ function StudyPage() {
         </Link>
       </p>
       <PasosNav />
+
+      {opusculo.length > 0 ? (
+        <div className="mt-10 space-y-6">
+          {opusculo.map((para, i) => (
+            <p key={i} className="text-lg leading-relaxed">
+              <ConLemas>{para}</ConLemas>
+            </p>
+          ))}
+        </div>
+      ) : null}
 
       {p ? <ContextoHistorico p={p} /> : null}
 

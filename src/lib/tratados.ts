@@ -1,4 +1,5 @@
 import { tratadoMesSlug } from "@/lib/calendario";
+import { OPUSCULOS } from "@/lib/opusculos";
 
 export type Tratado = {
   slug: string;
@@ -259,18 +260,28 @@ export const tratados: Tratado[] = [
   },
 ];
 
+export function entradaTratado(cuerpo: readonly string[]) {
+  return cuerpo.find((p) => p.length > 80 && !p.startsWith("CAPÍTULO") && p !== "PÓRTICO") ?? "";
+}
+
 export function tratadoDe(slug: string) {
-  return tratados.find((t) => t.slug === slug);
+  return publicados.find((t) => t.slug === slug);
 }
 
 export { etiquetaTratado } from "@/lib/etiquetas";
 
+/** El opúsculo de Drive sustituye el resumen. El resumen no se publica. */
+const publicados: Tratado[] = tratados.map((t) => {
+  const opus = OPUSCULOS[t.slug];
+  return opus ? { ...t, cuerpo: [...opus] } : t;
+});
+
 export function tratadoDelMes() {
-  return tratados.find((t) => t.slug === tratadoMesSlug()) ?? tratados.find((t) => t.pack);
+  return publicados.find((t) => t.slug === tratadoMesSlug()) ?? publicados.find((t) => t.pack);
 }
 
 export function tratadosPublicados() {
-  return tratados.filter((t) => t.pack);
+  return publicados.filter((t) => t.pack);
 }
 
 export function tratadosProximos() {

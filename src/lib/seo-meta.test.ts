@@ -8,7 +8,7 @@ import { SELLO } from "./identidad.ts";
 import { ESCRITURA } from "./pilar.ts";
 import { obras } from "./content.ts";
 import { studies } from "./studies.ts";
-import { tratados } from "./tratados.ts";
+import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
 import { fechasArticulo } from "./calendario.ts";
 import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack } from "./catalogo.ts";
 import {
@@ -65,8 +65,8 @@ test("títulos únicos y descripciones de 120 a 160", () => {
       metaDescription(`${study.ref}. ${study.ver}`, study.passage),
     );
   }
-  for (const t of tratados) {
-    note(`/tratados/${t.slug}`, tituloTratado(t.title), metaDescription(t.blurb, t.cuerpo[0] ?? ""));
+  for (const t of tratadosPublicados()) {
+    note(`/tratados/${t.slug}`, tituloTratado(t.title), metaDescription(t.blurb, entradaTratado(t.cuerpo)));
   }
   assert.deepEqual(fails, []);
 });

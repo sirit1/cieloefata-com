@@ -7,6 +7,7 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
 import { etiquetaTratado } from "@/lib/etiquetas";
+import { entradaTratado } from "@/lib/tratados";
 import { pageHead, tituloTratado } from "@/lib/seo";
 
 function textoParaOir(parts: string[]) {
@@ -27,7 +28,7 @@ export const Route = createFileRoute("/tratados/$slug")({
       path: `/tratados/${tratado?.slug ?? ""}`,
       title: tituloTratado(tratado?.title ?? "Tratado"),
       description: tratado?.blurb,
-      detalle: tratado?.cuerpo[0],
+      detalle: tratado ? entradaTratado(tratado.cuerpo) : undefined,
     });
   },
 });
@@ -67,8 +68,8 @@ function TratadoPage() {
         <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />
       </p>
       <div className="mt-10 space-y-6">
-        {tratado.cuerpo.map((p) => (
-            <p key={p.slice(0, 28)} className="text-lg leading-relaxed">
+        {tratado.cuerpo.map((p, i) => (
+            <p key={i} className="text-lg leading-relaxed">
               <ConLemas>{p}</ConLemas>
             </p>
         ))}
