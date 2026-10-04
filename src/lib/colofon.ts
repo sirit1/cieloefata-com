@@ -12,6 +12,7 @@ export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "p", texto: "Este aviso va en el verso de la portada (créditos) y se repite, completo, al cierre de cada tratado. No es un dictamen de abogado. Es la página de derechos de la casa. Antes de una tirada comercial grande, un abogado en Canadá puede revisarla. El derecho de autor en Canadá es federal (Copyright Act), también para quien publica desde Quebec." },
   { tipo: "h", texto: "1. Versión castellana" },
   { tipo: "p", texto: "Cita de iglesia: Reina-Valera 1909, de dominio público. Se cita tal como la trae esa edición, con su ortografía (á, ó, fué). No requiere permiso ni aviso de titular." },
+  { tipo: "p", texto: "No se usan, en estos tratados, NVI, LBLA, NBLA, DHH, TLA, RVR1995 ni RVR2020. Esas versiones tienen otro titular y otro aviso." },
   { tipo: "h", texto: "2. Texto hebreo" },
   { tipo: "p", texto: "Lectura base del Antiguo Testamento: texto masorético del Códice de Leningrado, en la presentación de la Biblia Hebraica Stuttgartensia." },
   { tipo: "p", texto: "Biblia Hebraica Stuttgartensia, ed. Karl Elliger y Wilhelm Rudolph; quinta edición mejorada, ed. Adrian Schenker. © 1977 y 1997 Deutsche Bibelgesellschaft, Stuttgart." },

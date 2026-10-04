@@ -1,3 +1,5 @@
+import { PALABRAS_PROSA, textoProsa, type GlosaProsa } from "@/lib/strong-prosa";
+
 export type StrongEntry = {
   strong: string;
   gloss: string;
@@ -167,20 +169,29 @@ const H: Record<string, StrongEntry> = {
 
 const LEX: Record<string, StrongEntry> = { ...G, ...H };
 
+function limpiar(token: string): string {
+  return token.normalize("NFC").replace(/[’'·]/g, "");
+}
+
+function prosaDe(token: string): GlosaProsa | undefined {
+  return PALABRAS_PROSA[token] ?? PALABRAS_PROSA[limpiar(token)];
+}
+
 export function strongDe(token: string): StrongEntry | undefined {
-  const t = token.normalize("NFC").replace(/[’'·]/g, "");
-  return LEX[t] ?? LEX[token];
+  const lex = LEX[limpiar(token)] ?? LEX[token];
+  if (lex) return lex;
+  const p = prosaDe(token);
+  return p?.strong ? { strong: p.strong, lemma: p.lemma ?? token, gloss: p.gloss } : undefined;
 }
 
-export function tituloStrong(token: string): string {
-  const e = strongDe(token);
-  if (!e) {
-    const he = /[\u0590-\u05FF]/.test(token);
-    return he
-      ? `${token} — hebreo (consultar Strong)`
-      : `${token} — griego (consultar Strong)`;
-  }
-  return `${e.lemma} — ${e.gloss} (Strong ${e.strong})`;
+/** Texto del tooltip. Sin glosa segura no hay tooltip: nunca un «consultar Strong». */
+export function tituloStrong(token: string): string | undefined {
+  const e = LEX[limpiar(token)] ?? LEX[token];
+  if (e) return `${e.lemma} — ${e.gloss} (Strong ${e.strong})`;
+  const p = prosaDe(token);
+  return p ? textoProsa(token, p) : undefined;
 }
 
-export const ORIGINAL_RE = /[\u0370-\u03FF\u1F00-\u1FFF]+|[\u0590-\u05FF]+/g;
+/** Palabra griega o hebrea: al menos una letra (no un apóstrofo ᾽ suelto de una transliteración). */
+export const ORIGINAL_RE =
+  /[\u0370-\u03FF\u1F00-\u1FFF]*[\u0386-\u03FF\u1F00-\u1FBC\u1FC2-\u1FCC\u1FD0-\u1FDB\u1FE0-\u1FEC\u1FF2-\u1FFC][\u0370-\u03FF\u1F00-\u1FFF]*|[\u0590-\u05FF]+/g;

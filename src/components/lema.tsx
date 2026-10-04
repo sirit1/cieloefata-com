@@ -1,5 +1,6 @@
 import { Term } from "@/components/cite";
 import { hallarGlosas } from "@/lib/glosas";
+import { hallarFrasesProsa } from "@/lib/strong-prosa";
 import { ORIGINAL_RE, strongDe, tituloStrong } from "@/lib/strong";
 
 function langDe(token: string) {
@@ -9,8 +10,10 @@ function langDe(token: string) {
 }
 
 export function Lema({ token }: { token: string }) {
+  const title = tituloStrong(token);
+  if (!title) return <span lang={langDe(token)}>{token}</span>;
   return (
-    <Term title={tituloStrong(token)}>
+    <Term title={title}>
       <span lang={langDe(token)}>{token}</span>
     </Term>
   );
@@ -40,6 +43,11 @@ export function ConLemas({ children }: { children: React.ReactNode }) {
 
   for (const g of hallarGlosas(text)) {
     take(g.start, g.end, <Term key={`g-${g.start}`} title={g.texto}>{g.token}</Term>);
+  }
+
+  for (const f of hallarFrasesProsa(text)) {
+    const token = text.slice(f.start, f.end);
+    take(f.start, f.end, <Term key={`f-${f.start}`} title={f.texto}><span lang={langDe(token)}>{token}</span></Term>);
   }
 
   const re = new RegExp(ORIGINAL_RE.source, "g");
