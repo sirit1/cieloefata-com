@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Cite } from "@/components/cite";
 import { LeerCapitulo } from "@/components/leer-capitulo";
-import { actoDe } from "@/lib/actos";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
 import { type AulaKind, obrasDesdeAula } from "@/lib/content";
 import { indiceEstudio } from "@/lib/estudios-indice";
@@ -22,7 +21,6 @@ export function CierreAula({
   const lista = ESTUDIOS_DRIVE as readonly string[];
   const i = slug ? lista.indexOf(slug) : -1;
   const sig = i >= 0 && i < lista.length - 1 ? indiceEstudio(lista[i + 1]) : undefined;
-  const ejemplo = actoDe(slug);
   const relacionadas = kind && slug ? obrasDesdeAula(kind, slug) : [];
 
   return (
@@ -42,15 +40,6 @@ export function CierreAula({
               {p}
             </p>
           ))}
-        </>
-      ) : null}
-
-      {ejemplo ? (
-        <>
-          <p className="kicker mt-8">Esto no nace del pasaje</p>
-          <p className="mt-3 text-lg leading-relaxed">{ejemplo.prohibido}</p>
-          <p className="kicker mt-8">El acto de esta semana</p>
-          <p className="mt-3 text-lg leading-relaxed">{ejemplo.escrito}</p>
         </>
       ) : null}
 

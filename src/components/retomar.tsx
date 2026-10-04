@@ -14,7 +14,6 @@ import {
   type CuadernoDraft,
   type CuadernoEntry,
 } from "@/lib/cuaderno-store";
-import { actoDe } from "@/lib/actos";
 import { fichaEstudio } from "@/lib/fichas-portada";
 
 function fechaCorta(iso: string) {
@@ -48,9 +47,8 @@ export function Retomar({
 
   const semana = semanaVigente();
   const ficha = fichaEstudio(semana.studySlug);
-  const acto = actoDe(semana.studySlug);
 
-  if (!pendiente && !borrador && !ultimo && !acto) return null;
+  if (!pendiente && !borrador && !ultimo && !ficha) return null;
 
   return (
     <aside className="mt-8 border border-rule bg-paper px-5 py-6">
@@ -138,21 +136,20 @@ export function Retomar({
             </Link>
           </li>
         ) : null}
-        {acto && ficha ? (
+        {ficha ? (
           <li>
             <p className="font-sans text-xs tracking-[0.16em] text-gold uppercase">
               Decisión de esta semana
             </p>
             <p className="mt-1 leading-relaxed">
-              {ficha.ref} · {ficha.title}. {acto.escrito}
+              {ficha.ref} · {ficha.title}. El acto se lee en el estudio.
             </p>
             <Link
-              to="/cuaderno"
-              search={{ ref: ficha.ref }}
+              to="/estudios/$slug"
+              params={{ slug: semana.studySlug }}
               className="btn btn-ghost mt-3"
-              onClick={() => onContinuar?.({ ref: ficha.ref })}
             >
-              {retomarEnlace(ficha.ref)}
+              Escudriñar {ficha.title}
             </Link>
           </li>
         ) : null}

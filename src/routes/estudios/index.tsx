@@ -6,7 +6,6 @@ import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { estudioSemanaSlug } from "@/lib/calendario";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
-import { decisionAula } from "@/lib/decisiones-aula";
 import { indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
 import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
 import { LABORATORIOS } from "@/lib/verdad";
@@ -30,7 +29,6 @@ export const Route = createFileRoute("/estudios/")({
 function EstudiosPage() {
   const slugSemana = estudioSemanaSlug();
   const semana = indiceEstudio(slugSemana);
-  const decision = decisionAula(slugSemana);
   const publicados = ESTUDIOS_DRIVE.map((slug) => indiceEstudio(slug)).filter(
     (s): s is IndiceEstudio => Boolean(s),
   );
@@ -65,7 +63,6 @@ function EstudiosPage() {
           <p className="font-serif text-lg italic text-gold">El estudio de esta semana</p>
           <h2 className="mt-2 font-serif text-3xl">{semana.title}</h2>
           <p className="mt-1 text-gold">{semana.ref}</p>
-          {decision ? <p className="mt-4 leading-relaxed">{decision}</p> : null}
           <SeguirActo />
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link

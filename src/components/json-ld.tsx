@@ -42,11 +42,6 @@ export function HomeJsonLd() {
             "@type": "Organization",
             name: SITE_NAME,
             url: `${SITE_ORIGIN}/`,
-            subOrganization: {
-              "@type": "Organization",
-              name: "RevelatiO by Cielo Efata",
-              url: "https://revelatio.app/",
-            },
           },
         }}
       />

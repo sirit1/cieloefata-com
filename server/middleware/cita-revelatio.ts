@@ -1,3 +1,5 @@
+import { defineEventHandler, getRequestURL, sendRedirect } from "h3";
+
 const LIBROS: Record<string, string> = {
   genesis: "genesis",
   exodo: "exodo",

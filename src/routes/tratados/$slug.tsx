@@ -81,7 +81,6 @@ function TratadoPage() {
         kind="tratado"
         pasaje={tratado.ref}
         slug={tratado.slug}
-        acto={[...tratado.cuerpo].reverse().find((p) => p.startsWith("Semana del")) ?? tratado.cuerpo.at(-1)}
         desde={`/tratados/${tratado.slug}`}
       />
     </Aula>

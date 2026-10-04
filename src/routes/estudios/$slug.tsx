@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
-import { Cite, Refs, Verso } from "@/components/cite";
+import { Refs, Verso } from "@/components/cite";
 import { ContextoHistorico } from "@/components/contexto";
 import { ConLemas } from "@/components/lema";
 import { LemaStrong } from "@/components/lema-strong";
@@ -9,14 +9,13 @@ import { LabYunque } from "@/components/lab-yunque";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { PasosNav, pasoId } from "@/components/pasos-nav";
 import { RedCanon } from "@/components/red-canon";
-import type { LabExtra } from "@/lib/escuela";
+import type { LabExtra, Profundo } from "@/lib/escuela";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
 import { estudioTienePack } from "@/lib/catalogo";
 import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
 import { VERDAD_PASOS } from "@/lib/verdad";
-import { vocesDe } from "@/lib/voces";
 import { OPUSCULOS } from "@/lib/opusculos";
 
 function textoParaOir(parts: string[]) {
@@ -53,17 +52,10 @@ export const Route = createFileRoute("/estudios/$slug")({
   },
   component: StudyPage,
   loader: async ({ params }) => {
-    const [{ studyBySlug }, { profundoDe, laboratorioDe }] = await Promise.all([
-      import("@/lib/studies"),
-      import("@/lib/escuela"),
-    ]);
+    const { studyBySlug } = await import("@/lib/studies");
     const study = studyBySlug(params.slug);
     if (!study) throw notFound();
-    return {
-      study,
-      profundo: profundoDe(study.slug) ?? null,
-      lab: laboratorioDe(study.slug) ?? null,
-    };
+    return { study, profundo: null as Profundo | null, lab: null as LabExtra | null };
   },
   head: ({ loaderData }) => {
     const study = loaderData?.study;
@@ -119,7 +111,6 @@ function LabCasillas({ lab }: { lab: LabExtra }) {
 function StudyPage() {
   const { study, profundo: p, lab } = Route.useLoaderData();
   const opusculo = OPUSCULOS[study.slug] ?? [];
-  const voces = opusculo.length ? [] : vocesDe(study.slug);
   const fechas = fechasArticulo({
     clase: "estudio",
     slug: study.slug,
@@ -268,34 +259,6 @@ function StudyPage() {
         </>
       ) : null}
 
-      {voces.length > 0 ? (
-      <section className="mt-14 border-t border-rule pt-10">
-        <h2 className="font-serif text-3xl">Testigos que sirven al pasaje</h2>
-        <p className="mt-4 text-lg leading-relaxed">
-          Estos cuatro no legislan. Examinan, como los de Berea, si estas cosas son así. Henry
-          recorre el campo. Calvino sienta el comentario atrás de la Palabra. Spurgeon predica para
-          que alguien se vuelva. MacArthur detiene el griego y el hebreo para que el señorío no se
-          vuelva anexo. Si alguno de ellos recorta el párrafo, se le suelta. El pasaje manda. Ellos
-          sirven.
-        </p>
-        <p className="mt-3 font-sans text-sm tracking-wide">
-          <Cite>Hch. 17:11 · 1 Co. 3:5</Cite>
-        </p>
-        <div className="mt-10 space-y-10">
-          {voces.map((v) => (
-            <article key={v.name}>
-              <h3 className="font-serif text-2xl">{v.name}</h3>
-              {v.body.split(/\n\n+/).map((para) => (
-                <p key={para.slice(0, 40)} className="mt-4 text-lg leading-relaxed">
-                  <ConLemas>{para}</ConLemas>
-                </p>
-              ))}
-            </article>
-          ))}
-        </div>
-      </section>
-      ) : null}
-
       {opusculo.length === 0 ? (
       <p className="mt-12 border-t border-rule pt-8 text-ink-soft italic">
         <ConLemas>{study.conclusion}</ConLemas>
@@ -305,7 +268,6 @@ function StudyPage() {
         kind="estudio"
         pasaje={study.ref}
         slug={study.slug}
-        acto={study.decision}
         desde={`/estudios/${study.slug}`}
       />
     </Aula>

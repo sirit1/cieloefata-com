@@ -1,10 +1,8 @@
 /**
- * Inventario Drive, 3 oct 2026.
- * Estudios (1Bv6sL062dc_8g5jc_vXd-9yNOHYcdAgB) junta: Estudios bíblicos, Estudios sueltos,
- * Manifiestos y enseñanzas, RevelatiO — 100 reflexiones.
- * Tratados (1RajUnBFoZIVJRjEPJ3CeRB5uaVDOr3RI) es carpeta hermana, no hija: 00–12, cada una
- * con 01_manuscrito.docx, 02_PDF_Kindle.pdf, 03_PDF_lujo.pdf y portada.
- * El Mac no está en este escritorio: la carpeta que se pudo abrir es la de Drive.
+ * Inventario de las carpetas vigentes en Drive, 3 oct 2026.
+ * Estudios — versión vigente: trece libros.
+ * Tratados — versión vigente: catorce libros.
+ * Lo que no está en esas dos carpetas no se publica.
  */
 
 export {

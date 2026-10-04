@@ -4,7 +4,6 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
 import { Retomar } from "@/components/retomar";
 import { aulaSinActo, cerrarAulaSiEscrito, type AulaAbierta } from "@/lib/aula-abierta";
-import { actoDe } from "@/lib/actos";
 import { useCurrentUser } from "@/lib/auth/use-current-user";
 import { authEnabled, signIn } from "@/lib/auth/client";
 import { GROK_PROVIDERS } from "@/lib/auth/providers";
@@ -152,7 +151,6 @@ function CuadernoPage() {
 
   const semana = semanaVigente();
   const ficha = fichaEstudio(semana.studySlug);
-  const actoSemana = actoDe(semana.studySlug);
   const vacio = items.length === 0;
   const persistencia = userId
     ? "El acto queda en tu cuenta. Otro teléfono, con la misma sesión, lo encuentra. No se envía a otra casa."
@@ -195,9 +193,9 @@ function CuadernoPage() {
         <aside className="mt-8 border border-rule bg-paper px-5 py-6">
           <p className="font-serif text-xl">Aún no hay un paso escrito</p>
           <p className="mt-3 leading-relaxed">{CUADERNO_VACIO}</p>
-          {actoSemana && ficha ? (
+          {ficha ? (
             <p className="mt-4 leading-relaxed text-ink-soft">
-              El acto de esta semana, {ficha.ref}: {actoSemana.escrito}
+              El acto de esta semana se lee en {ficha.title}, {ficha.ref}, y se escribe aquí.
             </p>
           ) : null}
           {pendiente ? (
