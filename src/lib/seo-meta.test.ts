@@ -9,6 +9,7 @@ import { ESCRITURA } from "./pilar.ts";
 import { obras, obrasDesdeAula } from "./content.ts";
 import { studies } from "./studies.ts";
 import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
+import { parrafosDe } from "./libros/cargar.ts";
 import { fechasArticulo } from "./calendario.ts";
 import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack } from "./catalogo.ts";
 import {
@@ -42,7 +43,7 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa."],
 ];
 
-test("títulos únicos y descripciones de 120 a 160", () => {
+test("títulos únicos y descripciones de 120 a 160", async () => {
   const titles = new Map<string, string>();
   const fails: string[] = [];
   function note(label: string, title: string, desc: string) {
@@ -65,7 +66,8 @@ test("títulos únicos y descripciones de 120 a 160", () => {
     );
   }
   for (const t of tratadosPublicados()) {
-    note(`/tratados/${t.slug}`, tituloTratado(t.title), metaDescription(t.blurb, entradaTratado(t.cuerpo)));
+    const cuerpo = await parrafosDe(t.slug);
+    note(`/tratados/${t.slug}`, tituloTratado(t.title), metaDescription(t.blurb, entradaTratado(cuerpo)));
   }
   assert.deepEqual(fails, []);
 });

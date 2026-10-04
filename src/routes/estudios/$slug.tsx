@@ -1,22 +1,13 @@
-import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
+import { createFileRoute, notFound, redirect } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
-import { Refs, Verso } from "@/components/cite";
-import { ContextoHistorico } from "@/components/contexto";
 import { ConLemas } from "@/components/lema";
-import { LemaStrong } from "@/components/lema-strong";
-import { LabYunque } from "@/components/lab-yunque";
 import { LeerCapitulo } from "@/components/leer-capitulo";
-import { PasosNav, pasoId } from "@/components/pasos-nav";
-import { RedCanon } from "@/components/red-canon";
-import type { LabExtra, Profundo } from "@/lib/escuela";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
 import { estudioTienePack } from "@/lib/catalogo";
 import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
-import { VERDAD_PASOS } from "@/lib/verdad";
-import { OPUSCULOS } from "@/lib/opusculos";
 
 function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
@@ -52,10 +43,15 @@ export const Route = createFileRoute("/estudios/$slug")({
   },
   component: StudyPage,
   loader: async ({ params }) => {
-    const { studyBySlug } = await import("@/lib/studies");
+    const [{ studyBySlug }, { parrafosDe }] = await Promise.all([
+      import("@/lib/studies"),
+      import("@/lib/libros/cargar"),
+    ]);
     const study = studyBySlug(params.slug);
-    if (!study) throw notFound();
-    return { study, profundo: null as Profundo | null, lab: null as LabExtra | null };
+    if (!study || !estudioTienePack(study.slug)) throw notFound();
+    const parrafos = await parrafosDe(params.slug);
+    if (parrafos.length === 0) throw notFound();
+    return { study, parrafos };
   },
   head: ({ loaderData }) => {
     const study = loaderData?.study;
@@ -69,84 +65,17 @@ export const Route = createFileRoute("/estudios/$slug")({
   },
 });
 
-const KEYS = ["ver", "entorno", "revelacion", "doctrina", "argumento", "decision"] as const;
-
-function paras(text: string) {
-  return text.split(/\n\n+/).map((p) => p.trim()).filter(Boolean);
-}
-
-function LabTabla({ lab }: { lab: LabExtra }) {
-  return (
-    <aside className="mt-8 border-t border-rule pt-6">
-      <p className="font-serif italic text-ink-soft">{lab.tablaTitulo}</p>
-      <dl className="mt-4 space-y-5">
-        {lab.tabla.map((row) => (
-          <div key={row.palabra}>
-            <dt className="leading-relaxed">
-              <ConLemas>{row.palabra}</ConLemas>
-            </dt>
-            <dd className="mt-1 leading-relaxed italic text-ink-soft">
-              <ConLemas>{row.glosa}</ConLemas>
-            </dd>
-          </div>
-        ))}
-      </dl>
-    </aside>
-  );
-}
-
-function LabCasillas({ lab }: { lab: LabExtra }) {
-  return (
-    <div className="mt-6 space-y-4">
-      {lab.casillas.map((c) => (
-        <p key={c.name} className="leading-relaxed">
-          <span className="italic">{c.name}. </span>
-          <ConLemas>{c.body}</ConLemas>
-        </p>
-      ))}
-    </div>
-  );
-}
-
 function StudyPage() {
-  const { study, profundo: p, lab } = Route.useLoaderData();
-  const opusculo = OPUSCULOS[study.slug] ?? [];
+  const { study, parrafos } = Route.useLoaderData();
   const fechas = fechasArticulo({
     clase: "estudio",
     slug: study.slug,
-    pack: estudioTienePack(study.slug),
+    pack: true,
   });
-  const oir = textoParaOir(
-    opusculo.length
-      ? [study.title, study.ref, ...opusculo]
-      : [
-          study.title,
-          study.ref,
-          study.passage,
-          p ? `Autor: ${p.autor}. Época: ${p.epoca}. Género: ${p.genero}. ${p.literario}` : "",
-          ...VERDAD_PASOS.map((step, i) => `${step.name}. ${study[KEYS[i]]}`),
-          lab
-            ? [
-                lab.tablaTitulo,
-                ...lab.tabla.map((r) => `${r.palabra} ${r.glosa}`),
-                ...lab.casillas.map((c) => `${c.name}. ${c.body}`),
-                lab.analogiaAntecedente,
-                lab.analogiaPlena,
-                lab.status,
-                lab.distingo,
-                lab.fontes,
-                lab.reductio,
-                lab.acto,
-              ].join("\n\n")
-            : "",
-          p?.cristo ?? "",
-          study.conclusion,
-        ],
-  );
 
   return (
     <Aula
-      oir={oir}
+      oir={textoParaOir([study.title, study.ref, ...parrafos])}
       escritura={study.passage}
       voz={study.voz}
       salir="/estudios"
@@ -166,104 +95,16 @@ function StudyPage() {
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
-      {opusculo.length === 0 ? <Verso texto={study.passage} voz={study.voz} /> : null}
       <p className="mt-6">
         <LeerCapitulo ref={study.ref} desde={`/estudios/${study.slug}`} />
       </p>
-      {opusculo.length === 0 ? (
-        <>
-          <p className="mt-4 font-sans text-sm">
-            <Link to="/metodo" className="text-link underline">
-              Los seis eslabones · cómo se recorre un pasaje
-            </Link>
+      <div className="mt-10 space-y-6">
+        {parrafos.map((para, i) => (
+          <p key={i} className="text-lg leading-relaxed">
+            <ConLemas>{para}</ConLemas>
           </p>
-          <PasosNav />
-        </>
-      ) : null}
-
-      {opusculo.length > 0 ? (
-        <div className="mt-10 space-y-6">
-          {opusculo.map((para, i) => (
-            <p key={i} className="text-lg leading-relaxed">
-              <ConLemas>{para}</ConLemas>
-            </p>
-          ))}
-        </div>
-      ) : null}
-
-      {opusculo.length === 0 && p ? <ContextoHistorico p={p} /> : null}
-
-      {opusculo.length === 0 ? (
-      <div className="mt-12 space-y-10">
-        {VERDAD_PASOS.map((step, i) => (
-          <section key={`${step.d}-${step.name}`} id={pasoId(step.d)} className="scroll-mt-8">
-            <h2 className="flex items-center gap-3 font-sans text-xs tracking-[0.2em] text-gold-dim uppercase">
-              <span className="inline-flex h-10 w-10 items-center justify-center bg-navy font-sans text-sm font-semibold tracking-[0.12em] text-parchment">
-                {step.letter}
-              </span>
-              {step.name} · {step.verbo}
-            </h2>
-            <p className="mt-2 font-serif italic text-ink-soft">{step.regla}</p>
-            {paras(study[KEYS[i]]).map((para) => (
-              <p key={para.slice(0, 48)} className="mt-4 text-lg leading-relaxed">
-                <ConLemas>{para}</ConLemas>
-              </p>
-            ))}
-            {lab && step.d === "V" ? <LabTabla lab={lab} /> : null}
-            {lab && step.d === "D1" ? <LabCasillas lab={lab} /> : null}
-            {lab && step.d === "D2" ? (
-              <p className="mt-6 font-sans text-sm">
-                <Link to="/crisol" className="text-link underline">
-                  C.R.I.S.O.L.™ en El Altar del Espejo
-                </Link>
-              </p>
-            ) : null}
-          </section>
         ))}
       </div>
-      ) : null}
-
-      {opusculo.length === 0 && lab ? <LabYunque lab={lab} /> : null}
-
-      {opusculo.length === 0 && p ? (
-        <>
-          <section className="mt-12">
-            <h2 className="font-serif text-3xl">Exégesis y raíces</h2>
-            <p className="mt-4 text-lg leading-relaxed">
-              El número de Strong no es un talismán. Sitúa la raíz, da la glosa en castellano y
-              obliga a oír la palabra que el pasaje conjuga, no la que el siglo prefiere. El
-              diccionario sirve al párrafo; no lo predica.
-            </p>
-            <ul className="mt-2">
-              {p.lemmas.map((l) => (
-                <LemaStrong key={l.orig} orig={l.orig} sense={l.sense} />
-              ))}
-            </ul>
-          </section>
-          <section className="mt-12">
-            <h2 className="font-serif text-3xl">Cristo y el canon</h2>
-            <p className="mt-4 text-lg leading-relaxed">
-              <ConLemas>{p.cristo}</ConLemas>
-            </p>
-            <Refs refs={p.cruces} />
-          </section>
-          <RedCanon centro={study.ref} cruces={p.cruces} />
-          <section className="mt-12">
-            <h2 className="font-serif text-3xl">Preguntas de la escuela</h2>
-            <ol className="mt-5 list-decimal space-y-3 pl-5 text-lg leading-relaxed">
-              {p.preguntas.map((q) => (
-                <li key={q}>{q}</li>
-              ))}
-            </ol>
-          </section>
-        </>
-      ) : null}
-
-      {opusculo.length === 0 ? (
-      <p className="mt-12 border-t border-rule pt-8 text-ink-soft italic">
-        <ConLemas>{study.conclusion}</ConLemas>
-      </p>
-      ) : null}
       <CierreAula
         kind="estudio"
         pasaje={study.ref}

@@ -18,10 +18,15 @@ function textoParaOir(parts: string[]) {
 export const Route = createFileRoute("/tratados/$slug")({
   component: TratadoPage,
   loader: async ({ params }) => {
-    const { tratadoDe } = await import("@/lib/tratados");
+    const [{ tratadoDe }, { parrafosDe }] = await Promise.all([
+      import("@/lib/tratados"),
+      import("@/lib/libros/cargar"),
+    ]);
     const t = tratadoDe(params.slug);
     if (!t) throw notFound();
-    return { tratado: t };
+    const cuerpo = await parrafosDe(params.slug);
+    if (cuerpo.length === 0) throw notFound();
+    return { tratado: { ...t, cuerpo: [...cuerpo] } };
   },
   head: ({ loaderData }) => {
     const tratado = loaderData?.tratado;
