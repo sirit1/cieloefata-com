@@ -1,6 +1,6 @@
 import { estudioSemanaSlug, tratadoMesSlug } from "@/lib/calendario";
 import { estudioTienePack } from "@/lib/catalogo";
-import { LAB_SLUGS } from "@/lib/verdad";
+import { LAB_SLUGS } from "@/lib/labs";
 
 /** Rótulo de catálogo. No abre el cuerpo del aula. */
 export function etiquetaEstudio(slug: string) {

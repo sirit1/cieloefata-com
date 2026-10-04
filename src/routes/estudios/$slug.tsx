@@ -44,7 +44,7 @@ export const Route = createFileRoute("/estudios/$slug")({
   component: StudyPage,
   loader: async ({ params }) => {
     const [{ studyBySlug }, { parrafosDe }] = await Promise.all([
-      import("@/lib/studies"),
+      import("@/lib/studies-aula"),
       import("@/lib/libros/cargar"),
     ]);
     const study = studyBySlug(params.slug);

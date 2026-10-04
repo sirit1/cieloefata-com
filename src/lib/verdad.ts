@@ -1,4 +1,5 @@
 import { school } from "@/lib/content";
+import { LAB_SLUGS } from "@/lib/labs";
 
 export const VERDAD_ORIGEN = {
   title: "V.E.R.D.A.D.™",
@@ -246,7 +247,7 @@ export const LABORATORIOS = [
   },
 ] as const;
 
-export const LAB_SLUGS = LABORATORIOS.map((l) => l.slug);
+export { LAB_SLUGS };
 
 export const CATECISMO = [
   {

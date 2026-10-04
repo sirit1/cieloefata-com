@@ -7,6 +7,8 @@ import { FICHA_ESTUDIO, FICHA_TRATADO } from "./fichas-portada.ts";
 import { studies } from "./studies.ts";
 import { tratados } from "./tratados.ts";
 import { TRATADOS_INDICE } from "./tratados-indice.ts";
+import { LAB_SLUGS } from "./labs.ts";
+import { LABORATORIOS } from "./verdad.ts";
 
 describe("fichas de portada", () => {
   it("coincide con el aula y no omite ninguna semana del calendario", () => {
@@ -56,5 +58,12 @@ describe("fichas de portada", () => {
       assert.equal(row.blurb, tratado.blurb);
       assert.equal(row.pack, tratado.pack);
     }
+  });
+
+  it("el rótulo de yunque no se desalinea del manual", () => {
+    assert.deepEqual(
+      LABORATORIOS.map((l) => l.slug),
+      [...LAB_SLUGS],
+    );
   });
 });
