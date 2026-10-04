@@ -11,7 +11,7 @@ export const school = {
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Dr. Alejandro Sirit",
   welcome:
-    "Cielo Efata es una escuela de estudio bíblico. RevelatiO es el lugar donde se abre el capítulo entero. Las dos son una sola obra. Aquí no se lee un versículo suelto para animarse cuando el siglo aprieta. Se lee un pasaje completo, se estudia con la cadena, y se sale con un solo paso para esta semana, dicho a alguien que pueda preguntar mañana.",
+    "Cielo Efata es una escuela de estudio bíblico, y aquí el capítulo se abre entero antes de que nadie lo comente. Aquí no se lee un versículo suelto para animarse cuando el siglo aprieta. Se lee un pasaje completo, se estudia con la cadena, y se sale con un solo paso para esta semana, dicho a alguien que pueda preguntar mañana.",
   welcomeRef: "Neh. 8:8 · 2 Ti. 2:15",
 };
 

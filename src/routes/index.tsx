@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       path: "/",
       title: SITE_TITLE,
       description:
-        "Escuela de lectura de la Escritura. RevelatiO abre el capítulo. Aquí se estudia: el método, el estudio de la semana y el tratado del mes.",
+        "Escuela de lectura de la Escritura. Primero se lee el capítulo entero; aquí se estudia: el método, el estudio de la semana y el tratado del mes.",
     }),
 });
 

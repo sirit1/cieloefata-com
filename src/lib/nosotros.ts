@@ -15,8 +15,8 @@ export const NOSOTROS = {
     body: "Editorial Cielo Efata es la casa que sostiene esta escuela. No es un portal de consuelo ni una vitrina de lemas. Publica el corpus teológico de la serie Cielo Efata y mantiene el aula abierta: estudios semanales, tratados que restituyen versículos hurtados a su contexto, el método V.E.R.D.A.D. y el cuaderno donde el acto se escribe con fecha y testigo. El orden de lectura —no el de publicación— comienza por Éfata y sigue el currículo de la casa. Quien empieza por ese umbral aprende primero a leer el capítulo entero, y solo después habla.",
   },
   revelatio: {
-    title: "Relación con RevelatiO",
-    body: "RevelatiO es el lector compañero, no el sitio de la escuela. En revelatio.app se abre el capítulo entero; en cieloefata.com se recorre la clase, el tratado y la cadena V.E.R.D.A.D. hasta la Decisión. Esta casa no sustituye esa lectura: la sostiene. Quien instala la aplicación o lee en la web lleva el texto consigo; quien vuelve aquí no encuentra un segundo evangelio, sino el oficio de oír y obedecer.",
+    title: "El lector compañero",
+    body: "El lector compañero no es el sitio de la escuela. Allí se abre el capítulo entero; en cieloefata.com se recorre la clase, el tratado y la cadena V.E.R.D.A.D. hasta la Decisión. Esta casa no sustituye esa lectura: la sostiene. Quien instala la aplicación o lee en la web lleva el texto consigo; quien vuelve aquí no encuentra un segundo evangelio, sino el oficio de oír y obedecer.",
   },
   phone: "+58 424 167 4909",
   phoneNote: "WhatsApp · Venezuela",

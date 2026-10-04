@@ -63,7 +63,7 @@ export function SiteFooter() {
                 </Link>
               ))}
               <a href="https://revelatio.app/" className="hover:text-gold">
-                RevelatiO · el lector de la Escritura
+                El lector de la Escritura
               </a>
             </nav>
           </div>

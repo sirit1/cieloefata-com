@@ -35,7 +35,6 @@ export const GLOSAS: Record<string, string> = {
   YHWH: "El Nombre. La Reina-Valera dice Jehová.",
   "YO SOY": "Éxodo 3:14. El Nombre que no se conjuga como oficio humano.",
   "Reina-Valera": "Traducción castellana de la Escritura. Esta casa lee en ella.",
-  "RevelatiO": "La Escritura abierta: el capítulo entero, las versiones, la consulta. revelatio.app",
   quadriga: "Los cuatro sentidos medievales. Esta casa los deja: el texto no es un cifrado.",
   "lectio divina": "Lectura orante. No sustituye la observación del pasaje.",
   SOAP: "Método de devocional (Scripture, Observation, Application, Prayer). Aquí no es el método.",
@@ -69,7 +68,9 @@ export function hallarGlosas(text: string): { start: number; end: number; token:
       const after = text[i + key.length] ?? "";
       const boundL = !/[A-Za-záéíóúñÁÉÍÓÚÑ™]/.test(before);
       const boundR = !/[A-Za-záéíóúñÁÉÍÓÚÑ™]/.test(after);
-      if (boundL && boundR) {
+      // «Efata» dentro de la marca «Cielo Efata» no se glosa.
+      const marca = (key === "Efata" || key === "Éfata") && /Cielo\s$/.test(text.slice(Math.max(0, i - 6), i));
+      if (boundL && boundR && !marca) {
         out.push({ start: i, end: i + key.length, token: key, texto });
       }
       from = i + key.length;

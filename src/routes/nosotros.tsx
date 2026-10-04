@@ -13,7 +13,7 @@ export const Route = createFileRoute("/nosotros")({
       path: "/nosotros",
       title: tituloSeccion("Nosotros"),
       description:
-        "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. RevelatiO es el lector compañero en revelatio.app. WhatsApp +58 424 167 4909.",
+        "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. Escuela de lectura de la Escritura entera. WhatsApp +58 424 167 4909.",
     }),
 });
 
