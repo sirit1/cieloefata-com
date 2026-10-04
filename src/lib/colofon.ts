@@ -1,6 +1,6 @@
 /**
  * Colofón de los tratados: «Fuentes, versiones y aviso de derechos».
- * Texto de Drive («COLOFON fuentes y derechos - tratados.md»), sin retoques de prosa.
+ * Texto de la versión corregida (Reina-Valera 1909, dominio público), sin retoques de prosa.
  * Firma del autor: solo «Alejandro Sirit». Se muestra completo al cierre de cada tratado.
  */
 export type BloqueColofon = { tipo: "h" | "p" | "li"; texto: string };
@@ -11,14 +11,7 @@ export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "p", texto: "Editorial Cielo Efata · Alejandro Sirit · 2026" },
   { tipo: "p", texto: "Este aviso va en el verso de la portada (créditos) y se repite, completo, al cierre de cada tratado. No es un dictamen de abogado. Es la página de derechos de la casa. Antes de una tirada comercial grande, un abogado en Canadá puede revisarla. El derecho de autor en Canadá es federal (Copyright Act), también para quien publica desde Quebec." },
   { tipo: "h", texto: "1. Versión castellana" },
-  { tipo: "p", texto: "Cita de iglesia: Reina-Valera 1960 (RVR1960)." },
-  { tipo: "p", texto: "Aviso, en la forma que piden las Sociedades Bíblicas:" },
-  { tipo: "p", texto: "Las citas bíblicas identificadas (RVR1960) han sido tomadas de la Reina-Valera 1960™ © Sociedades Bíblicas en América Latina, 1960. Derechos renovados 1988, Sociedades Bíblicas Unidas. Utilizado con permiso." },
-  { tipo: "p", texto: "Reina-Valera 1960® es marca registrada de Sociedades Bíblicas Unidas. El logotipo no se imprime aquí: hay que pedirlo a la American Bible Society, licensing@americanbible.org, o a las Sociedades Bíblicas Unidas." },
-  { tipo: "p", texto: "Política publicada por la American Bible Society para la RVR1960: se pueden citar hasta quinientos versículos sin permiso escrito, siempre que esos versículos no sean la mitad o más de un libro bíblico completo, ni el veinticinco por ciento o más del texto total de la obra, y siempre que el aviso de arriba figure en la página de derechos. Esa franquicia es de la sociedad bíblica, no un permiso ilimitado para vaciar libros enteros dentro del tratado." },
-  { tipo: "p", texto: "Si un tomo pasa de quinientos versículos citados, o si la cita es la cuarta parte o más del libro, o la mitad de un libro bíblico, no se imprime «utilizado con permiso» hasta que llegue la licencia. Se escribe a licensing@americanbible.org." },
-  { tipo: "p", texto: "Texto largo de dominio público, cuando haga falta no gastar la franquicia: Reina-Valera 1909. Se marca (RVR1909). No se mezcla en el mismo versículo con la de 1960 sin decir cuál es cuál." },
-  { tipo: "p", texto: "No se usan, en estos tratados, NVI, LBLA, NBLA, DHH, TLA, RVR1995 ni RVR2020. Esas versiones tienen otro titular y otro aviso." },
+  { tipo: "p", texto: "Cita de iglesia: Reina-Valera 1909, de dominio público. Se cita tal como la trae esa edición, con su ortografía (á, ó, fué). No requiere permiso ni aviso de titular." },
   { tipo: "h", texto: "2. Texto hebreo" },
   { tipo: "p", texto: "Lectura base del Antiguo Testamento: texto masorético del Códice de Leningrado, en la presentación de la Biblia Hebraica Stuttgartensia." },
   { tipo: "p", texto: "Biblia Hebraica Stuttgartensia, ed. Karl Elliger y Wilhelm Rudolph; quinta edición mejorada, ed. Adrian Schenker. © 1977 y 1997 Deutsche Bibelgesellschaft, Stuttgart." },
@@ -61,9 +54,9 @@ export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "p", texto: "El tratado, la prosa, el orden V.E.R.D.A.D. y el cierre dogmático son de Alejandro Sirit, Editorial Cielo Efata, 2026. Todos los derechos reservados. No se cede el texto a una plataforma para que lo reimprima como si fuera suyo." },
   { tipo: "p", texto: "La Escritura no es del autor. El comentario sí." },
   { tipo: "h", texto: "9. Qué no afirma esta página" },
-  { tipo: "p", texto: "No afirma que la BHS, la Rahlfs-Hanhart o la RVR1960 sean de dominio público. No afirma un permiso de venta más allá de la franquicia de quinientos versículos. No reproduce aparato crítico, masora, láminas de Qumrán ni comentarios de autor vivo. No es licencia para terceros: quien copie este tratado copia una obra reservada, aunque las citas bíblicas tengan su propio titular." },
+  { tipo: "p", texto: "No afirma que la BHS o la Rahlfs-Hanhart sean de dominio público. No reproduce aparato crítico, masora, láminas de Qumrán ni comentarios de autor vivo. No es licencia para terceros: quien copie este tratado copia una obra reservada, aunque las citas bíblicas tengan su propio titular." },
   { tipo: "h", texto: "10. Créditos breves para el verso de la portada" },
-  { tipo: "p", texto: "Texto bíblico en castellano: Reina-Valera 1960™ © Sociedades Bíblicas en América Latina, 1960. Derechos renovados 1988, Sociedades Bíblicas Unidas. Utilizado con permiso, dentro de la franquicia de cita de esa versión. Donde se marque RVR1909, el texto es la Reina-Valera 1909, de dominio público." },
+  { tipo: "p", texto: "Texto bíblico en castellano: Reina-Valera 1909, de dominio público." },
   { tipo: "p", texto: "Hebreo: texto masorético, Códice de Leningrado, según la Biblia Hebraica Stuttgartensia © 1977/1997 Deutsche Bibelgesellschaft, Stuttgart. Se cita el versículo; no se reproduce la edición." },
   { tipo: "p", texto: "Griego del Nuevo Testamento: Textus Receptus (Stephanus 1550; Scrivener 1894), dominio público." },
   { tipo: "p", texto: "Griego del Antiguo Testamento: Septuaginta, comparación por versículo. No se reproduce la edición de Rahlfs-Hanhart © 2006 Deutsche Bibelgesellschaft." },
@@ -71,5 +64,5 @@ export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "p", texto: "Léxico: Strong (1890), Thayer (1889), Brown-Driver-Briggs (1906), dominio público." },
   { tipo: "p", texto: "Comentaristas citados: Juan Calvino (Calvin Translation Society, siglo XIX); Albert Barnes; y, solo si el tomo los nombra, Matthew Henry, J. B. Lightfoot y J. C. Ryle. Dominio público. Christian Classics Ethereal Library, ccel.org." },
   { tipo: "p", texto: "Tratado © 2026 Alejandro Sirit, Editorial Cielo Efata. Todos los derechos reservados." },
-  { tipo: "p", texto: "El cierre dogmático que firma el Alejandro Sirit es doctrina de esta casa. No es dictamen de las Sociedades Bíblicas ni de la Deutsche Bibelgesellschaft." },
+  { tipo: "p", texto: "El cierre dogmático que firma Alejandro Sirit es doctrina de esta casa. No es dictamen de la Deutsche Bibelgesellschaft." },
 ];
