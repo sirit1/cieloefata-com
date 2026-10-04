@@ -1,7 +1,7 @@
 /** La ofrenda no se cobra el texto: se sostiene la casa. */
 
 const TEXTO_WA =
-  "Paz. Quiero sostener el trabajo de RevelatiO · Cielo Efata. La Escritura no se cobra. Esta ofrenda sostiene la consulta.";
+  "Paz. Quiero sostener el trabajo de Cielo Efata. La Escritura no se cobra. Esta ofrenda sostiene la consulta.";
 
 export const OFRENDA = {
   title: "Sostener este trabajo",

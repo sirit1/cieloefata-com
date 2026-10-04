@@ -35,8 +35,8 @@ export function UmbralTresCaminos() {
       <li>
         <p className="font-serif text-xl">Leer el capítulo.</p>
         <p className="mt-2 leading-relaxed text-ink-soft">
-          Abre la Escritura entera en RevelatiO, el lector compañero de esta casa: el capítulo va
-          delante; el comentario, detrás.
+          Abre la Escritura entera en el lector compañero de esta casa: el capítulo va delante, y
+          el comentario, detrás.
         </p>
         <a href={DOS_CASAS.leerHref} rel="noopener noreferrer" className="btn btn-ink mt-4">
           {DOS_CASAS.leerLabel}

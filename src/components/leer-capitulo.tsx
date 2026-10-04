@@ -29,7 +29,7 @@ export function LeerCapitulo({
   return (
     <a href={href} rel="noopener noreferrer" className={className || "btn btn-ghost"}>
       Abrir la Escritura
-      <span className="sr-only"> en RevelatiO</span>
+      <span className="sr-only"> en el lector compañero</span>
     </a>
   );
 }

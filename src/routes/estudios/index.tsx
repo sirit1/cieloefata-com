@@ -21,9 +21,9 @@ export const Route = createFileRoute("/estudios/")({
       path: "/estudios",
       title: tituloSeccion("Estudios"),
       description:
-        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí; RevelatiO abre el capítulo.",
+        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí, después del capítulo entero.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. RevelatiO abre el capítulo entero; esta casa no lo sustituye: lo escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
+        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
     }),
 });
 
@@ -48,8 +48,8 @@ function EstudiosPage() {
       <p className="mt-5 text-lg leading-relaxed">
         Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver,
         Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien
-        que pueda preguntar mañana. RevelatiO abre el capítulo entero; esta casa no lo sustituye:
-        lo escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia.
+        que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa
+        lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia.
         Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen
         portada.
       </p>

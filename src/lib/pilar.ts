@@ -2,7 +2,7 @@ import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
 
 /** Cómo se recorre esta casa: no es un almanaque. */
 export const OFICIO = {
-  gate: "Esta casa es escuela, no almanaque. RevelatiO abre el capítulo entero; aquí se recorre la clase de la semana, el tratado del mes, seis géneros en el yunque y un acto escrito. El método no se recita como talismán: se usa, de rodillas, hasta que el oído ceda.",
+  gate: "Esta casa es escuela, no almanaque. El capítulo se lee entero, y aquí se recorre la clase de la semana, el tratado del mes, seis géneros en el yunque y un acto escrito. El método no se recita como talismán: se usa, de rodillas, hasta que el oído ceda.",
   refs: "Neh. 8:8 · 2 Ti. 2:15 · Stg. 1:22",
   camino:
     "Si nunca se ha leído, se empieza por Marcos 7, donde el Hijo dice Éfata y el oído cede. La clase de esta semana es el himno del Siervo, Filipenses 2. Poseído el método, el yunque. Cada tapa de la colección se lee junto al capítulo que la sostiene, no en lugar de él.",
@@ -135,10 +135,10 @@ export const semana = {
 
 export const DOS_CASAS = {
   title: "Lo que esta escuela no sustituye",
-  gate: "RevelatiO abre el capítulo entero. Esta casa escribe el estudio, el tratado y el método, y no pretende sentarse en el trono del texto.",
-  body: "Cielo Efata escribe el estudio, el tratado y el método. RevelatiO es el lugar donde el capítulo se lee entero, se compara con otras versiones y se consulta. Esa consulta responde con Sola Scriptura: el texto primero, las ciencias bíblicas después, nada que el pasaje no contenga. Quien quiere oír el pasaje, lee. Quien quiere estudiarlo hasta que pida una obediencia, permanece aquí. Las dos son una sola obra. Quien sale de un capítulo vuelve a esta casa, no para coleccionar frases, sino para que el oído, ya abierto, no se cierre otra vez.",
+  gate: "El capítulo se lee entero, y esta casa escribe el estudio, el tratado y el método, y no pretende sentarse en el trono del texto.",
+  body: "Cielo Efata escribe el estudio, el tratado y el método. El lector compañero es el lugar donde el capítulo se lee entero, se compara con otras versiones y se consulta. Esa consulta responde con Sola Scriptura: el texto primero, las ciencias bíblicas después, nada que el pasaje no contenga. Quien quiere oír el pasaje, lee. Quien quiere estudiarlo hasta que pida una obediencia, permanece aquí. Las dos son una sola obra. Quien sale de un capítulo vuelve a esta casa, no para coleccionar frases, sino para que el oído, ya abierto, no se cierre otra vez.",
   banner: [
-    "RevelatiO es la Biblia en tu teléfono y en tu computadora. Abres el libro, eliges el capítulo y lees el pasaje entero: otras versiones a la mano, y una consulta que no se sienta encima del texto.",
+    "El lector compañero es la Biblia en tu teléfono y en tu computadora. Abres el libro, eliges el capítulo y lees el pasaje entero: otras versiones a la mano, y una consulta que no se sienta encima del texto.",
     "Úsala ahora en el navegador, o escanea el código e instálala como aplicación. El capítulo va contigo. Esta escuela no sustituye esa lectura: la sostiene.",
   ],
   refs: "Neh. 8:8 · 2 Ti. 3:16 · Hch. 17:11",
