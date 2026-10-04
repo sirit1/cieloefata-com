@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { Cite, Refs, Verso } from "@/components/cite";
@@ -24,6 +24,15 @@ function textoParaOir(parts: string[]) {
 }
 
 export const Route = createFileRoute("/estudios/$slug")({
+  beforeLoad: ({ params }) => {
+    if (params.slug === "isaias-53") {
+      throw redirect({
+        to: "/tratados/$slug",
+        params: { slug: "isaias-53" },
+        statusCode: 308,
+      });
+    }
+  },
   component: StudyPage,
   loader: async ({ params }) => {
     const [{ studyBySlug }, { profundoDe, laboratorioDe }] = await Promise.all([
@@ -91,36 +100,40 @@ function LabCasillas({ lab }: { lab: LabExtra }) {
 
 function StudyPage() {
   const { study, profundo: p, lab } = Route.useLoaderData();
-  const voces = vocesDe(study.slug);
   const opusculo = OPUSCULOS[study.slug] ?? [];
+  const voces = opusculo.length ? [] : vocesDe(study.slug);
   const fechas = fechasArticulo({
     clase: "estudio",
     slug: study.slug,
     pack: estudioTienePack(study.slug),
   });
-  const oir = textoParaOir([
-    study.title,
-    study.ref,
-    study.passage,
-    p ? `Autor: ${p.autor}. Época: ${p.epoca}. Género: ${p.genero}. ${p.literario}` : "",
-    ...VERDAD_PASOS.map((step, i) => `${step.name}. ${study[KEYS[i]]}`),
-    lab
-      ? [
-          lab.tablaTitulo,
-          ...lab.tabla.map((r) => `${r.palabra} ${r.glosa}`),
-          ...lab.casillas.map((c) => `${c.name}. ${c.body}`),
-          lab.analogiaAntecedente,
-          lab.analogiaPlena,
-          lab.status,
-          lab.distingo,
-          lab.fontes,
-          lab.reductio,
-          lab.acto,
-        ].join("\n\n")
-      : "",
-    p?.cristo ?? "",
-    ...opusculo,
-  ]);
+  const oir = textoParaOir(
+    opusculo.length
+      ? [study.title, study.ref, ...opusculo]
+      : [
+          study.title,
+          study.ref,
+          study.passage,
+          p ? `Autor: ${p.autor}. Época: ${p.epoca}. Género: ${p.genero}. ${p.literario}` : "",
+          ...VERDAD_PASOS.map((step, i) => `${step.name}. ${study[KEYS[i]]}`),
+          lab
+            ? [
+                lab.tablaTitulo,
+                ...lab.tabla.map((r) => `${r.palabra} ${r.glosa}`),
+                ...lab.casillas.map((c) => `${c.name}. ${c.body}`),
+                lab.analogiaAntecedente,
+                lab.analogiaPlena,
+                lab.status,
+                lab.distingo,
+                lab.fontes,
+                lab.reductio,
+                lab.acto,
+              ].join("\n\n")
+            : "",
+          p?.cristo ?? "",
+          study.conclusion,
+        ],
+  );
 
   return (
     <Aula
@@ -144,16 +157,20 @@ function StudyPage() {
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
-      <Verso texto={study.passage} voz={study.voz} />
+      {opusculo.length === 0 ? <Verso texto={study.passage} voz={study.voz} /> : null}
       <p className="mt-6">
         <LeerCapitulo ref={study.ref} desde={`/estudios/${study.slug}`} />
       </p>
-      <p className="mt-4 font-sans text-sm">
-        <Link to="/metodo" className="text-link underline">
-          Los seis eslabones · cómo se recorre un pasaje
-        </Link>
-      </p>
-      <PasosNav />
+      {opusculo.length === 0 ? (
+        <>
+          <p className="mt-4 font-sans text-sm">
+            <Link to="/metodo" className="text-link underline">
+              Los seis eslabones · cómo se recorre un pasaje
+            </Link>
+          </p>
+          <PasosNav />
+        </>
+      ) : null}
 
       {opusculo.length > 0 ? (
         <div className="mt-10 space-y-6">
@@ -165,8 +182,9 @@ function StudyPage() {
         </div>
       ) : null}
 
-      {p ? <ContextoHistorico p={p} /> : null}
+      {opusculo.length === 0 && p ? <ContextoHistorico p={p} /> : null}
 
+      {opusculo.length === 0 ? (
       <div className="mt-12 space-y-10">
         {VERDAD_PASOS.map((step, i) => (
           <section key={`${step.d}-${step.name}`} id={pasoId(step.d)} className="scroll-mt-8">
@@ -194,10 +212,11 @@ function StudyPage() {
           </section>
         ))}
       </div>
+      ) : null}
 
-      {lab ? <LabYunque lab={lab} /> : null}
+      {opusculo.length === 0 && lab ? <LabYunque lab={lab} /> : null}
 
-      {p ? (
+      {opusculo.length === 0 && p ? (
         <>
           <section className="mt-12">
             <h2 className="font-serif text-3xl">Exégesis y raíces</h2>
@@ -231,6 +250,7 @@ function StudyPage() {
         </>
       ) : null}
 
+      {voces.length > 0 ? (
       <section className="mt-14 border-t border-rule pt-10">
         <h2 className="font-serif text-3xl">Testigos que sirven al pasaje</h2>
         <p className="mt-4 text-lg leading-relaxed">
@@ -256,10 +276,13 @@ function StudyPage() {
           ))}
         </div>
       </section>
+      ) : null}
 
+      {opusculo.length === 0 ? (
       <p className="mt-12 border-t border-rule pt-8 text-ink-soft italic">
         <ConLemas>{study.conclusion}</ConLemas>
       </p>
+      ) : null}
       <CierreAula
         kind="estudio"
         pasaje={study.ref}

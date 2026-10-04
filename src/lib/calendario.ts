@@ -78,15 +78,17 @@ export const MESES: MesEditorial[] = [
 
 /** Día en que el inventario Drive declaró los packs reales (catalogo.ts). */
 export const FECHA_PACKS = "2026-09-23";
-/** Última revisión de la prosa de aulas y tratados. */
+/** Última revisión de la prosa que no tiene pack. */
 export const FECHA_PROSA = "2026-09-24";
 /** Día en que el mapa de la serie (13–50) entró en la escuela, sin manuscrito de Drive. */
 export const FECHA_SERIE = "2026-10-01";
+/** Versión corregida RV1909, colofón y glosas: 3 de octubre de 2026. */
+export const FECHA_VIGENTE = "2026-10-03";
 
 export type FechasArticulo = { published: string; modified: string };
 
-function cerrar(published: string): FechasArticulo {
-  const modified = FECHA_PROSA > published ? FECHA_PROSA : published;
+function cerrar(published: string, tope = FECHA_PROSA): FechasArticulo {
+  const modified = tope > published ? tope : published;
   return { published, modified };
 }
 
@@ -98,9 +100,9 @@ function cerrar(published: string): FechasArticulo {
 export function fechasDePack(slug: string, clase: "estudio" | "tratado"): FechasArticulo {
   if (clase === "estudio") {
     const semana = SEMANAS.find((s) => s.studySlug === slug);
-    if (semana && semana.desde < FECHA_PACKS) return cerrar(semana.desde);
+    if (semana && semana.desde < FECHA_PACKS) return cerrar(semana.desde, FECHA_VIGENTE);
   }
-  return cerrar(FECHA_PACKS);
+  return cerrar(FECHA_PACKS, FECHA_VIGENTE);
 }
 
 /** Prosa ya escrita que no tiene pack: la revisión del 24 de septiembre. */
