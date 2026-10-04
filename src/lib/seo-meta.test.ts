@@ -37,7 +37,7 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/guias", tituloSeccion("Guías"), "Strong, cómo se lee, del pasaje a la palabra dicha, y la pregunta difícil. El capítulo sigue siendo el señor de la casa."],
   ["/sostener", tituloSeccion("Sostener"), "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909."],
   ["/buscar", tituloSeccion("Buscar"), "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.", "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda."],
-  ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe. Cada etapa oye un pasaje ya escrito en la escuela."],
+  ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. El capítulo se lee entero. El aula existe solo donde ya hay libro."],
   ["/nosotros", tituloSeccion("Nosotros"), "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. Escuela de lectura de la Escritura entera. WhatsApp +58 424 167 4909."],
   ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa."],
 ];

@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite, Refs, Term } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
-import { BtnArrow, Motif } from "@/components/motif";
+import { LeerCapitulo } from "@/components/leer-capitulo";
+import { Motif } from "@/components/motif";
 import {
   CRISOL_CUATRO,
   CRISOL_FALLOS,
@@ -46,10 +47,6 @@ function CrisolPage() {
       <p className="mt-10 font-sans text-sm">
         <Link to="/metodo" className="text-link underline">
           V.E.R.D.A.D.™ oye el pasaje
-        </Link>
-        {" · "}
-        <Link to="/estudios/$slug" params={{ slug: "genesis-3" }} className="text-link underline">
-          El laboratorio de Génesis 3
         </Link>
       </p>
 
@@ -111,14 +108,7 @@ function CrisolPage() {
         ))}
         <Refs refs={CRISOL_GENESIS.refs} />
         <p className="mt-8 flex flex-wrap gap-4">
-          <Link
-            to="/estudios/$slug"
-            params={{ slug: "genesis-3" }}
-            className="btn btn-gold"
-          >
-            Escudriñar Génesis 3
-            <BtnArrow />
-          </Link>
+          <LeerCapitulo ref="Génesis 3" desde="/crisol" />
           <Link
             to="/cuaderno"
             search={{ ref: "Génesis 3" }}

@@ -193,29 +193,41 @@ function MetodoPage() {
           seis géneros, no merece un solo discípulo.
         </p>
         <p className="mt-5 text-lg leading-relaxed">
-          Los laboratorios no son adornos ni casos de éxito. Se recorren después de poseer el
-          método, no en lugar del método. Cada uno abre el aula y recorre los seis eslabones sobre
-          esa carne, no sobre otra.
+          Los laboratorios no son adornos. Marcos 7, Filipenses 2 y Apocalipsis 5 abren el aula.
+          Isaías 53 se escudriña en el tratado. Génesis 3 y el Salmo 22 se leen en el capítulo:
+          no hay una clase que fingir.
         </p>
         <ul className="mt-10 divide-y divide-rule border-y border-rule">
-          {LABORATORIOS.map((lab) => (
-            <li key={lab.slug}>
-              <Link
-                to="/estudios/$slug"
-                params={{ slug: lab.slug }}
-                className="block py-6 hover:text-gold"
-              >
-                <span>
-                  <p className="font-sans text-xs tracking-widest text-gold uppercase">
-                    Laboratorio {lab.n} · {lab.genero} · {lab.ref}
-                  </p>
-                  <h3 className="mt-2 font-serif text-2xl">{lab.title}</h3>
-                  <p className="mt-3 leading-relaxed">{lab.lead}</p>
-                </span>
-              </Link>
-              <Refs refs={lab.refs} />
-            </li>
-          ))}
+          {LABORATORIOS.map((lab) => {
+            const aula =
+              lab.slug === "marcos-7" || lab.slug === "filipenses-2" || lab.slug === "apocalipsis-5";
+            const tratado = lab.slug === "isaias-53";
+            const cuerpo = (
+              <span>
+                <p className="font-sans text-xs tracking-widest text-gold uppercase">
+                  Laboratorio {lab.n} · {lab.genero} · {lab.ref}
+                </p>
+                <h3 className="mt-2 font-serif text-2xl">{lab.title}</h3>
+                <p className="mt-3 leading-relaxed">{lab.lead}</p>
+              </span>
+            );
+            return (
+              <li key={lab.slug}>
+                {aula ? (
+                  <Link to="/estudios/$slug" params={{ slug: lab.slug }} className="block py-6 hover:text-gold">
+                    {cuerpo}
+                  </Link>
+                ) : tratado ? (
+                  <Link to="/tratados/$slug" params={{ slug: "isaias-53" }} className="block py-6 hover:text-gold">
+                    {cuerpo}
+                  </Link>
+                ) : (
+                  <div className="block py-6">{cuerpo}</div>
+                )}
+                <Refs refs={lab.refs} />
+              </li>
+            );
+          })}
         </ul>
       </section>
 

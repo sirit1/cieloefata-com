@@ -23,6 +23,21 @@ function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
 }
 
+const RETIRADOS = new Set([
+  "romanos-1",
+  "marcos-1",
+  "juan-3",
+  "hechos-2",
+  "juan-1",
+  "romanos-3",
+  "2-corintios-5",
+  "romanos-12",
+  "juan-14",
+  "salmo-23",
+  "genesis-3",
+  "salmo-22",
+]);
+
 export const Route = createFileRoute("/estudios/$slug")({
   beforeLoad: ({ params }) => {
     if (params.slug === "isaias-53") {
@@ -31,6 +46,9 @@ export const Route = createFileRoute("/estudios/$slug")({
         params: { slug: "isaias-53" },
         statusCode: 308,
       });
+    }
+    if (RETIRADOS.has(params.slug)) {
+      throw redirect({ to: "/estudios", statusCode: 308 });
     }
   },
   component: StudyPage,

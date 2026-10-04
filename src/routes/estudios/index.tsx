@@ -110,37 +110,31 @@ function EstudiosPage() {
       <Lista titulo="Estudios bíblicos" items={publicados} />
 
       <section className="mt-14">
-        <h2 className="font-serif text-3xl">Seis laboratorios, seis géneros</h2>
+        <h2 className="font-serif text-3xl">Tres géneros que ya tienen aula</h2>
         <p className="mt-4 leading-relaxed">
-          El yunque del método recorre seis géneros: narración, lamento, cántico del Siervo,
-          evangelio, himno y apocalipsis. Marcos 7, Filipenses 2 y Apocalipsis 5 tienen pack en
-          Drive. Génesis 3, Salmo 22 e Isaías 53 se leen como clase; Isaías 53 se escudriña
-          además como tratado.
+          El yunque nombra seis géneros. El aula está abierta donde ya hay libro: Marcos 7,
+          Filipenses 2 y Apocalipsis 5. Génesis 3 y el Salmo 22 no tienen clase. Isaías 53 se
+          escudriña en el tratado, no en un segundo estudio.
         </p>
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
-          {labs.map(({ lab, study }) => (
+          {labs
+            .filter((row): row is { lab: (typeof labs)[number]["lab"]; study: IndiceEstudio } =>
+              Boolean(row.study),
+            )
+            .map(({ lab, study }) => (
             <li key={lab.slug}>
-              {study ? (
-                <Link
-                  to="/estudios/$slug"
-                  params={{ slug: study.slug }}
-                  className="block py-5 hover:text-gold"
-                >
-                  <span className="flex min-w-0 flex-col gap-1">
-                    <span className="font-sans text-sm text-gold">
-                      {lab.genero} · {lab.ref}
-                    </span>
-                    <span className="font-serif text-2xl">{lab.title}</span>
-                  </span>
-                </Link>
-              ) : (
-                <span className="block py-5">
+              <Link
+                to="/estudios/$slug"
+                params={{ slug: study.slug }}
+                className="block py-5 hover:text-gold"
+              >
+                <span className="flex min-w-0 flex-col gap-1">
                   <span className="font-sans text-sm text-gold">
                     {lab.genero} · {lab.ref}
                   </span>
-                  <span className="mt-1 block font-serif text-2xl">{lab.title}</span>
+                  <span className="font-serif text-2xl">{lab.title}</span>
                 </span>
-              )}
+              </Link>
             </li>
           ))}
         </ul>

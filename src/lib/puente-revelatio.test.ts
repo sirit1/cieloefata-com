@@ -34,15 +34,15 @@ describe("parseRef: versículo y libros de un capítulo", () => {
 });
 
 describe("puente a RevelatiO", () => {
-  it("«Leer en la web» de la portada abre Marcos 1 y vuelve al aula, no al inicio", () => {
+  it("«Leer en la web» de la portada abre Marcos 7 y vuelve al aula de Éfata", () => {
     const p = q(
-      urlPuenteRevelatio({ ref: "Marcos 1", desde: "/estudios/marcos-1" }),
+      urlPuenteRevelatio({ ref: "Marcos 7", desde: "/estudios/marcos-7" }),
     );
     assert.equal(p.get("libro"), "marcos");
-    assert.equal(p.get("cap"), "1");
+    assert.equal(p.get("cap"), "7");
     assert.equal(p.get("casa"), "1");
-    assert.equal(p.get("vuelta"), "/estudios/marcos-1");
-    assert.equal(p.get("estudio"), "marcos-1");
+    assert.equal(p.get("vuelta"), "/estudios/marcos-7");
+    assert.equal(p.get("estudio"), "marcos-7");
     assert.equal(p.get("vs"), null);
   });
 

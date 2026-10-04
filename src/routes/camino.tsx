@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Refs } from "@/components/cite";
+import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
 import { Volver } from "@/components/volver";
 import { CAMINO, CAMINO_INTRO } from "@/lib/camino";
+import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/camino")({
@@ -12,7 +14,7 @@ export const Route = createFileRoute("/camino")({
       path: "/camino",
       title: tituloSeccion("El camino"),
       description:
-        "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe. Cada etapa oye un pasaje ya escrito en la escuela.",
+        "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. El capítulo se lee entero. El aula existe solo donde ya hay libro.",
     }),
 });
 
@@ -34,14 +36,18 @@ function CaminoPage() {
             <p className="mt-1 text-gold">{paso.ref}</p>
             <p className="mt-4 leading-relaxed">{paso.body}</p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link
-                to="/estudios/$slug"
-                params={{ slug: paso.studySlug }}
-                className="btn btn-ink"
-              >
-                Escudriñar {paso.ref}
-                <BtnArrow />
-              </Link>
+              {(ESTUDIOS_DRIVE as readonly string[]).includes(paso.studySlug) ? (
+                <Link
+                  to="/estudios/$slug"
+                  params={{ slug: paso.studySlug }}
+                  className="btn btn-ink"
+                >
+                  Escudriñar {paso.ref}
+                  <BtnArrow />
+                </Link>
+              ) : (
+                <LeerCapitulo ref={paso.ref} desde="/camino" />
+              )}
               {paso.also?.map((otro) => (
                 <Link
                   key={otro.slug}
