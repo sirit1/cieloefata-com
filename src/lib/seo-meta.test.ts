@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { CORPUS } from "./content.ts";
+import { PARACLITO } from "./paraclito.ts";
 import { CRISOL_ORIGEN } from "./crisol.ts";
 import { CUADERNO_VACIO } from "./copy-nivel.ts";
 import { SELLO } from "./identidad.ts";
@@ -60,6 +61,7 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
   for (const obra of obras) {
     note(`/obras/${obra.slug}`, obra.seoTitle, obra.seoDescription);
   }
+  note(`/obras/${PARACLITO.slug}`, PARACLITO.seoTitle, PARACLITO.seoDescription);
   for (const study of studies) {
     note(
       `/estudios/${study.slug}`,
@@ -152,6 +154,9 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
     assert.equal(bloque.lastmod, undefined);
   }
 
+  const paraclito = bloques.find((b) => b.loc === `${SITE_ORIGIN}/obras/el-paraclito-eterno`);
+  assert.ok(paraclito);
+  assert.equal(paraclito.lastmod, undefined);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/romanos-1`), false);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/filipenses-2`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/tratados/isaias-53`), true);

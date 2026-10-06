@@ -35,6 +35,7 @@ import { Route as EstudiosSlugRouteImport } from './routes/estudios/$slug'
 import { Route as EstudiosHechos1314RouteImport } from './routes/estudios/hechos-13-14'
 import { Route as ObrasIndexRouteImport } from './routes/obras/index'
 import { Route as ObrasSlugRouteImport } from './routes/obras/$slug'
+import { Route as ObrasElParaclitoEternoRouteImport } from './routes/obras/el-paraclito-eterno'
 import { Route as ObrasElSiervoRouteImport } from './routes/obras/el-siervo'
 import { Route as TratadosSlugRouteImport } from './routes/tratados/$slug'
 
@@ -168,6 +169,11 @@ const ObrasSlugRoute = ObrasSlugRouteImport.update({
   path: '/obras/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ObrasElParaclitoEternoRoute = ObrasElParaclitoEternoRouteImport.update({
+  id: '/obras/el-paraclito-eterno',
+  path: '/obras/el-paraclito-eterno',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ObrasElSiervoRoute = ObrasElSiervoRouteImport.update({
   id: '/obras/el-siervo',
   path: '/obras/el-siervo',
@@ -204,6 +210,7 @@ export interface FileRoutesByFullPath {
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/obras/$slug': typeof ObrasSlugRoute
+  '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/estudios/': typeof EstudiosIndexRoute
@@ -234,6 +241,7 @@ export interface FileRoutesByTo {
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/obras/$slug': typeof ObrasSlugRoute
+  '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/estudios': typeof EstudiosIndexRoute
@@ -265,6 +273,7 @@ export interface FileRoutesById {
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/obras/$slug': typeof ObrasSlugRoute
+  '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/estudios/': typeof EstudiosIndexRoute
@@ -297,6 +306,7 @@ export interface FileRouteTypes {
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/obras/$slug'
+    | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
     | '/tratados/$slug'
     | '/estudios/'
@@ -327,6 +337,7 @@ export interface FileRouteTypes {
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/obras/$slug'
+    | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
     | '/tratados/$slug'
     | '/estudios'
@@ -357,6 +368,7 @@ export interface FileRouteTypes {
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/obras/$slug'
+    | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
     | '/tratados/$slug'
     | '/estudios/'
@@ -388,6 +400,7 @@ export interface RootRouteChildren {
   EstudiosSlugRoute: typeof EstudiosSlugRoute
   EstudiosHechos1314Route: typeof EstudiosHechos1314Route
   ObrasSlugRoute: typeof ObrasSlugRoute
+  ObrasElParaclitoEternoRoute: typeof ObrasElParaclitoEternoRoute
   ObrasElSiervoRoute: typeof ObrasElSiervoRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
   ObrasIndexRoute: typeof ObrasIndexRoute
@@ -577,6 +590,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ObrasSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/obras/el-paraclito-eterno': {
+      id: '/obras/el-paraclito-eterno'
+      path: '/obras/el-paraclito-eterno'
+      fullPath: '/obras/el-paraclito-eterno'
+      preLoaderRoute: typeof ObrasElParaclitoEternoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/obras/el-siervo': {
       id: '/obras/el-siervo'
       path: '/obras/el-siervo'
@@ -631,6 +651,7 @@ const rootRouteChildren: RootRouteChildren = {
   EstudiosSlugRoute: EstudiosSlugRoute,
   EstudiosHechos1314Route: EstudiosHechos1314Route,
   ObrasSlugRoute: ObrasSlugRoute,
+  ObrasElParaclitoEternoRoute: ObrasElParaclitoEternoRoute,
   ObrasElSiervoRoute: ObrasElSiervoRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
   ObrasIndexRoute: ObrasIndexRoute,

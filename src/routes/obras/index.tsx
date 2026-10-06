@@ -59,6 +59,15 @@ function ObrasPage() {
           </li>
         ))}
       </ul>
+
+      <h2 className="mt-14 font-serif text-3xl">Fuera del orden de lectura</h2>
+      <p className="mt-4 leading-relaxed">
+        <Link to="/obras/el-paraclito-eterno" className="text-link underline">
+          El Paráclito Eterno
+        </Link>
+        , estudio de la Serie Cielo Efata sobre Juan 14–16: el Espíritu Santo no es una energía
+        que se activa, sino una Persona divina que el Padre envía en el nombre del Hijo.
+      </p>
     </main>
   );
 }
