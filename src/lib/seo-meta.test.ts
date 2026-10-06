@@ -13,6 +13,8 @@ import { parrafosDe } from "./libros/cargar.ts";
 import { fechasArticulo } from "./calendario.ts";
 import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack } from "./catalogo.ts";
 import {
+  PERSONA_AUTOR,
+  SITE_NAME,
   SITE_ORIGIN,
   SITE_TITLE,
   amazonDeObra,
@@ -223,4 +225,19 @@ test("el aula cierra con las obras pedidas, sin mezclar el estudio y el tratado 
   ]);
   assert.deepEqual(slugs("estudio", "galatas-5"), ["la-fe-no-basta"]);
   assert.deepEqual(slugs("tratado", "el-crisol-de-lo-oido"), ["el-altar-del-espejo"]);
+});
+
+test("el JSON-LD habla solo de Cielo Efata y de Alejandro Sirit, sin RevelatiO", () => {
+  const fuente = readFileSync(new URL("../components/json-ld.tsx", import.meta.url), "utf8");
+  assert.equal(/revelatio/i.test(fuente), false);
+  assert.equal(fuente.includes("subOrganization"), false);
+  assert.equal(SITE_NAME, "Cielo Efata");
+  assert.equal(PERSONA_AUTOR["@type"], "Person");
+  assert.equal(PERSONA_AUTOR.name, "Alejandro Sirit");
+  assert.equal(PERSONA_AUTOR.url, `${SITE_ORIGIN}/nosotros`);
+  for (const obra of obras) {
+    const libro = camposLibro(obra);
+    assert.deepEqual(libro.author, PERSONA_AUTOR);
+    assert.equal(JSON.stringify(libro).toLowerCase().includes("revelatio"), false);
+  }
 });
