@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { CORPUS } from "./content.ts";
 import { PARACLITO } from "./paraclito.ts";
+import { DESCRIPCION_ARTICULOS, articulos } from "./articulos.ts";
 import { CRISOL_ORIGEN } from "./crisol.ts";
 import { CUADERNO_VACIO } from "./copy-nivel.ts";
 import { SELLO } from "./identidad.ts";
@@ -62,6 +63,8 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
     note(`/obras/${obra.slug}`, obra.seoTitle, obra.seoDescription);
   }
   note(`/obras/${PARACLITO.slug}`, PARACLITO.seoTitle, PARACLITO.seoDescription);
+  note("/articulos", tituloSeccion("Artículos"), DESCRIPCION_ARTICULOS);
+  for (const a of articulos) note(`/articulos/${a.slug}`, a.seoTitle, a.seoDescription);
   for (const study of studies) {
     note(
       `/estudios/${study.slug}`,
@@ -166,8 +169,14 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
   assert.equal(ESTUDIOS_DRIVE.length, 13);
   assert.equal(TRATADOS_DRIVE.length, 14);
   assert.equal(tratados.length, 14);
+  assert.ok(locs.has(`${SITE_ORIGIN}/articulos`));
+  for (const a of articulos) {
+    const bloque = bloques.find((b) => b.loc === `${SITE_ORIGIN}/articulos/${a.slug}`);
+    assert.ok(bloque, a.slug);
+    assert.equal(bloque.lastmod, a.published);
+  }
   const conFecha = bloques.filter((b) => b.lastmod);
-  assert.equal(conFecha.length, ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length);
+  assert.equal(conFecha.length, ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length + articulos.length);
 });
 
 function metaDe(head: ReturnType<typeof pageHead>, name: string) {
@@ -245,4 +254,17 @@ test("el JSON-LD habla solo de Cielo Efata y de Alejandro Sirit, sin RevelatiO",
     assert.deepEqual(libro.author, PERSONA_AUTOR);
     assert.equal(JSON.stringify(libro).toLowerCase().includes("revelatio"), false);
   }
+});
+
+test("el artículo de Santiago 2 firma Alejandro Sirit, cita la 1909 y enlaza La fe no basta", () => {
+  const a = articulos.find((x) => x.slug === "santiago-2-la-fe-que-obra");
+  assert.ok(a);
+  const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
+  const palabras = [a.title, ...a.secciones.map((s) => s.titulo ?? ""), texto].join(" ").split(/\s+/).filter(Boolean).length;
+  assert.ok(palabras >= 900 && palabras <= 1400, String(palabras));
+  assert.match(texto, /la fe sin obras es muerta/);
+  assert.equal(/Dr\.|RVR|1960|RevelatiO/i.test(texto), false);
+  assert.ok(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"));
+  assert.match(a.seoTitle, /Santiago 2/);
+  assert.match(a.seoDescription, /fe sin obras es muerta/);
 });

@@ -18,6 +18,7 @@ const secundaria = [
   { to: "/nosotros", label: "Nosotros" },
   { to: "/camino", label: "El camino" },
   { to: "/objeciones", label: "Objeciones" },
+  { to: "/articulos", label: "Artículos" },
   { to: "/buscar", label: "Buscar" },
   { to: "/palabra", label: "Palabra" },
   { to: "/guias", label: "Guías" },
