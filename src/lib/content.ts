@@ -156,7 +156,19 @@ export type Obra = {
   isbnPrint?: string;
   /** Published Amazon title when it differs from the house reading-order title. Never an invented ASIN. */
   amazonTitle?: string;
+  /** Muestra en la ficha el enlace «Estudia cada capítulo de este libro con IA en RevelatiO» (revelatio.app/libros/<slug>). */
+  revelatio?: boolean;
 };
+
+/** Enlace de la ficha del tomo a su libro en RevelatiO, con utm_campaign = slug. */
+export function urlRevelatioLibro(slug: string) {
+  return `https://revelatio.app/libros/${slug}?utm_source=web&utm_medium=cta&utm_campaign=${slug}`;
+}
+
+/** QR del mismo libro (sin UTM), copiado de /workspace/qr a public/qr. */
+export function qrRevelatioPath(slug: string) {
+  return `/qr/qr-${slug}.svg`;
+}
 
 export type AulaKind = "estudio" | "tratado";
 
@@ -185,6 +197,7 @@ export const obras: Obra[] = [
     n: 6,
     lectura: 1,
     slug: "efata",
+    revelatio: true,
     title: "Éfata",
     subtitulo: "Marcos 7:31–37",
     seoTitle: "Éfata: significado de Marcos 7:34 | Alejandro Sirit",
@@ -204,6 +217,7 @@ export const obras: Obra[] = [
     n: 5,
     lectura: 2,
     slug: "el-siervo-no-tu",
+    revelatio: true,
     title: "El Siervo, no tú",
     subtitulo: "Isaías 52:13 – 53:12",
     seoTitle: "El Siervo, no tú: Isaías 53:5 | Alejandro Sirit",
@@ -224,6 +238,7 @@ export const obras: Obra[] = [
     n: 7,
     lectura: 3,
     slug: "bastate-mi-gracia",
+    revelatio: true,
     title: "Bástate",
     amazonTitle: "Bástate mi gracia",
     subtitulo: "2 Corintios 12:1–10",
@@ -243,6 +258,7 @@ export const obras: Obra[] = [
     n: 4,
     lectura: 4,
     slug: "cuando-el-cielo-se-cae",
+    revelatio: true,
     title: "Cuando el cielo se cae",
     subtitulo: "El libro de Job",
     seoTitle: "Cuando el cielo se cae: Job 42:5 | Alejandro Sirit",
@@ -264,6 +280,7 @@ export const obras: Obra[] = [
     n: 3,
     lectura: 5,
     slug: "la-fe-no-basta",
+    revelatio: true,
     title: "La fe no basta",
     subtitulo: "Santiago 2:14–26",
     seoTitle: "La fe no basta: Santiago 2:17 | Alejandro Sirit",
@@ -284,6 +301,7 @@ export const obras: Obra[] = [
     n: 2,
     lectura: 6,
     slug: "el-altar-del-espejo",
+    revelatio: true,
     title: "El altar del espejo",
     subtitulo: "Santiago 1:22–25",
     seoTitle: "El altar del espejo: Santiago 1:22-25 | Alejandro Sirit",
@@ -305,6 +323,7 @@ export const obras: Obra[] = [
     n: 1,
     lectura: 7,
     slug: "callar-para-ganar",
+    revelatio: true,
     title: "Callar para ganar",
     subtitulo: "Santiago 3:1–12",
     seoTitle: "Callar para ganar: Santiago 3:2 | Alejandro Sirit",

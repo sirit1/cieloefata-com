@@ -8,7 +8,7 @@ import { CRISOL_ORIGEN } from "./crisol.ts";
 import { CUADERNO_VACIO } from "./copy-nivel.ts";
 import { SELLO } from "./identidad.ts";
 import { ESCRITURA } from "./pilar.ts";
-import { obras, obrasDesdeAula } from "./content.ts";
+import { obras, obrasDesdeAula, qrRevelatioPath, urlRevelatioLibro } from "./content.ts";
 import { studies } from "./studies.ts";
 import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
 import { parrafosDe } from "./libros/cargar.ts";
@@ -267,4 +267,28 @@ test("el artículo de Santiago 2 firma Alejandro Sirit, cita la 1909 y enlaza La
   assert.ok(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"));
   assert.match(a.seoTitle, /Santiago 2/);
   assert.match(a.seoDescription, /fe sin obras es muerta/);
+});
+
+test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
+  const slugs = obras.filter((o) => o.revelatio).map((o) => o.slug);
+  assert.deepEqual(slugs, [
+    "efata",
+    "el-siervo-no-tu",
+    "bastate-mi-gracia",
+    "cuando-el-cielo-se-cae",
+    "la-fe-no-basta",
+    "el-altar-del-espejo",
+    "callar-para-ganar",
+  ]);
+  assert.equal(
+    urlRevelatioLibro("callar-para-ganar"),
+    "https://revelatio.app/libros/callar-para-ganar?utm_source=web&utm_medium=cta&utm_campaign=callar-para-ganar",
+  );
+  for (const slug of slugs) {
+    const url = new URL(urlRevelatioLibro(slug));
+    assert.equal(url.pathname, `/libros/${slug}`);
+    assert.equal(url.searchParams.get("utm_campaign"), slug);
+    const qr = new URL(`../../public${qrRevelatioPath(slug)}`, import.meta.url);
+    assert.ok(readFileSync(qr, "utf8").includes("<svg"), slug);
+  }
 });
