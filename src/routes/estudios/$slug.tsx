@@ -13,20 +13,21 @@ function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
 }
 
-const RETIRADOS = new Set([
-  "romanos-1",
-  "marcos-1",
-  "juan-3",
-  "hechos-2",
-  "juan-1",
-  "romanos-3",
-  "2-corintios-5",
-  "romanos-12",
-  "juan-14",
-  "salmo-23",
-  "genesis-3",
-  "salmo-22",
-]);
+/** Clases retiradas el 4 oct 2026: cada una va al aula, tratado u obra más cercana (301 también en vercel.json). */
+const RETIRADOS: Record<string, string> = {
+  "romanos-1": "/estudios/teologia-de-la-cruz",
+  "marcos-1": "/estudios/marcos-7",
+  "juan-3": "/estudios/romanos-8-17",
+  "hechos-2": "/estudios/viajes-de-pablo",
+  "juan-1": "/estudios/filipenses-2",
+  "romanos-3": "/estudios/teologia-de-la-cruz",
+  "2-corintios-5": "/estudios/2-corintios-12",
+  "romanos-12": "/estudios/galatas-5",
+  "juan-14": "/obras/el-paraclito-eterno",
+  "salmo-23": "/estudios/2-corintios-12",
+  "genesis-3": "/estudios/santiago-1",
+  "salmo-22": "/tratados/isaias-53",
+};
 
 export const Route = createFileRoute("/estudios/$slug")({
   beforeLoad: ({ params }) => {
@@ -37,8 +38,9 @@ export const Route = createFileRoute("/estudios/$slug")({
         statusCode: 308,
       });
     }
-    if (RETIRADOS.has(params.slug)) {
-      throw redirect({ to: "/estudios", statusCode: 308 });
+    const destino = RETIRADOS[params.slug];
+    if (destino) {
+      throw redirect({ href: destino, statusCode: 301 });
     }
   },
   component: StudyPage,
