@@ -19,7 +19,7 @@ export const Route = createFileRoute("/obras/")({
       path: "/obras",
       title: tituloSeccion("Siete tomos"),
       description:
-        "Orden de lectura de los siete tomos del Dr. Alejandro Sirit. Éfata abre; El Siervo, no tú sigue. Editorial Cielo Efata.",
+        "Orden de lectura de los siete tomos de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.",
       detalle: CORPUS.gate,
       image: tapaPath("efata"),
     }),

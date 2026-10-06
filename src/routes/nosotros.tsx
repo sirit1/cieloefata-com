@@ -13,7 +13,7 @@ export const Route = createFileRoute("/nosotros")({
       path: "/nosotros",
       title: tituloSeccion("Nosotros"),
       description:
-        "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. Escuela de lectura de la Escritura entera. WhatsApp +58 424 167 4909.",
+        "Alejandro Sirit dirige Editorial Cielo Efata, una escuela de lectura de la Escritura entera. Escríbenos por WhatsApp al +58 424 167 4909.",
     }),
 });
 

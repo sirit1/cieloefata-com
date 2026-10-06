@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
 import { test } from "node:test";
 import { CORPUS } from "./content.ts";
 import { PARACLITO } from "./paraclito.ts";
@@ -34,7 +34,7 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
   ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí, después del capítulo entero.", "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada."],
   ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle. Primero se lee ese capítulo entero, y solo entonces habla el tratado, que se sienta detrás del texto y no finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada."],
-  ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos del Dr. Alejandro Sirit. Éfata abre; El Siervo, no tú sigue. Editorial Cielo Efata.", CORPUS.gate],
+  ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.", CORPUS.gate],
   ["/sello", tituloSeccion("El sello"), "Post tenebras lux. El sello no es un logotipo, sino una confesión.", SELLO.gate],
   ["/palabra", tituloSeccion("Palabra"), "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.", "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong."],
   ["/cuaderno", tituloSeccion("Cuaderno"), "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.", CUADERNO_VACIO],
@@ -43,7 +43,7 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/sostener", tituloSeccion("Sostener"), "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909."],
   ["/buscar", tituloSeccion("Buscar"), "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.", "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda."],
   ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. El capítulo se lee entero. El aula existe solo donde ya hay libro."],
-  ["/nosotros", tituloSeccion("Nosotros"), "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. Escuela de lectura de la Escritura entera. WhatsApp +58 424 167 4909."],
+  ["/nosotros", tituloSeccion("Nosotros"), "Alejandro Sirit dirige Editorial Cielo Efata, una escuela de lectura de la Escritura entera. Escríbenos por WhatsApp al +58 424 167 4909."],
   ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa."],
 ];
 
@@ -291,4 +291,23 @@ test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y s
     const qr = new URL(`../../public${qrRevelatioPath(slug)}`, import.meta.url);
     assert.ok(readFileSync(qr, "utf8").includes("<svg"), slug);
   }
+});
+
+test("ningún texto del sitio antepone «Dr.» al nombre de Alejandro Sirit", () => {
+  const raiz = new URL("../../", import.meta.url);
+  const hallazgos: string[] = [];
+  function recorrer(dir: URL) {
+    for (const nombre of readdirSync(dir)) {
+      const url = new URL(nombre, dir);
+      if (statSync(url).isDirectory()) {
+        recorrer(new URL(`${nombre}/`, dir));
+        continue;
+      }
+      if (!/\.(tsx?|xml|html|json|txt|webmanifest)$/.test(nombre) || nombre.endsWith(".test.ts")) continue;
+      if (/Dr\.\s*(Alejandro|Sirit)|Dr\.%20|Dr\.\s*·/.test(readFileSync(url, "utf8"))) hallazgos.push(url.pathname);
+    }
+  }
+  recorrer(new URL("src/", raiz));
+  recorrer(new URL("public/", raiz));
+  assert.deepEqual(hallazgos, []);
 });
