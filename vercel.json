@@ -28,6 +28,76 @@
       "source": "/estudios/hechos-13-14",
       "destination": "/estudios/viajes-de-pablo",
       "statusCode": 308
+    },
+    {
+      "source": "/estudios/romanos-1",
+      "destination": "/estudios/teologia-de-la-cruz",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/marcos-1",
+      "destination": "/estudios/marcos-7",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/juan-3",
+      "destination": "/estudios/romanos-8-17",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/hechos-2",
+      "destination": "/estudios/viajes-de-pablo",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/juan-1",
+      "destination": "/estudios/filipenses-2",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/romanos-3",
+      "destination": "/estudios/teologia-de-la-cruz",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/2-corintios-5",
+      "destination": "/estudios/2-corintios-12",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/romanos-12",
+      "destination": "/estudios/galatas-5",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/juan-14",
+      "destination": "/obras/el-paraclito-eterno",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/salmo-23",
+      "destination": "/estudios/2-corintios-12",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/genesis-3",
+      "destination": "/estudios/santiago-1",
+      "statusCode": 301
+    },
+    {
+      "source": "/estudios/salmo-22",
+      "destination": "/tratados/isaias-53",
+      "statusCode": 301
+    },
+    {
+      "source": "/tratados/romanos-3",
+      "destination": "/tratados/si-dios-por-nosotros",
+      "statusCode": 301
+    },
+    {
+      "source": "/tratados/juan-1",
+      "destination": "/estudios/filipenses-2",
+      "statusCode": 301
     }
   ],
   "headers": [

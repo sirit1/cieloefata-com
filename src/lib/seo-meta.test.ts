@@ -1,18 +1,22 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync, statSync } from "node:fs";
 import { test } from "node:test";
 import { CORPUS } from "./content.ts";
+import { PARACLITO } from "./paraclito.ts";
+import { DESCRIPCION_ARTICULOS, articulos } from "./articulos.ts";
 import { CRISOL_ORIGEN } from "./crisol.ts";
 import { CUADERNO_VACIO } from "./copy-nivel.ts";
 import { SELLO } from "./identidad.ts";
 import { ESCRITURA } from "./pilar.ts";
-import { obras, obrasDesdeAula } from "./content.ts";
+import { obras, obrasDesdeAula, qrRevelatioPath, urlRevelatioLibro } from "./content.ts";
 import { studies } from "./studies.ts";
 import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
 import { parrafosDe } from "./libros/cargar.ts";
 import { fechasArticulo } from "./calendario.ts";
 import { ESTUDIOS_DRIVE, TRATADOS_DRIVE, estudioTienePack } from "./catalogo.ts";
 import {
+  PERSONA_AUTOR,
+  SITE_NAME,
   SITE_ORIGIN,
   SITE_TITLE,
   amazonDeObra,
@@ -30,7 +34,7 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
   ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí, después del capítulo entero.", "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada."],
   ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle. Primero se lee ese capítulo entero, y solo entonces habla el tratado, que se sienta detrás del texto y no finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada."],
-  ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos del Dr. Alejandro Sirit. Éfata abre; El Siervo, no tú sigue. Editorial Cielo Efata.", CORPUS.gate],
+  ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.", CORPUS.gate],
   ["/sello", tituloSeccion("El sello"), "Post tenebras lux. El sello no es un logotipo, sino una confesión.", SELLO.gate],
   ["/palabra", tituloSeccion("Palabra"), "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.", "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong."],
   ["/cuaderno", tituloSeccion("Cuaderno"), "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.", CUADERNO_VACIO],
@@ -39,7 +43,7 @@ const secciones: Array<[string, string, string, string?]> = [
   ["/sostener", tituloSeccion("Sostener"), "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909."],
   ["/buscar", tituloSeccion("Buscar"), "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.", "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda."],
   ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. El capítulo se lee entero. El aula existe solo donde ya hay libro."],
-  ["/nosotros", tituloSeccion("Nosotros"), "El Dr. Alejandro Sirit dirige Editorial Cielo Efata. Escuela de lectura de la Escritura entera. WhatsApp +58 424 167 4909."],
+  ["/nosotros", tituloSeccion("Nosotros"), "Alejandro Sirit dirige Editorial Cielo Efata, una escuela de lectura de la Escritura entera. Escríbenos por WhatsApp al +58 424 167 4909."],
   ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa."],
 ];
 
@@ -58,6 +62,9 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
   for (const obra of obras) {
     note(`/obras/${obra.slug}`, obra.seoTitle, obra.seoDescription);
   }
+  note(`/obras/${PARACLITO.slug}`, PARACLITO.seoTitle, PARACLITO.seoDescription);
+  note("/articulos", tituloSeccion("Artículos"), DESCRIPCION_ARTICULOS);
+  for (const a of articulos) note(`/articulos/${a.slug}`, a.seoTitle, a.seoDescription);
   for (const study of studies) {
     note(
       `/estudios/${study.slug}`,
@@ -150,6 +157,9 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
     assert.equal(bloque.lastmod, undefined);
   }
 
+  const paraclito = bloques.find((b) => b.loc === `${SITE_ORIGIN}/obras/el-paraclito-eterno`);
+  assert.ok(paraclito);
+  assert.equal(paraclito.lastmod, undefined);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/romanos-1`), false);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/filipenses-2`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/tratados/isaias-53`), true);
@@ -159,8 +169,14 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
   assert.equal(ESTUDIOS_DRIVE.length, 13);
   assert.equal(TRATADOS_DRIVE.length, 14);
   assert.equal(tratados.length, 14);
+  assert.ok(locs.has(`${SITE_ORIGIN}/articulos`));
+  for (const a of articulos) {
+    const bloque = bloques.find((b) => b.loc === `${SITE_ORIGIN}/articulos/${a.slug}`);
+    assert.ok(bloque, a.slug);
+    assert.equal(bloque.lastmod, a.published);
+  }
   const conFecha = bloques.filter((b) => b.lastmod);
-  assert.equal(conFecha.length, ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length);
+  assert.equal(conFecha.length, ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length + articulos.length);
 });
 
 function metaDe(head: ReturnType<typeof pageHead>, name: string) {
@@ -223,4 +239,75 @@ test("el aula cierra con las obras pedidas, sin mezclar el estudio y el tratado 
   ]);
   assert.deepEqual(slugs("estudio", "galatas-5"), ["la-fe-no-basta"]);
   assert.deepEqual(slugs("tratado", "el-crisol-de-lo-oido"), ["el-altar-del-espejo"]);
+});
+
+test("el JSON-LD habla solo de Cielo Efata y de Alejandro Sirit, sin RevelatiO", () => {
+  const fuente = readFileSync(new URL("../components/json-ld.tsx", import.meta.url), "utf8");
+  assert.equal(/revelatio/i.test(fuente), false);
+  assert.equal(fuente.includes("subOrganization"), false);
+  assert.equal(SITE_NAME, "Cielo Efata");
+  assert.equal(PERSONA_AUTOR["@type"], "Person");
+  assert.equal(PERSONA_AUTOR.name, "Alejandro Sirit");
+  assert.equal(PERSONA_AUTOR.url, `${SITE_ORIGIN}/nosotros`);
+  for (const obra of obras) {
+    const libro = camposLibro(obra);
+    assert.deepEqual(libro.author, PERSONA_AUTOR);
+    assert.equal(JSON.stringify(libro).toLowerCase().includes("revelatio"), false);
+  }
+});
+
+test("el artículo de Santiago 2 firma Alejandro Sirit, cita la 1909 y enlaza La fe no basta", () => {
+  const a = articulos.find((x) => x.slug === "santiago-2-la-fe-que-obra");
+  assert.ok(a);
+  const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
+  const palabras = [a.title, ...a.secciones.map((s) => s.titulo ?? ""), texto].join(" ").split(/\s+/).filter(Boolean).length;
+  assert.ok(palabras >= 900 && palabras <= 1400, String(palabras));
+  assert.match(texto, /la fe sin obras es muerta/);
+  assert.equal(/Dr\.|RVR|1960|RevelatiO/i.test(texto), false);
+  assert.ok(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"));
+  assert.match(a.seoTitle, /Santiago 2/);
+  assert.match(a.seoDescription, /fe sin obras es muerta/);
+});
+
+test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
+  const slugs = obras.filter((o) => o.revelatio).map((o) => o.slug);
+  assert.deepEqual(slugs, [
+    "efata",
+    "el-siervo-no-tu",
+    "bastate-mi-gracia",
+    "cuando-el-cielo-se-cae",
+    "la-fe-no-basta",
+    "el-altar-del-espejo",
+    "callar-para-ganar",
+  ]);
+  assert.equal(
+    urlRevelatioLibro("callar-para-ganar"),
+    "https://revelatio.app/libros/callar-para-ganar?utm_source=web&utm_medium=cta&utm_campaign=callar-para-ganar",
+  );
+  for (const slug of slugs) {
+    const url = new URL(urlRevelatioLibro(slug));
+    assert.equal(url.pathname, `/libros/${slug}`);
+    assert.equal(url.searchParams.get("utm_campaign"), slug);
+    const qr = new URL(`../../public${qrRevelatioPath(slug)}`, import.meta.url);
+    assert.ok(readFileSync(qr, "utf8").includes("<svg"), slug);
+  }
+});
+
+test("ningún texto del sitio antepone «Dr.» al nombre de Alejandro Sirit", () => {
+  const raiz = new URL("../../", import.meta.url);
+  const hallazgos: string[] = [];
+  function recorrer(dir: URL) {
+    for (const nombre of readdirSync(dir)) {
+      const url = new URL(nombre, dir);
+      if (statSync(url).isDirectory()) {
+        recorrer(new URL(`${nombre}/`, dir));
+        continue;
+      }
+      if (!/\.(tsx?|xml|html|json|txt|webmanifest)$/.test(nombre) || nombre.endsWith(".test.ts")) continue;
+      if (/Dr\.\s*(Alejandro|Sirit)|Dr\.%20|Dr\.\s*·/.test(readFileSync(url, "utf8"))) hallazgos.push(url.pathname);
+    }
+  }
+  recorrer(new URL("src/", raiz));
+  recorrer(new URL("public/", raiz));
+  assert.deepEqual(hallazgos, []);
 });

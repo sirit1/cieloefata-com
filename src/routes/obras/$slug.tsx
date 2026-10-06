@@ -7,7 +7,15 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
-import { obraBySlug, obras, obraVecina, ROMANO, tapaPath } from "@/lib/content";
+import {
+  obraBySlug,
+  obras,
+  obraVecina,
+  qrRevelatioPath,
+  ROMANO,
+  tapaPath,
+  urlRevelatioLibro,
+} from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
 import { pageHead, tituloObra } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
@@ -119,6 +127,33 @@ export function ObraPage() {
         isbnPrint={obra.isbnPrint}
         pack
       />
+
+      {obra.revelatio ? (
+        <aside className="mt-10 flex items-center gap-5 border border-rule p-5" aria-label="Estudiar el libro en RevelatiO">
+          <div className="flex-1">
+            <p className="font-serif text-xl leading-snug">
+              Estudia cada capítulo de este libro con IA en RevelatiO
+            </p>
+            <a
+              href={urlRevelatioLibro(obra.slug)}
+              target="_blank"
+              rel="noopener"
+              className="btn btn-gold mt-4"
+            >
+              Abrir {obra.title} en RevelatiO
+              <BtnArrow />
+            </a>
+          </div>
+          <img
+            src={qrRevelatioPath(obra.slug)}
+            alt={`Código QR de ${obra.title} en RevelatiO`}
+            width={88}
+            height={88}
+            loading="lazy"
+            className="hidden shrink-0 bg-white p-1 sm:block"
+          />
+        </aside>
+      ) : null}
 
       {obra.studyNote ? (
         <p className="mt-8 leading-relaxed text-ink-soft">{obra.studyNote}</p>

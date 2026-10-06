@@ -6,7 +6,7 @@ export const NOSOTROS = {
   escribe: {
     title: "Quién escribe",
     body: [
-      "Dr. Alejandro Sirit escribe para que el texto mande otra vez: oído a la Escritura, rodilla al cierre, sin autoayuda bautizada ni versiculitis. Bajo el sello de Editorial Cielo Efata entrega tratados y estudios pastorales —Éfata con el método V.E.R.D.A.D., El Siervo, no tú, Bástate, Cuando el cielo se cae, La fe no basta, El altar del espejo, Callar para ganar— con una sola brújula: conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe.",
+      "Alejandro Sirit escribe para que el texto mande otra vez: oído a la Escritura, rodilla al cierre, sin autoayuda bautizada ni versiculitis. Bajo el sello de Editorial Cielo Efata entrega tratados y estudios pastorales —Éfata con el método V.E.R.D.A.D., El Siervo, no tú, Bástate, Cuando el cielo se cae, La fe no basta, El altar del espejo, Callar para ganar— con una sola brújula: conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza en la fe.",
       "No ofrece un dios doméstico ni un Jesús útil. Confiesa al Padre que habla, al Hijo que fue hecho carne y al Espíritu que convence de pecado y abre el oído que el pecado había cerrado. El arma, sin embargo, no es el tono; es el capítulo entero, leído de rodillas.",
     ],
   },
@@ -22,7 +22,7 @@ export const NOSOTROS = {
   phoneNote: "WhatsApp · Venezuela",
   wa:
     "https://wa.me/584241674909?text=" +
-    encodeURIComponent("Paz. Escribo a Editorial Cielo Efata · Dr. Alejandro Sirit."),
+    encodeURIComponent("Paz. Escribo a Editorial Cielo Efata · Alejandro Sirit."),
   tel: "tel:+584241674909",
   refs: "2 Ti. 2:15 · Neh. 8:8 · Mr. 7:34",
 };

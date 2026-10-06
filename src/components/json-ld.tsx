@@ -64,6 +64,29 @@ export function BookJsonLd({ slug }: { slug: string }) {
   );
 }
 
+/** Libro fuera de los siete tomos (sin tapa ni ficha de Amazon conocidas). */
+export function LibroJsonLd({
+  title,
+  slug,
+  description,
+}: {
+  title: string;
+  slug: string;
+  description: string;
+}) {
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Book",
+        ...camposLibro({ title, slug }),
+        description,
+        publisher: { "@type": "Organization", name: "Editorial Cielo Efata" },
+      }}
+    />
+  );
+}
+
 export function ArticleJsonLd({
   headline,
   path,

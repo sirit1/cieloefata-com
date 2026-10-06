@@ -30,11 +30,14 @@ import { Route as SelloRouteImport } from './routes/sello'
 import { Route as SostenerRouteImport } from './routes/sostener'
 import { Route as TratadosRouteImport } from './routes/tratados'
 import { Route as ApiVozRouteImport } from './routes/api/voz'
+import { Route as ArticulosIndexRouteImport } from './routes/articulos/index'
+import { Route as ArticulosSlugRouteImport } from './routes/articulos/$slug'
 import { Route as EstudiosIndexRouteImport } from './routes/estudios/index'
 import { Route as EstudiosSlugRouteImport } from './routes/estudios/$slug'
 import { Route as EstudiosHechos1314RouteImport } from './routes/estudios/hechos-13-14'
 import { Route as ObrasIndexRouteImport } from './routes/obras/index'
 import { Route as ObrasSlugRouteImport } from './routes/obras/$slug'
+import { Route as ObrasElParaclitoEternoRouteImport } from './routes/obras/el-paraclito-eterno'
 import { Route as ObrasElSiervoRouteImport } from './routes/obras/el-siervo'
 import { Route as TratadosSlugRouteImport } from './routes/tratados/$slug'
 
@@ -143,6 +146,16 @@ const ApiVozRoute = ApiVozRouteImport.update({
   path: '/api/voz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ArticulosIndexRoute = ArticulosIndexRouteImport.update({
+  id: '/articulos/',
+  path: '/articulos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArticulosSlugRoute = ArticulosSlugRouteImport.update({
+  id: '/articulos/$slug',
+  path: '/articulos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EstudiosIndexRoute = EstudiosIndexRouteImport.update({
   id: '/estudios/',
   path: '/estudios/',
@@ -166,6 +179,11 @@ const ObrasIndexRoute = ObrasIndexRouteImport.update({
 const ObrasSlugRoute = ObrasSlugRouteImport.update({
   id: '/obras/$slug',
   path: '/obras/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ObrasElParaclitoEternoRoute = ObrasElParaclitoEternoRouteImport.update({
+  id: '/obras/el-paraclito-eterno',
+  path: '/obras/el-paraclito-eterno',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ObrasElSiervoRoute = ObrasElSiervoRouteImport.update({
@@ -201,11 +219,14 @@ export interface FileRoutesByFullPath {
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
   '/api/voz': typeof ApiVozRoute
+  '/articulos/$slug': typeof ArticulosSlugRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/obras/$slug': typeof ObrasSlugRoute
+  '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
+  '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
 }
@@ -231,11 +252,14 @@ export interface FileRoutesByTo {
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
   '/api/voz': typeof ApiVozRoute
+  '/articulos/$slug': typeof ArticulosSlugRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/obras/$slug': typeof ObrasSlugRoute
+  '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
+  '/articulos': typeof ArticulosIndexRoute
   '/estudios': typeof EstudiosIndexRoute
   '/obras': typeof ObrasIndexRoute
 }
@@ -262,11 +286,14 @@ export interface FileRoutesById {
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
   '/api/voz': typeof ApiVozRoute
+  '/articulos/$slug': typeof ArticulosSlugRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/obras/$slug': typeof ObrasSlugRoute
+  '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/tratados/$slug': typeof TratadosSlugRoute
+  '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
 }
@@ -294,11 +321,14 @@ export interface FileRouteTypes {
     | '/sostener'
     | '/tratados'
     | '/api/voz'
+    | '/articulos/$slug'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/obras/$slug'
+    | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
     | '/tratados/$slug'
+    | '/articulos/'
     | '/estudios/'
     | '/obras/'
   fileRoutesByTo: FileRoutesByTo
@@ -324,11 +354,14 @@ export interface FileRouteTypes {
     | '/sostener'
     | '/tratados'
     | '/api/voz'
+    | '/articulos/$slug'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/obras/$slug'
+    | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
     | '/tratados/$slug'
+    | '/articulos'
     | '/estudios'
     | '/obras'
   id:
@@ -354,11 +387,14 @@ export interface FileRouteTypes {
     | '/sostener'
     | '/tratados'
     | '/api/voz'
+    | '/articulos/$slug'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/obras/$slug'
+    | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
     | '/tratados/$slug'
+    | '/articulos/'
     | '/estudios/'
     | '/obras/'
   fileRoutesById: FileRoutesById
@@ -385,10 +421,13 @@ export interface RootRouteChildren {
   SostenerRoute: typeof SostenerRoute
   TratadosRoute: typeof TratadosRouteWithChildren
   ApiVozRoute: typeof ApiVozRoute
+  ArticulosSlugRoute: typeof ArticulosSlugRoute
   EstudiosSlugRoute: typeof EstudiosSlugRoute
   EstudiosHechos1314Route: typeof EstudiosHechos1314Route
   ObrasSlugRoute: typeof ObrasSlugRoute
+  ObrasElParaclitoEternoRoute: typeof ObrasElParaclitoEternoRoute
   ObrasElSiervoRoute: typeof ObrasElSiervoRoute
+  ArticulosIndexRoute: typeof ArticulosIndexRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
   ObrasIndexRoute: typeof ObrasIndexRoute
 }
@@ -542,6 +581,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiVozRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/articulos/': {
+      id: '/articulos/'
+      path: '/articulos'
+      fullPath: '/articulos/'
+      preLoaderRoute: typeof ArticulosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/articulos/$slug': {
+      id: '/articulos/$slug'
+      path: '/articulos/$slug'
+      fullPath: '/articulos/$slug'
+      preLoaderRoute: typeof ArticulosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/estudios/': {
       id: '/estudios/'
       path: '/estudios'
@@ -575,6 +628,13 @@ declare module '@tanstack/react-router' {
       path: '/obras/$slug'
       fullPath: '/obras/$slug'
       preLoaderRoute: typeof ObrasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/obras/el-paraclito-eterno': {
+      id: '/obras/el-paraclito-eterno'
+      path: '/obras/el-paraclito-eterno'
+      fullPath: '/obras/el-paraclito-eterno'
+      preLoaderRoute: typeof ObrasElParaclitoEternoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/obras/el-siervo': {
@@ -628,10 +688,13 @@ const rootRouteChildren: RootRouteChildren = {
   SostenerRoute: SostenerRoute,
   TratadosRoute: TratadosRouteWithChildren,
   ApiVozRoute: ApiVozRoute,
+  ArticulosSlugRoute: ArticulosSlugRoute,
   EstudiosSlugRoute: EstudiosSlugRoute,
   EstudiosHechos1314Route: EstudiosHechos1314Route,
   ObrasSlugRoute: ObrasSlugRoute,
+  ObrasElParaclitoEternoRoute: ObrasElParaclitoEternoRoute,
   ObrasElSiervoRoute: ObrasElSiervoRoute,
+  ArticulosIndexRoute: ArticulosIndexRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
   ObrasIndexRoute: ObrasIndexRoute,
 }

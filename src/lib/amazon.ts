@@ -18,7 +18,7 @@ export function whatsappColeccion(): string {
   return (
     "https://wa.me/584241674909?text=" +
     encodeURIComponent(
-      "Paz. Solicito la colección impresa de Editorial Cielo Efata, siete tomos del Dr. Alejandro Sirit.",
+      "Paz. Solicito la colección impresa de Editorial Cielo Efata, siete tomos de Alejandro Sirit.",
     )
   );
 }
@@ -27,7 +27,7 @@ export function whatsappTomo(title: string): string {
   return (
     "https://wa.me/584241674909?text=" +
     encodeURIComponent(
-      `Paz. Solicito el tomo «${title}» del Dr. Alejandro Sirit, Editorial Cielo Efata.`,
+      `Paz. Solicito el tomo «${title}» de Alejandro Sirit, Editorial Cielo Efata.`,
     )
   );
 }

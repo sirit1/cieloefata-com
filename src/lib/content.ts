@@ -7,9 +7,9 @@ export const school = {
   lead: "La Escritura tiene la última palabra. Lo demás —el comentario, el método, el predicador de moda— se sienta atrás, y se sienta de rodillas.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Casa de estudio bíblico. La dirige el Dr. Alejandro Sirit. Siete tratados y el Método V.E.R.D.A.D.™: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
+    "Casa de estudio bíblico dirigida por Alejandro Sirit. Siete tratados y el Método V.E.R.D.A.D.™: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
-  director: "Dr. Alejandro Sirit",
+  director: "Alejandro Sirit",
   welcome:
     "Cielo Efata es una escuela de estudio bíblico, y aquí el capítulo se abre entero antes de que nadie lo comente. Aquí no se lee un versículo suelto para animarse cuando el siglo aprieta. Se lee un pasaje completo, se estudia con la cadena, y se sale con un solo paso para esta semana, dicho a alguien que pueda preguntar mañana.",
   welcomeRef: "Neh. 8:8 · 2 Ti. 2:15",
@@ -24,9 +24,9 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Siete tomos",
-  gate: "Este corpus teológico, forjado por el Dr. Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
+  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
   efata:
-    "Éfata es el primer tomo de la serie. En él el Dr. Alejandro Sirit entregó el Método V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
+    "Éfata es el primer tomo de la serie. En él Alejandro Sirit entregó el Método V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
   line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V La fe no basta; VI El altar del espejo; VII Callar para ganar. Bástate, publicado como séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
@@ -156,7 +156,19 @@ export type Obra = {
   isbnPrint?: string;
   /** Published Amazon title when it differs from the house reading-order title. Never an invented ASIN. */
   amazonTitle?: string;
+  /** Muestra en la ficha el enlace «Estudia cada capítulo de este libro con IA en RevelatiO» (revelatio.app/libros/<slug>). */
+  revelatio?: boolean;
 };
+
+/** Enlace de la ficha del tomo a su libro en RevelatiO, con utm_campaign = slug. */
+export function urlRevelatioLibro(slug: string) {
+  return `https://revelatio.app/libros/${slug}?utm_source=web&utm_medium=cta&utm_campaign=${slug}`;
+}
+
+/** QR del mismo libro (sin UTM), copiado de /workspace/qr a public/qr. */
+export function qrRevelatioPath(slug: string) {
+  return `/qr/qr-${slug}.svg`;
+}
 
 export type AulaKind = "estudio" | "tratado";
 
@@ -185,6 +197,7 @@ export const obras: Obra[] = [
     n: 6,
     lectura: 1,
     slug: "efata",
+    revelatio: true,
     title: "Éfata",
     subtitulo: "Marcos 7:31–37",
     seoTitle: "Éfata: significado de Marcos 7:34 | Alejandro Sirit",
@@ -204,6 +217,7 @@ export const obras: Obra[] = [
     n: 5,
     lectura: 2,
     slug: "el-siervo-no-tu",
+    revelatio: true,
     title: "El Siervo, no tú",
     subtitulo: "Isaías 52:13 – 53:12",
     seoTitle: "El Siervo, no tú: Isaías 53:5 | Alejandro Sirit",
@@ -224,6 +238,7 @@ export const obras: Obra[] = [
     n: 7,
     lectura: 3,
     slug: "bastate-mi-gracia",
+    revelatio: true,
     title: "Bástate",
     amazonTitle: "Bástate mi gracia",
     subtitulo: "2 Corintios 12:1–10",
@@ -243,6 +258,7 @@ export const obras: Obra[] = [
     n: 4,
     lectura: 4,
     slug: "cuando-el-cielo-se-cae",
+    revelatio: true,
     title: "Cuando el cielo se cae",
     subtitulo: "El libro de Job",
     seoTitle: "Cuando el cielo se cae: Job 42:5 | Alejandro Sirit",
@@ -257,13 +273,14 @@ export const obras: Obra[] = [
     pasaje: "Job 42",
     studySlug: "",
     studyNote:
-      "No hay aún una clase de Job en el aula. El lamento se oye en este tomo, junto al capítulo. Salmo 22 se lee como clase: es el clamor del abandonado, no un sustituto del libro de Job.",
+      "No hay aún una clase de Job en el aula. El lamento se oye en este tomo, junto al capítulo.",
     isbnPrint: "9798176466690",
   },
   {
     n: 3,
     lectura: 5,
     slug: "la-fe-no-basta",
+    revelatio: true,
     title: "La fe no basta",
     subtitulo: "Santiago 2:14–26",
     seoTitle: "La fe no basta: Santiago 2:17 | Alejandro Sirit",
@@ -284,6 +301,7 @@ export const obras: Obra[] = [
     n: 2,
     lectura: 6,
     slug: "el-altar-del-espejo",
+    revelatio: true,
     title: "El altar del espejo",
     subtitulo: "Santiago 1:22–25",
     seoTitle: "El altar del espejo: Santiago 1:22-25 | Alejandro Sirit",
@@ -305,6 +323,7 @@ export const obras: Obra[] = [
     n: 1,
     lectura: 7,
     slug: "callar-para-ganar",
+    revelatio: true,
     title: "Callar para ganar",
     subtitulo: "Santiago 3:1–12",
     seoTitle: "Callar para ganar: Santiago 3:2 | Alejandro Sirit",
