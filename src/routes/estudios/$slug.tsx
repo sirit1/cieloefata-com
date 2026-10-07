@@ -1,4 +1,4 @@
-import { createFileRoute, notFound, redirect } from "@tanstack/react-router";
+import { createFileRoute, notFound, redirect, useRouterState } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { ConLemas } from "@/components/lema";
@@ -70,6 +70,9 @@ export const Route = createFileRoute("/estudios/$slug")({
 
 function StudyPage() {
   const { study, parrafos } = Route.useLoaderData();
+  const cita = useRouterState({ select: (s) => s.location.searchStr });
+  const llegada = new URLSearchParams(cita.startsWith("?") ? cita.slice(1) : cita).get("cita");
+  const pasaje = llegada || study.ref;
   const fechas = fechasArticulo({
     clase: "estudio",
     slug: study.slug,
@@ -94,12 +97,13 @@ function StudyPage() {
         modified={fechas?.modified}
       />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        Aula · {etiquetaEstudio(study.slug)} · {study.ref}
+        Aula · {etiquetaEstudio(study.slug)} · {pasaje}
       </p>
+      {llegada ? <p className="mt-3 leading-relaxed">Llegaste desde {llegada}. El aula abre ese pasaje, no otra portada.</p> : null}
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
       <p className="mt-6">
-        <LeerCapitulo ref={study.ref} desde={`/estudios/${study.slug}`} />
+        <LeerCapitulo ref={pasaje} desde={`/estudios/${study.slug}`} />
       </p>
       <div className="mt-10 space-y-6">
         {parrafos.map((para, i) => (
