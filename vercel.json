@@ -75,6 +75,11 @@
       "statusCode": 301
     },
     {
+      "source": "/estudios/el-paraclito-eterno",
+      "destination": "/obras/el-paraclito-eterno",
+      "statusCode": 301
+    },
+    {
       "source": "/estudios/salmo-23",
       "destination": "/estudios/2-corintios-12",
       "statusCode": 301

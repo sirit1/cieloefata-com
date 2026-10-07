@@ -1,5 +1,12 @@
 /** Índice de aulas: título y cita. El cuerpo vive en studies.ts y solo se carga al abrir la clase. */
-export type IndiceEstudio = { slug: string; title: string; ref: string; busca: string };
+export type IndiceEstudio = {
+  slug: string;
+  title: string;
+  ref: string;
+  busca: string;
+  /** Obra ya publicada: el listado enlaza ahí; no hay aula ni cuerpo en studies.ts. */
+  obraHref?: "/obras/el-paraclito-eterno";
+};
 
 export const ESTUDIOS_INDICE: IndiceEstudio[] = [
   { slug: "2-pedro-1", title: "Añadid a vuestra fe", ref: "2 Pedro 1:1–11", busca: "Pedro pide añadir a la fe, a costa propia, una cadena de siete eslabones. No es un cartel de virtudes. Es lo que el capítulo 2 va a exigir cuando desenmascare a quienes prometen libertad siendo esclavos de corrupción. Di" },
@@ -15,6 +22,13 @@ export const ESTUDIOS_INDICE: IndiceEstudio[] = [
   { slug: "teologia-de-la-cruz", title: "Teología de la cruz", ref: "1 Corintios 1:18–31", busca: "Pablo no ofrece una «teología de la cruz» como lema de escuela. Ofrece un tajo. La palabra de la cruz parte a la humanidad: locura para los que se pierden, poder para los que se salvan. El que se lleva el 18 como consign" },
   { slug: "teologia-de-la-gloria", title: "Teología de la gloria", ref: "1 Corintios 4:8–13", busca: "Pablo no escribe un tratado contra el espectáculo: lo desnuda. Corinto ya se saciaba, ya era rica, ya reinaba —sin los apóstoles—. El que se lleva «teología de la gloria» como lema de combate aún no ha visto el 9: Dios e" },
   { slug: "romanos-8-17", title: "Herederos y padecimiento", ref: "Romanos 8:17", busca: "Pablo no ofrece una herencia sin cruz. Si hijos, también herederos; coherederos con Cristo, si es que padecemos juntamente con él. El que se lleva «hijos» como lema de identidad aún no ha oído el εἴπερ: si es que. El que" },
+  {
+    slug: "el-paraclito-eterno",
+    title: "El Paráclito Eterno",
+    ref: "Juan 14–16",
+    busca: "El Espíritu Santo no es una energía que se activa, sino una Persona divina que el Padre envía en el nombre del Hijo para estar con los suyos para siempre. El Paráclito de Juan 14–16: otro Consolador, para siempre.",
+    obraHref: "/obras/el-paraclito-eterno",
+  },
 ];
 
 export function indiceEstudio(slug: string) {

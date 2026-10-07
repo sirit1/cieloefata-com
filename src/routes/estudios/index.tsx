@@ -6,7 +6,7 @@ import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { estudioSemanaSlug } from "@/lib/calendario";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
-import { indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
+import { ESTUDIOS_INDICE, indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
 import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
 import { LABORATORIOS } from "@/lib/verdad";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
@@ -22,16 +22,19 @@ export const Route = createFileRoute("/estudios/")({
       description:
         "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí, después del capítulo entero.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
+        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
     }),
 });
 
 function EstudiosPage() {
   const slugSemana = estudioSemanaSlug();
   const semana = indiceEstudio(slugSemana);
-  const publicados = ESTUDIOS_DRIVE.map((slug) => indiceEstudio(slug)).filter(
-    (s): s is IndiceEstudio => Boolean(s),
-  );
+  const publicados = [
+    ...ESTUDIOS_DRIVE.map((slug) => indiceEstudio(slug)).filter(
+      (s): s is IndiceEstudio => Boolean(s),
+    ),
+    ...ESTUDIOS_INDICE.filter((s) => Boolean(s.obraHref)),
+  ];
   const tratados = TRATADOS_INDICE;
   const labs = LABORATORIOS.map((lab) => ({
     lab,
@@ -48,7 +51,7 @@ function EstudiosPage() {
         Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien
         que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa
         lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia.
-        Entran los trece estudios que ya tienen manuscrito y los catorce tratados que ya tienen
+        Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen
         portada.
       </p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
@@ -148,18 +151,29 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
       <ul className="mt-8 divide-y divide-rule border-y border-rule">
         {items.map((s) => (
           <li key={s.slug}>
-            <Link
-              to="/estudios/$slug"
-              params={{ slug: s.slug }}
-              className="block py-5 hover:text-gold"
-            >
-              <span className="flex min-w-0 flex-col gap-1">
-                <span className="font-sans text-sm text-gold">
-                  {etiquetaEstudio(s.slug)} · {s.ref}
+            {s.obraHref ? (
+              <Link to={s.obraHref} className="block py-5 hover:text-gold">
+                <span className="flex min-w-0 flex-col gap-1">
+                  <span className="font-sans text-sm text-gold">
+                    Estudio · obra · {s.ref}
+                  </span>
+                  <span className="font-serif text-2xl">{s.title}</span>
                 </span>
-                <span className="font-serif text-2xl">{s.title}</span>
-              </span>
-            </Link>
+              </Link>
+            ) : (
+              <Link
+                to="/estudios/$slug"
+                params={{ slug: s.slug }}
+                className="block py-5 hover:text-gold"
+              >
+                <span className="flex min-w-0 flex-col gap-1">
+                  <span className="font-sans text-sm text-gold">
+                    {etiquetaEstudio(s.slug)} · {s.ref}
+                  </span>
+                  <span className="font-serif text-2xl">{s.title}</span>
+                </span>
+              </Link>
+            )}
           </li>
         ))}
       </ul>

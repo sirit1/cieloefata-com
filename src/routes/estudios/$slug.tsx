@@ -24,6 +24,7 @@ const RETIRADOS: Record<string, string> = {
   "2-corintios-5": "/estudios/2-corintios-12",
   "romanos-12": "/estudios/galatas-5",
   "juan-14": "/obras/el-paraclito-eterno",
+  "el-paraclito-eterno": "/obras/el-paraclito-eterno",
   "salmo-23": "/estudios/2-corintios-12",
   "genesis-3": "/estudios/santiago-1",
   "salmo-22": "/tratados/isaias-53",

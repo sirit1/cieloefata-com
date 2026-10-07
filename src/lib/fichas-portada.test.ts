@@ -36,14 +36,21 @@ describe("fichas de portada", () => {
   });
 
   it("el índice de citas no se desalinea del corpus", () => {
-    assert.equal(ESTUDIOS_INDICE.length, studies.length);
-    for (const row of ESTUDIOS_INDICE) {
+    const aulasIndice = ESTUDIOS_INDICE.filter((row) => !row.obraHref);
+    const obrasIndice = ESTUDIOS_INDICE.filter((row) => row.obraHref);
+    assert.equal(aulasIndice.length, studies.length);
+    assert.ok(obrasIndice.some((row) => row.slug === "el-paraclito-eterno"));
+    for (const row of aulasIndice) {
       const study = studies.find((s) => s.slug === row.slug);
       assert.ok(study, row.slug);
       assert.equal(row.title, study.title);
       assert.equal(row.ref, study.ref);
       assert.equal(row.busca, study.ver.slice(0, 220));
       assert.equal(DECISION_AULA[row.slug], study.decision);
+    }
+    for (const row of obrasIndice) {
+      assert.ok(row.obraHref?.startsWith("/obras/"));
+      assert.ok(row.busca.length > 40);
     }
   });
 

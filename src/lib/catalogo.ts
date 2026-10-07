@@ -1,6 +1,6 @@
 /**
  * Inventario de las carpetas vigentes en Drive, 3 oct 2026.
- * Estudios — versión vigente: trece libros.
+ * Estudios — versión vigente: trece packs en Drive; El Paráclito Eterno se lista en /estudios y vive en /obras.
  * Tratados — versión vigente: catorce libros.
  * Lo que no está en esas dos carpetas no se publica.
  */
@@ -11,7 +11,7 @@ export {
   TRATADO_MES_SLUG,
 } from "@/lib/calendario";
 
-/** Los trece packs reales de `08 Estudios biblicos`. */
+/** Los trece packs reales de `08 Estudios biblicos` (El Paráclito no es pack de Drive). */
 export const ESTUDIOS_DRIVE = [
   "filipenses-2",
   "2-pedro-1",
