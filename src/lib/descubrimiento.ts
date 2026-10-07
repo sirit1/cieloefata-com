@@ -29,7 +29,7 @@ export function indiceBusqueda(): Hallazgo[] {
     title: s.title,
     ref: s.ref,
     blurb: s.busca,
-    href: `/estudios/${s.slug}`,
+    href: s.obraHref ?? `/estudios/${s.slug}`,
   }));
   const ensay: Hallazgo[] = TRATADOS_INDICE.map((t) => ({
     kind: "tratado",
