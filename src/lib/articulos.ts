@@ -20,6 +20,67 @@ export type Articulo = {
 
 export const articulos: readonly Articulo[] = [
   {
+    slug: "santiago-3-de-una-misma-boca",
+    title: "De una misma boca proceden bendición y maldición",
+    seoTitle: "Santiago 3:9–12: de una misma boca | Alejandro Sirit",
+    seoDescription:
+      "Qué enseña Santiago 3:9–12: de una misma boca proceden bendición y maldición. La fuente, la higuera y el corazón nuevo que solo Dios da.",
+    pasaje: "Santiago 3:9–12",
+    published: "2026-10-13",
+    resumen:
+      "La boca que confiesa a Jesús como Señor no puede maldecir al hombre hecho a la semejanza de Dios: Santiago no pide una lengua mejor educada, sino una fuente nueva.",
+    secciones: [
+      {
+        parrafos: [
+          "Hay un hombre que esta mañana confesó con su boca que Jesús es el Señor, y la confesión fue verdadera, porque la Escritura la pone a la puerta de la salvación: *Que si confesares con tu boca al Señor Jesús, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo* (Romanos 10:9). Pero el día avanza, y antes de la noche esa misma boca habrá dicho otras cosas. Santiago no escribe para los que nunca confesaron, sino para los hermanos que sí lo hicieron, y por eso su sentencia cae dentro de la iglesia y no fuera de ella: *Con ella bendecimos al Dios y Padre, y con ella maldecimos á los hombres, los cuales son hechos á la semejanza de Dios. De una misma boca proceden bendición y maldición. Hermanos míos, no conviene que estas cosas sean así hechas* (Santiago 3:9–10).",
+        ],
+      },
+      {
+        titulo: "La misma lengua, el mismo día",
+        parrafos: [
+          "El apóstol no habla de dos clases de personas, unas que bendicen y otras que maldicen, sino de una sola boca que hace las dos cosas. El escándalo no está en que el impío maldiga, cosa que nadie espera de otro modo, sino en que el adorador vuelva del culto con la alabanza todavía en los labios y la descargue, convertida en desprecio, sobre el hermano que tiene delante. Santiago incluso se cuenta a sí mismo en el plural: bendecimos, maldecimos. Ya lo había confesado al principio del capítulo, cuando escribió *Porque todos ofendemos en muchas cosas* (Santiago 3:2), y quien lee este párrafo como si hablara del vecino ha dejado de leerlo en el primer pronombre.",
+          "Lo que agrava la contradicción es el destinatario de la maldición. No se maldice a una cosa, sino a hombres *hechos á la semejanza de Dios*. El que bendice al Padre y maldice a su imagen pretende honrar el original mientras escupe sobre el retrato, y Dios no acepta esa división, porque toma como hecho a sí mismo lo que se hace contra el hombre que lleva su semejanza. Por eso la frase final no es una recomendación de buenos modales: *no conviene que estas cosas sean así hechas*. Es la constatación de que algo en el orden de la creación ha sido violado, y de que la alabanza de la mañana queda desmentida por la maldición de la tarde.",
+        ],
+      },
+      {
+        titulo: "La fuente no miente",
+        parrafos: [
+          "Santiago no se detiene en la exhortación; baja a la naturaleza de las cosas, porque quiere que el lector vea que el problema no está en la superficie de las palabras: *¿Echa alguna fuente por una misma abertura agua dulce y amarga?* (Santiago 3:11). Nadie que haya sacado agua de un pozo necesita que le expliquen la pregunta. Una fuente da lo que tiene, y si por la misma abertura sale lo dulce y lo amargo, el agua dulce no prueba que la fuente esté sana; es lo amargo lo que revela el estado de la vena.",
+          "El Señor había dicho lo mismo con palabras que no dejan escapatoria: *porque de la abundancia del corazón habla la boca. El hombre bueno del buen tesoro del corazón saca buenas cosas: y el hombre malo del mal tesoro saca malas cosas* (Mateo 12:34–35). La boca es la abertura, no el manantial. Quien intenta corregir la lengua sin tocar el corazón se parece al que pinta de azul el brocal de un pozo salobre: el agua seguirá amarga aunque el borde luzca limpio. Y el mismo pasaje del Evangelio añade la cuenta que todos daremos: *Porque por tus palabras serás justificado, y por tus palabras serás condenado* (Mateo 12:37).",
+        ],
+      },
+      {
+        titulo: "La higuera no da aceitunas",
+        parrafos: [
+          "La segunda imagen sale del huerto y no del pozo: *Hermanos míos, ¿puede la higuera producir aceitunas, ó la vid higos? Así ninguna fuente puede hacer agua salada y dulce* (Santiago 3:12). La fuente enseñaba que la boca revela lo que hay dentro; la higuera enseña que lo de dentro tiene una naturaleza fija, y que esa naturaleza no se cambia con esfuerzo. Ningún labrador consigue aceitunas de una higuera a fuerza de podarla, regarla o reprenderla. Si quiere aceitunas, necesita otro árbol.",
+          "Aquí se cierra la puerta a toda solución de fachada. Pocos versículos antes el apóstol había escrito que *ningún hombre puede domar la lengua, que es un mal que no puede ser refrenado; llena de veneno mortal* (Santiago 3:8). Toda naturaleza de bestias y de aves se doma, pero la lengua no figura en el catálogo de lo domable. Esto no es una invitación al fatalismo, sino a la desesperación sana del que deja de confiar en sí mismo. El hombre no puede domar su lengua, pero Dios puede darle un corazón nuevo; el árbol no puede cambiar su fruto, pero el Señor puede injertarlo en otra raíz.",
+        ],
+      },
+      {
+        titulo: "Labios inmundos y un carbón del altar",
+        parrafos: [
+          "La Escritura conoce a un hombre que descubrió su boca delante del Rey. Isaías vio la gloria de Dios y no pudo decir otra cosa que esta: *Ay de mí! que soy muerto; que siendo hombre inmundo de labios, y habitando en medio de pueblo que tiene labios inmundos, han visto mis ojos al Rey, Jehová de los ejércitos* (Isaías 6:5). El profeta no se acusó de pensamientos vagos, sino de labios. Y la respuesta del cielo no fue un curso de oratoria, sino fuego tomado del altar: *Y tocando con él sobre mi boca, dijo: He aquí que esto tocó tus labios, y es quitada tu culpa, y limpio tu pecado* (Isaías 6:7). La limpieza vino del lugar del sacrificio, y por eso apunta a la cruz, donde el Hijo derramó la sangre que limpia lo que ninguna disciplina humana alcanza.",
+          "La convicción, entonces, no es un mal momento que haya que superar, sino el principio de la misericordia. El que ha oído Santiago 3 y ha reconocido su propia boca en el plural del apóstol no necesita justificarse diciendo que fue provocado, ni minimizar su maldición llamándola franqueza. Necesita confesarla con la misma boca que pecó: *Si confesamos nuestros pecados, él es fiel y justo para que nos perdone nuestros pecados, y nos limpie de toda maldad* (1 Juan 1:9).",
+        ],
+      },
+      {
+        titulo: "Volverse, y permanecer",
+        parrafos: [
+          "La confesión que no se vuelve arrepentimiento es otra palabra más de la misma fuente. Pedro llamó a sus oyentes a un cambio real de dirección: *Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados* (Hechos 3:19). Para el que todavía no ha obedecido el evangelio, ese volverse comienza donde comenzó en Jerusalén: *Arrepentíos, y bautícese cada uno de vosotros en el nombre de Jesucristo para perdón de los pecados; y recibiréis el don del Espíritu Santo* (Hechos 2:38). Para el que ya fue bautizado y ha vuelto a maldecir, el camino es buscar al hermano ofendido antes de volver a cantar, porque la bendición que se ofrece a Dios mientras se retiene la reconciliación con su imagen sigue siendo agua amarga en la misma abertura.",
+          "Después viene la perseverancia, que es la obra más larga. La lengua no se rinde en una tarde, y el creyente que hoy calla una maldición mañana tendrá que callarla otra vez. Por eso la oración del salmista no es de un solo día: *Pon, oh Jehová, guarda á mi boca: Guarda la puerta de mis labios* (Salmos 141:3). Y por eso Santiago, al terminar el capítulo, no promete una lengua domada por técnica, sino una sabiduría que viene de arriba, *primeramente es pura, después pacífica, modesta, benigna, llena de misericordia y de buenos frutos* (Santiago 3:17). Esos frutos son los de otro árbol.",
+          "El que confesó esta mañana que Jesús es el Señor no tiene que fabricarse una boca nueva; tiene que permanecer junto a la fuente que no se agota y dejar que ella cambie lo que mana de él. *Porque participantes de Cristo somos hechos, con tal que conservemos firme hasta el fin el principio de nuestra confianza* (Hebreos 3:14). Si al leer este párrafo has visto en tu propia boca la contradicción que Santiago denuncia, no la cubras con una palabra amable: confiésala, vuélvete, busca hoy al hermano que maldijiste y pide al Señor que guarde la puerta de tus labios mañana también.",
+        ],
+      },
+    ],
+    relacionados: [
+      { to: "/obras/de-una-misma-boca", label: "De una misma boca · el tomo sobre Santiago 3" },
+      { to: "/articulos/santiago-2-la-fe-que-obra", label: "Santiago 2:14–26: la fe que obra" },
+      { to: "/estudios/santiago-1", label: "Pronto para oír · estudio de Santiago 1:19–27" },
+      { to: "/obras/el-altar-del-espejo", label: "El altar del espejo · Santiago 1" },
+      { to: "/camino", label: "El camino · conocer a Dios, arrepentimiento, bautismo y firmeza" },
+    ],
+  },
+  {
     slug: "santiago-2-la-fe-que-obra",
     title: "Santiago 2:14–26: la fe que obra",
     seoTitle: "Santiago 2: la fe sin obras es muerta | Alejandro Sirit",

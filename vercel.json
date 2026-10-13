@@ -5,6 +5,11 @@
   "installCommand": "npm ci",
   "redirects": [
     {
+      "source": "/obras/callar-para-ganar",
+      "destination": "/obras/de-una-misma-boca",
+      "statusCode": 308
+    },
+    {
       "source": "/libros",
       "destination": "/obras",
       "statusCode": 308

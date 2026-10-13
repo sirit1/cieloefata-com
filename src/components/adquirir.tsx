@@ -9,6 +9,8 @@ type AdquirirProps = {
   asinEbook?: string;
   isbnPrint?: string;
   pack?: boolean;
+  /** Tomo sin edición publicada en Amazon: no se ofrece búsqueda ni enlace de compra. */
+  sinAmazon?: boolean;
 };
 
 export function Adquirir({
@@ -19,13 +21,14 @@ export function Adquirir({
   asinEbook,
   isbnPrint,
   pack = false,
+  sinAmazon = false,
 }: AdquirirProps) {
   const ebookHref = asinEbook ? amazonDp(asinEbook) : undefined;
   const printHref = isbnPrint ? amazonDp(isbnPrint) : undefined;
   const wa = title ? whatsappTomo(title) : adquisicion.whatsapp;
   const searchTitle = amazonTitle ?? title;
   const searchHref =
-    searchTitle && !ebookHref && !printHref ? amazonBusqueda(searchTitle) : undefined;
+    !sinAmazon && searchTitle && !ebookHref && !printHref ? amazonBusqueda(searchTitle) : undefined;
 
   return (
     <div className={`${className} flex flex-col gap-3 sm:flex-row sm:flex-wrap`}>
@@ -44,7 +47,7 @@ export function Adquirir({
           Buscar este tomo en Amazon
         </a>
       ) : null}
-      {!title && !ebookHref && !printHref ? (
+      {!sinAmazon && !title && !ebookHref && !printHref ? (
         <a
           href={adquisicion.amazon}
           rel="noopener noreferrer"
