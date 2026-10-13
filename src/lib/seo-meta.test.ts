@@ -81,26 +81,24 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
 
 test("Bástate no tiene ficha de Amazon", () => {
   const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
-  assert.deepEqual(sin, ["bastate-mi-gracia"]);
+  assert.deepEqual(sin, ["efata", "bastate-mi-gracia", "el-altar-del-espejo", "de-una-misma-boca"]);
 });
 
 test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
   const conIsbn = obras.filter((o) => o.isbnPrint).map((o) => [o.slug, camposLibro(o).isbn]);
-  assert.deepEqual(conIsbn, [
-    ["cuando-el-cielo-se-cae", "9798176466690"],
-    ["el-altar-del-espejo", "9798176414967"],
-    ["de-una-misma-boca", "9798253959213"],
-  ]);
-  const basta = camposLibro(obras.find((o) => o.slug === "bastate-mi-gracia")!);
-  assert.equal("isbn" in basta, false);
-  assert.equal("sameAs" in basta, false);
-  const efata = camposLibro(obras.find((o) => o.slug === "efata")!);
-  assert.equal("isbn" in efata, false);
-  assert.equal(efata.sameAs, "https://www.amazon.com/dp/B0HJ15ZXL3");
-  const callar = camposLibro(obras.find((o) => o.slug === "de-una-misma-boca")!);
-  assert.equal(callar.isbn, "9798253959213");
-  assert.equal(callar.sameAs, "https://www.amazon.com/dp/B0GPF3NHQT");
-  assert.equal(callar.isbn?.startsWith("B"), false);
+  assert.deepEqual(conIsbn, [["cuando-el-cielo-se-cae", "9798176466690"]]);
+  for (const slug of ["efata", "el-altar-del-espejo", "de-una-misma-boca"]) {
+    const o = obras.find((x) => x.slug === slug)!;
+    assert.equal(o.sinAmazon, true, slug);
+    const libro = camposLibro(o);
+    assert.equal("isbn" in libro, false, slug);
+    assert.equal("sameAs" in libro, false, slug);
+    assert.equal("offers" in libro, false, slug);
+  }
+  const fuente = readFileSync(new URL("./content.ts", import.meta.url), "utf8");
+  for (const viejo of ["B0HJ15ZXL3", "B0GPF3NHQT", "9798253959213", "9798176414967"]) {
+    assert.equal(fuente.includes(viejo), false, viejo);
+  }
 });
 
 function robotsDe(head: ReturnType<typeof pageHead>) {

@@ -160,6 +160,8 @@ export type Obra = {
   revelatio?: boolean;
   /** Slug del libro en revelatio.app/libros y del QR cuando difiere del slug de la ficha (tomo renombrado). */
   revelatioSlug?: string;
+  /** Edición nueva aún no publicada en Amazon: la ficha no muestra botón ni búsqueda de Amazon. */
+  sinAmazon?: boolean;
 };
 
 /** Enlace de la ficha del tomo a su libro en RevelatiO, con utm_campaign = slug. */
@@ -213,7 +215,7 @@ export const obras: Obra[] = [
     ref: "Mr. 7:34–35",
     pasaje: "Marcos 7",
     studySlug: "marcos-7",
-    asinEbook: "B0HJ15ZXL3",
+    sinAmazon: true,
   },
   {
     n: 5,
@@ -319,7 +321,7 @@ export const obras: Obra[] = [
     studySlug: "santiago-1",
     tratadoSlug: "el-crisol-de-lo-oido",
     crisol: true,
-    isbnPrint: "9798176414967",
+    sinAmazon: true,
   },
   {
     n: 1,
@@ -341,8 +343,7 @@ export const obras: Obra[] = [
     pasaje: "Santiago 3",
     studySlug: "",
     tratadoSlug: "la-muerte-y-la-vida",
-    asinEbook: "B0GPF3NHQT",
-    isbnPrint: "9798253959213",
+    sinAmazon: true,
   },
 ];
 

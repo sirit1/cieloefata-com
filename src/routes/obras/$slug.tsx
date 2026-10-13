@@ -125,6 +125,7 @@ export function ObraPage() {
         slug={obra.slug}
         asinEbook={obra.asinEbook}
         isbnPrint={obra.isbnPrint}
+        sinAmazon={obra.sinAmazon}
         pack
       />
 
