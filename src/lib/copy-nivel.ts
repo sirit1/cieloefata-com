@@ -20,7 +20,7 @@ export const MARCO_HOY =
 /** Siete muestras de primer capítulo. Clave: slug del tomo. */
 export const MUESTRAS_TOMO: Record<string, string> = {
   efata:
-    "En Decápolis pusieron delante de Jesús a un sordo y tartamudo. El Hijo lo tomó aparte, alzó los ojos, gimió y dijo Éfata —sé abierto—, y al momento se abrieron sus oídos. Este tomo no ofrece un menú de técnicas para animar un grupo: ofrece el umbral de la escuela. El oído cede antes de que la lengua se desate; el método V.E.R.D.A.D. sirve como cauce, no como ídolo; y el oficio empieza cuando el capítulo entero manda otra vez sobre el comentario.",
+    "En la Decápolis le trajeron a Jesús un hombre sordo y tartamudo. No vino él. El Señor lo apartó de la gente, levantó los ojos al cielo, gimió y le dijo: Éfata. Este libro camina esa hora en cuarenta estaciones, de un solo tirón. No es un plan de semanas ni una hoja para copiar: después de la apertura el oído puede volverse a cerrar, y el camino pasa por el Padre, el Hijo y el Espíritu, y por el oficio de oír la Escritura sin arrancarle una frase.",
   "el-siervo-no-tu":
     "Isaías no te ofrece un espejo: te muestra a un inocente en lugar del culpable. El cuarto Cántico del Siervo (52:13–53:12) dice lo que el título no permite mover: Él llevó; nosotros éramos. Este tomo derriba la autoexpiación evangélica y el «Siervo terapéutico» que se cuela por la herida. El ʾāšām no se imita. Tú no eres el Siervo; el eunuco no se pone en el versículo: pregunta de quién habla el profeta, cree y pide el agua.",
   "bastate-mi-gracia":
@@ -30,9 +30,9 @@ export const MUESTRAS_TOMO: Record<string, string> = {
   "la-fe-no-basta":
     "Hay una mercancía que circula con el nombre de fe y no es fe: dice «id en paz» y no da pan. Santiago 2:14–26 desnuda ese cadáver sin tocar Romanos 3–5. Este tomo no asalta la sola fide ni monta feria de obras: distingue la fe justificante —sola como instrumento, nunca sola como vida— y pone el hermano desnudo donde se ve si hubo vida. Dos muertos —el que cita a Pablo para no obrar y el que cita a Santiago para merecer— comparten la misma tumba.",
   "el-altar-del-espejo":
-    "Un hombre se mira en el espejo de la Palabra, ve el rostro de su génesis, y a los veinte pasos ya no recuerda cómo era. Santiago no diagnostica amnesia: diagnostica negativa. El altar del espejo no ofrece taller de identidad; ofrece el metal de Santiago 1:23–25: inclinarse, permanecer, ser hacedor —no oidor olvidadizo—. El «amén» que no visita al huérfano aún no ha oído; ha pasado delante del metal y se ha ido.",
-  "callar-para-ganar":
-    "Isaías vio un cuerpo, no un método: el Siervo enmudeció delante de los trasquiladores. «Callar para ganar» suena a táctica; el canto no vende marca. Este tomo oye Isaías 53:7 dentro del Cántico entero, con Santiago 1:19–27 y Santiago 3 como satélites: engendrados por la Palabra, tardos para hablar, lengua bajo yugo. Distingue el silencio del Cordero del mutismo cómplice y guarda Hechos 4: cuando el evangelio exige, no podemos dejar de hablar.",
+    "Esto es una historia, no un canto y no un comentario. El principio es un hombre delante de un cristal, y entre el principio y el fin hay un culto, el de sí mismo, que va a tomar forma de fama, de poder, de posesiones y de un lugar entre los otros. Santiago lo puso ahí sin nombre para que el lector no pueda mirarlo como a otro, y el libro no adelanta el fin: te deja a su lado, todavía mirándose.",
+  "de-una-misma-boca":
+    "Un hombre sin nombre ha confesado esta mañana con su boca que Jesús es el Señor. Este libro no le inventa una vida: se queda a su lado mientras el día avanza y la misma boca quiere la primera palabra, ofende, enciende el bosque y descubre que ningún hombre puede domar la lengua. De una misma boca proceden bendición y maldición, y ninguna fuente echa agua dulce y amarga por la misma abertura.",
 };
 
 export const RETOMAR_TITULO = "Retomar el acto";
@@ -63,7 +63,7 @@ export const CANON_TRATADO =
 
 export const PACK_WHATSAPP: Record<string, string> = {
   efata:
-    "Hola, soy de cieloefata.com; solicito el pack del tomo Éfata: La Escritura Abierta para estudiar Marcos 7 con el método V.E.R.D.A.D.",
+    "Hola, soy de cieloefata.com; solicito el pack del tomo Éfata: La Escritura Abierta para oír Marcos 7 entero",
   "el-siervo-no-tu":
     "Hola, soy de cieloefata.com; solicito el pack del tomo El Siervo, no tú (Isaías 53) para leer el Cántico del Siervo sin hurtar el capítulo.",
   "bastate-mi-gracia":
@@ -74,8 +74,8 @@ export const PACK_WHATSAPP: Record<string, string> = {
     "Hola, soy de cieloefata.com; solicito el pack del tomo La fe no basta (Santiago 2) sobre la fe que obra sin tocar Romanos.",
   "el-altar-del-espejo":
     "Hola, soy de cieloefata.com; solicito el pack del tomo El altar del espejo (Santiago 1) para dejar de ser oidor olvidadizo.",
-  "callar-para-ganar":
-    "Hola, soy de cieloefata.com; solicito el pack del tomo Callar para ganar sobre el silencio del Siervo y la lengua bajo yugo.",
+  "de-una-misma-boca":
+    "Hola, soy de cieloefata.com; solicito el pack del tomo De una misma boca (Santiago 3) sobre la boca que confiesa y la lengua que ningún hombre doma.",
 };
 
 export function textoPackWhatsApp(slug: string, title?: string): string {
@@ -94,5 +94,5 @@ export const SLUGS_TOMO = [
   "cuando-el-cielo-se-cae",
   "la-fe-no-basta",
   "el-altar-del-espejo",
-  "callar-para-ganar",
+  "de-una-misma-boca",
 ] as const;

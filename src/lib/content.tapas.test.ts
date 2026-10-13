@@ -10,7 +10,7 @@ const SLUGS = [
   "cuando-el-cielo-se-cae",
   "la-fe-no-basta",
   "el-altar-del-espejo",
-  "callar-para-ganar",
+  "de-una-misma-boca",
 ] as const;
 
 test("los siete tomos cuelgan tapa KDP bajo public/TAPAS", () => {

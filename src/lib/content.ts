@@ -158,6 +158,8 @@ export type Obra = {
   amazonTitle?: string;
   /** Muestra en la ficha el enlace «Estudia cada capítulo de este libro con IA en RevelatiO» (revelatio.app/libros/<slug>). */
   revelatio?: boolean;
+  /** Slug del libro en revelatio.app/libros y del QR cuando difiere del slug de la ficha (tomo renombrado). */
+  revelatioSlug?: string;
 };
 
 /** Enlace de la ficha del tomo a su libro en RevelatiO, con utm_campaign = slug. */
@@ -182,7 +184,7 @@ const OBRAS_DESDE_AULA: Record<`${AulaKind}:${string}`, readonly string[]> = {
   "tratado:todo-lo-puedo": ["bastate-mi-gracia"],
   "tratado:la-muerte-y-la-vida": ["cuando-el-cielo-se-cae"],
   "tratado:para-bien": ["cuando-el-cielo-se-cae"],
-  "estudio:santiago-1": ["la-fe-no-basta", "el-altar-del-espejo", "callar-para-ganar"],
+  "estudio:santiago-1": ["la-fe-no-basta", "el-altar-del-espejo", "de-una-misma-boca"],
   "estudio:galatas-5": ["la-fe-no-basta"],
   "tratado:el-crisol-de-lo-oido": ["el-altar-del-espejo"],
 };
@@ -198,17 +200,17 @@ export const obras: Obra[] = [
     lectura: 1,
     slug: "efata",
     revelatio: true,
-    title: "Éfata",
-    subtitulo: "Marcos 7:31–37",
-    seoTitle: "Éfata: significado de Marcos 7:34 | Alejandro Sirit",
+    title: "Éfata: La Escritura Abierta",
+    subtitulo: "Deja de coleccionar versículos. Aprende a oír a Dios.",
+    seoTitle: "Éfata: La Escritura Abierta, Marcos 7 | Alejandro Sirit",
     seoDescription:
-      "Qué significa «Éfata» en Marcos 7:31-37: Cristo abre el oído y desata la lengua. Un libro de Alejandro Sirit para oír la Palabra y confesarla.",
-    line: "«Éfata» —sé abierto— no es un lema de marca ni una técnica de escucha interior. En Marcos 7 el Hijo toma a un sordo, alza los ojos, gime y manda que el oído y la lengua cedan. Por consiguiente, este tomo no administra un rito de atención plena: pide el milagro que solo Cristo hace, y el oficio de leer el capítulo entero una vez que el oído ha cedido.",
+      "Marcos 7:31–37 en cuarenta estaciones: el sordo de Decápolis, traído por otros, abierto por Cristo. Deja de coleccionar versículos y aprende a oír a Dios.",
+    line: "En la Decápolis le trajeron a Jesús un sordo y tartamudo. No vino él. El Señor lo apartó de la gente, miró al cielo, gimió y le dijo: Éfata. Este libro camina esa hora de un solo tirón y no convierte la orden en una tarjeta: quien lo cierra no se lleva un método, se queda bajo la palabra.",
     thesis:
-      "Jesús tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Este tomo no ofrece técnicas de escucha interior ni un lema de marca. Pide el milagro que solo el Hijo hace: oídos que oyen la Palabra y lengua que la confiesa. Quien ya oye, no se pavonea. Quien no oye, no se administra un rito. El Espíritu, enviado por ese mismo Señor, sigue abriendo. El sordo no se abre: es abierto.",
+      "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones y cinco partes: lo traen, Éfata, a quién oyó, la casa, permanece. El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído. Pero el oído abierto puede volver a cerrarse, y por eso el camino sigue: el Padre que habló desde el principio, el Hijo de quien eran esas manos, el Espíritu que no se confunde con una técnica, y el oficio de oír la Escritura entera sin arrancarle una frase. La guía queda al final, para el que regresa.",
     sample:
-      "Jesús tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Este tomo no ofrece técnicas de escucha interior ni un lema de marca. Pide el milagro que solo el Hijo hace: oídos que oyen la Palabra y lengua que la confiesa.",
-    ref: "Mr. 7:34 · Hch. 2:4",
+      "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones. El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído.",
+    ref: "Mr. 7:34–35",
     pasaje: "Marcos 7",
     studySlug: "marcos-7",
     asinEbook: "B0HJ15ZXL3",
@@ -303,15 +305,15 @@ export const obras: Obra[] = [
     slug: "el-altar-del-espejo",
     revelatio: true,
     title: "El altar del espejo",
-    subtitulo: "Santiago 1:22–25",
-    seoTitle: "El altar del espejo: Santiago 1:22-25 | Alejandro Sirit",
+    subtitulo: "Santiago 1",
+    seoTitle: "El altar del espejo: Santiago 1:23-25 | Alejandro Sirit",
     seoDescription:
-      "Santiago 1:22-25 llama a ser hacedores de la Palabra y no solo oidores. Alejandro Sirit trata la obediencia que permanece frente al espejo.",
-    line: "El lector recibe la compuerta entre oír y hacer. Quien mira el espejo y se va olvida el rostro; quien permanece, es hacedor de la obra.",
+      "Santiago 1 contado como una sola historia: un hombre delante de un cristal, el culto de sí mismo y el que se queda mirando la ley perfecta de la libertad.",
+    line: "Hay un hombre delante de un espejo. Santiago lo puso ahí sin oficio ni nombre, para que el lector no pueda mirarlo como a otro. Este libro camina su culto de sí mismo, la fama, el poder, las posesiones y el lugar entre los otros, hasta que el cristal deja de ser altar.",
     thesis:
-      "El que oye y no hace se parece al que mira su rostro natural en un espejo y se va, y luego olvida. El altar no es el sentimiento de haber oído, ni la liturgia de un estudio bien anotado. Es el hombre que permanece en la ley perfecta, la de la libertad, y es hacedor de la obra. C.R.I.S.O.L.™ vive aquí: la compuerta pastoral de Decisión, para que la cadena no se vuelva un cadáver erudito.",
+      "Esto es una historia, no un canto y no un comentario. El principio es un hombre delante de un cristal; entre el principio y el fin hay un culto, el de sí mismo, que toma forma de fama, de poder, de posesiones y de pertenencia. El libro no adelanta el desenlace ni convierte la carta en lema, porque el que oye el fin antes de caminar se lleva la frase y deja al hombre. Santiago entero, desde la salutación del siervo a las doce tribus, pone al lector al lado de ese varón, hasta que el mundo pasa, el cristal no se pule y el Señor se vuelve.",
     sample:
-      "El que oye y no hace se parece al que mira su rostro natural en un espejo y se va, y luego olvida. El altar no es el sentimiento de haber oído, ni la liturgia de un estudio bien anotado. Es el hombre que permanece en la ley perfecta, la de la libertad, y es hacedor de la obra.",
+      "Hay un hombre delante de un espejo. Santiago lo puso ahí. No le dio oficio, ni infancia, ni un nombre que pudieras usar para no ser tú el que está mirando. Lo dejó como deja una carta a las doce tribus: un varón, un cristal, un rostro.",
     ref: "Stg. 1:22–25",
     pasaje: "Santiago 1",
     studySlug: "santiago-1",
@@ -322,19 +324,20 @@ export const obras: Obra[] = [
   {
     n: 1,
     lectura: 7,
-    slug: "callar-para-ganar",
+    slug: "de-una-misma-boca",
     revelatio: true,
-    title: "Callar para ganar",
-    subtitulo: "Santiago 3:1–12",
-    seoTitle: "Callar para ganar: Santiago 3:2 | Alejandro Sirit",
+    revelatioSlug: "callar-para-ganar",
+    title: "De una misma boca",
+    subtitulo: "Santiago 3",
+    seoTitle: "De una misma boca: Santiago 3:10 | Alejandro Sirit",
     seoDescription:
-      "Santiago 3 y el dominio de la lengua según la Biblia: callar con sabiduría, hablar cuando el pasaje lo manda y no encender el fuego del conflicto.",
-    line: "El lector recibe el dominio de la lengua. Callar no es huir, sino no encender el bosque, y hablar cuando el pasaje manda hablar.",
+      "Santiago 3 como una sola historia: la boca que confesó a Jesús como Señor y el mismo día maldice. La lengua que ningún hombre doma y la fuente nueva.",
+    line: "Un hombre sin nombre ha confesado esta mañana con su boca que Jesús es el Señor. Este libro se queda a su lado el resto del día, mientras la misma boca quiere la primera palabra, ofende, arde y descubre que ningún hombre puede domar la lengua.",
     thesis:
-      "La lengua es un fuego. El que no ofende en palabra, es varón perfecto. Este tomo no enseña la cobardía ni el silencio cómplice: enseña el dominio que el Espíritu da, para no encender el bosque por una chispa, y para hablar cuando el pasaje manda hablar. Callar no es huir. Callar, aquí, es no pelear el primer asiento, y no convertir la doctrina en un deporte de redes.",
+      "La confesión de Romanos 10:9 abre la puerta, y Santiago 3 cuenta lo que esa misma boca hace cuando el día avanza. Once estaciones, de los maestros al fuego, de ningún hombre a la fuente y a la sabiduría de arriba, sin entregar el fin en la primera página. El libro no enseña una técnica para callar ni un dominio que se compre con disciplina: la lengua no figura entre las naturalezas que el hombre doma. De una misma boca proceden bendición y maldición, y la fuente no da agua dulce y amarga; solo otra fuente cambia lo que mana.",
     sample:
-      "La lengua es un fuego. El que no ofende en palabra, es varón perfecto. Este tomo no enseña la cobardía ni el silencio cómplice: enseña el dominio que el Espíritu da, para no encender el bosque por una chispa, y para hablar cuando el pasaje manda hablar.",
-    ref: "Stg. 3:2–6 · Pr. 17:27",
+      "Hay un hombre sin nombre que esta mañana ha confesado con la boca que Jesús es el Señor. No le fabrico casa, ni oficio, ni herida: te pido que te quedes a su lado mientras el día avanza y la misma boca hace lo que Santiago 3 dice.",
+    ref: "Stg. 3:10–12 · Ro. 10:9",
     pasaje: "Santiago 3",
     studySlug: "",
     tratadoSlug: "la-muerte-y-la-vida",

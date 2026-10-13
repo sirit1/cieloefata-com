@@ -61,11 +61,11 @@ describe("COPY PACK NIVEL+", () => {
     assert.match(CANON_TRATADO, /^Tratado\./);
     assert.equal(
       textoPackWhatsApp("efata"),
-      "Hola, soy de cieloefata.com; solicito el pack del tomo Éfata: La Escritura Abierta para estudiar Marcos 7 con el método V.E.R.D.A.D.",
+      "Hola, soy de cieloefata.com; solicito el pack del tomo Éfata: La Escritura Abierta para oír Marcos 7 entero",
     );
     assert.equal(
       "https://wa.me/584241674909?text=" + encodeURIComponent(PACK_WHATSAPP.efata),
-      "https://wa.me/584241674909?text=Hola%2C%20soy%20de%20cieloefata.com%3B%20solicito%20el%20pack%20del%20tomo%20%C3%89fata%3A%20La%20Escritura%20Abierta%20para%20estudiar%20Marcos%207%20con%20el%20m%C3%A9todo%20V.E.R.D.A.D.",
+      "https://wa.me/584241674909?text=Hola%2C%20soy%20de%20cieloefata.com%3B%20solicito%20el%20pack%20del%20tomo%20%C3%89fata%3A%20La%20Escritura%20Abierta%20para%20o%C3%ADr%20Marcos%207%20entero",
     );
   });
 });

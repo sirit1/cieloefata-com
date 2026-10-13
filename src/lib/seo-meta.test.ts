@@ -89,7 +89,7 @@ test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
   assert.deepEqual(conIsbn, [
     ["cuando-el-cielo-se-cae", "9798176466690"],
     ["el-altar-del-espejo", "9798176414967"],
-    ["callar-para-ganar", "9798253959213"],
+    ["de-una-misma-boca", "9798253959213"],
   ]);
   const basta = camposLibro(obras.find((o) => o.slug === "bastate-mi-gracia")!);
   assert.equal("isbn" in basta, false);
@@ -97,7 +97,7 @@ test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
   const efata = camposLibro(obras.find((o) => o.slug === "efata")!);
   assert.equal("isbn" in efata, false);
   assert.equal(efata.sameAs, "https://www.amazon.com/dp/B0HJ15ZXL3");
-  const callar = camposLibro(obras.find((o) => o.slug === "callar-para-ganar")!);
+  const callar = camposLibro(obras.find((o) => o.slug === "de-una-misma-boca")!);
   assert.equal(callar.isbn, "9798253959213");
   assert.equal(callar.sameAs, "https://www.amazon.com/dp/B0GPF3NHQT");
   assert.equal(callar.isbn?.startsWith("B"), false);
@@ -235,7 +235,7 @@ test("el aula cierra con las obras pedidas, sin mezclar el estudio y el tratado 
   assert.deepEqual(slugs("estudio", "santiago-1"), [
     "la-fe-no-basta",
     "el-altar-del-espejo",
-    "callar-para-ganar",
+    "de-una-misma-boca",
   ]);
   assert.deepEqual(slugs("estudio", "galatas-5"), ["la-fe-no-basta"]);
   assert.deepEqual(slugs("tratado", "el-crisol-de-lo-oido"), ["el-altar-del-espejo"]);
@@ -269,6 +269,21 @@ test("el artículo de Santiago 2 firma Alejandro Sirit, cita la 1909 y enlaza La
   assert.match(a.seoDescription, /fe sin obras es muerta/);
 });
 
+test("el artículo de Santiago 3 firma Alejandro Sirit, cita la 1909 y enlaza De una misma boca", () => {
+  const a = articulos.find((x) => x.slug === "santiago-3-de-una-misma-boca");
+  assert.ok(a);
+  const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
+  const palabras = [a.title, ...a.secciones.map((s) => s.titulo ?? ""), texto].join(" ").split(/\s+/).filter(Boolean).length;
+  assert.ok(palabras >= 1200 && palabras <= 1500, String(palabras));
+  assert.match(texto, /De una misma boca proceden bendición y maldición/);
+  assert.match(texto, /¿Echa alguna fuente por una misma abertura agua dulce y amarga\?/);
+  assert.match(texto, /¿puede la higuera producir aceitunas, ó la vid higos\?/);
+  assert.equal(/Dr\.|RVR|1960|RevelatiO/i.test(texto), false);
+  assert.ok(a.relacionados.some((r) => r.to === "/obras/de-una-misma-boca"));
+  assert.ok(a.seoTitle.length < 60);
+  assert.ok(a.seoDescription.length >= 120 && a.seoDescription.length <= 160);
+});
+
 test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
   const slugs = obras.filter((o) => o.revelatio).map((o) => o.slug);
   assert.deepEqual(slugs, [
@@ -278,13 +293,15 @@ test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y s
     "cuando-el-cielo-se-cae",
     "la-fe-no-basta",
     "el-altar-del-espejo",
-    "callar-para-ganar",
+    "de-una-misma-boca",
   ]);
   assert.equal(
     urlRevelatioLibro("callar-para-ganar"),
     "https://revelatio.app/libros/callar-para-ganar?utm_source=web&utm_medium=cta&utm_campaign=callar-para-ganar",
   );
-  for (const slug of slugs) {
+  assert.equal(obras.find((o) => o.slug === "de-una-misma-boca")?.revelatioSlug, "callar-para-ganar");
+  for (const obra of obras.filter((o) => o.revelatio)) {
+    const slug = obra.revelatioSlug ?? obra.slug;
     const url = new URL(urlRevelatioLibro(slug));
     assert.equal(url.pathname, `/libros/${slug}`);
     assert.equal(url.searchParams.get("utm_campaign"), slug);

@@ -135,7 +135,7 @@ export function ObraPage() {
               Estudia cada capítulo de este libro con IA en RevelatiO
             </p>
             <a
-              href={urlRevelatioLibro(obra.slug)}
+              href={urlRevelatioLibro(obra.revelatioSlug ?? obra.slug)}
               target="_blank"
               rel="noopener"
               className="btn btn-gold mt-4"
@@ -145,7 +145,7 @@ export function ObraPage() {
             </a>
           </div>
           <img
-            src={qrRevelatioPath(obra.slug)}
+            src={qrRevelatioPath(obra.revelatioSlug ?? obra.slug)}
             alt={`Código QR de ${obra.title} en RevelatiO`}
             width={88}
             height={88}
