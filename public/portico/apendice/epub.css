@@ -1,0 +1,22 @@
+@font-face{font-family:"GBP";src:url(fonts/GentiumBookPlus-Regular.ttf)}
+@font-face{font-family:"GBP";font-style:italic;src:url(fonts/GentiumBookPlus-Italic.ttf)}
+@font-face{font-family:"GBP";font-weight:bold;src:url(fonts/GentiumBookPlus-Bold.ttf)}
+@font-face{font-family:"GBP";font-weight:bold;font-style:italic;src:url(fonts/GentiumBookPlus-BoldItalic.ttf)}
+@font-face{font-family:"NSH";src:url(fonts/NotoSerifHebrew-Regular.ttf)}
+/* Pórtico v4, EPUB: los títulos nunca quedan solos al pie; las figuras no se parten. */
+body { font-family: "GBP", serif; widows: 2; orphans: 2; }
+h1, h2, h3, h4 { page-break-after: avoid; break-after: avoid; page-break-inside: avoid; break-inside: avoid; }
+figure, .figura, img { page-break-inside: avoid; break-inside: avoid; }
+figure img { max-width: 100%; }
+figcaption { font-style: italic; text-align: center; page-break-before: avoid; break-before: avoid; }
+p { widows: 2; orphans: 2; }
+i.escriptura { color: #1F4E9A; } i.escriptura.dios { color: #B01010; }
+
+.he{font-family:"NSH",serif}
+.grc{font-family:"GBP",serif}
+.apertura{page-break-after:always;break-after:page;text-align:center}
+.apertura img{max-width:100%;max-height:95vh}
+section.portadilla h1,.titulo{text-align:center}
+h1{page-break-before:always;break-before:page}
+table{border-collapse:collapse;font-size:0.85em}th,td{border-bottom:1px solid #999;padding:2px 4px;vertical-align:top}
+.t1{font-size:2em;text-align:center}.t3{text-align:center}
