@@ -41,6 +41,9 @@ function ParaclitoPage() {
 
       <Prosa texto={p.tesis} className="mt-10 text-xl leading-relaxed" />
 
+      <p className="mt-8 text-sm leading-relaxed text-ink-soft">{p.versionNote}</p>
+      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{p.copyright}</p>
+
       <h2 className="mt-12 font-serif text-3xl">Pórtico</h2>
       {p.portico.map((t) => (
         <Prosa key={t.slice(0, 40)} texto={t} />
