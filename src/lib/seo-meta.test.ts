@@ -254,20 +254,22 @@ test("el JSON-LD habla solo de Cielo Efata y de Alejandro Sirit, sin RevelatiO",
   }
 });
 
-test("el artículo de Santiago 2 firma Alejandro Sirit, cita la 1909 y enlaza La fe no basta", () => {
+test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaza La fe no basta", () => {
   const a = articulos.find((x) => x.slug === "santiago-2-la-fe-que-obra");
   assert.ok(a);
   const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
   const palabras = [a.title, ...a.secciones.map((s) => s.titulo ?? ""), texto].join(" ").split(/\s+/).filter(Boolean).length;
   assert.ok(palabras >= 900 && palabras <= 1400, String(palabras));
   assert.match(texto, /la fe sin obras es muerta/);
-  assert.equal(/Dr\.|RVR|1960|RevelatiO/i.test(texto), false);
+  assert.match(DESCRIPCION_ARTICULOS, /Reina-Valera 1960/);
+  assert.equal(/1909/.test(DESCRIPCION_ARTICULOS), false);
+  assert.equal(/Dr\.|RevelatiO/i.test(texto), false);
   assert.ok(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"));
   assert.match(a.seoTitle, /Santiago 2/);
   assert.match(a.seoDescription, /fe sin obras es muerta/);
 });
 
-test("el artículo de Santiago 3 firma Alejandro Sirit, cita la 1909 y enlaza De una misma boca", () => {
+test("el artículo de Santiago 3 firma Alejandro Sirit, cita la RVR 1960 y enlaza De una misma boca", () => {
   const a = articulos.find((x) => x.slug === "santiago-3-de-una-misma-boca");
   assert.ok(a);
   const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
@@ -276,7 +278,9 @@ test("el artículo de Santiago 3 firma Alejandro Sirit, cita la 1909 y enlaza De
   assert.match(texto, /De una misma boca proceden bendición y maldición/);
   assert.match(texto, /¿Echa alguna fuente por una misma abertura agua dulce y amarga\?/);
   assert.match(texto, /¿puede la higuera producir aceitunas, ó la vid higos\?/);
-  assert.equal(/Dr\.|RVR|1960|RevelatiO/i.test(texto), false);
+  assert.match(DESCRIPCION_ARTICULOS, /Reina-Valera 1960/);
+  assert.equal(/1909/.test(DESCRIPCION_ARTICULOS), false);
+  assert.equal(/Dr\.|RevelatiO/i.test(texto), false);
   assert.ok(a.relacionados.some((r) => r.to === "/obras/de-una-misma-boca"));
   assert.ok(a.seoTitle.length < 60);
   assert.ok(a.seoDescription.length >= 120 && a.seoDescription.length <= 160);
@@ -306,6 +310,22 @@ test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y s
     const qr = new URL(`../../public${qrRevelatioPath(slug)}`, import.meta.url);
     assert.ok(readFileSync(qr, "utf8").includes("<svg"), slug);
   }
+});
+
+test("los estudios no atribuyen el texto bíblico a la RV 1909 ni al dominio público", () => {
+  const dir = new URL("./libros/", import.meta.url);
+  const hallazgos: string[] = [];
+  for (const nombre of readdirSync(dir)) {
+    if (!nombre.endsWith(".ts") || nombre === "cargar.ts") continue;
+    const texto = readFileSync(new URL(nombre, dir), "utf8");
+    if (/1909/.test(texto)) hallazgos.push(`${nombre}:1909`);
+    if (/Reina-Valera[^.]{0,80}dominio público|dominio público[^.]{0,80}Reina-Valera/.test(texto)) {
+      hallazgos.push(`${nombre}:dominio`);
+    }
+  }
+  const colofon = readFileSync(new URL("./colofon.ts", import.meta.url), "utf8");
+  if (/1909/.test(colofon)) hallazgos.push("colofon.ts:1909");
+  assert.deepEqual(hallazgos, []);
 });
 
 test("ningún texto del sitio antepone «Dr.» al nombre de Alejandro Sirit", () => {

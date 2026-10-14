@@ -1,6 +1,6 @@
 /**
  * Colofón de los tratados: «Fuentes, versiones y aviso de derechos».
- * Texto de la versión corregida (Reina-Valera 1909, dominio público), sin retoques de prosa.
+ * Versión castellana citada: Reina-Valera 1960, con su aviso de titular.
  * Firma del autor: solo «Alejandro Sirit». Se muestra completo al cierre de cada tratado.
  */
 export type BloqueColofon = { tipo: "h" | "p" | "li"; texto: string };
@@ -11,7 +11,7 @@ export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "p", texto: "Editorial Cielo Efata · Alejandro Sirit · 2026" },
   { tipo: "p", texto: "Este aviso va en el verso de la portada (créditos) y se repite, completo, al cierre de cada tratado. No es un dictamen de abogado. Es la página de derechos de la casa. Antes de una tirada comercial grande, un abogado en Canadá puede revisarla. El derecho de autor en Canadá es federal (Copyright Act), también para quien publica desde Quebec." },
   { tipo: "h", texto: "1. Versión castellana" },
-  { tipo: "p", texto: "Cita de iglesia: Reina-Valera 1909, de dominio público. Se cita tal como la trae esa edición, con su ortografía (á, ó, fué). No requiere permiso ni aviso de titular." },
+  { tipo: "p", texto: "Cita de iglesia: Reina-Valera 1960, textual. Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960™ es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia." },
   { tipo: "p", texto: "No se usan, en estos tratados, NVI, LBLA, NBLA, DHH, TLA, RVR1995 ni RVR2020. Esas versiones tienen otro titular y otro aviso." },
   { tipo: "h", texto: "2. Texto hebreo" },
   { tipo: "p", texto: "Lectura base del Antiguo Testamento: texto masorético del Códice de Leningrado, en la presentación de la Biblia Hebraica Stuttgartensia." },
@@ -57,7 +57,7 @@ export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "h", texto: "9. Qué no afirma esta página" },
   { tipo: "p", texto: "No afirma que la BHS o la Rahlfs-Hanhart sean de dominio público. No reproduce aparato crítico, masora, láminas de Qumrán ni comentarios de autor vivo. No es licencia para terceros: quien copie este tratado copia una obra reservada, aunque las citas bíblicas tengan su propio titular." },
   { tipo: "h", texto: "10. Créditos breves para el verso de la portada" },
-  { tipo: "p", texto: "Texto bíblico en castellano: Reina-Valera 1909, de dominio público." },
+  { tipo: "p", texto: "Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960™ es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia." },
   { tipo: "p", texto: "Hebreo: texto masorético, Códice de Leningrado, según la Biblia Hebraica Stuttgartensia © 1977/1997 Deutsche Bibelgesellschaft, Stuttgart. Se cita el versículo; no se reproduce la edición." },
   { tipo: "p", texto: "Griego del Nuevo Testamento: Textus Receptus (Stephanus 1550; Scrivener 1894), dominio público." },
   { tipo: "p", texto: "Griego del Antiguo Testamento: Septuaginta, comparación por versículo. No se reproduce la edición de Rahlfs-Hanhart © 2006 Deutsche Bibelgesellschaft." },

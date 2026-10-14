@@ -82,7 +82,7 @@ export const FECHA_PACKS = "2026-09-23";
 export const FECHA_PROSA = "2026-09-24";
 /** Día en que el mapa de la serie (13–50) entró en la escuela, sin manuscrito de Drive. */
 export const FECHA_SERIE = "2026-10-01";
-/** Versión corregida RV1909, colofón y glosas: 3 de octubre de 2026. */
+/** Citas en Reina-Valera 1960. Colofón y glosas vigentes desde el 3 de octubre de 2026. */
 export const FECHA_VIGENTE = "2026-10-03";
 
 export type FechasArticulo = { published: string; modified: string };
