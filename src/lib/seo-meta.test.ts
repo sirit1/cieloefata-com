@@ -188,7 +188,7 @@ function propDe(head: ReturnType<typeof pageHead>, property: string) {
 }
 
 test("cada libro tiene title, description y subtítulo SEO, y el Book conserva el nombre llano", () => {
-  assert.equal(obras.length, 7);
+  assert.equal(obras.length, 6);
   for (const obra of obras) {
     assert.ok(obra.seoTitle.includes(obra.title) || obra.slug === "bastate-mi-gracia");
     assert.ok(obra.subtitulo.length > 0);

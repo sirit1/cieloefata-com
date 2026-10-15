@@ -65,7 +65,7 @@ describe("COPY PACK NIVEL+", () => {
     );
     assert.equal(
       "https://wa.me/584241674909?text=" + encodeURIComponent(PACK_WHATSAPP.efata),
-      "https://wa.me/584241674909?text=Hola%2C%20soy%20de%20cieloefata.com%3B%20solicito%20el%20pack%20del%20tomo%20%C3%89fata%3A%20La%20Escritura%20Abierta%20para%20o%C3%ADr%20Marcos%207%20entero",
+      "https://wa.me/584241674909?text=Hola%2C%20soy%20de%20cieloefata.com%3B%20solicito%20el%20pack%20del%20libro%20%C3%89fata%3A%20La%20Escritura%20Abierta%20para%20o%C3%ADr%20Marcos%207%20entero",
     );
   });
 });
