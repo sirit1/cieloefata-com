@@ -72,7 +72,7 @@ export const USO = [
   },
   {
     name: "El Fuego",
-    body: "El método, el cuaderno, el Espíritu que abre. V.E.R.D.A.D.™ es cauce, no milagro. El Fuego no se administra: se pide, y se obedece cuando el oído cede.",
+    body: "El método, el cuaderno, el Espíritu que abre. V.E.R.D.A.D. es cauce, no milagro. El Fuego no se administra: se pide, y se obedece cuando el oído cede.",
   },
   {
     name: "Lo que no se hace",

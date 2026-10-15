@@ -64,7 +64,7 @@ export function BookJsonLd({ slug }: { slug: string }) {
   );
 }
 
-/** Libro fuera de los siete tomos (sin tapa ni ficha de Amazon conocidas). */
+/** Libro fuera del catálogo principal (sin tapa ni ficha de Amazon conocidas). */
 export function LibroJsonLd({
   title,
   slug,
@@ -122,7 +122,7 @@ export function CorpusJsonLd() {
       data={{
         "@context": "https://schema.org",
         "@type": "ItemList",
-        name: "Siete tomos · Editorial Cielo Efata",
+        name: "Libros · Editorial Cielo Efata",
         itemListOrder: "https://schema.org/ItemListOrderAscending",
         numberOfItems: obras.length,
         itemListElement: obras.map((obra) => ({

@@ -1,6 +1,6 @@
 export const parrafos: readonly string[] = [
   "Convención tipográfica. Las palabras de la Escritura se citan según la Reina-Valera 1960. Los vocablos hebreos y griegos aparecen en su forma original, seguidos de su sentido en castellano la primera vez. Los títulos de cada sección han sido tomados del propio texto sagrado. Los intérpretes comparecen como siervos: ninguno sustituye a Mateo.",
-  "© 2026 Alejandro Sirit. Todos los derechos reservados. Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960™ es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia.",
+  "© 2026 Alejandro Sirit. Todos los derechos reservados. Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960 es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia.",
   "«Buscad primeramente»",
   "«Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.»",
   "Mateo 6:33 · Reina-Valera 1960",

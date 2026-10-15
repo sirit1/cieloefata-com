@@ -13,7 +13,7 @@ const SLUGS = [
   "de-una-misma-boca",
 ] as const;
 
-test("los siete tomos cuelgan tapa KDP bajo public/TAPAS", () => {
+test("los los libros cuelgan tapa KDP bajo public/TAPAS", () => {
   const catalog = readFileSync(join(process.cwd(), "src/lib/content.ts"), "utf8");
   assert.match(catalog, /title: "El Siervo, no tú"/);
   assert.match(catalog, /title: "Bástate"/);

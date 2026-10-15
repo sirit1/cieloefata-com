@@ -61,7 +61,7 @@ describe("COPY PACK NIVEL+", () => {
     assert.match(CANON_TRATADO, /^Tratado\./);
     assert.equal(
       textoPackWhatsApp("efata"),
-      "Hola, soy de cieloefata.com; solicito el pack del tomo Éfata: La Escritura Abierta para oír Marcos 7 entero",
+      "Hola, soy de cieloefata.com; solicito el pack del libro Éfata: La Escritura Abierta para oír Marcos 7 entero",
     );
     assert.equal(
       "https://wa.me/584241674909?text=" + encodeURIComponent(PACK_WHATSAPP.efata),

@@ -75,7 +75,7 @@ describe("puente a RevelatiO", () => {
     assert.equal(p.get("estudio"), null);
   });
 
-  it("un tomo vuelve al tomo; Santiago 2 no se sustituye por Santiago 1", () => {
+  it("un libro vuelve al libro; Santiago 2 no se sustituye por Santiago 1", () => {
     const cita = parseRef("Santiago 2");
     assert.ok(cita);
     assert.equal(
@@ -96,7 +96,7 @@ describe("puente a RevelatiO", () => {
     assert.equal(p.get("estudio"), null);
   });
 
-  it("si el tomo nombra solo el capítulo, hereda el versículo del aula o tratado del mismo capítulo", () => {
+  it("si el libro nombra solo el capítulo, hereda el versículo del aula o tratado del mismo capítulo", () => {
     const efata = q(
       urlPuenteRevelatio({
         ref: "Marcos 7",

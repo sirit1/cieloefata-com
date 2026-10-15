@@ -22,10 +22,8 @@ export const GLOSAS: Record<string, string> = {
   "analogía plena": "Resumir después con todo el canon, sin usarlo como ventrílocuo.",
   "analogía de la fe": "La Escritura se interpreta a sí misma. Ningún pasaje derriba el canon.",
   versiculitis: "Extraer un versículo del párrafo, del pacto y del canon, y hacerlo oráculo.",
-  "V.E.R.D.A.D.™": "Ver, Entorno, Revelación, Doctrina, Argumento, Decisión. El método de esta casa.",
-  "V.E.R.D.A.D.": "Ver, Entorno, Revelación, Doctrina, Argumento, Decisión.",
-  "C.R.I.S.O.L.™": "Compuerta pastoral de Decisión, en El Altar del Espejo. Impide el teatro del «hoy muero a…».",
-  "C.R.I.S.O.L.": "Compuerta pastoral de Decisión. El Altar del Espejo.",
+  "V.E.R.D.A.D.": "Ver, Entorno, Revelación, Doctrina, Argumento, Decisión. El método de esta casa.",
+  "C.R.I.S.O.L.": "Compuerta pastoral de Decisión. Impide el teatro del «hoy muero a…».",
   Éfata: "Sé abierto. Palabra de Cristo al sordo, Marcos 7:34.",
   Efata: "Sé abierto. Palabra de Cristo al sordo, Marcos 7:34.",
   ἐφφαθά: "Arameo: sé abierto. Imperativo pasivo. Marcos 7:34.",
@@ -66,8 +64,8 @@ export function hallarGlosas(text: string): { start: number; end: number; token:
       if (i < 0) break;
       const before = i === 0 ? "" : text[i - 1];
       const after = text[i + key.length] ?? "";
-      const boundL = !/[A-Za-záéíóúñÁÉÍÓÚÑ™]/.test(before);
-      const boundR = !/[A-Za-záéíóúñÁÉÍÓÚÑ™]/.test(after);
+      const boundL = !/[A-Za-záéíóúñÁÉÍÓÚÑ]/.test(before);
+      const boundR = !/[A-Za-záéíóúñÁÉÍÓÚÑ]/.test(after);
       // «Efata» dentro de la marca «Cielo Efata» no se glosa.
       const marca = (key === "Efata" || key === "Éfata") && /Cielo\s$/.test(text.slice(Math.max(0, i - 6), i));
       if (boundL && boundR && !marca) {

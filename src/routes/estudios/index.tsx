@@ -20,9 +20,9 @@ export const Route = createFileRoute("/estudios/")({
       path: "/estudios",
       title: tituloSeccion("Estudios"),
       description:
-        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí, después del capítulo entero.",
+        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D. y un solo acto. Se leen aquí, después del capítulo entero.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
+        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
     }),
 });
 
@@ -47,7 +47,7 @@ function EstudiosPage() {
       <Motif kind="lion" />
       <h1 className="mt-2 font-serif text-4xl">Las clases de la escuela</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver,
+        Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D. —Ver,
         Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien
         que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa
         lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia.

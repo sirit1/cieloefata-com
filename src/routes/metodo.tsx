@@ -27,7 +27,7 @@ export const Route = createFileRoute("/metodo")({
       path: "/metodo",
       title: tituloSeccion("Cómo leer"),
       description:
-        "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás.",
+        "El Método V.E.R.D.A.D.: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás.",
     }),
 });
 
@@ -38,7 +38,7 @@ function MetodoPage() {
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{VERDAD_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{VERDAD_ORIGEN.title}</h1>
       <p className="mt-3 font-serif text-xl italic text-ink-soft">{VERDAD_ORIGEN.subtitulo}.</p>
-      <p className="mt-2 font-sans text-sm tracking-wide text-gold">{VERDAD_ORIGEN.libro} · Tratado II</p>
+      <p className="mt-2 font-sans text-sm tracking-wide text-gold">{VERDAD_ORIGEN.libro}</p>
 
       <p className="mt-8 text-lg leading-relaxed">
         <ConLemas>{VERDAD_ORIGEN.quien}</ConLemas>
@@ -176,7 +176,7 @@ function MetodoPage() {
         <Refs refs={CRISOL_COMPUERTA.refs} />
         <p className="mt-8 font-sans text-sm">
           <Link to="/crisol" className="text-link underline">
-            C.R.I.S.O.L.™ en El Altar del Espejo
+            C.R.I.S.O.L. en El Altar del Espejo
           </Link>
         </p>
       </section>

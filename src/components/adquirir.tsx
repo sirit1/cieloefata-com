@@ -9,7 +9,7 @@ type AdquirirProps = {
   asinEbook?: string;
   isbnPrint?: string;
   pack?: boolean;
-  /** Tomo sin edición publicada en Amazon: no se ofrece búsqueda ni enlace de compra. */
+  /** Libro sin edición publicada en Amazon: no se ofrece búsqueda ni enlace de compra. */
   sinAmazon?: boolean;
 };
 
@@ -44,7 +44,7 @@ export function Adquirir({
       ) : null}
       {searchHref ? (
         <a href={searchHref} rel="noopener noreferrer" target="_blank" className="btn btn-ink">
-          Buscar este tomo en Amazon
+          Buscar este libro en Amazon
         </a>
       ) : null}
       {!sinAmazon && !title && !ebookHref && !printHref ? (
