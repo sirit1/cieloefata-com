@@ -56,6 +56,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.cieloefata.com/crisol/manual</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cieloefata.com/metodo/manual</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.cieloefata.com/probad</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.cieloefata.com/nosotros</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

@@ -37,6 +37,11 @@ function MetodoPage() {
       <Motif kind="flame" />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{VERDAD_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{VERDAD_ORIGEN.title}</h1>
+      <p className="mt-3 font-sans text-sm">
+        <a href="/metodo/manual" className="text-link underline">Lee el manual fundacional del Método V.E.R.D.A.D.</a>
+        {" · "}
+        <a href="/probad" className="text-link underline">Método P.R.O.B.A.D.</a>
+      </p>
       <p className="mt-3 font-serif text-xl italic text-ink-soft">{VERDAD_ORIGEN.subtitulo}.</p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">{VERDAD_ORIGEN.libro}</p>
 
