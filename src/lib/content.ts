@@ -7,7 +7,7 @@ export const school = {
   lead: "La Escritura tiene la última palabra. Lo demás —el comentario, el método, el predicador de moda— se sienta atrás, y se sienta de rodillas.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Casa de estudio bíblico dirigida por Alejandro Sirit. Seis tratados y el Método V.E.R.D.A.D.: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
+    "Casa de estudio bíblico dirigida por Alejandro Sirit. Nueve libros y el Método V.E.R.D.A.D.: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Alejandro Sirit",
   welcome:
@@ -24,10 +24,10 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Los libros",
-  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son seis tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
+  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son nueve libros forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
   efata:
-    "Éfata es el libro donde empieza la lectura. En él Alejandro Sirit entregó el Método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
-  line: "Los seis existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V El altar del espejo; VI De una misma boca. Bástate, publicado como sexto, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
+    "Éfata es el libro donde se aprende el oficio. En él Alejandro Sirit entregó el Método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
+  line: "Los nueve son libros, no artículos de un portal ni descargas de consuelo. El orden de publicación no es el de lectura. Se entra por el Pórtico, que recorre los sesenta y seis libros como una sola historia; en Éfata se aprende a leer el capítulo entero, y solo después se habla. El orden de lectura —no el de publicación— es: I Pórtico a la Escritura; II Éfata; III El Siervo, no tú; IV Bástate («Bástate mi gracia»); V Cuando el cielo se cae; VI El altar del espejo; VII De una misma boca; VIII Diákrisis; IX Nunca tocarás mi fe. Diákrisis enseña a discernir cuando el oído ya se abrió; el testimonio cierra la serie debajo del texto. Cada tapa se abre junto al capítulo que la sostiene.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
 
@@ -132,7 +132,7 @@ export const canonDoors = [
   },
 ] as const;
 
-export const ROMANO = ["", "I", "II", "III", "IV", "V", "VI", "VII"] as const;
+export const ROMANO = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"] as const;
 
 export type Obra = {
   n: number;
@@ -197,8 +197,27 @@ export function tapaPath(slug: string) {
 
 export const obras: Obra[] = [
   {
-    n: 5,
+    n: 7,
     lectura: 1,
+    slug: "portico-a-la-escritura",
+    title: "Pórtico a la Escritura",
+    subtitulo: "Manual permanente a los 66 libros de la Biblia",
+    seoTitle: "Pórtico a la Escritura: los 66 libros de la Biblia | Alejandro Sirit",
+    seoDescription:
+      "Un manual para leer los sesenta y seis libros de la Biblia como una sola historia: de dónde viene cada libro, qué dice entero y hacia quién apunta.",
+    line: "La historia es una. Empieza con un Dios que habla, y las cosas son; sigue por un pueblo que olvida y es guardado, y llega a un Hijo que camina, muere y resucita. Este libro es la puerta de la casa: se entra por los sesenta y seis, y no se sale con un versículo suelto en el bolsillo.",
+    thesis:
+      "Pórtico a la Escritura acompaña al lector por los sesenta y seis libros de la Biblia como por una sola casa: de dónde viene cada libro, qué dice entero y hacia quién apunta. No es un plan de un año ni un diario. Es un pórtico, para el creyente que quiere leer la Biblia entera sin perderse, para el maestro que enseña en la iglesia y para quien sospecha que ha estado coleccionando versículos sin oír la historia que los sostiene.",
+    sample:
+      "La historia es una. Empieza con un Dios que habla, y las cosas son. Sigue por un pueblo que olvida y es guardado, y llega a un Hijo que camina, muere y resucita.",
+    ref: "Lc. 24:27",
+    pasaje: "Lucas 24",
+    studySlug: "",
+    sinAmazon: true,
+  },
+  {
+    n: 5,
+    lectura: 2,
     slug: "efata",
     revelatio: true,
     title: "Éfata: La Escritura Abierta",
@@ -218,7 +237,7 @@ export const obras: Obra[] = [
   },
   {
     n: 4,
-    lectura: 2,
+    lectura: 3,
     slug: "el-siervo-no-tu",
     revelatio: true,
     title: "El Siervo, no tú",
@@ -239,7 +258,7 @@ export const obras: Obra[] = [
   },
   {
     n: 6,
-    lectura: 3,
+    lectura: 4,
     slug: "bastate-mi-gracia",
     revelatio: true,
     title: "Bástate",
@@ -259,7 +278,7 @@ export const obras: Obra[] = [
   },
   {
     n: 3,
-    lectura: 4,
+    lectura: 5,
     slug: "cuando-el-cielo-se-cae",
     revelatio: true,
     title: "Cuando el cielo se cae",
@@ -281,7 +300,7 @@ export const obras: Obra[] = [
   },
   {
     n: 2,
-    lectura: 5,
+    lectura: 6,
     slug: "el-altar-del-espejo",
     revelatio: true,
     title: "El altar del espejo",
@@ -303,7 +322,7 @@ export const obras: Obra[] = [
   },
   {
     n: 1,
-    lectura: 6,
+    lectura: 7,
     slug: "de-una-misma-boca",
     revelatio: false,
     title: "De una misma boca",
@@ -320,6 +339,44 @@ export const obras: Obra[] = [
     pasaje: "Santiago 3",
     studySlug: "",
     tratadoSlug: "la-muerte-y-la-vida",
+    sinAmazon: true,
+  },
+  {
+    n: 8,
+    lectura: 8,
+    slug: "diakrisis",
+    title: "Diákrisis",
+    subtitulo: "Discernir con la Escritura abierta la verdad de lo que solo se le parece",
+    seoTitle: "Diákrisis: discernimiento bíblico, 1 Juan 4:1 | Alejandro Sirit",
+    seoDescription:
+      "Probad los espíritus si son de Dios. Alejandro Sirit expone el discernimiento bíblico y el Método P.R.O.B.A.D. en seis niveles, con casos y doce semanas.",
+    line: "«Amados, no creáis a todo espíritu, sino probad los espíritus si son de Dios.» Una época que ha hecho de la tolerancia indiscriminada su virtud más alta ha anestesiado también a la iglesia. Este libro devuelve el juicio santo que la Escritura manda: no la opinión ni la sospecha, sino el discernimiento que separa lo verdadero de lo que solo se le parece.",
+    thesis:
+      "La primera parte asienta el fundamento: el vocabulario bíblico del juicio, el «juzgad con justo juicio» de Juan 7:24, los sentidos ejercitados de Hebreos 5, la doctrina como primera frontera y el carácter frente al carisma. La segunda expone el Método P.R.O.B.A.D. en seis niveles: la Palabra escudriñada, la Regla de Cristo, la Opción excelente, lo Bueno retenido, el Autoexamen y la Distinción del siglo. La tercera es un gimnasio: taller, casos resueltos y doce semanas de entrenamiento.",
+    sample:
+      "Vivimos en una época que ha hecho de la tolerancia indiscriminada su virtud más alta y de la ausencia de convicciones su signo de madurez, y esa anestesia ha entrado también en la iglesia.",
+    ref: "1 Jn. 4:1 · He. 5:14",
+    pasaje: "1 Juan 4",
+    studySlug: "",
+    sinAmazon: true,
+  },
+  {
+    n: 9,
+    lectura: 9,
+    slug: "nunca-tocaras-mi-fe",
+    title: "Nunca tocarás mi fe",
+    subtitulo: "No se la grité a Dios",
+    seoTitle: "Nunca tocarás mi fe: Efesios 2:8 | Alejandro Sirit",
+    seoDescription:
+      "Un testimonio puesto debajo del texto: la fe que salva es don de Dios, no hazaña. Alejandro Sirit cuenta un grito dirigido al maligno, sin espectáculo.",
+    line: "«Nunca tocarás mi fe» fue un grito dirigido al maligno, no una oración ni un lema de victoria. Lo cuenta quien lo gritó. Antes de esa vida queda en pie la Escritura: por gracia sois salvos por medio de la fe, y esto no de vosotros, pues es don de Dios.",
+    thesis:
+      "El grito no salvó a nadie. La fe que salva es don, no hazaña; y la que un hombre aprieta en la mano cuando ya no le queda otra posesión es otra cosa, que el libro nombra sin confundirla con la primera. No hay aquí escenas adornadas ni nombres expuestos, ni una herida convertida en espectáculo. Hay un testimonio puesto debajo del texto, para que el título no mande y la gracia baste.",
+    sample:
+      "«Nunca tocarás mi fe» fue un grito dirigido al maligno, no una oración ni un lema de victoria. El grito no salvó a nadie. La fe que salva es don, no hazaña.",
+    ref: "Ef. 2:8–9",
+    pasaje: "Efesios 2",
+    studySlug: "",
     sinAmazon: true,
   },
 ];

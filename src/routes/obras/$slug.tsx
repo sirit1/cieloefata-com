@@ -82,8 +82,8 @@ export function ObraPage() {
       <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
       <p className="mt-4 leading-relaxed">
         Este libro ocupa el puesto {ROMANO[obra.lectura]} del orden de lectura, no el de
-        publicación. Quien comienza por Éfata aprende primero a leer el capítulo entero, y
-        solo después habla. Cada tapa se abre junto al capítulo que la sostiene, no en
+        publicación. Se entra por el Pórtico, y en Éfata se aprende a leer el capítulo entero
+        antes de hablar. Cada tapa se abre junto al capítulo que la sostiene, no en
         lugar de él.
       </p>
       <ol className="mt-5 space-y-2">

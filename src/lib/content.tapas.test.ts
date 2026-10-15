@@ -4,6 +4,9 @@ import { join } from "node:path";
 import { test } from "node:test";
 
 const SLUGS = [
+  "portico-a-la-escritura",
+  "diakrisis",
+  "nunca-tocaras-mi-fe",
   "efata",
   "el-siervo-no-tu",
   "bastate-mi-gracia",

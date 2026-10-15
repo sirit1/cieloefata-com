@@ -28,13 +28,13 @@ describe("COPY PACK NIVEL+", () => {
     assert.match(GLOSA_TRATADO_MES, /versículo que viajaba solo/);
   });
 
-  it("tiene las seis muestras y los seis prefills de WhatsApp", () => {
+  it("tiene las nueve muestras y los nueve prefills de WhatsApp", () => {
     for (const slug of SLUGS_TOMO) {
       assert.ok(MUESTRAS_TOMO[slug]?.length > 80, slug);
       assert.ok(PACK_WHATSAPP[slug]?.startsWith("Hola, soy de cieloefata.com;"), slug);
     }
-    assert.equal(Object.keys(MUESTRAS_TOMO).length, 6);
-    assert.equal(Object.keys(PACK_WHATSAPP).length, 6);
+    assert.equal(Object.keys(MUESTRAS_TOMO).length, 9);
+    assert.equal(Object.keys(PACK_WHATSAPP).length, 9);
     assert.match(MUESTRAS_TOMO["el-siervo-no-tu"], /ʾāšām/);
     assert.match(MUESTRAS_TOMO["cuando-el-cielo-se-cae"], /rugar/);
   });

@@ -37,7 +37,7 @@ function ObrasPage() {
       <p className="mt-5 text-lg">
         <ConLemas>{CORPUS.gate}</ConLemas>
       </p>
-      <p className="kicker mt-8">El umbral · Éfata</p>
+      <p className="kicker mt-8">El oficio · Éfata</p>
       <p className="mt-4 text-lg">
         <ConLemas>{CORPUS.efata}</ConLemas>
       </p>
@@ -92,7 +92,7 @@ function TomoCard({
       }
     >
       {destacado ? (
-        <p className="font-serif text-lg italic text-gold">Donde empieza la lectura</p>
+        <p className="font-serif text-lg italic text-gold">La puerta de la casa</p>
       ) : null}
       <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-start">
         <Link
