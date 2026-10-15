@@ -31,6 +31,11 @@ function CrisolPage() {
       <Motif kind="flame" />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{CRISOL_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{CRISOL_ORIGEN.title}</h1>
+      <p className="mt-3 font-sans text-sm">
+        <a href="/crisol/manual" className="text-link underline">Lee el manual fundacional del Método C.R.I.S.O.L.</a>
+        {" · "}
+        <a href="/probad" className="text-link underline">Método P.R.O.B.A.D.</a>
+      </p>
       <p className="mt-3 font-serif text-xl italic text-ink-soft">{CRISOL_ORIGEN.subtitulo}</p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">
         {CRISOL_ORIGEN.libro}
