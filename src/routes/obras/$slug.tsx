@@ -65,7 +65,7 @@ export function ObraPage() {
       <figure className="mt-10 m-0 max-w-xs">
         <Tapa obra={obra} size="lg" priority />
         <figcaption className="mt-3 font-sans text-sm leading-relaxed text-ink-soft">
-          Tapa del tomo. Se abre junto a {obra.pasaje}, no en lugar de él.
+          Tapa del libro. Se abre junto a {obra.pasaje}, no en lugar de él.
         </figcaption>
       </figure>
 
@@ -81,7 +81,7 @@ export function ObraPage() {
 
       <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
       <p className="mt-4 leading-relaxed">
-        Este tomo ocupa el puesto {ROMANO[obra.lectura]} del orden de lectura, no el de
+        Este libro ocupa el puesto {ROMANO[obra.lectura]} del orden de lectura, no el de
         publicación. Quien comienza por Éfata aprende primero a leer el capítulo entero, y
         solo después habla. Cada tapa se abre junto al capítulo que la sostiene, no en
         lugar de él.
@@ -91,7 +91,7 @@ export function ObraPage() {
           <li key={o.slug} className={o.slug === obra.slug ? "text-ink" : "text-ink-soft"}>
             <Link to="/obras/$slug" params={{ slug: o.slug }} className="hover:text-gold">
               {ROMANO[o.lectura]}. {o.title}
-              {o.slug === obra.slug ? " · este tomo" : ""}
+              {o.slug === obra.slug ? " · este libro" : ""}
             </Link>
           </li>
         ))}
@@ -116,7 +116,7 @@ export function ObraPage() {
       </p>
       <p className="mt-4 leading-relaxed text-ink-soft">
         El pack de casa no se finge. En este repositorio no hay un enlace público de Drive para
-        descargar el tomo. Si se pide el pack, se solicita por WhatsApp con el nombre de{" "}
+        descargar el libro. Si se pide el pack, se solicita por WhatsApp con el nombre de{" "}
         {obra.title}, y la casa responde. No se publica un botón de descarga que no abre nada.
       </p>
       <Adquirir
@@ -170,14 +170,14 @@ export function ObraPage() {
         ) : null}
         {tratado ? (
           <Link to="/tratados/$slug" params={{ slug: tratado.slug }} className="btn btn-gold">
-            El tratado que oye este tomo
+            El tratado que oye este libro
             <BtnArrow />
           </Link>
         ) : null}
         <LeerCapitulo ref={obra.pasaje} desde={`/obras/${obra.slug}`} companeros={[study?.ref, tratado?.ref]} />
         {obra.crisol ? (
           <Link to="/crisol" className="btn btn-ghost">
-            C.R.I.S.O.L.™
+            C.R.I.S.O.L.
           </Link>
         ) : null}
       </div>

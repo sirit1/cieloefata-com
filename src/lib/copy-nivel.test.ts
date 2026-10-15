@@ -28,13 +28,13 @@ describe("COPY PACK NIVEL+", () => {
     assert.match(GLOSA_TRATADO_MES, /versículo que viajaba solo/);
   });
 
-  it("tiene las siete muestras y los siete prefills de WhatsApp", () => {
+  it("tiene las seis muestras y los seis prefills de WhatsApp", () => {
     for (const slug of SLUGS_TOMO) {
       assert.ok(MUESTRAS_TOMO[slug]?.length > 80, slug);
       assert.ok(PACK_WHATSAPP[slug]?.startsWith("Hola, soy de cieloefata.com;"), slug);
     }
-    assert.equal(Object.keys(MUESTRAS_TOMO).length, 7);
-    assert.equal(Object.keys(PACK_WHATSAPP).length, 7);
+    assert.equal(Object.keys(MUESTRAS_TOMO).length, 6);
+    assert.equal(Object.keys(PACK_WHATSAPP).length, 6);
     assert.match(MUESTRAS_TOMO["el-siervo-no-tu"], /ʾāšām/);
     assert.match(MUESTRAS_TOMO["cuando-el-cielo-se-cae"], /rugar/);
   });
@@ -61,11 +61,11 @@ describe("COPY PACK NIVEL+", () => {
     assert.match(CANON_TRATADO, /^Tratado\./);
     assert.equal(
       textoPackWhatsApp("efata"),
-      "Hola, soy de cieloefata.com; solicito el pack del tomo Éfata: La Escritura Abierta para oír Marcos 7 entero",
+      "Hola, soy de cieloefata.com; solicito el pack del libro Éfata: La Escritura Abierta para oír Marcos 7 entero",
     );
     assert.equal(
       "https://wa.me/584241674909?text=" + encodeURIComponent(PACK_WHATSAPP.efata),
-      "https://wa.me/584241674909?text=Hola%2C%20soy%20de%20cieloefata.com%3B%20solicito%20el%20pack%20del%20tomo%20%C3%89fata%3A%20La%20Escritura%20Abierta%20para%20o%C3%ADr%20Marcos%207%20entero",
+      "https://wa.me/584241674909?text=Hola%2C%20soy%20de%20cieloefata.com%3B%20solicito%20el%20pack%20del%20libro%20%C3%89fata%3A%20La%20Escritura%20Abierta%20para%20o%C3%ADr%20Marcos%207%20entero",
     );
   });
 });

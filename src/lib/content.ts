@@ -7,7 +7,7 @@ export const school = {
   lead: "La Escritura tiene la última palabra. Lo demás —el comentario, el método, el predicador de moda— se sienta atrás, y se sienta de rodillas.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Casa de estudio bíblico dirigida por Alejandro Sirit. Siete tratados y el Método V.E.R.D.A.D.™: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
+    "Casa de estudio bíblico dirigida por Alejandro Sirit. Seis tratados y el Método V.E.R.D.A.D.: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Alejandro Sirit",
   welcome:
@@ -23,11 +23,11 @@ export const adquisicion = {
 };
 
 export const CORPUS = {
-  title: "Siete tomos",
-  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
+  title: "Los libros",
+  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son seis tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
   efata:
-    "Éfata es el primer tomo de la serie. En él Alejandro Sirit entregó el Método V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
-  line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V La fe no basta; VI El altar del espejo; VII Callar para ganar. Bástate, publicado como séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
+    "Éfata es el libro donde empieza la lectura. En él Alejandro Sirit entregó el Método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
+  line: "Los seis existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V El altar del espejo; VI De una misma boca. Bástate, publicado como sexto, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
 
@@ -158,13 +158,13 @@ export type Obra = {
   amazonTitle?: string;
   /** Muestra en la ficha el enlace «Estudia cada capítulo de este libro con IA en RevelatiO» (revelatio.app/libros/<slug>). */
   revelatio?: boolean;
-  /** Slug del libro en revelatio.app/libros y del QR cuando difiere del slug de la ficha (tomo renombrado). */
+  /** Slug del libro en revelatio.app/libros y del QR cuando difiere del slug de la ficha (libro renombrado). */
   revelatioSlug?: string;
   /** Edición nueva aún no publicada en Amazon: la ficha no muestra botón ni búsqueda de Amazon. */
   sinAmazon?: boolean;
 };
 
-/** Enlace de la ficha del tomo a su libro en RevelatiO, con utm_campaign = slug. */
+/** Enlace de la ficha del libro a su libro en RevelatiO, con utm_campaign = slug. */
 export function urlRevelatioLibro(slug: string) {
   return `https://revelatio.app/libros/${slug}?utm_source=web&utm_medium=cta&utm_campaign=${slug}`;
 }
@@ -176,7 +176,7 @@ export function qrRevelatioPath(slug: string) {
 
 export type AulaKind = "estudio" | "tratado";
 
-/** Aulas that close with a line to a tomo. Keyed by kind so `isaias-53` (estudio y tratado) no se confunde. */
+/** Aulas that close with a line to a libro. Keyed by kind so `isaias-53` (estudio y tratado) no se confunde. */
 const OBRAS_DESDE_AULA: Record<`${AulaKind}:${string}`, readonly string[]> = {
   "estudio:marcos-7": ["efata"],
   "tratado:el-texto-manda": ["efata"],
@@ -186,8 +186,7 @@ const OBRAS_DESDE_AULA: Record<`${AulaKind}:${string}`, readonly string[]> = {
   "tratado:todo-lo-puedo": ["bastate-mi-gracia"],
   "tratado:la-muerte-y-la-vida": ["cuando-el-cielo-se-cae"],
   "tratado:para-bien": ["cuando-el-cielo-se-cae"],
-  "estudio:santiago-1": ["la-fe-no-basta", "el-altar-del-espejo", "de-una-misma-boca"],
-  "estudio:galatas-5": ["la-fe-no-basta"],
+  "estudio:santiago-1": ["el-altar-del-espejo", "de-una-misma-boca"],
   "tratado:el-crisol-de-lo-oido": ["el-altar-del-espejo"],
 };
 
@@ -198,7 +197,7 @@ export function tapaPath(slug: string) {
 
 export const obras: Obra[] = [
   {
-    n: 6,
+    n: 5,
     lectura: 1,
     slug: "efata",
     revelatio: true,
@@ -218,7 +217,7 @@ export const obras: Obra[] = [
     sinAmazon: true,
   },
   {
-    n: 5,
+    n: 4,
     lectura: 2,
     slug: "el-siervo-no-tu",
     revelatio: true,
@@ -227,9 +226,9 @@ export const obras: Obra[] = [
     seoTitle: "El Siervo, no tú: Isaías 53:5 | Alejandro Sirit",
     seoDescription:
       "Isaías 53:5 y el Siervo herido por nuestras rebeliones. Alejandro Sirit presenta la cruz como sacrificio sustitutivo, no como autoexpiación.",
-    line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. Isaías vio al Siervo herido por nuestras rebeliones; nosotros éramos. Por tanto, este tomo rehúsa la autoexpiación piadosa: el justo muere por los injustos, y el lector no se sube al versículo como si fuera el Siervo.",
+    line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. Isaías vio al Siervo herido por nuestras rebeliones; nosotros éramos. Por tanto, este libro rehúsa la autoexpiación piadosa: el justo muere por los injustos, y el lector no se sube al versículo como si fuera el Siervo.",
     thesis:
-      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este tomo rehúsa la autoexpiación piadosa y recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
+      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este libro rehúsa la autoexpiación piadosa y recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
     sample:
       "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros.",
     ref: "Is. 53:5 · 1 P. 3:18",
@@ -239,7 +238,7 @@ export const obras: Obra[] = [
     asinEbook: "B0HKQGBYV4",
   },
   {
-    n: 7,
+    n: 6,
     lectura: 3,
     slug: "bastate-mi-gracia",
     revelatio: true,
@@ -259,7 +258,7 @@ export const obras: Obra[] = [
     studySlug: "2-corintios-12",
   },
   {
-    n: 4,
+    n: 3,
     lectura: 4,
     slug: "cuando-el-cielo-se-cae",
     revelatio: true,
@@ -270,40 +269,19 @@ export const obras: Obra[] = [
       "Una lectura de Job 42:5-6 sobre el sufrimiento, el lamento y el encuentro con Dios. Alejandro Sirit no ofrece respuestas rápidas, sino la presencia del Señor.",
     line: "El lector recibe un lamento que no se recablea para que duela menos. Job no obtiene un manual: obtiene a Dios en el valle.",
     thesis:
-      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos. Este tomo enseña a llorar sin apostatar, y a no convertir el lamento en un ídolo de la queja. El «tú» llega en el valle: el Pastor no niega la sombra; la atraviesa con el que clama.",
+      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos. Este libro enseña a llorar sin apostatar, y a no convertir el lamento en un ídolo de la queja. El «tú» llega en el valle: el Pastor no niega la sombra; la atraviesa con el que clama.",
     sample:
       "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos.",
     ref: "Job 42:5–6 · Lm. 3:22–23",
     pasaje: "Job 42",
     studySlug: "",
     studyNote:
-      "No hay aún una clase de Job en el aula. El lamento se oye en este tomo, junto al capítulo.",
+      "No hay aún una clase de Job en el aula. El lamento se oye en este libro, junto al capítulo.",
     isbnPrint: "9798176466690",
   },
   {
-    n: 3,
-    lectura: 5,
-    slug: "la-fe-no-basta",
-    revelatio: true,
-    title: "La fe no basta",
-    subtitulo: "Santiago 2:14–26",
-    seoTitle: "La fe no basta: Santiago 2:17 | Alejandro Sirit",
-    seoDescription:
-      "Qué significa que la fe sin obras está muerta. Alejandro Sirit lee Santiago 2:14-26 sin oponerlo a Pablo: la fe viva se reconoce por sus frutos.",
-    line: "El lector recibe el espejo de Santiago. La fe que no obra está muerta, aunque recite a Pablo para no obedecer.",
-    thesis:
-      "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro. El que oye y no hace se engaña a sí mismo, y el engaño no es un retraso inocente. Este tomo no discute a Pablo: desnuda al que cita a Pablo para no obedecer.",
-    sample:
-      "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro.",
-    ref: "Stg. 2:17 · Stg. 1:23–24",
-    pasaje: "Santiago 2",
-    studySlug: "santiago-1",
-    tratadoSlug: "el-crisol-de-lo-oido",
-    asinEbook: "B0GYFR8YDQ",
-  },
-  {
     n: 2,
-    lectura: 6,
+    lectura: 5,
     slug: "el-altar-del-espejo",
     revelatio: true,
     title: "El altar del espejo",
@@ -325,10 +303,9 @@ export const obras: Obra[] = [
   },
   {
     n: 1,
-    lectura: 7,
+    lectura: 6,
     slug: "de-una-misma-boca",
-    revelatio: true,
-    revelatioSlug: "callar-para-ganar",
+    revelatio: false,
     title: "De una misma boca",
     subtitulo: "Santiago 3",
     seoTitle: "De una misma boca: Santiago 3:10 | Alejandro Sirit",

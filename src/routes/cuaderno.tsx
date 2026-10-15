@@ -183,7 +183,7 @@ function CuadernoPage() {
         </Link>
         {" · "}
         <Link to="/crisol" className="text-link underline">
-          C.R.I.S.O.L.™ en El Altar del Espejo
+          C.R.I.S.O.L. en El Altar del Espejo
         </Link>
       </p>
 

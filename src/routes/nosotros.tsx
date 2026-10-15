@@ -54,7 +54,7 @@ function NosotrosPage() {
       </p>
       <p className="mt-10 font-sans text-sm">
         <Link to="/obras" className="text-link underline">
-          Los siete tomos
+          Los libros
         </Link>
         {" · "}
         <Link to="/sostener" className="text-link underline">

@@ -194,7 +194,7 @@ function Home() {
                   params={{ slug: o.slug }}
                   className="examinar hover:text-ink"
                 >
-                  Examinar este tomo
+                  Examinar este libro
                 </Link>
               </li>
             ))}

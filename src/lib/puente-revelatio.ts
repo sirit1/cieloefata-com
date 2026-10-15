@@ -16,7 +16,7 @@ export type OrigenPuente = {
   intencion?: string;
   /**
    * Citas del aula o del tratado del mismo capítulo. Solo se consultan
-   * cuando se sale de un tomo y la cita del tomo no nombra versículo.
+   * cuando se sale de un libro y la cita del libro no nombra versículo.
    */
   companeros?: readonly string[];
 };

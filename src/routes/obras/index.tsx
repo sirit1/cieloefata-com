@@ -17,9 +17,9 @@ export const Route = createFileRoute("/obras/")({
   head: () =>
     pageHead({
       path: "/obras",
-      title: tituloSeccion("Siete tomos"),
+      title: tituloSeccion("Los libros"),
       description:
-        "Orden de lectura de los siete tomos de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.",
+        "Orden de lectura de los libros de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.",
       detalle: CORPUS.gate,
       image: tapaPath("efata"),
     }),
@@ -92,7 +92,7 @@ function TomoCard({
       }
     >
       {destacado ? (
-        <p className="font-serif text-lg italic text-gold">El primer tomo de la serie</p>
+        <p className="font-serif text-lg italic text-gold">Donde empieza la lectura</p>
       ) : null}
       <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-start">
         <Link
@@ -128,13 +128,13 @@ function TomoCard({
           {obra.crisol ? (
             <p className="mt-3 font-sans text-sm">
               <Link to="/crisol" className="text-link underline">
-                C.R.I.S.O.L.™ en El Altar del Espejo
+                C.R.I.S.O.L. en El Altar del Espejo
               </Link>
             </p>
           ) : null}
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Link to="/obras/$slug" params={{ slug: obra.slug }} className="btn btn-ink">
-              Examinar este tomo
+              Examinar este libro
               <BtnArrow />
             </Link>
             {study ? (

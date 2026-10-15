@@ -2,20 +2,20 @@ import { school } from "@/lib/content";
 import { LAB_SLUGS } from "@/lib/labs";
 
 export const VERDAD_ORIGEN = {
-  title: "V.E.R.D.A.D.™",
+  title: "V.E.R.D.A.D.",
   kicker: "El método de esta escuela",
   libro: "Éfata: La Escritura Abierta",
-  subtitulo: "El Método V.E.R.D.A.D.™ para escudriñar, comprender y encarnar la mente de Dios",
-  quien: `El Método V.E.R.D.A.D.™ es de ${school.director}. Lo forjó para Cielo Efata. No nace como vanidad intelectual ni como mercadotecnia religiosa: nace de un lamento. Durante generaciones se ha hecho creer al pueblo de Dios que debe escoger entre la piedad ardiente pero ignorante y la erudición técnica pero gélida. Las Escrituras no ofrecen esa dicotomía. La doctrina más profunda produce la doxología más encendida.`,
+  subtitulo: "El Método V.E.R.D.A.D. para escudriñar, comprender y encarnar la mente de Dios",
+  quien: `El Método V.E.R.D.A.D. es de ${school.director}. Lo forjó para Cielo Efata. No nace como vanidad intelectual ni como mercadotecnia religiosa: nace de un lamento. Durante generaciones se ha hecho creer al pueblo de Dios que debe escoger entre la piedad ardiente pero ignorante y la erudición técnica pero gélida. Las Escrituras no ofrecen esa dicotomía. La doctrina más profunda produce la doxología más encendida.`,
   investigacion: [
     "El tratado Éfata: La Escritura Abierta no inventa doctrinas. Ordena lo que los fieles siempre hicieron cuando leían de rodillas: ver el párrafo, situarlo, oír las palabras, dejar que el canon hable, contender con la objeción, y morir a lo que el texto ha desnudado. Calvino, Owen, Lightfoot no se reemplazan. Se les devuelve lo que daban por sentado: que la Escritura es un discurso, no un mosaico; que Dios exhala un consejo completo; que el versículo suelto es un oráculo fabricado.",
     "La investigación recorrió los métodos y los examinó. Del inductivo (Traina, Hendricks) se toma el ojo: observación minuciosa, el texto antes del capricho. Del gramático-histórico, el esqueleto: sensus literalis, filología, analogía antecedente. De la tríada de Köstenberger, el mapa de historia, literatura y teología. Del redentivo-histórico (Vos, Beale), la columna: el canon como organismo y Cristo como scopus. De la elénctica de Turretin, la forma del Argumento: status quaestionis, distingos, fontes, reductio. Del aparato crítico, el siervo de las variantes. Se deja SOAP como método. Se deja el quadriga y la lectio divina. Se deja el naturalismo que bautiza la duda.",
-    "El mal que el método extirpa tiene nombre: versiculitis. Extraer una unidad delimitada por la numeración tardía de Estienne (1551) y desgajarla del párrafo, del pacto y del canon. Un texto fuera de su contexto se convierte en pretexto. Filipenses 4:13, leído sin la cárcel y sin el contentamiento, se vuelve cheque en blanco. David y Goliat, leídos sin el Ungido, se vuelven recetario de autoafirmación. V.E.R.D.A.D.™ no es un noveno puesto en la feria de técnicas. Ata lo que debía estar atado.",
+    "El mal que el método extirpa tiene nombre: versiculitis. Extraer una unidad delimitada por la numeración tardía de Estienne (1551) y desgajarla del párrafo, del pacto y del canon. Un texto fuera de su contexto se convierte en pretexto. Filipenses 4:13, leído sin la cárcel y sin el contentamiento, se vuelve cheque en blanco. David y Goliat, leídos sin el Ungido, se vuelven recetario de autoafirmación. V.E.R.D.A.D. no es un noveno puesto en la feria de técnicas. Ata lo que debía estar atado.",
   ],
   paraQue:
     "Para devolver el oído. El milagro sigue siendo de Marcos 7: Éfata. Sé abierto. El método es el cauce, no el milagro. El acrónimo es siervo. Si se sienta en el trono, se ha vuelto a la sordera con más libros. Quien cierre el estudio sabiendo más griego y menos Cristo habrá invertido el orden.",
   cadena:
-    "V.E.R.D.A.D.™ es una cadena, no un abanico. Cada eslabón depende del anterior y prepara el posterior. Invertir el orden no es adaptar, sino eiségesis. Nadie llega a Decisión sin haber pasado por Ver. Nadie invoca Doctrina para ahorrarse Revelación. Nadie usa Argumento como primer movimiento. El que empieza por A para ganar una polémica no está haciendo Éfata, sino teatro.",
+    "V.E.R.D.A.D. es una cadena, no un abanico. Cada eslabón depende del anterior y prepara el posterior. Invertir el orden no es adaptar, sino eiségesis. Nadie llega a Decisión sin haber pasado por Ver. Nadie invoca Doctrina para ahorrarse Revelación. Nadie usa Argumento como primer movimiento. El que empieza por A para ganar una polémica no está haciendo Éfata, sino teatro.",
   catedral:
     "Observar. Contextualizar. Extraer. Sistematizar. Defender. Encarnar. Esa es la catedral, no un abanico de técnicas. Si se rompe un solo eslabón, el oído vuelve a cerrarse, y el estudio se convierte otra vez en el versículo suelto que el siglo ya sabe recitar.",
   refs: "Mr. 7:34 · Neh. 8:8 · 2 Ti. 3:16 · Hch. 20:27 · Is. 8:20 · Stg. 1:22",
@@ -113,7 +113,7 @@ export const VERDAD_PASOS = [
     d: "D2",
     pregunta: "¿Qué acto o confesión, uno solo, pide el indicativo de este texto?",
     regla: "La teología que no culmina de rodillas es aberración. El indicativo gobierna el imperativo.",
-    body: "Doxología y obediencia. Sin esto, la cadena es un cadáver erudito. Una obediencia o una confesión para esta semana, dicha a alguien. Queda prohibido un «hoy muero a…» que el pasaje no conjuga. Si el verbo es «se despojó», se habla de despojo. Si el verbo es «fueron abiertos», se pide oído. C.R.I.S.O.L.™ —expuesto en El Altar del Espejo— es la compuerta pastoral de este eslabón, no un método rival. La teología que no culmina de rodillas es aberración, porque el indicativo gobierna el imperativo, y no al revés.",
+    body: "Doxología y obediencia. Sin esto, la cadena es un cadáver erudito. Una obediencia o una confesión para esta semana, dicha a alguien. Queda prohibido un «hoy muero a…» que el pasaje no conjuga. Si el verbo es «se despojó», se habla de despojo. Si el verbo es «fueron abiertos», se pide oído. C.R.I.S.O.L. —expuesto en El Altar del Espejo— es la compuerta pastoral de este eslabón, no un método rival. La teología que no culmina de rodillas es aberración, porque el indicativo gobierna el imperativo, y no al revés.",
     riesgo: "Siete propósitos. O ninguno. Moralismo sin Cristo, o doctrina sin rodilla.",
     clasico: "Santiago 1:22. El último eslabón no es el aplauso, sino la rodilla.",
     marcos:
@@ -147,7 +147,7 @@ export const ESTUDIO_Y_TRATADO = {
 export const VERDAD_FALLOS = [
   {
     title: "El acrónimo como talismán",
-    body: "V.E.R.D.A.D.™ no opera por magia de iniciales. Operar es sudar el texto. El que recita los seis pasos y no marca un verbo, no abre un léxico, no sitúa un pacto y no se arrodilla, no ha usado el método: lo ha nombrado.",
+    body: "V.E.R.D.A.D. no opera por magia de iniciales. Operar es sudar el texto. El que recita los seis pasos y no marca un verbo, no abre un léxico, no sitúa un pacto y no se arrodilla, no ha usado el método: lo ha nombrado.",
   },
   {
     title: "Empezar por Argumento",
@@ -175,7 +175,7 @@ export const MARCO_ORACION = {
 };
 
 export const CRISOL_COMPUERTA = {
-  title: "C.R.I.S.O.L.™",
+  title: "C.R.I.S.O.L.",
   kicker: "La compuerta pastoral de Decisión",
   where: "Su exposición plena está en El Altar del Espejo: aquí se usa, no se duplica.",
   pestillos: [
@@ -270,7 +270,7 @@ export const CATECISMO = [
   },
   {
     n: "23",
-    q: "¿Qué es el Método V.E.R.D.A.D.™?",
+    q: "¿Qué es el Método V.E.R.D.A.D.?",
     a: "La cadena de Cielo Efata: observación, entorno, filología, doctrina canónica, apologética y santificación, en un solo orden innegociable.",
     ref: "2 Ti. 2:15",
   },

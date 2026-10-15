@@ -72,7 +72,7 @@ export function UmbralTresCaminos() {
             <BtnArrow />
           </Link>
           <Link to="/obras/$slug" params={{ slug: "efata" }} className="btn btn-ghost">
-            El tomo Éfata
+            El libro Éfata
           </Link>
         </div>
       </li>

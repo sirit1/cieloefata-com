@@ -66,7 +66,7 @@ export const MESES: MesEditorial[] = [
     mes: "2026-09",
     tratadoSlug: "isaias-53",
     impacto:
-      "La llaga del Siervo no es póliza de sanidad automática ni poesía de resiliencia. Isaías 53:5 vuelve al Cántico entero: herido por nuestras rebeliones, ofrenda por la culpa, justificación de muchos. El lector no es el Siervo. Este tratado restituye el versículo al capítulo que lo sostiene y conduce, sin prisa de mercado, al tomo El Siervo, no tú.",
+      "La llaga del Siervo no es póliza de sanidad automática ni poesía de resiliencia. Isaías 53:5 vuelve al Cántico entero: herido por nuestras rebeliones, ofrenda por la culpa, justificación de muchos. El lector no es el Siervo. Este tratado restituye el versículo al capítulo que lo sostiene y conduce, sin prisa de mercado, al libro El Siervo, no tú.",
   },
   {
     mes: "2026-10",

@@ -31,14 +31,14 @@ import {
 const secciones: Array<[string, string, string, string?]> = [
   ["/", SITE_TITLE, "Escuela de lectura de la Escritura. Primero se lee el capítulo entero; aquí se estudia: el método, el estudio de la semana y el tratado del mes."],
   ["/canon", tituloSeccion("Canon"), "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.", ESCRITURA.body[0]],
-  ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.™: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
-  ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D.™ y un solo acto. Se leen aquí, después del capítulo entero.", "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D.™ —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada."],
+  ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
+  ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D. y un solo acto. Se leen aquí, después del capítulo entero.", "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada."],
   ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle. Primero se lee ese capítulo entero, y solo entonces habla el tratado, que se sienta detrás del texto y no finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada."],
-  ["/obras", tituloSeccion("Siete tomos"), "Orden de lectura de los siete tomos de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.", CORPUS.gate],
+  ["/obras", tituloSeccion("Los libros"), "Orden de lectura de los libros de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.", CORPUS.gate],
   ["/sello", tituloSeccion("El sello"), "Post tenebras lux. El sello no es un logotipo, sino una confesión.", SELLO.gate],
   ["/palabra", tituloSeccion("Palabra"), "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.", "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong."],
   ["/cuaderno", tituloSeccion("Cuaderno"), "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.", CUADERNO_VACIO],
-  ["/crisol", tituloSeccion("C.R.I.S.O.L.™"), "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.", `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`],
+  ["/crisol", tituloSeccion("C.R.I.S.O.L."), "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.", `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`],
   ["/guias", tituloSeccion("Guías"), "Strong, cómo se lee, del pasaje a la palabra dicha, y la pregunta difícil. El capítulo sigue siendo el señor de la casa."],
   ["/sostener", tituloSeccion("Sostener"), "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909."],
   ["/buscar", tituloSeccion("Buscar"), "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.", "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda."],
@@ -187,8 +187,8 @@ function propDe(head: ReturnType<typeof pageHead>, property: string) {
   return tag && "content" in tag ? tag.content : undefined;
 }
 
-test("cada tomo tiene title, description y subtítulo SEO, y el Book conserva el nombre llano", () => {
-  assert.equal(obras.length, 7);
+test("cada libro tiene title, description y subtítulo SEO, y el Book conserva el nombre llano", () => {
+  assert.equal(obras.length, 6);
   for (const obra of obras) {
     assert.ok(obra.seoTitle.includes(obra.title) || obra.slug === "bastate-mi-gracia");
     assert.ok(obra.subtitulo.length > 0);
@@ -231,11 +231,10 @@ test("el aula cierra con las obras pedidas, sin mezclar el estudio y el tratado 
   assert.deepEqual(slugs("tratado", "la-muerte-y-la-vida"), ["cuando-el-cielo-se-cae"]);
   assert.deepEqual(slugs("tratado", "para-bien"), ["cuando-el-cielo-se-cae"]);
   assert.deepEqual(slugs("estudio", "santiago-1"), [
-    "la-fe-no-basta",
     "el-altar-del-espejo",
     "de-una-misma-boca",
   ]);
-  assert.deepEqual(slugs("estudio", "galatas-5"), ["la-fe-no-basta"]);
+  assert.deepEqual(slugs("estudio", "galatas-5"), []);
   assert.deepEqual(slugs("tratado", "el-crisol-de-lo-oido"), ["el-altar-del-espejo"]);
 });
 
@@ -254,7 +253,7 @@ test("el JSON-LD habla solo de Cielo Efata y de Alejandro Sirit, sin RevelatiO",
   }
 });
 
-test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaza La fe no basta", () => {
+test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaza el estudio de Santiago 1", () => {
   const a = articulos.find((x) => x.slug === "santiago-2-la-fe-que-obra");
   assert.ok(a);
   const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
@@ -264,7 +263,8 @@ test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaz
   assert.match(DESCRIPCION_ARTICULOS, /Reina-Valera 1960/);
   assert.equal(/1909/.test(DESCRIPCION_ARTICULOS), false);
   assert.equal(/Dr\.|RevelatiO/i.test(texto), false);
-  assert.ok(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"));
+  assert.ok(a.relacionados.some((r) => r.to === "/estudios/santiago-1"));
+  assert.equal(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"), false);
   assert.match(a.seoTitle, /Santiago 2/);
   assert.match(a.seoDescription, /fe sin obras es muerta/);
 });
@@ -286,22 +286,17 @@ test("el artículo de Santiago 3 firma Alejandro Sirit, cita la RVR 1960 y enlaz
   assert.ok(a.seoDescription.length >= 120 && a.seoDescription.length <= 160);
 });
 
-test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
+test("las fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
   const slugs = obras.filter((o) => o.revelatio).map((o) => o.slug);
   assert.deepEqual(slugs, [
     "efata",
     "el-siervo-no-tu",
     "bastate-mi-gracia",
     "cuando-el-cielo-se-cae",
-    "la-fe-no-basta",
     "el-altar-del-espejo",
-    "de-una-misma-boca",
   ]);
-  assert.equal(
-    urlRevelatioLibro("callar-para-ganar"),
-    "https://revelatio.app/libros/callar-para-ganar?utm_source=web&utm_medium=cta&utm_campaign=callar-para-ganar",
-  );
-  assert.equal(obras.find((o) => o.slug === "de-una-misma-boca")?.revelatioSlug, "callar-para-ganar");
+  assert.equal(obras.some((o) => o.slug === "la-fe-no-basta"), false);
+  assert.equal(obras.some((o) => o.revelatioSlug === "callar-para-ganar"), false);
   for (const obra of obras.filter((o) => o.revelatio)) {
     const slug = obra.revelatioSlug ?? obra.slug;
     const url = new URL(urlRevelatioLibro(slug));

@@ -84,7 +84,7 @@ function ParaclitoPage() {
       </ul>
       <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
         <Link to="/obras" className="btn btn-gold">
-          Los siete tomos
+          Los libros
           <BtnArrow />
         </Link>
       </div>
