@@ -17,7 +17,7 @@ export const MARCO_RITMO =
 export const MARCO_HOY =
   "Hoy el aula de «Esta semana» permanece en 2 Pedro 1, donde Pedro pide añadir a la fe, a costa propia, un eslabón: Dios ya dio cuanto concierne a la vida y a la piedad; el que no añade no es humilde, es ciego. No se ofrece como producto destacado, sino como el texto que esta escuela está leyendo juntos hasta que el eslabón deje de ser cita y se vuelva acto. El «Tratado del mes» permanece en «El texto manda»: V.E.R.D.A.D. no es un acrónimo para recitar. Es el cauce por el que esta casa oye el capítulo entero, hasta que el comentario se siente atrás. El texto manda. El método sirve. La rodilla cierra.";
 
-/** Seis muestras de primer capítulo. Clave: slug del libro. */
+/** Nueve muestras de primer capítulo. Clave: slug del libro. */
 export const MUESTRAS_TOMO: Record<string, string> = {
   efata:
     "En la Decápolis le trajeron a Jesús un hombre sordo y tartamudo. No vino él. El Señor lo apartó de la gente, levantó los ojos al cielo, gimió y le dijo: Éfata. Este libro camina esa hora en cuarenta estaciones, de un solo tirón. No es un plan de semanas ni una hoja para copiar: después de la apertura el oído puede volverse a cerrar, y el camino pasa por el Padre, el Hijo y el Espíritu, y por el oficio de oír la Escritura sin arrancarle una frase.",
@@ -31,6 +31,12 @@ export const MUESTRAS_TOMO: Record<string, string> = {
     "Esto es una historia, no un canto y no un comentario. El principio es un hombre delante de un cristal, y entre el principio y el fin hay un culto, el de sí mismo, que va a tomar forma de fama, de poder, de posesiones y de un lugar entre los otros. Santiago lo puso ahí sin nombre para que el lector no pueda mirarlo como a otro, y el libro no adelanta el fin: te deja a su lado, todavía mirándose.",
   "de-una-misma-boca":
     "Un hombre sin nombre ha confesado esta mañana con su boca que Jesús es el Señor. Este libro no le inventa una vida: se queda a su lado mientras el día avanza y la misma boca quiere la primera palabra, ofende, enciende el bosque y descubre que ningún hombre puede domar la lengua. De una misma boca proceden bendición y maldición, y ninguna fuente echa agua dulce y amarga por la misma abertura.",
+  "portico-a-la-escritura":
+    "La historia es una. Empieza con un Dios que habla, y las cosas son. Sigue por un pueblo que olvida y es guardado, y llega a un Hijo que camina, muere y resucita. Se entra por los sesenta y seis.",
+  "diakrisis":
+    "«Amados, no creáis a todo espíritu, sino probad los espíritus si son de Dios.» Vivimos en una época que ha hecho de la tolerancia indiscriminada su virtud más alta, y esa anestesia ha entrado también en la iglesia.",
+  "nunca-tocaras-mi-fe":
+    "«Nunca tocarás mi fe» fue un grito dirigido al maligno, no una oración ni un lema de victoria. Lo cuenta quien lo gritó, y antes de esa vida queda en pie la Escritura: por gracia sois salvos.",
 };
 
 export const RETOMAR_TITULO = "Retomar el acto";
@@ -72,6 +78,12 @@ export const PACK_WHATSAPP: Record<string, string> = {
     "Hola, soy de cieloefata.com; solicito el pack del libro El altar del espejo (Santiago 1) para dejar de ser oidor olvidadizo.",
   "de-una-misma-boca":
     "Hola, soy de cieloefata.com; solicito el pack del libro De una misma boca (Santiago 3) sobre la boca que confiesa y la lengua que ningún hombre doma.",
+  "portico-a-la-escritura":
+    "Hola, soy de cieloefata.com; solicito el pack del libro Pórtico a la Escritura (los 66 libros de la Biblia).",
+  "diakrisis":
+    "Hola, soy de cieloefata.com; solicito el pack del libro Diákrisis (1 Juan 4) sobre el discernimiento bíblico y el Método P.R.O.B.A.D..",
+  "nunca-tocaras-mi-fe":
+    "Hola, soy de cieloefata.com; solicito el pack del libro Nunca tocarás mi fe (Efesios 2) sobre la fe que es don de Dios.",
 };
 
 export function textoPackWhatsApp(slug: string, title?: string): string {
@@ -90,4 +102,7 @@ export const SLUGS_TOMO = [
   "cuando-el-cielo-se-cae",
   "el-altar-del-espejo",
   "de-una-misma-boca",
+  "portico-a-la-escritura",
+  "diakrisis",
+  "nunca-tocaras-mi-fe",
 ] as const;

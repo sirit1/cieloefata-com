@@ -81,7 +81,7 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
 
 test("Bástate no tiene ficha de Amazon", () => {
   const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
-  assert.deepEqual(sin, ["efata", "bastate-mi-gracia", "el-altar-del-espejo", "de-una-misma-boca"]);
+  assert.deepEqual(sin, ["portico-a-la-escritura", "efata", "bastate-mi-gracia", "el-altar-del-espejo", "de-una-misma-boca", "diakrisis", "nunca-tocaras-mi-fe"]);
 });
 
 test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
@@ -188,7 +188,7 @@ function propDe(head: ReturnType<typeof pageHead>, property: string) {
 }
 
 test("cada libro tiene title, description y subtítulo SEO, y el Book conserva el nombre llano", () => {
-  assert.equal(obras.length, 6);
+  assert.equal(obras.length, 9);
   for (const obra of obras) {
     assert.ok(obra.seoTitle.includes(obra.title) || obra.slug === "bastate-mi-gracia");
     assert.ok(obra.subtitulo.length > 0);

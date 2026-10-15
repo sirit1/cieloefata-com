@@ -273,6 +273,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.cieloefata.com/obras/portico-a-la-escritura</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cieloefata.com/obras/diakrisis</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cieloefata.com/obras/nunca-tocaras-mi-fe</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.cieloefata.com/obras/el-paraclito-eterno</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
