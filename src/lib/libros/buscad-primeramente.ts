@@ -6,7 +6,7 @@ export const parrafos: readonly string[] = [
   "Mateo 6:33 · Reina-Valera 1960",
   "El presente tratado examina Mateo 6:33 con el rigor que el texto exige y con la claridad que el pueblo de Dios merece. No se pretende extraer del pasaje una técnica de prosperidad, ni convertirlo en instrumento de negociación con el Padre. Se pretende oírlo donde el Señor lo pronunció: en el Sermón del Monte, después de la prohibición de servir a dos señores, delante de discípulos que conocían la incertidumbre del pan cotidiano.",
   "El protocolo de lectura es el de Cielo Efata, V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento, Decisión—: ver el pasaje entero; situarlo; atender al original; extraer la doctrina; discernir el argumento; concluir en una decisión comprobable. Los intérpretes —Calvino, Henry, Crisóstomo, Spurgeon, MacArthur— comparecen como siervos. Ninguno sustituye a Mateo.",
-  "Este tratado se ata al ciclo de la casa —Éfata, Cuando el cielo se cae, La fe no basta, El altar del espejo, Bástate mi gracia— y no lo sustituye. Quien lo tome por el libro entero ha vuelto a recortar.",
+  "Este tratado se ata al ciclo de la casa —Éfata, Cuando el cielo se cae, El altar del espejo, Bástate mi gracia— y no lo sustituye. Quien lo tome por el libro entero ha vuelto a recortar.",
   "«El reino de los cielos se ha acercado»",
   "Contexto histórico y literario del Evangelio según Mateo",
   "Mateo no redacta una biografía al modo moderno. Redacta un evangelio: el anuncio de que el reinado de Dios se ha hecho próximo en Jesús de Nazaret, hijo de David, hijo de Abraham.",

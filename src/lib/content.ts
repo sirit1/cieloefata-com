@@ -7,7 +7,7 @@ export const school = {
   lead: "La Escritura tiene la última palabra. Lo demás —el comentario, el método, el predicador de moda— se sienta atrás, y se sienta de rodillas.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Casa de estudio bíblico dirigida por Alejandro Sirit. Siete tratados y el Método V.E.R.D.A.D.: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
+    "Casa de estudio bíblico dirigida por Alejandro Sirit. Seis tratados y el Método V.E.R.D.A.D.: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Alejandro Sirit",
   welcome:
@@ -24,10 +24,10 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Los libros",
-  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son siete tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
+  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son seis tratados forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
   efata:
     "Éfata es el libro donde empieza la lectura. En él Alejandro Sirit entregó el Método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
-  line: "Los siete existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V La fe no basta; VI El altar del espejo; VII Callar para ganar. Bástate, publicado como séptimo, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
+  line: "Los seis existen en tapa impresa y en ebook. No son artículos de un portal ni descargas de consuelo, sino libros. El orden de publicación no es el de lectura. Quien comienza por Éfata aprende primero a leer el capítulo entero, y solo después habla. El orden de lectura —no el de publicación— es: I Éfata; II El Siervo, no tú; III Bástate («Bástate mi gracia»); IV Cuando el cielo se cae; V El altar del espejo; VI De una misma boca. Bástate, publicado como sexto, se lee en el tercer puesto: no es un satélite. Cada tapa se abre junto al capítulo que la sostiene.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
 
@@ -186,8 +186,7 @@ const OBRAS_DESDE_AULA: Record<`${AulaKind}:${string}`, readonly string[]> = {
   "tratado:todo-lo-puedo": ["bastate-mi-gracia"],
   "tratado:la-muerte-y-la-vida": ["cuando-el-cielo-se-cae"],
   "tratado:para-bien": ["cuando-el-cielo-se-cae"],
-  "estudio:santiago-1": ["la-fe-no-basta", "el-altar-del-espejo", "de-una-misma-boca"],
-  "estudio:galatas-5": ["la-fe-no-basta"],
+  "estudio:santiago-1": ["el-altar-del-espejo", "de-una-misma-boca"],
   "tratado:el-crisol-de-lo-oido": ["el-altar-del-espejo"],
 };
 
@@ -198,7 +197,7 @@ export function tapaPath(slug: string) {
 
 export const obras: Obra[] = [
   {
-    n: 6,
+    n: 5,
     lectura: 1,
     slug: "efata",
     revelatio: true,
@@ -218,7 +217,7 @@ export const obras: Obra[] = [
     sinAmazon: true,
   },
   {
-    n: 5,
+    n: 4,
     lectura: 2,
     slug: "el-siervo-no-tu",
     revelatio: true,
@@ -239,7 +238,7 @@ export const obras: Obra[] = [
     asinEbook: "B0HKQGBYV4",
   },
   {
-    n: 7,
+    n: 6,
     lectura: 3,
     slug: "bastate-mi-gracia",
     revelatio: true,
@@ -259,7 +258,7 @@ export const obras: Obra[] = [
     studySlug: "2-corintios-12",
   },
   {
-    n: 4,
+    n: 3,
     lectura: 4,
     slug: "cuando-el-cielo-se-cae",
     revelatio: true,
@@ -281,29 +280,8 @@ export const obras: Obra[] = [
     isbnPrint: "9798176466690",
   },
   {
-    n: 3,
-    lectura: 5,
-    slug: "la-fe-no-basta",
-    revelatio: true,
-    title: "La fe no basta",
-    subtitulo: "Santiago 2:14–26",
-    seoTitle: "La fe no basta: Santiago 2:17 | Alejandro Sirit",
-    seoDescription:
-      "Qué significa que la fe sin obras está muerta. Alejandro Sirit lee Santiago 2:14-26 sin oponerlo a Pablo: la fe viva se reconoce por sus frutos.",
-    line: "El lector recibe el espejo de Santiago. La fe que no obra está muerta, aunque recite a Pablo para no obedecer.",
-    thesis:
-      "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro. El que oye y no hace se engaña a sí mismo, y el engaño no es un retraso inocente. Este libro no discute a Pablo: desnuda al que cita a Pablo para no obedecer.",
-    sample:
-      "Santiago no pide permiso. La fe si no tiene obras, es muerta en sí misma. No se trata de añadir mérito a Cristo: se trata de no llamar fe a un asentimiento que no se mueve. El espejo de la Palabra no se consulta para olvidar el rostro.",
-    ref: "Stg. 2:17 · Stg. 1:23–24",
-    pasaje: "Santiago 2",
-    studySlug: "santiago-1",
-    tratadoSlug: "el-crisol-de-lo-oido",
-    asinEbook: "B0GYFR8YDQ",
-  },
-  {
     n: 2,
-    lectura: 6,
+    lectura: 5,
     slug: "el-altar-del-espejo",
     revelatio: true,
     title: "El altar del espejo",
@@ -325,10 +303,9 @@ export const obras: Obra[] = [
   },
   {
     n: 1,
-    lectura: 7,
+    lectura: 6,
     slug: "de-una-misma-boca",
-    revelatio: true,
-    revelatioSlug: "callar-para-ganar",
+    revelatio: false,
     title: "De una misma boca",
     subtitulo: "Santiago 3",
     seoTitle: "De una misma boca: Santiago 3:10 | Alejandro Sirit",

@@ -231,11 +231,10 @@ test("el aula cierra con las obras pedidas, sin mezclar el estudio y el tratado 
   assert.deepEqual(slugs("tratado", "la-muerte-y-la-vida"), ["cuando-el-cielo-se-cae"]);
   assert.deepEqual(slugs("tratado", "para-bien"), ["cuando-el-cielo-se-cae"]);
   assert.deepEqual(slugs("estudio", "santiago-1"), [
-    "la-fe-no-basta",
     "el-altar-del-espejo",
     "de-una-misma-boca",
   ]);
-  assert.deepEqual(slugs("estudio", "galatas-5"), ["la-fe-no-basta"]);
+  assert.deepEqual(slugs("estudio", "galatas-5"), []);
   assert.deepEqual(slugs("tratado", "el-crisol-de-lo-oido"), ["el-altar-del-espejo"]);
 });
 
@@ -254,7 +253,7 @@ test("el JSON-LD habla solo de Cielo Efata y de Alejandro Sirit, sin RevelatiO",
   }
 });
 
-test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaza La fe no basta", () => {
+test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaza el estudio de Santiago 1", () => {
   const a = articulos.find((x) => x.slug === "santiago-2-la-fe-que-obra");
   assert.ok(a);
   const texto = a.secciones.flatMap((s) => s.parrafos).join(" ");
@@ -264,7 +263,8 @@ test("el artículo de Santiago 2 firma Alejandro Sirit, cita la RVR 1960 y enlaz
   assert.match(DESCRIPCION_ARTICULOS, /Reina-Valera 1960/);
   assert.equal(/1909/.test(DESCRIPCION_ARTICULOS), false);
   assert.equal(/Dr\.|RevelatiO/i.test(texto), false);
-  assert.ok(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"));
+  assert.ok(a.relacionados.some((r) => r.to === "/estudios/santiago-1"));
+  assert.equal(a.relacionados.some((r) => r.to === "/obras/la-fe-no-basta"), false);
   assert.match(a.seoTitle, /Santiago 2/);
   assert.match(a.seoDescription, /fe sin obras es muerta/);
 });
@@ -286,22 +286,17 @@ test("el artículo de Santiago 3 firma Alejandro Sirit, cita la RVR 1960 y enlaz
   assert.ok(a.seoDescription.length >= 120 && a.seoDescription.length <= 160);
 });
 
-test("las siete fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
+test("las fichas enlazan su libro en RevelatiO con utm_campaign propia y su QR", () => {
   const slugs = obras.filter((o) => o.revelatio).map((o) => o.slug);
   assert.deepEqual(slugs, [
     "efata",
     "el-siervo-no-tu",
     "bastate-mi-gracia",
     "cuando-el-cielo-se-cae",
-    "la-fe-no-basta",
     "el-altar-del-espejo",
-    "de-una-misma-boca",
   ]);
-  assert.equal(
-    urlRevelatioLibro("callar-para-ganar"),
-    "https://revelatio.app/libros/callar-para-ganar?utm_source=web&utm_medium=cta&utm_campaign=callar-para-ganar",
-  );
-  assert.equal(obras.find((o) => o.slug === "de-una-misma-boca")?.revelatioSlug, "callar-para-ganar");
+  assert.equal(obras.some((o) => o.slug === "la-fe-no-basta"), false);
+  assert.equal(obras.some((o) => o.revelatioSlug === "callar-para-ganar"), false);
   for (const obra of obras.filter((o) => o.revelatio)) {
     const slug = obra.revelatioSlug ?? obra.slug;
     const url = new URL(urlRevelatioLibro(slug));

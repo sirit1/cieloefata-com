@@ -8,7 +8,6 @@ const SLUGS = [
   "el-siervo-no-tu",
   "bastate-mi-gracia",
   "cuando-el-cielo-se-cae",
-  "la-fe-no-basta",
   "el-altar-del-espejo",
   "de-una-misma-boca",
 ] as const;

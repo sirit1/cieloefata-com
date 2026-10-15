@@ -1,6 +1,6 @@
 /**
  * Artículos de la casa. Cada uno nace del material que el sitio ya tiene sobre su pasaje
- * (aquí, La fe no basta, el estudio de Santiago 1 y el tratado El crisol de lo oído).
+ * (aquí, el estudio de Santiago 1 y el tratado El crisol de lo oído).
  * Las citas, entre asteriscos, siguen la Reina-Valera 1960.
  * Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960 es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia.
  */
@@ -135,7 +135,6 @@ export const articulos: readonly Articulo[] = [
       },
     ],
     relacionados: [
-      { to: "/obras/la-fe-no-basta", label: "La fe no basta · el libro sobre Santiago 2:14–26" },
       { to: "/estudios/santiago-1", label: "Pronto para oír · estudio de Santiago 1:19–27" },
       { to: "/tratados/el-crisol-de-lo-oido", label: "El crisol de lo oído · tratado sobre Santiago 1:22–25" },
       { to: "/obras/el-altar-del-espejo", label: "El altar del espejo · Santiago 1:22–25" },

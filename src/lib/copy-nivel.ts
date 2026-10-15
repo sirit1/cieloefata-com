@@ -17,7 +17,7 @@ export const MARCO_RITMO =
 export const MARCO_HOY =
   "Hoy el aula de «Esta semana» permanece en 2 Pedro 1, donde Pedro pide añadir a la fe, a costa propia, un eslabón: Dios ya dio cuanto concierne a la vida y a la piedad; el que no añade no es humilde, es ciego. No se ofrece como producto destacado, sino como el texto que esta escuela está leyendo juntos hasta que el eslabón deje de ser cita y se vuelva acto. El «Tratado del mes» permanece en «El texto manda»: V.E.R.D.A.D. no es un acrónimo para recitar. Es el cauce por el que esta casa oye el capítulo entero, hasta que el comentario se siente atrás. El texto manda. El método sirve. La rodilla cierra.";
 
-/** Siete muestras de primer capítulo. Clave: slug del libro. */
+/** Seis muestras de primer capítulo. Clave: slug del libro. */
 export const MUESTRAS_TOMO: Record<string, string> = {
   efata:
     "En la Decápolis le trajeron a Jesús un hombre sordo y tartamudo. No vino él. El Señor lo apartó de la gente, levantó los ojos al cielo, gimió y le dijo: Éfata. Este libro camina esa hora en cuarenta estaciones, de un solo tirón. No es un plan de semanas ni una hoja para copiar: después de la apertura el oído puede volverse a cerrar, y el camino pasa por el Padre, el Hijo y el Espíritu, y por el oficio de oír la Escritura sin arrancarle una frase.",
@@ -27,8 +27,6 @@ export const MUESTRAS_TOMO: Record<string, string> = {
     "Tres veces rogó Pablo que le quitaran el aguijón. El Señor no lo quitó: habló. «Bástate mi gracia» no es lema de conferencia ni derecho a extracción clínica; es sentencia que permanece mientras el clavo permanece. Este libro oye 2 Corintios 12:1–10 entero —visiones que no son currículum, mensajero de Satanás, ruego reiterado, poder que se perfecciona en la flaqueza— y distingue el oficio de Job: Bástate no es Cielo. La gracia alcanza aunque el aguijón no se vaya.",
   "cuando-el-cielo-se-cae":
     "Hay un día en Uz en que cuatro mensajeros cruzan el umbral y Job bendice el Nombre con las manos vacías: Jehová dio, y Jehová quitó. Hay una noche en Getsemaní en que el Hijo llama Abba, pide que se aparte la copa y añade la cláusula que este libro no suelta: mas no lo que yo quiero, sino lo que tú. El «no» de Dios no es abandono ni resiliencia con versículo. Job 1–2 y 38–42, con Marcos 14:36 como bisagra, enseñan a rugar cuando el cielo no responde a la medida de lo pedido.",
-  "la-fe-no-basta":
-    "Hay una mercancía que circula con el nombre de fe y no es fe: dice «id en paz» y no da pan. Santiago 2:14–26 desnuda ese cadáver sin tocar Romanos 3–5. Este libro no asalta la sola fide ni monta feria de obras: distingue la fe justificante —sola como instrumento, nunca sola como vida— y pone el hermano desnudo donde se ve si hubo vida. Dos muertos —el que cita a Pablo para no obrar y el que cita a Santiago para merecer— comparten la misma tumba.",
   "el-altar-del-espejo":
     "Esto es una historia, no un canto y no un comentario. El principio es un hombre delante de un cristal, y entre el principio y el fin hay un culto, el de sí mismo, que va a tomar forma de fama, de poder, de posesiones y de un lugar entre los otros. Santiago lo puso ahí sin nombre para que el lector no pueda mirarlo como a otro, y el libro no adelanta el fin: te deja a su lado, todavía mirándose.",
   "de-una-misma-boca":
@@ -70,8 +68,6 @@ export const PACK_WHATSAPP: Record<string, string> = {
     "Hola, soy de cieloefata.com; solicito el pack del libro Bástate mi gracia (2 Corintios 12) sobre la gracia que basta cuando el aguijón permanece.",
   "cuando-el-cielo-se-cae":
     "Hola, soy de cieloefata.com; solicito el pack del libro Cuando el cielo se cae (Job) para orar cuando el cielo no responde como pedí.",
-  "la-fe-no-basta":
-    "Hola, soy de cieloefata.com; solicito el pack del libro La fe no basta (Santiago 2) sobre la fe que obra sin tocar Romanos.",
   "el-altar-del-espejo":
     "Hola, soy de cieloefata.com; solicito el pack del libro El altar del espejo (Santiago 1) para dejar de ser oidor olvidadizo.",
   "de-una-misma-boca":
@@ -92,7 +88,6 @@ export const SLUGS_TOMO = [
   "el-siervo-no-tu",
   "bastate-mi-gracia",
   "cuando-el-cielo-se-cae",
-  "la-fe-no-basta",
   "el-altar-del-espejo",
   "de-una-misma-boca",
 ] as const;

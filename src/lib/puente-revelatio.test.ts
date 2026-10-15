@@ -85,14 +85,14 @@ describe("puente a RevelatiO", () => {
     const p = q(
       urlPuenteRevelatio({
         ref: "Santiago 2",
-        desde: "/obras/la-fe-no-basta",
+        desde: "/articulos/santiago-2-la-fe-que-obra",
         companeros: ["Santiago 1:19–27", "Santiago 1:22–25"],
       }),
     );
     assert.equal(p.get("libro"), "santiago");
     assert.equal(p.get("cap"), "2");
     assert.equal(p.get("vs"), null);
-    assert.equal(p.get("vuelta"), "/obras/la-fe-no-basta");
+    assert.equal(p.get("vuelta"), "/articulos/santiago-2-la-fe-que-obra");
     assert.equal(p.get("estudio"), null);
   });
 
