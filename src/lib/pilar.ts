@@ -144,7 +144,7 @@ export const DOS_CASAS = {
   refs: "Neh. 8:8 · 2 Ti. 3:16 · Hch. 17:11",
   appHref: "https://revelatio.app",
   leerHref: urlPuenteRevelatio({ ref: "Marcos 7", desde: "/estudios/marcos-7" })!,
-  leerLabel: "Leer en la web",
+  leerLabel: "Leer Marcos 7 en RevelatiO",
   instalarLabel: "Instalar la app",
 };
 

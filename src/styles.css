@@ -512,3 +512,22 @@
 .manual table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
 .manual th, .manual td { border: 1px solid rgba(127,127,127,.35); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
 .manual a { text-decoration: underline; }
+
+@media (max-width: 639px) {
+  main p:not(.citas):not(.kicker):not(:has(.cite)),
+  .prosa {
+    text-align: start;
+  }
+}
+
+@media (pointer: coarse) {
+  p.citas .cite {
+    padding-block: 0.75rem;
+  }
+}
+
+.tomo-grid .examinar {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}

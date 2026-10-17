@@ -52,7 +52,7 @@ export function UmbralTresCaminos() {
           params={{ slug: semana.studySlug }}
           className="btn btn-ink mt-4"
         >
-          Escudriñar {study?.title ?? "el estudio"}
+          Escudriñar el estudio
           <BtnArrow />
         </Link>
       </li>

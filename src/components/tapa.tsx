@@ -9,6 +9,28 @@ const SIZE = {
   rejilla: "w-[7.25rem]",
 } as const;
 
+/** Miniaturas WebP de 360 px generadas desde public/TAPAS/*.jpg. */
+const MINIATURAS = new Set([
+  "bastate-mi-gracia",
+  "cuando-el-cielo-se-cae",
+  "de-una-misma-boca",
+  "diakrisis",
+  "efata",
+  "el-altar-del-espejo",
+  "el-siervo-no-tu",
+  "nunca-tocaras-mi-fe",
+  "portico-a-la-escritura",
+]);
+
+const SIZES: Record<keyof typeof SIZE, string> = {
+  lg: "(min-width: 640px) 320px, 100vw",
+  pdp: "(min-width: 640px) 320px, 100vw",
+  sm: "140px",
+  lista: "140px",
+  umbral: "176px",
+  rejilla: "116px",
+};
+
 export function tapaSrc(slug: string) {
   return tapaPath(slug);
 }
@@ -24,6 +46,12 @@ export function Tapa({ obra, size = "lg", className = "", priority = false }: Ta
   return (
     <img
       src={tapaPath(obra.slug)}
+      srcSet={
+        MINIATURAS.has(obra.slug)
+          ? `/TAPAS/${obra.slug}-360.webp 360w, ${tapaPath(obra.slug)} 900w`
+          : undefined
+      }
+      sizes={MINIATURAS.has(obra.slug) ? SIZES[size] : undefined}
       alt={`Tapa de ${obra.title}, Alejandro Sirit. Editorial Cielo Efata.`}
       width={900}
       height={1440}

@@ -5,6 +5,7 @@ import { Cite, Refs } from "@/components/cite";
 import { Datos } from "@/components/datos";
 import { ConLemas } from "@/components/lema";
 import { Tapa } from "@/components/tapa";
+import { BtnArrow } from "@/components/motif";
 import { SlotsSemanaMes, UmbralTresCaminos } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
 import { canonDoors, CORPUS, obras, ROMANO } from "@/lib/content";
@@ -40,6 +41,14 @@ function Home() {
           <p className="lema-romance">{SELLO.romance}</p>
           <h1 className="mt-10 font-serif text-4xl leading-tight md:text-5xl">{ESCRITURA.title}</h1>
           <p className="mt-5 font-serif text-xl italic text-ink-soft">{ESCRITURA.motto}</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link to="/estudios/$slug" params={{ slug: "marcos-7" }} className="btn btn-ink">
+              Empezar por Marcos 7 <BtnArrow />
+            </Link>
+            <Link to="/obras" className="btn btn-ghost">
+              Ver los libros
+            </Link>
+          </div>
           <PuertaRegreso />
           <p className="mt-8 text-lg">
             <ConLemas>{ESCRITURA.gate}</ConLemas>
@@ -190,7 +199,7 @@ function Home() {
                   params={{ slug: o.slug }}
                   className="examinar hover:text-ink"
                 >
-                  Examinar este libro
+                  Ver este libro
                 </Link>
               </li>
             ))}

@@ -276,8 +276,8 @@ test("el artículo de Santiago 3 firma Alejandro Sirit, cita la RVR 1960 y enlaz
   const palabras = [a.title, ...a.secciones.map((s) => s.titulo ?? ""), texto].join(" ").split(/\s+/).filter(Boolean).length;
   assert.ok(palabras >= 1200 && palabras <= 1500, String(palabras));
   assert.match(texto, /De una misma boca proceden bendición y maldición/);
-  assert.match(texto, /¿Echa alguna fuente por una misma abertura agua dulce y amarga\?/);
-  assert.match(texto, /¿puede la higuera producir aceitunas, ó la vid higos\?/);
+  assert.match(texto, /¿Acaso alguna fuente echa por una misma abertura agua dulce y amarga\?/);
+  assert.match(texto, /¿puede acaso la higuera producir aceitunas, o la vid higos\?/);
   assert.match(DESCRIPCION_ARTICULOS, /Reina-Valera 1960/);
   assert.equal(/1909/.test(DESCRIPCION_ARTICULOS), false);
   assert.equal(/Dr\.|RevelatiO/i.test(texto), false);

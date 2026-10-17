@@ -11,7 +11,7 @@ const primaria = [
   { to: "/tratados", label: "Tratados" },
   { to: "/metodo", label: "Cómo leer" },
   { to: "/cuaderno", label: "Cuaderno" },
-  { to: "/obras", label: "Obras" },
+  { to: "/obras", label: "Libros" },
 ] as const;
 
 const secundaria = [
