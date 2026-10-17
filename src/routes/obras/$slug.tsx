@@ -17,6 +17,7 @@ import {
   urlRevelatioLibro,
 } from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
+import { whatsappTomo } from "@/lib/amazon";
 import { pageHead, tituloObra } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -52,22 +53,41 @@ export function ObraPage() {
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <BookJsonLd slug={obra.slug} />
       <Volver />
-      <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
-      </p>
-      <h1 className="mt-3 font-serif text-4xl md:text-5xl">{obra.title}</h1>
-      <p className="mt-2 font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>
-      <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
-      <p className="mt-2 font-sans text-sm tracking-wide text-gold">
-        Capítulo ancla: {obra.pasaje}
-      </p>
-
-      <figure className="mt-10 m-0 max-w-xs">
-        <Tapa obra={obra} size="lg" priority />
-        <figcaption className="mt-3 font-sans text-sm leading-relaxed text-ink-soft">
-          Tapa de {obra.title}. Se lee junto a {obra.pasaje}.
-        </figcaption>
-      </figure>
+      <div className="grid gap-8 sm:grid-cols-[minmax(0,13rem)_1fr] sm:items-start md:gap-10">
+        <figure className="m-0 max-w-[13rem]">
+          <Tapa obra={obra} size="lg" priority />
+          <figcaption className="sr-only">
+            Tapa de {obra.title}. Se lee junto a {obra.pasaje}.
+          </figcaption>
+        </figure>
+        <div>
+          <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
+            Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
+          </p>
+          <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">{obra.title}</h1>
+          <p className="mt-2 font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>
+          <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
+          <p className="mt-2 font-sans text-sm tracking-wide text-ink-soft">
+            Capítulo ancla: {obra.pasaje}
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href={whatsappTomo(obra.title)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-wa"
+            >
+              Solicitar «{obra.title}» por WhatsApp
+            </a>
+            <a href="#obtener" className="btn btn-ghost">
+              {obra.sinAmazon ? "Cómo obtenerlo" : "Amazon y otras opciones"}
+            </a>
+          </div>
+          <p className="mt-3 font-sans text-xs text-ink-soft">
+            Te respondemos personalmente. El mensaje ya lleva el título del libro.
+          </p>
+        </div>
+      </div>
 
       <p className="mt-10 text-lg leading-relaxed">
         <ConLemas>{obra.line}</ConLemas>
@@ -104,7 +124,7 @@ export function ObraPage() {
         </p>
       ))}
 
-      <h2 className="mt-12 font-serif text-3xl">Cómo obtenerlo</h2>
+      <h2 id="obtener" className="mt-12 scroll-mt-24 font-serif text-3xl">Cómo obtenerlo</h2>
       <p className="mt-4 leading-relaxed">
         {obra.sinAmazon
           ? "Para solicitar este libro, escríbenos por WhatsApp y te responderemos personalmente."

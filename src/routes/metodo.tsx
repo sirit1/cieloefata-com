@@ -18,6 +18,7 @@ import {
   VERDAD_PASOS,
 } from "@/lib/verdad";
 
+import { ESCRITURA } from "@/lib/pilar";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/metodo")({
@@ -43,6 +44,10 @@ function MetodoPage() {
       </p>
       <p className="mt-3 font-serif text-xl italic text-ink-soft">{VERDAD_ORIGEN.subtitulo}.</p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">{VERDAD_ORIGEN.libro}</p>
+
+      <p className="mt-8 text-lg leading-relaxed">
+        <ConLemas>{ESCRITURA.oficio}</ConLemas>
+      </p>
 
       <p className="mt-8 text-lg leading-relaxed">
         <ConLemas>{VERDAD_ORIGEN.quien}</ConLemas>
