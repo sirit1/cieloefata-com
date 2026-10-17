@@ -24,11 +24,11 @@ export function validarRecibir(input: {
   if (!input.nombre.trim()) return "Escribe tu nombre.";
   const email = input.email.trim();
   const tel = input.telefono.replace(/\D/g, "");
-  if (!email && !tel) return "Deja un correo o un WhatsApp para enviártelo.";
+  if (!email && !tel) return "Deja un correo o un WhatsApp.";
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return "Revisa el correo.";
   if (input.telefono.trim() && tel.length < 8) return "Revisa el número de WhatsApp, con su código de país.";
   if (input.semanal && !tel) return "El pasaje de la semana llega por WhatsApp: deja tu número.";
-  if (!input.consentimiento) return "Marca la casilla de consentimiento para poder enviártelo.";
+  if (!input.consentimiento) return "Marca la casilla de consentimiento para descargarlo.";
   return null;
 }
 

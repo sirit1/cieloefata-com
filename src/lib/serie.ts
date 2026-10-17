@@ -1,5 +1,12 @@
 import { amazonDp } from "@/lib/amazon";
-import { obras, obraBySlug, obrasDesdeAula, ROMANO, type AulaKind, type Obra } from "@/lib/content";
+import {
+  obras,
+  obraBySlug,
+  obrasDesdeAula,
+  ROMANO,
+  type AulaKind,
+  type Obra,
+} from "@/lib/content";
 
 /** Nombre de la serie en Amazon KDP y en los datos estructurados. */
 export const SERIE_NOMBRE = "Cielo Efata";
@@ -17,16 +24,49 @@ export function publicada(obra: Obra): boolean {
   return !obra.sinAmazon && Boolean(obra.asinEbook || obra.asinPrint);
 }
 
-export type Formato = { tipo: "ebook" | "tapa"; etiqueta: string; href: string; asin: string };
+/**
+ * Capítulo 1 gratuito de cada libro publicado, en PDF, servido desde /capitulo-1/.
+ * Es solo el capítulo 1 (entre el 4 % y el 6 % de las palabras del libro), dentro del 10 %
+ * de muestra que KDP Select permite fuera de Amazon.
+ */
+export const CAPITULO_1: Record<string, { paginas: number }> = {
+  efata: { paginas: 17 },
+  "el-siervo-no-tu": { paginas: 11 },
+  "bastate-mi-gracia": { paginas: 10 },
+  "cuando-el-cielo-se-cae": { paginas: 12 },
+  "el-altar-del-espejo": { paginas: 11 },
+  diakrisis: { paginas: 10 },
+};
+
+export function capitulo1Url(slug: string): string | null {
+  return CAPITULO_1[slug] ? `/capitulo-1/${slug}-capitulo-1.pdf` : null;
+}
+
+export type Formato = {
+  tipo: "ebook" | "tapa";
+  etiqueta: string;
+  href: string;
+  asin: string;
+};
 
 export function formatosAmazon(obra: Obra): Formato[] {
   if (obra.sinAmazon) return [];
   const out: Formato[] = [];
   if (obra.asinEbook) {
-    out.push({ tipo: "ebook", etiqueta: "Ebook Kindle", href: amazonDp(obra.asinEbook), asin: obra.asinEbook });
+    out.push({
+      tipo: "ebook",
+      etiqueta: "Ebook Kindle",
+      href: amazonDp(obra.asinEbook),
+      asin: obra.asinEbook,
+    });
   }
   if (obra.asinPrint) {
-    out.push({ tipo: "tapa", etiqueta: "Tapa blanda", href: amazonDp(obra.asinPrint), asin: obra.asinPrint });
+    out.push({
+      tipo: "tapa",
+      etiqueta: "Tapa blanda",
+      href: amazonDp(obra.asinPrint),
+      asin: obra.asinPrint,
+    });
   }
   return out;
 }
