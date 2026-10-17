@@ -17,7 +17,6 @@ import {
   type CuadernoDraft,
   type CuadernoEntry,
 } from "@/lib/cuaderno-store";
-import { Motif } from "@/components/motif";
 import { semanaVigente } from "@/lib/calendario";
 import { CUADERNO_VACIO } from "@/lib/copy-nivel";
 import { PRIMERA_VEZ } from "@/lib/pilar";
@@ -158,7 +157,6 @@ function CuadernoPage() {
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-16 md:py-24">
-      <Motif kind="flame" />
       <h1 className="mt-2 font-serif text-4xl">Sed hacedores de la palabra</h1>
       <p className="mt-5 text-lg leading-relaxed">
         …y no tan solamente oidores, engañándoos a vosotros mismos. En este cuaderno anotas lo

@@ -1,6 +1,6 @@
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 import { Refs } from "@/components/cite";
-import { BtnArrow, Motif } from "@/components/motif";
+import { BtnArrow } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { tratadoMesSlug } from "@/lib/calendario";
@@ -32,7 +32,6 @@ function TratadosPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
-      <Motif kind="lamb" />
       <h1 className="mt-2 font-serif text-4xl">Tratados</h1>
       <p className="mt-5 text-lg leading-relaxed">
         Cada tratado toma un versículo muy citado, y a menudo citado fuera de lugar, y lo

@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite, Refs, Term } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
-import { Motif } from "@/components/motif";
 import {
   CRISOL_CUATRO,
   CRISOL_FALLOS,
@@ -28,7 +27,6 @@ export const Route = createFileRoute("/crisol")({
 function CrisolPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <Motif kind="flame" />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{CRISOL_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{CRISOL_ORIGEN.title}</h1>
       <p className="mt-3 font-sans text-sm">

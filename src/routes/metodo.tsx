@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite, Refs, Term } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
-import { BtnArrow, Motif } from "@/components/motif";
+import { BtnArrow } from "@/components/motif";
 import { PasosNav, pasoId } from "@/components/pasos-nav";
 import {
   ANATOMIA,
@@ -34,7 +34,6 @@ export const Route = createFileRoute("/metodo")({
 function MetodoPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <Motif kind="flame" />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{VERDAD_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{VERDAD_ORIGEN.title}</h1>
       <p className="mt-3 font-sans text-sm">

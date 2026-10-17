@@ -4,7 +4,6 @@ import { BannerRevelatio } from "@/components/banner-revelatio";
 import { Cite, Refs } from "@/components/cite";
 import { Datos } from "@/components/datos";
 import { ConLemas } from "@/components/lema";
-import { Motif } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { SlotsSemanaMes, UmbralTresCaminos } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
@@ -55,7 +54,6 @@ function Home() {
           <ul className="mt-20 grid gap-16 sm:grid-cols-3">
             <li>
               <Link to="/estudios" className="group flex flex-col items-start">
-                <Motif kind="lion" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Estudios</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
                   Un pasaje completo, estudiado con el método V.E.R.D.A.D., hasta un paso
@@ -65,7 +63,6 @@ function Home() {
             </li>
             <li>
               <Link to="/tratados" className="group flex flex-col items-start">
-                <Motif kind="lamb" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Tratados</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
                   Versículos muy citados, y a menudo sacados de contexto, leídos otra vez dentro
@@ -75,7 +72,6 @@ function Home() {
             </li>
             <li>
               <Link to="/metodo" className="group flex flex-col items-start">
-                <Motif kind="flame" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Cómo leer</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
                   El método V.E.R.D.A.D.: seis pasos para leer la Biblia con atención, humildad y

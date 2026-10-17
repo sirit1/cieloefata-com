@@ -19,7 +19,7 @@ export const MARCO_HOY = "";
 /** Nueve muestras de primer capítulo. Clave: slug del libro. */
 export const MUESTRAS_TOMO: Record<string, string> = {
   efata:
-    "En la Decápolis le trajeron a Jesús un hombre sordo y tartamudo. No vino él. El Señor lo apartó de la gente, levantó los ojos al cielo, gimió y le dijo: Éfata. Este libro camina esa hora en cuarenta estaciones, de un solo tirón. No es un plan de semanas ni una hoja para copiar: después de la apertura el oído puede volverse a cerrar, y el camino pasa por el Padre, el Hijo y el Espíritu, y por el oficio de oír la Escritura sin arrancarle una frase.",
+    "Éfata se lee de corrido, en cuarenta estaciones agrupadas en cinco partes: «Lo traen», «Éfata», «A quién oyó», «La casa» y «Permanece». Parte del oído que Cristo abre en Marcos 7, pasa por el Padre, el Hijo y el Espíritu que hablan en la Escritura, y enseña el método V.E.R.D.A.D. para leer un pasaje entero sin arrancarle una frase. No es un plan de lecturas por semanas: es un libro para leer y volver a él.",
   "el-siervo-no-tu":
     "Isaías no te ofrece un espejo: te muestra a un inocente en lugar del culpable. El cuarto Cántico del Siervo (52:13–53:12) dice lo que el título no permite mover: Él llevó; nosotros éramos. Este libro derriba la autoexpiación evangélica y la idea de un «Siervo terapéutico». La ofrenda por la culpa (ʾāšām, Isaías 53:10) no se imita. Tú no eres el Siervo: el eunuco de Hechos 8 no se pone a sí mismo en el versículo, sino que pregunta de quién habla el profeta, cree y pide el bautismo.",
   "bastate-mi-gracia":

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Refs } from "@/components/cite";
 import { LeerCapitulo } from "@/components/leer-capitulo";
-import { BtnArrow, Motif } from "@/components/motif";
+import { BtnArrow } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { estudioSemanaSlug } from "@/lib/calendario";
@@ -44,7 +44,6 @@ function EstudiosPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
-      <Motif kind="lion" />
       <h1 className="mt-2 font-serif text-4xl">Estudios bíblicos</h1>
       <p className="mt-5 text-lg leading-relaxed">
         Cada estudio recorre un pasaje completo con el método V.E.R.D.A.D. —Ver, Entorno,
