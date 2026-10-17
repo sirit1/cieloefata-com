@@ -57,7 +57,7 @@ export function Tapa({ obra, size = "lg", className = "", priority = false }: Ta
       sizes={MINIATURAS.has(obra.slug) ? SIZES[size] : undefined}
       alt={`Tapa de ${obra.title}, Alejandro Sirit. Editorial Cielo Efata.`}
       width={900}
-      height={1440}
+      height={1350}
       decoding="async"
       fetchPriority={priority ? "high" : "low"}
       loading={priority ? "eager" : "lazy"}

@@ -79,24 +79,34 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
   assert.deepEqual(fails, []);
 });
 
-test("Bástate no tiene ficha de Amazon", () => {
+test("solo los libros sin edición publicada en Amazon quedan sin ficha", () => {
+  // Comprobado en amazon.com el 17-10-2026: Pórtico, De una misma boca y Nunca tocarás mi fe aún no están publicados.
   const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
-  assert.deepEqual(sin, ["portico-a-la-escritura", "efata", "bastate-mi-gracia", "el-altar-del-espejo", "de-una-misma-boca", "diakrisis", "nunca-tocaras-mi-fe"]);
+  assert.deepEqual(sin, ["portico-a-la-escritura", "de-una-misma-boca", "nunca-tocaras-mi-fe"]);
+  for (const o of obras) assert.equal(Boolean(o.sinAmazon), !amazonDeObra(o), o.slug);
 });
 
-test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
-  const conIsbn = obras.filter((o) => o.isbnPrint).map((o) => [o.slug, camposLibro(o).isbn]);
-  assert.deepEqual(conIsbn, [["cuando-el-cielo-se-cae", "9798176466690"]]);
-  for (const slug of ["efata", "el-altar-del-espejo", "de-una-misma-boca"]) {
-    const o = obras.find((x) => x.slug === slug)!;
-    assert.equal(o.sinAmazon, true, slug);
-    const libro = camposLibro(o);
+test("ASIN e ISBN de imprenta coinciden con las fichas publicadas en Amazon", () => {
+  const fichas = obras
+    .filter((o) => o.asinEbook || o.asinPrint || o.isbnPrint)
+    .map((o) => [o.slug, o.asinEbook, o.asinPrint, o.isbnPrint]);
+  assert.deepEqual(fichas, [
+    ["efata", "B0HJ15ZXL3", "B0HKSRS7TZ", "9798172426322"],
+    ["el-siervo-no-tu", "B0HKQGBYV4", undefined, undefined],
+    ["bastate-mi-gracia", "B0HKQHNRBC", "B0HN7MTCZ1", "9798162809135"],
+    ["cuando-el-cielo-se-cae", "B0HN5YD6LP", undefined, undefined],
+    ["el-altar-del-espejo", "B0HJ6B33V3", undefined, undefined],
+    ["diakrisis", "B0HN6G4NG4", "B0HN6BFCF2", "9798162796060"],
+  ]);
+  for (const o of obras.filter((x) => x.isbnPrint)) assert.equal(camposLibro(o).isbn, o.isbnPrint, o.slug);
+  for (const slug of ["de-una-misma-boca", "portico-a-la-escritura", "nunca-tocaras-mi-fe"]) {
+    const libro = camposLibro(obras.find((x) => x.slug === slug)!);
     assert.equal("isbn" in libro, false, slug);
     assert.equal("sameAs" in libro, false, slug);
-    assert.equal("offers" in libro, false, slug);
   }
+  // Ediciones viejas que no deben volver: Callar para ganar, el manual anterior de Job y la tapa blanda vieja del Altar.
   const fuente = readFileSync(new URL("./content.ts", import.meta.url), "utf8");
-  for (const viejo of ["B0HJ15ZXL3", "B0GPF3NHQT", "9798253959213", "9798176414967"]) {
+  for (const viejo of ["B0GPF3NHQT", "9798176466690", "B0HKT237N1", "B0HKSZ6B9T", "9798176414967"]) {
     assert.equal(fuente.includes(viejo), false, viejo);
   }
 });

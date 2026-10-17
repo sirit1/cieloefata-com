@@ -154,6 +154,8 @@ export type Obra = {
   crisol?: boolean;
   asinEbook?: string;
   isbnPrint?: string;
+  /** ASIN de la tapa blanda publicada en Amazon (enlace /dp/). El ISBN-13 va en isbnPrint (JSON-LD). */
+  asinPrint?: string;
   /** Published Amazon title when it differs from the house reading-order title. Never an invented ASIN. */
   amazonTitle?: string;
   /** Muestra en la ficha el enlace «Estudia cada capítulo de este libro con IA en RevelatiO» (revelatio.app/libros/<slug>). */
@@ -224,16 +226,18 @@ export const obras: Obra[] = [
     subtitulo: "Deja de coleccionar versículos. Aprende a oír a Dios.",
     seoTitle: "Éfata: La Escritura Abierta, Marcos 7 | Alejandro Sirit",
     seoDescription:
-      "Marcos 7:31–37 en cuarenta estaciones: el sordo de Decápolis, traído por otros, abierto por Cristo. Deja de coleccionar versículos y aprende a oír a Dios.",
+      "Marcos 7:31–37 en veinticinco capítulos: el sordo de Decápolis, traído por otros, abierto por Cristo. Deja de coleccionar versículos y aprende a oír a Dios.",
     line: "En la Decápolis le trajeron a Jesús un sordo y tartamudo. No vino él. El Señor lo apartó de la gente, miró al cielo, gimió y le dijo: Éfata. Este libro recorre esa hora sin prisa y no convierte la palabra de Jesús en un lema: quien lo termina no se lleva solo un método, sino que queda bajo la Palabra.",
     thesis:
-      "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones y cinco partes: «Lo traen», «Éfata», «A quién oyó», «La casa» y «Permanece». El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído. Pero el oído abierto puede volver a cerrarse, y por eso el camino sigue: el Padre que habló desde el principio, el Hijo de quien eran esas manos, el Espíritu que no se confunde con una técnica, y el oficio de oír la Escritura entera sin arrancarle una frase. Al final incluye una guía para volver a leerlo.",
+      "No es un diario ni un plan de semanas. Es una sola historia en veinticinco capítulos y cinco partes: «Lo traen», «Éfata», «A quién oyó», «La lengua suelta» y «Permanece». El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído. Pero el oído abierto puede volver a cerrarse, y por eso el camino sigue: el Padre que habló desde el principio, el Hijo de quien eran esas manos, el Espíritu que no se confunde con una técnica, y el oficio de oír la Escritura entera sin arrancarle una frase. Al final incluye una guía para volver a leerlo.",
     sample:
-      "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones. El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído.",
+      "No es un diario ni un plan de semanas. Es una sola historia en veinticinco capítulos. El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído.",
     ref: "Mr. 7:34–35",
     pasaje: "Marcos 7",
     studySlug: "marcos-7",
-    sinAmazon: true,
+    asinEbook: "B0HJ15ZXL3",
+    asinPrint: "B0HKSRS7TZ",
+    isbnPrint: "9798172426322",
   },
   {
     n: 4,
@@ -241,7 +245,7 @@ export const obras: Obra[] = [
     slug: "el-siervo-no-tu",
     revelatio: true,
     title: "El Siervo, no tú",
-    subtitulo: "Isaías 52:13 – 53:12",
+    subtitulo: "Isaías 53 y la sustitución que no se imita",
     seoTitle: "El Siervo, no tú: Isaías 53:5 | Alejandro Sirit",
     seoDescription:
       "Isaías 53:5 y el Siervo herido por nuestras rebeliones. Alejandro Sirit presenta la cruz como sacrificio sustitutivo, no como autoexpiación.",
@@ -263,7 +267,7 @@ export const obras: Obra[] = [
     revelatio: true,
     title: "Bástate",
     amazonTitle: "Bástate mi gracia",
-    subtitulo: "2 Corintios 12:1–10",
+    subtitulo: "El Señor ha dicho, y el aguijón quedó",
     seoTitle: "Bástate mi gracia: 2 Corintios 12:9 | Alejandro Sirit",
     seoDescription:
       "Qué significa «Bástate mi gracia»: Alejandro Sirit lee 2 Corintios 12:9-10, donde la gracia sostiene y el poder de Cristo se perfecciona en la debilidad.",
@@ -275,6 +279,9 @@ export const obras: Obra[] = [
     ref: "2 Co. 12:9",
     pasaje: "2 Corintios 12",
     studySlug: "2-corintios-12",
+    asinEbook: "B0HKQHNRBC",
+    asinPrint: "B0HN7MTCZ1",
+    isbnPrint: "9798162809135",
   },
   {
     n: 3,
@@ -282,7 +289,7 @@ export const obras: Obra[] = [
     slug: "cuando-el-cielo-se-cae",
     revelatio: true,
     title: "Cuando el cielo se cae",
-    subtitulo: "El libro de Job",
+    subtitulo: "Jehová dio, y Jehová quitó",
     seoTitle: "Cuando el cielo se cae: Job 42:5 | Alejandro Sirit",
     seoDescription:
       "Una lectura de Job 42:5-6 sobre el sufrimiento, el lamento y el encuentro con Dios. Alejandro Sirit no ofrece respuestas rápidas, sino la presencia del Señor.",
@@ -294,7 +301,7 @@ export const obras: Obra[] = [
     ref: "Job 42:5–6 · Lm. 3:22–23",
     pasaje: "Job 42",
     studySlug: "",
-    isbnPrint: "9798176466690",
+    asinEbook: "B0HN5YD6LP",
   },
   {
     n: 2,
@@ -302,7 +309,7 @@ export const obras: Obra[] = [
     slug: "el-altar-del-espejo",
     revelatio: true,
     title: "El altar del espejo",
-    subtitulo: "Santiago 1",
+    subtitulo: "Santiago 1 y el culto de sí mismo",
     seoTitle: "El altar del espejo: Santiago 1:23-25 | Alejandro Sirit",
     seoDescription:
       "Santiago 1 contado como una sola historia: un hombre delante de un cristal, el culto de sí mismo y el que se queda mirando la ley perfecta de la libertad.",
@@ -316,7 +323,7 @@ export const obras: Obra[] = [
     studySlug: "santiago-1",
     tratadoSlug: "el-crisol-de-lo-oido",
     crisol: true,
-    sinAmazon: true,
+    asinEbook: "B0HJ6B33V3",
   },
   {
     n: 1,
@@ -356,7 +363,9 @@ export const obras: Obra[] = [
     ref: "1 Jn. 4:1 · He. 5:14",
     pasaje: "1 Juan 4",
     studySlug: "",
-    sinAmazon: true,
+    asinEbook: "B0HN6G4NG4",
+    asinPrint: "B0HN6BFCF2",
+    isbnPrint: "9798162796060",
   },
   {
     n: 9,

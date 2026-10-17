@@ -8,6 +8,7 @@ type AdquirirProps = {
   amazonTitle?: string;
   asinEbook?: string;
   isbnPrint?: string;
+  asinPrint?: string;
   pack?: boolean;
   /** Libro sin edición publicada en Amazon: no se ofrece búsqueda ni enlace de compra. */
   sinAmazon?: boolean;
@@ -20,11 +21,12 @@ export function Adquirir({
   amazonTitle,
   asinEbook,
   isbnPrint,
+  asinPrint,
   pack = false,
   sinAmazon = false,
 }: AdquirirProps) {
   const ebookHref = asinEbook ? amazonDp(asinEbook) : undefined;
-  const printHref = isbnPrint ? amazonDp(isbnPrint) : undefined;
+  const printHref = asinPrint ? amazonDp(asinPrint) : isbnPrint ? amazonDp(isbnPrint) : undefined;
   const wa = title ? whatsappTomo(title) : adquisicion.whatsapp;
   const searchTitle = amazonTitle ?? title;
   const searchHref =
