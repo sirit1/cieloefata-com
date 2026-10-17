@@ -8,6 +8,7 @@ export function LeerCapitulo({
   pregunta,
   intencion,
   className = "",
+  label,
 }: {
   ref: string;
   desde?: string;
@@ -15,6 +16,8 @@ export function LeerCapitulo({
   pregunta?: string;
   intencion?: string;
   className?: string;
+  /** Texto visible del enlace. Por omisión, «Abrir la Escritura». */
+  label?: string;
 }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const origen = desde ?? (pathname === "/" ? "" : pathname);
@@ -28,8 +31,8 @@ export function LeerCapitulo({
   if (!href) return null;
   return (
     <a href={href} rel="noopener noreferrer" className={className || "btn btn-ghost"}>
-      Abrir la Escritura
-      <span className="sr-only"> en el lector compañero</span>
+      {label ?? "Abrir la Escritura"}
+      {label ? null : <span className="sr-only"> en el lector compañero</span>}
     </a>
   );
 }

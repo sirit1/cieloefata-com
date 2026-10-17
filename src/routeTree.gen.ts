@@ -29,8 +29,11 @@ import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ObjecionesRouteImport } from './routes/objeciones'
 import { Route as PalabraRouteImport } from './routes/palabra'
 import { Route as PasajesRouteImport } from './routes/pasajes'
+import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as ProbadRouteImport } from './routes/probad'
+import { Route as RecibirRouteImport } from './routes/recibir'
 import { Route as SelloRouteImport } from './routes/sello'
+import { Route as SerieRouteImport } from './routes/serie'
 import { Route as SostenerRouteImport } from './routes/sostener'
 import { Route as TratadosRouteImport } from './routes/tratados'
 import { Route as ApiVozRouteImport } from './routes/api/voz'
@@ -48,6 +51,9 @@ import { Route as ObrasElSiervoRouteImport } from './routes/obras/el-siervo'
 import { Route as PreguntasIndexRouteImport } from './routes/preguntas/index'
 import { Route as PreguntasSlugRouteImport } from './routes/preguntas/$slug'
 import { Route as TratadosSlugRouteImport } from './routes/tratados/$slug'
+import { Route as VersiculoIndexRouteImport } from './routes/versiculo/index'
+import { Route as VersiculoSlugRouteImport } from './routes/versiculo/$slug'
+import { Route as EstudiosSlugGuiaRouteImport } from './routes/estudios/$slug_.guia'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -149,14 +155,29 @@ const PasajesRoute = PasajesRouteImport.update({
   path: '/pasajes',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacidadRoute = PrivacidadRouteImport.update({
+  id: '/privacidad',
+  path: '/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProbadRoute = ProbadRouteImport.update({
   id: '/probad',
   path: '/probad',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RecibirRoute = RecibirRouteImport.update({
+  id: '/recibir',
+  path: '/recibir',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SelloRoute = SelloRouteImport.update({
   id: '/sello',
   path: '/sello',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SerieRoute = SerieRouteImport.update({
+  id: '/serie',
+  path: '/serie',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SostenerRoute = SostenerRouteImport.update({
@@ -244,6 +265,21 @@ const TratadosSlugRoute = TratadosSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => TratadosRoute,
 } as any)
+const VersiculoIndexRoute = VersiculoIndexRouteImport.update({
+  id: '/versiculo/',
+  path: '/versiculo/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VersiculoSlugRoute = VersiculoSlugRouteImport.update({
+  id: '/versiculo/$slug',
+  path: '/versiculo/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EstudiosSlugGuiaRoute = EstudiosSlugGuiaRouteImport.update({
+  id: '/estudios/$slug_/guia',
+  path: '/estudios/$slug/guia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -266,8 +302,11 @@ export interface FileRoutesByFullPath {
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
   '/pasajes': typeof PasajesRoute
+  '/privacidad': typeof PrivacidadRoute
   '/probad': typeof ProbadRoute
+  '/recibir': typeof RecibirRoute
   '/sello': typeof SelloRoute
+  '/serie': typeof SerieRoute
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
   '/api/voz': typeof ApiVozRoute
@@ -281,10 +320,13 @@ export interface FileRoutesByFullPath {
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
+  '/versiculo/$slug': typeof VersiculoSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
   '/preguntas/': typeof PreguntasIndexRoute
+  '/versiculo/': typeof VersiculoIndexRoute
+  '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -307,8 +349,11 @@ export interface FileRoutesByTo {
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
   '/pasajes': typeof PasajesRoute
+  '/privacidad': typeof PrivacidadRoute
   '/probad': typeof ProbadRoute
+  '/recibir': typeof RecibirRoute
   '/sello': typeof SelloRoute
+  '/serie': typeof SerieRoute
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
   '/api/voz': typeof ApiVozRoute
@@ -322,10 +367,13 @@ export interface FileRoutesByTo {
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
+  '/versiculo/$slug': typeof VersiculoSlugRoute
   '/articulos': typeof ArticulosIndexRoute
   '/estudios': typeof EstudiosIndexRoute
   '/obras': typeof ObrasIndexRoute
   '/preguntas': typeof PreguntasIndexRoute
+  '/versiculo': typeof VersiculoIndexRoute
+  '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -349,8 +397,11 @@ export interface FileRoutesById {
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
   '/pasajes': typeof PasajesRoute
+  '/privacidad': typeof PrivacidadRoute
   '/probad': typeof ProbadRoute
+  '/recibir': typeof RecibirRoute
   '/sello': typeof SelloRoute
+  '/serie': typeof SerieRoute
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
   '/api/voz': typeof ApiVozRoute
@@ -364,10 +415,13 @@ export interface FileRoutesById {
   '/obras/el-siervo': typeof ObrasElSiervoRoute
   '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
+  '/versiculo/$slug': typeof VersiculoSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
   '/preguntas/': typeof PreguntasIndexRoute
+  '/versiculo/': typeof VersiculoIndexRoute
+  '/estudios/$slug_/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -392,8 +446,11 @@ export interface FileRouteTypes {
     | '/objeciones'
     | '/palabra'
     | '/pasajes'
+    | '/privacidad'
     | '/probad'
+    | '/recibir'
     | '/sello'
+    | '/serie'
     | '/sostener'
     | '/tratados'
     | '/api/voz'
@@ -407,10 +464,13 @@ export interface FileRouteTypes {
     | '/obras/el-siervo'
     | '/preguntas/$slug'
     | '/tratados/$slug'
+    | '/versiculo/$slug'
     | '/articulos/'
     | '/estudios/'
     | '/obras/'
     | '/preguntas/'
+    | '/versiculo/'
+    | '/estudios/$slug/guia'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -433,8 +493,11 @@ export interface FileRouteTypes {
     | '/objeciones'
     | '/palabra'
     | '/pasajes'
+    | '/privacidad'
     | '/probad'
+    | '/recibir'
     | '/sello'
+    | '/serie'
     | '/sostener'
     | '/tratados'
     | '/api/voz'
@@ -448,10 +511,13 @@ export interface FileRouteTypes {
     | '/obras/el-siervo'
     | '/preguntas/$slug'
     | '/tratados/$slug'
+    | '/versiculo/$slug'
     | '/articulos'
     | '/estudios'
     | '/obras'
     | '/preguntas'
+    | '/versiculo'
+    | '/estudios/$slug/guia'
   id:
     | '__root__'
     | '/'
@@ -474,8 +540,11 @@ export interface FileRouteTypes {
     | '/objeciones'
     | '/palabra'
     | '/pasajes'
+    | '/privacidad'
     | '/probad'
+    | '/recibir'
     | '/sello'
+    | '/serie'
     | '/sostener'
     | '/tratados'
     | '/api/voz'
@@ -489,10 +558,13 @@ export interface FileRouteTypes {
     | '/obras/el-siervo'
     | '/preguntas/$slug'
     | '/tratados/$slug'
+    | '/versiculo/$slug'
     | '/articulos/'
     | '/estudios/'
     | '/obras/'
     | '/preguntas/'
+    | '/versiculo/'
+    | '/estudios/$slug_/guia'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -516,8 +588,11 @@ export interface RootRouteChildren {
   ObjecionesRoute: typeof ObjecionesRoute
   PalabraRoute: typeof PalabraRoute
   PasajesRoute: typeof PasajesRoute
+  PrivacidadRoute: typeof PrivacidadRoute
   ProbadRoute: typeof ProbadRoute
+  RecibirRoute: typeof RecibirRoute
   SelloRoute: typeof SelloRoute
+  SerieRoute: typeof SerieRoute
   SostenerRoute: typeof SostenerRoute
   TratadosRoute: typeof TratadosRouteWithChildren
   ApiVozRoute: typeof ApiVozRoute
@@ -530,10 +605,13 @@ export interface RootRouteChildren {
   ObrasElParaclitoEternoRoute: typeof ObrasElParaclitoEternoRoute
   ObrasElSiervoRoute: typeof ObrasElSiervoRoute
   PreguntasSlugRoute: typeof PreguntasSlugRoute
+  VersiculoSlugRoute: typeof VersiculoSlugRoute
   ArticulosIndexRoute: typeof ArticulosIndexRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
   ObrasIndexRoute: typeof ObrasIndexRoute
   PreguntasIndexRoute: typeof PreguntasIndexRoute
+  VersiculoIndexRoute: typeof VersiculoIndexRoute
+  EstudiosSlugGuiaRoute: typeof EstudiosSlugGuiaRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -678,6 +756,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PasajesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacidad': {
+      id: '/privacidad'
+      path: '/privacidad'
+      fullPath: '/privacidad'
+      preLoaderRoute: typeof PrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/probad': {
       id: '/probad'
       path: '/probad'
@@ -685,11 +770,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProbadRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/recibir': {
+      id: '/recibir'
+      path: '/recibir'
+      fullPath: '/recibir'
+      preLoaderRoute: typeof RecibirRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sello': {
       id: '/sello'
       path: '/sello'
       fullPath: '/sello'
       preLoaderRoute: typeof SelloRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/serie': {
+      id: '/serie'
+      path: '/serie'
+      fullPath: '/serie'
+      preLoaderRoute: typeof SerieRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sostener': {
@@ -811,6 +910,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratadosSlugRouteImport
       parentRoute: typeof TratadosRoute
     }
+    '/versiculo/': {
+      id: '/versiculo/'
+      path: '/versiculo'
+      fullPath: '/versiculo/'
+      preLoaderRoute: typeof VersiculoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/versiculo/$slug': {
+      id: '/versiculo/$slug'
+      path: '/versiculo/$slug'
+      fullPath: '/versiculo/$slug'
+      preLoaderRoute: typeof VersiculoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/estudios/$slug_/guia': {
+      id: '/estudios/$slug_/guia'
+      path: '/estudios/$slug/guia'
+      fullPath: '/estudios/$slug/guia'
+      preLoaderRoute: typeof EstudiosSlugGuiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -847,8 +967,11 @@ const rootRouteChildren: RootRouteChildren = {
   ObjecionesRoute: ObjecionesRoute,
   PalabraRoute: PalabraRoute,
   PasajesRoute: PasajesRoute,
+  PrivacidadRoute: PrivacidadRoute,
   ProbadRoute: ProbadRoute,
+  RecibirRoute: RecibirRoute,
   SelloRoute: SelloRoute,
+  SerieRoute: SerieRoute,
   SostenerRoute: SostenerRoute,
   TratadosRoute: TratadosRouteWithChildren,
   ApiVozRoute: ApiVozRoute,
@@ -861,10 +984,13 @@ const rootRouteChildren: RootRouteChildren = {
   ObrasElParaclitoEternoRoute: ObrasElParaclitoEternoRoute,
   ObrasElSiervoRoute: ObrasElSiervoRoute,
   PreguntasSlugRoute: PreguntasSlugRoute,
+  VersiculoSlugRoute: VersiculoSlugRoute,
   ArticulosIndexRoute: ArticulosIndexRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
   ObrasIndexRoute: ObrasIndexRoute,
   PreguntasIndexRoute: PreguntasIndexRoute,
+  VersiculoIndexRoute: VersiculoIndexRoute,
+  EstudiosSlugGuiaRoute: EstudiosSlugGuiaRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

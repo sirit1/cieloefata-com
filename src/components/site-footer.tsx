@@ -13,6 +13,7 @@ const columnas = [
       { to: "/tratados", label: "Tratados" },
       { to: "/pasajes", label: "Explorar por pasaje" },
       { to: "/preguntas", label: "¿Qué dice la Biblia sobre…?" },
+      { to: "/versiculo", label: "Versículos clave" },
       { to: "/objeciones", label: "Objeciones" },
       { to: "/articulos", label: "Artículos" },
     ],
@@ -32,11 +33,14 @@ const columnas = [
     titulo: "La casa",
     items: [
       { to: "/obras", label: "Libros" },
+      { to: "/serie", label: "La serie, en orden" },
+      { to: "/recibir", label: "Recibir el capítulo 1" },
       { to: "/nosotros", label: "Nosotros" },
       { to: "/camino", label: "El camino" },
       { to: "/sello", label: "El sello" },
       { to: "/sostener", label: "Sostener" },
       { to: "/buscar", label: "Buscar" },
+      { to: "/privacidad", label: "Privacidad" },
     ],
   },
 ] as const;
