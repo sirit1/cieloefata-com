@@ -2,6 +2,7 @@ import { createFileRoute, notFound, redirect, useRouterState } from "@tanstack/r
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { ConLemas } from "@/components/lema";
+import { Interlineal } from "@/components/interlineal";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
@@ -105,6 +106,7 @@ function StudyPage() {
       <p className="mt-6">
         <LeerCapitulo ref={pasaje} desde={`/estudios/${study.slug}`} />
       </p>
+      <Interlineal slug={study.slug} />
       <div className="mt-10 space-y-6">
         {parrafos.map((para, i) => (
           <p key={i} className="text-lg leading-relaxed">

@@ -1,4 +1,5 @@
 import { ConLemas } from "@/components/lema";
+import { abrirFicha } from "@/lib/ficha-palabra";
 import { strongDe } from "@/lib/strong";
 
 export function LemaStrong({ orig, sense }: { orig: string; sense: string }) {
@@ -14,9 +15,15 @@ export function LemaStrong({ orig, sense }: { orig: string; sense: string }) {
                 <ConLemas>{t}</ConLemas>
               </span>
               {e ? (
-                <span className="mt-1 font-sans text-xs tracking-[0.12em] text-gold uppercase">
+                <button
+                  type="button"
+                  className="strong-btn mt-1 self-start"
+                  aria-haspopup="dialog"
+                  aria-label={`Ficha de ${e.lemma}, Strong ${e.strong}`}
+                  onClick={(ev) => abrirFicha(e.strong, ev.currentTarget)}
+                >
                   {e.strong}
-                </span>
+                </button>
               ) : null}
               {e ? (
                 <span className="mt-0.5 text-sm text-ink-soft">{e.gloss}</span>

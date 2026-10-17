@@ -1,4 +1,5 @@
 import { Term } from "@/components/cite";
+import { abrirFicha } from "@/lib/ficha-palabra";
 import { hallarGlosas } from "@/lib/glosas";
 import { hallarFrasesProsa } from "@/lib/strong-prosa";
 import { ORIGINAL_RE, strongDe, tituloStrong } from "@/lib/strong";
@@ -12,6 +13,23 @@ function langDe(token: string) {
 export function Lema({ token }: { token: string }) {
   const title = tituloStrong(token);
   if (!title) return <span lang={langDe(token)}>{token}</span>;
+  const id = strongDe(token)?.strong;
+  if (id) {
+    // Con número Strong: la palabra abre su ficha (lema, glosa, Strong y dónde aparece).
+    return (
+      <button
+        type="button"
+        className="term"
+        aria-haspopup="dialog"
+        onClick={(e) => abrirFicha(id, e.currentTarget)}
+      >
+        <span lang={langDe(token)}>{token}</span>
+        <span className="glosa-card" role="tooltip">
+          {title}
+        </span>
+      </button>
+    );
+  }
   return (
     <Term title={title}>
       <span lang={langDe(token)}>{token}</span>

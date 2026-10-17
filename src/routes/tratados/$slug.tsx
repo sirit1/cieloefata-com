@@ -4,6 +4,7 @@ import { CierreAula } from "@/components/cierre-aula";
 import { ColofonTratado } from "@/components/colofon-tratado";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
+import { Interlineal } from "@/components/interlineal";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
@@ -72,6 +73,7 @@ function TratadoPage() {
       <p className="mt-6">
         <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />
       </p>
+      <Interlineal slug={tratado.slug} />
       <div className="mt-10 space-y-6">
         {tratado.cuerpo.map((p, i) => (
             <p key={i} className="text-lg leading-relaxed">
