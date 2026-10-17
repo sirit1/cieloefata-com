@@ -16,7 +16,7 @@ export const Route = createFileRoute("/canon")({
       path: "/canon",
       title: tituloSeccion("Canon"),
       description:
-        "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.",
+        "Sesenta y seis libros. Siete secciones recorren el canon. La ley, los profetas y los salmos hablan de Cristo.",
       detalle: ESCRITURA.body[0],
     }),
 });

@@ -37,7 +37,7 @@ function ObrasPage() {
       <p className="mt-5 text-lg">
         <ConLemas>{CORPUS.gate}</ConLemas>
       </p>
-      <p className="kicker mt-8">El oficio · Éfata</p>
+      <p className="kicker mt-8">El método · Éfata</p>
       <p className="mt-4 text-lg">
         <ConLemas>{CORPUS.efata}</ConLemas>
       </p>
@@ -92,7 +92,7 @@ function TomoCard({
       }
     >
       {destacado ? (
-        <p className="font-serif text-lg italic text-gold">La puerta de la casa</p>
+        <p className="font-serif text-lg italic text-gold">Para empezar</p>
       ) : null}
       <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-start">
         <Link
@@ -128,7 +128,7 @@ function TomoCard({
           {obra.crisol ? (
             <p className="mt-3 font-sans text-sm">
               <Link to="/crisol" className="text-link underline">
-                C.R.I.S.O.L. en El Altar del Espejo
+                El método C.R.I.S.O.L. de El altar del espejo
               </Link>
             </p>
           ) : null}
@@ -146,7 +146,7 @@ function TomoCard({
             ) : null}
             {tratado ? (
               <Link to="/tratados/$slug" params={{ slug: tratado.slug }} className="btn btn-ghost">
-                Tratado
+                Tratado: {tratado.title}
               </Link>
             ) : null}
             <LeerCapitulo ref={obra.pasaje} desde={`/obras/${obra.slug}`} companeros={[study?.ref, tratado?.ref]} />

@@ -8,7 +8,7 @@ export type Objecion = {
 };
 
 export const OBJECIONES_INTRO =
-  "Alguien objeta con un versículo que viaja solo. Esta página no inventa réplicas ingeniosas: nombra la objeción honesta y la remite al tratado donde el mismo texto vuelve al capítulo que lo sostiene. Huir al pasaje preferido es otra forma de no oír. Escudriña el tratado; abre la Escritura; deja que el contexto juzgue el lema.";
+  "Muchas veces se cita un versículo sin su contexto para sostener una idea que el texto no enseña. Aquí no buscamos respuestas ingeniosas: nombramos la pregunta honesta y te llevamos al tratado donde ese versículo vuelve a leerse dentro de su capítulo. Lee el tratado, abre la Escritura y deja que el contexto hable.";
 
 export const OBJECIONES: Objecion[] = [
   {
@@ -16,18 +16,18 @@ export const OBJECIONES: Objecion[] = [
     lemma: "«Todo lo puedo» — ¿cheque en blanco?",
     tratadoSlug: "todo-lo-puedo",
     lead:
-      "El «todo» de Pablo es el contentamiento de la cárcel, no el récord del yo. Quien recorta el 13 y deja el 12 se lleva un entrenador y abandona al que fortalece al preso.",
+      "El «todo» de Pablo es el contentamiento de la cárcel, no el récord del yo. Quien se queda con el versículo 13 y deja el 12 se lleva un entrenador y abandona al que fortalece al preso.",
   },
   {
     verse: "Mateo 6:33",
-    lemma: "«Buscad primeramente» — ¿atalaya hacia lo demás?",
+    lemma: "«Buscad primeramente» — ¿palanca para conseguir lo demás?",
     tratadoSlug: "buscad-primeramente",
     lead:
       "Jesús habla a oídos ansiosos, no a una escuela de gestión. El reino no es palanca para que lo demás se añada: el Padre ya sabe, y el afán no se bautiza como piedad.",
   },
   {
     verse: "3 Juan 2",
-    lemma: "«Que prospere tu alma» — ¿factura de salud y caudal?",
+    lemma: "«Que prospere tu alma» — ¿promesa de salud y riqueza?",
     tratadoSlug: "prospere-tu-alma",
     lead:
       "Juan saluda a Gayo. El peso cae sobre el alma que ya camina en la verdad, no sobre la bolsa ni sobre el pulso. La hospitalidad mide el versículo, no la cuenta.",
@@ -37,7 +37,7 @@ export const OBJECIONES: Objecion[] = [
     lemma: "«Las ventanas de los cielos» — ¿inversión con retorno?",
     tratadoSlug: "las-ventanas-de-los-cielos",
     lead:
-      "El profeta acusa a un pueblo que robaba el culto, no firma un contrato de retorno. Las ventanas se abren sobre el alfolí, no sobre el que da para que le devuelvan.",
+      "El profeta acusa a un pueblo que robaba a Dios en los diezmos y las ofrendas, no firma un contrato de retorno. Las ventanas se abren sobre el alfolí, no sobre el que da para que le devuelvan.",
   },
   {
     verse: "Jeremías 29:11",
@@ -65,7 +65,7 @@ export const OBJECIONES: Objecion[] = [
     lemma: "«A este monte» — ¿fórmula contra obstáculos domésticos?",
     tratadoSlug: "a-este-monte",
     lead:
-      "El dicho camina hacia Jerusalén, junto a una higuera seca y un templo juzgado. La fe que no duda se mide por el perdón del 25, no por el capricho que el siglo llama obstáculo.",
+      "El dicho camina hacia Jerusalén, junto a una higuera seca y un templo juzgado. La fe que no duda se mide por el perdón del versículo 25, no por el capricho que el siglo llama obstáculo.",
   },
   {
     verse: "Mateo 18:18–20",

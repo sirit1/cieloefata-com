@@ -21,7 +21,7 @@ export const Route = createFileRoute("/")({
       path: "/",
       title: SITE_TITLE,
       description:
-        "Escuela de lectura de la Escritura. Primero se lee el capítulo entero; aquí se estudia: el método, el estudio de la semana y el tratado del mes.",
+        "Escuela de estudio bíblico de Alejandro Sirit: leer el capítulo entero, estudiarlo con el método V.E.R.D.A.D. y obedecer lo que Dios dice.",
     }),
 });
 
@@ -58,8 +58,8 @@ function Home() {
                 <Motif kind="lion" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Estudios</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
-                  El León nombra los estudios: se recorre un pasaje entero, se oye la cadena
-                  V.E.R.D.A.D. y se sale con un solo acto para esta semana.
+                  Un pasaje completo, estudiado con el método V.E.R.D.A.D., hasta un paso
+                  concreto de obediencia.
                 </span>
               </Link>
             </li>
@@ -68,8 +68,8 @@ function Home() {
                 <Motif kind="lamb" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Tratados</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
-                  El Cordero nombra los tratados: el versículo citado de memoria vuelve al
-                  capítulo que lo sostiene, hasta que la jactancia se calle.
+                  Versículos muy citados, y a menudo sacados de contexto, leídos otra vez dentro
+                  de su capítulo.
                 </span>
               </Link>
             </li>
@@ -78,8 +78,8 @@ function Home() {
                 <Motif kind="flame" decorative />
                 <span className="mt-4 font-serif text-2xl group-hover:text-gold">Cómo leer</span>
                 <span className="mt-3 leading-relaxed text-ink-soft">
-                  El Fuego nombra el método: el Espíritu abre el oído; por consiguiente, la cadena
-                  no se recita como talismán, sino de rodillas.
+                  El método V.E.R.D.A.D.: seis pasos para leer la Biblia con atención, humildad y
+                  oración, no como una fórmula.
                 </span>
               </Link>
             </li>
@@ -134,8 +134,8 @@ function Home() {
           <div className="max-w-[40em]">
             <h2 className="font-serif text-3xl">Sesenta y seis libros</h2>
             <p className="mt-6 text-lg">
-              Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo, y
-              el que los recorre no colecciona frases: oye a una Persona.
+              Siete secciones recorren la Biblia. La ley, los profetas y los salmos hablan de Cristo, y
+              quien los lee no colecciona frases: conoce a una Persona.
             </p>
             <Refs refs="Lc. 24:44–45" />
           </div>
@@ -163,7 +163,7 @@ function Home() {
             <p className="mt-6 text-lg">
               <ConLemas>{CORPUS.gate}</ConLemas>
             </p>
-            <p className="kicker mt-8">El umbral · Éfata</p>
+            <p className="kicker mt-8">El método · Éfata</p>
             <p className="mt-4 text-lg">
               <ConLemas>{CORPUS.efata}</ConLemas>
             </p>

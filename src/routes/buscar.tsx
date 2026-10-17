@@ -14,9 +14,9 @@ export const Route = createFileRoute("/buscar")({
       path: "/buscar",
       title: tituloSeccion("Buscar"),
       description:
-        "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.",
+        "Busca por pasaje o por tema en los estudios bíblicos, los tratados y las respuestas a versículos sacados de contexto en Cielo Efata.",
       detalle:
-        "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda.",
+        "Busca entre los estudios, los tratados y las respuestas a versículos sacados de contexto. Escribe un pasaje —por ejemplo, Filipenses 4:13 o Isaías 53— o un tema.",
     }),
   component: BuscarPage,
 });
@@ -35,12 +35,11 @@ function BuscarPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
-      <p className="kicker">El índice de la casa</p>
+      <p className="kicker">Buscar en Cielo Efata</p>
       <h1 className="mt-2 font-serif text-4xl">Buscar por pasaje o tema</h1>
       <p className="mt-6 text-lg leading-relaxed">
-        No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios,
-        tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías
-        53— o un lema que viaja solo. El índice señala; el capítulo manda.
+        Busca entre los estudios, los tratados y las respuestas a versículos sacados de
+        contexto. Escribe un pasaje —por ejemplo, Filipenses 4:13 o Isaías 53— o un tema.
       </p>
       <form
         className="mt-8"
@@ -67,7 +66,7 @@ function BuscarPage() {
         </p>
       ) : (
         <p className="mt-6 font-sans text-sm text-ink-soft">
-          Escribe al menos dos letras. El índice no inventa un resultado.
+          Escribe al menos dos letras para buscar.
         </p>
       )}
       <ul className="mt-8 divide-y divide-rule border-y border-rule">

@@ -4,10 +4,10 @@ export const school = {
   name: "Cielo Efata",
   tagline: "La Escritura manda sobre el comentario.",
   confession: "Confesión, conversión y firmeza",
-  lead: "La Escritura tiene la última palabra. Lo demás —el comentario, el método, el predicador de moda— se sienta atrás, y se sienta de rodillas.",
+  lead: "La Escritura tiene la última palabra. Todo lo demás —el comentario, el método, el predicador de moda— va detrás, con humildad.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Casa de estudio bíblico dirigida por Alejandro Sirit. Nueve libros y el Método V.E.R.D.A.D.: se estudia el capítulo entero, y el comentario se sienta atrás. El texto no se recorta, no se adorna, no se sustituye.",
+    "Escuela de estudio bíblico dirigida por Alejandro Sirit. Nueve libros y el método V.E.R.D.A.D. para estudiar el capítulo entero, sin recortar, adornar ni sustituir el texto.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Alejandro Sirit",
   welcome:
@@ -24,10 +24,10 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Los libros",
-  gate: "Este corpus teológico, forjado por Alejandro Sirit bajo el sello de Editorial Cielo Efata, no es una colección de manuales de autoayuda. Son nueve libros forjados para someter el intelecto a la Escritura y derribar la religión de consumo. Sin embargo, el arma no es el tono; es el capítulo entero, leído de rodillas, con el método que Éfata entrega y que los satélites aplican sin convertirlo en ídolo.",
+  gate: "Nueve libros de Alejandro Sirit, publicados por Editorial Cielo Efata. No son manuales de autoayuda: son libros para leer la Escritura entera, someter el pensamiento a lo que Dios dice y dejar atrás la religión de consumo.",
   efata:
-    "Éfata es el libro donde se aprende el oficio. En él Alejandro Sirit entregó el Método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— para extirpar la versiculitis y devolver el oído al capítulo entero. Por consiguiente, no es un lema de marca, sino el cauce por el que se estudia en esta escuela. Quien entra por Éfata no colecciona un título: recibe el oficio.",
-  line: "Los nueve son libros, no artículos de un portal ni descargas de consuelo. El orden de publicación no es el de lectura. Se entra por el Pórtico, que recorre los sesenta y seis libros como una sola historia; en Éfata se aprende a leer el capítulo entero, y solo después se habla. El orden de lectura —no el de publicación— es: I Pórtico a la Escritura; II Éfata; III El Siervo, no tú; IV Bástate («Bástate mi gracia»); V Cuando el cielo se cae; VI El altar del espejo; VII De una misma boca; VIII Diákrisis; IX Nunca tocarás mi fe. Diákrisis enseña a discernir cuando el oído ya se abrió; el testimonio cierra la serie debajo del texto. Cada tapa se abre junto al capítulo que la sostiene.",
+    "En Éfata, Alejandro Sirit presenta el método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión—, una manera de leer que cura la versiculitis y devuelve cada versículo a su capítulo. Es el método con el que se estudia en esta escuela.",
+  line: "Te sugerimos leerlos en este orden, que no es el de publicación: I Pórtico a la Escritura, que recorre los sesenta y seis libros como una sola historia; II Éfata, donde se aprende a leer el capítulo entero; III El Siervo, no tú; IV Bástate; V Cuando el cielo se cae; VI El altar del espejo; VII De una misma boca; VIII Diákrisis, sobre el discernimiento; y IX Nunca tocarás mi fe, un testimonio que cierra la serie. Cada libro se lee junto al capítulo de la Biblia en que se apoya.",
   refs: "Mr. 7:34 · 2 Ti. 2:15 · 2 Co. 12:9",
 };
 
@@ -48,8 +48,8 @@ export const bible = {
     },
     {
       k: "Tres lenguas",
-      v: "Hebreo y arameo en la primera alianza. Griego en la segunda. El diccionario sirve al pasaje; no lo predica. El que abre el léxico antes de abrir el capítulo deja que una glosa hable por Dios.",
-      ref: "Hch. 2:8–11",
+      v: "Hebreo en casi todo el Antiguo Testamento, arameo en algunas partes de Daniel y Esdras, y griego en el Nuevo. El diccionario sirve al pasaje; no lo reemplaza. Quien abre el léxico antes de leer el capítulo deja que una definición hable en lugar de Dios.",
+      ref: "Dn. 2:4",
     },
     {
       k: "Se lee el pasaje",
@@ -86,15 +86,15 @@ export const canonDoors = [
     name: "Historia",
     span: "Josué — Ester",
     author: "Profetas y escribas",
-    line: "El pueblo en la tierra: fidelidad y caída, jueces y reyes, exilio y vuelta. Ninguna palabra de Jehová cayó a tierra, aunque el pueblo sí cayó.",
-    link: "Jos. 21:45 sostiene a 2 Co. 1:20: las promesas son sí en Cristo. El trono de David no se apaga; el Mesías lo hereda.",
+    line: "El pueblo en la tierra: fidelidad y caída, jueces y reyes, exilio y vuelta. No faltó ninguna de las buenas promesas de Jehová, aunque el pueblo sí faltó.",
+    link: "Jos. 21:45 sostiene a 2 Co. 1:20: las promesas son sí en Cristo. El trono de David no se extingue; el Mesías lo hereda.",
     ref: "Jos. 21:45",
   },
   {
     name: "Escritos",
     span: "Job — Cantar",
     author: "David, Salomón, y otros",
-    line: "Lamento, sabiduría, alabanza, temor de Jehová. El justificado medita de día y de noche, y el abandonado clama antes de que el Pastor le lleve por el valle.",
+    line: "Lamento, sabiduría, alabanza, temor de Jehová. El bienaventurado medita en la ley de Jehová de día y de noche, y el que se siente abandonado clama a Dios antes de cantar que Jehová es su pastor.",
     link: "Sal. 22 es la cruz antes de la cruz; el Señor la toma en Mt. 27:46. El «yo» del salmo no es autobiografía del lector.",
     ref: "Sal. 1:2",
   },
@@ -110,7 +110,7 @@ export const canonDoors = [
     name: "Evangelios",
     span: "Mateo — Juan",
     author: "Mateo, Marcos, Lucas, Juan",
-    line: "Jesucristo: vida, muerte, resurrección. Cuatro testigos, un Señor. El reino se acerca con dos verbos, y el Verbo planta tabernáculo en carne.",
+    line: "Jesucristo: vida, muerte, resurrección. Cuatro testigos, un Señor. Jesús llama a arrepentirse y creer, y el Verbo hecho carne habita entre nosotros.",
     link: "Jn. 20:31 da el fin del libro: para que creáis, y creyendo tengáis vida. Mr. 7:34 abre el oído. Lc. 1:1–4 investiga para que Teófilo conozca la verdad.",
     ref: "Jn. 20:31",
   },
@@ -118,7 +118,7 @@ export const canonDoors = [
     name: "Iglesia",
     span: "Hechos — Judas",
     author: "Lucas, Pablo, Santiago, Pedro, Juan, Judas",
-    line: "El Espíritu, las cartas, el permanecer. La iglesia persevera en la doctrina de los apóstoles, y la fe que no obra se oye muerta en el espejo de Santiago.",
+    line: "El Espíritu, las cartas, el permanecer. La iglesia persevera en la doctrina de los apóstoles, y Santiago advierte que la fe sin obras está muerta.",
     link: "Hch. 2:42 es el ritmo. Ro. 1:16 es el evangelio que no se avergüenza. Stg. 1:22 impide que el estudio se quede en la cabeza.",
     ref: "Hch. 2:42",
   },
@@ -127,7 +127,7 @@ export const canonDoors = [
     span: "Apocalipsis",
     author: "Juan",
     line: "El León de Judá es el Cordero inmolado. Cielo nuevo, tierra nueva. El que abre el libro es el que fue degollado, y el llanto de Juan termina cuando el rollo cambia de manos.",
-    link: "Ap. 5:5–6: el León de Judá es el Cordero inmolado. Ap. 21:5: he aquí, yo hago nuevas todas las cosas. El sello de esta casa es este capítulo, no un adorno.",
+    link: "Ap. 5:5–6: el León de Judá es el Cordero inmolado. Ap. 21:5: he aquí, yo hago nuevas todas las cosas. El sello de esta casa sale de este capítulo.",
     ref: "Ap. 5:5–6",
   },
 ] as const;
@@ -205,7 +205,7 @@ export const obras: Obra[] = [
     seoTitle: "Pórtico a la Escritura: los 66 libros de la Biblia | Alejandro Sirit",
     seoDescription:
       "Un manual para leer los sesenta y seis libros de la Biblia como una sola historia: de dónde viene cada libro, qué dice entero y hacia quién apunta.",
-    line: "La historia es una. Empieza con un Dios que habla, y las cosas son; sigue por un pueblo que olvida y es guardado, y llega a un Hijo que camina, muere y resucita. Este libro es la puerta de la casa: se entra por los sesenta y seis, y no se sale con un versículo suelto en el bolsillo.",
+    line: "La historia es una. Empieza con un Dios que habla, y las cosas son; sigue por un pueblo que olvida y es guardado, y llega a un Hijo que camina, muere y resucita. Este libro es la puerta de entrada: recorre los sesenta y seis libros para que no te quedes con versículos sueltos.",
     thesis:
       "Pórtico a la Escritura acompaña al lector por los sesenta y seis libros de la Biblia como por una sola casa: de dónde viene cada libro, qué dice entero y hacia quién apunta. No es un plan de un año ni un diario. Es un pórtico, para el creyente que quiere leer la Biblia entera sin perderse, para el maestro que enseña en la iglesia y para quien sospecha que ha estado coleccionando versículos sin oír la historia que los sostiene.",
     sample:
@@ -225,9 +225,9 @@ export const obras: Obra[] = [
     seoTitle: "Éfata: La Escritura Abierta, Marcos 7 | Alejandro Sirit",
     seoDescription:
       "Marcos 7:31–37 en cuarenta estaciones: el sordo de Decápolis, traído por otros, abierto por Cristo. Deja de coleccionar versículos y aprende a oír a Dios.",
-    line: "En la Decápolis le trajeron a Jesús un sordo y tartamudo. No vino él. El Señor lo apartó de la gente, miró al cielo, gimió y le dijo: Éfata. Este libro camina esa hora de un solo tirón y no convierte la orden en una tarjeta: quien lo cierra no se lleva un método, se queda bajo la palabra.",
+    line: "En la Decápolis le trajeron a Jesús un sordo y tartamudo. No vino él. El Señor lo apartó de la gente, miró al cielo, gimió y le dijo: Éfata. Este libro recorre esa hora sin prisa y no convierte la palabra de Jesús en un lema: quien lo termina no se lleva solo un método, sino que queda bajo la Palabra.",
     thesis:
-      "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones y cinco partes: lo traen, Éfata, a quién oyó, la casa, permanece. El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído. Pero el oído abierto puede volver a cerrarse, y por eso el camino sigue: el Padre que habló desde el principio, el Hijo de quien eran esas manos, el Espíritu que no se confunde con una técnica, y el oficio de oír la Escritura entera sin arrancarle una frase. La guía queda al final, para el que regresa.",
+      "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones y cinco partes: «Lo traen», «Éfata», «A quién oyó», «La casa» y «Permanece». El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído. Pero el oído abierto puede volver a cerrarse, y por eso el camino sigue: el Padre que habló desde el principio, el Hijo de quien eran esas manos, el Espíritu que no se confunde con una técnica, y el oficio de oír la Escritura entera sin arrancarle una frase. Al final incluye una guía para volver a leerlo.",
     sample:
       "No es un diario ni un plan de semanas. Es una sola historia en cuarenta estaciones. El hombre que Marcos no nombra no camina hacia Jesús por su virtud; otros lo ponen delante. La palabra la dice el Hijo, y al momento se abre el oído.",
     ref: "Mr. 7:34–35",
@@ -245,11 +245,11 @@ export const obras: Obra[] = [
     seoTitle: "El Siervo, no tú: Isaías 53:5 | Alejandro Sirit",
     seoDescription:
       "Isaías 53:5 y el Siervo herido por nuestras rebeliones. Alejandro Sirit presenta la cruz como sacrificio sustitutivo, no como autoexpiación.",
-    line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. Isaías vio al Siervo herido por nuestras rebeliones; nosotros éramos. Por tanto, este libro rehúsa la autoexpiación piadosa: el justo muere por los injustos, y el lector no se sube al versículo como si fuera el Siervo.",
+    line: "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, gobernador, acusación y sangre. Isaías vio al Siervo herido por nuestras rebeliones. Este libro rechaza la autoexpiación piadosa: el justo muere por los injustos, y el lector no ocupa el lugar del Siervo.",
     thesis:
-      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este libro rehúsa la autoexpiación piadosa y recablear la cruz como ejemplo sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
+      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, gobernador, acusación y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros. Este libro rechaza la autoexpiación piadosa y la idea de una cruz que solo sirve de ejemplo, sin sustitución. El justo muere por los injustos, para llevarnos a Dios. Quien predica un amor que no lleva rebelión ha cambiado de Siervo, y el lector no se sube al versículo como si fuera él.",
     sample:
-      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, prefecto, cargo y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros.",
+      "El Gólgota no es un emblema de resiliencia ni un «código» para imitar la cruz como marca personal. Tiene lugar, gobernador, acusación y sangre. El Siervo fue herido por nuestras rebeliones; Jehová cargó en él el pecado de todos nosotros.",
     ref: "Is. 53:5 · 1 P. 3:18",
     pasaje: "Isaías 53",
     studySlug: "isaias-53",
@@ -269,7 +269,7 @@ export const obras: Obra[] = [
       "Qué significa «Bástate mi gracia»: Alejandro Sirit lee 2 Corintios 12:9-10, donde la gracia sostiene y el poder de Cristo se perfecciona en la debilidad.",
     line: "«Bástate mi gracia.» El lector recibe la palabra dicha a Pablo en la flaqueza: el poder se perfecciona donde ya no se puede. El aguijón permanece; el Señor también.",
     thesis:
-      "Bástate es el séptimo, no un satélite ni un epílogo piadoso. A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa, sino sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
+      "A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa, sino sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas, para que el poder de Cristo more en él. El aguijón permanece; el Señor también.",
     sample:
       "A Pablo le fue dicho: bástate mi gracia, porque mi poder se perfecciona en la debilidad. El que ya no puede no es despedido de la casa, sino sostenido. La gracia no es un adorno del fuerte ni un consuelo genérico; es el poder del que aprendió a gloriarse en las flaquezas.",
     ref: "2 Co. 12:9",
@@ -286,16 +286,14 @@ export const obras: Obra[] = [
     seoTitle: "Cuando el cielo se cae: Job 42:5 | Alejandro Sirit",
     seoDescription:
       "Una lectura de Job 42:5-6 sobre el sufrimiento, el lamento y el encuentro con Dios. Alejandro Sirit no ofrece respuestas rápidas, sino la presencia del Señor.",
-    line: "El lector recibe un lamento que no se recablea para que duela menos. Job no obtiene un manual: obtiene a Dios en el valle.",
+    line: "Un libro sobre el lamento, sin fórmulas para que duela menos. Job no recibe un manual: recibe a Dios en medio del dolor.",
     thesis:
-      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos. Este libro enseña a llorar sin apostatar, y a no convertir el lamento en un ídolo de la queja. El «tú» llega en el valle: el Pastor no niega la sombra; la atraviesa con el que clama.",
+      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Por la misericordia de Jehová no hemos sido consumidos. Este libro enseña a llorar sin apostatar, y a no convertir el lamento en un ídolo de la queja. El Pastor no niega el valle de sombra: lo atraviesa junto al que clama.",
     sample:
-      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Las misericordias de Jehová son la causa de no ser consumidos.",
+      "Hay dolores que no se explican para que duelan menos, y hay teologías que pecan de prisa cuando convierten el valle en un taller de sentido. Job no recibe un manual; recibe a Dios. Por la misericordia de Jehová no hemos sido consumidos.",
     ref: "Job 42:5–6 · Lm. 3:22–23",
     pasaje: "Job 42",
     studySlug: "",
-    studyNote:
-      "No hay aún una clase de Job en el aula. El lamento se oye en este libro, junto al capítulo.",
     isbnPrint: "9798176466690",
   },
   {
@@ -308,9 +306,9 @@ export const obras: Obra[] = [
     seoTitle: "El altar del espejo: Santiago 1:23-25 | Alejandro Sirit",
     seoDescription:
       "Santiago 1 contado como una sola historia: un hombre delante de un cristal, el culto de sí mismo y el que se queda mirando la ley perfecta de la libertad.",
-    line: "Hay un hombre delante de un espejo. Santiago lo puso ahí sin oficio ni nombre, para que el lector no pueda mirarlo como a otro. Este libro camina su culto de sí mismo, la fama, el poder, las posesiones y el lugar entre los otros, hasta que el cristal deja de ser altar.",
+    line: "Hay un hombre delante de un espejo. Santiago lo puso ahí sin oficio ni nombre, para que el lector no pueda mirarlo como a otro. Este libro acompaña su culto a sí mismo —la fama, el poder, las posesiones, el lugar entre los demás— hasta que el espejo deja de ser altar.",
     thesis:
-      "Esto es una historia, no un canto y no un comentario. El principio es un hombre delante de un cristal; entre el principio y el fin hay un culto, el de sí mismo, que toma forma de fama, de poder, de posesiones y de pertenencia. El libro no adelanta el desenlace ni convierte la carta en lema, porque el que oye el fin antes de caminar se lleva la frase y deja al hombre. Santiago entero, desde la salutación del siervo a las doce tribus, pone al lector al lado de ese varón, hasta que el mundo pasa, el cristal no se pule y el Señor se vuelve.",
+      "Esto es una historia, no un canto y no un comentario. El principio es un hombre delante de un cristal; entre el principio y el fin hay un culto, el de sí mismo, que toma forma de fama, de poder, de posesiones y de pertenencia. El libro no adelanta el desenlace ni convierte la carta en lema, porque el que oye el fin antes de caminar se lleva la frase y deja al hombre. Santiago entero, desde el saludo a las doce tribus, pone al lector al lado de ese hombre, hasta que deja de mirarse a sí mismo y se vuelve al Señor.",
     sample:
       "Hay un hombre delante de un espejo. Santiago lo puso ahí. No le dio oficio, ni infancia, ni un nombre que pudieras usar para no ser tú el que está mirando. Lo dejó como deja una carta a las doce tribus: un varón, un cristal, un rostro.",
     ref: "Stg. 1:22–25",
@@ -332,7 +330,7 @@ export const obras: Obra[] = [
       "Santiago 3 como una sola historia: la boca que confesó a Jesús como Señor y el mismo día maldice. La lengua que ningún hombre doma y la fuente nueva.",
     line: "Un hombre sin nombre ha confesado esta mañana con su boca que Jesús es el Señor. Este libro se queda a su lado el resto del día, mientras la misma boca quiere la primera palabra, ofende, arde y descubre que ningún hombre puede domar la lengua.",
     thesis:
-      "La confesión de Romanos 10:9 abre la puerta, y Santiago 3 cuenta lo que esa misma boca hace cuando el día avanza. Once estaciones, de los maestros al fuego, de ningún hombre a la fuente y a la sabiduría de arriba, sin entregar el fin en la primera página. El libro no enseña una técnica para callar ni un dominio que se compre con disciplina: la lengua no figura entre las naturalezas que el hombre doma. De una misma boca proceden bendición y maldición, y la fuente no da agua dulce y amarga; solo otra fuente cambia lo que mana.",
+      "La confesión de Romanos 10:9 abre la puerta, y Santiago 3 cuenta lo que esa misma boca hace cuando el día avanza. Son once estaciones: de los maestros al fuego de la lengua, de la lengua que nadie doma a la fuente y a la sabiduría de lo alto. El libro no enseña una técnica para callar ni un dominio que se compre con disciplina: la lengua no figura entre las naturalezas que el hombre doma. De una misma boca proceden bendición y maldición, y ninguna fuente echa agua dulce y amarga; solo una fuente nueva cambia lo que brota.",
     sample:
       "Hay un hombre sin nombre que esta mañana ha confesado con la boca que Jesús es el Señor. No le fabrico casa, ni oficio, ni herida: te pido que te quedes a su lado mientras el día avanza y la misma boca hace lo que Santiago 3 dice.",
     ref: "Stg. 3:10–12 · Ro. 10:9",
@@ -350,7 +348,7 @@ export const obras: Obra[] = [
     seoTitle: "Diákrisis: discernimiento bíblico, 1 Juan 4:1 | Alejandro Sirit",
     seoDescription:
       "Probad los espíritus si son de Dios. Alejandro Sirit expone el discernimiento bíblico y el Método P.R.O.B.A.D. en seis niveles, con casos y doce semanas.",
-    line: "«Amados, no creáis a todo espíritu, sino probad los espíritus si son de Dios.» Una época que ha hecho de la tolerancia indiscriminada su virtud más alta ha anestesiado también a la iglesia. Este libro devuelve el juicio santo que la Escritura manda: no la opinión ni la sospecha, sino el discernimiento que separa lo verdadero de lo que solo se le parece.",
+    line: "«Amados, no creáis a todo espíritu, sino probad los espíritus si son de Dios» (1 Juan 4:1). Una época que ha hecho de la tolerancia indiscriminada su virtud más alta ha anestesiado también a la iglesia. Este libro devuelve el juicio santo que la Escritura manda: no la opinión ni la sospecha, sino el discernimiento que separa lo verdadero de lo que solo se le parece.",
     thesis:
       "La primera parte asienta el fundamento: el vocabulario bíblico del juicio, el «juzgad con justo juicio» de Juan 7:24, los sentidos ejercitados de Hebreos 5, la doctrina como primera frontera y el carácter frente al carisma. La segunda expone el Método P.R.O.B.A.D. en seis niveles: la Palabra escudriñada, la Regla de Cristo, la Opción excelente, lo Bueno retenido, el Autoexamen y la Distinción del siglo. La tercera es un gimnasio: taller, casos resueltos y doce semanas de entrenamiento.",
     sample:
@@ -369,7 +367,7 @@ export const obras: Obra[] = [
     seoTitle: "Nunca tocarás mi fe: Efesios 2:8 | Alejandro Sirit",
     seoDescription:
       "Un testimonio puesto debajo del texto: la fe que salva es don de Dios, no hazaña. Alejandro Sirit cuenta un grito dirigido al maligno, sin espectáculo.",
-    line: "«Nunca tocarás mi fe» fue un grito dirigido al maligno, no una oración ni un lema de victoria. Lo cuenta quien lo gritó. Antes de esa vida queda en pie la Escritura: por gracia sois salvos por medio de la fe, y esto no de vosotros, pues es don de Dios.",
+    line: "«Nunca tocarás mi fe» fue un grito dirigido al maligno, no una oración ni un lema de victoria. Lo cuenta quien lo gritó, y lo pone debajo de la Escritura: «por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios» (Efesios 2:8).",
     thesis:
       "El grito no salvó a nadie. La fe que salva es don, no hazaña; y la que un hombre aprieta en la mano cuando ya no le queda otra posesión es otra cosa, que el libro nombra sin confundirla con la primera. No hay aquí escenas adornadas ni nombres expuestos, ni una herida convertida en espectáculo. Hay un testimonio puesto debajo del texto, para que el título no mande y la gracia baste.",
     sample:
@@ -403,7 +401,7 @@ export const words = [
     lemma: "μετάνοια",
     gloss: "arrepentimiento, cambio de mente",
     strong: "G3341",
-    passages: ["Marcos 1:15", "Hechos 2:38", "2 Corintios 7:10"],
+    passages: ["Marcos 1:4", "Hechos 20:21", "2 Corintios 7:10"],
   },
   {
     lemma: "ἄνωθεν",
@@ -427,7 +425,7 @@ export const words = [
     lemma: "עֶבֶד",
     gloss: "siervo",
     strong: "H5650",
-    passages: ["Isaías 52:13", "Isaías 53:11", "Filipenses 2:7"],
+    passages: ["Isaías 42:1", "Isaías 52:13", "Isaías 53:11"],
   },
   {
     lemma: "δικαιοσύνη",
@@ -439,7 +437,7 @@ export const words = [
     lemma: "ποιμήν",
     gloss: "pastor",
     strong: "G4166",
-    passages: ["Salmo 23:1", "Juan 10:11", "1 Pedro 5:4"],
+    passages: ["Juan 10:11", "Hebreos 13:20", "1 Pedro 5:4"],
   },
 ] as const;
 

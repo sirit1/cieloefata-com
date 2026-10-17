@@ -77,7 +77,7 @@ export function Adquirir({
           target="_blank"
           className="btn btn-ghost"
         >
-          Solicitar pack por WhatsApp
+          Solicitar este libro (WhatsApp)
         </a>
       ) : null}
     </div>

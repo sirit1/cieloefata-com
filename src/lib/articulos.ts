@@ -2,7 +2,7 @@
  * Artículos de la casa. Cada uno nace del material que el sitio ya tiene sobre su pasaje
  * (aquí, el estudio de Santiago 1 y el tratado El crisol de lo oído).
  * Las citas, entre asteriscos, siguen la Reina-Valera 1960.
- * Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960 es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia.
+ * Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960® es una marca registrada de Sociedades Bíblicas Unidas, y se puede usar solamente bajo licencia.
  */
 export const DESCRIPCION_ARTICULOS =
   "Artículos de Alejandro Sirit sobre un pasaje entero de la Escritura, escritos desde los estudios, tratados y obras de la casa, con la Reina-Valera 1960.";

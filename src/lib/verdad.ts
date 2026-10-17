@@ -8,7 +8,7 @@ export const VERDAD_ORIGEN = {
   subtitulo: "El Método V.E.R.D.A.D. para escudriñar, comprender y encarnar la mente de Dios",
   quien: `El Método V.E.R.D.A.D. es de ${school.director}. Lo forjó para Cielo Efata. No nace como vanidad intelectual ni como mercadotecnia religiosa: nace de un lamento. Durante generaciones se ha hecho creer al pueblo de Dios que debe escoger entre la piedad ardiente pero ignorante y la erudición técnica pero gélida. Las Escrituras no ofrecen esa dicotomía. La doctrina más profunda produce la doxología más encendida.`,
   investigacion: [
-    "El tratado Éfata: La Escritura Abierta no inventa doctrinas. Ordena lo que los fieles siempre hicieron cuando leían de rodillas: ver el párrafo, situarlo, oír las palabras, dejar que el canon hable, contender con la objeción, y morir a lo que el texto ha desnudado. Calvino, Owen, Lightfoot no se reemplazan. Se les devuelve lo que daban por sentado: que la Escritura es un discurso, no un mosaico; que Dios exhala un consejo completo; que el versículo suelto es un oráculo fabricado.",
+    "El libro Éfata: La Escritura Abierta no inventa doctrinas. Ordena lo que los fieles siempre hicieron cuando leían de rodillas: ver el párrafo, situarlo, oír las palabras, dejar que el canon hable, contender con la objeción, y morir a lo que el texto ha desnudado. Calvino, Owen, Lightfoot no se reemplazan. Se les devuelve lo que daban por sentado: que la Escritura es un discurso, no un mosaico; que Dios exhala un consejo completo; que el versículo suelto es un oráculo fabricado.",
     "La investigación recorrió los métodos y los examinó. Del inductivo (Traina, Hendricks) se toma el ojo: observación minuciosa, el texto antes del capricho. Del gramático-histórico, el esqueleto: sensus literalis, filología, analogía antecedente. De la tríada de Köstenberger, el mapa de historia, literatura y teología. Del redentivo-histórico (Vos, Beale), la columna: el canon como organismo y Cristo como scopus. De la elénctica de Turretin, la forma del Argumento: status quaestionis, distingos, fontes, reductio. Del aparato crítico, el siervo de las variantes. Se deja SOAP como método. Se deja el quadriga y la lectio divina. Se deja el naturalismo que bautiza la duda.",
     "El mal que el método extirpa tiene nombre: versiculitis. Extraer una unidad delimitada por la numeración tardía de Estienne (1551) y desgajarla del párrafo, del pacto y del canon. Un texto fuera de su contexto se convierte en pretexto. Filipenses 4:13, leído sin la cárcel y sin el contentamiento, se vuelve cheque en blanco. David y Goliat, leídos sin el Ungido, se vuelven recetario de autoafirmación. V.E.R.D.A.D. no es un noveno puesto en la feria de técnicas. Ata lo que debía estar atado.",
   ],
@@ -113,7 +113,7 @@ export const VERDAD_PASOS = [
     d: "D2",
     pregunta: "¿Qué acto o confesión, uno solo, pide el indicativo de este texto?",
     regla: "La teología que no culmina de rodillas es aberración. El indicativo gobierna el imperativo.",
-    body: "Doxología y obediencia. Sin esto, la cadena es un cadáver erudito. Una obediencia o una confesión para esta semana, dicha a alguien. Queda prohibido un «hoy muero a…» que el pasaje no conjuga. Si el verbo es «se despojó», se habla de despojo. Si el verbo es «fueron abiertos», se pide oído. C.R.I.S.O.L. —expuesto en El Altar del Espejo— es la compuerta pastoral de este eslabón, no un método rival. La teología que no culmina de rodillas es aberración, porque el indicativo gobierna el imperativo, y no al revés.",
+    body: "Doxología y obediencia. Sin esto, la cadena es un cadáver erudito. Una obediencia o una confesión para esta semana, dicha a alguien. Queda prohibido un «hoy muero a…» que el pasaje no conjuga. Si el verbo es «se despojó», se habla de despojo. Si el verbo es «fueron abiertos», se pide oído. C.R.I.S.O.L. —expuesto en El Altar del Espejo— es el filtro pastoral de este paso, no un método rival. La teología que no culmina de rodillas es aberración, porque el indicativo gobierna el imperativo, y no al revés.",
     riesgo: "Siete propósitos. O ninguno. Moralismo sin Cristo, o doctrina sin rodilla.",
     clasico: "Santiago 1:22. El último eslabón no es el aplauso, sino la rodilla.",
     marcos:
@@ -136,11 +136,11 @@ export const ANATOMIA = [
 export const ESTUDIO_Y_TRATADO = {
   title: "Tres oficios, un solo tratado",
   estudio:
-    "El discípulo lee para ser desarmado. Recorre los seis eslabones con lentitud, un pasaje a la vez —eso es el estudio de la semana—. Su acto no es publicar, sino obedecer. Si al cabo de un mes no ha confesado un pecado concreto, no ha leído: ha coleccionado frases. El que empieza no recorre las seis con la densidad del ensayo: oye, pregunta, un acto. Las seis esperan enteras en el aula.",
+    "El discípulo lee para ser desarmado. Recorre los seis eslabones con lentitud, un pasaje a la vez —eso es el estudio de la semana—. Su meta no es publicar, sino obedecer. Si al cabo de un mes no ha confesado un pecado concreto, no ha leído: ha coleccionado frases. Quien empieza no necesita recorrer los seis pasos con la profundidad de un ensayo: basta oír el pasaje, hacerle preguntas y salir con un paso concreto. Los estudios del sitio recorren los seis completos.",
   tratado:
-    "El tratado —Éfata es el de este método— es el ensayo largo. El pastor lee para alimentar al rebaño sin adulterar el pienso: no predica lo que aún no ha observado, situado, desentrañado, calibrado y defendido. El maestro lee para formar a otros en el mismo oído: corregirá el salto prematuro a la aplicación y se negará a certificar como «estudio bíblico» cualquier ejercicio que omita la filología, el entorno o la doctrina. El ensayo sirve al capítulo. No lo sustituye.",
+    "El libro —Éfata, en el caso de este método— es el desarrollo largo. El pastor lee para alimentar al rebaño sin adulterar el pienso: no predica lo que aún no ha observado, situado, desentrañado, calibrado y defendido. El maestro lee para formar a otros en el mismo oído: corregirá el salto prematuro a la aplicación y se negará a certificar como «estudio bíblico» cualquier ejercicio que omita la filología, el entorno o la doctrina. El ensayo sirve al capítulo. No lo sustituye.",
   noEs:
-    "Ninguno de los dos es SOAP, ni lectio, ni devocional de versículo-amuleto. El estudio no es un tratado breve. El tratado no es un estudio inflado. Uno es la clase. El otro es el yunque. Los laboratorios del libro —Génesis 3, Salmo 22, Isaías 53, Marcos 7, Filipenses 2, Apocalipsis 5— se recorren después de poseer el método, no en lugar del método.",
+    "Ninguno de los dos es SOAP, ni lectio, ni devocional de versículo-amuleto. El estudio no es un tratado breve. El tratado no es un estudio inflado. Uno es la clase; el otro, el desarrollo a fondo. Los laboratorios del libro —Génesis 3, Salmo 22, Isaías 53, Marcos 7, Filipenses 2, Apocalipsis 5— se recorren después de poseer el método, no en lugar del método.",
   refs: "Tit. 1:9 · Stg. 1:22 · 2 P. 3:16 · Mr. 7:34",
 };
 
@@ -163,7 +163,7 @@ export const VERDAD_FALLOS = [
   },
   {
     title: "El «hoy muero a…» improvisado",
-    body: "Queda prohibido, en Decisión, un «hoy muero a…» que no cite el verbo del pasaje. Si el verbo es «él llevó», el lector no carga lo que el Siervo ya llevó. Eso no es Decisión. Es SOAP con léxico de cruz.",
+    body: "Queda prohibido, en Decisión, un «hoy muero a…» que no cite el verbo del pasaje. Si el verbo es «él llevó», el lector no carga lo que el Siervo ya llevó. Eso no es Decisión: es una aplicación devocional con vocabulario de cruz.",
   },
 ] as const;
 
@@ -176,7 +176,7 @@ export const MARCO_ORACION = {
 
 export const CRISOL_COMPUERTA = {
   title: "C.R.I.S.O.L.",
-  kicker: "La compuerta pastoral de Decisión",
+  kicker: "El filtro pastoral de la Decisión",
   where: "Su exposición plena está en El Altar del Espejo: aquí se usa, no se duplica.",
   pestillos: [
     { letter: "C", name: "Cotejo canónico", body: "El imperativo ¿pasa por el párrafo y el canon, o contradice un indicativo más claro?" },
@@ -326,7 +326,7 @@ export const CATECISMO = [
 
 export const MANUAL_CAMPO = {
   title: "Manual de campo",
-  lead: "Una hoja. Un pasaje. Los seis eslabones. Un acto. El que recita la cadena y no marca un verbo no ha usado el método: lo ha nombrado, y el nombre sin sudor es talismán.",
+  lead: "Una hoja, un pasaje, los seis pasos del método y un paso concreto de obediencia. Quien recita los seis pasos pero no obedece no ha usado el método: solo lo ha nombrado.",
   prompts: [
     { letter: "V", name: "Ver", prompt: "Qué está escrito. Quién habla. Qué se repite. El conector." },
     { letter: "E", name: "Entorno", prompt: "Género. Destinatarios. Qué hay antes y después. Bajo qué pacto." },
@@ -336,6 +336,6 @@ export const MANUAL_CAMPO = {
     { letter: "D", name: "Decisión", prompt: "El verbo que el texto conjuga. Un acto. Un testigo. Volver mañana." },
   ],
   prohibicion:
-    "Queda prohibido un «hoy muero a…» que el pasaje no conjuga. Si el verbo es «fueron abiertos», se pide oído. Si el verbo es «él llevó», no se carga el lector lo que el Siervo ya llevó.",
+    "No escribas un propósito que el pasaje no pide. Si el texto dice «fueron abiertos», pide oídos abiertos. Si dice «él llevó», no cargues tú lo que Cristo ya llevó.",
   refs: "Stg. 1:22 · Sal. 119:18 · 1 S. 3:10",
 };

@@ -65,8 +65,7 @@ function TratadoPage() {
         modified={fechas?.modified}
       />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        {etiquetaTratado(tratado.slug)}
-        {tratado.n !== "—" ? ` · ${tratado.n}` : ""} · {tratado.kicker} · {tratado.ref}
+        {etiquetaTratado(tratado.slug)} · {tratado.kicker} · {tratado.ref}
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>

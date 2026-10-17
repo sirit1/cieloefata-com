@@ -20,9 +20,9 @@ export const Route = createFileRoute("/estudios/")({
       path: "/estudios",
       title: tituloSeccion("Estudios"),
       description:
-        "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D. y un solo acto. Se leen aquí, después del capítulo entero.",
+        "Estudios bíblicos: un pasaje completo, leído con el método V.E.R.D.A.D., hasta un paso concreto de obediencia.",
       detalle:
-        "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada.",
+        "Cada estudio recorre un pasaje completo con el método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión—. Primero leemos el capítulo entero; después lo estudiamos juntos hasta llegar a un paso concreto de obediencia, que conviene compartir con alguien de confianza.",
     }),
 });
 
@@ -45,16 +45,14 @@ function EstudiosPage() {
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
       <Motif kind="lion" />
-      <h1 className="mt-2 font-serif text-4xl">Las clases de la escuela</h1>
+      <h1 className="mt-2 font-serif text-4xl">Estudios bíblicos</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D. —Ver,
-        Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien
-        que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa
-        lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia.
-        Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen
-        portada.
+        Cada estudio recorre un pasaje completo con el método V.E.R.D.A.D. —Ver, Entorno,
+        Revelación, Doctrina, Argumento y Decisión—. Primero leemos el capítulo entero; después
+        lo estudiamos juntos hasta llegar a un paso concreto de obediencia, que conviene
+        compartir con alguien de confianza.
       </p>
-      <Refs refs="Neh. 8:8 · 2 Ti. 3:16 · Mr. 7:34" />
+      <Refs refs="Neh. 8:8 · 2 Ti. 3:16" />
       <p className="mt-4 font-sans text-sm">
         <Link to="/metodo" className="text-link underline">
           Cómo se recorre un pasaje
@@ -83,9 +81,9 @@ function EstudiosPage() {
       ) : null}
 
       <section className="mt-14">
-        <h2 className="font-serif text-3xl">TRATADOS</h2>
+        <h2 className="font-serif text-3xl">Tratados</h2>
         <p className="mt-4 leading-relaxed text-ink-soft">
-          Los catorce con manuscrito, PDF y portada.
+          Versículos muy citados, leídos otra vez dentro de su capítulo.
         </p>
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
           {tratados.map((t) => (
@@ -107,14 +105,14 @@ function EstudiosPage() {
         </ul>
       </section>
 
-      <Lista titulo="Estudios bíblicos" items={publicados} />
+      <Lista titulo="Todos los estudios" items={publicados} />
 
       <section className="mt-14">
-        <h2 className="font-serif text-3xl">Tres géneros que ya tienen aula</h2>
+        <h2 className="font-serif text-3xl">Estudios por género literario</h2>
         <p className="mt-4 leading-relaxed">
-          El yunque nombra seis géneros. El aula está abierta donde ya hay libro: Marcos 7,
-          Filipenses 2 y Apocalipsis 5. Génesis 3 y el Salmo 22 no tienen clase. Isaías 53 se
-          escudriña en el tratado, no en un segundo estudio.
+          No se lee igual un relato que un himno o una visión. Estos tres estudios muestran
+          cómo leer cada género: un relato del Evangelio (Marcos 7), un himno dentro de una
+          carta (Filipenses 2) y una visión del Apocalipsis (Apocalipsis 5).
         </p>
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
           {labs
@@ -155,7 +153,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
               <Link to={s.obraHref} className="block py-5 hover:text-gold">
                 <span className="flex min-w-0 flex-col gap-1">
                   <span className="font-sans text-sm text-gold">
-                    Estudio · obra · {s.ref}
+                    Estudio · {s.ref}
                   </span>
                   <span className="font-serif text-2xl">{s.title}</span>
                 </span>

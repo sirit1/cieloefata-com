@@ -9,7 +9,7 @@ export const Route = createFileRoute("/guias")({
       path: "/guias",
       title: tituloSeccion("Guías"),
       description:
-        "Strong, cómo se lee, del pasaje a la palabra dicha, y la pregunta difícil. El capítulo sigue siendo el señor de la casa.",
+        "Guías prácticas: cómo usar la concordancia Strong, cómo leer un pasaje, cómo pasar del texto a la conversación y cómo responder una pregunta difícil.",
     }),
 });
 

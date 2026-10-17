@@ -97,9 +97,9 @@ function StudyPage() {
         modified={fechas?.modified}
       />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        Aula · {etiquetaEstudio(study.slug)} · {pasaje}
+        {etiquetaEstudio(study.slug)} · {pasaje}
       </p>
-      {llegada ? <p className="mt-3 leading-relaxed">Llegaste desde {llegada}. El aula abre ese pasaje, no otra portada.</p> : null}
+      {llegada ? <p className="mt-3 leading-relaxed">Llegaste desde {llegada}.</p> : null}
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
       <p className="mt-6">

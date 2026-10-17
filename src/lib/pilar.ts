@@ -11,9 +11,9 @@ export const OFICIO = {
 export const ESCRITURA = {
   title: "La Biblia, para ser estudiada",
   motto: "La Escritura manda sobre el comentario.",
-  gate: "Sesenta y seis libros, una sola Palabra: Dios habló muchas veces y de muchas maneras, y al fin por el Hijo. Aquí no se hojea para consolarse. Se estudia el capítulo entero, porque el hilo que recorre el canon no es una idea edificante; es una Persona.",
+  gate: "Sesenta y seis libros, una sola Palabra: Dios habló muchas veces y de muchas maneras, y en estos últimos días nos ha hablado por el Hijo. Aquí no buscamos frases sueltas para animarnos: estudiamos el capítulo entero, porque el hilo que recorre toda la Biblia no es una idea bonita, sino una Persona, Jesucristo.",
   oficio:
-    "Esta casa enseña a oír el capítulo entero antes de hablar. El método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento, Decisión— no se recita como talismán: se usa de rodillas, hasta que el versículo vuelva al párrafo y el párrafo al pacto. Quien entra no colecciona frases. Recibe un oficio.",
+    "Aquí aprendemos a escuchar el capítulo entero antes de hablar. El método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— no es una fórmula mágica: se usa con humildad y oración, hasta que cada versículo vuelve a su párrafo y a su contexto. No se trata de coleccionar frases, sino de aprender a leer la Biblia.",
   body: [
     "La Biblia es la Escritura de la Iglesia: sesenta y seis libros, treinta y nueve en el Antiguo Testamento y veintisiete en el Nuevo. No es una antología de genios, ni un almanaque de consuelos, ni el archivo sentimental de una religión antigua. Es la Palabra que Dios habló, por muchos hombres, en muchas veces y de muchas maneras, y al fin por el Hijo. Los autores humanos tienen nombre, siglo, lengua y destinatario: Moisés, David, Isaías, Mateo, Pablo, Juan. El Espíritu Santo no borra esa mano; la usa. El último Autor es uno, y por eso Génesis y Apocalipsis no discuten entre sí como si fueran dos religiones.",
     "Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia. El canon es la lista que la Iglesia recibió, no la lista que cada generación se arma según su herida o su moda. Quien abre Génesis oye al mismo Dios que cierra Apocalipsis. El hilo no es una idea. Es una Persona: el Hijo, prometido, venido, crucificado, resucitado, y que ha de volver. Por consiguiente este libro se estudia entero, capítulo por capítulo, y no se recorta un versículo para que quede bien en una imagen. El eunuco no leyó un recorte: leyó a Isaías hasta que Felipe le abrió el texto, y el texto le abrió a Cristo.",
@@ -40,8 +40,8 @@ export const PERSONAS_PUERTA = [
   },
   {
     name: "El Espíritu Santo",
-    line: "El Espíritu Santo es Dios, no un clima interior ni una energía que se administra. Inspiró la Escritura, convence de pecado y abre el oído que el pecado había cerrado.",
-    ref: "Hch. 5:3–4 · Jn. 16:8 · Mr. 7:34",
+    line: "El Espíritu Santo es Dios, no un ambiente ni una energía que se administra. Inspiró la Escritura, convence de pecado y nos da a entender lo que Dios nos ha concedido.",
+    ref: "Hch. 5:3–4 · Jn. 16:8 · 1 Co. 2:12",
   },
 ];
 
@@ -50,7 +50,7 @@ export const PERSONAS = [
     name: "El Padre",
     body: [
       "Oye, Israel: Jehová nuestro Dios, Jehová uno es. El Padre no es una fuerza, ni un estado de ánimo, ni el techo moral de una cultura. Crea los cielos y la tierra por su Palabra. Elige, habla, guarda pacto y no da su gloria a otro. A Moisés, en la zarza, no se presentó con un título de oficina: YO SOY EL QUE SOY. En hebreo el Nombre se escribe YHWH; la Reina-Valera dice Jehová. El Eterno no cambia porque cambie la vocalización de los masoretas ni el gusto de un siglo. Es el Dios de Abraham, de Isaac y de Jacob, el que saca de Egipto y el que, en el cumplimiento de los tiempos, envía al Hijo. Ahora bien, ese envío no es un gesto tardío, sino el consejo que ya latía cuando dijo «sea la luz».",
-      "A Dios nadie le vio jamás: el unigénito Hijo, que está en el seno del Padre, él le declaró. Nadie puede venir a Cristo si el Padre no le trajere. El Padre resucitó a Jesús de los muertos, y nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo. El que niega al Hijo no tiene al Padre, aunque conserve un vocabulario piadoso y una liturgia impecable. Esta escuela no ofrece, por tanto, un dios doméstico al que se consulta para sentirse acompañado. Confiesa al que se dio a conocer, y pide que el oído se abra hasta que esa confesión cueste.",
+      "A Dios nadie le vio jamás; el unigénito Hijo, que está en el seno del Padre, él le ha dado a conocer. Nadie puede venir a Cristo si el Padre no le trajere. El Padre resucitó a Jesús de los muertos, y nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo. El que niega al Hijo no tiene al Padre, aunque conserve un vocabulario piadoso y una liturgia impecable. Esta escuela no ofrece, por tanto, un dios doméstico al que se consulta para sentirse acompañado. Confiesa al que se dio a conocer, y pide que el oído se abra hasta que esa confesión cueste.",
     ],
     refs: "Dt. 6:4 · Éx. 3:14 · Gn. 1:1 · Is. 42:8 · Jn. 1:18 · Jn. 6:44 · Hch. 2:24 · Ef. 1:3 · 1 Jn. 2:23",
   },
@@ -58,7 +58,7 @@ export const PERSONAS = [
     name: "El Hijo",
     body: [
       "En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios. Y aquel Verbo fue hecho carne, y habitó entre nosotros. Verdadero Dios y verdadero hombre: no un profeta más, no un ejemplo elevado, no un símbolo de la bondad humana. Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí. Hay un solo mediador entre Dios y los hombres, Jesucristo hombre, el cual se dio a sí mismo en rescate por todos. Por consiguiente, quien recorta al Hijo para no ofender ya eligió otro señor, aunque conserve el calendario de la Iglesia.",
-      "En el bautismo el Padre declara: este es mi Hijo amado. El Hijo entra al agua. El Espíritu desciende. En la cruz carga lo que no es suyo. Al tercer día resucita. Volverá. Y en un pueblo de Galilea tomó a un sordo tartamudo, alzó los ojos al cielo, gimió y dijo: Éfata, que es: Sé abierto. Y al momento se abrieron sus oídos. El mismo que abre oídos es el León de Judá y el Cordero inmolado: majestad sin cruz sería condenación; cruz sin majestad, tragedia. Quien no honra al Hijo no honra al Padre que le envió. Esta casa no predica, por tanto, un Jesús útil. Predica al Verbo que te hizo y al que tus rechazos no deshacen.",
+      "En el bautismo el Padre declara: este es mi Hijo amado. El Hijo entra al agua. El Espíritu desciende. En la cruz carga lo que no es suyo. Al tercer día resucita. Volverá. Y en la región de Decápolis tomó aparte a un sordo tartamudo, levantó los ojos al cielo, gimió y le dijo: Efata, es decir: Sé abierto. Y al momento fueron abiertos sus oídos. El mismo que abre oídos es el León de Judá y el Cordero inmolado: majestad sin cruz sería condenación; cruz sin majestad, tragedia. Quien no honra al Hijo no honra al Padre que le envió. Esta casa no predica, por tanto, un Jesús útil. Predica al Verbo que te hizo y al que tus rechazos no deshacen.",
     ],
     refs: "Jn. 1:1, 14 · Jn. 14:6 · 1 Ti. 2:5–6 · Mt. 3:16–17 · Mr. 7:34 · Ap. 5:5–6 · Jn. 5:23",
   },
@@ -68,7 +68,7 @@ export const PERSONAS = [
       "El Espíritu Santo no es un clima interior, ni una energía que se administra, ni el entusiasmo de una reunión. Es Dios. Cuando Ananías mintió al Espíritu Santo, Pedro dijo: no has mentido a los hombres, sino a Dios. El Señor es el Espíritu. El que no tiene el Espíritu de Cristo, no es de él. Conviene, pues, hablar de él con el temor con que se habla del Padre y del Hijo: un Nombre, no una herramienta. Quien lo reduce a «ambiente» ya ha cometido una diminución teológica, aunque la llame alabanza.",
       "Él inspiró la Escritura. Nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo. Toda la Escritura es inspirada por Dios. El Espíritu no dicta un oráculo privado que desplace al texto: toma de lo que es de Cristo y lo hace saber. Él os guiará a toda la verdad. La verdad a la que guía es la que ya fue dicha; no una novedad que el pasaje no carga. Por tanto, el que invoca al Espíritu para no someterse al capítulo ha invertido el oficio del Paráclito.",
       "Jesús dijo del Espíritu que convencerá al mundo de pecado, de justicia y de juicio. El que no naciere de agua y del Espíritu, no puede entrar en el reino de Dios. El viento sopla de donde quiere: el nuevo nacimiento no se programa. Nos salvó por el lavamiento de la regeneración y por la renovación en el Espíritu Santo. El dato histórico quita la coartada; el Espíritu regenera. Nadie se da a sí mismo ese nacimiento, ni lo compra con un curso, ni lo fabrica con un vocabulario de conversión.",
-      "En Pentecostés se les aparecieron lenguas repartidas, como de fuego, y fueron todos llenos del Espíritu Santo. El mismo que dijo Éfata en Galilea envía al Espíritu que abre oídos y lenguas. Él sella al que cree, hasta el día de la redención. El Espíritu mismo intercede por nosotros con gemidos indecibles. Vuestro cuerpo es templo del Espíritu Santo, el cual está en vosotros. Por tanto, no apaguéis al Espíritu. No contristéis al Espíritu Santo de Dios. La blasfemia contra el Espíritu no se despacha como una frase dura: el Señor la dijo, y permanece. Esta escuela pide, en consecuencia, no un clima, sino el temor de quien sabe que el huésped es Dios.",
+      "En Pentecostés se les aparecieron lenguas repartidas, como de fuego, y fueron todos llenos del Espíritu Santo. El mismo que dijo Efata en la Decápolis envía al Espíritu que abre oídos y lenguas. Él sella al que cree, hasta el día de la redención. El Espíritu mismo intercede por nosotros con gemidos indecibles. Vuestro cuerpo es templo del Espíritu Santo, el cual está en vosotros. Por tanto, no apaguéis al Espíritu. No contristéis al Espíritu Santo de Dios. La blasfemia contra el Espíritu no se despacha como una frase dura: el Señor la dijo, y permanece. Esta escuela pide, en consecuencia, no un clima, sino el temor de quien sabe que el huésped es Dios.",
     ],
     refs: "Hch. 5:3–4 · 2 Co. 3:17 · Ro. 8:9 · 2 P. 1:21 · 2 Ti. 3:16 · Jn. 16:13–14 · Jn. 16:8 · Jn. 3:5–8 · Tit. 3:5 · Hch. 2:3–4 · Mr. 7:34 · Ef. 1:13 · Ef. 4:30 · Ro. 8:26 · 1 Co. 6:19 · 1 Ts. 5:19 · Mt. 12:31–32",
   },
@@ -79,11 +79,11 @@ export const TESTIGO = {
   gate: "La Escritura no pide que se le crea de oídas. Lucas dice que investigó con diligencia, desde el origen, y escribió por orden, para que Teófilo conociera la verdad. Pedro niega las fábulas: vieron con sus ojos la majestad. Juan toca lo que sus manos palparon. Pablo entrega lo que recibió: que Cristo murió, fue sepultado y resucitó al tercer día, y que fue visto. Por consiguiente, esta escuela no teme el recuento —sesenta y seis libros, cerca de cuarenta autores, tres lenguas, quince siglos—; teme el recuento convertido en ídolo. El dato quita la coartada; no regenera. El poder de Dios para salvación no es el museo de los códices, sino el evangelio.",
   body: [
     "La autoridad de la Biblia no nace en el museo. Toda la Escritura es inspirada por Dios. Eso no se vota. Dicho esto, el que entra no está obligado a creer un rumor: Lucas dice que investigó con diligencia, desde el origen, y escribió por orden, para que Teófilo conociera la verdad. Pedro niega las fábulas: vieron con sus ojos la majestad. Juan toca lo que sus manos palparon. Pablo entrega un testimonio recibido, no inventado: que Cristo murió, fue sepultado y resucitó al tercer día, y que fue visto. El texto mismo pide ser leído como historia, no como consuelo privado. Por consiguiente, esta escuela no teme el dato; teme el dato convertido en ídolo.",
-    "Cerca de cuarenta autores humanos, en tres lenguas —hebreo, arameo y griego— y a lo largo de unos mil quinientos años, firman sesenta y seis libros. El Nuevo Testamento cita el Antiguo cientos de veces: no es otra religión, es cumplimiento. Las ediciones serias marcan una red de más de trescientas cuarenta mil referencias cruzadas. Esa red es editorial, no canónica: ayuda a oír cómo la Escritura se interpreta a sí misma; no añade un libro. Nunca la profecía fue traída por voluntad humana: hombres hablaron de parte de Dios, siendo inspirados por el Espíritu Santo.",
-    "El Nuevo Testamento no llegó como un rumor tardío. Se conserva en más de cinco mil setecientos manuscritos griegos, más las versiones antiguas en latín, siríaco y copto, y las citas de los padres. Hay un fragmento de Juan que los papiros datan en el siglo II. César, Platón y Tácito no gozan de esa abundancia ni de esa cercanía a los hechos. En plata, en Ketef Hinnom, el Señor hizo resplandecer su rostro sobre un pueblo del siglo VII a. C.: la bendición de Números 6 ya estaba escrita cuando Jerusalén todavía tenía muros. En 1947 el desierto de Judá devolvió el gran rollo de Isaías, hacia el 125 a. C., con el Siervo herido que Jesús leyó en Nazaret. La estela de Tel Dan nombra la casa de David. En Cesarea apareció Poncio Pilato. El osario de Caifás salió a la luz en nuestra época. La geografía de los Evangelios se pisa.",
+    "Cerca de cuarenta autores humanos, en tres lenguas —hebreo, arameo y griego— y a lo largo de unos mil quinientos años, firman sesenta y seis libros. El Nuevo Testamento cita el Antiguo cientos de veces: no es otra religión, es cumplimiento. Las bases de referencias cruzadas más amplias reúnen unas trescientas cuarenta mil. Esa red es editorial, no canónica: ayuda a oír cómo la Escritura se interpreta a sí misma; no añade un libro. Nunca la profecía fue traída por voluntad humana: hombres hablaron de parte de Dios, siendo inspirados por el Espíritu Santo.",
+    "El Nuevo Testamento no llegó como un rumor tardío. Se conserva en más de cinco mil setecientos manuscritos griegos, más las versiones antiguas en latín, siríaco y copto, y las citas de los padres. Un fragmento del Evangelio de Juan, el papiro P52, se fecha en el siglo II. César, Platón y Tácito no gozan de esa abundancia ni de esa cercanía a los hechos. En plata, en Ketef Hinnom, el Señor hizo resplandecer su rostro sobre un pueblo del siglo VII a. C.: la bendición de Números 6 ya estaba escrita cuando Jerusalén todavía tenía muros. En 1947 el desierto de Judá devolvió el gran rollo de Isaías, hacia el 125 a. C., con el Siervo herido de Isaías 53 y el pasaje de Isaías 61 que Jesús leyó en Nazaret. La estela de Tel Dan nombra la casa de David. En Cesarea apareció Poncio Pilato. El osario de Caifás salió a la luz en nuestra época. La geografía de los Evangelios se pisa.",
     "Ningún hallazgo, sin embargo, bautiza. El dato quita la coartada; no regenera. El poder de Dios para salvación no es el recuento de códices, sino el evangelio. El Espíritu convence por dentro. Por eso este libro se estudia con rigor, y no se recorta. El que colecciona papiros y cierra el oído al capítulo ha hecho del museo un altar segundo.",
   ],
-  refs: "2 Ti. 3:16 · Lc. 1:1–4 · 2 P. 1:16 · 1 Jn. 1:1–3 · 1 Co. 15:3–8 · 2 P. 1:21 · Is. 53:5–6 · Lc. 4:17–21 · 2 R. 20:20 · Ro. 1:16 · Nm. 6:24–26 · Jn. 16:8",
+  refs: "2 Ti. 3:16 · Lc. 1:1–4 · 2 P. 1:16 · 1 Jn. 1:1–3 · 1 Co. 15:3–8 · 2 P. 1:21 · Is. 53:5–6 · Lc. 4:17–21 · Ro. 1:16 · Nm. 6:24–26 · Jn. 16:8",
   measures: [
     {
       n: "66",
@@ -112,14 +112,14 @@ export const TESTIGO = {
     {
       n: "340.000",
       k: "Referencias cruzadas",
-      line: "Red editorial, no canónica: la Escritura se interpreta a sí misma, de Moisés a los profetas.",
+      line: "Una ayuda editorial, no parte del canon: la Escritura se interpreta a sí misma, de Moisés a los profetas.",
       ref: "Lc. 24:27",
     },
     {
       n: "3",
       k: "Lenguas de la Escritura",
-      line: "Hebreo, arameo y griego. El don no borra el idioma: lo abre para que se oiga.",
-      ref: "Hch. 2:8–11",
+      line: "Hebreo, arameo (en partes de Daniel y Esdras) y griego.",
+      ref: "Dn. 2:4",
     },
   ],
 };
@@ -130,7 +130,7 @@ export const semana = {
   title: "El himno del Siervo",
   verse: "Fil. 2:5–11",
   impacto:
-    "El himno no se escribió para que el seminario aplaudiera la kénosis: se escribió para que Evodia y Síntique dejaran de pelearse el primer asiento. Forma de siervo, muerte de cruz, el Nombre sobre todo nombre. Quien canta 2:9–11 sin 2:7 no ha leído: ha cantado. Esta semana el aula pide el sentir que hubo en Cristo Jesús, y un acto que quepa en la cárcel de Pablo, no en el aplauso del yo.",
+    "El himno no se escribió para que el seminario discutiera la kénosis, sino para una iglesia que necesitaba humildad y unidad, la misma en la que Evodia y Síntique debían ponerse de acuerdo (4:2). Forma de siervo, muerte de cruz, el Nombre sobre todo nombre. Quien canta 2:9–11 sin 2:7 no ha leído: ha cantado. Esta semana el aula pide el sentir que hubo en Cristo Jesús, y un acto que quepa en la cárcel de Pablo, no en el aplauso del yo.",
 };
 
 export const DOS_CASAS = {
@@ -138,8 +138,8 @@ export const DOS_CASAS = {
   gate: "El capítulo se lee entero, y esta casa escribe el estudio, el tratado y el método, y no pretende sentarse en el trono del texto.",
   body: "Cielo Efata escribe el estudio, el tratado y el método. El lector compañero es el lugar donde el capítulo se lee entero, se compara con otras versiones y se consulta. Esa consulta responde con Sola Scriptura: el texto primero, las ciencias bíblicas después, nada que el pasaje no contenga. Quien quiere oír el pasaje, lee. Quien quiere estudiarlo hasta que pida una obediencia, permanece aquí. Las dos son una sola obra. Quien sale de un capítulo vuelve a esta casa, no para coleccionar frases, sino para que el oído, ya abierto, no se cierre otra vez.",
   banner: [
-    "El lector compañero es la Biblia en tu teléfono y en tu computadora. Abres el libro, eliges el capítulo y lees el pasaje entero: otras versiones a la mano, y una consulta que no se sienta encima del texto.",
-    "Úsala ahora en el navegador, o escanea el código e instálala como aplicación. El capítulo va contigo. Esta escuela no sustituye esa lectura: la sostiene.",
+    "RevelatiO es nuestro lector de la Biblia, para tu teléfono y tu computadora. Abres el libro, eliges el capítulo y lees el pasaje entero, con otras versiones a mano y herramientas de consulta que no reemplazan al texto.",
+    "Úsalo ahora en el navegador, o escanea el código para instalarlo como aplicación. Esta escuela no sustituye esa lectura: la acompaña.",
   ],
   refs: "Neh. 8:8 · 2 Ti. 3:16 · Hch. 17:11",
   appHref: "https://revelatio.app",
@@ -152,6 +152,6 @@ export const PRIMERA_VEZ = {
   slug: "marcos-7",
   ref: "Marcos 7",
   title: "Éfata",
-  lead: "El primer pasaje de esta escuela no es un consuelo; es un milagro. En la Decápolis el Hijo toma a un sordo, alza los ojos, gime y dice Éfata, que es: Sé abierto. El oído cede, la lengua se desata, y el oficio empieza: leer el capítulo entero una vez que el oído ha cedido.",
+  lead: "El primer pasaje de esta escuela no es una frase de consuelo, sino un milagro. En la Decápolis Jesús toma aparte a un sordo, levanta los ojos al cielo, gime y le dice: Efata, es decir: Sé abierto. El oído se abre, la lengua se desata, y empieza el aprendizaje: leer el capítulo entero con el oído abierto.",
   refs: "Mr. 7:34 · Is. 35:5–6 · Lc. 24:45",
 };

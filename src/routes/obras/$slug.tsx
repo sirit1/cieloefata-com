@@ -65,7 +65,7 @@ export function ObraPage() {
       <figure className="mt-10 m-0 max-w-xs">
         <Tapa obra={obra} size="lg" priority />
         <figcaption className="mt-3 font-sans text-sm leading-relaxed text-ink-soft">
-          Tapa del libro. Se abre junto a {obra.pasaje}, no en lugar de él.
+          Tapa de {obra.title}. Se lee junto a {obra.pasaje}.
         </figcaption>
       </figure>
 
@@ -81,10 +81,10 @@ export function ObraPage() {
 
       <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
       <p className="mt-4 leading-relaxed">
-        Este libro ocupa el puesto {ROMANO[obra.lectura]} del orden de lectura, no el de
-        publicación. Se entra por el Pórtico, y en Éfata se aprende a leer el capítulo entero
-        antes de hablar. Cada tapa se abre junto al capítulo que la sostiene, no en
-        lugar de él.
+        Este es el libro {ROMANO[obra.lectura]} en el orden de lectura sugerido (que no es el de
+        publicación). Se empieza por Pórtico a la Escritura, y en Éfata se aprende a leer el
+        capítulo entero antes de hablar. Cada libro se lee junto al capítulo de la Biblia en
+        que se apoya.
       </p>
       <ol className="mt-5 space-y-2">
         {obras.map((o) => (
@@ -97,27 +97,18 @@ export function ObraPage() {
         ))}
       </ol>
 
-      <h2 className="mt-12 font-serif text-3xl">Una muestra de las primeras páginas</h2>
-      <p className="mt-4 leading-relaxed text-ink-soft">
-        Estas líneas no son un capítulo inventado para vender, sino la muestra de las primeras
-        páginas, oídas junto a {obra.pasaje}.
-      </p>
+      <h2 className="mt-12 font-serif text-3xl">Sobre este libro</h2>
       {muestra.map((p) => (
         <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
           <ConLemas>{p}</ConLemas>
         </p>
       ))}
 
-      <h2 className="mt-12 font-serif text-3xl">Adquirir</h2>
+      <h2 className="mt-12 font-serif text-3xl">Cómo obtenerlo</h2>
       <p className="mt-4 leading-relaxed">
-        Donde hay ficha de Amazon, se enlaza el producto. Donde aún no hay ASIN ni ISBN
-        conocido, se busca el título exacto con el nombre del autor, sin inventar un código.
-        WhatsApp queda como canal segundo, para la colección impresa en Venezuela.
-      </p>
-      <p className="mt-4 leading-relaxed text-ink-soft">
-        El pack de casa no se finge. En este repositorio no hay un enlace público de Drive para
-        descargar el libro. Si se pide el pack, se solicita por WhatsApp con el nombre de{" "}
-        {obra.title}, y la casa responde. No se publica un botón de descarga que no abre nada.
+        {obra.sinAmazon
+          ? "Para solicitar este libro, escríbenos por WhatsApp y te responderemos personalmente."
+          : "Puedes adquirir este libro en Amazon o solicitarlo por WhatsApp. En Venezuela también puedes pedir la colección impresa."}
       </p>
       <Adquirir
         title={obra.title}
@@ -170,7 +161,7 @@ export function ObraPage() {
         ) : null}
         {tratado ? (
           <Link to="/tratados/$slug" params={{ slug: tratado.slug }} className="btn btn-gold">
-            El tratado que oye este libro
+            Leer el tratado relacionado
             <BtnArrow />
           </Link>
         ) : null}

@@ -20,7 +20,7 @@ export const Route = createFileRoute("/crisol")({
       path: "/crisol",
       title: tituloSeccion("C.R.I.S.O.L."),
       description:
-        "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.",
+        "C.R.I.S.O.L.: seis preguntas para cerrar un estudio con una obediencia que sale del texto. Oír y no hacer no es un retraso inocente.",
       detalle: `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`,
     }),
 });
@@ -92,7 +92,7 @@ function CrisolPage() {
       </section>
 
       <section className="mt-16 border-t border-rule pt-10">
-        <h2 className="font-serif text-3xl">Donde la compuerta miente</h2>
+        <h2 className="font-serif text-3xl">Cómo se falsea este cierre</h2>
         <ul className="mt-8 space-y-6">
           {CRISOL_FALLOS.map((f) => (
             <li key={f.title}>

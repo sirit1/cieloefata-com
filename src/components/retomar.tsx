@@ -57,7 +57,7 @@ export function Retomar({
         {pendiente ? (
           <li>
             <p className="font-sans text-xs tracking-[0.16em] text-gold uppercase">
-              Aula sin acto · {fechaCorta(pendiente.at)}
+              Paso pendiente · {fechaCorta(pendiente.at)}
             </p>
             <p className="mt-1 leading-relaxed">
               {retomarAulaSinActo(pendiente.titulo, pendiente.pasaje)}
@@ -77,7 +77,7 @@ export function Retomar({
                   params={{ slug: pendiente.slug }}
                   className="btn btn-ghost"
                 >
-                  Volver al aula
+                  Volver al estudio
                 </Link>
               ) : (
                 <Link

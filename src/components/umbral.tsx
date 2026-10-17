@@ -6,6 +6,7 @@ import { SeguirActo } from "@/components/seguir-acto";
 import {
   ESTUDIO_UMBRAL_SLUG,
   etiquetaRango,
+  semanaEnCurso,
   mesProximo,
   mesVigente,
   nombreMes,
@@ -28,15 +29,15 @@ export function UmbralTresCaminos() {
   const study = fichaEstudio(semana.studySlug);
   const puerta =
     semana.puerta ??
-    `Entra al aula de ${study?.title ?? "esta semana"}, y sal con un solo acto escrito.`;
+    `Estudia ${study?.title ?? "este pasaje"} y sal con un paso concreto por escrito.`;
 
   return (
     <ul className="mt-10 space-y-8">
       <li>
         <p className="font-serif text-xl">Leer el capítulo.</p>
         <p className="mt-2 leading-relaxed text-ink-soft">
-          Abre la Escritura entera en el lector compañero de esta casa: el capítulo va delante, y
-          el comentario, detrás.
+          Abre la Biblia en RevelatiO, nuestro lector: primero el capítulo completo, y después el
+          comentario.
         </p>
         <a href={DOS_CASAS.leerHref} rel="noopener noreferrer" className="btn btn-ink mt-4">
           {DOS_CASAS.leerLabel}
@@ -44,7 +45,7 @@ export function UmbralTresCaminos() {
         </a>
       </li>
       <li>
-        <p className="font-serif text-xl">Estudio de esta semana.</p>
+        <p className="font-serif text-xl">{semanaEnCurso() ? "Estudio de esta semana." : "Estudio destacado."}</p>
         <p className="mt-2 leading-relaxed text-ink-soft">{puerta}</p>
         <Link
           to="/estudios/$slug"
@@ -56,10 +57,10 @@ export function UmbralTresCaminos() {
         </Link>
       </li>
       <li>
-        <p className="font-serif text-xl">Empezar por Éfata.</p>
+        <p className="font-serif text-xl">Empezar por Marcos 7.</p>
         <p className="mt-2 leading-relaxed text-ink-soft">
-          Si nunca se ha leído en esta escuela, empieza por Marcos 7, donde el Hijo toma al
-          sordo, gime y dice Éfata —sé abierto—, y el oído cede antes de que la lengua se
+          Si es tu primera vez aquí, empieza por Marcos 7, donde Jesús toma aparte al sordo, gime
+          y le dice «Efata», es decir, «Sé abierto», y el oído se abre antes de que la lengua se
           desate.
         </p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row">
@@ -84,6 +85,7 @@ export function SlotsSemanaMes() {
   const semana = semanaVigente();
   const study = fichaEstudio(semana.studySlug);
   const proxima = semanaProxima();
+  const enCurso = semanaEnCurso();
   const studyNext = proxima ? fichaEstudio(proxima.studySlug) : undefined;
   const mes = mesVigente();
   const tratado = fichaTratado(mes.tratadoSlug);
@@ -94,16 +96,20 @@ export function SlotsSemanaMes() {
     <section className="mt-16" aria-label="Calendario editorial">
       <div className="max-w-[40em]">
         <p className="text-lg leading-relaxed">{MARCO_RITMO}</p>
-        <p className="mt-6 leading-relaxed">{MARCO_HOY}</p>
+        {MARCO_HOY ? <p className="mt-6 leading-relaxed">{MARCO_HOY}</p> : null}
       </div>
       <div className="mt-10 grid gap-10 lg:grid-cols-2">
         <article className="flex flex-col border border-rule bg-paper px-6 py-10 md:px-9">
-        <p className="font-serif text-lg italic text-gold">{ETIQUETA_ESTA_SEMANA}</p>
-        <p className="mt-2 leading-relaxed text-ink-soft">{GLOSA_ESTA_SEMANA}</p>
-        <p className="mt-3 font-sans text-xs tracking-[0.16em] text-gold uppercase">
-          {etiquetaRango(semana.desde, semana.hasta)}
+        <p className="font-serif text-lg italic text-gold">
+          {enCurso ? ETIQUETA_ESTA_SEMANA : "Estudio destacado"}
         </p>
-        <h2 className="mt-3 font-serif text-3xl">{study?.title ?? "El aula"}</h2>
+        <p className="mt-2 leading-relaxed text-ink-soft">{GLOSA_ESTA_SEMANA}</p>
+        {enCurso ? (
+          <p className="mt-3 font-sans text-xs tracking-[0.16em] text-gold uppercase">
+            {etiquetaRango(semana.desde, semana.hasta)}
+          </p>
+        ) : null}
+        <h2 className="mt-3 font-serif text-3xl">{study?.title ?? "Estudio destacado"}</h2>
         <p className="mt-1 text-gold">{study?.ref}</p>
         <p className="mt-5 flex-1 leading-relaxed">{semana.impacto}</p>
         {study?.ref ? (

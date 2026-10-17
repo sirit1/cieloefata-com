@@ -12,7 +12,7 @@ export const Route = createFileRoute("/sostener")({
       path: "/sostener",
       title: tituloSeccion("Sostener"),
       description:
-        "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909.",
+        "Cielo Efata no cobra por leer la Biblia. Las ofrendas sostienen los estudios, los libros y su impresión. WhatsApp +58 424 167 4909.",
     }),
 });
 
@@ -62,7 +62,7 @@ function SostenerPage() {
         </Link>
         {" · "}
         <Link to="/" hash="sostener" className="text-link underline">
-          La ofrenda en la portada
+          Volver al inicio
         </Link>
       </p>
     </main>

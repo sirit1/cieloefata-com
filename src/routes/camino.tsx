@@ -14,7 +14,7 @@ export const Route = createFileRoute("/camino")({
       path: "/camino",
       title: tituloSeccion("El camino"),
       description:
-        "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. El capítulo se lee entero. El aula existe solo donde ya hay libro.",
+        "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. Cada paso se lee en su capítulo entero, con su estudio cuando lo hay.",
     }),
 });
 
