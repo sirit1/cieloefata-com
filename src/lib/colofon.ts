@@ -10,7 +10,7 @@ export const COLOFON_TITULO = "Fuentes, versiones y aviso de derechos";
 export const COLOFON_TRATADOS: readonly BloqueColofon[] = [
   { tipo: "p", texto: "Editorial Cielo Efata · Alejandro Sirit · 2026" },
   { tipo: "h", texto: "Texto bíblico" },
-  { tipo: "p", texto: "Citas bíblicas tomadas de la Reina-Valera 1960. El texto bíblico ha sido tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso." },
+  { tipo: "p", texto: "El texto bíblico ha sido tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso." },
   { tipo: "p", texto: "Reina-Valera 1960® es una marca registrada de Sociedades Bíblicas Unidas, y se puede usar solamente bajo licencia." },
   { tipo: "h", texto: "Lenguas originales" },
   { tipo: "li", texto: "Hebreo: texto masorético del Códice de Leningrado, según la Biblia Hebraica Stuttgartensia © 1977/1997 Deutsche Bibelgesellschaft, Stuttgart. Se cita el versículo; no se reproduce la edición." },
