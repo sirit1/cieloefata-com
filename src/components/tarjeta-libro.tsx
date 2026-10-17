@@ -1,10 +1,21 @@
 import { Link } from "@tanstack/react-router";
 import { Tapa } from "@/components/tapa";
 import type { Obra } from "@/lib/content";
-import { formatosAmazon, numeroSerie, SERIE_NOMBRE } from "@/lib/serie";
+import {
+  formatosAmazon,
+  numeroSerie,
+  SERIE_NOMBRE,
+  capitulo1Url,
+} from "@/lib/serie";
 
 /** Tarjeta del libro de la serie al final de un estudio o tratado. */
-export function TarjetaLibro({ obra, motivo }: { obra: Obra; motivo?: string }) {
+export function TarjetaLibro({
+  obra,
+  motivo,
+}: {
+  obra: Obra;
+  motivo?: string;
+}) {
   const formatos = formatosAmazon(obra);
   return (
     <aside
@@ -25,17 +36,33 @@ export function TarjetaLibro({ obra, motivo }: { obra: Obra; motivo?: string }) 
             `Este libro se lee junto a ${obra.pasaje} y lleva más lejos lo que el aula acaba de abrir.`}
         </p>
         <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
-          <Link to="/obras/$slug" params={{ slug: obra.slug }} className="btn btn-gold">
+          <Link
+            to="/obras/$slug"
+            params={{ slug: obra.slug }}
+            className="btn btn-gold"
+          >
             Ver el libro
           </Link>
           {formatos.map((f) => (
-            <a key={f.asin} href={f.href} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+            <a
+              key={f.asin}
+              href={f.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+            >
               {f.etiqueta} en Amazon
             </a>
           ))}
-          <Link to="/recibir" search={{ libro: obra.slug }} className="btn btn-ghost">
-            Recibir el capítulo 1
-          </Link>
+          {capitulo1Url(obra.slug) ? (
+            <Link
+              to="/recibir"
+              search={{ libro: obra.slug }}
+              className="btn btn-ghost"
+            >
+              Recibir el capítulo 1
+            </Link>
+          ) : null}
         </div>
       </div>
     </aside>

@@ -24,9 +24,10 @@ function PrivacidadPage() {
         RevelatiO, ir a Amazon o escribir por WhatsApp, sin saber quién los hizo.
       </p>
       <p className="mt-5 text-lg leading-relaxed">
-        Quien deja su nombre, su correo o su WhatsApp para recibir el capítulo 1 de un libro o el
-        pasaje de la semana lo hace marcando su consentimiento. Esos datos se guardan en la base
-        de RevelatiO, el lector de la misma casa, y se usan solo para enviar lo que se pidió; no
+        Quien deja su nombre, su correo o su WhatsApp para descargar el capítulo 1 de un libro o
+        recibir el pasaje de la semana lo hace marcando su consentimiento. Esos datos se guardan en la base
+        de RevelatiO, el lector de la misma casa, y se usan solo para escribirle sobre lo que pidió y, si lo marcó, enviarle el pasaje de
+        la semana; no
         se venden ni se ceden a nadie. Para darse de baja basta escribir «BAJA» por WhatsApp al
         +58 424 167 4909, o pedirlo en el mismo canal en que llegó el mensaje.
       </p>

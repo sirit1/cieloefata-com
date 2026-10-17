@@ -11,7 +11,7 @@ export const Route = createFileRoute("/recibir")({
       path: "/recibir",
       title: tituloSeccion("Recibir el capítulo 1 y el pasaje de la semana"),
       description:
-        "Recibe gratis el capítulo 1 de un libro de la serie Cielo Efata y, si quieres, el pasaje de la semana por WhatsApp. La Palabra no se cobra.",
+        "Descarga gratis el capítulo 1 de un libro de la serie Cielo Efata y, si quieres, recibe el pasaje de la semana por WhatsApp. La Palabra no se cobra.",
     }),
   component: RecibirPage,
 });
@@ -25,8 +25,8 @@ function RecibirPage() {
         El capítulo 1, y el pasaje de la semana
       </h1>
       <p className="mt-6 text-lg leading-relaxed">
-        La Palabra no se cobra. El capítulo 1 de cada libro de la serie se recibe gratis, para
-        leerlo junto al capítulo de la Biblia en que se apoya; y quien lo pida puede recibir
+        La Palabra no se cobra. El capítulo 1 de cada libro publicado de la serie se descarga aquí
+        mismo, gratis y en PDF, para leerlo junto al capítulo de la Biblia en que se apoya; y quien lo pida puede recibir
         también, una vez por semana, el pasaje que se lee en RevelatiO, el lector de la casa.
         Quien quiera sostener el trabajo puede hacerlo, pero nadie paga por la Escritura.
       </p>
