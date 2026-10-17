@@ -2,6 +2,7 @@ import { tapaPath, type Obra } from "@/lib/content";
 
 const SIZE = {
   lg: "w-full max-w-xs",
+  ficha: "w-full max-w-[13rem]",
   pdp: "w-full max-w-xs",
   sm: "w-[7.75rem] shrink-0 sm:w-[8.75rem]",
   lista: "w-[7.75rem] shrink-0 sm:w-[8.75rem]",
@@ -24,6 +25,8 @@ const MINIATURAS = new Set([
 
 const SIZES: Record<keyof typeof SIZE, string> = {
   lg: "(min-width: 640px) 320px, 100vw",
+  // Ficha del libro: la tapa nunca pasa de 13rem; con 200px el móvil toma la miniatura WebP.
+  ficha: "200px",
   pdp: "(min-width: 640px) 320px, 100vw",
   sm: "140px",
   lista: "140px",

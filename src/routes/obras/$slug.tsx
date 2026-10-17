@@ -55,7 +55,7 @@ export function ObraPage() {
       <Volver />
       <div className="grid gap-8 sm:grid-cols-[minmax(0,13rem)_1fr] sm:items-start md:gap-10">
         <figure className="m-0 max-w-[13rem]">
-          <Tapa obra={obra} size="lg" priority />
+          <Tapa obra={obra} size="ficha" priority />
           <figcaption className="sr-only">
             Tapa de {obra.title}. Se lee junto a {obra.pasaje}.
           </figcaption>
