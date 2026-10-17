@@ -10,6 +10,11 @@ import { estudioTienePack } from "@/lib/catalogo";
 import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
 
+/** Estudios cuyo hilo narrativo sigue de cerca la RVR1960 sin ser cita literal. */
+const RELATO_ADAPTADO: Record<string, string> = {
+  "viajes-de-pablo": "Relato adaptado de Hechos (RVR1960)",
+};
+
 function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
 }
@@ -103,6 +108,11 @@ function StudyPage() {
       {llegada ? <p className="mt-3 leading-relaxed">Llegaste desde {llegada}.</p> : null}
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
+      {RELATO_ADAPTADO[study.slug] ? (
+        <p className="mt-3 font-sans text-sm text-ink-soft">
+          <span className="chip">{RELATO_ADAPTADO[study.slug]}</span>
+        </p>
+      ) : null}
       <p className="mt-6">
         <LeerCapitulo ref={pasaje} desde={`/estudios/${study.slug}`} />
       </p>
