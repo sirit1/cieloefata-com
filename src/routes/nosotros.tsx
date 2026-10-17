@@ -39,9 +39,16 @@ function NosotrosPage() {
       <p className="mt-5 text-lg leading-relaxed">{NOSOTROS.revelatio.body}</p>
 
       <p className="mt-8 font-serif text-2xl tracking-wide">{NOSOTROS.phone}</p>
-      <p className="mt-1 font-sans text-sm tracking-wide text-gold">{NOSOTROS.phoneNote}</p>
+      <p className="mt-1 font-sans text-sm tracking-wide text-gold">
+        {NOSOTROS.phoneNote}
+      </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-        <a href={NOSOTROS.wa} rel="noopener noreferrer" target="_blank" className="btn btn-ink">
+        <a
+          href={NOSOTROS.wa}
+          rel="noopener noreferrer"
+          target="_blank"
+          className="btn btn-ink"
+        >
           Escribir por WhatsApp
           <BtnArrow />
         </a>
@@ -53,6 +60,10 @@ function NosotrosPage() {
         <Cite>{NOSOTROS.refs}</Cite>
       </p>
       <p className="mt-10 font-sans text-sm">
+        <Link to="/lo-que-creemos" className="text-link underline">
+          Lo que creemos
+        </Link>
+        {" · "}
         <Link to="/obras" className="text-link underline">
           Los libros
         </Link>
