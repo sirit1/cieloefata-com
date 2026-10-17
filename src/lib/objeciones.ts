@@ -76,7 +76,7 @@ export const OBJECIONES: Objecion[] = [
   },
   {
     verse: "Proverbios 18:21",
-    lemma: "«La muerte y la vida están en la lengua» — ¿decreto de palabra de fe?",
+    lemma: "«La muerte y la vida están en poder de la lengua» — ¿decreto de palabra de fe?",
     tratadoSlug: "la-muerte-y-la-vida",
     lead:
       "El proverbio pone peso moral sobre lo dicho, no un oficio de «haya luz». El que ama su lengua come su fruto: no fabrica un mundo, rinde cuentas. Santiago 3 espera con el bosque y la chispa.",

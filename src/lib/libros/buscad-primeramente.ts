@@ -55,7 +55,7 @@ export const parrafos: readonly string[] = [
   "Romanos 14:17",
   "προστεθήσεται (prostethḗsetai, G4369, será añadido): futuro pasivo de προστίθημι (prostíthēmi, poner encima, adjuntar). La voz pasiva es teológica: el sujeto que añade no es el discípulo. Es el Padre. El pan no es el bien mayor. Es el adjunto. Como oía Calvino: las cosas de la vida presente son apéndices favorables, y deben reputarse muy inferiores al reino de Dios.",
   "El testimonio de las versiones",
-  "Se citan para oír, no para votar. Ninguna traducción es el original. Varias juntas impiden que una sola se dueña del oído.",
+  "Se citan para oír, no para votar. Ninguna traducción es el original. Varias juntas impiden que una sola se adueñe del oído.",
   "Reina-Valera 1960",
   "«Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.»",
   "Biblia de Jerusalén",
