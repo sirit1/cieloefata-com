@@ -12,6 +12,7 @@ const nav = [
   { to: "/pasajes", label: "Pasajes" },
   { to: "/obras", label: "Libros" },
   { to: "/metodo", label: "Cómo leer" },
+  { to: "/lo-que-creemos", label: "Creemos" },
   { to: "/canon", label: "Canon" },
   { to: "/cuaderno", label: "Cuaderno" },
 ] as const;

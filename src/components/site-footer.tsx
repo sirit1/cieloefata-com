@@ -36,6 +36,7 @@ const columnas = [
       { to: "/serie", label: "La serie, en orden" },
       { to: "/recibir", label: "Recibir el capítulo 1" },
       { to: "/nosotros", label: "Nosotros" },
+      { to: "/lo-que-creemos", label: "Lo que creemos" },
       { to: "/camino", label: "El camino" },
       { to: "/sello", label: "El sello" },
       { to: "/sostener", label: "Sostener" },
