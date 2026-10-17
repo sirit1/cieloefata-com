@@ -1,10 +1,17 @@
-import { Loader2, Volume2, VolumeX } from "lucide-react";
+import { Download, Loader2, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { fondoArrancar, fondoBajoVoz, fondoCallar, silenciarResto } from "@/lib/fondo";
+import {
+  fondoArrancar,
+  fondoBajoVoz,
+  fondoCallar,
+  silenciarResto,
+} from "@/lib/fondo";
 import { trozos, type VoiceRole, type VozParte } from "@/lib/voice-split";
 
 function vocesLatam() {
-  const es = window.speechSynthesis.getVoices().filter((v) => v.lang.toLowerCase().startsWith("es"));
+  const es = window.speechSynthesis
+    .getVoices()
+    .filter((v) => v.lang.toLowerCase().startsWith("es"));
   const spain = /es-es|lucia|lucía|elvira|álvaro|alvaro|castilian|españa/i;
   return es.filter((v) => !spain.test(`${v.lang} ${v.name}`));
 }
@@ -12,9 +19,21 @@ function vocesLatam() {
 function pickVoice(role: VoiceRole) {
   const es = vocesLatam();
   if (role === "guide") {
-    return es.find((v) => /paulina|sabina|dalia|elena|mónica|monica|soledad/i.test(v.name)) ?? es[0] ?? null;
+    return (
+      es.find((v) =>
+        /paulina|sabina|dalia|elena|mónica|monica|soledad/i.test(v.name),
+      ) ??
+      es[0] ??
+      null
+    );
   }
-  return es.find((v) => /jorge|juan|carlos|pablo|diego|gonzalo|luciano/i.test(v.name)) ?? es[0] ?? null;
+  return (
+    es.find((v) =>
+      /jorge|juan|carlos|pablo|diego|gonzalo|luciano/i.test(v.name),
+    ) ??
+    es[0] ??
+    null
+  );
 }
 
 function playBrowser(text: string, role: VoiceRole): Promise<void> {
@@ -35,7 +54,10 @@ function playBrowser(text: string, role: VoiceRole): Promise<void> {
   });
 }
 
-async function fetchMp3(text: string, role: VoiceRole): Promise<{ bytes?: Uint8Array; noKey?: boolean }> {
+async function fetchMp3(
+  text: string,
+  role: VoiceRole,
+): Promise<{ bytes?: Uint8Array; noKey?: boolean }> {
   try {
     const r = await fetch("/api/voz", {
       method: "POST",
@@ -55,7 +77,9 @@ async function fetchMp3(text: string, role: VoiceRole): Promise<{ bytes?: Uint8A
 
 function playBytes(el: HTMLAudioElement, bytes: Uint8Array): Promise<void> {
   return new Promise((resolve) => {
-    const url = URL.createObjectURL(new Blob([bytes.buffer as ArrayBuffer], { type: "audio/mpeg" }));
+    const url = URL.createObjectURL(
+      new Blob([bytes.buffer as ArrayBuffer], { type: "audio/mpeg" }),
+    );
     el.onended = () => {
       URL.revokeObjectURL(url);
       resolve();
@@ -83,6 +107,14 @@ export function Escuchar({
   const [loading, setLoading] = useState(false);
   const stop = useRef(false);
   const audio = useRef<HTMLAudioElement | null>(null);
+  // MP3 de la última lectura completa: se arma con los mismos trozos que ya sonaron (sin costo extra).
+  const [mp3, setMp3] = useState<string | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (mp3) URL.revokeObjectURL(mp3);
+    };
+  }, [mp3]);
 
   useEffect(() => {
     return () => {
@@ -129,6 +161,8 @@ export function Escuchar({
       if (!audio.current) audio.current = new Audio();
       const el = audio.current;
       el.volume = 1;
+      const piezas: Uint8Array[] = [];
+      let todoMp3 = true;
 
       for (const parte of cola) {
         const chunks = trozos(parte.text);
@@ -139,13 +173,22 @@ export function Escuchar({
           if (got.bytes) {
             setLoading(false);
             fondoBajoVoz(true);
+            piezas.push(got.bytes);
             await playBytes(el, got.bytes);
             continue;
           }
+          todoMp3 = false;
           setLoading(false);
           fondoBajoVoz(true);
           await playBrowser(chunk, parte.role);
         }
+      }
+      if (!stop.current && todoMp3 && piezas.length) {
+        const blob = new Blob(
+          piezas.map((b) => b.buffer as ArrayBuffer),
+          { type: "audio/mpeg" },
+        );
+        setMp3(URL.createObjectURL(blob));
       }
     } finally {
       fondoCallar();
@@ -159,21 +202,33 @@ export function Escuchar({
   const label = loading ? "Preparando la voz" : on ? "Silenciar" : etiqueta;
 
   return (
-    <button
-      type="button"
-      onClick={() => void toggle()}
-      aria-pressed={on}
-      aria-label={label}
-      className="inline-flex min-h-11 items-center gap-2 border border-gold px-3 text-gold"
-    >
-      {loading ? (
-        <Loader2 size={16} aria-hidden className="animate-spin" />
-      ) : on ? (
-        <VolumeX size={16} aria-hidden />
-      ) : (
-        <Volume2 size={16} aria-hidden />
-      )}
-      {label}
-    </button>
+    <>
+      <button
+        type="button"
+        onClick={() => void toggle()}
+        aria-pressed={on}
+        aria-label={label}
+        className="inline-flex min-h-11 items-center gap-2 border border-gold px-3 text-gold"
+      >
+        {loading ? (
+          <Loader2 size={16} aria-hidden className="animate-spin" />
+        ) : on ? (
+          <VolumeX size={16} aria-hidden />
+        ) : (
+          <Volume2 size={16} aria-hidden />
+        )}
+        {label}
+      </button>
+      {mp3 ? (
+        <a
+          href={mp3}
+          download="cielo-efata-lectura.mp3"
+          className="inline-flex min-h-11 items-center gap-2 border border-gold px-3 text-gold"
+        >
+          <Download size={16} aria-hidden />
+          Descargar MP3
+        </a>
+      ) : null}
+    </>
   );
 }
