@@ -116,6 +116,15 @@ export function FichaPalabra() {
           </div>
         </dl>
       ) : null}
+      <p className="mt-4 font-sans text-sm">
+        <a
+          href={`https://revelatio.app/strong?id=${id}&casa=1`}
+          rel="noopener noreferrer"
+          className="text-link underline"
+        >
+          Ficha completa de {id} en RevelatiO, con todas sus apariciones
+        </a>
+      </p>
       <p className="mt-4 font-sans text-xs leading-relaxed text-muted">
         Léxico de Strong (dominio público; edición digital de Open Scriptures, CC BY-SA). Conteos sobre el
         Textus Receptus de Scrivener (1894) y el Códice de Leningrado, de dominio público. La palabra se

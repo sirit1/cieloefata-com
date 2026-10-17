@@ -2,7 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { Cite } from "@/components/cite";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
-import { type AulaKind, obrasDesdeAula } from "@/lib/content";
+import { TarjetaLibro } from "@/components/tarjeta-libro";
+import type { AulaKind } from "@/lib/content";
+import { librosDeAula } from "@/lib/serie";
 import { indiceEstudio } from "@/lib/estudios-indice";
 
 export function CierreAula({
@@ -21,7 +23,8 @@ export function CierreAula({
   const lista = ESTUDIOS_DRIVE as readonly string[];
   const i = slug ? lista.indexOf(slug) : -1;
   const sig = i >= 0 && i < lista.length - 1 ? indiceEstudio(lista[i + 1]) : undefined;
-  const relacionadas = kind && slug ? obrasDesdeAula(kind, slug) : [];
+  const relacionadas = kind && slug ? librosDeAula(kind, slug) : [];
+  const conGuia = kind === "estudio" && i >= 0;
 
   return (
     <section className="mt-14 border-t border-rule pt-10">
@@ -55,8 +58,21 @@ export function CierreAula({
         <Link to="/cuaderno" search={{ ref: pasaje }} className="btn btn-gold">
           Escribir mi paso sobre {pasaje}
         </Link>
-        <LeerCapitulo ref={pasaje} desde={desde} />
+        <LeerCapitulo
+          ref={pasaje}
+          desde={desde}
+          label="Leer el capítulo y preguntar en RevelatiO"
+        />
       </div>
+      {conGuia && slug ? (
+        <p className="mt-6 leading-relaxed">
+          ¿Lo estudias en grupo? La{" "}
+          <Link to="/estudios/$slug/guia" params={{ slug }} className="text-link underline">
+            guía del líder para {pasaje}
+          </Link>{" "}
+          ordena la reunión con el método V.E.R.D.A.D. y se imprime en una hoja.
+        </p>
+      ) : null}
       {sig ? (
         <p className="mt-6 leading-relaxed text-ink-soft">
           Cuando hayas escrito y compartido tu paso, el siguiente estudio es {sig.title}.{" "}
@@ -65,18 +81,9 @@ export function CierreAula({
           </Link>
         </p>
       ) : null}
-      {relacionadas.length ? (
-        <div className="mt-6 space-y-2">
-          {relacionadas.map((obra) => (
-            <p key={obra.slug} className="leading-relaxed text-ink-soft">
-              Para profundizar:{" "}
-              <Link to="/obras/$slug" params={{ slug: obra.slug }} className="text-link underline">
-                {obra.title}
-              </Link>
-            </p>
-          ))}
-        </div>
-      ) : null}
+      {relacionadas.map((obra) => (
+        <TarjetaLibro key={obra.slug} obra={obra} />
+      ))}
     </section>
   );
 }

@@ -1,5 +1,7 @@
 import { AMAZON_AUTHOR } from "@/lib/amazon";
-import { obras, tapaPath } from "@/lib/content";
+import { obras, tapaPath, type Obra } from "@/lib/content";
+import { amazonDp } from "@/lib/amazon";
+import { SERIE_NOMBRE } from "@/lib/serie";
 import {
   PERSONA_AUTOR,
   SITE_NAME,
@@ -57,6 +59,64 @@ export function HomeJsonLd() {
   );
 }
 
+function serieRef() {
+  return {
+    "@type": "BookSeries",
+    name: SERIE_NOMBRE,
+    url: canonicalUrl("/serie"),
+  };
+}
+
+/** Un ejemplar por formato publicado; sin precio (no hay precio vivo verificable). */
+function formatosLd(obra: Obra) {
+  if (obra.sinAmazon) return [];
+  const out: Record<string, unknown>[] = [];
+  if (obra.asinEbook) {
+    out.push({
+      "@type": "Book",
+      name: obra.title,
+      bookFormat: "https://schema.org/EBook",
+      inLanguage: "es",
+      url: amazonDp(obra.asinEbook),
+    });
+  }
+  if (obra.asinPrint) {
+    out.push({
+      "@type": "Book",
+      name: obra.title,
+      bookFormat: "https://schema.org/Paperback",
+      inLanguage: "es",
+      ...(obra.isbnPrint ? { isbn: obra.isbnPrint } : {}),
+      url: amazonDp(obra.asinPrint),
+    });
+  }
+  return out;
+}
+
+export function SerieJsonLd() {
+  const lista = [...obras].sort((a, b) => a.lectura - b.lectura);
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "BookSeries",
+        name: SERIE_NOMBRE,
+        url: canonicalUrl("/serie"),
+        inLanguage: "es",
+        author: { "@type": "Person", name: "Alejandro Sirit", url: PERSONA_AUTOR.url },
+        publisher: { "@type": "Organization", name: "Editorial Cielo Efata" },
+        hasPart: lista.map((o) => ({
+          "@type": "Book",
+          name: o.title,
+          position: o.lectura,
+          url: canonicalUrl(`/obras/${o.slug}`),
+          image: canonicalUrl(tapaPath(o.slug)),
+        })),
+      }}
+    />
+  );
+}
+
 export function BookJsonLd({ slug }: { slug: string }) {
   const obra = obras.find((o) => o.slug === slug);
   if (!obra) return null;
@@ -67,6 +127,10 @@ export function BookJsonLd({ slug }: { slug: string }) {
         "@type": "Book",
         ...camposLibro(obra),
         image: canonicalUrl(tapaPath(obra.slug)),
+        publisher: { "@type": "Organization", name: "Editorial Cielo Efata" },
+        isPartOf: serieRef(),
+        position: obra.lectura,
+        ...(formatosLd(obra).length ? { workExample: formatosLd(obra) } : {}),
       }}
     />
   );

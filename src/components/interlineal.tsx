@@ -1,6 +1,7 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { abrirFicha } from "@/lib/ficha-palabra";
+import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
 import indice from "@/lib/generado/interlineal-indice.json";
 
 type Verso = { ref: string; c: number; v: number; w: [string, string, string][] };
@@ -21,6 +22,7 @@ export function Interlineal({ slug }: { slug: string }) {
   if (!meta) return null;
   const griego = meta.texto === "tr";
   const lengua = griego ? "griego" : "hebreo";
+  const capitulo = urlPuenteRevelatio({ ref: meta.ref, desde: `/estudios/${slug}` });
 
   function alternar() {
     const sig = !abierto;
@@ -56,6 +58,13 @@ export function Interlineal({ slug }: { slug: string }) {
               : "Texto masorético del Códice de Leningrado (WLC), de dominio público; es el mismo códice que edita la BHS."}{" "}
             Toca una palabra para abrir su ficha. La lectura en castellano es la Reina-Valera 1960 del estudio.
           </p>
+          {capitulo ? (
+            <p className="mt-2 font-sans text-sm">
+              <a href={capitulo} rel="noopener noreferrer" className="text-link underline">
+                El capítulo entero, palabra por palabra, en RevelatiO
+              </a>
+            </p>
+          ) : null}
           {error ? <p className="mt-4 font-sans text-sm">No se pudo abrir el original. Inténtalo de nuevo.</p> : null}
           {!datos && !error ? <p className="mt-4 font-sans text-sm text-ink-soft">Abriendo el original…</p> : null}
           {datos ? (
