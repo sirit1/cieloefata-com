@@ -38,6 +38,14 @@ export function HomeJsonLd() {
           name: SITE_NAME,
           url: `${SITE_ORIGIN}/`,
           inLanguage: "es",
+          potentialAction: {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate: `${SITE_ORIGIN}/buscar?q={search_term_string}`,
+            },
+            "query-input": "required name=search_term_string",
+          },
           publisher: {
             "@type": "Organization",
             name: SITE_NAME,

@@ -52,7 +52,6 @@ export function BannerRevelatio() {
           href={DOS_CASAS.appHref}
           rel="noopener noreferrer"
           className="justify-self-start md:justify-self-end"
-          aria-label="Escanear para instalar revelatio.app"
         >
           <img
             src="/brand/revelatio-qr.webp"

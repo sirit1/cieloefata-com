@@ -5,25 +5,40 @@ import { Seal } from "@/components/seal";
 import { Sostener } from "@/components/sostener";
 import { school } from "@/lib/content";
 
-const primaria = [
-  { to: "/canon", label: "Canon" },
-  { to: "/estudios", label: "Estudios" },
-  { to: "/tratados", label: "Tratados" },
-  { to: "/metodo", label: "Cómo leer" },
-  { to: "/cuaderno", label: "Cuaderno" },
-  { to: "/obras", label: "Libros" },
-] as const;
-
-const secundaria = [
-  { to: "/nosotros", label: "Nosotros" },
-  { to: "/camino", label: "El camino" },
-  { to: "/objeciones", label: "Objeciones" },
-  { to: "/articulos", label: "Artículos" },
-  { to: "/buscar", label: "Buscar" },
-  { to: "/palabra", label: "Palabra" },
-  { to: "/guias", label: "Guías" },
-  { to: "/sello", label: "El sello" },
-  { to: "/sostener", label: "Sostener" },
+const columnas = [
+  {
+    titulo: "Estudiar",
+    items: [
+      { to: "/estudios", label: "Estudios" },
+      { to: "/tratados", label: "Tratados" },
+      { to: "/pasajes", label: "Explorar por pasaje" },
+      { to: "/preguntas", label: "¿Qué dice la Biblia sobre…?" },
+      { to: "/objeciones", label: "Objeciones" },
+      { to: "/articulos", label: "Artículos" },
+    ],
+  },
+  {
+    titulo: "Aprender a leer",
+    items: [
+      { to: "/metodo", label: "Cómo leer" },
+      { to: "/canon", label: "Canon" },
+      { to: "/glosario", label: "Glosario" },
+      { to: "/guias", label: "Guías" },
+      { to: "/palabra", label: "Palabra" },
+      { to: "/cuaderno", label: "Cuaderno" },
+    ],
+  },
+  {
+    titulo: "La casa",
+    items: [
+      { to: "/obras", label: "Libros" },
+      { to: "/nosotros", label: "Nosotros" },
+      { to: "/camino", label: "El camino" },
+      { to: "/sello", label: "El sello" },
+      { to: "/sostener", label: "Sostener" },
+      { to: "/buscar", label: "Buscar" },
+    ],
+  },
 ] as const;
 
 export function SiteFooter() {
@@ -33,8 +48,8 @@ export function SiteFooter() {
     <footer className="mt-16">
       {pathname === "/sostener" ? null : <Sostener />}
       <div className="border-t border-rule/50 bg-parchment text-ink">
-        <div className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10 md:flex-row md:items-end md:justify-between">
-          <div className="flex gap-4">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 lg:flex-row lg:items-start lg:justify-between">
+          <div className="flex max-w-md gap-4">
             <Link to="/sello" className="shrink-0" aria-label="El sello de Cielo Efata">
               <Seal size={96} className="h-24 w-24" />
             </Link>
@@ -49,24 +64,28 @@ export function SiteFooter() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <nav className="flex flex-wrap gap-4 font-sans text-sm" aria-label="Pie de la escuela">
-              {primaria.map((item) => (
-                <Link key={item.to} to={item.to} className="hover:text-gold">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <nav className="flex flex-wrap gap-4 font-sans text-sm text-ink-soft" aria-label="La casa">
-              {secundaria.map((item) => (
-                <Link key={item.to} to={item.to} className="hover:text-gold">
-                  {item.label}
-                </Link>
-              ))}
-              <a href="https://revelatio.app/" className="hover:text-gold">
-                El lector de la Escritura
-              </a>
-            </nav>
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:gap-10">
+            {columnas.map((col) => (
+              <nav key={col.titulo} aria-label={col.titulo} className="font-sans text-sm">
+                <p className="kicker">{col.titulo}</p>
+                <ul className="mt-3 space-y-1">
+                  {col.items.map((item) => (
+                    <li key={item.to}>
+                      <Link to={item.to} className="inline-flex min-h-8 items-center text-ink-soft hover:text-gold">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                  {col.titulo === "La casa" ? (
+                    <li>
+                      <a href="https://revelatio.app/" className="inline-flex min-h-8 items-center text-ink-soft hover:text-gold">
+                        RevelatiO, el lector
+                      </a>
+                    </li>
+                  ) : null}
+                </ul>
+              </nav>
+            ))}
           </div>
         </div>
       </div>
