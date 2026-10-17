@@ -38,25 +38,25 @@ export const SEMANAS: SemanaEditorial[] = [
     impacto:
       "En la Decápolis el Hijo toma a un sordo, alza los ojos, gime y dice Éfata —sé abierto—. El oído cede antes de que la lengua se desate. Quien recita el vocablo como lema y deja al sordo cerrado ha tomado el nombre del milagro en vano.",
     puerta:
-      "Entra al aula de Marcos 7, donde el Hijo toma al sordo, gime y dice Éfata, y el oído cede antes de que la lengua se desate.",
+      "Estudia Marcos 7, donde Jesús toma aparte al sordo, gime y le dice «Efata», y el oído se abre antes de que la lengua se desate.",
   },
   {
     desde: "2026-09-22",
     hasta: "2026-09-28",
     studySlug: "filipenses-2",
     impacto:
-      "El himno no se escribió para que el seminario aplaudiera la kénosis: se escribió para que Evodia y Síntique dejaran de pelearse el primer asiento. Forma de siervo, muerte de cruz, el Nombre sobre todo nombre. Quien canta 2:9–11 sin 2:7 no ha leído: ha cantado. Esta semana el aula pide el sentir que hubo en Cristo Jesús, y un acto que quepa en la cárcel de Pablo, no en el aplauso del yo.",
+      "El himno no se escribió para que el seminario discutiera la kénosis, sino para una iglesia que necesitaba humildad y unidad, la misma en la que Evodia y Síntique debían ponerse de acuerdo (4:2). Forma de siervo, muerte de cruz, el Nombre sobre todo nombre. Quien canta 2:9–11 sin 2:7 no ha leído: ha cantado. Esta semana el aula pide el sentir que hubo en Cristo Jesús, y un acto que quepa en la cárcel de Pablo, no en el aplauso del yo.",
     puerta:
-      "Entra al aula de Filipenses 2, donde el himno del Siervo humilla al yo antes de exaltarlo, y sal con un solo acto escrito.",
+      "Estudia Filipenses 2, donde el himno de Cristo, que se humilló hasta la cruz, nos llama a la humildad, y sal con un paso concreto por escrito.",
   },
   {
     desde: "2026-09-29",
     hasta: "2026-10-05",
     studySlug: "2-pedro-1",
     impacto:
-      "Pedro pide añadir a la fe, a costa propia, un eslabón: no un cartel de virtudes. Dios ya dio cuanto concierne a la vida y a la piedad; ahora se suministra. El que no añade no es humilde. Es ciego, y se olvidó de la purificación de sus antiguos pecados.",
+      "Dios ya nos dio todas las cosas que pertenecen a la vida y a la piedad. Por eso Pedro pide poner toda diligencia en añadir a la fe virtud, conocimiento, dominio propio, paciencia, piedad, afecto fraternal y amor. Quien no los tiene, dice, «tiene la vista muy corta; es ciego, habiendo olvidado la purificación de sus antiguos pecados».",
     puerta:
-      "Entra al aula de 2 Pedro 1, donde la fe que no añade se vuelve estéril, y sal con un solo eslabón costeado.",
+      "Estudia 2 Pedro 1, donde Pedro enseña que la fe que no crece se vuelve estéril, y sal con un paso concreto para esta semana.",
   },
 ];
 
@@ -66,13 +66,13 @@ export const MESES: MesEditorial[] = [
     mes: "2026-09",
     tratadoSlug: "isaias-53",
     impacto:
-      "La llaga del Siervo no es póliza de sanidad automática ni poesía de resiliencia. Isaías 53:5 vuelve al Cántico entero: herido por nuestras rebeliones, ofrenda por la culpa, justificación de muchos. El lector no es el Siervo. Este tratado restituye el versículo al capítulo que lo sostiene y conduce, sin prisa de mercado, al libro El Siervo, no tú.",
+      "La llaga del Siervo no es póliza de sanidad automática ni poesía de resiliencia. Isaías 53:5 vuelve al Cántico entero: herido por nuestras rebeliones, ofrenda por la culpa, justificación de muchos. El lector no es el Siervo. Este tratado devuelve el versículo al capítulo que lo sostiene y lleva al libro El Siervo, no tú.",
   },
   {
     mes: "2026-10",
     tratadoSlug: "el-texto-manda",
     impacto:
-      "V.E.R.D.A.D. no es un acrónimo para recitar ni un noveno puesto en la feria de técnicas. Es el cauce por el que esta casa oye el capítulo entero, hasta que el comentario se sienta atrás y el oído ceda. El texto manda. El método sirve. La rodilla cierra.",
+      "V.E.R.D.A.D. no es una fórmula para recitar ni una técnica más. Es la manera en que leemos el capítulo completo, como el pueblo en tiempos de Nehemías, hasta entender lo que Dios dijo y obedecerlo. El texto manda; el método solo sirve.",
   },
 ];
 
@@ -176,6 +176,13 @@ function indiceSemana(hoy: string): number {
 export function semanaVigente(d = new Date()): SemanaEditorial {
   const i = indiceSemana(fechaCasa(d));
   return SEMANAS[i] ?? SEMANAS[0];
+}
+
+/** ¿La semana vigente cubre hoy? Si no, el calendario quedó atrás y no se muestran fechas pasadas. */
+export function semanaEnCurso(d = new Date()): boolean {
+  const hoy = fechaCasa(d);
+  const s = semanaVigente(d);
+  return s.desde <= hoy && hoy <= s.hasta;
 }
 
 export function semanaProxima(d = new Date()): SemanaEditorial | undefined {

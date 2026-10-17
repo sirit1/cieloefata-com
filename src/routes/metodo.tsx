@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite, Refs, Term } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
-import { BtnArrow, Motif } from "@/components/motif";
+import { BtnArrow } from "@/components/motif";
 import { PasosNav, pasoId } from "@/components/pasos-nav";
 import {
   ANATOMIA,
@@ -18,6 +18,7 @@ import {
   VERDAD_PASOS,
 } from "@/lib/verdad";
 
+import { ESCRITURA } from "@/lib/pilar";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/metodo")({
@@ -34,7 +35,6 @@ export const Route = createFileRoute("/metodo")({
 function MetodoPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <Motif kind="flame" />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{VERDAD_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{VERDAD_ORIGEN.title}</h1>
       <p className="mt-3 font-sans text-sm">
@@ -44,6 +44,10 @@ function MetodoPage() {
       </p>
       <p className="mt-3 font-serif text-xl italic text-ink-soft">{VERDAD_ORIGEN.subtitulo}.</p>
       <p className="mt-2 font-sans text-sm tracking-wide text-gold">{VERDAD_ORIGEN.libro}</p>
+
+      <p className="mt-8 text-lg leading-relaxed">
+        <ConLemas>{ESCRITURA.oficio}</ConLemas>
+      </p>
 
       <p className="mt-8 text-lg leading-relaxed">
         <ConLemas>{VERDAD_ORIGEN.quien}</ConLemas>
@@ -181,7 +185,7 @@ function MetodoPage() {
         <Refs refs={CRISOL_COMPUERTA.refs} />
         <p className="mt-8 font-sans text-sm">
           <Link to="/crisol" className="text-link underline">
-            C.R.I.S.O.L. en El Altar del Espejo
+            El método C.R.I.S.O.L. (El altar del espejo)
           </Link>
         </p>
       </section>
@@ -190,17 +194,17 @@ function MetodoPage() {
         <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">Parte IV · el método en el canon</p>
         <h2 className="mt-2 font-serif text-3xl">El yunque</h2>
         <p className="mt-5 text-lg leading-relaxed">
-          Un método que no se ensucia las manos con el texto es escolástica. El tratado no termina
-          en el décimo capítulo. Baja a Génesis 3, se arrodilla en el Salmo 22, se calla ante Isaías
+          Un método que no se ensucia las manos con el texto es pura teoría. Por eso el libro Éfata no
+          termina en la explicación del método: baja a Génesis 3, se arrodilla en el Salmo 22, se calla ante Isaías
           53, oye el{" "}
           <Term title="Éfata: sé abierto (Marcos 7:34)">Éfata</Term> de Marcos 7, desciende con el
           Carmen Christi y espera a que el Cordero abra el libro. Si la cadena no sobrevive a esos
           seis géneros, no merece un solo discípulo.
         </p>
         <p className="mt-5 text-lg leading-relaxed">
-          Los laboratorios no son adornos. Marcos 7, Filipenses 2 y Apocalipsis 5 abren el aula.
-          Isaías 53 se escudriña en el tratado. Génesis 3 y el Salmo 22 se leen en el capítulo:
-          no hay una clase que fingir.
+          Estos seis pasajes son los laboratorios del método. Marcos 7, Filipenses 2 y Apocalipsis 5
+          tienen su estudio en este sitio; Isaías 53 se estudia en su tratado; Génesis 3 y el Salmo
+          22 se leen directamente en el capítulo.
         </p>
         <ul className="mt-10 divide-y divide-rule border-y border-rule">
           {LABORATORIOS.map((lab) => {

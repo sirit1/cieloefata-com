@@ -1,6 +1,6 @@
 import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
 import { Refs } from "@/components/cite";
-import { BtnArrow, Motif } from "@/components/motif";
+import { BtnArrow } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { tratadoMesSlug } from "@/lib/calendario";
@@ -18,9 +18,9 @@ export const Route = createFileRoute("/tratados")({
       path: "/tratados",
       title: tituloSeccion("Tratados"),
       description:
-        "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.",
+        "Tratados bíblicos: versículos muy citados, leídos otra vez dentro del capítulo que los sostiene.",
       detalle:
-        "Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle. Primero se lee ese capítulo entero, y solo entonces habla el tratado, que se sienta detrás del texto y no finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada.",
+        "Cada tratado toma un versículo muy citado, y a menudo citado fuera de lugar, y lo devuelve al capítulo donde Dios lo puso. Primero leemos el pasaje completo; después dejamos que el texto hable antes que nosotros. Cada mes destacamos uno.",
     });
   },
 });
@@ -32,13 +32,11 @@ function TratadosPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
-      <Motif kind="lamb" />
-      <h1 className="mt-2 font-serif text-4xl">El ensayo del mes</h1>
+      <h1 className="mt-2 font-serif text-4xl">Tratados</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo
-        citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle.
-        Primero se lee ese capítulo entero, y solo entonces habla el tratado, que se sienta
-        detrás del texto y no finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada.
+        Cada tratado toma un versículo muy citado, y a menudo citado fuera de lugar, y lo
+        devuelve al capítulo donde Dios lo puso. Primero leemos el pasaje completo; después
+        dejamos que el texto hable antes que nosotros. Cada mes destacamos uno.
       </p>
       <Refs refs="Neh. 8:8 · 2 P. 3:16" />
 
@@ -60,10 +58,10 @@ function TratadosPage() {
         </article>
       ) : null}
 
-      <Lista titulo="TRATADOS" items={publicados} />
+      <Lista titulo="Todos los tratados" items={publicados} />
       <p className="mt-10 font-sans text-sm">
         <Link to="/estudios" className="text-link underline">
-          Escudriñar las clases
+          Ver los estudios
         </Link>
         {" · "}
         <Link to="/objeciones" className="text-link underline">
@@ -84,8 +82,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceTratado[] }) {
         {items.map((e) => (
           <li key={e.slug} className="border-t border-rule pt-6">
             <p className="font-sans text-xs tracking-widest text-gold uppercase">
-              {etiquetaTratado(e.slug)}
-              {e.n !== "—" ? ` · ${e.n}` : ""} · {e.ref}
+              {etiquetaTratado(e.slug)} · {e.ref}
             </p>
             <h3 className="mt-1 font-serif text-2xl">{e.title}</h3>
             <p className="mt-3 leading-relaxed">{e.blurb}</p>

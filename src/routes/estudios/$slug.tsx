@@ -2,12 +2,18 @@ import { createFileRoute, notFound, redirect, useRouterState } from "@tanstack/r
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { ConLemas } from "@/components/lema";
+import { Interlineal } from "@/components/interlineal";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
 import { estudioTienePack } from "@/lib/catalogo";
 import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
+
+/** Estudios cuyo hilo narrativo sigue de cerca la RVR1960 sin ser cita literal. */
+const RELATO_ADAPTADO: Record<string, string> = {
+  "viajes-de-pablo": "Relato adaptado de Hechos (RVR1960)",
+};
 
 function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
@@ -97,14 +103,20 @@ function StudyPage() {
         modified={fechas?.modified}
       />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        Aula · {etiquetaEstudio(study.slug)} · {pasaje}
+        {etiquetaEstudio(study.slug)} · {pasaje}
       </p>
-      {llegada ? <p className="mt-3 leading-relaxed">Llegaste desde {llegada}. El aula abre ese pasaje, no otra portada.</p> : null}
+      {llegada ? <p className="mt-3 leading-relaxed">Llegaste desde {llegada}.</p> : null}
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
+      {RELATO_ADAPTADO[study.slug] ? (
+        <p className="mt-3 font-sans text-sm text-ink-soft">
+          <span className="chip">{RELATO_ADAPTADO[study.slug]}</span>
+        </p>
+      ) : null}
       <p className="mt-6">
         <LeerCapitulo ref={pasaje} desde={`/estudios/${study.slug}`} />
       </p>
+      <Interlineal slug={study.slug} />
       <div className="mt-10 space-y-6">
         {parrafos.map((para, i) => (
           <p key={i} className="text-lg leading-relaxed">

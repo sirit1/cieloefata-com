@@ -2,7 +2,7 @@
  * El Paráclito Eterno (Juan 14–16), estudio de la Serie Cielo Efata.
  * Fuente: estudios_kindle/src/El Paráclito Eterno — Juan 14-16.md (el EPUB del 4 oct 2026).
  * Las citas, entre asteriscos o en las promesas, siguen la Reina-Valera 1960.
- * Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960 es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia.
+ * Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960® es una marca registrada de Sociedades Bíblicas Unidas, y se puede usar solamente bajo licencia.
  */
 export const PARACLITO = {
   slug: "el-paraclito-eterno",
@@ -15,7 +15,7 @@ export const PARACLITO = {
   versionNote:
     "Estudio de la Serie Cielo Efata, Editorial Cielo Efata. Las citas castellanas siguen la Reina-Valera 1960, en cursiva y con referencia; el griego del Nuevo Testamento se lee según el Textus Receptus.",
   copyright:
-    "© 2026 Alejandro Sirit. Todos los derechos reservados. Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960 es una marca registrada de la American Bible Society, y puede ser usada solamente bajo licencia.",
+    "© 2026 Alejandro Sirit. Todos los derechos reservados. Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado con permiso. Reina-Valera 1960® es una marca registrada de Sociedades Bíblicas Unidas, y se puede usar solamente bajo licencia.",
   tesis:
     "El Espíritu Santo no es una energía que se activa, sino una Persona divina que el Padre envía en el nombre del Hijo para estar con los suyos para siempre.",
   portico: [

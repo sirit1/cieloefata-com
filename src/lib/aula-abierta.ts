@@ -60,3 +60,33 @@ export function cerrarAulaSiEscrito(pasaje: string) {
     /* private mode */
   }
 }
+
+/** Hasta dónde se leyó cada aula (0–1). Solo en este navegador. */
+const LECTURA_KEY = "cieloefata-lectura";
+
+export function guardarProgreso(slug: string, fraccion: number) {
+  try {
+    const raw = localStorage.getItem(LECTURA_KEY);
+    const mapa = raw ? (JSON.parse(raw) as Record<string, number>) : {};
+    mapa[slug] = Math.round(Math.min(1, Math.max(0, fraccion)) * 100) / 100;
+    localStorage.setItem(LECTURA_KEY, JSON.stringify(mapa));
+  } catch {
+    /* private mode */
+  }
+}
+
+export function progresoDe(slug: string): number {
+  try {
+    const raw = localStorage.getItem(LECTURA_KEY);
+    const mapa = raw ? (JSON.parse(raw) as Record<string, number>) : {};
+    return typeof mapa[slug] === "number" ? mapa[slug] : 0;
+  } catch {
+    return 0;
+  }
+}
+
+/** Minutos de lectura: unas 200 palabras por minuto, que es el paso de quien lee con la Biblia abierta. */
+export function minutosDeLectura(texto: string): number {
+  const palabras = texto.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(palabras / 200));
+}

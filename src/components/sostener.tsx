@@ -34,7 +34,6 @@ export function Sostener() {
           rel="noopener noreferrer"
           target="_blank"
           className="justify-self-start md:justify-self-end"
-          aria-label="Escanear para sostener este trabajo por WhatsApp"
         >
           <img
             src={OFRENDA.qr}

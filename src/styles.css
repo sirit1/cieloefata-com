@@ -24,6 +24,54 @@
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
   --radius: 0;
+  /* v2: la serif de la casa tiene ojo pequeño; la lectura sube un punto. */
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.75;
+  --text-xl: 1.3125rem;
+  --ease-casa: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/*
+ * Modo oscuro (v2). Mismos tres colores del sello —tinta, oro, pergamino—
+ * invertidos para leer de noche. El script de <head> fija data-tema antes de pintar
+ * (preferencia guardada o la del sistema). Sin JavaScript, el sitio queda claro.
+ */
+:root[data-tema="oscuro"] {
+  color-scheme: dark;
+  --color-ink: #ece5d6;
+  --color-ink-2: #ece5d6;
+  --color-ink-soft: #cfc6b4;
+  --color-muted: #b3aa98;
+  --color-parchment: #10141c;
+  --color-paper: #171c27;
+  --color-gold: #d9b871;
+  --color-gold-dim: #cfae66;
+  --color-rule: #8c7444;
+  --color-link: #e2c47f;
+  --color-verse: #a9c8ef;
+  --color-voz: #f0a8a8;
+  --color-danger: #f2a0a0;
+  --glosa-bg: #232a38;
+  --btn-ink-bg: #ece5d6;
+  --btn-ink-bg-hover: #ffffff;
+  --btn-ink-fg: #10141c;
+}
+
+/* Dentro de lo azul marino todo vuelve a sus valores claros: el marino no se invierte. */
+:root[data-tema="oscuro"] :is(.bg-navy, .sobre-navy) {
+  --color-ink: #1a2340;
+  --color-ink-soft: #3a465c;
+  --color-muted: #5c6578;
+  --color-parchment: #f4efe4;
+  --color-paper: #fbf8f1;
+  --color-gold: #7a5414;
+  --color-rule: #c4a35a;
+  --color-link: #6e4a12;
+  --color-verse: #1e4d8c;
+  --color-voz: #9b1c1c;
+  --btn-ink-bg: #1a202c;
+  --btn-ink-bg-hover: #0c1018;
+  --btn-ink-fg: #f4efe4;
 }
 
 @layer base {
@@ -55,8 +103,36 @@
     -webkit-hyphens: none;
   }
 
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-gold-soft) 45%, transparent);
+    color: inherit;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+    a,
+    button,
+    .btn,
+    .tarjeta,
+    input {
+      transition:
+        color 160ms var(--ease-casa),
+        background-color 160ms var(--ease-casa),
+        border-color 160ms var(--ease-casa),
+        box-shadow 220ms var(--ease-casa),
+        transform 220ms var(--ease-casa);
+    }
+  }
+
   body {
     @apply bg-parchment text-ink font-serif;
+    font-size: 1.0625rem;
     word-break: normal;
     overflow-wrap: normal;
     letter-spacing: normal;
@@ -167,7 +243,7 @@
     width: max-content;
     max-width: min(22rem, 70vw);
     padding: 0.55rem 0.75rem;
-    background: #ebe6dc;
+    background: var(--glosa-bg, #ebe6dc);
     color: var(--color-ink);
     font-family: var(--font-serif);
     font-size: 0.95rem;
@@ -357,12 +433,31 @@
   }
 
   .btn-ink {
-    background: #1a202c;
-    color: var(--color-parchment);
+    background: var(--btn-ink-bg, #1a202c);
+    color: var(--btn-ink-fg, var(--color-parchment));
   }
 
   .btn-ink:hover {
-    background: var(--color-navy-deep);
+    background: var(--btn-ink-bg-hover, var(--color-navy-deep));
+  }
+
+  .btn:active {
+    transform: translateY(1px);
+  }
+
+  .btn-sm {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.95rem;
+    font-size: 0.78rem;
+  }
+
+  .btn-wa {
+    background: #1f6f43;
+    color: #ffffff;
+  }
+
+  .btn-wa:hover {
+    background: #185a36;
   }
 
   .btn-gold {
@@ -512,3 +607,320 @@
 .manual table { width: 100%; border-collapse: collapse; font-size: 0.95rem; display: block; overflow-x: auto; }
 .manual th, .manual td { border: 1px solid rgba(127,127,127,.35); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
 .manual a { text-decoration: underline; }
+
+@media (max-width: 639px) {
+  main p:not(.citas):not(.kicker):not(:has(.cite)),
+  .prosa {
+    text-align: start;
+  }
+}
+
+@media (pointer: coarse) {
+  p.citas .cite {
+    padding-block: 0.75rem;
+  }
+}
+
+.tomo-grid .examinar {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+/* ───────────────────────── v2: piezas nuevas ───────────────────────── */
+@layer components {
+  .tarjeta {
+    display: block;
+    height: 100%;
+    border: 1px solid color-mix(in oklab, var(--color-rule) 45%, transparent);
+    background: var(--color-paper);
+    padding: 1.25rem 1.35rem 1.4rem;
+  }
+
+  a.tarjeta:hover,
+  a.tarjeta:focus-visible {
+    border-color: var(--color-gold);
+    box-shadow: 0 10px 30px -18px color-mix(in oklab, var(--color-navy-deep) 55%, transparent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    a.tarjeta:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  .seccion-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 1.35rem + 1.6vw, 2.35rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: 0.005em;
+  }
+
+  .hero-titulo {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 1.7rem + 3.6vw, 4.25rem);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.005em;
+  }
+
+  .campo {
+    min-height: 2.85rem;
+    width: 100%;
+    border: 1px solid color-mix(in oklab, var(--color-rule) 80%, transparent);
+    background: var(--color-paper);
+    color: var(--color-ink);
+    padding: 0 0.9rem;
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+  }
+
+  .campo::placeholder {
+    color: var(--color-muted);
+    opacity: 1;
+  }
+
+  .campo:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 1px;
+  }
+
+  .buscador-cabecera input {
+    min-height: 2.5rem;
+    width: 12.5rem;
+    border: 1px solid color-mix(in oklab, var(--color-gold-soft) 55%, transparent);
+    background: color-mix(in oklab, var(--color-navy-deep) 45%, transparent);
+    color: #f4efe4;
+    padding: 0 0.75rem 0 2.1rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+  }
+
+  .buscador-cabecera input::placeholder {
+    color: color-mix(in oklab, #f4efe4 72%, transparent);
+  }
+
+  .buscador-cabecera input:focus-visible {
+    outline: 2px solid var(--color-gold-soft);
+    outline-offset: 1px;
+    width: 15rem;
+  }
+
+  .icono-btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    color: #f4efe4;
+  }
+
+  .icono-btn:hover {
+    color: var(--color-gold-soft);
+  }
+
+  .progreso-lectura {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: 3px;
+    margin: -2rem -1.25rem 1.75rem;
+    background: color-mix(in oklab, var(--color-rule) 25%, transparent);
+  }
+
+  @media (min-width: 640px) {
+    .progreso-lectura {
+      margin: -2.5rem -2.5rem 2rem;
+    }
+  }
+
+  .progreso-lectura > span {
+    display: block;
+    height: 100%;
+    background: var(--color-gold);
+    transform-origin: left;
+  }
+
+  .meta-lectura {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+  }
+
+  .chip {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid color-mix(in oklab, var(--color-rule) 70%, transparent);
+    padding: 0 0.85rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--color-ink);
+  }
+
+  .chip:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+  }
+
+  .borrador-aviso {
+    border: 1px dashed var(--color-gold);
+    background: color-mix(in oklab, var(--color-gold-soft) 14%, transparent);
+    padding: 0.9rem 1.1rem;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /* Ficha de palabra (Strong) */
+  .strong-btn {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+    min-height: 1.75rem;
+    padding: 0.2rem 0;
+  }
+
+  .ficha-palabra {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 80;
+    max-height: 78vh;
+    overflow-y: auto;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    border-top: 2px solid var(--color-gold);
+    box-shadow: 0 -18px 50px -20px rgba(0, 0, 0, 0.55);
+    padding: 1.25rem 1.25rem 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .ficha-palabra {
+      inset: auto auto 1.5rem 50%;
+      width: min(34rem, calc(100vw - 2rem));
+      transform: translateX(-50%);
+      border: 1px solid color-mix(in oklab, var(--color-rule) 70%, transparent);
+      border-top: 3px solid var(--color-gold);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .ficha-palabra {
+      animation: ficha-sube 220ms var(--ease-casa);
+    }
+  }
+
+  @keyframes ficha-sube {
+    from {
+      opacity: 0;
+      translate: 0 12px;
+    }
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+
+  .indice-libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+/* La hoja del aula se ensancha un poco: ~68 caracteres por línea con la letra nueva. */
+.aula-hoja {
+  max-width: 42rem;
+}
+
+.aula-hoja .text-lg {
+  font-size: 1.22rem;
+  line-height: 1.78;
+}
+
+@media (min-width: 768px) {
+  .aula-hoja .text-lg {
+    font-size: 1.28rem;
+  }
+}
+
+:root[data-tema="oscuro"] [data-aula] {
+  background: rgba(3, 5, 9, 0.9) !important;
+}
+
+:root[data-tema="oscuro"] img.tapa-img {
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Imprimir o guardar como PDF: solo el texto, sin la casa alrededor. */
+@media print {
+  @page {
+    margin: 18mm 16mm;
+  }
+  :root {
+    --color-parchment: #ffffff;
+    --color-paper: #ffffff;
+    --color-ink: #000000;
+    --color-ink-soft: #222222;
+    --color-gold: #5a3d0c;
+    --color-verse: #1e3a66;
+  }
+  header,
+  footer,
+  .no-imprimir,
+  .progreso-lectura,
+  .glosa-card {
+    display: none !important;
+  }
+  [data-aula] {
+    position: static !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+  .aula-hoja {
+    max-width: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .aula-hoja .text-lg {
+    font-size: 12pt;
+    line-height: 1.55;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+button.term {
+  cursor: pointer;
+  text-align: inherit;
+  line-height: inherit;
+}
+
+.interlineal-palabra {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.25rem 0.35rem;
+  border: 1px solid transparent;
+}
+
+.interlineal-palabra:hover,
+.interlineal-palabra:focus-visible {
+  border-color: color-mix(in oklab, var(--color-gold) 60%, transparent);
+  background: color-mix(in oklab, var(--color-gold-soft) 10%, transparent);
+}

@@ -20,12 +20,15 @@ import { Route as CrisolRouteImport } from './routes/crisol'
 import { Route as CuadernoRouteImport } from './routes/cuaderno'
 import { Route as DonarRouteImport } from './routes/donar'
 import { Route as EscrituraRouteImport } from './routes/escritura'
+import { Route as GlosarioRouteImport } from './routes/glosario'
 import { Route as GuiasRouteImport } from './routes/guias'
 import { Route as LibrosRouteImport } from './routes/libros'
+import { Route as LoQueCreemosRouteImport } from './routes/lo-que-creemos'
 import { Route as MetodoRouteImport } from './routes/metodo'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ObjecionesRouteImport } from './routes/objeciones'
 import { Route as PalabraRouteImport } from './routes/palabra'
+import { Route as PasajesRouteImport } from './routes/pasajes'
 import { Route as ProbadRouteImport } from './routes/probad'
 import { Route as SelloRouteImport } from './routes/sello'
 import { Route as SostenerRouteImport } from './routes/sostener'
@@ -42,6 +45,8 @@ import { Route as ObrasIndexRouteImport } from './routes/obras/index'
 import { Route as ObrasSlugRouteImport } from './routes/obras/$slug'
 import { Route as ObrasElParaclitoEternoRouteImport } from './routes/obras/el-paraclito-eterno'
 import { Route as ObrasElSiervoRouteImport } from './routes/obras/el-siervo'
+import { Route as PreguntasIndexRouteImport } from './routes/preguntas/index'
+import { Route as PreguntasSlugRouteImport } from './routes/preguntas/$slug'
 import { Route as TratadosSlugRouteImport } from './routes/tratados/$slug'
 
 const IndexRoute = IndexRouteImport.update({
@@ -99,6 +104,11 @@ const EscrituraRoute = EscrituraRouteImport.update({
   path: '/escritura',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlosarioRoute = GlosarioRouteImport.update({
+  id: '/glosario',
+  path: '/glosario',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GuiasRoute = GuiasRouteImport.update({
   id: '/guias',
   path: '/guias',
@@ -107,6 +117,11 @@ const GuiasRoute = GuiasRouteImport.update({
 const LibrosRoute = LibrosRouteImport.update({
   id: '/libros',
   path: '/libros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoQueCreemosRoute = LoQueCreemosRouteImport.update({
+  id: '/lo-que-creemos',
+  path: '/lo-que-creemos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MetodoRoute = MetodoRouteImport.update({
@@ -127,6 +142,11 @@ const ObjecionesRoute = ObjecionesRouteImport.update({
 const PalabraRoute = PalabraRouteImport.update({
   id: '/palabra',
   path: '/palabra',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PasajesRoute = PasajesRouteImport.update({
+  id: '/pasajes',
+  path: '/pasajes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProbadRoute = ProbadRouteImport.update({
@@ -209,6 +229,16 @@ const ObrasElSiervoRoute = ObrasElSiervoRouteImport.update({
   path: '/obras/el-siervo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PreguntasIndexRoute = PreguntasIndexRouteImport.update({
+  id: '/preguntas/',
+  path: '/preguntas/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreguntasSlugRoute = PreguntasSlugRouteImport.update({
+  id: '/preguntas/$slug',
+  path: '/preguntas/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TratadosSlugRoute = TratadosSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -227,12 +257,15 @@ export interface FileRoutesByFullPath {
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
   '/escritura': typeof EscrituraRoute
+  '/glosario': typeof GlosarioRoute
   '/guias': typeof GuiasRoute
   '/libros': typeof LibrosRoute
+  '/lo-que-creemos': typeof LoQueCreemosRoute
   '/metodo': typeof MetodoRoute
   '/nosotros': typeof NosotrosRoute
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
+  '/pasajes': typeof PasajesRoute
   '/probad': typeof ProbadRoute
   '/sello': typeof SelloRoute
   '/sostener': typeof SostenerRoute
@@ -246,10 +279,12 @@ export interface FileRoutesByFullPath {
   '/obras/$slug': typeof ObrasSlugRoute
   '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
+  '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
+  '/preguntas/': typeof PreguntasIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -263,12 +298,15 @@ export interface FileRoutesByTo {
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
   '/escritura': typeof EscrituraRoute
+  '/glosario': typeof GlosarioRoute
   '/guias': typeof GuiasRoute
   '/libros': typeof LibrosRoute
+  '/lo-que-creemos': typeof LoQueCreemosRoute
   '/metodo': typeof MetodoRoute
   '/nosotros': typeof NosotrosRoute
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
+  '/pasajes': typeof PasajesRoute
   '/probad': typeof ProbadRoute
   '/sello': typeof SelloRoute
   '/sostener': typeof SostenerRoute
@@ -282,10 +320,12 @@ export interface FileRoutesByTo {
   '/obras/$slug': typeof ObrasSlugRoute
   '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
+  '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/articulos': typeof ArticulosIndexRoute
   '/estudios': typeof EstudiosIndexRoute
   '/obras': typeof ObrasIndexRoute
+  '/preguntas': typeof PreguntasIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -300,12 +340,15 @@ export interface FileRoutesById {
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
   '/escritura': typeof EscrituraRoute
+  '/glosario': typeof GlosarioRoute
   '/guias': typeof GuiasRoute
   '/libros': typeof LibrosRoute
+  '/lo-que-creemos': typeof LoQueCreemosRoute
   '/metodo': typeof MetodoRoute
   '/nosotros': typeof NosotrosRoute
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
+  '/pasajes': typeof PasajesRoute
   '/probad': typeof ProbadRoute
   '/sello': typeof SelloRoute
   '/sostener': typeof SostenerRoute
@@ -319,10 +362,12 @@ export interface FileRoutesById {
   '/obras/$slug': typeof ObrasSlugRoute
   '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
   '/obras/el-siervo': typeof ObrasElSiervoRoute
+  '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
+  '/preguntas/': typeof PreguntasIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -338,12 +383,15 @@ export interface FileRouteTypes {
     | '/cuaderno'
     | '/donar'
     | '/escritura'
+    | '/glosario'
     | '/guias'
     | '/libros'
+    | '/lo-que-creemos'
     | '/metodo'
     | '/nosotros'
     | '/objeciones'
     | '/palabra'
+    | '/pasajes'
     | '/probad'
     | '/sello'
     | '/sostener'
@@ -357,10 +405,12 @@ export interface FileRouteTypes {
     | '/obras/$slug'
     | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
+    | '/preguntas/$slug'
     | '/tratados/$slug'
     | '/articulos/'
     | '/estudios/'
     | '/obras/'
+    | '/preguntas/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -374,12 +424,15 @@ export interface FileRouteTypes {
     | '/cuaderno'
     | '/donar'
     | '/escritura'
+    | '/glosario'
     | '/guias'
     | '/libros'
+    | '/lo-que-creemos'
     | '/metodo'
     | '/nosotros'
     | '/objeciones'
     | '/palabra'
+    | '/pasajes'
     | '/probad'
     | '/sello'
     | '/sostener'
@@ -393,10 +446,12 @@ export interface FileRouteTypes {
     | '/obras/$slug'
     | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
+    | '/preguntas/$slug'
     | '/tratados/$slug'
     | '/articulos'
     | '/estudios'
     | '/obras'
+    | '/preguntas'
   id:
     | '__root__'
     | '/'
@@ -410,12 +465,15 @@ export interface FileRouteTypes {
     | '/cuaderno'
     | '/donar'
     | '/escritura'
+    | '/glosario'
     | '/guias'
     | '/libros'
+    | '/lo-que-creemos'
     | '/metodo'
     | '/nosotros'
     | '/objeciones'
     | '/palabra'
+    | '/pasajes'
     | '/probad'
     | '/sello'
     | '/sostener'
@@ -429,10 +487,12 @@ export interface FileRouteTypes {
     | '/obras/$slug'
     | '/obras/el-paraclito-eterno'
     | '/obras/el-siervo'
+    | '/preguntas/$slug'
     | '/tratados/$slug'
     | '/articulos/'
     | '/estudios/'
     | '/obras/'
+    | '/preguntas/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -447,12 +507,15 @@ export interface RootRouteChildren {
   CuadernoRoute: typeof CuadernoRoute
   DonarRoute: typeof DonarRoute
   EscrituraRoute: typeof EscrituraRoute
+  GlosarioRoute: typeof GlosarioRoute
   GuiasRoute: typeof GuiasRoute
   LibrosRoute: typeof LibrosRoute
+  LoQueCreemosRoute: typeof LoQueCreemosRoute
   MetodoRoute: typeof MetodoRoute
   NosotrosRoute: typeof NosotrosRoute
   ObjecionesRoute: typeof ObjecionesRoute
   PalabraRoute: typeof PalabraRoute
+  PasajesRoute: typeof PasajesRoute
   ProbadRoute: typeof ProbadRoute
   SelloRoute: typeof SelloRoute
   SostenerRoute: typeof SostenerRoute
@@ -466,9 +529,11 @@ export interface RootRouteChildren {
   ObrasSlugRoute: typeof ObrasSlugRoute
   ObrasElParaclitoEternoRoute: typeof ObrasElParaclitoEternoRoute
   ObrasElSiervoRoute: typeof ObrasElSiervoRoute
+  PreguntasSlugRoute: typeof PreguntasSlugRoute
   ArticulosIndexRoute: typeof ArticulosIndexRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
   ObrasIndexRoute: typeof ObrasIndexRoute
+  PreguntasIndexRoute: typeof PreguntasIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -550,6 +615,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EscrituraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/glosario': {
+      id: '/glosario'
+      path: '/glosario'
+      fullPath: '/glosario'
+      preLoaderRoute: typeof GlosarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/guias': {
       id: '/guias'
       path: '/guias'
@@ -562,6 +634,13 @@ declare module '@tanstack/react-router' {
       path: '/libros'
       fullPath: '/libros'
       preLoaderRoute: typeof LibrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lo-que-creemos': {
+      id: '/lo-que-creemos'
+      path: '/lo-que-creemos'
+      fullPath: '/lo-que-creemos'
+      preLoaderRoute: typeof LoQueCreemosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/metodo': {
@@ -590,6 +669,13 @@ declare module '@tanstack/react-router' {
       path: '/palabra'
       fullPath: '/palabra'
       preLoaderRoute: typeof PalabraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pasajes': {
+      id: '/pasajes'
+      path: '/pasajes'
+      fullPath: '/pasajes'
+      preLoaderRoute: typeof PasajesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/probad': {
@@ -704,6 +790,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ObrasElSiervoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/preguntas/': {
+      id: '/preguntas/'
+      path: '/preguntas'
+      fullPath: '/preguntas/'
+      preLoaderRoute: typeof PreguntasIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/preguntas/$slug': {
+      id: '/preguntas/$slug'
+      path: '/preguntas/$slug'
+      fullPath: '/preguntas/$slug'
+      preLoaderRoute: typeof PreguntasSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tratados/$slug': {
       id: '/tratados/$slug'
       path: '/$slug'
@@ -738,12 +838,15 @@ const rootRouteChildren: RootRouteChildren = {
   CuadernoRoute: CuadernoRoute,
   DonarRoute: DonarRoute,
   EscrituraRoute: EscrituraRoute,
+  GlosarioRoute: GlosarioRoute,
   GuiasRoute: GuiasRoute,
   LibrosRoute: LibrosRoute,
+  LoQueCreemosRoute: LoQueCreemosRoute,
   MetodoRoute: MetodoRoute,
   NosotrosRoute: NosotrosRoute,
   ObjecionesRoute: ObjecionesRoute,
   PalabraRoute: PalabraRoute,
+  PasajesRoute: PasajesRoute,
   ProbadRoute: ProbadRoute,
   SelloRoute: SelloRoute,
   SostenerRoute: SostenerRoute,
@@ -757,9 +860,11 @@ const rootRouteChildren: RootRouteChildren = {
   ObrasSlugRoute: ObrasSlugRoute,
   ObrasElParaclitoEternoRoute: ObrasElParaclitoEternoRoute,
   ObrasElSiervoRoute: ObrasElSiervoRoute,
+  PreguntasSlugRoute: PreguntasSlugRoute,
   ArticulosIndexRoute: ArticulosIndexRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
   ObrasIndexRoute: ObrasIndexRoute,
+  PreguntasIndexRoute: PreguntasIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

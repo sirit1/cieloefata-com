@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { aulaSinActo, type AulaAbierta } from "@/lib/aula-abierta";
+import { aulaSinActo, progresoDe, type AulaAbierta } from "@/lib/aula-abierta";
 import { semanaVigente } from "@/lib/calendario";
 import {
   RETOMAR_TITULO,
@@ -57,7 +57,10 @@ export function Retomar({
         {pendiente ? (
           <li>
             <p className="font-sans text-xs tracking-[0.16em] text-gold uppercase">
-              Aula sin acto · {fechaCorta(pendiente.at)}
+              Paso pendiente · {fechaCorta(pendiente.at)}
+              {progresoDe(pendiente.slug) > 0.04
+                ? ` · leído ${Math.round(progresoDe(pendiente.slug) * 100)} %`
+                : ""}
             </p>
             <p className="mt-1 leading-relaxed">
               {retomarAulaSinActo(pendiente.titulo, pendiente.pasaje)}
@@ -77,7 +80,7 @@ export function Retomar({
                   params={{ slug: pendiente.slug }}
                   className="btn btn-ghost"
                 >
-                  Volver al aula
+                  Volver al estudio
                 </Link>
               ) : (
                 <Link

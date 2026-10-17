@@ -1,16 +1,16 @@
-import { estudioSemanaSlug, tratadoMesSlug } from "@/lib/calendario";
+import { estudioSemanaSlug, semanaEnCurso, tratadoMesSlug } from "@/lib/calendario";
 import { estudioTienePack } from "@/lib/catalogo";
 import { LAB_SLUGS } from "@/lib/labs";
 
-/** Rótulo de catálogo. No abre el cuerpo del aula. */
+/** Rótulo de catálogo. */
 export function etiquetaEstudio(slug: string) {
-  if (slug === "viajes-de-pablo") return "Estudio · pack · Hechos 13–14";
-  if (slug === estudioSemanaSlug()) return "Estudio · esta semana";
+  if (slug === "viajes-de-pablo") return "Estudio";
+  if (slug === estudioSemanaSlug()) return semanaEnCurso() ? "Estudio · esta semana" : "Estudio destacado";
   if (estudioTienePack(slug) && (LAB_SLUGS as readonly string[]).includes(slug)) {
-    return "Estudio · pack · yunque";
+    return "Estudio";
   }
-  if (estudioTienePack(slug)) return "Estudio · pack";
-  if ((LAB_SLUGS as readonly string[]).includes(slug)) return "Laboratorio";
+  if (estudioTienePack(slug)) return "Estudio";
+  if ((LAB_SLUGS as readonly string[]).includes(slug)) return "Estudio";
   return "Estudio";
 }
 

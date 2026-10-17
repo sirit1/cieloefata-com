@@ -29,22 +29,22 @@ import {
 } from "./seo.ts";
 
 const secciones: Array<[string, string, string, string?]> = [
-  ["/", SITE_TITLE, "Escuela de lectura de la Escritura. Primero se lee el capítulo entero; aquí se estudia: el método, el estudio de la semana y el tratado del mes."],
-  ["/canon", tituloSeccion("Canon"), "Sesenta y seis libros. Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo.", ESCRITURA.body[0]],
+  ["/", SITE_TITLE, "Escuela de estudio bíblico de Alejandro Sirit: leer el capítulo entero, estudiarlo con el método V.E.R.D.A.D. y obedecer lo que Dios dice."],
+  ["/canon", tituloSeccion("Canon"), "Sesenta y seis libros. Siete secciones recorren el canon. La ley, los profetas y los salmos hablan de Cristo.", ESCRITURA.body[0]],
   ["/metodo", tituloSeccion("Cómo leer"), "El Método V.E.R.D.A.D.: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. El texto manda; el comentario se sienta atrás."],
-  ["/estudios", tituloSeccion("Estudios"), "Las clases de la escuela: un pasaje entero, la cadena V.E.R.D.A.D. y un solo acto. Se leen aquí, después del capítulo entero.", "Un estudio es la clase: un pasaje completo, oído con la cadena V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— hasta un solo acto, dicho a alguien que pueda preguntar mañana. El capítulo se lee entero, y esta casa no sustituye esa lectura: la escudriña hasta que el versículo vuelva al párrafo y el párrafo pida obediencia. Entran los catorce estudios que ya tienen manuscrito y los catorce tratados que ya tienen portada."],
-  ["/tratados", tituloSeccion("Tratados"), "El ensayo del mes. Un versículo citado de memoria, leído otra vez dentro del capítulo que lo sostiene.", "Un tratado no es un estudio breve ni un devocional. Es el ensayo en que un versículo citado de memoria vuelve al capítulo que lo sostiene, hasta que la jactancia se calle. Primero se lee ese capítulo entero, y solo entonces habla el tratado, que se sienta detrás del texto y no finge un manuscrito que no existe. Entran los catorce que ya tienen manuscrito, PDF y portada."],
+  ["/estudios", tituloSeccion("Estudios"), "Estudios bíblicos: un pasaje completo, leído con el método V.E.R.D.A.D., hasta un paso concreto de obediencia.", "Cada estudio recorre un pasaje completo con el método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión—. Primero leemos el capítulo entero; después lo estudiamos juntos hasta llegar a un paso concreto de obediencia, que conviene compartir con alguien de confianza."],
+  ["/tratados", tituloSeccion("Tratados"), "Tratados bíblicos: versículos muy citados, leídos otra vez dentro del capítulo que los sostiene.", "Cada tratado toma un versículo muy citado, y a menudo citado fuera de lugar, y lo devuelve al capítulo donde Dios lo puso. Primero leemos el pasaje completo; después dejamos que el texto hable antes que nosotros. Cada mes destacamos uno."],
   ["/obras", tituloSeccion("Los libros"), "Orden de lectura de los libros de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.", CORPUS.gate],
-  ["/sello", tituloSeccion("El sello"), "Post tenebras lux. El sello no es un logotipo, sino una confesión.", SELLO.gate],
+  ["/sello", tituloSeccion("El sello"), "Post tenebras lux: después de las tinieblas, la luz. El sello de Cielo Efata confiesa al León de Judá, al Cordero inmolado y al Espíritu que da luz.", SELLO.gate],
   ["/palabra", tituloSeccion("Palabra"), "Una raíz hebrea o griega, tres pasajes. El léxico no predica: el pasaje predica.", "La misma raíz, hebrea o griega, se lee en tres lugares del canon para no quedarnos con el diccionario. El léxico no predica: el pasaje predica. El que se lleva solo la glosa se lleva un ídolo pequeño, porque una palabra sin capítulo es versiculitis con Strong."],
-  ["/cuaderno", tituloSeccion("Cuaderno"), "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.", CUADERNO_VACIO],
-  ["/crisol", tituloSeccion("C.R.I.S.O.L."), "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.", `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`],
-  ["/guias", tituloSeccion("Guías"), "Strong, cómo se lee, del pasaje a la palabra dicha, y la pregunta difícil. El capítulo sigue siendo el señor de la casa."],
-  ["/sostener", tituloSeccion("Sostener"), "Esta casa no cobra la lectura de la Biblia. La ofrenda sostiene la consulta, los packs y la impresión. WhatsApp +58 424 167 4909."],
-  ["/buscar", tituloSeccion("Buscar"), "Buscar por pasaje o tema en los estudios, tratados y objeciones de la casa. El texto manda; el índice solo señala.", "No hay un motor detrás de esta página. Se filtra lo que ya está escrito: estudios, tratados y las objeciones de versiculitis. Escribe un pasaje —Filipenses 4:13, Isaías 53— o un lema que viaja solo. El índice señala; el capítulo manda."],
-  ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. El capítulo se lee entero. El aula existe solo donde ya hay libro."],
+  ["/cuaderno", tituloSeccion("Cuaderno"), "Sed hacedores. Aquí escribes lo que el texto afirma, un paso concreto de obediencia y con quién lo compartirás.", CUADERNO_VACIO],
+  ["/crisol", tituloSeccion("C.R.I.S.O.L."), "C.R.I.S.O.L.: seis preguntas para cerrar un estudio con una obediencia que sale del texto. Oír y no hacer no es un retraso inocente.", `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`],
+  ["/guias", tituloSeccion("Guías"), "Guías prácticas: cómo usar la concordancia Strong, cómo leer un pasaje, cómo pasar del texto a la conversación y cómo responder una pregunta difícil."],
+  ["/sostener", tituloSeccion("Sostener"), "Cielo Efata no cobra por leer la Biblia. Las ofrendas sostienen los estudios, los libros y su impresión. WhatsApp +58 424 167 4909."],
+  ["/buscar", tituloSeccion("Buscar"), "Busca por pasaje o por tema en los estudios bíblicos, los tratados y las respuestas a versículos sacados de contexto en Cielo Efata.", "Busca entre los estudios, los tratados y las respuestas a versículos sacados de contexto. Escribe un pasaje —por ejemplo, Filipenses 4:13 o Isaías 53— o un tema."],
+  ["/camino", tituloSeccion("El camino"), "Conocer a Dios, convicción de pecado, arrepentimiento, bautismo, conversión y firmeza. Cada paso se lee en su capítulo entero, con su estudio cuando lo hay."],
   ["/nosotros", tituloSeccion("Nosotros"), "Alejandro Sirit dirige Editorial Cielo Efata, una escuela de lectura de la Escritura entera. Escríbenos por WhatsApp al +58 424 167 4909."],
-  ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa."],
+  ["/objeciones", tituloSeccion("Objeciones"), "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— leídos otra vez dentro de su capítulo en los tratados de Cielo Efata."],
 ];
 
 test("títulos únicos y descripciones de 120 a 160", async () => {
@@ -79,24 +79,34 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
   assert.deepEqual(fails, []);
 });
 
-test("Bástate no tiene ficha de Amazon", () => {
+test("solo los libros sin edición publicada en Amazon quedan sin ficha", () => {
+  // Comprobado en amazon.com el 17-10-2026: Pórtico, De una misma boca y Nunca tocarás mi fe aún no están publicados.
   const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
-  assert.deepEqual(sin, ["portico-a-la-escritura", "efata", "bastate-mi-gracia", "el-altar-del-espejo", "de-una-misma-boca", "diakrisis", "nunca-tocaras-mi-fe"]);
+  assert.deepEqual(sin, ["portico-a-la-escritura", "de-una-misma-boca", "nunca-tocaras-mi-fe"]);
+  for (const o of obras) assert.equal(Boolean(o.sinAmazon), !amazonDeObra(o), o.slug);
 });
 
-test("el ISBN de imprenta entra en el Book solo donde ya existe", () => {
-  const conIsbn = obras.filter((o) => o.isbnPrint).map((o) => [o.slug, camposLibro(o).isbn]);
-  assert.deepEqual(conIsbn, [["cuando-el-cielo-se-cae", "9798176466690"]]);
-  for (const slug of ["efata", "el-altar-del-espejo", "de-una-misma-boca"]) {
-    const o = obras.find((x) => x.slug === slug)!;
-    assert.equal(o.sinAmazon, true, slug);
-    const libro = camposLibro(o);
+test("ASIN e ISBN de imprenta coinciden con las fichas publicadas en Amazon", () => {
+  const fichas = obras
+    .filter((o) => o.asinEbook || o.asinPrint || o.isbnPrint)
+    .map((o) => [o.slug, o.asinEbook, o.asinPrint, o.isbnPrint]);
+  assert.deepEqual(fichas, [
+    ["efata", "B0HJ15ZXL3", "B0HKSRS7TZ", "9798172426322"],
+    ["el-siervo-no-tu", "B0HKQGBYV4", undefined, undefined],
+    ["bastate-mi-gracia", "B0HKQHNRBC", "B0HN7MTCZ1", "9798162809135"],
+    ["cuando-el-cielo-se-cae", "B0HN5YD6LP", undefined, undefined],
+    ["el-altar-del-espejo", "B0HJ6B33V3", undefined, undefined],
+    ["diakrisis", "B0HN6G4NG4", "B0HN6BFCF2", "9798162796060"],
+  ]);
+  for (const o of obras.filter((x) => x.isbnPrint)) assert.equal(camposLibro(o).isbn, o.isbnPrint, o.slug);
+  for (const slug of ["de-una-misma-boca", "portico-a-la-escritura", "nunca-tocaras-mi-fe"]) {
+    const libro = camposLibro(obras.find((x) => x.slug === slug)!);
     assert.equal("isbn" in libro, false, slug);
     assert.equal("sameAs" in libro, false, slug);
-    assert.equal("offers" in libro, false, slug);
   }
+  // Ediciones viejas que no deben volver: Callar para ganar, el manual anterior de Job y la tapa blanda vieja del Altar.
   const fuente = readFileSync(new URL("./content.ts", import.meta.url), "utf8");
-  for (const viejo of ["B0HJ15ZXL3", "B0GPF3NHQT", "9798253959213", "9798176414967"]) {
+  for (const viejo of ["B0GPF3NHQT", "9798176466690", "B0HKT237N1", "B0HKSZ6B9T", "9798176414967"]) {
     assert.equal(fuente.includes(viejo), false, viejo);
   }
 });
@@ -276,8 +286,8 @@ test("el artículo de Santiago 3 firma Alejandro Sirit, cita la RVR 1960 y enlaz
   const palabras = [a.title, ...a.secciones.map((s) => s.titulo ?? ""), texto].join(" ").split(/\s+/).filter(Boolean).length;
   assert.ok(palabras >= 1200 && palabras <= 1500, String(palabras));
   assert.match(texto, /De una misma boca proceden bendición y maldición/);
-  assert.match(texto, /¿Echa alguna fuente por una misma abertura agua dulce y amarga\?/);
-  assert.match(texto, /¿puede la higuera producir aceitunas, ó la vid higos\?/);
+  assert.match(texto, /¿Acaso alguna fuente echa por una misma abertura agua dulce y amarga\?/);
+  assert.match(texto, /¿puede acaso la higuera producir aceitunas, o la vid higos\?/);
   assert.match(DESCRIPCION_ARTICULOS, /Reina-Valera 1960/);
   assert.equal(/1909/.test(DESCRIPCION_ARTICULOS), false);
   assert.equal(/Dr\.|RevelatiO/i.test(texto), false);

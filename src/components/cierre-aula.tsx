@@ -25,11 +25,12 @@ export function CierreAula({
 
   return (
     <section className="mt-14 border-t border-rule pt-10">
-      <h2 className="font-serif text-3xl">Un acto, esta semana</h2>
+      <h2 className="font-serif text-3xl">Un paso de obediencia para esta semana</h2>
       <p className="mt-4 text-lg leading-relaxed">
         Santiago compara al que oye la Palabra y no la hace con un hombre que se mira al espejo y
-        se va. Este estudio no termina cuando se ha entendido el pasaje. Termina cuando hay un
-        paso concreto, conjugado por este texto, dicho a alguien que pueda preguntar mañana.
+        se va. Por eso este estudio no termina cuando se ha entendido el pasaje, sino cuando hay
+        un paso concreto que sale de este texto, compartido con alguien de confianza que pueda
+        preguntarte por él.
       </p>
 
       {acto ? (
@@ -44,22 +45,21 @@ export function CierreAula({
       ) : null}
 
       <p className="mt-6 leading-relaxed">
-        El cuaderno espera el acto de {pasaje}. No un propósito genérico: el verbo que este texto
-        conjugó. El campo del pasaje llegará prefijado; no se rellena con otro capítulo para
-        decorar la página.
+        Escribe en el cuaderno qué te pide {pasaje}. No un propósito general, sino lo que este
+        texto concretamente manda.
       </p>
       <p className="mt-4 font-sans text-sm tracking-wide">
         <Cite>Stg. 1:22 · Lc. 8:15</Cite>
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row">
         <Link to="/cuaderno" search={{ ref: pasaje }} className="btn btn-gold">
-          Escribir el acto de {pasaje}
+          Escribir mi paso sobre {pasaje}
         </Link>
         <LeerCapitulo ref={pasaje} desde={desde} />
       </div>
       {sig ? (
         <p className="mt-6 leading-relaxed text-ink-soft">
-          Cuando el acto de {pasaje} esté escrito y dicho, la siguiente clase es {sig.title}.{" "}
+          Cuando hayas escrito y compartido tu paso, el siguiente estudio es {sig.title}.{" "}
           <Link to="/estudios/$slug" params={{ slug: sig.slug }} className="text-link underline">
             Escudriñar {sig.title}
           </Link>

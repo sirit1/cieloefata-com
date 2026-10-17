@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Cite, Refs, Term } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
-import { Motif } from "@/components/motif";
 import {
   CRISOL_CUATRO,
   CRISOL_FALLOS,
@@ -20,7 +19,7 @@ export const Route = createFileRoute("/crisol")({
       path: "/crisol",
       title: tituloSeccion("C.R.I.S.O.L."),
       description:
-        "La compuerta pastoral de Decisión en El altar del espejo. Oír y no hacer no es un retraso inocente.",
+        "C.R.I.S.O.L.: seis preguntas para cerrar un estudio con una obediencia que sale del texto. Oír y no hacer no es un retraso inocente.",
       detalle: `${CRISOL_ORIGEN.subtitulo} ${CRISOL_ORIGEN.quien}`,
     }),
 });
@@ -28,7 +27,6 @@ export const Route = createFileRoute("/crisol")({
 function CrisolPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <Motif kind="flame" />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">{CRISOL_ORIGEN.kicker}</p>
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{CRISOL_ORIGEN.title}</h1>
       <p className="mt-3 font-sans text-sm">
@@ -92,7 +90,7 @@ function CrisolPage() {
       </section>
 
       <section className="mt-16 border-t border-rule pt-10">
-        <h2 className="font-serif text-3xl">Donde la compuerta miente</h2>
+        <h2 className="font-serif text-3xl">Cómo se falsea este cierre</h2>
         <ul className="mt-8 space-y-6">
           {CRISOL_FALLOS.map((f) => (
             <li key={f.title}>

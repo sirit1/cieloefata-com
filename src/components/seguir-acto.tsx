@@ -19,7 +19,7 @@ export function SeguirActo() {
   if (pendiente) {
     return (
       <p className="mt-6 leading-relaxed text-ink-soft">
-        El aula de {pendiente.titulo} se oyó. El acto de {pendiente.pasaje} aún no está escrito.{" "}
+        Ya leíste {pendiente.titulo}, pero aún no has escrito tu paso sobre {pendiente.pasaje}.{" "}
         <Link to="/cuaderno" search={{ ref: pendiente.pasaje }} className="text-link underline">
           Escribir el acto
         </Link>
@@ -59,7 +59,7 @@ export function PuertaRegreso() {
   if (estado === "escrito") {
     return (
       <p className="mt-8 text-lg leading-relaxed">
-        El acto de {ficha.ref} quedó escrito. El pasaje sigue siendo el mismo.{" "}
+        Ya escribiste tu paso sobre {ficha.ref}.{" "}
         <Link
           to="/estudios/$slug"
           params={{ slug: semana.studySlug }}
@@ -73,7 +73,7 @@ export function PuertaRegreso() {
 
   return (
     <p className="mt-8 text-lg leading-relaxed">
-      El acto de esta semana sigue sin escribirse.{" "}
+      Aún no has escrito tu paso de obediencia sobre este pasaje.{" "}
       <Link to="/cuaderno" search={{ ref: ficha.ref }} className="text-link underline">
         Escribir el acto
       </Link>

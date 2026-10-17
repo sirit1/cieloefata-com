@@ -17,6 +17,7 @@ import {
   urlRevelatioLibro,
 } from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
+import { whatsappTomo } from "@/lib/amazon";
 import { pageHead, tituloObra } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -52,22 +53,41 @@ export function ObraPage() {
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <BookJsonLd slug={obra.slug} />
       <Volver />
-      <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
-      </p>
-      <h1 className="mt-3 font-serif text-4xl md:text-5xl">{obra.title}</h1>
-      <p className="mt-2 font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>
-      <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
-      <p className="mt-2 font-sans text-sm tracking-wide text-gold">
-        Capítulo ancla: {obra.pasaje}
-      </p>
-
-      <figure className="mt-10 m-0 max-w-xs">
-        <Tapa obra={obra} size="lg" priority />
-        <figcaption className="mt-3 font-sans text-sm leading-relaxed text-ink-soft">
-          Tapa del libro. Se abre junto a {obra.pasaje}, no en lugar de él.
-        </figcaption>
-      </figure>
+      <div className="grid gap-8 sm:grid-cols-[minmax(0,13rem)_1fr] sm:items-start md:gap-10">
+        <figure className="m-0 max-w-[13rem]">
+          <Tapa obra={obra} size="ficha" priority />
+          <figcaption className="sr-only">
+            Tapa de {obra.title}. Se lee junto a {obra.pasaje}.
+          </figcaption>
+        </figure>
+        <div>
+          <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
+            Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
+          </p>
+          <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">{obra.title}</h1>
+          <p className="mt-2 font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>
+          <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
+          <p className="mt-2 font-sans text-sm tracking-wide text-ink-soft">
+            Capítulo ancla: {obra.pasaje}
+          </p>
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href={whatsappTomo(obra.title)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-wa"
+            >
+              Solicitar «{obra.title}» por WhatsApp
+            </a>
+            <a href="#obtener" className="btn btn-ghost">
+              {obra.sinAmazon ? "Cómo obtenerlo" : "Amazon y otras opciones"}
+            </a>
+          </div>
+          <p className="mt-3 font-sans text-xs text-ink-soft">
+            Te respondemos personalmente. El mensaje ya lleva el título del libro.
+          </p>
+        </div>
+      </div>
 
       <p className="mt-10 text-lg leading-relaxed">
         <ConLemas>{obra.line}</ConLemas>
@@ -81,10 +101,10 @@ export function ObraPage() {
 
       <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
       <p className="mt-4 leading-relaxed">
-        Este libro ocupa el puesto {ROMANO[obra.lectura]} del orden de lectura, no el de
-        publicación. Se entra por el Pórtico, y en Éfata se aprende a leer el capítulo entero
-        antes de hablar. Cada tapa se abre junto al capítulo que la sostiene, no en
-        lugar de él.
+        Este es el libro {ROMANO[obra.lectura]} en el orden de lectura sugerido (que no es el de
+        publicación). Se empieza por Pórtico a la Escritura, y en Éfata se aprende a leer el
+        capítulo entero antes de hablar. Cada libro se lee junto al capítulo de la Biblia en
+        que se apoya.
       </p>
       <ol className="mt-5 space-y-2">
         {obras.map((o) => (
@@ -97,27 +117,18 @@ export function ObraPage() {
         ))}
       </ol>
 
-      <h2 className="mt-12 font-serif text-3xl">Una muestra de las primeras páginas</h2>
-      <p className="mt-4 leading-relaxed text-ink-soft">
-        Estas líneas no son un capítulo inventado para vender, sino la muestra de las primeras
-        páginas, oídas junto a {obra.pasaje}.
-      </p>
+      <h2 className="mt-12 font-serif text-3xl">Sobre este libro</h2>
       {muestra.map((p) => (
         <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
           <ConLemas>{p}</ConLemas>
         </p>
       ))}
 
-      <h2 className="mt-12 font-serif text-3xl">Adquirir</h2>
+      <h2 id="obtener" className="mt-12 scroll-mt-24 font-serif text-3xl">Cómo obtenerlo</h2>
       <p className="mt-4 leading-relaxed">
-        Donde hay ficha de Amazon, se enlaza el producto. Donde aún no hay ASIN ni ISBN
-        conocido, se busca el título exacto con el nombre del autor, sin inventar un código.
-        WhatsApp queda como canal segundo, para la colección impresa en Venezuela.
-      </p>
-      <p className="mt-4 leading-relaxed text-ink-soft">
-        El pack de casa no se finge. En este repositorio no hay un enlace público de Drive para
-        descargar el libro. Si se pide el pack, se solicita por WhatsApp con el nombre de{" "}
-        {obra.title}, y la casa responde. No se publica un botón de descarga que no abre nada.
+        {obra.sinAmazon
+          ? "Para solicitar este libro, escríbenos por WhatsApp y te responderemos personalmente."
+          : "Puedes adquirir este libro en Amazon o solicitarlo por WhatsApp. En Venezuela también puedes pedir la colección impresa."}
       </p>
       <Adquirir
         title={obra.title}
@@ -125,6 +136,7 @@ export function ObraPage() {
         slug={obra.slug}
         asinEbook={obra.asinEbook}
         isbnPrint={obra.isbnPrint}
+        asinPrint={obra.asinPrint}
         sinAmazon={obra.sinAmazon}
         pack
       />
@@ -170,7 +182,7 @@ export function ObraPage() {
         ) : null}
         {tratado ? (
           <Link to="/tratados/$slug" params={{ slug: tratado.slug }} className="btn btn-gold">
-            El tratado que oye este libro
+            Leer el tratado relacionado
             <BtnArrow />
           </Link>
         ) : null}

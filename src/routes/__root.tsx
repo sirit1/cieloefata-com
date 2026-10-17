@@ -1,10 +1,12 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { AuthProvider } from "@/lib/auth/provider";
+import { FichaPalabra } from "@/components/ficha-palabra";
 import { IdleBar } from "@/components/idle-bar";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import appCss from "../styles.css?url";
+import { SCRIPT_TEMA } from "@/lib/tema";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -40,6 +42,7 @@ export const Route = createRootRoute({
   component: () => (
     <html lang="es" className="antialiased" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
         <HeadContent />
       </head>
       <body className="min-h-dvh bg-parchment text-ink">
@@ -53,6 +56,7 @@ export const Route = createRootRoute({
             </div>
             <SiteFooter />
           </div>
+          <FichaPalabra />
         </AuthProvider>
         <Scripts />
       </body>

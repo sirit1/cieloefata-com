@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Compartir } from "@/components/compartir";
 import { Volver } from "@/components/volver";
+import { slugPregunta } from "@/lib/preguntas";
 import { OBJECIONES, OBJECIONES_INTRO } from "@/lib/objeciones";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -11,7 +13,7 @@ export const Route = createFileRoute("/objeciones")({
       path: "/objeciones",
       title: tituloSeccion("Objeciones"),
       description:
-        "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— restituidos al capítulo por los tratados de la casa.",
+        "Versículos que se citan solos —Filipenses 4:13, Jeremías 29:11 y los demás— leídos otra vez dentro de su capítulo en los tratados de Cielo Efata.",
     }),
 });
 
@@ -19,7 +21,7 @@ function ObjecionesPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
-      <p className="kicker">Anti-versiculitis</p>
+      <p className="kicker">Versículos fuera de contexto</p>
       <h1 className="mt-2 font-serif text-4xl">Objeciones</h1>
       <p className="mt-6 text-lg leading-relaxed">{OBJECIONES_INTRO}</p>
       <ul className="mt-12 divide-y divide-rule border-y border-rule">
@@ -39,6 +41,16 @@ function ObjecionesPage() {
                   Escudriñar el tratado · {tratado.title}
                 </Link>
               ) : null}
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                <Link
+                  to="/preguntas/$slug"
+                  params={{ slug: slugPregunta(item) }}
+                  className="chip"
+                >
+                  El versículo y la respuesta breve
+                </Link>
+                <Compartir titulo={`¿Qué significa ${item.verse}?`} ruta={`/preguntas/${slugPregunta(item)}`} />
+              </div>
             </li>
           );
         })}

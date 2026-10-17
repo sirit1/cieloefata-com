@@ -4,8 +4,8 @@ export const SELLO = {
   title: "El sello",
   latin: "Post tenebras lux",
   romance: "Después de las tinieblas, luz",
-  gate: "El sello no es un logotipo ni un adorno de papelería. Es una confesión. El León de Judá ha vencido; el Cordero fue inmolado; el Espíritu abre; el libro queda abierto. Quien lo pone como marca de casa sin someterse al capítulo que nombra ya lo ha traicionado, aunque lo reproduzca con fidelidad de orfebre.",
-  refs: "Ap. 5:5–6 · Mr. 7:34 · 2 Co. 4:6",
+  gate: "El sello de Cielo Efata no es un simple logotipo: es una confesión de fe. El León de Judá ha vencido; el Cordero fue inmolado; el Espíritu Santo da luz; el libro queda abierto. Usarlo sin someterse al capítulo que representa sería vaciarlo de sentido.",
+  refs: "Ap. 5:5–6 · Mt. 3:11 · 2 Co. 4:6",
 };
 
 export const FIGURAS = [

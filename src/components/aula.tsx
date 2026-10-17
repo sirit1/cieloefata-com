@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "@tanstack/react-router";
-import { X } from "lucide-react";
-import { useEffect, useMemo, useRef } from "react";
+import { Printer, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Compartir } from "@/components/compartir";
 import { Escuchar } from "@/components/escuchar";
-import { marcarAula } from "@/lib/aula-abierta";
+import { guardarProgreso, marcarAula, minutosDeLectura, progresoDe } from "@/lib/aula-abierta";
 import { partirOir } from "@/lib/voice-split";
 
 const FOCUSABLE = "a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex='-1'])";
@@ -30,6 +31,10 @@ export function Aula({
 }) {
   const navigate = useNavigate();
   const root = useRef<HTMLDivElement>(null);
+  const capa = useRef<HTMLDivElement>(null);
+  const barra = useRef<HTMLSpanElement>(null);
+  const [previo, setPrevio] = useState(0);
+  const minutos = useMemo(() => minutosDeLectura(oir), [oir]);
   const partes = useMemo(
     () => partirOir({ titulo, ref: pasaje, escritura, voz, comentario: oir }),
     [titulo, pasaje, escritura, voz, oir],
@@ -43,6 +48,41 @@ export function Aula({
       titulo,
     });
   }, [salir, slug, pasaje, titulo]);
+
+  // Barra de progreso y «seguir donde ibas»: se guarda la fracción leída, nunca el texto.
+  useEffect(() => {
+    const el = capa.current;
+    if (!el) return;
+    setPrevio(progresoDe(slug));
+    let raf = 0;
+    let guardado = 0;
+    function medir() {
+      raf = 0;
+      if (!el) return;
+      const max = el.scrollHeight - el.clientHeight;
+      const f = max > 0 ? el.scrollTop / max : 0;
+      if (barra.current) barra.current.style.transform = `scaleX(${f})`;
+      if (Math.abs(f - guardado) > 0.03) {
+        guardado = f;
+        guardarProgreso(slug, f);
+      }
+    }
+    function onScroll() {
+      if (!raf) raf = requestAnimationFrame(medir);
+    }
+    el.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      el.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [slug]);
+
+  function seguir() {
+    const el = capa.current;
+    if (!el) return;
+    el.scrollTo({ top: previo * (el.scrollHeight - el.clientHeight), behavior: "smooth" });
+    setPrevio(0);
+  }
 
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -88,8 +128,9 @@ export function Aula({
 
   return (
     <div
+      ref={capa}
       data-aula
-      className="fixed inset-0 z-50 overflow-y-auto"
+      className="fixed inset-0 z-50 overflow-y-auto overscroll-contain"
       style={{ background: "rgba(8, 17, 27, 0.88)" }}
     >
       <div
@@ -100,13 +141,30 @@ export function Aula({
         tabIndex={-1}
         className="aula-hoja mx-auto w-full max-w-xl bg-parchment px-5 py-8 text-ink outline-none sm:my-10 sm:px-10 sm:shadow-[0_24px_80px_rgba(0,0,0,0.55)]"
       >
-        <div className="mb-8 flex flex-wrap items-center gap-3 font-sans text-sm">
+        <div className="progreso-lectura" aria-hidden>
+          <span ref={barra} style={{ transform: "scaleX(0)" }} />
+        </div>
+        <div className="no-imprimir mb-6 flex flex-wrap items-center gap-2 font-sans text-sm">
           <Escuchar partes={partes} etiqueta={etiqueta} />
+          <Compartir titulo={titulo} pasaje={pasaje} ruta={`${salir}/${slug}`} />
+          <button type="button" className="chip" onClick={() => window.print()}>
+            <Printer size={16} aria-hidden />
+            PDF
+            <span className="sr-only"> (imprimir o guardar como PDF)</span>
+          </button>
           <Link to={salir} className="ml-auto inline-flex min-h-11 items-center gap-2 text-gold">
             <X size={18} aria-hidden />
             Cerrar
           </Link>
         </div>
+        <p className="meta-lectura mb-6">
+          <span>{minutos} min de lectura</span>
+          {previo > 0.05 && previo < 0.95 ? (
+            <button type="button" onClick={seguir} className="text-link underline underline-offset-4">
+              Seguir donde ibas ({Math.round(previo * 100)} %)
+            </button>
+          ) : null}
+        </p>
         {children}
       </div>
     </div>

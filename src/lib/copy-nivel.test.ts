@@ -21,11 +21,10 @@ import {
 
 describe("COPY PACK NIVEL+", () => {
   it("guarda el marco del calendario sin recortar las glosas", () => {
-    assert.match(MARCO_RITMO, /ritmo de ministerio/);
-    assert.match(MARCO_HOY, /2 Pedro 1/);
-    assert.match(MARCO_HOY, /El texto manda/);
+    assert.match(MARCO_RITMO, /pasaje completo/);
+    assert.equal(MARCO_HOY, "");
     assert.match(GLOSA_ESTA_SEMANA, /V\.E\.R\.D\.A\.D/);
-    assert.match(GLOSA_TRATADO_MES, /versículo que viajaba solo/);
+    assert.match(GLOSA_TRATADO_MES, /dentro del capítulo/);
   });
 
   it("tiene las nueve muestras y los nueve prefills de WhatsApp", () => {
@@ -36,23 +35,23 @@ describe("COPY PACK NIVEL+", () => {
     assert.equal(Object.keys(MUESTRAS_TOMO).length, 9);
     assert.equal(Object.keys(PACK_WHATSAPP).length, 9);
     assert.match(MUESTRAS_TOMO["el-siervo-no-tu"], /ʾāšām/);
-    assert.match(MUESTRAS_TOMO["cuando-el-cielo-se-cae"], /rugar/);
+    assert.match(MUESTRAS_TOMO["cuando-el-cielo-se-cae"], /orar/);
   });
 
   it("compone el hábito del cuaderno con el pasaje, no con un lema", () => {
-    assert.equal(RETOMAR_TITULO, "Retomar el acto");
+    assert.equal(RETOMAR_TITULO, "Retomar mi paso");
     assert.equal(
       retomarAulaSinActo("Filipenses 2", "Filipenses 2:5–11"),
-      "El aula de Filipenses 2 ya se oyó. El acto de Filipenses 2:5–11 aún no está escrito. Vuelve al cuaderno y nombra lo que el indicativo ya dijo —un verbo del pasaje, un testigo de carne y, si hace falta, una nota breve— antes de abrir otro capítulo.",
+      "Ya leíste Filipenses 2, pero aún no has escrito tu paso sobre Filipenses 2:5–11. Vuelve al cuaderno y anota lo que el pasaje te pide, con el nombre de alguien de confianza, antes de abrir otro capítulo.",
     );
     assert.equal(
       retomarObediencia("Isaías 53", "Nombrar al Siervo, no al yo"),
-      "La última obediencia escrita fue sobre Isaías 53: «Nombrar al Siervo, no al yo». Puedes seguir ese mismo texto, o escribir el acto que el aula de esta semana pide ahora. El cuaderno no acumula impresiones: guarda el hábito de oír y obedecer con fecha.",
+      "La última obediencia escrita fue sobre Isaías 53: «Nombrar al Siervo, no al yo». Puedes seguir con ese mismo texto o escribir el paso que te pide el estudio de esta semana. El cuaderno no acumula impresiones: guarda, con fecha, el hábito de oír y obedecer.",
     );
-    assert.equal(retomarEnlace("Filipenses 2"), "Retomar el acto · Seguir Filipenses 2");
-    assert.match(CUADERNO_VACIO, /Aún no hay un paso escrito/);
+    assert.equal(retomarEnlace("Filipenses 2"), "Retomar mi paso · Seguir Filipenses 2");
+    assert.match(CUADERNO_VACIO, /paso concreto/);
     assert.match(CUADERNO_VACIO, /Marcos 7/);
-    assert.match(CUADERNO_VACIO, /acto de esa aula/);
+    assert.match(CUADERNO_VACIO, /estudio destacado/);
   });
 
   it("guarda las tres oraciones de Canon y el prefill de Éfata", () => {

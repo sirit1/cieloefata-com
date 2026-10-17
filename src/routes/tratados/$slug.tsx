@@ -4,6 +4,7 @@ import { CierreAula } from "@/components/cierre-aula";
 import { ColofonTratado } from "@/components/colofon-tratado";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
+import { Interlineal } from "@/components/interlineal";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
 import { fechasArticulo, lineaFechas } from "@/lib/calendario";
@@ -65,14 +66,14 @@ function TratadoPage() {
         modified={fechas?.modified}
       />
       <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        {etiquetaTratado(tratado.slug)}
-        {tratado.n !== "—" ? ` · ${tratado.n}` : ""} · {tratado.kicker} · {tratado.ref}
+        {etiquetaTratado(tratado.slug)} · {tratado.kicker} · {tratado.ref}
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
       <p className="mt-6">
         <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />
       </p>
+      <Interlineal slug={tratado.slug} />
       <div className="mt-10 space-y-6">
         {tratado.cuerpo.map((p, i) => (
             <p key={i} className="text-lg leading-relaxed">

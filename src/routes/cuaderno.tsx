@@ -17,7 +17,6 @@ import {
   type CuadernoDraft,
   type CuadernoEntry,
 } from "@/lib/cuaderno-store";
-import { Motif } from "@/components/motif";
 import { semanaVigente } from "@/lib/calendario";
 import { CUADERNO_VACIO } from "@/lib/copy-nivel";
 import { PRIMERA_VEZ } from "@/lib/pilar";
@@ -44,7 +43,7 @@ export const Route = createFileRoute("/cuaderno")({
       path: "/cuaderno",
       title: tituloSeccion("Cuaderno"),
       description:
-        "Sed hacedores. Aquí se escribe el indicativo del texto, un solo acto y un testigo. No es un diario de ánimos.",
+        "Sed hacedores. Aquí escribes lo que el texto afirma, un paso concreto de obediencia y con quién lo compartirás.",
       detalle: CUADERNO_VACIO,
     }),
   component: CuadernoPage,
@@ -153,18 +152,17 @@ function CuadernoPage() {
   const ficha = fichaEstudio(semana.studySlug);
   const vacio = items.length === 0;
   const persistencia = userId
-    ? "El acto queda en tu cuenta. Otro teléfono, con la misma sesión, lo encuentra. No se envía a otra casa."
-    : "El acto queda en este navegador hasta que entres. Con la sesión, te sigue. Sin ella, el otro teléfono no lo ve.";
+    ? "Lo que escribes queda guardado en tu cuenta y lo verás en cualquier dispositivo donde inicies sesión. No se comparte con nadie."
+    : "Por ahora lo que escribes se guarda solo en este navegador. Si inicias sesión, lo verás también en tus otros dispositivos.";
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-16 md:py-24">
-      <Motif kind="flame" />
       <h1 className="mt-2 font-serif text-4xl">Sed hacedores de la palabra</h1>
       <p className="mt-5 text-lg leading-relaxed">
-        No tan solamente oidores, engañándoos a vosotros mismos. Aquí se escribe el indicativo del
-        texto —lo que Dios ha hecho—, el verbo que el pasaje conjuga, un solo acto y un testigo
-        que pueda preguntar mañana. No es un diario de ánimos. Queda prohibido un «hoy muero a…»
-        que el pasaje no nombra, porque esa mortificación de ocasión es SOAP con léxico de cruz.
+        …y no tan solamente oidores, engañándoos a vosotros mismos. En este cuaderno anotas lo
+        que el pasaje dice que Dios ha hecho, el paso concreto de obediencia que te pide y el
+        nombre de alguien de confianza que pueda preguntarte por él. No es un diario de
+        emociones: lo que escribes debe salir del texto, no de una frase de ocasión.
       </p>
       <Refs refs="Stg. 1:22 · Lc. 8:15 · Ro. 12:1" />
       <p className="mt-6 leading-relaxed text-ink-soft">{MANUAL_CAMPO.lead}</p>
@@ -179,11 +177,11 @@ function CuadernoPage() {
       <p className="mt-4 leading-relaxed italic text-ink-soft">{MANUAL_CAMPO.prohibicion}</p>
       <p className="mt-4 font-sans text-sm">
         <Link to="/metodo" className="text-link underline">
-          Los seis eslabones, enteros
+          El método V.E.R.D.A.D. completo
         </Link>
         {" · "}
         <Link to="/crisol" className="text-link underline">
-          C.R.I.S.O.L. en El Altar del Espejo
+          El método C.R.I.S.O.L. (El altar del espejo)
         </Link>
       </p>
 
@@ -195,13 +193,14 @@ function CuadernoPage() {
           <p className="mt-3 leading-relaxed">{CUADERNO_VACIO}</p>
           {ficha ? (
             <p className="mt-4 leading-relaxed text-ink-soft">
-              El acto de esta semana se lee en {ficha.title}, {ficha.ref}, y se escribe aquí.
+              El paso de obediencia del estudio destacado sale de {ficha.title} ({ficha.ref}); puedes
+              escribirlo aquí.
             </p>
           ) : null}
           {pendiente ? (
             <p className="mt-4 leading-relaxed">
-              El aula de {pendiente.titulo} se oyó. El acto de {pendiente.pasaje} aún no está
-              escrito.
+              Ya leíste el estudio {pendiente.titulo}, pero aún no has escrito tu paso de
+              obediencia sobre {pendiente.pasaje}.
             </p>
           ) : null}
           <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -210,14 +209,14 @@ function CuadernoPage() {
               params={{ slug: semana.studySlug }}
               className="btn btn-ink"
             >
-              Abrir estudio de esta semana
+              Abrir el estudio destacado
             </Link>
             <Link
               to="/estudios/$slug"
               params={{ slug: PRIMERA_VEZ.slug }}
               className="btn btn-ghost"
             >
-              Abrir Éfata
+              Abrir Marcos 7 (Éfata)
             </Link>
             {ficha ? (
               <button
@@ -225,7 +224,7 @@ function CuadernoPage() {
                 className="btn btn-ghost"
                 onClick={() => setPassage(ficha.ref)}
               >
-                Usar el pasaje de esta semana
+                Usar el pasaje del estudio destacado
               </button>
             ) : null}
             {pendiente ? (
@@ -234,7 +233,7 @@ function CuadernoPage() {
                 className="btn btn-ghost"
                 onClick={() => setPassage(pendiente.pasaje)}
               >
-                Usar el pasaje del aula
+                Usar el pasaje del estudio
               </button>
             ) : null}
           </div>

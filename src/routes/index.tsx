@@ -1,16 +1,16 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { Adquirir } from "@/components/adquirir";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { Search } from "lucide-react";
 import { BannerRevelatio } from "@/components/banner-revelatio";
-import { Cite, Refs } from "@/components/cite";
-import { Datos } from "@/components/datos";
+import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
-import { Motif } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
-import { SlotsSemanaMes, UmbralTresCaminos } from "@/components/umbral";
+import { BtnArrow } from "@/components/motif";
+import { SlotsSemanaMes } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
-import { canonDoors, CORPUS, obras, ROMANO } from "@/lib/content";
+import { obras, ROMANO } from "@/lib/content";
+import { whatsappColeccion } from "@/lib/amazon";
 import { SELLO } from "@/lib/identidad";
-import { ESCRITURA, PERSONAS_PUERTA, TESTIGO, TRINIDAD } from "@/lib/pilar";
+import { ESCRITURA } from "@/lib/pilar";
 import { HomeJsonLd } from "@/components/json-ld";
 import { pageHead, SITE_TITLE } from "@/lib/seo";
 
@@ -21,184 +21,215 @@ export const Route = createFileRoute("/")({
       path: "/",
       title: SITE_TITLE,
       description:
-        "Escuela de lectura de la Escritura. Primero se lee el capítulo entero; aquí se estudia: el método, el estudio de la semana y el tratado del mes.",
+        "Escuela de estudio bíblico de Alejandro Sirit: leer el capítulo entero, estudiarlo con el método V.E.R.D.A.D. y obedecer lo que Dios dice.",
     }),
 });
+
+/** Puertas de la casa. El inicio presenta y reparte; el detalle vive en cada sección. */
+const PUERTAS = [
+  {
+    to: "/estudios",
+    titulo: "Estudios",
+    linea: "Un pasaje completo, estudiado con el método V.E.R.D.A.D., hasta un paso concreto de obediencia.",
+  },
+  {
+    to: "/tratados",
+    titulo: "Tratados",
+    linea: "Versículos muy citados, y a menudo sacados de contexto, leídos otra vez dentro de su capítulo.",
+  },
+  {
+    to: "/pasajes",
+    titulo: "Explorar por pasaje",
+    linea: "De Génesis a Apocalipsis: qué estudio, tratado o libro de la casa trata cada capítulo.",
+  },
+  {
+    to: "/preguntas",
+    titulo: "¿Qué dice la Biblia sobre…?",
+    linea: "Una pregunta por página, con el versículo en Reina-Valera 1960 y el tratado que lo explica.",
+  },
+  {
+    to: "/metodo",
+    titulo: "Cómo leer",
+    linea: "El método V.E.R.D.A.D.: seis pasos para leer la Biblia con atención, humildad y oración, no como una fórmula.",
+  },
+  {
+    to: "/canon",
+    titulo: "Canon",
+    linea: "Sesenta y seis libros en siete secciones, el Dios trino que habla en ellos y los datos de su historia.",
+  },
+] as const;
+
+const PILARES = [
+  { k: "Reina-Valera 1960", v: "Cada cita en castellano, al pie de la letra." },
+  { k: "Hebreo", v: "Texto masorético del Códice de Leningrado, el que edita la BHS." },
+  { k: "Griego", v: "Nuevo Testamento según el Textus Receptus." },
+  { k: "Strong explicado", v: "Cada número con su palabra original y su sentido. Toca la palabra y se abre su ficha." },
+] as const;
+
+function BuscadorPortada() {
+  const navigate = useNavigate();
+  return (
+    <form
+      role="search"
+      aria-label="Buscar un pasaje o un tema"
+      className="mt-9 max-w-[34rem]"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const q = String(new FormData(e.currentTarget).get("q") ?? "").trim();
+        void navigate({ to: "/buscar", search: q ? { q } : {} });
+      }}
+    >
+      <label htmlFor="buscar-portada" className="font-sans text-sm font-semibold text-ink">
+        ¿Qué pasaje estás leyendo?
+      </label>
+      <div className="mt-2 flex">
+        <input
+          id="buscar-portada"
+          name="q"
+          type="search"
+          className="campo"
+          placeholder="Filipenses 4:13, Isaías 53, espejo…"
+          autoComplete="off"
+          enterKeyHint="search"
+        />
+        <button type="submit" className="btn btn-ink shrink-0 !px-4" aria-label="Buscar">
+          <Search size={18} aria-hidden />
+        </button>
+      </div>
+    </form>
+  );
+}
 
 function Home() {
   return (
     <main className="pb-24">
       <HomeJsonLd />
-      <section className="scroll-mt-24 px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-5xl">
-          <div className="max-w-[40em]">
-          <p className="lema-latin glosa" tabIndex={0}>
-            {SELLO.latin}
-            <span className="glosa-card" role="tooltip">
-              {SELLO.romance}
-            </span>
-          </p>
-          <p className="lema-romance">{SELLO.romance}</p>
-          <h1 className="mt-10 font-serif text-4xl leading-tight md:text-5xl">{ESCRITURA.title}</h1>
-          <p className="mt-5 font-serif text-xl italic text-ink-soft">{ESCRITURA.motto}</p>
-          <PuertaRegreso />
-          <p className="mt-8 text-lg">
-            <ConLemas>{ESCRITURA.gate}</ConLemas>
-          </p>
-          <Refs refs={ESCRITURA.refs} />
-          <p className="mt-8 text-lg leading-relaxed">
-            <ConLemas>{ESCRITURA.oficio}</ConLemas>
-          </p>
-          <UmbralTresCaminos />
+      <section className="marca-agua border-b border-rule/30 px-4 pt-16 pb-20 md:pt-24 md:pb-28">
+        <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,44rem)_1fr]">
+          <div>
+            <p className="lema-latin glosa" tabIndex={0}>
+              {SELLO.latin}
+              <span className="glosa-card" role="tooltip">
+                {SELLO.romance}
+              </span>
+            </p>
+            <p className="lema-romance">{SELLO.romance}</p>
+            <h1 className="hero-titulo mt-10">{ESCRITURA.title}</h1>
+            <p className="mt-5 font-serif text-2xl text-ink-soft italic">{ESCRITURA.motto}</p>
+            <p className="mt-7 text-lg leading-relaxed">
+              <ConLemas>{ESCRITURA.gate}</ConLemas>
+            </p>
+            <Refs refs="He. 1:1–2 · Lc. 24:27" />
+            <BuscadorPortada />
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link to="/estudios/$slug" params={{ slug: "marcos-7" }} className="btn btn-ink">
+                Empezar por Marcos 7 <BtnArrow />
+              </Link>
+              <Link to="/obras" className="btn btn-ghost">
+                Ver los libros
+              </Link>
+            </div>
+            <PuertaRegreso />
           </div>
-          <SlotsSemanaMes />
-          <ul className="mt-20 grid gap-16 sm:grid-cols-3">
-            <li>
-              <Link to="/estudios" className="group flex flex-col items-start">
-                <Motif kind="lion" decorative />
-                <span className="mt-4 font-serif text-2xl group-hover:text-gold">Estudios</span>
-                <span className="mt-3 leading-relaxed text-ink-soft">
-                  El León nombra los estudios: se recorre un pasaje entero, se oye la cadena
-                  V.E.R.D.A.D. y se sale con un solo acto para esta semana.
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/tratados" className="group flex flex-col items-start">
-                <Motif kind="lamb" decorative />
-                <span className="mt-4 font-serif text-2xl group-hover:text-gold">Tratados</span>
-                <span className="mt-3 leading-relaxed text-ink-soft">
-                  El Cordero nombra los tratados: el versículo citado de memoria vuelve al
-                  capítulo que lo sostiene, hasta que la jactancia se calle.
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/metodo" className="group flex flex-col items-start">
-                <Motif kind="flame" decorative />
-                <span className="mt-4 font-serif text-2xl group-hover:text-gold">Cómo leer</span>
-                <span className="mt-3 leading-relaxed text-ink-soft">
-                  El Fuego nombra el método: el Espíritu abre el oído; por consiguiente, la cadena
-                  no se recita como talismán, sino de rodillas.
-                </span>
-              </Link>
-            </li>
-          </ul>
+          <div className="hidden justify-self-center lg:block" aria-hidden>
+            <img
+              src="/brand/seal-full.webp"
+              alt=""
+              width={380}
+              height={560}
+              decoding="async"
+              fetchPriority="low"
+              className="h-auto w-[15rem] xl:w-[17rem]"
+            />
+          </div>
         </div>
       </section>
 
-      <section id="dios" className="marca-agua border-y border-rule/40 bg-paper px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-[40em]">
-          <h2 className="font-serif text-3xl md:text-4xl">{TRINIDAD.title}</h2>
-          <p className="mt-5 text-lg leading-relaxed">
-            <ConLemas>{TRINIDAD.lead}</ConLemas>
-          </p>
-          <Refs refs={TRINIDAD.leadRefs} />
-          <ul className="mt-10 space-y-8">
-            {PERSONAS_PUERTA.map((p) => (
-              <li key={p.name}>
-                <h3 className="font-serif text-2xl">{p.name}</h3>
-                <p className="mt-2 leading-relaxed">
-                  <ConLemas>{p.line}</ConLemas>
-                </p>
-                <p className="mt-1 font-sans text-sm tracking-wide text-gold">
-                  <Cite>{p.ref}</Cite>
-                </p>
+      <div className="mx-auto max-w-6xl px-4">
+        <SlotsSemanaMes />
+      </div>
+
+      <section className="px-4 py-20 md:py-28" aria-labelledby="puertas">
+        <div className="mx-auto max-w-6xl">
+          <p className="kicker">La casa</p>
+          <h2 id="puertas" className="seccion-titulo mt-3">
+            Por dónde entrar
+          </h2>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {PUERTAS.map((p) => (
+              <li key={p.to}>
+                <Link to={p.to} className="tarjeta group">
+                  <span className="flex items-baseline justify-between gap-3">
+                    <span className="font-serif text-2xl font-semibold group-hover:text-gold">{p.titulo}</span>
+                    <BtnArrow />
+                  </span>
+                  <span className="mt-3 block leading-relaxed text-ink-soft">{p.linea}</span>
+                </Link>
               </li>
             ))}
           </ul>
-          <Link to="/canon" hash="dios" className="mt-10 inline-block font-sans text-sm text-link underline">
-            Examinar el Nombre
-          </Link>
         </div>
       </section>
 
       <BannerRevelatio />
 
-      <section id="testigo" className="marca-agua bg-navy px-4 py-20 text-parchment md:py-28">
-        <div className="mx-auto max-w-5xl">
-          <p className="kicker kicker-navy">El testigo</p>
-          <h2 className="mt-4 max-w-[20em] font-serif text-3xl md:text-4xl">{TESTIGO.title}</h2>
-          <p className="mt-4 max-w-[36em] text-lg leading-relaxed text-parchment/90">
-            <ConLemas>{TESTIGO.gate}</ConLemas>
-          </p>
-          <Datos items={TESTIGO.measures} onNavy />
-          <Link to="/canon" className="mt-16 inline-block font-sans text-sm text-gold-soft underline">
-            Examinar el canon
-          </Link>
-        </div>
-      </section>
-
-      <section id="canon" className="scroll-mt-24 px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-5xl">
-          <div className="max-w-[40em]">
-            <h2 className="font-serif text-3xl">Sesenta y seis libros</h2>
-            <p className="mt-6 text-lg">
-              Siete estantes recorren el canon. La ley, los profetas y los salmos hablan de Cristo, y
-              el que los recorre no colecciona frases: oye a una Persona.
-            </p>
-            <Refs refs="Lc. 24:44–45" />
+      <section className="cv-auto px-4 py-20 md:py-28" aria-labelledby="libros">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-[36em]">
+              <p className="kicker">Alejandro Sirit · Editorial Cielo Efata</p>
+              <h2 id="libros" className="seccion-titulo mt-3">
+                Nueve libros, un orden de lectura
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed">
+                Se empieza por Pórtico a la Escritura, y en Éfata se aprende a leer el capítulo entero
+                antes de hablar. Cada libro se lee junto al capítulo de la Biblia en que se apoya.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link to="/obras" className="btn btn-ink">
+                Ver el catálogo <BtnArrow />
+              </Link>
+              <a href={whatsappColeccion()} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
+                Solicitar por WhatsApp
+              </a>
+            </div>
           </div>
-          <ul className="canon-grid mt-10">
-            {canonDoors.map((d) => (
-              <li key={d.name}>
-                <Link to="/canon" className="hover:text-gold">
-                  <span className="canon-name">{d.name}</span>
-                  <span className="kicker mt-2 block">{d.span}</span>
-                  <span className="prosa mt-3 block text-ink-soft">{d.line}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="cv-auto border-t border-rule/40 px-4 py-20 md:py-28">
-        <div className="mx-auto max-w-5xl">
-          <div className="max-w-[40em]">
-            <h2 className="font-serif text-3xl">{CORPUS.title}</h2>
-            <p className="kicker mt-4">
-              Alejandro Sirit · Editorial Cielo Efata
-            </p>
-            <p className="mt-6 text-lg">
-              <ConLemas>{CORPUS.gate}</ConLemas>
-            </p>
-            <p className="kicker mt-8">El umbral · Éfata</p>
-            <p className="mt-4 text-lg">
-              <ConLemas>{CORPUS.efata}</ConLemas>
-            </p>
-            <p className="mt-5">
-              <ConLemas>{CORPUS.line}</ConLemas>
-            </p>
-            <Refs refs={CORPUS.refs} />
-            <Adquirir />
-          </div>
-          <p className="kicker mt-12">Orden de lectura</p>
-          <ol className="tomo-grid mt-6">
+          <ol className="mt-12 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
             {obras.map((o) => (
-              <li key={o.title}>
-                <Link
-                  to="/obras/$slug"
-                  params={{ slug: o.slug }}
-                  className="mb-3 inline-block"
-                  aria-hidden
-                  tabIndex={-1}
-                >
-                  <Tapa obra={o} size="rejilla" />
-                </Link>
-                <p className="kicker">{ROMANO[o.lectura]}</p>
-                <p className="tomo-title mt-2">{o.title}</p>
-                <p className="prosa mt-3 text-ink-soft">{o.line}</p>
-                <Link
-                  to="/obras/$slug"
-                  params={{ slug: o.slug }}
-                  className="examinar hover:text-ink"
-                >
-                  Examinar este libro
+              <li key={o.slug}>
+                <Link to="/obras/$slug" params={{ slug: o.slug }} className="group block">
+                  <Tapa obra={o} size="rejilla" className="w-full transition-transform duration-300 group-hover:-translate-y-1" />
+                  <span className="kicker mt-3 block">{ROMANO[o.lectura]}</span>
+                  <span className="mt-1 block font-serif text-xl leading-snug font-semibold group-hover:text-gold">
+                    {o.title}
+                  </span>
                 </Link>
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      <section className="cv-auto border-t border-rule/40 bg-paper px-4 py-20 md:py-24" aria-labelledby="pilares">
+        <div className="mx-auto max-w-6xl">
+          <p className="kicker">El texto manda</p>
+          <h2 id="pilares" className="seccion-titulo mt-3 max-w-[22em]">
+            Con qué texto leemos
+          </h2>
+          <dl className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {PILARES.map((p) => (
+              <div key={p.k} className="border-t-2 border-gold pt-4">
+                <dt className="font-serif text-2xl font-semibold">{p.k}</dt>
+                <dd className="mt-2 leading-relaxed text-ink-soft">{p.v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-10 font-sans text-sm">
+            <Link to="/glosario" className="text-link underline underline-offset-4">
+              Las palabras de la casa, en el glosario
+            </Link>
+          </p>
         </div>
       </section>
     </main>
