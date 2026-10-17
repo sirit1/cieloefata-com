@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { Compartir } from "@/components/compartir";
 import { Volver } from "@/components/volver";
+import { slugPregunta } from "@/lib/preguntas";
 import { OBJECIONES, OBJECIONES_INTRO } from "@/lib/objeciones";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -39,6 +41,16 @@ function ObjecionesPage() {
                   Escudriñar el tratado · {tratado.title}
                 </Link>
               ) : null}
+              <div className="mt-4 flex flex-wrap items-center gap-2">
+                <Link
+                  to="/preguntas/$slug"
+                  params={{ slug: slugPregunta(item) }}
+                  className="chip"
+                >
+                  El versículo y la respuesta breve
+                </Link>
+                <Compartir titulo={`¿Qué significa ${item.verse}?`} ruta={`/preguntas/${slugPregunta(item)}`} />
+              </div>
             </li>
           );
         })}
