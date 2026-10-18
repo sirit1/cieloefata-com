@@ -45,6 +45,9 @@ export const CLASIFICACION: Record<string, { tipo: Tipo; dudoso?: boolean }> = {
   "espiritu-de-poder": { tipo: "estudio" },
   "isaias-53": { tipo: "estudio" },
   "atar-y-desatar": { tipo: "estudio" },
+  // Escritos el 18-oct-2026; sin pack (gemelo inglés y audios pendientes), no se publican aún.
+  "este-mismo-jesus": { tipo: "tratado" },
+  "no-juzgueis": { tipo: "estudio" },
 };
 
 /** Tipo de una obra; si no está clasificada, se respeta la sección donde vive. */
