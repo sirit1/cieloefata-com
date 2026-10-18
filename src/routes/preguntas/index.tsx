@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Volver } from "@/components/volver";
 import { PREGUNTAS } from "@/lib/preguntas";
+import { versiculoContexto } from "@/lib/versiculos-contexto";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/preguntas/")({
@@ -27,7 +28,11 @@ function PreguntasPage() {
       <ul className="mt-12 grid gap-4 sm:grid-cols-2">
         {PREGUNTAS.map((p) => (
           <li key={p.slug}>
-            <Link to="/preguntas/$slug" params={{ slug: p.slug }} className="tarjeta">
+            <Link
+              to={versiculoContexto(p.slug) ? "/versiculos/$slug" : "/preguntas/$slug"}
+              params={{ slug: p.slug }}
+              className="tarjeta"
+            >
               <span className="font-sans text-xs tracking-[0.16em] text-gold uppercase">{p.verse}</span>
               <span className="mt-2 block font-serif text-2xl leading-snug">¿Qué significa {p.verse}?</span>
               <span className="mt-2 block leading-relaxed text-ink-soft">{p.lemma}</span>

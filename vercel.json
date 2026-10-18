@@ -108,6 +108,16 @@
       "source": "/tratados/juan-1",
       "destination": "/estudios/filipenses-2",
       "statusCode": 301
+    },
+    {
+      "source": "/preguntas/jeremias-29-11",
+      "destination": "/versiculos/jeremias-29-11",
+      "statusCode": 301
+    },
+    {
+      "source": "/preguntas/filipenses-4-13",
+      "destination": "/versiculos/filipenses-4-13",
+      "statusCode": 301
     }
   ],
   "headers": [
