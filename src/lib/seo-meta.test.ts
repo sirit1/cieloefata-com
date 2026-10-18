@@ -172,12 +172,15 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/romanos-1`), false);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/filipenses-2`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/tratados/isaias-53`), true);
-  assert.equal(locs.has(`${SITE_ORIGIN}/tratados/no-juzgueis`), false);
+  assert.equal(locs.has(`${SITE_ORIGIN}/tratados/no-juzgueis`), true);
+  assert.equal(locs.has(`${SITE_ORIGIN}/tratados/este-mismo-jesus`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/tratados/juan-1`), false);
   assert.equal(locs.has(`${SITE_ORIGIN}/`), true);
   assert.equal(ESTUDIOS_DRIVE.length, 13);
   assert.equal(TRATADOS_DRIVE.length, 14);
-  assert.equal(tratados.length, 14);
+  assert.equal(tratados.length, 16);
+  // Solo las dos excepciones aprobadas se publican sin pack.
+  assert.deepEqual(tratados.filter((t) => t.soloEs).map((t) => t.slug), ["este-mismo-jesus", "no-juzgueis"]);
   assert.ok(locs.has(`${SITE_ORIGIN}/articulos`));
   for (const a of articulos) {
     const bloque = bloques.find((b) => b.loc === `${SITE_ORIGIN}/articulos/${a.slug}`);
@@ -185,7 +188,10 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
     assert.equal(bloque.lastmod, a.published);
   }
   const conFecha = bloques.filter((b) => b.lastmod);
-  assert.equal(conFecha.length, ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length + articulos.length);
+  assert.equal(
+    conFecha.length,
+    ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length + articulos.length + tratados.filter((t) => t.soloEs).length,
+  );
 });
 
 function metaDe(head: ReturnType<typeof pageHead>, name: string) {

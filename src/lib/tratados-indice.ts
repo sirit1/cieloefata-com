@@ -6,6 +6,8 @@ export type IndiceTratado = {
   ref: string;
   blurb: string;
   pack: boolean;
+  /** Ver `Tratado.soloEs` en tratados.ts. */
+  soloEs?: true;
 };
 
 export const TRATADOS_INDICE: IndiceTratado[] = [
@@ -121,6 +123,24 @@ export const TRATADOS_INDICE: IndiceTratado[] = [
     "blurb": "«Todo lo que atéis en la tierra» no es una fórmula de guerra espiritual ni un hechizo de dos o tres. Jesús habla de la iglesia que corrige al hermano, y el atar y desatar es disciplina y perdón, no un decreto contra el aire.",
     "pack": true
   },
+  {
+    "slug": "este-mismo-jesus",
+    "n": "13",
+    "title": "Este mismo Jesús",
+    "ref": "Hechos 1:9–11",
+    "blurb": "«Así vendrá como le habéis visto ir al cielo» no es un gráfico de profecías ni una fecha para calcular, sino la promesa de Cristo mismo. Desde el monte de los Olivos hasta el «ven, Señor Jesús», este tratado sigue la promesa por toda la Escritura: venida personal y visible, resurrección, juicio y nueva creación, sin tomar partido sobre el milenio.",
+    "pack": false,
+    "soloEs": true
+  },
+  {
+    "slug": "no-juzgueis",
+    "n": "14",
+    "title": "No juzguéis",
+    "ref": "Mateo 7:1–6",
+    "blurb": "«No juzguéis» no es una mordaza para la verdad ni una licencia para la crítica. En el Sermón del Monte, el Señor manda sacar primero la viga propia y entonces ayudar al hermano con su paja, y en el mismo párrafo pide discernir lo santo. Este estudio devuelve el versículo a su ladera.",
+    "pack": false,
+    "soloEs": true
+  }
 ];
 
 export function indiceTratado(slug: string) {

@@ -9,7 +9,19 @@ export type Tratado = {
   title: string;
   blurb: string;
   pack: boolean;
+  /**
+   * Excepción a la orden editorial (Puerta): publicada solo en castellano, sin pack
+   * (faltan el gemelo inglés y los audios ES/EN). Aprobada por Alejandro Sirit el
+   * 18-oct-2026 solo para «Este mismo Jesús» y «No juzguéis». No se usa en otra obra
+   * sin su aprobación expresa. Al llegar el pack: `pack: true` y se quita este campo.
+   */
+  soloEs?: true;
 };
+
+/** Visible en el sitio: tiene pack o es una excepción aprobada en castellano. */
+export function estaPublicado(t: Pick<Tratado, "pack" | "soloEs">) {
+  return t.pack || t.soloEs === true;
+}
 
 export const tratados: Tratado[] = [
   {
@@ -152,6 +164,28 @@ export const tratados: Tratado[] = [
       "«Todo lo que atéis en la tierra» no es una fórmula de guerra espiritual ni un hechizo de dos o tres. Jesús habla de la iglesia que corrige al hermano, y el atar y desatar es disciplina y perdón, no un decreto contra el aire.",
     pack: true,
   },
+  {
+    slug: "este-mismo-jesus",
+    n: "13",
+    kicker: "Esperanza · segunda venida",
+    ref: "Hechos 1:9–11",
+    title: "Este mismo Jesús",
+    blurb:
+      "«Así vendrá como le habéis visto ir al cielo» no es un gráfico de profecías ni una fecha para calcular, sino la promesa de Cristo mismo. Desde el monte de los Olivos hasta el «ven, Señor Jesús», este tratado sigue la promesa por toda la Escritura: venida personal y visible, resurrección, juicio y nueva creación, sin tomar partido sobre el milenio.",
+    pack: false,
+    soloEs: true,
+  },
+  {
+    slug: "no-juzgueis",
+    n: "14",
+    kicker: "Discernimiento · no mordaza",
+    ref: "Mateo 7:1–6",
+    title: "No juzguéis",
+    blurb:
+      "«No juzguéis» no es una mordaza para la verdad ni una licencia para la crítica. En el Sermón del Monte, el Señor manda sacar primero la viga propia y entonces ayudar al hermano con su paja, y en el mismo párrafo pide discernir lo santo. Este estudio devuelve el versículo a su ladera.",
+    pack: false,
+    soloEs: true,
+  },
 ];
 
 export function entradaTratado(cuerpo: readonly string[]) {
@@ -159,7 +193,7 @@ export function entradaTratado(cuerpo: readonly string[]) {
 }
 
 export function tratadoDe(slug: string) {
-  return tratados.find((t) => t.slug === slug && t.pack);
+  return tratados.find((t) => t.slug === slug && estaPublicado(t));
 }
 
 export { etiquetaTratado } from "@/lib/etiquetas";
@@ -169,9 +203,9 @@ export function tratadoDelMes() {
 }
 
 export function tratadosPublicados() {
-  return tratados.filter((t) => t.pack);
+  return tratados.filter((t) => estaPublicado(t));
 }
 
 export function tratadosProximos() {
-  return tratados.filter((t) => !t.pack);
+  return tratados.filter((t) => !estaPublicado(t));
 }

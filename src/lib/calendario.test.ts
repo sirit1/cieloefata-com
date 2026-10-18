@@ -59,7 +59,11 @@ describe("calendario editorial", () => {
       modified: "2026-09-24",
     });
     assert.deepEqual(
-      fechasArticulo({ clase: "tratado", slug: "no-juzgueis", pack: false, n: "13" }),
+      fechasArticulo({ clase: "tratado", slug: "no-juzgueis", pack: false, n: "14" }),
+      { published: "2026-10-18", modified: "2026-10-18" },
+    );
+    assert.deepEqual(
+      fechasArticulo({ clase: "tratado", slug: "juan-1", pack: false, n: "15" }),
       { published: "2026-10-01", modified: "2026-10-01" },
     );
   });

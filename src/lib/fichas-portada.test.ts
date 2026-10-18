@@ -64,6 +64,7 @@ describe("fichas de portada", () => {
       assert.equal(row.ref, tratado.ref);
       assert.equal(row.blurb, tratado.blurb);
       assert.equal(row.pack, tratado.pack);
+      assert.equal(row.soloEs, tratado.soloEs);
     }
   });
 
