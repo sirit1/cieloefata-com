@@ -102,7 +102,9 @@ function VerdadPage() {
         <h2 className="font-serif text-3xl">Escúchalo</h2>
         <p className="mt-3 leading-relaxed">
           El episodio 0 del pódcast de Cielo Efata, «Cómo estudiar la Biblia con V.E.R.D.A.D.», en la voz de su autor,
-          se publicará aquí. Mientras tanto, la guía y la hoja ya están disponibles.
+          se publicará aquí y en la página del{" "}
+          <a href="/podcast" className="text-link underline">pódcast</a>. Mientras tanto, la guía y la hoja ya están
+          disponibles.
         </p>
       </section>
 
