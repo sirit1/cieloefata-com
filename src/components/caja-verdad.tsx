@@ -1,4 +1,5 @@
 import { track } from "@vercel/analytics";
+import { Seal } from "@/components/seal";
 import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
 import { LETRAS_SENCILLAS, VERDAD_GUIA } from "@/lib/verdad-guia";
 
@@ -20,7 +21,10 @@ export function CajaVerdad({ pasaje, desde, kind }: { pasaje: string; desde?: st
   const plantilla = plantillaRevelatio(pasaje, desde);
   return (
     <aside className="mt-8 border border-rule bg-parchment/60 p-5" aria-label="Estudia este texto con V.E.R.D.A.D.">
-      <p className="kicker">El método de la casa</p>
+      <p className="kicker flex items-center gap-2">
+        <Seal size={28} decorative className="h-7 w-7 shrink-0" />
+        El método de la casa
+      </p>
       <p className="mt-1 font-serif text-2xl">
         Estudia este {kind === "tratado" ? "tratado" : "texto"} con V.E.R.D.A.D.
       </p>

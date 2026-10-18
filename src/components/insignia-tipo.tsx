@@ -21,7 +21,7 @@ export function InsigniaTipo({
   if (dentroDeEnlace) {
     return (
       <span className={clases}>
-        <span className="chip">{NOMBRE_TIPO[tipo]}</span>
+        <span className="chip"><img src="/brand/seal-colophon.webp" alt="" aria-hidden="true" width={16} height={16} loading="lazy" decoding="async" className="mr-1 inline-block h-4 w-4 align-[-3px]" />{NOMBRE_TIPO[tipo]}</span>
         <span className="text-ink-soft">{PARA_QUIEN[tipo]}</span>
       </span>
     );
@@ -29,6 +29,7 @@ export function InsigniaTipo({
   return (
     <p className={clases}>
       <Link to="/estudios-y-tratados" hash={tipo} className="chip no-underline" title="Qué es un estudio y qué es un tratado">
+        <img src="/brand/seal-colophon.webp" alt="" aria-hidden="true" width={16} height={16} loading="lazy" decoding="async" className="mr-1 inline-block h-4 w-4 align-[-3px]" />
         {NOMBRE_TIPO[tipo]}
       </Link>
       <span className="text-ink-soft">{PARA_QUIEN[tipo]}</span>
