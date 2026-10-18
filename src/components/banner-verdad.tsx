@@ -10,7 +10,8 @@ export function BannerVerdad() {
       href="/verdad#recibir"
       className="block bg-[#B8862B] px-4 py-1.5 text-center font-sans text-sm text-[#1A2340] hover:underline"
     >
-      <strong>La Biblia no se lee, se estudia</strong> · Método V.E.R.D.A.D. · <span className="underline">Guía gratis</span>
+      <strong>La Biblia no se lee, se estudia</strong>
+      <span className="hidden sm:inline"> · Método V.E.R.D.A.D.</span> · <span className="underline">Guía gratis</span>
     </a>
   );
 }

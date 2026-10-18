@@ -85,14 +85,15 @@ export function SiteHeader() {
       >
         Saltar al contenido
       </a>
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5">
+      <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2.5">
         <Link
           to="/"
-          className="flex min-h-11 min-w-0 items-center gap-3 text-parchment"
+          className="flex min-h-11 shrink-0 items-center gap-3 text-parchment"
+          aria-label="Cielo Efata, inicio"
           onClick={() => setOpen(false)}
         >
           <Seal variant="onNavy" size={44} priority className="h-11 w-11 shrink-0" />
-          <span className="wordmark text-base leading-none">Cielo Efata</span>
+          <span className="wordmark text-base leading-none whitespace-nowrap lg:max-xl:hidden" aria-hidden>Cielo Efata</span>
         </Link>
         <nav
           className="ml-auto hidden min-w-0 flex-1 items-center justify-end gap-0.5 lg:flex"
@@ -103,13 +104,12 @@ export function SiteHeader() {
               key={item.to}
               to={item.to}
               aria-current={isCurrent(pathname, item.to) ? "page" : undefined}
-              className="relative inline-flex min-h-11 items-center px-2.5 font-sans text-xs tracking-[0.14em] text-parchment uppercase after:absolute after:inset-x-2.5 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-gold-soft after:transition-transform hover:text-gold-soft hover:after:scale-x-100 aria-[current=page]:text-gold-soft aria-[current=page]:after:scale-x-100"
+              className="relative inline-flex min-h-11 items-center px-2.5 font-sans text-xs tracking-[0.14em] whitespace-nowrap text-parchment uppercase after:absolute after:inset-x-2.5 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-gold-soft after:transition-transform hover:text-gold-soft hover:after:scale-x-100 aria-[current=page]:text-gold-soft aria-[current=page]:after:scale-x-100"
             >
               {item.label}
             </Link>
           ))}
-          <Buscador id="buscar-cabecera" className="ml-2 hidden xl:block" />
-          <Link to="/buscar" className="icono-btn xl:hidden" aria-label="Buscar">
+          <Link to="/buscar" className="icono-btn" aria-label="Buscar">
             <Search size={19} aria-hidden />
           </Link>
           <TemaBoton />
