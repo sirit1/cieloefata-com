@@ -11,6 +11,8 @@ import { fechasArticulo, lineaFechas } from "@/lib/calendario";
 import { etiquetaTratado } from "@/lib/etiquetas";
 import { entradaTratado } from "@/lib/tratados";
 import { pageHead, tituloTratado } from "@/lib/seo";
+import { InsigniaTipo } from "@/components/insignia-tipo";
+import { esTratado, tipoDe } from "@/lib/clasificacion";
 
 function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
@@ -33,7 +35,7 @@ export const Route = createFileRoute("/tratados/$slug")({
     const tratado = loaderData?.tratado;
     return pageHead({
       path: `/tratados/${tratado?.slug ?? ""}`,
-      title: tituloTratado(tratado?.title ?? "Tratado"),
+      title: tituloTratado(tratado?.title ?? "Tratado", tipoDe(tratado?.slug ?? "", "tratado")),
       description: tratado?.blurb,
       detalle: tratado ? entradaTratado(tratado.cuerpo) : undefined,
     });
@@ -53,14 +55,14 @@ function TratadoPage() {
   return (
     <Aula
       oir={oir}
-      etiqueta="Oír el tratado"
+      etiqueta={esTratado(tratado.slug) ? "Oír el tratado" : "Oír el estudio"}
       salir="/tratados"
       titulo={tratado.title}
       pasaje={tratado.ref}
       slug={tratado.slug}
     >
       <ArticleJsonLd
-        headline={tituloTratado(tratado.title)}
+        headline={tituloTratado(tratado.title, tipoDe(tratado.slug, "tratado"))}
         path={`/tratados/${tratado.slug}`}
         published={fechas?.published}
         modified={fechas?.modified}
@@ -70,6 +72,7 @@ function TratadoPage() {
       </p>
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
+      <InsigniaTipo slug={tratado.slug} seccion="tratado" className="mt-3" />
       <p className="mt-6">
         <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />
       </p>

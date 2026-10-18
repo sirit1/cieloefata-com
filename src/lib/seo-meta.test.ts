@@ -10,6 +10,7 @@ import { SELLO } from "./identidad.ts";
 import { ESCRITURA } from "./pilar.ts";
 import { obras, obrasDesdeAula, qrRevelatioPath, urlRevelatioLibro } from "./content.ts";
 import { studies } from "./studies.ts";
+import { tipoDe } from "./clasificacion.ts";
 import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
 import { parrafosDe } from "./libros/cargar.ts";
 import { fechasArticulo } from "./calendario.ts";
@@ -74,7 +75,7 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
   }
   for (const t of tratadosPublicados()) {
     const cuerpo = await parrafosDe(t.slug);
-    note(`/tratados/${t.slug}`, tituloTratado(t.title), metaDescription(t.blurb, entradaTratado(cuerpo)));
+    note(`/tratados/${t.slug}`, tituloTratado(t.title, tipoDe(t.slug, "tratado")), metaDescription(t.blurb, entradaTratado(cuerpo)));
   }
   assert.deepEqual(fails, []);
 });

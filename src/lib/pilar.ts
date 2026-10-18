@@ -2,7 +2,7 @@ import { urlPuenteRevelatio } from "@/lib/puente-revelatio";
 
 /** Cómo se recorre esta casa: no es un almanaque. */
 export const OFICIO = {
-  gate: "Esta casa es escuela, no almanaque. El capítulo se lee entero, y aquí se recorre la clase de la semana, el tratado del mes, seis géneros en el yunque y un acto escrito. El método no se recita como talismán: se usa, de rodillas, hasta que el oído ceda.",
+  gate: "Esta casa es escuela, no almanaque. El capítulo se lee entero, y aquí se recorre la clase de la semana, el estudio breve del mes, seis géneros en el yunque y un acto escrito. El método no se recita como talismán: se usa, de rodillas, hasta que el oído ceda.",
   refs: "Neh. 8:8 · 2 Ti. 2:15 · Stg. 1:22",
   camino:
     "Si nunca se ha leído, se empieza por Marcos 7, donde el Hijo dice Éfata y el oído cede. La clase de esta semana es el himno del Siervo, Filipenses 2. Poseído el método, el yunque. Cada tapa de la colección se lee junto al capítulo que la sostiene, no en lugar de él.",
