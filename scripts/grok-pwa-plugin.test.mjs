@@ -546,3 +546,21 @@ test("vite plugin bakes og identity as a virtual module", () => {
   assert.match(plugin, /snapshotOgIdentity/);
 });
 
+
+test("a page that declares its full share card keeps it; a bare og:image still yields to the site card", async () => {
+  const { injectGrokPwaHead: inject } = await import("./grok-pwa-shared.mjs");
+  const site = { card: "custom", image: "/og.jpg", title: "Cielo Efata" };
+  const own =
+    '<html><head><title>Éfata</title><meta property="og:image" content="https://www.cieloefata.com/og/efata-gratis.jpg"/>' +
+    '<meta property="og:image:width" content="1080"/><meta property="og:image:height" content="1350"/></head><body></body></html>';
+  const out = inject(own, { host: "www.cieloefata.com", site });
+  assert.match(out, /og:image" content="https:\/\/www\.cieloefata\.com\/og\/efata-gratis\.jpg"/);
+  assert.match(out, /og:image:width" content="1080"/);
+  assert.equal((out.match(/property="og:image"/g) ?? []).length, 1);
+  assert.doesNotMatch(out, /\/og\.jpg"/);
+
+  const bare = '<html><head><title>X</title><meta property="og:image" content="https://www.cieloefata.com/TAPAS/efata.jpg"/></head></html>';
+  const out2 = inject(bare, { host: "www.cieloefata.com", site });
+  assert.match(out2, /og:image" content="https:\/\/www\.cieloefata\.com\/og\.jpg"/);
+  assert.doesNotMatch(out2, /TAPAS/);
+});

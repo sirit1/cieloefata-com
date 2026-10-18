@@ -1,5 +1,6 @@
 import { amazonBusqueda, amazonDp, whatsappPack, whatsappTomo } from "@/lib/amazon";
 import { adquisicion } from "@/lib/content";
+import { ENLACE_KINDLE } from "@/lib/kindle-tienda";
 
 type AdquirirProps = {
   className?: string;
@@ -25,7 +26,8 @@ export function Adquirir({
   pack = false,
   sinAmazon = false,
 }: AdquirirProps) {
-  const ebookHref = asinEbook ? amazonDp(asinEbook) : undefined;
+  // Éfata: enlace inteligente (tienda del país, se abre en Safari y no en la app de Amazon).
+  const ebookHref = slug === "efata" ? ENLACE_KINDLE : asinEbook ? amazonDp(asinEbook) : undefined;
   const printHref = asinPrint ? amazonDp(asinPrint) : isbnPrint ? amazonDp(isbnPrint) : undefined;
   const wa = title ? whatsappTomo(title) : adquisicion.whatsapp;
   const searchTitle = amazonTitle ?? title;
