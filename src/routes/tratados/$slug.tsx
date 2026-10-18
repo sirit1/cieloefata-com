@@ -13,6 +13,7 @@ import { etiquetaTratado } from "@/lib/etiquetas";
 import { entradaTratado } from "@/lib/tratados";
 import { pageHead, tituloTratado } from "@/lib/seo";
 import { InsigniaTipo } from "@/components/insignia-tipo";
+import { SelloVerdad } from "@/components/banner-verdad";
 import { esTratado, tipoDe } from "@/lib/clasificacion";
 
 function textoParaOir(parts: string[]) {
@@ -39,6 +40,7 @@ export const Route = createFileRoute("/tratados/$slug")({
       title: tituloTratado(tratado?.title ?? "Tratado", tipoDe(tratado?.slug ?? "", "tratado")),
       description: tratado?.blurb,
       detalle: tratado ? entradaTratado(tratado.cuerpo) : undefined,
+      image: tratado ? `/og/aulas/${tratado.slug}.jpg` : undefined,
     });
   },
 });
@@ -74,11 +76,12 @@ function TratadoPage() {
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
       <InsigniaTipo slug={tratado.slug} seccion="tratado" className="mt-3" />
+      <SelloVerdad clave={tratado.ref} />
       <p className="mt-6">
         <LeerCapitulo ref={tratado.ref} desde={`/tratados/${tratado.slug}`} />
       </p>
       <Interlineal slug={tratado.slug} />
-      <CajaVerdad pasaje={tratado.ref} desde={`/tratados/${tratado.slug}`} kind="tratado" />
+      <CajaVerdad pasaje={tratado.ref} desde={`/tratados/${tratado.slug}`} kind={tipoDe(tratado.slug, "tratado")} />
       <div className="mt-10 space-y-6">
         {tratado.cuerpo.map((p, i) => (
             <p key={i} className="text-lg leading-relaxed">

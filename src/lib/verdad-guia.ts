@@ -30,3 +30,18 @@ export const RETO_6_DIAS = [
   { dia: 5, letra: "Argumento", tarea: "Escribe tu propia objeción: «Ya oigo la Palabra cada domingo, con eso basta.» Respóndela con 1:22–25." },
   { dia: 6, letra: "Decisión", tarea: "Un verbo del capítulo (pedir, oír, hacer, refrenar, visitar) convertido en un acto con fecha y testigo. Envíale tu estudio." },
 ] as const;
+
+/** Frases de Alejandro Sirit (18-oct-2026), textuales. Rotan en la caja V.E.R.D.A.D. y abren /verdad. */
+export const FRASES_SIRIT = [
+  "La Biblia no se lee, se estudia.",
+  "No solo se lee: se profundiza.",
+  "No se lee para adaptarla a tu situación. Norma normans non normata.",
+  "Lo que no encuentras en la Biblia, no esperes, no abandones, no busques a nadie: la misma Escritura te contesta.",
+] as const;
+
+/** Frase estable por página (sin azar, para que el servidor y el navegador coincidan). */
+export function fraseSirit(clave: string): string {
+  let h = 0;
+  for (const c of clave) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return FRASES_SIRIT[h % FRASES_SIRIT.length];
+}

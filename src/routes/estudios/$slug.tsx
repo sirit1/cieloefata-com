@@ -11,6 +11,7 @@ import { estudioTienePack } from "@/lib/catalogo";
 import { etiquetaEstudio } from "@/lib/etiquetas";
 import { pageHead, tituloEstudio } from "@/lib/seo";
 import { InsigniaTipo } from "@/components/insignia-tipo";
+import { SelloVerdad } from "@/components/banner-verdad";
 
 /** Estudios cuyo hilo narrativo sigue de cerca la RVR1960 sin ser cita literal. */
 const RELATO_ADAPTADO: Record<string, string> = {
@@ -72,6 +73,7 @@ export const Route = createFileRoute("/estudios/$slug")({
       description: study ? `${study.ref}. ${study.ver}` : undefined,
       detalle: study?.passage,
       index: !study || estudioTienePack(study.slug),
+      image: study ? `/og/aulas/${study.slug}.jpg` : undefined,
     });
   },
 });
@@ -111,6 +113,7 @@ function StudyPage() {
       {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
       <h1 className="mt-2 text-4xl md:text-5xl">{study.title}</h1>
       <InsigniaTipo slug={study.slug} seccion="estudio" className="mt-3" />
+      <SelloVerdad clave={study.ref} />
       {RELATO_ADAPTADO[study.slug] ? (
         <p className="mt-3 font-sans text-sm text-ink-soft">
           <span className="chip">{RELATO_ADAPTADO[study.slug]}</span>
