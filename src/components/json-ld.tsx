@@ -212,3 +212,8 @@ export function CorpusJsonLd() {
     />
   );
 }
+
+/** FAQPage: solo con las preguntas y respuestas que la página muestra. */
+export function FaqJsonLd({ data }: { data: unknown }) {
+  return <JsonLdScript data={data} />;
+}

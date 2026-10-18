@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { track } from "@vercel/analytics";
 import { VerdadForm } from "@/components/verdad-form";
+import { HazloCon2 } from "@/components/hazlo-con-2";
+import { registrarLlegada } from "@/lib/hazlo-con-2";
 import { ANCLAS_VERDAD } from "@/components/caja-verdad";
 import { LETRAS_SENCILLAS, RETO_6_DIAS, VERDAD_GUIA } from "@/lib/verdad-guia";
 import { pageHead, tituloSeccion } from "@/lib/seo";
@@ -18,6 +21,10 @@ export const Route = createFileRoute("/verdad")({
 });
 
 function VerdadPage() {
+  useEffect(() => {
+    const ref = registrarLlegada(window.location.search);
+    if (ref) track("hazlo2_llegada", { ref });
+  }, []);
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <p className="kicker">V.E.R.D.A.D. · el método de estudio bíblico de Cielo Efata</p>
@@ -156,6 +163,7 @@ function VerdadPage() {
           ))}
         </ol>
         <a href={VERDAD_GUIA.revelatioReto} className="btn btn-ghost mt-6">Abrir Santiago 1 con la guía</a>
+        <HazloCon2 lugar="verdad-reto" />
       </section>
 
       <section id="recibir" className="mt-14 scroll-mt-24 border-t border-rule pt-10">

@@ -56,6 +56,8 @@ import { Route as PreguntasSlugRouteImport } from './routes/preguntas/$slug'
 import { Route as TratadosSlugRouteImport } from './routes/tratados/$slug'
 import { Route as VersiculoIndexRouteImport } from './routes/versiculo/index'
 import { Route as VersiculoSlugRouteImport } from './routes/versiculo/$slug'
+import { Route as VersiculosIndexRouteImport } from './routes/versiculos/index'
+import { Route as VersiculosSlugRouteImport } from './routes/versiculos/$slug'
 import { Route as EstudiosSlugGuiaRouteImport } from './routes/estudios/$slug_.guia'
 
 const IndexRoute = IndexRouteImport.update({
@@ -293,6 +295,16 @@ const VersiculoSlugRoute = VersiculoSlugRouteImport.update({
   path: '/versiculo/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VersiculosIndexRoute = VersiculosIndexRouteImport.update({
+  id: '/versiculos/',
+  path: '/versiculos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VersiculosSlugRoute = VersiculosSlugRouteImport.update({
+  id: '/versiculos/$slug',
+  path: '/versiculos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EstudiosSlugGuiaRoute = EstudiosSlugGuiaRouteImport.update({
   id: '/estudios/$slug_/guia',
   path: '/estudios/$slug/guia',
@@ -342,11 +354,13 @@ export interface FileRoutesByFullPath {
   '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/versiculo/$slug': typeof VersiculoSlugRoute
+  '/versiculos/$slug': typeof VersiculosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
   '/preguntas/': typeof PreguntasIndexRoute
   '/versiculo/': typeof VersiculoIndexRoute
+  '/versiculos/': typeof VersiculosIndexRoute
   '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRoutesByTo {
@@ -392,11 +406,13 @@ export interface FileRoutesByTo {
   '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/versiculo/$slug': typeof VersiculoSlugRoute
+  '/versiculos/$slug': typeof VersiculosSlugRoute
   '/articulos': typeof ArticulosIndexRoute
   '/estudios': typeof EstudiosIndexRoute
   '/obras': typeof ObrasIndexRoute
   '/preguntas': typeof PreguntasIndexRoute
   '/versiculo': typeof VersiculoIndexRoute
+  '/versiculos': typeof VersiculosIndexRoute
   '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRoutesById {
@@ -443,11 +459,13 @@ export interface FileRoutesById {
   '/preguntas/$slug': typeof PreguntasSlugRoute
   '/tratados/$slug': typeof TratadosSlugRoute
   '/versiculo/$slug': typeof VersiculoSlugRoute
+  '/versiculos/$slug': typeof VersiculosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
   '/preguntas/': typeof PreguntasIndexRoute
   '/versiculo/': typeof VersiculoIndexRoute
+  '/versiculos/': typeof VersiculosIndexRoute
   '/estudios/$slug_/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRouteTypes {
@@ -495,11 +513,13 @@ export interface FileRouteTypes {
     | '/preguntas/$slug'
     | '/tratados/$slug'
     | '/versiculo/$slug'
+    | '/versiculos/$slug'
     | '/articulos/'
     | '/estudios/'
     | '/obras/'
     | '/preguntas/'
     | '/versiculo/'
+    | '/versiculos/'
     | '/estudios/$slug/guia'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -545,11 +565,13 @@ export interface FileRouteTypes {
     | '/preguntas/$slug'
     | '/tratados/$slug'
     | '/versiculo/$slug'
+    | '/versiculos/$slug'
     | '/articulos'
     | '/estudios'
     | '/obras'
     | '/preguntas'
     | '/versiculo'
+    | '/versiculos'
     | '/estudios/$slug/guia'
   id:
     | '__root__'
@@ -595,11 +617,13 @@ export interface FileRouteTypes {
     | '/preguntas/$slug'
     | '/tratados/$slug'
     | '/versiculo/$slug'
+    | '/versiculos/$slug'
     | '/articulos/'
     | '/estudios/'
     | '/obras/'
     | '/preguntas/'
     | '/versiculo/'
+    | '/versiculos/'
     | '/estudios/$slug_/guia'
   fileRoutesById: FileRoutesById
 }
@@ -645,11 +669,13 @@ export interface RootRouteChildren {
   ObrasElSiervoRoute: typeof ObrasElSiervoRoute
   PreguntasSlugRoute: typeof PreguntasSlugRoute
   VersiculoSlugRoute: typeof VersiculoSlugRoute
+  VersiculosSlugRoute: typeof VersiculosSlugRoute
   ArticulosIndexRoute: typeof ArticulosIndexRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
   ObrasIndexRoute: typeof ObrasIndexRoute
   PreguntasIndexRoute: typeof PreguntasIndexRoute
   VersiculoIndexRoute: typeof VersiculoIndexRoute
+  VersiculosIndexRoute: typeof VersiculosIndexRoute
   EstudiosSlugGuiaRoute: typeof EstudiosSlugGuiaRoute
 }
 
@@ -984,6 +1010,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VersiculoSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/versiculos/': {
+      id: '/versiculos/'
+      path: '/versiculos'
+      fullPath: '/versiculos/'
+      preLoaderRoute: typeof VersiculosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/versiculos/$slug': {
+      id: '/versiculos/$slug'
+      path: '/versiculos/$slug'
+      fullPath: '/versiculos/$slug'
+      preLoaderRoute: typeof VersiculosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/estudios/$slug_/guia': {
       id: '/estudios/$slug_/guia'
       path: '/estudios/$slug/guia'
@@ -1048,11 +1088,13 @@ const rootRouteChildren: RootRouteChildren = {
   ObrasElSiervoRoute: ObrasElSiervoRoute,
   PreguntasSlugRoute: PreguntasSlugRoute,
   VersiculoSlugRoute: VersiculoSlugRoute,
+  VersiculosSlugRoute: VersiculosSlugRoute,
   ArticulosIndexRoute: ArticulosIndexRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
   ObrasIndexRoute: ObrasIndexRoute,
   PreguntasIndexRoute: PreguntasIndexRoute,
   VersiculoIndexRoute: VersiculoIndexRoute,
+  VersiculosIndexRoute: VersiculosIndexRoute,
   EstudiosSlugGuiaRoute: EstudiosSlugGuiaRoute,
 }
 export const routeTree = rootRouteImport

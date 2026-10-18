@@ -1,4 +1,4 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, redirect } from "@tanstack/react-router";
 import { BtnArrow } from "@/components/motif";
 import { Compartir } from "@/components/compartir";
 import { ConLemas } from "@/components/lema";
@@ -7,10 +7,15 @@ import { Volver } from "@/components/volver";
 import { preguntaDe, PREGUNTAS, versoRvr } from "@/lib/preguntas";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceTratado } from "@/lib/tratados-indice";
+import { versiculoContexto } from "@/lib/versiculos-contexto";
 
 export const Route = createFileRoute("/preguntas/$slug")({
   component: PreguntaPage,
   loader: ({ params }) => {
+    // La página «¿Qué significa…?» completa vive en /versiculos (vercel.json redirige igual con 301).
+    if (versiculoContexto(params.slug)) {
+      throw redirect({ to: "/versiculos/$slug", params: { slug: params.slug }, statusCode: 301 });
+    }
     const p = preguntaDe(params.slug);
     if (!p) throw notFound();
     return { slug: params.slug, pregunta: p };

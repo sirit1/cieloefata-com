@@ -13,6 +13,7 @@ const columnas = [
       { to: "/tratados", label: "Tratados" },
       { to: "/pasajes", label: "Explorar por pasaje" },
       { to: "/preguntas", label: "¿Qué dice la Biblia sobre…?" },
+      { to: "/versiculos", label: "Versículos fuera de contexto" },
       { to: "/versiculo", label: "Versículos clave" },
       { to: "/objeciones", label: "Objeciones" },
       { to: "/articulos", label: "Artículos" },

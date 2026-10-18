@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { track } from "@vercel/analytics";
 import { leadIdLocal, RECIBIR_API, validarRecibir } from "@/lib/recibir";
 import { VERDAD_GUIA } from "@/lib/verdad-guia";
+import { origenVerdad, refDeQuienInvito } from "@/lib/hazlo-con-2";
 
 type Estado = "abierto" | "enviando" | "listo";
 
@@ -39,7 +40,7 @@ export function VerdadForm() {
           libro: "efata",
           semanal,
           consentimiento: true,
-          origen: "cieloefata.com/verdad",
+          origen: origenVerdad(refDeQuienInvito()),
           sitio,
         }),
       });
@@ -74,6 +75,10 @@ export function VerdadForm() {
         {semanal ? (
           <p className="mt-4 leading-relaxed">El pasaje de la semana te llegará por WhatsApp cada lunes.</p>
         ) : null}
+        <p className="mt-4 leading-relaxed">
+          <a href="#hazlo-con-2" className="text-link underline">Hazlo con 2</a>: invita a dos personas al reto y
+          recibe gratis la plantilla de concordancia y referencias cruzadas.
+        </p>
       </section>
     );
   }
