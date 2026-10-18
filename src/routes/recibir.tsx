@@ -30,6 +30,10 @@ function RecibirPage() {
         también, una vez por semana, el pasaje que se lee en RevelatiO, el lector de la casa.
         Quien quiera sostener el trabajo puede hacerlo, pero nadie paga por la Escritura.
       </p>
+      <p className="mt-4 leading-relaxed">
+        ¿Quieres aprender a estudiar la Biblia por tu cuenta?{" "}
+        <a href="/verdad" className="text-link underline">Descarga gratis la guía del Método V.E.R.D.A.D.</a> y haz el reto de 6 días.
+      </p>
       <RecibirForm libroInicial={libro} />
       <PasajeSemana />
     </main>

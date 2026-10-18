@@ -38,6 +38,7 @@ import { Route as SelloRouteImport } from './routes/sello'
 import { Route as SerieRouteImport } from './routes/serie'
 import { Route as SostenerRouteImport } from './routes/sostener'
 import { Route as TratadosRouteImport } from './routes/tratados'
+import { Route as VerdadRouteImport } from './routes/verdad'
 import { Route as ApiVozRouteImport } from './routes/api/voz'
 import { Route as ArticulosIndexRouteImport } from './routes/articulos/index'
 import { Route as ArticulosSlugRouteImport } from './routes/articulos/$slug'
@@ -202,6 +203,11 @@ const TratadosRoute = TratadosRouteImport.update({
   path: '/tratados',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VerdadRoute = VerdadRouteImport.update({
+  id: '/verdad',
+  path: '/verdad',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiVozRoute = ApiVozRouteImport.update({
   id: '/api/voz',
   path: '/api/voz',
@@ -323,6 +329,7 @@ export interface FileRoutesByFullPath {
   '/serie': typeof SerieRoute
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
+  '/verdad': typeof VerdadRoute
   '/api/voz': typeof ApiVozRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
   '/crisol/manual': typeof CrisolManualRoute
@@ -372,6 +379,7 @@ export interface FileRoutesByTo {
   '/serie': typeof SerieRoute
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
+  '/verdad': typeof VerdadRoute
   '/api/voz': typeof ApiVozRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
   '/crisol/manual': typeof CrisolManualRoute
@@ -422,6 +430,7 @@ export interface FileRoutesById {
   '/serie': typeof SerieRoute
   '/sostener': typeof SostenerRoute
   '/tratados': typeof TratadosRouteWithChildren
+  '/verdad': typeof VerdadRoute
   '/api/voz': typeof ApiVozRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
   '/crisol_/manual': typeof CrisolManualRoute
@@ -473,6 +482,7 @@ export interface FileRouteTypes {
     | '/serie'
     | '/sostener'
     | '/tratados'
+    | '/verdad'
     | '/api/voz'
     | '/articulos/$slug'
     | '/crisol/manual'
@@ -522,6 +532,7 @@ export interface FileRouteTypes {
     | '/serie'
     | '/sostener'
     | '/tratados'
+    | '/verdad'
     | '/api/voz'
     | '/articulos/$slug'
     | '/crisol/manual'
@@ -571,6 +582,7 @@ export interface FileRouteTypes {
     | '/serie'
     | '/sostener'
     | '/tratados'
+    | '/verdad'
     | '/api/voz'
     | '/articulos/$slug'
     | '/crisol_/manual'
@@ -621,6 +633,7 @@ export interface RootRouteChildren {
   SerieRoute: typeof SerieRoute
   SostenerRoute: typeof SostenerRoute
   TratadosRoute: typeof TratadosRouteWithChildren
+  VerdadRoute: typeof VerdadRoute
   ApiVozRoute: typeof ApiVozRoute
   ArticulosSlugRoute: typeof ArticulosSlugRoute
   CrisolManualRoute: typeof CrisolManualRoute
@@ -845,6 +858,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratadosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verdad': {
+      id: '/verdad'
+      path: '/verdad'
+      fullPath: '/verdad'
+      preLoaderRoute: typeof VerdadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/voz': {
       id: '/api/voz'
       path: '/api/voz'
@@ -1016,6 +1036,7 @@ const rootRouteChildren: RootRouteChildren = {
   SerieRoute: SerieRoute,
   SostenerRoute: SostenerRoute,
   TratadosRoute: TratadosRouteWithChildren,
+  VerdadRoute: VerdadRoute,
   ApiVozRoute: ApiVozRoute,
   ArticulosSlugRoute: ArticulosSlugRoute,
   CrisolManualRoute: CrisolManualRoute,
