@@ -116,6 +116,11 @@ function Home() {
             <p className="lema-romance">{SELLO.romance}</p>
             <h1 className="hero-titulo mt-10">{ESCRITURA.title}</h1>
             <p className="mt-5 font-serif text-2xl text-ink-soft italic">{ESCRITURA.motto}</p>
+            <p className="mt-4 font-sans text-sm tracking-wide">
+              <a href="/verdad" className="text-link underline">
+                La Biblia no se lee, se estudia: el método V.E.R.D.A.D.
+              </a>
+            </p>
             <p className="mt-7 text-lg leading-relaxed">
               <ConLemas>{ESCRITURA.gate}</ConLemas>
             </p>

@@ -13,15 +13,18 @@ export const Route = createFileRoute("/verdad")({
       title: tituloSeccion("Método V.E.R.D.A.D.: guía gratis y reto de 6 días"),
       description:
         "Aprende a estudiar la Biblia con seis preguntas: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. Hoja imprimible, guía gratis y reto de 6 días.",
+      image: "/verdad/og-verdad.jpg",
     }),
 });
 
 function VerdadPage() {
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <p className="kicker">El método de estudio bíblico de Cielo Efata</p>
-      <h1 className="mt-3 font-serif text-5xl leading-tight md:text-6xl">V.E.R.D.A.D.</h1>
-      <p className="mt-3 font-serif text-2xl italic text-ink-soft">Seis preguntas para abrir la Escritura</p>
+      <p className="kicker">V.E.R.D.A.D. · el método de estudio bíblico de Cielo Efata</p>
+      <h1 className="mt-3 font-serif text-5xl leading-tight md:text-6xl">La Biblia no se lee, se estudia.</h1>
+      <p className="mt-3 font-serif text-2xl italic text-ink-soft">
+        No solo se lee: se profundiza. Seis preguntas para abrir la Escritura.
+      </p>
       <p className="mt-6 text-lg leading-relaxed">
         Un método para leer la Biblia por capítulos enteros, en su lugar, y salir obedeciendo. Son seis preguntas,
         siempre en el mismo orden, que caben en una hoja. Lo formuló Alejandro Sirit para esta escuela y lo
@@ -64,6 +67,78 @@ function VerdadPage() {
           </a>
           : cada letra tiene su recuadro, tocas una palabra para ver su número Strong y, al final, guardas tu estudio o se
           lo envías a tu testigo por WhatsApp.
+        </p>
+      </section>
+
+      <section id="escritura" className="mt-14 scroll-mt-24 border-t border-rule pt-10">
+        <h2 className="font-serif text-3xl">La Escritura se interpreta con la Escritura</h2>
+        <p className="mt-4 font-serif text-xl italic">
+          «Lo que no encuentras en la Biblia, no esperes, no abandones, no busques a nadie: la misma Escritura te
+          contesta.»
+          <span className="mt-1 block font-sans text-sm not-italic text-gold">Alejandro Sirit</span>
+        </p>
+        <p className="mt-4 leading-relaxed">
+          Si un versículo te deja una pregunta, no la archives: llévala a otros pasajes. No es leer sin el Espíritu,
+          porque el Espíritu que inspiró el texto es el que lo alumbra. Pablo enseñaba «acomodando lo espiritual a lo
+          espiritual» (1 Corintios 2:13); el verbo griego es συγκρίνω (<em>synkrínō</em>, G4793): comparar, poner
+          una cosa junto a otra.
+        </p>
+        <aside className="mt-6 border-l-4 border-gold bg-parchment/60 p-5" aria-label="Norma normans non normata">
+          <p className="kicker">Principio de la Reforma</p>
+          <p className="mt-1 font-serif text-2xl italic">Norma normans non normata</p>
+          <p className="mt-2 leading-relaxed">
+            «La norma que norma y no es normada.» La Escritura mide todo lo demás (tradición, maestros, comentarios y
+            la propia experiencia), y nada de eso la mide a ella. Por eso no se lee para adaptarla a tu situación: tu
+            situación se pone delante del texto. La fórmula latina es de los teólogos luteranos posteriores a la{" "}
+            <em>Fórmula de Concordia</em> (1577), que llama a la Escritura la única regla y norma para juzgar toda
+            doctrina; la Confesión de Fe de Westminster (1646, cap. 1, secc. 9) enseña que la regla infalible para
+            interpretar la Escritura es la Escritura misma.
+          </p>
+          <p className="mt-2 font-serif italic">
+            «¡A la ley y al testimonio! Si no dijeren conforme a esto, es porque no les ha amanecido.»{" "}
+            <span className="font-sans text-sm not-italic text-gold">Isaías 8:20 · RVR1960</span>
+          </p>
+        </aside>
+        <h3 className="mt-8 font-serif text-2xl">Dos herramientas gratis en RevelatiO</h3>
+        <ul className="mt-3 list-disc space-y-2 pl-6 leading-relaxed">
+          <li>
+            <strong>Referencias:</strong> pasajes que tratan el mismo asunto (el Tesoro de la Escritura y
+            OpenBible.info). Son pistas: lee cada uno en su capítulo.
+          </li>
+          <li>
+            <strong>Strong y Concordancia:</strong> toca una palabra, mira su número Strong y sigue la misma palabra
+            original por toda la Biblia, aunque la Reina-Valera la traduzca de varias maneras.
+          </li>
+        </ul>
+        <h3 className="mt-8 font-serif text-2xl">Ejemplo: «creed en el evangelio» (Marcos 1:15)</h3>
+        <ol className="mt-3 list-decimal space-y-2 pl-6 leading-relaxed">
+          <li>
+            Jesús dice: «arrepentíos, y creed en el evangelio» (Marcos 1:15). ¿Qué evangelio? El capítulo no lo
+            define.
+          </li>
+          <li>
+            Toca «evangelio»: εὐαγγέλιον (<em>euangélion</em>, G2098), «buen mensaje». Aparece 77 veces en el Textus
+            Receptus.
+          </li>
+          <li>Marcos 1:1: «Principio del evangelio de Jesucristo, Hijo de Dios». Tiene nombre propio.</li>
+          <li>
+            1 Corintios 15:3–4 lo define: «Que Cristo murió por nuestros pecados, conforme a las Escrituras; y que fue
+            sepultado, y que resucitó al tercer día, conforme a las Escrituras».
+          </li>
+          <li>
+            Romanos 1:16 dice qué hace: «es poder de Dios para salvación a todo aquel que cree».
+          </li>
+          <li>
+            Vuelve a Marcos 1: creer el evangelio es creer la buena noticia de Jesucristo, muerto por nuestros pecados
+            y resucitado. La misma Escritura contestó.
+          </li>
+        </ol>
+        <p className="mt-4 leading-relaxed">
+          Cada aparición se lee en su contexto, y la respuesta vuelve siempre al pasaje de donde salió la pregunta.{" "}
+          <a href={VERDAD_GUIA.revelatio} className="text-link underline" onClick={() => track("verdad_escritura")}>
+            Pruébalo en Marcos 1 con RevelatiO
+          </a>
+          .
         </p>
       </section>
 

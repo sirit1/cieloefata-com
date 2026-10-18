@@ -6,6 +6,7 @@ import { Medicion } from "@/components/medicion";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { BannerVerdad } from "@/components/banner-verdad";
 import appCss from "../styles.css?url";
 import { SCRIPT_TEMA } from "@/lib/tema";
 
@@ -51,6 +52,7 @@ export const Route = createRootRoute({
         <IdleBar />
         <AuthProvider>
           <div className="flex min-h-dvh flex-col">
+            <BannerVerdad />
             <SiteHeader />
             <div id="contenido" className="flex-1" tabIndex={-1}>
               <Outlet />
