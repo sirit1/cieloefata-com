@@ -115,12 +115,20 @@ export function fechasDeFichaSerie(): FechasArticulo {
   return { published: FECHA_SERIE, modified: FECHA_SERIE };
 }
 
+/** Publicadas solo en castellano por excepción aprobada (ver Tratado.soloEs): día de alta. */
+export const FECHAS_SOLO_ES: Record<string, string> = {
+  "este-mismo-jesus": "2026-10-18",
+  "no-juzgueis": "2026-10-18",
+};
+
 export function fechasArticulo(opts: {
   clase: "estudio" | "tratado";
   slug: string;
   pack: boolean;
   n?: string;
 }): FechasArticulo {
+  const soloEs = FECHAS_SOLO_ES[opts.slug];
+  if (soloEs) return { published: soloEs, modified: soloEs };
   if (opts.pack) return fechasDePack(opts.slug, opts.clase);
   if (opts.clase === "tratado" && opts.n && opts.n !== "—" && Number(opts.n) >= 13) {
     return fechasDeFichaSerie();
