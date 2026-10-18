@@ -66,7 +66,8 @@ function PodcastPage() {
           />
         ) : (
           <p className="rounded-md border border-rule p-4 font-sans text-sm text-ink-soft">
-            El reproductor de Spotify aparecerá aquí cuando el programa esté publicado.
+            <strong className="text-ink">Próximamente en Spotify.</strong> El reproductor aparecerá aquí
+            cuando el programa esté publicado.
           </p>
         )}
       </section>

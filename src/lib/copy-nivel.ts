@@ -7,12 +7,12 @@ export const ETIQUETA_ESTA_SEMANA = "Esta semana";
 export const GLOSA_ESTA_SEMANA =
   "Un capítulo completo, estudiado con el método V.E.R.D.A.D., hasta un paso concreto de obediencia.";
 
-export const ETIQUETA_TRATADO_MES = "Tratado del mes";
+export const ETIQUETA_TRATADO_MES = "Estudio breve del mes";
 export const GLOSA_TRATADO_MES =
   "Un versículo muy citado, leído otra vez dentro del capítulo que lo sostiene.";
 
 export const MARCO_RITMO =
-  "No publicamos contenido para llenar redes. Abrimos la Escritura, leemos el pasaje completo y salimos con una obediencia concreta para la vida diaria. El estudio destacado es el pasaje que estamos leyendo ahora; el tratado del mes toma un versículo que a menudo se cita fuera de contexto y lo devuelve a su capítulo.";
+  "No publicamos contenido para llenar redes. Abrimos la Escritura, leemos el pasaje completo y salimos con una obediencia concreta para la vida diaria. El estudio destacado es el pasaje que estamos leyendo ahora; el estudio breve del mes toma un versículo que a menudo se cita fuera de contexto y lo devuelve a su capítulo.";
 
 export const MARCO_HOY = "";
 

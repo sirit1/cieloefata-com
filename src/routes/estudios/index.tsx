@@ -4,7 +4,8 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
-import { estudioSemanaSlug } from "@/lib/calendario";
+import { estudioSemanaSlug, tratadoMesSlug } from "@/lib/calendario";
+import { esTratado } from "@/lib/clasificacion";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
 import { ESTUDIOS_INDICE, indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
 import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
@@ -35,8 +36,9 @@ function EstudiosPage() {
       (s): s is IndiceEstudio => Boolean(s),
     ),
     ...ESTUDIOS_INDICE.filter((s) => Boolean(s.obraHref)),
-  ];
-  const tratados = TRATADOS_INDICE;
+  ].filter((s) => !esTratado(s.slug));
+  const breves = TRATADOS_INDICE.filter((t) => !esTratado(t.slug));
+  const mes = breves.find((t) => t.slug === tratadoMesSlug());
   const labs = LABORATORIOS.map((lab) => ({
     lab,
     study: indiceEstudio(lab.slug),
@@ -61,7 +63,7 @@ function EstudiosPage() {
 
       {semana ? (
         <article className="mt-16 border border-rule bg-paper px-6 py-10 md:px-9">
-          <p className="font-serif text-lg italic text-gold">El estudio de esta semana</p>
+          <p className="font-serif text-lg italic text-gold">{esTratado(semana.slug) ? "El tratado de esta semana" : "El estudio de esta semana"}</p>
           <h2 className="mt-2 font-serif text-3xl">{semana.title}</h2>
           <p className="mt-1 text-gold">{semana.ref}</p>
           <SeguirActo />
@@ -71,7 +73,7 @@ function EstudiosPage() {
               params={{ slug: semana.slug }}
               className="btn btn-ink"
             >
-              Escudriñar el estudio
+              {esTratado(semana.slug) ? "Escudriñar el tratado" : "Escudriñar el estudio"}
               <span className="sr-only"> de {semana.title}</span>
               <BtnArrow />
             </Link>
@@ -80,13 +82,22 @@ function EstudiosPage() {
         </article>
       ) : null}
 
-      <section className="mt-14">
-        <h2 className="font-serif text-3xl">Tratados</h2>
+      <section id="breves" className="mt-14 scroll-mt-24">
+        <h2 className="font-serif text-3xl">Estudios breves: versículos muy citados</h2>
         <p className="mt-4 leading-relaxed text-ink-soft">
-          Versículos muy citados, leídos otra vez dentro de su capítulo.
+          Cada uno toma un versículo muy citado, y a menudo citado fuera de lugar, y lo devuelve al capítulo donde
+          Dios lo puso. Cada mes destacamos uno.
         </p>
+        {mes ? (
+          <p className="mt-4 font-sans text-sm">
+            Este mes:{" "}
+            <Link to="/tratados/$slug" params={{ slug: mes.slug }} className="text-link underline">
+              {mes.title} · {mes.ref}
+            </Link>
+          </p>
+        ) : null}
         <ul className="mt-8 divide-y divide-rule border-y border-rule">
-          {tratados.map((t) => (
+          {breves.map((t) => (
             <li key={t.slug}>
               <Link
                 to="/tratados/$slug"
@@ -98,6 +109,7 @@ function EstudiosPage() {
                     {etiquetaTratado(t.slug)} · {t.ref}
                   </span>
                   <span className="font-serif text-2xl">{t.title}</span>
+                  <InsigniaTipo slug={t.slug} seccion="estudio" dentroDeEnlace />
                 </span>
               </Link>
             </li>
@@ -106,6 +118,13 @@ function EstudiosPage() {
       </section>
 
       <Lista titulo="Todos los estudios" items={publicados} />
+
+      <p className="mt-10 font-sans text-sm">
+        ¿Busca un tema por toda la Escritura?{" "}
+        <Link to="/tratados" className="text-link underline">
+          Ver los tratados
+        </Link>
+      </p>
 
       <section className="mt-14">
         <h2 className="font-serif text-3xl">Estudios por género literario</h2>

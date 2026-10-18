@@ -26,8 +26,8 @@ export function tituloEstudio(pasaje: string) {
   return `${pasaje} — Estudio bíblico | ${SITE_NAME}`;
 }
 
-export function tituloTratado(title: string) {
-  return `${title} — Tratado | ${SITE_NAME}`;
+export function tituloTratado(title: string, tipo: "estudio" | "tratado" = "tratado") {
+  return `${title} — ${tipo === "tratado" ? "Tratado" : "Estudio bíblico"} | ${SITE_NAME}`;
 }
 
 function norm(text: string) {

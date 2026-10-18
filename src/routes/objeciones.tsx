@@ -5,6 +5,7 @@ import { slugPregunta } from "@/lib/preguntas";
 import { OBJECIONES, OBJECIONES_INTRO } from "@/lib/objeciones";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceTratado } from "@/lib/tratados-indice";
+import { esTratado } from "@/lib/clasificacion";
 
 export const Route = createFileRoute("/objeciones")({
   component: ObjecionesPage,
@@ -38,7 +39,7 @@ function ObjecionesPage() {
                   params={{ slug: tratado.slug }}
                   className="mt-3 inline-block font-sans text-sm text-link underline"
                 >
-                  Escudriñar el tratado · {tratado.title}
+                  {esTratado(tratado.slug) ? "Escudriñar el tratado" : "Escudriñar el estudio"} · {tratado.title}
                 </Link>
               ) : null}
               <div className="mt-4 flex flex-wrap items-center gap-2">
