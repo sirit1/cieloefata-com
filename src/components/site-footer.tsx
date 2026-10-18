@@ -22,6 +22,7 @@ const columnas = [
     titulo: "Aprender a leer",
     items: [
       { to: "/metodo", label: "Cómo leer" },
+      { to: "/verdad", label: "Guía V.E.R.D.A.D. gratis" },
       { to: "/canon", label: "Canon" },
       { to: "/glosario", label: "Glosario" },
       { to: "/guias", label: "Guías" },

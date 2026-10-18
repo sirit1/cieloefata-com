@@ -1,6 +1,7 @@
 import { createFileRoute, notFound, redirect, useRouterState } from "@tanstack/react-router";
 import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
+import { CajaVerdad } from "@/components/caja-verdad";
 import { ConLemas } from "@/components/lema";
 import { Interlineal } from "@/components/interlineal";
 import { LeerCapitulo } from "@/components/leer-capitulo";
@@ -119,6 +120,7 @@ function StudyPage() {
         <LeerCapitulo ref={pasaje} desde={`/estudios/${study.slug}`} />
       </p>
       <Interlineal slug={study.slug} />
+      <CajaVerdad pasaje={pasaje} desde={`/estudios/${study.slug}`} kind="estudio" />
       <div className="mt-10 space-y-6">
         {parrafos.map((para, i) => (
           <p key={i} className="text-lg leading-relaxed">

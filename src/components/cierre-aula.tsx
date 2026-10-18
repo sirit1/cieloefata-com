@@ -6,6 +6,7 @@ import { TarjetaLibro } from "@/components/tarjeta-libro";
 import type { AulaKind } from "@/lib/content";
 import { librosDeAula } from "@/lib/serie";
 import { indiceEstudio } from "@/lib/estudios-indice";
+import { plantillaRevelatio } from "@/components/caja-verdad";
 
 export function CierreAula({
   pasaje,
@@ -28,7 +29,8 @@ export function CierreAula({
 
   return (
     <section className="mt-14 border-t border-rule pt-10">
-      <h2 className="font-serif text-3xl">Un paso de obediencia para esta semana</h2>
+      <p className="kicker">V.E.R.D.A.D. · la última letra</p>
+      <h2 className="mt-1 font-serif text-3xl">Tu D: decisión de la semana</h2>
       <p className="mt-4 text-lg leading-relaxed">
         Santiago compara al que oye la Palabra y no la hace con un hombre que se mira al espejo y
         se va. Por eso este estudio no termina cuando se ha entendido el pasaje, sino cuando hay
@@ -64,6 +66,22 @@ export function CierreAula({
           label="Leer el capítulo y preguntar en RevelatiO"
         />
       </div>
+      <p className="mt-6 leading-relaxed">
+        ¿Qué verbo de {pasaje} vas a obedecer, con qué acto, en qué fecha y ante qué testigo?{" "}
+        <a href={plantillaRevelatio(pasaje, desde)} className="text-link underline">
+          Recorre las seis letras en RevelatiO
+        </a>{" "}
+        o{" "}
+        <a
+          href={`https://wa.me/?text=${encodeURIComponent(`Esta semana, con ${pasaje}, mi decisión es: … ¿Me preguntas el domingo si lo hice? (Método V.E.R.D.A.D. · https://www.cieloefata.com/verdad)`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-link underline"
+        >
+          envíale tu D a tu testigo por WhatsApp
+        </a>
+        .
+      </p>
       {conGuia && slug ? (
         <p className="mt-6 leading-relaxed">
           ¿Lo estudias en grupo? La{" "}
