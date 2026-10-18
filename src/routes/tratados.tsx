@@ -8,6 +8,7 @@ import { etiquetaTratado } from "@/lib/etiquetas";
 import { indiceTratado, TRATADOS_INDICE, type IndiceTratado } from "@/lib/tratados-indice";
 
 import { pageHead, tituloSeccion } from "@/lib/seo";
+import { InsigniaTipo } from "@/components/insignia-tipo";
 
 export const Route = createFileRoute("/tratados")({
   component: TratadosPage,
@@ -85,6 +86,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceTratado[] }) {
               {etiquetaTratado(e.slug)} · {e.ref}
             </p>
             <h3 className="mt-1 font-serif text-2xl">{e.title}</h3>
+            <InsigniaTipo slug={e.slug} seccion="tratado" className="mt-2" />
             <p className="mt-3 leading-relaxed">{e.blurb}</p>
             <Link
               to="/tratados/$slug"

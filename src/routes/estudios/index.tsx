@@ -12,6 +12,7 @@ import { LABORATORIOS } from "@/lib/verdad";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 
 import { pageHead, tituloSeccion } from "@/lib/seo";
+import { InsigniaTipo } from "@/components/insignia-tipo";
 
 export const Route = createFileRoute("/estudios/")({
   component: EstudiosPage,
@@ -130,6 +131,7 @@ function EstudiosPage() {
                     {lab.genero} · {lab.ref}
                   </span>
                   <span className="font-serif text-2xl">{lab.title}</span>
+                  <InsigniaTipo slug={study.slug} seccion="estudio" dentroDeEnlace />
                 </span>
               </Link>
             </li>
@@ -155,6 +157,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
                     Estudio · {s.ref}
                   </span>
                   <span className="font-serif text-2xl">{s.title}</span>
+                  <InsigniaTipo slug={s.slug} seccion="estudio" dentroDeEnlace />
                 </span>
               </Link>
             ) : (
@@ -168,6 +171,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
                     {etiquetaEstudio(s.slug)} · {s.ref}
                   </span>
                   <span className="font-serif text-2xl">{s.title}</span>
+                  <InsigniaTipo slug={s.slug} seccion="estudio" dentroDeEnlace />
                 </span>
               </Link>
             )}

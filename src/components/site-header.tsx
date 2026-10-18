@@ -9,6 +9,7 @@ import { school } from "@/lib/content";
 const nav = [
   { to: "/estudios", label: "Estudios" },
   { to: "/tratados", label: "Tratados" },
+  { to: "/estudios-y-tratados", label: "Cuál leer" },
   { to: "/pasajes", label: "Pasajes" },
   { to: "/obras", label: "Libros" },
   { to: "/metodo", label: "Cómo leer" },

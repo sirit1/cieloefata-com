@@ -20,6 +20,7 @@ import { Route as CrisolRouteImport } from './routes/crisol'
 import { Route as CuadernoRouteImport } from './routes/cuaderno'
 import { Route as DonarRouteImport } from './routes/donar'
 import { Route as EscrituraRouteImport } from './routes/escritura'
+import { Route as EstudiosYTratadosRouteImport } from './routes/estudios-y-tratados'
 import { Route as GlosarioRouteImport } from './routes/glosario'
 import { Route as GuiasRouteImport } from './routes/guias'
 import { Route as LibrosRouteImport } from './routes/libros'
@@ -29,6 +30,7 @@ import { Route as NosotrosRouteImport } from './routes/nosotros'
 import { Route as ObjecionesRouteImport } from './routes/objeciones'
 import { Route as PalabraRouteImport } from './routes/palabra'
 import { Route as PasajesRouteImport } from './routes/pasajes'
+import { Route as PodcastRouteImport } from './routes/podcast'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as ProbadRouteImport } from './routes/probad'
 import { Route as RecibirRouteImport } from './routes/recibir'
@@ -110,6 +112,11 @@ const EscrituraRoute = EscrituraRouteImport.update({
   path: '/escritura',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EstudiosYTratadosRoute = EstudiosYTratadosRouteImport.update({
+  id: '/estudios-y-tratados',
+  path: '/estudios-y-tratados',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GlosarioRoute = GlosarioRouteImport.update({
   id: '/glosario',
   path: '/glosario',
@@ -153,6 +160,11 @@ const PalabraRoute = PalabraRouteImport.update({
 const PasajesRoute = PasajesRouteImport.update({
   id: '/pasajes',
   path: '/pasajes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PodcastRoute = PodcastRouteImport.update({
+  id: '/podcast',
+  path: '/podcast',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacidadRoute = PrivacidadRouteImport.update({
@@ -293,6 +305,7 @@ export interface FileRoutesByFullPath {
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
   '/escritura': typeof EscrituraRoute
+  '/estudios-y-tratados': typeof EstudiosYTratadosRoute
   '/glosario': typeof GlosarioRoute
   '/guias': typeof GuiasRoute
   '/libros': typeof LibrosRoute
@@ -302,6 +315,7 @@ export interface FileRoutesByFullPath {
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
   '/pasajes': typeof PasajesRoute
+  '/podcast': typeof PodcastRoute
   '/privacidad': typeof PrivacidadRoute
   '/probad': typeof ProbadRoute
   '/recibir': typeof RecibirRoute
@@ -340,6 +354,7 @@ export interface FileRoutesByTo {
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
   '/escritura': typeof EscrituraRoute
+  '/estudios-y-tratados': typeof EstudiosYTratadosRoute
   '/glosario': typeof GlosarioRoute
   '/guias': typeof GuiasRoute
   '/libros': typeof LibrosRoute
@@ -349,6 +364,7 @@ export interface FileRoutesByTo {
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
   '/pasajes': typeof PasajesRoute
+  '/podcast': typeof PodcastRoute
   '/privacidad': typeof PrivacidadRoute
   '/probad': typeof ProbadRoute
   '/recibir': typeof RecibirRoute
@@ -388,6 +404,7 @@ export interface FileRoutesById {
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
   '/escritura': typeof EscrituraRoute
+  '/estudios-y-tratados': typeof EstudiosYTratadosRoute
   '/glosario': typeof GlosarioRoute
   '/guias': typeof GuiasRoute
   '/libros': typeof LibrosRoute
@@ -397,6 +414,7 @@ export interface FileRoutesById {
   '/objeciones': typeof ObjecionesRoute
   '/palabra': typeof PalabraRoute
   '/pasajes': typeof PasajesRoute
+  '/podcast': typeof PodcastRoute
   '/privacidad': typeof PrivacidadRoute
   '/probad': typeof ProbadRoute
   '/recibir': typeof RecibirRoute
@@ -437,6 +455,7 @@ export interface FileRouteTypes {
     | '/cuaderno'
     | '/donar'
     | '/escritura'
+    | '/estudios-y-tratados'
     | '/glosario'
     | '/guias'
     | '/libros'
@@ -446,6 +465,7 @@ export interface FileRouteTypes {
     | '/objeciones'
     | '/palabra'
     | '/pasajes'
+    | '/podcast'
     | '/privacidad'
     | '/probad'
     | '/recibir'
@@ -484,6 +504,7 @@ export interface FileRouteTypes {
     | '/cuaderno'
     | '/donar'
     | '/escritura'
+    | '/estudios-y-tratados'
     | '/glosario'
     | '/guias'
     | '/libros'
@@ -493,6 +514,7 @@ export interface FileRouteTypes {
     | '/objeciones'
     | '/palabra'
     | '/pasajes'
+    | '/podcast'
     | '/privacidad'
     | '/probad'
     | '/recibir'
@@ -531,6 +553,7 @@ export interface FileRouteTypes {
     | '/cuaderno'
     | '/donar'
     | '/escritura'
+    | '/estudios-y-tratados'
     | '/glosario'
     | '/guias'
     | '/libros'
@@ -540,6 +563,7 @@ export interface FileRouteTypes {
     | '/objeciones'
     | '/palabra'
     | '/pasajes'
+    | '/podcast'
     | '/privacidad'
     | '/probad'
     | '/recibir'
@@ -579,6 +603,7 @@ export interface RootRouteChildren {
   CuadernoRoute: typeof CuadernoRoute
   DonarRoute: typeof DonarRoute
   EscrituraRoute: typeof EscrituraRoute
+  EstudiosYTratadosRoute: typeof EstudiosYTratadosRoute
   GlosarioRoute: typeof GlosarioRoute
   GuiasRoute: typeof GuiasRoute
   LibrosRoute: typeof LibrosRoute
@@ -588,6 +613,7 @@ export interface RootRouteChildren {
   ObjecionesRoute: typeof ObjecionesRoute
   PalabraRoute: typeof PalabraRoute
   PasajesRoute: typeof PasajesRoute
+  PodcastRoute: typeof PodcastRoute
   PrivacidadRoute: typeof PrivacidadRoute
   ProbadRoute: typeof ProbadRoute
   RecibirRoute: typeof RecibirRoute
@@ -693,6 +719,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EscrituraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/estudios-y-tratados': {
+      id: '/estudios-y-tratados'
+      path: '/estudios-y-tratados'
+      fullPath: '/estudios-y-tratados'
+      preLoaderRoute: typeof EstudiosYTratadosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/glosario': {
       id: '/glosario'
       path: '/glosario'
@@ -754,6 +787,13 @@ declare module '@tanstack/react-router' {
       path: '/pasajes'
       fullPath: '/pasajes'
       preLoaderRoute: typeof PasajesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/podcast': {
+      id: '/podcast'
+      path: '/podcast'
+      fullPath: '/podcast'
+      preLoaderRoute: typeof PodcastRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacidad': {
@@ -958,6 +998,7 @@ const rootRouteChildren: RootRouteChildren = {
   CuadernoRoute: CuadernoRoute,
   DonarRoute: DonarRoute,
   EscrituraRoute: EscrituraRoute,
+  EstudiosYTratadosRoute: EstudiosYTratadosRoute,
   GlosarioRoute: GlosarioRoute,
   GuiasRoute: GuiasRoute,
   LibrosRoute: LibrosRoute,
@@ -967,6 +1008,7 @@ const rootRouteChildren: RootRouteChildren = {
   ObjecionesRoute: ObjecionesRoute,
   PalabraRoute: PalabraRoute,
   PasajesRoute: PasajesRoute,
+  PodcastRoute: PodcastRoute,
   PrivacidadRoute: PrivacidadRoute,
   ProbadRoute: ProbadRoute,
   RecibirRoute: RecibirRoute,
