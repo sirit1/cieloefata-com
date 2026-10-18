@@ -384,6 +384,26 @@ export function resolveShareTitle(
   if (fromDoc) return fromDoc;
   return resolveOgTitle(site, appName, host, "");
 }
+/**
+ * A page that declares its own share card in full (absolute https og:image plus
+ * og:image:width and og:image:height) keeps it; otherwise the site card wins.
+ */
+export function pageCardFromDocument(html) {
+  const tags = String(html ?? "").match(/<meta\b[^>]*>/gi) ?? [];
+  const found = {};
+  for (const tag of tags) {
+    const key = tag.match(/\bproperty\s*=\s*["']([^"']+)["']/i)?.[1]?.toLowerCase();
+    if (key !== "og:image" && key !== "og:image:width" && key !== "og:image:height") continue;
+    const content = tag.match(/\bcontent\s*=\s*["']([^"']*)["']/i)?.[1];
+    if (content && !(key in found)) found[key] = unescapeHtml(content).trim();
+  }
+  const image = found["og:image"] ?? "";
+  const width = found["og:image:width"] ?? "";
+  const height = found["og:image:height"] ?? "";
+  if (!/^https:\/\//i.test(image) || !/^\d+$/.test(width) || !/^\d+$/.test(height)) return null;
+  return { image, width, height };
+}
+
 export function grokOgHeadTags({
   host = "",
   appName = DEFAULT_APP_NAME,
@@ -391,6 +411,7 @@ export function grokOgHeadTags({
   documentTitle = "",
   documentDescription = "",
   cwd = process.cwd(),
+  pageCard = null,
 } = {}) {
   const title = resolveShareTitle(site, appName, host, documentTitle);
   const publicHost = resolvePublicHost(host);
@@ -412,7 +433,12 @@ export function grokOgHeadTags({
   if (String(site.type ?? "").toLowerCase() === "x:game") {
     tags.push(`<meta property="og:type" content="x:game">`);
   }
-  if (publicHost) {
+  if (pageCard) {
+    tags.push(`<meta property="og:image" content="${escapeHtml(pageCard.image)}">`);
+    tags.push(`<meta property="og:image:width" content="${escapeHtml(pageCard.width)}">`);
+    tags.push(`<meta property="og:image:height" content="${escapeHtml(pageCard.height)}">`);
+    tags.push(`<meta name="twitter:image" content="${escapeHtml(pageCard.image)}">`);
+  } else if (publicHost) {
     const asset = resolveOgCardAsset(site, cwd);
     const custom = Boolean(asset);
     let image = custom
@@ -486,6 +512,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
   const { site, projectId, creator, creatorId, host, cwd } = normalizeHeadContext(ctx);
   const documentTitle = titleFromDocument(html);
   const documentDescription = descriptionFromDocument(html);
+  const pageCard = pageCardFromDocument(html);
   const appName = resolveOgTitle(
     site,
     ctx.appName ?? DEFAULT_APP_NAME,
@@ -504,7 +531,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
 
   next = insertAfterHeadOpen(
     next,
-    grokOgHeadTags({ host, appName, site, documentTitle, documentDescription, cwd }).join(""),
+    grokOgHeadTags({ host, appName, site, documentTitle, documentDescription, cwd, pageCard }).join(""),
   );
 
   if (!next.includes("/grok-app-builder/extensions.js")) {

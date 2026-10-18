@@ -19,6 +19,7 @@ import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CrisolRouteImport } from './routes/crisol'
 import { Route as CuadernoRouteImport } from './routes/cuaderno'
 import { Route as DonarRouteImport } from './routes/donar'
+import { Route as EfataRouteImport } from './routes/efata'
 import { Route as EscrituraRouteImport } from './routes/escritura'
 import { Route as EstudiosYTratadosRouteImport } from './routes/estudios-y-tratados'
 import { Route as GlosarioRouteImport } from './routes/glosario'
@@ -108,6 +109,11 @@ const CuadernoRoute = CuadernoRouteImport.update({
 const DonarRoute = DonarRouteImport.update({
   id: '/donar',
   path: '/donar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EfataRoute = EfataRouteImport.update({
+  id: '/efata',
+  path: '/efata',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EscrituraRoute = EscrituraRouteImport.update({
@@ -322,6 +328,7 @@ export interface FileRoutesByFullPath {
   '/crisol': typeof CrisolRoute
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
+  '/efata': typeof EfataRoute
   '/escritura': typeof EscrituraRoute
   '/estudios-y-tratados': typeof EstudiosYTratadosRoute
   '/glosario': typeof GlosarioRoute
@@ -374,6 +381,7 @@ export interface FileRoutesByTo {
   '/crisol': typeof CrisolRoute
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
+  '/efata': typeof EfataRoute
   '/escritura': typeof EscrituraRoute
   '/estudios-y-tratados': typeof EstudiosYTratadosRoute
   '/glosario': typeof GlosarioRoute
@@ -427,6 +435,7 @@ export interface FileRoutesById {
   '/crisol': typeof CrisolRoute
   '/cuaderno': typeof CuadernoRoute
   '/donar': typeof DonarRoute
+  '/efata': typeof EfataRoute
   '/escritura': typeof EscrituraRoute
   '/estudios-y-tratados': typeof EstudiosYTratadosRoute
   '/glosario': typeof GlosarioRoute
@@ -481,6 +490,7 @@ export interface FileRouteTypes {
     | '/crisol'
     | '/cuaderno'
     | '/donar'
+    | '/efata'
     | '/escritura'
     | '/estudios-y-tratados'
     | '/glosario'
@@ -533,6 +543,7 @@ export interface FileRouteTypes {
     | '/crisol'
     | '/cuaderno'
     | '/donar'
+    | '/efata'
     | '/escritura'
     | '/estudios-y-tratados'
     | '/glosario'
@@ -585,6 +596,7 @@ export interface FileRouteTypes {
     | '/crisol'
     | '/cuaderno'
     | '/donar'
+    | '/efata'
     | '/escritura'
     | '/estudios-y-tratados'
     | '/glosario'
@@ -638,6 +650,7 @@ export interface RootRouteChildren {
   CrisolRoute: typeof CrisolRoute
   CuadernoRoute: typeof CuadernoRoute
   DonarRoute: typeof DonarRoute
+  EfataRoute: typeof EfataRoute
   EscrituraRoute: typeof EscrituraRoute
   EstudiosYTratadosRoute: typeof EstudiosYTratadosRoute
   GlosarioRoute: typeof GlosarioRoute
@@ -749,6 +762,13 @@ declare module '@tanstack/react-router' {
       path: '/donar'
       fullPath: '/donar'
       preLoaderRoute: typeof DonarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/efata': {
+      id: '/efata'
+      path: '/efata'
+      fullPath: '/efata'
+      preLoaderRoute: typeof EfataRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/escritura': {
@@ -1057,6 +1077,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrisolRoute: CrisolRoute,
   CuadernoRoute: CuadernoRoute,
   DonarRoute: DonarRoute,
+  EfataRoute: EfataRoute,
   EscrituraRoute: EscrituraRoute,
   EstudiosYTratadosRoute: EstudiosYTratadosRoute,
   GlosarioRoute: GlosarioRoute,

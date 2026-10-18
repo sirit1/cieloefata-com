@@ -9,7 +9,7 @@ export const VERDAD_GUIA = {
   portada: "/verdad/portada-verdad.jpg",
   revelatio: "https://revelatio.app/leer?libro=marcos&cap=1&metodo=1",
   revelatioReto: "https://revelatio.app/leer?libro=santiago&cap=1&metodo=1",
-  efataKindle: "https://www.amazon.com/dp/B0HJ15ZXL3",
+  efataKindle: "/efata",
 } as const;
 
 /** Las seis letras en palabras sencillas; la versión completa vive en /metodo. */
