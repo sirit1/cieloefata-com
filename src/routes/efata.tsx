@@ -59,7 +59,7 @@ function EfataPage() {
         href={ENLACE_KINDLE}
         rel="nofollow"
         className="btn btn-gold mt-8 w-full max-w-sm py-5 text-base"
-        onClick={() => track("efata_kindle", { boton: "principal" })}
+        onClick={() => track("efata_amazon_click", { store: "auto" })}
       >
         {gratis ? "Descargar gratis en Kindle" : "Conseguir en Kindle"}
       </a>
@@ -72,7 +72,7 @@ function EfataPage() {
             href={urlKindle(t.tld)}
             rel="nofollow noopener"
             className="btn btn-ghost btn-sm"
-            onClick={() => track("efata_kindle", { boton: t.tld })}
+            onClick={() => track("efata_amazon_click", { store: t.tld })}
           >
             {t.etiqueta}
           </a>
@@ -81,7 +81,7 @@ function EfataPage() {
           href={`${ENLACE_KINDLE}`}
           rel="nofollow"
           className="btn btn-ghost btn-sm"
-          onClick={() => track("efata_kindle", { boton: "otros" })}
+          onClick={() => track("efata_amazon_click", { store: "otros" })}
         >
           Otros países
         </a>
