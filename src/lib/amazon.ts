@@ -7,7 +7,7 @@ import { textoPackWhatsApp } from "@/lib/copy-nivel";
 export const AMAZON_AUTHOR = "https://www.amazon.com/Alejandro-Sirit/e/B0GVH9VW7M";
 
 export function amazonDp(asinOrIsbn: string): string {
-  return `https://www.amazon.com/dp/${asinOrIsbn}`;
+  return `https://www.amazon.com/dp/${asinOrIsbn}?utm_source=cieloefata&utm_medium=libro`;
 }
 
 export function amazonBusqueda(title: string): string {

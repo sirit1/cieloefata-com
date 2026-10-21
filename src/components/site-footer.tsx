@@ -39,6 +39,8 @@ const columnas = [
       { to: "/serie", label: "La serie, en orden" },
       { to: "/recibir", label: "Recibir el capítulo 1" },
       { to: "/nosotros", label: "Nosotros" },
+      { to: "/autor", label: "Alejandro Sirit, el autor" },
+      { to: "/como-se-complementan", label: "Cómo se complementan con RevelatiO" },
       { to: "/lo-que-creemos", label: "Lo que creemos" },
       { to: "/camino", label: "El camino" },
       { to: "/sello", label: "El sello" },
@@ -86,8 +88,8 @@ export function SiteFooter() {
                   ))}
                   {col.titulo === "La casa" ? (
                     <li>
-                      <a href="https://revelatio.app/" className="inline-flex min-h-11 lg:min-h-8 items-center text-ink-soft hover:text-gold">
-                        RevelatiO, el lector
+                      <a href="https://revelatio.app/?utm_source=cieloefata&utm_medium=footer" className="inline-flex min-h-11 lg:min-h-8 items-center text-ink-soft hover:text-gold">
+                        RevelatiO · by Cielo Efata, el lector compañero
                       </a>
                     </li>
                   ) : null}

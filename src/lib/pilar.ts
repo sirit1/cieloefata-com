@@ -142,7 +142,7 @@ export const DOS_CASAS = {
     "Úsalo ahora en el navegador, o escanea el código para instalarlo como aplicación. Esta escuela no sustituye esa lectura: la acompaña.",
   ],
   refs: "Neh. 8:8 · 2 Ti. 3:16 · Hch. 17:11",
-  appHref: "https://revelatio.app",
+  appHref: "https://revelatio.app/?utm_source=cieloefata&utm_medium=banner",
   leerHref: urlPuenteRevelatio({ ref: "Marcos 7", desde: "/estudios/marcos-7" })!,
   leerLabel: "Leer Marcos 7 en RevelatiO",
   instalarLabel: "Instalar la app",

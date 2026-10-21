@@ -11,10 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AutorRouteImport } from './routes/autor'
 import { Route as BuscarRouteImport } from './routes/buscar'
 import { Route as CaminoRouteImport } from './routes/camino'
 import { Route as CanonRouteImport } from './routes/canon'
 import { Route as CasaRouteImport } from './routes/casa'
+import { Route as ComoSeComplementanRouteImport } from './routes/como-se-complementan'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as CrisolRouteImport } from './routes/crisol'
 import { Route as CuadernoRouteImport } from './routes/cuaderno'
@@ -71,6 +73,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AutorRoute = AutorRouteImport.update({
+  id: '/autor',
+  path: '/autor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BuscarRoute = BuscarRouteImport.update({
   id: '/buscar',
   path: '/buscar',
@@ -89,6 +96,11 @@ const CanonRoute = CanonRouteImport.update({
 const CasaRoute = CasaRouteImport.update({
   id: '/casa',
   path: '/casa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComoSeComplementanRoute = ComoSeComplementanRouteImport.update({
+  id: '/como-se-complementan',
+  path: '/como-se-complementan',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactoRoute = ContactoRouteImport.update({
@@ -320,10 +332,12 @@ const EstudiosSlugGuiaRoute = EstudiosSlugGuiaRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/autor': typeof AutorRoute
   '/buscar': typeof BuscarRoute
   '/camino': typeof CaminoRoute
   '/canon': typeof CanonRoute
   '/casa': typeof CasaRoute
+  '/como-se-complementan': typeof ComoSeComplementanRoute
   '/contacto': typeof ContactoRoute
   '/crisol': typeof CrisolRoute
   '/cuaderno': typeof CuadernoRoute
@@ -373,10 +387,12 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/autor': typeof AutorRoute
   '/buscar': typeof BuscarRoute
   '/camino': typeof CaminoRoute
   '/canon': typeof CanonRoute
   '/casa': typeof CasaRoute
+  '/como-se-complementan': typeof ComoSeComplementanRoute
   '/contacto': typeof ContactoRoute
   '/crisol': typeof CrisolRoute
   '/cuaderno': typeof CuadernoRoute
@@ -427,10 +443,12 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/autor': typeof AutorRoute
   '/buscar': typeof BuscarRoute
   '/camino': typeof CaminoRoute
   '/canon': typeof CanonRoute
   '/casa': typeof CasaRoute
+  '/como-se-complementan': typeof ComoSeComplementanRoute
   '/contacto': typeof ContactoRoute
   '/crisol': typeof CrisolRoute
   '/cuaderno': typeof CuadernoRoute
@@ -482,10 +500,12 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/autor'
     | '/buscar'
     | '/camino'
     | '/canon'
     | '/casa'
+    | '/como-se-complementan'
     | '/contacto'
     | '/crisol'
     | '/cuaderno'
@@ -535,10 +555,12 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/autor'
     | '/buscar'
     | '/camino'
     | '/canon'
     | '/casa'
+    | '/como-se-complementan'
     | '/contacto'
     | '/crisol'
     | '/cuaderno'
@@ -588,10 +610,12 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/autor'
     | '/buscar'
     | '/camino'
     | '/canon'
     | '/casa'
+    | '/como-se-complementan'
     | '/contacto'
     | '/crisol'
     | '/cuaderno'
@@ -642,10 +666,12 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AutorRoute: typeof AutorRoute
   BuscarRoute: typeof BuscarRoute
   CaminoRoute: typeof CaminoRoute
   CanonRoute: typeof CanonRoute
   CasaRoute: typeof CasaRoute
+  ComoSeComplementanRoute: typeof ComoSeComplementanRoute
   ContactoRoute: typeof ContactoRoute
   CrisolRoute: typeof CrisolRoute
   CuadernoRoute: typeof CuadernoRoute
@@ -708,6 +734,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/autor': {
+      id: '/autor'
+      path: '/autor'
+      fullPath: '/autor'
+      preLoaderRoute: typeof AutorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/buscar': {
       id: '/buscar'
       path: '/buscar'
@@ -734,6 +767,13 @@ declare module '@tanstack/react-router' {
       path: '/casa'
       fullPath: '/casa'
       preLoaderRoute: typeof CasaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/como-se-complementan': {
+      id: '/como-se-complementan'
+      path: '/como-se-complementan'
+      fullPath: '/como-se-complementan'
+      preLoaderRoute: typeof ComoSeComplementanRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contacto': {
@@ -1069,10 +1109,12 @@ const TratadosRouteWithChildren = TratadosRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AutorRoute: AutorRoute,
   BuscarRoute: BuscarRoute,
   CaminoRoute: CaminoRoute,
   CanonRoute: CanonRoute,
   CasaRoute: CasaRoute,
+  ComoSeComplementanRoute: ComoSeComplementanRoute,
   ContactoRoute: ContactoRoute,
   CrisolRoute: CrisolRoute,
   CuadernoRoute: CuadernoRoute,

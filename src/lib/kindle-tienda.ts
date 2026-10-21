@@ -39,7 +39,7 @@ export function tiendaDePais(pais: string | null | undefined): string {
 }
 
 export function urlKindle(tld: string, asin: string = EFATA_ASIN): string {
-  return `https://www.amazon.${tld}/dp/${asin}?nodl=0`;
+  return `https://www.amazon.${tld}/dp/${asin}?nodl=0&utm_source=cieloefata&utm_medium=kindle`;
 }
 
 export function urlKindleDePais(pais: string | null | undefined): string {

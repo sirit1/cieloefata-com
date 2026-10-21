@@ -30,9 +30,14 @@ export function LeerCapitulo({
   });
   if (!href) return null;
   return (
-    <a href={href} rel="noopener noreferrer" className={className || "btn btn-ghost"}>
-      {label ?? "Abrir la Escritura"}
-      {label ? null : <span className="sr-only"> en el lector compañero</span>}
-    </a>
+    <span className="inline-flex flex-col gap-1">
+      <a href={href} rel="noopener noreferrer" className={className || "btn btn-ghost"}>
+        {label ?? "Abrir la Escritura"}
+        {label ? null : <span className="sr-only"> en el lector compañero</span>}
+      </a>
+      <span className="text-xs text-ink-soft" data-explica-revelatio>
+        En RevelatiO, el lector compañero: lee el capítulo, consulta con una Lente y guarda en tu cuaderno.
+      </span>
+    </span>
   );
 }
