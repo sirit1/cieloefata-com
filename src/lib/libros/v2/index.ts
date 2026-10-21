@@ -18,6 +18,8 @@ const cargadores: Record<string, () => Promise<{ default: ObraV2 }>> = {
   "este-mismo-jesus": () => import("./este-mismo-jesus.ts"),
   "teologia-de-la-gloria": () => import("./teologia-de-la-gloria.ts"),
   "el-paraclito-eterno": () => import("./el-paraclito-eterno.ts"),
+  "no-juzgueis": () => import("./no-juzgueis.ts"),
+  "teologia-de-la-cruz": () => import("./teologia-de-la-cruz.ts"),
 };
 
 export async function obraV2(slug: string): Promise<ObraV2 | null> {

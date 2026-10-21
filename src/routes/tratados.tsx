@@ -6,9 +6,10 @@ import { TRATADOS_CASA } from "@/lib/clasificacion";
 import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
+import { SLUGS_V2 } from "@/lib/libros/v2";
 
 /** Obras rehechas con portada nueva (public/tratados-v2/<slug>/portada.jpg). */
-const CON_PORTADA = new Set(["el-texto-manda","el-crisol-de-lo-oido","buscad-primeramente","todo-lo-puedo","el-pensamiento-que-no-era-tuyo","prospere-tu-alma","las-ventanas-de-los-cielos","la-muerte-y-la-vida","a-este-monte","para-bien","si-dios-por-nosotros","espiritu-de-poder","isaias-53","atar-y-desatar","este-mismo-jesus","teologia-de-la-gloria","el-paraclito-eterno"]);
+const CON_PORTADA = SLUGS_V2;
 
 export const Route = createFileRoute("/tratados")({
   component: TratadosPage,
