@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { track } from "@vercel/analytics";
 import { VerdadForm } from "@/components/verdad-form";
+import { RegaloVerdad } from "@/components/regalo-verdad";
 import { HazloCon2 } from "@/components/hazlo-con-2";
 import { registrarLlegada } from "@/lib/hazlo-con-2";
 import { ANCLAS_VERDAD } from "@/components/caja-verdad";
@@ -178,6 +179,8 @@ function VerdadPage() {
             </p>
           </div>
         </div>
+        <div className="mt-8"><RegaloVerdad id="guia-metodo" /></div>
+        <p className="mt-6 text-sm text-ink-soft">¿Quieres además el estudio semanal? Es opcional:</p>
         <VerdadForm />
       </section>
 

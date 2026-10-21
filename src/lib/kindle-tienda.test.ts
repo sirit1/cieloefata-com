@@ -14,9 +14,9 @@ test("cada país va a su tienda; el resto del mundo, amazon.com", () => {
 });
 
 test("la URL lleva nodl=0 para que el iPhone no la abra en la app de Amazon", () => {
-  assert.equal(urlKindleDePais("ES"), "https://www.amazon.es/dp/B0HJ15ZXL3?nodl=0");
-  assert.equal(urlKindleDePais("VE"), "https://www.amazon.com/dp/B0HJ15ZXL3?nodl=0");
-  for (const t of OTRAS_TIENDAS) assert.match(urlKindle(t.tld), /\?nodl=0$/);
+  assert.equal(urlKindleDePais("ES"), "https://www.amazon.es/dp/B0HJ15ZXL3?nodl=0&utm_source=cieloefata&utm_medium=kindle");
+  assert.equal(urlKindleDePais("VE"), "https://www.amazon.com/dp/B0HJ15ZXL3?nodl=0&utm_source=cieloefata&utm_medium=kindle");
+  for (const t of OTRAS_TIENDAS) assert.match(urlKindle(t.tld), /\?nodl=0&utm_source=cieloefata&utm_medium=kindle$/);
 });
 
 test("la promoción gratis termina el 22-10-2026 a las 06:59 UTC", () => {

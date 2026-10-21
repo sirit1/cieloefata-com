@@ -1,7 +1,7 @@
 /** Guía gratuita y piezas sencillas del Método V.E.R.D.A.D. para quien empieza (/verdad). */
 export const VERDAD_GUIA = {
   titulo: "V.E.R.D.A.D. Seis preguntas para abrir la Escritura",
-  paginas: 20,
+  paginas: 32,
   pdf: "/verdad/verdad-guia-gratuita.pdf",
   epub: "/verdad/verdad-guia-gratuita.epub",
   hoja: "/verdad/hoja-verdad.pdf",

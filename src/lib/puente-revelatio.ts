@@ -77,5 +77,7 @@ export function urlPuenteRevelatio(origen: OrigenPuente): string | null {
   const intencion = datoOpcional(origen.intencion);
   if (pregunta) q.set("pregunta", pregunta);
   if (intencion) q.set("intencion", intencion);
+  q.set("utm_source", "cieloefata");
+  q.set("utm_medium", "puente");
   return `${REVELATIO_LEER}?${q.toString()}`;
 }

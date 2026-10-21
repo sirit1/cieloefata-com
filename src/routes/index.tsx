@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { BannerRevelatio } from "@/components/banner-revelatio";
+import { RegaloVerdad } from "@/components/regalo-verdad";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { Tapa } from "@/components/tapa";
@@ -226,6 +227,8 @@ function Home() {
           </ul>
         </div>
       </section>
+
+      <div className="mx-auto max-w-5xl px-4 py-10"><RegaloVerdad /></div>
 
       <BannerRevelatio />
 

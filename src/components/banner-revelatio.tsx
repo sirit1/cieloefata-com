@@ -23,16 +23,23 @@ export function BannerRevelatio() {
             />
             <span className="leading-none">
               <span className="block font-serif text-2xl tracking-[0.16em] sm:text-3xl">
-                REVELATIO
+                RevelatiO
               </span>
               <span className="mt-1 block font-sans text-[0.7rem] tracking-[0.2em] text-gold-soft uppercase">
-                by Efata
+                by Cielo Efata
               </span>
             </span>
           </a>
           <p className="mt-3 font-sans text-sm tracking-[0.18em] text-gold-soft uppercase">
             revelatio.app
           </p>
+          <h2 className="mt-6 font-serif text-3xl">Lee con RevelatiO</h2>
+          <ul className="mt-3 max-w-[36em] space-y-1 text-lg leading-relaxed">
+            <li><strong>Lectura:</strong> el capítulo entero, con otras versiones al lado.</li>
+            <li><strong>Lentes:</strong> pregúntale al pasaje desde un solo enfoque, sin añadirle lo que no dice.</li>
+            <li><strong>Cuaderno:</strong> guarda versículos y notas; se conecta con tus estudios aquí.</li>
+          </ul>
+          <p className="mt-3 text-gold-soft">RevelatiO es el lector compañero; el estudio, los tratados y los libros viven aquí, en Cielo Efata.</p>
           {DOS_CASAS.banner.map((p) => (
             <p key={p.slice(0, 24)} className="mt-5 max-w-[36em] text-lg leading-relaxed">
               {p}
@@ -45,6 +52,9 @@ export function BannerRevelatio() {
             </a>
             <a href={DOS_CASAS.appHref} rel="noopener noreferrer" className="btn btn-ghost btn-ghost-navy">
               {DOS_CASAS.instalarLabel}
+            </a>
+            <a href="/como-se-complementan" className="btn btn-ghost btn-ghost-navy">
+              Cómo se complementan
             </a>
           </div>
         </div>
