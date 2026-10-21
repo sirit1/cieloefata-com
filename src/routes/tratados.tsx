@@ -7,6 +7,9 @@ import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 
+/** Obras rehechas con portada nueva (public/tratados-v2/<slug>/portada.jpg). */
+const CON_PORTADA = new Set(["el-texto-manda","el-crisol-de-lo-oido","buscad-primeramente","todo-lo-puedo","el-pensamiento-que-no-era-tuyo","prospere-tu-alma","las-ventanas-de-los-cielos","la-muerte-y-la-vida","a-este-monte","para-bien","si-dios-por-nosotros","espiritu-de-poder","isaias-53","atar-y-desatar","este-mismo-jesus","teologia-de-la-gloria","el-paraclito-eterno"]);
+
 export const Route = createFileRoute("/tratados")({
   component: TratadosPage,
   head: ({ matches }) => {
@@ -57,6 +60,9 @@ function TratadosPage() {
             if (!d) return null;
             return (
               <li key={slug} className="border-t border-rule pt-6">
+                {CON_PORTADA.has(slug) ? (
+                  <a href={href}><img src={`/tratados-v2/${slug}/portada.jpg`} alt={`Portada: ${d.title}`} width={600} height={960} loading="lazy" className="mb-4 w-32 rounded shadow" /></a>
+                ) : null}
                 <p className="font-sans text-xs tracking-widest text-gold uppercase">Tratado · {d.ref}</p>
                 <h3 className="mt-1 font-serif text-2xl">{d.title}</h3>
                 <InsigniaTipo slug={slug} seccion="tratado" className="mt-2" />

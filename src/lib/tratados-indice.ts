@@ -15,7 +15,7 @@ export const TRATADOS_INDICE: IndiceTratado[] = [
     "slug": "el-texto-manda",
     "n": "00",
     "title": "El texto manda",
-    "ref": "Nehemías 8:8",
+    "ref": "Marcos 7:31–37",
     "blurb": "V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— no es una fórmula para recitar ni una técnica más. Es la manera en que leemos el capítulo completo, como el pueblo en tiempos de Nehemías, hasta entender lo que Dios dijo y obedecerlo.",
     "pack": true
   },

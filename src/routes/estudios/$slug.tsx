@@ -3,6 +3,8 @@ import { Aula } from "@/components/aula";
 import { CierreAula } from "@/components/cierre-aula";
 import { CajaVerdad } from "@/components/caja-verdad";
 import { ConLemas } from "@/components/lema";
+import { ObraV2Cuerpo } from "@/components/obra-v2";
+import { esTratado } from "@/lib/clasificacion";
 import { Interlineal } from "@/components/interlineal";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { ArticleJsonLd } from "@/components/json-ld";
@@ -55,15 +57,17 @@ export const Route = createFileRoute("/estudios/$slug")({
   },
   component: StudyPage,
   loader: async ({ params }) => {
-    const [{ studyBySlug }, { parrafosDe }] = await Promise.all([
+    const [{ studyBySlug }, { parrafosDe }, { obraV2 }] = await Promise.all([
       import("@/lib/studies-aula"),
       import("@/lib/libros/cargar"),
+      import("@/lib/libros/v2"),
     ]);
     const study = studyBySlug(params.slug);
     if (!study || !estudioTienePack(study.slug)) throw notFound();
-    const parrafos = await parrafosDe(params.slug);
+    const v2 = await obraV2(params.slug);
+    const parrafos = v2 ? v2.texto : await parrafosDe(params.slug);
     if (parrafos.length === 0) throw notFound();
-    return { study, parrafos };
+    return { study, parrafos, v2 };
   },
   head: ({ loaderData }) => {
     const study = loaderData?.study;
@@ -73,13 +77,13 @@ export const Route = createFileRoute("/estudios/$slug")({
       description: study ? `${study.ref}. ${study.ver}` : undefined,
       detalle: study?.passage,
       index: !study || estudioTienePack(study.slug),
-      image: study ? `/og/aulas/${study.slug}.jpg` : undefined,
+      image: loaderData?.v2 ? loaderData.v2.og : study ? `/og/aulas/${study.slug}.jpg` : undefined,
     });
   },
 });
 
 function StudyPage() {
-  const { study, parrafos } = Route.useLoaderData();
+  const { study, parrafos, v2 } = Route.useLoaderData();
   const cita = useRouterState({ select: (s) => s.location.searchStr });
   const llegada = new URLSearchParams(cita.startsWith("?") ? cita.slice(1) : cita).get("cita");
   const pasaje = llegada || study.ref;
@@ -124,6 +128,9 @@ function StudyPage() {
       </p>
       <Interlineal slug={study.slug} />
       <CajaVerdad pasaje={pasaje} desde={`/estudios/${study.slug}`} kind="estudio" />
+      {v2 ? (
+        <ObraV2Cuerpo obra={v2} tipo={esTratado(study.slug) ? "Tratado" : "Estudio"} />
+      ) : (
       <div className="mt-10 space-y-6">
         {parrafos.map((para, i) => (
           <p key={i} className="text-lg leading-relaxed">
@@ -131,6 +138,7 @@ function StudyPage() {
           </p>
         ))}
       </div>
+      )}
       <CierreAula
         kind="estudio"
         pasaje={study.ref}
