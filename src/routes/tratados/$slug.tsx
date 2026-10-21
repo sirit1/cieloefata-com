@@ -15,6 +15,7 @@ import { pageHead, tituloTratado } from "@/lib/seo";
 import { InsigniaTipo } from "@/components/insignia-tipo";
 import { SelloVerdad } from "@/components/banner-verdad";
 import { esTratado, tipoDe } from "@/lib/clasificacion";
+import { ObraV2Cuerpo } from "@/components/obra-v2";
 
 function textoParaOir(parts: string[]) {
   return parts.filter(Boolean).join("\n\n");
@@ -23,15 +24,17 @@ function textoParaOir(parts: string[]) {
 export const Route = createFileRoute("/tratados/$slug")({
   component: TratadoPage,
   loader: async ({ params }) => {
-    const [{ tratadoDe }, { parrafosDe }] = await Promise.all([
+    const [{ tratadoDe }, { parrafosDe }, { obraV2 }] = await Promise.all([
       import("@/lib/tratados"),
       import("@/lib/libros/cargar"),
+      import("@/lib/libros/v2"),
     ]);
     const t = tratadoDe(params.slug);
     if (!t) throw notFound();
-    const cuerpo = await parrafosDe(params.slug);
+    const v2 = await obraV2(params.slug);
+    const cuerpo = v2 ? v2.texto : await parrafosDe(params.slug);
     if (cuerpo.length === 0) throw notFound();
-    return { tratado: { ...t, cuerpo: [...cuerpo] } };
+    return { tratado: { ...t, cuerpo: [...cuerpo] }, v2 };
   },
   head: ({ loaderData }) => {
     const tratado = loaderData?.tratado;
@@ -40,13 +43,13 @@ export const Route = createFileRoute("/tratados/$slug")({
       title: tituloTratado(tratado?.title ?? "Tratado", tipoDe(tratado?.slug ?? "", "tratado")),
       description: tratado?.blurb,
       detalle: tratado ? entradaTratado(tratado.cuerpo) : undefined,
-      image: tratado ? `/og/aulas/${tratado.slug}.jpg` : undefined,
+      image: loaderData?.v2 ? loaderData.v2.og : tratado ? `/og/aulas/${tratado.slug}.jpg` : undefined,
     });
   },
 });
 
 function TratadoPage() {
-  const { tratado } = Route.useLoaderData();
+  const { tratado, v2 } = Route.useLoaderData();
   const fechas = fechasArticulo({
     clase: "tratado",
     slug: tratado.slug,
@@ -82,6 +85,9 @@ function TratadoPage() {
       </p>
       <Interlineal slug={tratado.slug} />
       <CajaVerdad pasaje={tratado.ref} desde={`/tratados/${tratado.slug}`} kind={tipoDe(tratado.slug, "tratado")} />
+      {v2 ? (
+        <ObraV2Cuerpo obra={v2} tipo={esTratado(tratado.slug) ? "Tratado" : "Estudio"} />
+      ) : (
       <div className="mt-10 space-y-6">
         {tratado.cuerpo.map((p, i) => (
             <p key={i} className="text-lg leading-relaxed">
@@ -89,6 +95,7 @@ function TratadoPage() {
             </p>
         ))}
       </div>
+      )}
       <ColofonTratado />
       <Refs refs="2 P. 3:16 · Neh. 8:8" />
       <CierreAula

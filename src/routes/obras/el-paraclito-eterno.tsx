@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ObraV2Cuerpo } from "@/components/obra-v2";
 import { LibroJsonLd } from "@/components/json-ld";
 import { BtnArrow } from "@/components/motif";
 import { Prosa } from "@/components/prosa";
@@ -8,6 +9,7 @@ import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/obras/el-paraclito-eterno")({
   component: ParaclitoPage,
+  loader: async () => ({ v2: await (await import("@/lib/libros/v2")).obraV2("el-paraclito-eterno") }),
   head: () =>
     pageHead({
       path: `/obras/${PARACLITO.slug}`,
@@ -27,6 +29,7 @@ const RELACIONADOS = [
 
 function ParaclitoPage() {
   const p = PARACLITO;
+  const { v2 } = Route.useLoaderData();
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <LibroJsonLd title={p.title} slug={p.slug} description={p.seoDescription} />
@@ -71,6 +74,13 @@ function ParaclitoPage() {
 
       <h2 className="mt-12 font-serif text-3xl">Cierre</h2>
       <Prosa texto={p.cierre} />
+
+      {v2 ? (
+        <section className="mt-16 border-t border-rule pt-10">
+          <h2 className="font-serif text-3xl">El estudio completo</h2>
+          <ObraV2Cuerpo obra={v2} tipo="Estudio" />
+        </section>
+      ) : null}
 
       <h2 className="mt-12 font-serif text-3xl">Para seguir leyendo</h2>
       <ul className="mt-5 space-y-3">

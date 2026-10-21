@@ -28,7 +28,7 @@ export const tratados: Tratado[] = [
     slug: "el-texto-manda",
     n: "00",
     kicker: "Método · V.E.R.D.A.D.",
-    ref: "Nehemías 8:8",
+    ref: "Marcos 7:31–37",
     title: "El texto manda",
     blurb:
       "V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión— no es una fórmula para recitar ni una técnica más. Es la manera en que leemos el capítulo completo, como el pueblo en tiempos de Nehemías, hasta entender lo que Dios dijo y obedecerlo.",

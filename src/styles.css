@@ -924,3 +924,16 @@ button.term {
   border-color: color-mix(in oklab, var(--color-gold) 60%, transparent);
   background: color-mix(in oklab, var(--color-gold-soft) 10%, transparent);
 }
+
+/* Obras v2 (tratados y estudios rehechos): texto completo con notas al pie */
+.obra-v2 { font-size: 1.125rem; line-height: 1.75; }
+.obra-v2 p, .obra-v2 ul, .obra-v2 ol, .obra-v2 blockquote { margin-top: 1.25rem; }
+.obra-v2 h2 { font-family: var(--font-serif, serif); font-size: 1.875rem; margin-top: 3rem; }
+.obra-v2 h3 { font-family: var(--font-serif, serif); font-size: 1.5rem; margin-top: 2rem; }
+.obra-v2 ul { list-style: disc; padding-left: 1.5rem; }
+.obra-v2 ol { list-style: decimal; padding-left: 1.5rem; }
+.obra-v2 blockquote { border-left: 3px solid #d7b474; padding-left: 1rem; }
+.obra-v2 a.footnote-ref { color: #a8843f; text-decoration: none; }
+.obra-v2 sup { font-size: 0.7em; }
+.obra-v2 section.footnotes, .obra-v2 aside.footnotes { margin-top: 3rem; border-top: 1px solid rgba(0,0,0,.15); font-size: 0.95rem; }
+.obra-v2 hr { margin: 2rem 0; opacity: .3; }
