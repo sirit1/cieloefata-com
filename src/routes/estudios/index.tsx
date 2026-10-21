@@ -14,6 +14,15 @@ import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { InsigniaTipo } from "@/components/insignia-tipo";
+import { portadaV2 } from "@/lib/libros/v2";
+
+function Miniatura({ slug }: { slug: string }) {
+  const src = portadaV2(slug);
+  if (!src) return null;
+  return (
+    <img src={src} alt="" loading="lazy" width={64} height={96} className="h-24 w-16 shrink-0 border border-rule object-cover" />
+  );
+}
 
 export const Route = createFileRoute("/estudios/")({
   component: EstudiosPage,
@@ -102,8 +111,9 @@ function EstudiosPage() {
               <Link
                 to="/tratados/$slug"
                 params={{ slug: t.slug }}
-                className="block py-5 hover:text-gold"
+                className="flex items-start gap-4 py-5 hover:text-gold"
               >
+                <Miniatura slug={t.slug} />
                 <span className="flex min-w-0 flex-col gap-1">
                   <span className="font-sans text-sm text-gold">
                     {etiquetaTratado(t.slug)} · {t.ref}
@@ -143,8 +153,9 @@ function EstudiosPage() {
               <Link
                 to="/estudios/$slug"
                 params={{ slug: study.slug }}
-                className="block py-5 hover:text-gold"
+                className="flex items-start gap-4 py-5 hover:text-gold"
               >
+                <Miniatura slug={study.slug} />
                 <span className="flex min-w-0 flex-col gap-1">
                   <span className="font-sans text-sm text-gold">
                     {lab.genero} · {lab.ref}
@@ -170,7 +181,8 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
         {items.map((s) => (
           <li key={s.slug}>
             {s.obraHref ? (
-              <Link to={s.obraHref} className="block py-5 hover:text-gold">
+              <Link to={s.obraHref} className="flex items-start gap-4 py-5 hover:text-gold">
+                <Miniatura slug={s.slug} />
                 <span className="flex min-w-0 flex-col gap-1">
                   <span className="font-sans text-sm text-gold">
                     Estudio · {s.ref}
@@ -183,8 +195,9 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
               <Link
                 to="/estudios/$slug"
                 params={{ slug: s.slug }}
-                className="block py-5 hover:text-gold"
+                className="flex items-start gap-4 py-5 hover:text-gold"
               >
+                <Miniatura slug={s.slug} />
                 <span className="flex min-w-0 flex-col gap-1">
                   <span className="font-sans text-sm text-gold">
                     {etiquetaEstudio(s.slug)} · {s.ref}

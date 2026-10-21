@@ -24,3 +24,9 @@ export async function obraV2(slug: string): Promise<ObraV2 | null> {
   const c = cargadores[slug];
   return c ? (await c()).default : null;
 }
+
+export const SLUGS_V2: ReadonlySet<string> = new Set(Object.keys(cargadores));
+
+export function portadaV2(slug: string): string | null {
+  return SLUGS_V2.has(slug) ? `/tratados-v2/${slug}/portada.jpg` : null;
+}
