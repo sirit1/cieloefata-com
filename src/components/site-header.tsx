@@ -9,13 +9,9 @@ import { school } from "@/lib/content";
 const nav = [
   { to: "/estudios", label: "Estudios" },
   { to: "/tratados", label: "Tratados" },
-  { to: "/estudios-y-tratados", label: "Cuál leer" },
-  { to: "/pasajes", label: "Pasajes" },
   { to: "/obras", label: "Libros" },
   { to: "/metodo", label: "Cómo leer" },
-  { to: "/lo-que-creemos", label: "Creemos" },
-  { to: "/canon", label: "Canon" },
-  { to: "/cuaderno", label: "Cuaderno" },
+  { to: "/nosotros", label: "Nosotros" },
 ] as const;
 
 /** Caja de búsqueda: va a /buscar?q=… (la página filtra al instante). */
@@ -157,15 +153,6 @@ export function SiteHeader() {
                 className="flex min-h-11 items-center tracking-wide text-gold-soft"
                 onClick={() => setOpen(false)}
               />
-            </li>
-            <li>
-              <Link
-                to="/nosotros"
-                className="flex min-h-11 items-center tracking-wide text-parchment hover:text-gold-soft"
-                onClick={() => setOpen(false)}
-              >
-                Nosotros
-              </Link>
             </li>
             <li>
               <Link

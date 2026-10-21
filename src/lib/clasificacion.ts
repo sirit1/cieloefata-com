@@ -57,9 +57,9 @@ export function tipoDe(slug: string, seccion: Tipo): Tipo {
 
 /** Obras rotuladas como tratado, con su ruta real (las URL no cambian). */
 export const TRATADOS_CASA: { slug: string; href: string }[] = [
+  { slug: "el-texto-manda", href: "/tratados/el-texto-manda" },
   { slug: "teologia-de-la-cruz", href: "/estudios/teologia-de-la-cruz" },
   { slug: "teologia-de-la-gloria", href: "/estudios/teologia-de-la-gloria" },
-  { slug: "el-texto-manda", href: "/tratados/el-texto-manda" },
   { slug: "este-mismo-jesus", href: "/tratados/este-mismo-jesus" },
   { slug: "el-paraclito-eterno", href: "/obras/el-paraclito-eterno" },
 ];

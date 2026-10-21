@@ -5,7 +5,7 @@ import { BtnArrow } from "@/components/motif";
 import { SeguirActo } from "@/components/seguir-acto";
 import { Volver } from "@/components/volver";
 import { estudioSemanaSlug, tratadoMesSlug } from "@/lib/calendario";
-import { esTratado } from "@/lib/clasificacion";
+import { esTratado, PARA_QUIEN } from "@/lib/clasificacion";
 import { ESTUDIOS_DRIVE } from "@/lib/catalogo";
 import { ESTUDIOS_INDICE, indiceEstudio, type IndiceEstudio } from "@/lib/estudios-indice";
 import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
@@ -63,6 +63,7 @@ function EstudiosPage() {
         lo estudiamos juntos hasta llegar a un paso concreto de obediencia, que conviene
         compartir con alguien de confianza.
       </p>
+      <p className="mt-4 font-sans text-sm text-ink-soft">{PARA_QUIEN.estudio}</p>
       <Refs refs="Neh. 8:8 · 2 Ti. 3:16" />
       <p className="mt-4 font-sans text-sm">
         <Link to="/metodo" className="text-link underline">
@@ -82,7 +83,7 @@ function EstudiosPage() {
               params={{ slug: semana.slug }}
               className="btn btn-ink"
             >
-              {esTratado(semana.slug) ? "Escudriñar el tratado" : "Escudriñar el estudio"}
+              {esTratado(semana.slug) ? "Leer el tratado" : "Leer el estudio"}
               <span className="sr-only"> de {semana.title}</span>
               <BtnArrow />
             </Link>
@@ -119,7 +120,7 @@ function EstudiosPage() {
                     {etiquetaTratado(t.slug)} · {t.ref}
                   </span>
                   <span className="font-serif text-2xl">{t.title}</span>
-                  <InsigniaTipo slug={t.slug} seccion="estudio" dentroDeEnlace />
+                  <InsigniaTipo slug={t.slug} seccion="estudio" dentroDeEnlace sinPara />
                 </span>
               </Link>
             </li>
@@ -161,7 +162,7 @@ function EstudiosPage() {
                     {lab.genero} · {lab.ref}
                   </span>
                   <span className="font-serif text-2xl">{lab.title}</span>
-                  <InsigniaTipo slug={study.slug} seccion="estudio" dentroDeEnlace />
+                  <InsigniaTipo slug={study.slug} seccion="estudio" dentroDeEnlace sinPara />
                 </span>
               </Link>
             </li>
@@ -188,7 +189,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
                     Estudio · {s.ref}
                   </span>
                   <span className="font-serif text-2xl">{s.title}</span>
-                  <InsigniaTipo slug={s.slug} seccion="estudio" dentroDeEnlace />
+                  <InsigniaTipo slug={s.slug} seccion="estudio" dentroDeEnlace sinPara />
                 </span>
               </Link>
             ) : (
@@ -203,7 +204,7 @@ function Lista({ titulo, items }: { titulo: string; items: IndiceEstudio[] }) {
                     {etiquetaEstudio(s.slug)} · {s.ref}
                   </span>
                   <span className="font-serif text-2xl">{s.title}</span>
-                  <InsigniaTipo slug={s.slug} seccion="estudio" dentroDeEnlace />
+                  <InsigniaTipo slug={s.slug} seccion="estudio" dentroDeEnlace sinPara />
                 </span>
               </Link>
             )}

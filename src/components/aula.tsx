@@ -2,6 +2,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { Printer, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Compartir } from "@/components/compartir";
+import { Seal } from "@/components/seal";
 import { Escuchar } from "@/components/escuchar";
 import { guardarProgreso, marcarAula, minutosDeLectura, progresoDe } from "@/lib/aula-abierta";
 import { partirOir } from "@/lib/voice-split";
@@ -144,6 +145,18 @@ export function Aula({
         <div className="progreso-lectura" aria-hidden>
           <span ref={barra} style={{ transform: "scaleX(0)" }} />
         </div>
+        <nav
+          aria-label="Cielo Efata"
+          className="no-imprimir sticky top-0 z-10 -mx-5 -mt-8 mb-4 flex items-center gap-3 border-b border-rule/50 bg-parchment px-5 py-1 font-sans text-sm sm:-mx-10 sm:px-10"
+        >
+          <Link to="/" className="inline-flex min-h-11 items-center gap-2" aria-label="Cielo Efata, inicio">
+            <Seal variant="mark" size={32} className="h-8 w-8" />
+            <span className="wordmark text-sm">Cielo Efata</span>
+          </Link>
+          <Link to="/obras" className="ml-auto inline-flex min-h-11 items-center px-2 tracking-[0.14em] uppercase text-link">
+            Libros
+          </Link>
+        </nav>
         <div className="no-imprimir mb-6 flex flex-wrap items-center gap-2 font-sans text-sm">
           <Escuchar partes={partes} etiqueta={etiqueta} />
           <Compartir titulo={titulo} pasaje={pasaje} ruta={`${salir}/${slug}`} />
