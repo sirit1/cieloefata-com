@@ -17,7 +17,7 @@ import {
   urlRevelatioLibro,
 } from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
-import { whatsappTomo } from "@/lib/amazon";
+import { amazonDp, whatsappTomo } from "@/lib/amazon";
 import { Compartir } from "@/components/compartir";
 import { pageHead, tituloObra } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
@@ -78,13 +78,23 @@ export function ObraPage() {
             Capítulo ancla: {obra.pasaje}
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {obra.asinEbook && !obra.sinAmazon ? (
+              <a
+                href={amazonDp(obra.asinEbook)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold"
+              >
+                Leer en Kindle
+              </a>
+            ) : null}
             <a
               href={whatsappTomo(obra.title)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-wa"
+              className={obra.asinEbook && !obra.sinAmazon ? "btn btn-ghost" : "btn btn-wa"}
             >
-              Solicitar «{obra.title}» por WhatsApp
+              Pedir por WhatsApp
             </a>
             <Compartir
               titulo={obra.title}
@@ -93,7 +103,7 @@ export function ObraPage() {
               className="btn btn-ghost"
             />
             <a href="#obtener" className="btn btn-ghost">
-              {obra.sinAmazon ? "Cómo obtenerlo" : "Amazon y otras opciones"}
+              {obra.sinAmazon ? "Cómo obtenerlo" : "Más formatos"}
             </a>
           </div>
           <p className="mt-3 font-sans text-xs text-ink-soft">

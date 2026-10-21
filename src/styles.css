@@ -937,3 +937,25 @@ button.term {
 .obra-v2 sup { font-size: 0.7em; }
 .obra-v2 section.footnotes, .obra-v2 aside.footnotes { margin-top: 3rem; border-top: 1px solid rgba(0,0,0,.15); font-size: 0.95rem; }
 .obra-v2 hr { margin: 2rem 0; opacity: .3; }
+
+/* Móvil: objetivos táctiles de 44 px (auditoría UX, oct-2026). */
+@media (pointer: coarse), (max-width: 1023px) {
+  a.cite,
+  .citas a,
+  .citas .cite {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+  .chip {
+    min-height: 44px;
+  }
+  main li > a:not(.btn):not(.tarjeta),
+  main p.font-sans > a,
+  .aula-hoja p.font-sans > a,
+  .aula-hoja li > a:not(.btn) {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+}

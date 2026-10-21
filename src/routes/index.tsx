@@ -8,7 +8,7 @@ import { BtnArrow } from "@/components/motif";
 import { SlotsSemanaMes } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
 import { obras, ROMANO } from "@/lib/content";
-import { whatsappColeccion } from "@/lib/amazon";
+import { AMAZON_AUTHOR, amazonDp, whatsappColeccion } from "@/lib/amazon";
 import { SELLO } from "@/lib/identidad";
 import { ESCRITURA } from "@/lib/pilar";
 import { HomeJsonLd } from "@/components/json-ld";
@@ -35,7 +35,7 @@ const PUERTAS = [
   {
     to: "/tratados",
     titulo: "Tratados",
-    linea: "Versículos muy citados, y a menudo sacados de contexto, leídos otra vez dentro de su capítulo.",
+    linea: "Un tema o una doctrina recorridos por toda la Escritura, con argumento ordenado, idiomas originales y fuentes.",
   },
   {
     to: "/pasajes",
@@ -150,6 +150,57 @@ function Home() {
         </div>
       </section>
 
+      <section className="border-b border-rule/30 px-4 py-16 md:py-20" aria-labelledby="libros">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-[36em]">
+              <p className="kicker">Alejandro Sirit · Editorial Cielo Efata</p>
+              <h2 id="libros" className="seccion-titulo mt-3">
+                Nueve libros, un orden de lectura
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed">
+                Se empieza por Pórtico a la Escritura, y en Éfata se aprende a leer el capítulo entero
+                antes de hablar. Cada libro se lee junto al capítulo de la Biblia en que se apoya.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Link to="/obras" className="btn btn-ink">
+                Ver el catálogo <BtnArrow />
+              </Link>
+              <a href={AMAZON_AUTHOR} target="_blank" rel="noopener noreferrer" className="btn btn-gold">
+                Todos en Kindle
+              </a>
+              <a href={whatsappColeccion()} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                Por WhatsApp
+              </a>
+            </div>
+          </div>
+          <ol className="mt-12 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
+            {obras.map((o) => (
+              <li key={o.slug}>
+                <Link to="/obras/$slug" params={{ slug: o.slug }} className="group block">
+                  <Tapa obra={o} size="rejilla" className="w-full transition-transform duration-300 group-hover:-translate-y-1" />
+                  <span className="kicker mt-3 block">{ROMANO[o.lectura]}</span>
+                  <span className="mt-1 block font-serif text-xl leading-snug font-semibold group-hover:text-gold">
+                    {o.title}
+                  </span>
+                </Link>
+                {o.asinEbook && !o.sinAmazon ? (
+                  <a
+                    href={amazonDp(o.asinEbook)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex min-h-11 items-center font-sans text-sm text-link underline"
+                  >
+                    Leer en Kindle<span className="sr-only">: {o.title}</span>
+                  </a>
+                ) : null}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <div className="mx-auto max-w-6xl px-4">
         <SlotsSemanaMes />
       </div>
@@ -177,44 +228,6 @@ function Home() {
       </section>
 
       <BannerRevelatio />
-
-      <section className="cv-auto px-4 py-20 md:py-28" aria-labelledby="libros">
-        <div className="mx-auto max-w-6xl">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-[36em]">
-              <p className="kicker">Alejandro Sirit · Editorial Cielo Efata</p>
-              <h2 id="libros" className="seccion-titulo mt-3">
-                Nueve libros, un orden de lectura
-              </h2>
-              <p className="mt-4 text-lg leading-relaxed">
-                Se empieza por Pórtico a la Escritura, y en Éfata se aprende a leer el capítulo entero
-                antes de hablar. Cada libro se lee junto al capítulo de la Biblia en que se apoya.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
-              <Link to="/obras" className="btn btn-ink">
-                Ver el catálogo <BtnArrow />
-              </Link>
-              <a href={whatsappColeccion()} target="_blank" rel="noopener noreferrer" className="btn btn-wa">
-                Solicitar por WhatsApp
-              </a>
-            </div>
-          </div>
-          <ol className="mt-12 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
-            {obras.map((o) => (
-              <li key={o.slug}>
-                <Link to="/obras/$slug" params={{ slug: o.slug }} className="group block">
-                  <Tapa obra={o} size="rejilla" className="w-full transition-transform duration-300 group-hover:-translate-y-1" />
-                  <span className="kicker mt-3 block">{ROMANO[o.lectura]}</span>
-                  <span className="mt-1 block font-serif text-xl leading-snug font-semibold group-hover:text-gold">
-                    {o.title}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
 
       <section className="cv-auto border-t border-rule/40 bg-paper px-4 py-20 md:py-24" aria-labelledby="pilares">
         <div className="mx-auto max-w-6xl">

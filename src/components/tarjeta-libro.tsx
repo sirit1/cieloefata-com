@@ -39,7 +39,7 @@ export function TarjetaLibro({
           <Link
             to="/obras/$slug"
             params={{ slug: obra.slug }}
-            className="btn btn-gold"
+            className={formatos.length ? "btn btn-ghost" : "btn btn-gold"}
           >
             Ver el libro
           </Link>
@@ -49,9 +49,9 @@ export function TarjetaLibro({
               href={f.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-ghost"
+              className={f.tipo === "ebook" ? "btn btn-gold" : "btn btn-ghost"}
             >
-              {f.etiqueta} en Amazon
+              {f.tipo === "ebook" ? "Leer en Kindle" : `${f.etiqueta} en Amazon`}
             </a>
           ))}
           {capitulo1Url(obra.slug) ? (

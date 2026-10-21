@@ -1,8 +1,8 @@
-import { createFileRoute, Link, Outlet } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { Refs } from "@/components/cite";
 import { InsigniaTipo } from "@/components/insignia-tipo";
 import { Volver } from "@/components/volver";
-import { TRATADOS_CASA } from "@/lib/clasificacion";
+import { PARA_QUIEN, TRATADOS_CASA } from "@/lib/clasificacion";
 import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
@@ -36,6 +36,8 @@ function datos(slug: string) {
 }
 
 function TratadosPage() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  if (pathname.replace(/\/$/, "") !== "/tratados") return <Outlet />;
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
@@ -46,6 +48,7 @@ function TratadosPage() {
         Lo que lo hace tratado es el enfoque, no la extensión: puede ser breve. Es para líderes, maestros y
         estudiosos.
       </p>
+      <p className="mt-4 font-sans text-sm text-ink-soft">{PARA_QUIEN.tratado}</p>
       <Refs refs="2 Ti. 2:2 · He. 5:14" />
       <p className="mt-4 font-sans text-sm">
         <Link to="/estudios-y-tratados" className="text-link underline">
@@ -66,10 +69,10 @@ function TratadosPage() {
                 ) : null}
                 <p className="font-sans text-xs tracking-widest text-gold uppercase">Tratado · {d.ref}</p>
                 <h3 className="mt-1 font-serif text-2xl">{d.title}</h3>
-                <InsigniaTipo slug={slug} seccion="tratado" className="mt-2" />
+                <InsigniaTipo slug={slug} seccion="tratado" className="mt-2" sinPara />
                 <p className="mt-3 leading-relaxed">{d.texto}</p>
-                <a href={href} className="mt-3 inline-flex items-center font-sans text-sm text-link underline">
-                  Escudriñar el tratado<span className="sr-only">: {d.title}</span>
+                <a href={href} className="mt-3 inline-flex min-h-11 items-center font-sans text-sm text-link underline">
+                  Leer el tratado →<span className="sr-only">: {d.title}</span>
                 </a>
               </li>
             );
@@ -93,7 +96,6 @@ function TratadosPage() {
           </Link>
         </p>
       </section>
-      <Outlet />
     </main>
   );
 }

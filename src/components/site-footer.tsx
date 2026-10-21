@@ -11,6 +11,7 @@ const columnas = [
     items: [
       { to: "/estudios", label: "Estudios" },
       { to: "/tratados", label: "Tratados" },
+      { to: "/estudios-y-tratados", label: "Cuál leer" },
       { to: "/pasajes", label: "Explorar por pasaje" },
       { to: "/preguntas", label: "¿Qué dice la Biblia sobre…?" },
       { to: "/versiculos", label: "Versículos fuera de contexto" },
@@ -78,14 +79,14 @@ export function SiteFooter() {
                 <ul className="mt-3 space-y-1">
                   {col.items.map((item) => (
                     <li key={item.to}>
-                      <Link to={item.to} className="inline-flex min-h-8 items-center text-ink-soft hover:text-gold">
+                      <Link to={item.to} className="inline-flex min-h-11 lg:min-h-8 items-center text-ink-soft hover:text-gold">
                         {item.label}
                       </Link>
                     </li>
                   ))}
                   {col.titulo === "La casa" ? (
                     <li>
-                      <a href="https://revelatio.app/" className="inline-flex min-h-8 items-center text-ink-soft hover:text-gold">
+                      <a href="https://revelatio.app/" className="inline-flex min-h-11 lg:min-h-8 items-center text-ink-soft hover:text-gold">
                         RevelatiO, el lector
                       </a>
                     </li>
