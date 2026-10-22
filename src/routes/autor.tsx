@@ -9,7 +9,7 @@ export const Route = createFileRoute("/autor")({
   head: () =>
     pageHead({
       path: "/autor",
-      title: tituloSeccion("Alejandro Sirit"),
+      title: tituloSeccion("Dr. (h. c.) Alejandro Sirit"),
       description: NOSOTROS.escribe.body[0]!.slice(0, 155),
     }),
 });
@@ -19,7 +19,7 @@ function AutorPage() {
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <Volver />
       <p className="kicker mt-6">El autor</p>
-      <h1 className="mt-2 font-serif text-4xl">Alejandro Sirit</h1>
+      <h1 className="mt-2 font-serif text-4xl">Dr. (h. c.) Alejandro Sirit</h1>
       {NOSOTROS.escribe.body.map((p) => (
         <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
           {p}
