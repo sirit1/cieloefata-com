@@ -2,12 +2,13 @@
 
 export const NOSOTROS = {
   title: "Nosotros",
-  kicker: "Editorial Cielo Efata · Alejandro Sirit",
+  kicker: "Editorial Cielo Efata · Dr. (h. c.) Alejandro Sirit",
   escribe: {
     title: "Quién escribe",
     body: [
-      "Alejandro Sirit escribe para que la Escritura vuelva a tener la última palabra: leída entera, sin autoayuda con lenguaje cristiano y sin versículos sacados de su lugar. Bajo el sello de Editorial Cielo Efata publica estudios bíblicos, tratados y nueve libros, entre ellos Pórtico a la Escritura, Éfata (donde presenta el método V.E.R.D.A.D.), El Siervo, no tú y Bástate. Todo apunta a lo mismo: conocer a Dios, reconocer el pecado, arrepentirse, convertirse a Cristo y permanecer firmes en la fe.",
+      "Dr. (h. c.) Alejandro Sirit escribe para que la Escritura vuelva a tener la última palabra: leída entera, sin autoayuda con lenguaje cristiano y sin versículos sacados de su lugar. Bajo el sello de Editorial Cielo Efata publica estudios bíblicos, tratados y nueve libros, entre ellos Pórtico a la Escritura, Éfata (donde presenta el método V.E.R.D.A.D.), El Siervo, no tú y Bástate. Todo apunta a lo mismo: conocer a Dios, reconocer el pecado, arrepentirse, convertirse a Cristo y permanecer firmes en la fe.",
       "No ofrece un dios a la medida ni un Jesús útil para otros fines. Confiesa al Padre que habla, al Hijo que fue hecho carne y al Espíritu Santo que convence de pecado y da entendimiento de la Palabra. La fuerza de este trabajo no está en el tono, sino en el capítulo entero leído con humildad y oración.",
+      "En 2026 recibió el Doctorado Honoris Causa del Centro UNESCO (Derechos Humanos, Cultura y Paz). Actualmente dirige cieloefata.com y RevelatiO (revelatio.app), una aplicación web de estudio bíblico con la Biblia en audio.",
     ],
   },
   editorial: {
