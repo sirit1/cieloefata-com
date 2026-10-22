@@ -25,6 +25,7 @@ const RELACIONADOS = [
   { to: "/estudios/romanos-8-17", label: "Herederos y padecimiento · Romanos 8:17" },
   { to: "/tratados/espiritu-de-poder", label: "Espíritu de poder · 2 Timoteo 1:7" },
   { to: "/obras/efata", label: "Éfata · Marcos 7:31–37" },
+  { to: "/obras", label: "Todas las obras de la Serie Cielo Efata" },
 ] as const;
 
 function ParaclitoPage() {

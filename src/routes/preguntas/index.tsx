@@ -11,7 +11,7 @@ export const Route = createFileRoute("/preguntas/")({
       path: "/preguntas",
       title: tituloSeccion("¿Qué dice la Biblia sobre…?"),
       description:
-        "Preguntas breves sobre versículos muy citados —Filipenses 4:13, Jeremías 29:11, Malaquías 3:10 y otros—, con el texto en Reina-Valera 1960 y el tratado que los devuelve a su capítulo.",
+        "Preguntas breves sobre versículos muy citados, como Filipenses 4:13 o Jeremías 29:11, con el texto en Reina-Valera 1960 y el tratado que los lee en su capítulo.",
     }),
 });
 
