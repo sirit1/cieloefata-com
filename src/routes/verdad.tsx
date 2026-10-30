@@ -18,6 +18,8 @@ export const Route = createFileRoute("/verdad")({
       description:
         "Aprende a estudiar la Biblia con seis preguntas: Ver, Entorno, Revelación, Doctrina, Argumento y Decisión. Hoja imprimible, guía gratis y reto de 6 días.",
       image: "/verdad/og-verdad.jpg",
+      imageWidth: 1200,
+      imageHeight: 630,
     }),
 });
 
