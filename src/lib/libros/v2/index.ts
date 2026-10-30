@@ -41,7 +41,7 @@ export async function obraV2(slug: string): Promise<ObraV2 | null> {
 export const SLUGS_V2: ReadonlySet<string> = new Set(Object.keys(cargadores));
 
 /** Obras v2 sin portada propia (estudios pasados a v2 solo desde el EPUB). */
-const SIN_PORTADA: ReadonlySet<string> = new Set(["2-pedro-1", "filipenses-2", "santiago-1", "marcos-7", "apocalipsis-5", "1-corintios-12-14", "galatas-5", "2-corintios-12", "viajes-de-pablo", "1-corintios-1-2", "romanos-8-17"]);
+const SIN_PORTADA: ReadonlySet<string> = new Set([]);
 
 export const SLUGS_CON_PORTADA: ReadonlySet<string> = new Set([...SLUGS_V2].filter((s) => !SIN_PORTADA.has(s)));
 
