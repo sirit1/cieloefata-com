@@ -6,10 +6,10 @@ import { PARA_QUIEN, TRATADOS_CASA } from "@/lib/clasificacion";
 import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
-import { SLUGS_V2 } from "@/lib/libros/v2";
+import { SLUGS_CON_PORTADA } from "@/lib/libros/v2";
 
 /** Obras rehechas con portada nueva (public/tratados-v2/<slug>/portada.jpg). */
-const CON_PORTADA = SLUGS_V2;
+const CON_PORTADA = SLUGS_CON_PORTADA;
 
 export const Route = createFileRoute("/tratados")({
   component: TratadosPage,

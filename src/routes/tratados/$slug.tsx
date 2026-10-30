@@ -43,7 +43,7 @@ export const Route = createFileRoute("/tratados/$slug")({
       title: tituloTratado(tratado?.title ?? "Tratado", tipoDe(tratado?.slug ?? "", "tratado")),
       description: tratado?.blurb,
       detalle: tratado ? entradaTratado(tratado.cuerpo) : undefined,
-      image: loaderData?.v2 ? loaderData.v2.og : tratado ? `/og/aulas/${tratado.slug}.jpg` : undefined,
+      image: loaderData?.v2?.og ? loaderData.v2.og : tratado ? `/og/aulas/${tratado.slug}.jpg` : undefined,
     });
   },
 });

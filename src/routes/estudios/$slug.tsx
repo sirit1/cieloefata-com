@@ -77,7 +77,7 @@ export const Route = createFileRoute("/estudios/$slug")({
       description: study ? `${study.ref}. ${study.ver}` : undefined,
       detalle: study?.passage,
       index: !study || estudioTienePack(study.slug),
-      image: loaderData?.v2 ? loaderData.v2.og : study ? `/og/aulas/${study.slug}.jpg` : undefined,
+      image: loaderData?.v2?.og ? loaderData.v2.og : study ? `/og/aulas/${study.slug}.jpg` : undefined,
     });
   },
 });

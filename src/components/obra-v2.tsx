@@ -6,15 +6,17 @@ export function ObraV2Cuerpo({ obra, tipo }: { obra: ObraV2; tipo: "Tratado" | "
   return (
     <div className="mt-10">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-        <img src={obra.portada} alt={`Portada: ${obra.titulo}`} width={600} height={960}
-          className="w-48 shrink-0 rounded shadow-lg" loading="eager" />
+        {obra.portada ? (
+          <img src={obra.portada} alt={`Portada: ${obra.titulo}`} width={600} height={960}
+            className="w-48 shrink-0 rounded shadow-lg" loading="eager" />
+        ) : null}
         <div className="font-sans text-sm">
           <p className="tracking-widest text-gold uppercase">Descargar gratis</p>
           <ul className="mt-3 space-y-2">
-            <li><a className="text-link underline" href={d.obra_pdf} download>{tipo} en PDF</a></li>
-            <li><a className="text-link underline" href={d.obra_epub} download>{tipo} en EPUB (Kindle y lectores)</a></li>
-            <li><a className="text-link underline" href={d.guia_pdf} download>Guía de estudio en PDF</a></li>
-            <li><a className="text-link underline" href={d.guia_epub} download>Guía de estudio en EPUB</a></li>
+            {d.obra_pdf ? <li><a className="text-link underline" href={d.obra_pdf} download>{tipo} en PDF</a></li> : null}
+            {d.obra_epub ? <li><a className="text-link underline" href={d.obra_epub} download>{tipo} en EPUB (Kindle y lectores)</a></li> : null}
+            {d.guia_pdf ? <li><a className="text-link underline" href={d.guia_pdf} download>Guía de estudio en PDF</a></li> : null}
+            {d.guia_epub ? <li><a className="text-link underline" href={d.guia_epub} download>Guía de estudio en EPUB</a></li> : null}
           </ul>
           <p className="mt-3"><a className="text-link underline" href="#guia">Leer la guía aquí</a></p>
         </div>
@@ -23,8 +25,10 @@ export function ObraV2Cuerpo({ obra, tipo }: { obra: ObraV2; tipo: "Tratado" | "
       <section id="guia" className="mt-16 border-t border-rule pt-10">
         <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">Guía de estudio</p>
         <h2 className="mt-2 font-serif text-3xl">{obra.titulo} · Guía</h2>
-        <img src={obra.portadaGuia} alt={`Portada de la guía: ${obra.titulo}`} width={600} height={960}
-          className="mt-6 w-40 rounded shadow" loading="lazy" />
+        {obra.portadaGuia ? (
+          <img src={obra.portadaGuia} alt={`Portada de la guía: ${obra.titulo}`} width={600} height={960}
+            className="mt-6 w-40 rounded shadow" loading="lazy" />
+        ) : null}
         <div className="obra-v2 mt-8" dangerouslySetInnerHTML={{ __html: obra.guiaHtml }} />
       </section>
     </div>
