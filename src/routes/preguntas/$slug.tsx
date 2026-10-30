@@ -89,7 +89,7 @@ function PreguntaPage() {
 
       <p className="mt-12 font-sans text-xs leading-relaxed text-muted">
         Texto bíblico: Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988
-        Sociedades Bíblicas Unidas. Utilizado con permiso.
+        Sociedades Bíblicas Unidas.
       </p>
 
       {sig && sig.slug !== slug ? (

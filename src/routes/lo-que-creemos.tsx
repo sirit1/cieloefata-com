@@ -128,8 +128,7 @@ function LoQueCreemos() {
         texto que edita la Biblia Hebraica Stuttgartensia. Griego: Textus
         Receptus de Scrivener (1894). Léxico de Strong (1890), de dominio
         público. Texto bíblico: Reina-Valera © 1960 Sociedades Bíblicas en
-        América Latina; © renovado 1988 Sociedades Bíblicas Unidas. Utilizado
-        con permiso.
+        América Latina; © renovado 1988 Sociedades Bíblicas Unidas.
       </p>
       <div className="mt-8 flex flex-wrap gap-3">
         <Compartir titulo="Lo que creemos" ruta={RUTA} />
