@@ -71,7 +71,7 @@ function VersiculoPage() {
           : "Griego: Textus Receptus de Scrivener (1894), de dominio público; la fuente digital no trae acentos."}{" "}
         Léxico de Strong (1890), de dominio público. Texto bíblico: Reina-Valera
         © 1960 Sociedades Bíblicas en América Latina; © renovado 1988 Sociedades
-        Bíblicas Unidas. Utilizado con permiso.
+        Bíblicas Unidas.
       </p>
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
