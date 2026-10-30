@@ -61,7 +61,7 @@ function GuiaLider() {
       <p className="mt-3 text-lg leading-relaxed">{study.passage}</p>
       <p className="mt-3 font-sans text-xs text-ink-soft">
         Texto bíblico: Reina-Valera © 1960 Sociedades Bíblicas en América Latina; © renovado 1988
-        Sociedades Bíblicas Unidas. Utilizado con permiso.
+        Sociedades Bíblicas Unidas.
       </p>
 
       <h2 className="mt-12 font-serif text-3xl">2. Seis preguntas, en este orden</h2>
