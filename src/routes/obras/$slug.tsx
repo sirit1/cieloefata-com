@@ -38,6 +38,8 @@ export const Route = createFileRoute("/obras/$slug")({
       description: obra?.seoDescription,
       exact: Boolean(obra?.seoDescription),
       image: obra ? tapaPath(obra.slug) : undefined,
+      imageWidth: 900,
+      imageHeight: 1350,
     });
   },
 });

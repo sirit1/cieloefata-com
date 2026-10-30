@@ -44,6 +44,8 @@ export const Route = createFileRoute("/tratados/$slug")({
       description: tratado?.blurb,
       detalle: tratado ? entradaTratado(tratado.cuerpo) : undefined,
       image: loaderData?.v2?.og ? loaderData.v2.og : tratado ? `/og/aulas/${tratado.slug}.jpg` : undefined,
+      imageWidth: 1200,
+      imageHeight: 630,
     });
   },
 });
