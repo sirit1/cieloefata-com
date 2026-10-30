@@ -4,8 +4,8 @@ export type ObraV2 = {
   html: string;
   guiaHtml: string;
   texto: string[];
-  portada: string;
-  portadaGuia: string;
-  og: string;
-  descargas: Record<"obra_pdf" | "obra_epub" | "guia_pdf" | "guia_epub", string>;
+  portada?: string;
+  portadaGuia?: string;
+  og?: string;
+  descargas: Partial<Record<"obra_pdf" | "obra_epub" | "guia_pdf" | "guia_epub", string>>;
 };

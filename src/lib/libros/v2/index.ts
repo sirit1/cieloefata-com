@@ -20,6 +20,17 @@ const cargadores: Record<string, () => Promise<{ default: ObraV2 }>> = {
   "el-paraclito-eterno": () => import("./el-paraclito-eterno.ts"),
   "no-juzgueis": () => import("./no-juzgueis.ts"),
   "teologia-de-la-cruz": () => import("./teologia-de-la-cruz.ts"),
+  "2-pedro-1": () => import("./2-pedro-1.ts"),
+  "filipenses-2": () => import("./filipenses-2.ts"),
+  "santiago-1": () => import("./santiago-1.ts"),
+  "marcos-7": () => import("./marcos-7.ts"),
+  "apocalipsis-5": () => import("./apocalipsis-5.ts"),
+  "1-corintios-12-14": () => import("./1-corintios-12-14.ts"),
+  "galatas-5": () => import("./galatas-5.ts"),
+  "2-corintios-12": () => import("./2-corintios-12.ts"),
+  "viajes-de-pablo": () => import("./viajes-de-pablo.ts"),
+  "1-corintios-1-2": () => import("./1-corintios-1-2.ts"),
+  "romanos-8-17": () => import("./romanos-8-17.ts"),
 };
 
 export async function obraV2(slug: string): Promise<ObraV2 | null> {
@@ -29,6 +40,11 @@ export async function obraV2(slug: string): Promise<ObraV2 | null> {
 
 export const SLUGS_V2: ReadonlySet<string> = new Set(Object.keys(cargadores));
 
+/** Obras v2 sin portada propia (estudios pasados a v2 solo desde el EPUB). */
+const SIN_PORTADA: ReadonlySet<string> = new Set(["2-pedro-1", "filipenses-2", "santiago-1", "marcos-7", "apocalipsis-5", "1-corintios-12-14", "galatas-5", "2-corintios-12", "viajes-de-pablo", "1-corintios-1-2", "romanos-8-17"]);
+
+export const SLUGS_CON_PORTADA: ReadonlySet<string> = new Set([...SLUGS_V2].filter((s) => !SIN_PORTADA.has(s)));
+
 export function portadaV2(slug: string): string | null {
-  return SLUGS_V2.has(slug) ? `/tratados-v2/${slug}/portada.jpg` : null;
+  return SLUGS_CON_PORTADA.has(slug) ? `/tratados-v2/${slug}/portada.jpg` : null;
 }
