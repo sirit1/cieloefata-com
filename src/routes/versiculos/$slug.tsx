@@ -21,6 +21,8 @@ export const Route = createFileRoute("/versiculos/$slug")({
       description: v?.description,
       exact: true,
       image: v?.og,
+      imageWidth: 1200,
+      imageHeight: 630,
     });
   },
   component: VersiculoContextoPage,

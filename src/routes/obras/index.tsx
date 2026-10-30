@@ -22,6 +22,8 @@ export const Route = createFileRoute("/obras/")({
         "Orden de lectura de los libros de Alejandro Sirit, publicados por Editorial Cielo Efata. Éfata abre el camino, y El Siervo, no tú, le sigue.",
       detalle: CORPUS.gate,
       image: tapaPath("efata"),
+      imageWidth: 900,
+      imageHeight: 1350,
     }),
 });
 
