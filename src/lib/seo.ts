@@ -117,6 +117,8 @@ export function pageHead({
   description,
   detalle,
   image,
+  imageWidth,
+  imageHeight,
   index = true,
   exact = false,
 }: {
@@ -125,6 +127,9 @@ export function pageHead({
   description?: string;
   detalle?: string;
   image?: string;
+  /** Medidas de `image`: con ellas la ficha propia gana a la del sitio. */
+  imageWidth?: number;
+  imageHeight?: number;
   /** false: la ficha se puede leer, pero no entra en el índice. */
   index?: boolean;
   /** true: usa `description` tal cual, sin recortar frases. */
@@ -164,6 +169,12 @@ export function pageHead({
         ? [
             { property: "og:image" as const, content: imageUrl },
             { name: "twitter:image" as const, content: imageUrl },
+            ...(imageWidth && imageHeight
+              ? [
+                  { property: "og:image:width" as const, content: String(imageWidth) },
+                  { property: "og:image:height" as const, content: String(imageHeight) },
+                ]
+              : []),
           ]
         : []),
     ],

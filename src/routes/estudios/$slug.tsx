@@ -78,6 +78,8 @@ export const Route = createFileRoute("/estudios/$slug")({
       detalle: study?.passage,
       index: !study || estudioTienePack(study.slug),
       image: loaderData?.v2?.og ? loaderData.v2.og : study ? `/og/aulas/${study.slug}.jpg` : undefined,
+      imageWidth: 1200,
+      imageHeight: 630,
     });
   },
 });
