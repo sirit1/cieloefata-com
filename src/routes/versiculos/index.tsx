@@ -10,6 +10,8 @@ export const Route = createFileRoute("/versiculos/")({
       description: DESCRIPCION_VERSICULOS,
       exact: true,
       image: "/verdad/og-verdad.jpg",
+      imageWidth: 1200,
+      imageHeight: 630,
     }),
   component: VersiculosContextoIndex,
 });
