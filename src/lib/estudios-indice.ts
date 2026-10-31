@@ -5,7 +5,7 @@ export type IndiceEstudio = {
   ref: string;
   busca: string;
   /** Obra ya publicada: el listado enlaza ahí; no hay aula ni cuerpo en studies.ts. */
-  obraHref?: "/obras/el-paraclito-eterno";
+  obraHref?: "/obras/el-paraclito-eterno" | "/estudios/un-solo-dios-tres-personas";
 };
 
 export const ESTUDIOS_INDICE: IndiceEstudio[] = [
@@ -28,6 +28,14 @@ export const ESTUDIOS_INDICE: IndiceEstudio[] = [
     ref: "Juan 14–16",
     busca: "El Espíritu Santo no es una energía que se activa, sino una Persona divina que el Padre envía en el nombre del Hijo para estar con los suyos para siempre. El Paráclito de Juan 14–16: otro Consolador, para siempre.",
     obraHref: "/obras/el-paraclito-eterno",
+  },
+  {
+    slug: "un-solo-dios-tres-personas",
+    title: "Un solo Dios, tres Personas: la Trinidad según la Escritura",
+    ref: "Deuteronomio 6:4 · Mateo 28:19",
+    busca:
+      "Lo que sí pretende es sentarse con la Biblia abierta y escuchar cinco afirmaciones que ella hace con toda claridad: que hay un solo Dios, que el Padre es Dios, que el Hijo es Dios, que el Espíritu Santo es Dios y es Persona, y que los tres no son el mismo, sino distintos entre sí.",
+    obraHref: "/estudios/un-solo-dios-tres-personas",
   },
 ];
 

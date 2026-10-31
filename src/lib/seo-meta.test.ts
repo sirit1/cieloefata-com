@@ -169,6 +169,9 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
   const paraclito = bloques.find((b) => b.loc === `${SITE_ORIGIN}/obras/el-paraclito-eterno`);
   assert.ok(paraclito);
   assert.equal(paraclito.lastmod, undefined);
+  const trinidad = bloques.find((b) => b.loc === `${SITE_ORIGIN}/estudios/un-solo-dios-tres-personas`);
+  assert.ok(trinidad);
+  assert.equal(trinidad.lastmod, undefined);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/romanos-1`), false);
   assert.equal(locs.has(`${SITE_ORIGIN}/estudios/filipenses-2`), true);
   assert.equal(locs.has(`${SITE_ORIGIN}/tratados/isaias-53`), true);

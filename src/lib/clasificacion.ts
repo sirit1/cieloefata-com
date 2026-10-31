@@ -30,6 +30,7 @@ export const CLASIFICACION: Record<string, { tipo: Tipo; dudoso?: boolean }> = {
   "teologia-de-la-cruz": { tipo: "tratado", dudoso: true },
   "teologia-de-la-gloria": { tipo: "tratado" },
   "el-paraclito-eterno": { tipo: "tratado", dudoso: true },
+  "un-solo-dios-tres-personas": { tipo: "estudio" },
   // Sección Tratados
   "el-texto-manda": { tipo: "tratado" },
   "el-crisol-de-lo-oido": { tipo: "estudio" },

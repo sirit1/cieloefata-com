@@ -40,6 +40,7 @@ describe("fichas de portada", () => {
     const obrasIndice = ESTUDIOS_INDICE.filter((row) => row.obraHref);
     assert.equal(aulasIndice.length, studies.length);
     assert.ok(obrasIndice.some((row) => row.slug === "el-paraclito-eterno"));
+    assert.ok(obrasIndice.some((row) => row.slug === "un-solo-dios-tres-personas"));
     for (const row of aulasIndice) {
       const study = studies.find((s) => s.slug === row.slug);
       assert.ok(study, row.slug);
@@ -49,7 +50,7 @@ describe("fichas de portada", () => {
       assert.equal(DECISION_AULA[row.slug], study.decision);
     }
     for (const row of obrasIndice) {
-      assert.ok(row.obraHref?.startsWith("/obras/"));
+      assert.ok(row.obraHref?.startsWith("/obras/") || row.obraHref?.startsWith("/estudios/"));
       assert.ok(row.busca.length > 40);
     }
   });

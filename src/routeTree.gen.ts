@@ -49,6 +49,7 @@ import { Route as CrisolManualRouteImport } from './routes/crisol_.manual'
 import { Route as EstudiosIndexRouteImport } from './routes/estudios/index'
 import { Route as EstudiosSlugRouteImport } from './routes/estudios/$slug'
 import { Route as EstudiosHechos1314RouteImport } from './routes/estudios/hechos-13-14'
+import { Route as EstudiosUnSoloDiosTresPersonasRouteImport } from './routes/estudios/un-solo-dios-tres-personas'
 import { Route as MetodoManualRouteImport } from './routes/metodo_.manual'
 import { Route as ObrasIndexRouteImport } from './routes/obras/index'
 import { Route as ObrasSlugRouteImport } from './routes/obras/$slug'
@@ -263,6 +264,12 @@ const EstudiosHechos1314Route = EstudiosHechos1314RouteImport.update({
   path: '/estudios/hechos-13-14',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EstudiosUnSoloDiosTresPersonasRoute =
+  EstudiosUnSoloDiosTresPersonasRouteImport.update({
+    id: '/estudios/un-solo-dios-tres-personas',
+    path: '/estudios/un-solo-dios-tres-personas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MetodoManualRoute = MetodoManualRouteImport.update({
   id: '/metodo_/manual',
   path: '/metodo/manual',
@@ -368,6 +375,7 @@ export interface FileRoutesByFullPath {
   '/crisol/manual': typeof CrisolManualRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
+  '/estudios/un-solo-dios-tres-personas': typeof EstudiosUnSoloDiosTresPersonasRoute
   '/metodo/manual': typeof MetodoManualRoute
   '/obras/$slug': typeof ObrasSlugRoute
   '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
@@ -423,6 +431,7 @@ export interface FileRoutesByTo {
   '/crisol/manual': typeof CrisolManualRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
+  '/estudios/un-solo-dios-tres-personas': typeof EstudiosUnSoloDiosTresPersonasRoute
   '/metodo/manual': typeof MetodoManualRoute
   '/obras/$slug': typeof ObrasSlugRoute
   '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
@@ -479,6 +488,7 @@ export interface FileRoutesById {
   '/crisol_/manual': typeof CrisolManualRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
+  '/estudios/un-solo-dios-tres-personas': typeof EstudiosUnSoloDiosTresPersonasRoute
   '/metodo_/manual': typeof MetodoManualRoute
   '/obras/$slug': typeof ObrasSlugRoute
   '/obras/el-paraclito-eterno': typeof ObrasElParaclitoEternoRoute
@@ -536,6 +546,7 @@ export interface FileRouteTypes {
     | '/crisol/manual'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
+    | '/estudios/un-solo-dios-tres-personas'
     | '/metodo/manual'
     | '/obras/$slug'
     | '/obras/el-paraclito-eterno'
@@ -591,6 +602,7 @@ export interface FileRouteTypes {
     | '/crisol/manual'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
+    | '/estudios/un-solo-dios-tres-personas'
     | '/metodo/manual'
     | '/obras/$slug'
     | '/obras/el-paraclito-eterno'
@@ -646,6 +658,7 @@ export interface FileRouteTypes {
     | '/crisol_/manual'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
+    | '/estudios/un-solo-dios-tres-personas'
     | '/metodo_/manual'
     | '/obras/$slug'
     | '/obras/el-paraclito-eterno'
@@ -702,6 +715,7 @@ export interface RootRouteChildren {
   CrisolManualRoute: typeof CrisolManualRoute
   EstudiosSlugRoute: typeof EstudiosSlugRoute
   EstudiosHechos1314Route: typeof EstudiosHechos1314Route
+  EstudiosUnSoloDiosTresPersonasRoute: typeof EstudiosUnSoloDiosTresPersonasRoute
   MetodoManualRoute: typeof MetodoManualRoute
   ObrasSlugRoute: typeof ObrasSlugRoute
   ObrasElParaclitoEternoRoute: typeof ObrasElParaclitoEternoRoute
@@ -1000,6 +1014,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EstudiosHechos1314RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/estudios/un-solo-dios-tres-personas': {
+      id: '/estudios/un-solo-dios-tres-personas'
+      path: '/estudios/un-solo-dios-tres-personas'
+      fullPath: '/estudios/un-solo-dios-tres-personas'
+      preLoaderRoute: typeof EstudiosUnSoloDiosTresPersonasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/metodo_/manual': {
       id: '/metodo_/manual'
       path: '/metodo/manual'
@@ -1145,6 +1166,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrisolManualRoute: CrisolManualRoute,
   EstudiosSlugRoute: EstudiosSlugRoute,
   EstudiosHechos1314Route: EstudiosHechos1314Route,
+  EstudiosUnSoloDiosTresPersonasRoute: EstudiosUnSoloDiosTresPersonasRoute,
   MetodoManualRoute: MetodoManualRoute,
   ObrasSlugRoute: ObrasSlugRoute,
   ObrasElParaclitoEternoRoute: ObrasElParaclitoEternoRoute,

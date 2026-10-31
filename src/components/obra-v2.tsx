@@ -3,6 +3,7 @@ import type { ObraV2 } from "@/lib/libros/v2/tipo";
 /** Tratado o estudio rehecho: portada, descargas, texto completo con notas y su guía. */
 export function ObraV2Cuerpo({ obra, tipo }: { obra: ObraV2; tipo: "Tratado" | "Estudio" }) {
   const d = obra.descargas;
+  const hayGuia = Boolean(obra.guiaHtml.trim());
   return (
     <div className="mt-10">
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
@@ -18,11 +19,11 @@ export function ObraV2Cuerpo({ obra, tipo }: { obra: ObraV2; tipo: "Tratado" | "
             {d.guia_pdf ? <li><a className="text-link underline" href={d.guia_pdf} download>Guía de estudio en PDF</a></li> : null}
             {d.guia_epub ? <li><a className="text-link underline" href={d.guia_epub} download>Guía de estudio en EPUB</a></li> : null}
           </ul>
-          <p className="mt-3"><a className="text-link underline" href="#guia">Leer la guía aquí</a></p>
+          {hayGuia ? <p className="mt-3"><a className="text-link underline" href="#guia">Leer la guía aquí</a></p> : null}
         </div>
       </div>
       <article className="obra-v2 mt-10" dangerouslySetInnerHTML={{ __html: obra.html }} />
-      <section id="guia" className="mt-16 border-t border-rule pt-10">
+      {hayGuia ? <section id="guia" className="mt-16 border-t border-rule pt-10">
         <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">Guía de estudio</p>
         <h2 className="mt-2 font-serif text-3xl">{obra.titulo} · Guía</h2>
         {obra.portadaGuia ? (
@@ -30,7 +31,7 @@ export function ObraV2Cuerpo({ obra, tipo }: { obra: ObraV2; tipo: "Tratado" | "
             className="mt-6 w-40 rounded shadow" loading="lazy" />
         ) : null}
         <div className="obra-v2 mt-8" dangerouslySetInnerHTML={{ __html: obra.guiaHtml }} />
-      </section>
+      </section> : null}
     </div>
   );
 }

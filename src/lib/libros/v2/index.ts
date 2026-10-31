@@ -31,6 +31,7 @@ const cargadores: Record<string, () => Promise<{ default: ObraV2 }>> = {
   "viajes-de-pablo": () => import("./viajes-de-pablo.ts"),
   "1-corintios-1-2": () => import("./1-corintios-1-2.ts"),
   "romanos-8-17": () => import("./romanos-8-17.ts"),
+  "un-solo-dios-tres-personas": () => import("./un-solo-dios-tres-personas.ts"),
 };
 
 export async function obraV2(slug: string): Promise<ObraV2 | null> {
