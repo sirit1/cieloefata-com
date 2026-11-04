@@ -217,3 +217,79 @@ export function CorpusJsonLd() {
 export function FaqJsonLd({ data }: { data: unknown }) {
   return <JsonLdScript data={data} />;
 }
+
+/** Curso Experto Bíblico: el curso entero (Course) o una lección (Article que es parte del curso). */
+export function CursoJsonLd({
+  nombre,
+  description,
+  path,
+  lecciones,
+}: {
+  nombre: string;
+  description: string;
+  path: string;
+  lecciones: { name: string; path: string }[];
+}) {
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Course",
+        name: nombre,
+        description,
+        url: canonicalUrl(path),
+        inLanguage: "es",
+        isAccessibleForFree: true,
+        author: { "@type": "Person", name: "Alejandro Sirit", url: PERSONA_AUTOR.url },
+        provider: { "@type": "Organization", name: SITE_NAME, sameAs: `${SITE_ORIGIN}/` },
+        offers: { "@type": "Offer", price: 0, priceCurrency: "USD", category: "Free" },
+        hasCourseInstance: {
+          "@type": "CourseInstance",
+          courseMode: "online",
+          courseWorkload: "PT1H",
+        },
+        hasPart: lecciones.map((l, i) => ({
+          "@type": "Article",
+          position: i + 1,
+          headline: l.name,
+          url: canonicalUrl(l.path),
+        })),
+      }}
+    />
+  );
+}
+
+export function LeccionJsonLd({
+  headline,
+  description,
+  path,
+  published,
+  cursoNombre,
+  cursoPath,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+  published: string;
+  cursoNombre: string;
+  cursoPath: string;
+}) {
+  return (
+    <JsonLdScript
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline,
+        description,
+        datePublished: isoCaracas(published),
+        author: { "@type": "Person", name: "Alejandro Sirit", url: PERSONA_AUTOR.url },
+        publisher: { "@type": "Organization", name: SITE_NAME },
+        url: canonicalUrl(path),
+        mainEntityOfPage: canonicalUrl(path),
+        inLanguage: "es",
+        isAccessibleForFree: true,
+        isPartOf: { "@type": "Course", name: cursoNombre, url: canonicalUrl(cursoPath) },
+      }}
+    />
+  );
+}
