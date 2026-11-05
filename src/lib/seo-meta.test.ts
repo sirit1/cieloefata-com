@@ -190,10 +190,24 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
     assert.ok(bloque, a.slug);
     assert.equal(bloque.lastmod, a.published);
   }
+  const curso = [
+    `${SITE_ORIGIN}/gratis`,
+    `${SITE_ORIGIN}/curso`,
+    ...Array.from({ length: 10 }, (_, i) => `${SITE_ORIGIN}/curso/dia-${i + 1}`),
+  ];
+  for (const loc of curso) {
+    const bloque = bloques.find((b) => b.loc === loc);
+    assert.ok(bloque, loc);
+    assert.equal(bloque.lastmod, "2026-11-04");
+  }
   const conFecha = bloques.filter((b) => b.lastmod);
   assert.equal(
     conFecha.length,
-    ESTUDIOS_DRIVE.length + TRATADOS_DRIVE.length + articulos.length + tratados.filter((t) => t.soloEs).length,
+    ESTUDIOS_DRIVE.length +
+      TRATADOS_DRIVE.length +
+      articulos.length +
+      tratados.filter((t) => t.soloEs).length +
+      curso.length,
   );
 });
 
