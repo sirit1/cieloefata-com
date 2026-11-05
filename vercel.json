@@ -118,6 +118,51 @@
       "source": "/preguntas/filipenses-4-13",
       "destination": "/versiculos/filipenses-4-13",
       "statusCode": 301
+    },
+    {
+      "source": "/g/portico-a-la-escritura",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=portico-a-la-escritura",
+      "permanent": false
+    },
+    {
+      "source": "/g/efata",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=efata",
+      "permanent": false
+    },
+    {
+      "source": "/g/el-siervo-no-tu",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=el-siervo-no-tu",
+      "permanent": false
+    },
+    {
+      "source": "/g/bastate-mi-gracia",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=bastate-mi-gracia",
+      "permanent": false
+    },
+    {
+      "source": "/g/cuando-el-cielo-se-cae",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=cuando-el-cielo-se-cae",
+      "permanent": false
+    },
+    {
+      "source": "/g/el-altar-del-espejo",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=el-altar-del-espejo",
+      "permanent": false
+    },
+    {
+      "source": "/g/de-una-misma-boca",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=de-una-misma-boca",
+      "permanent": false
+    },
+    {
+      "source": "/g/diakrisis",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=diakrisis",
+      "permanent": false
+    },
+    {
+      "source": "/g/nunca-tocaras-mi-fe",
+      "destination": "/gratis?utm_source=libro&utm_medium=qr&utm_campaign=nunca-tocaras-mi-fe",
+      "permanent": false
     }
   ],
   "headers": [
