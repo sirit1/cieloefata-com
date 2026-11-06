@@ -432,16 +432,18 @@ test("uses the app name in the injected title tag", () => {
   assert.match(out, /apple-mobile-web-app-title" content="Wild Race"/);
 });
 
-test("fallback touch icon is absolute and declares apple-mobile-web-app-capable", () => {
+test("fallback touch icon is the relative 180 seal and declares apple-mobile-web-app-capable", () => {
   const out = injectGrokPwaHead("<html><head></head></html>", {
     appName: "Cielo Efata",
     site: { title: "Cielo Efata" },
   });
   assert.match(
     out,
-    /rel="apple-touch-icon" sizes="180x180" href="https:\/\/www\.cieloefata\.com\/apple-touch-icon\.png"/,
+    /rel="apple-touch-icon" sizes="180x180" href="\/brand\/icon-180\.png\?v=3"/,
   );
-  assert.equal(out.includes('href="/apple-touch-icon.png"'), false);
+  assert.equal((out.match(/rel="apple-touch-icon"/g) ?? []).length, 1);
+  assert.match(out, /rel="manifest" href="\/manifest\.webmanifest"/);
+  assert.equal(out.includes("/__grok/manifest.webmanifest"), false);
   assert.match(out, /name="apple-mobile-web-app-capable" content="yes"/);
   assert.match(out, /name="apple-mobile-web-app-title" content="Cielo Efata"/);
   assert.match(out, /name="apple-mobile-web-app-status-bar-style" content="black"/);
@@ -460,17 +462,34 @@ test("does not append a root-relative touch icon when absolute links are already
   assert.equal((out.match(/name="apple-mobile-web-app-capable"/g) ?? []).length, 1);
 });
 
-test("root head links the seal with absolute apple-touch URLs", () => {
+test("root head links one relative apple-touch icon and the static manifest", () => {
   const root = readFileSync(join(TEMPLATE_ROOT, "src/routes/__root.tsx"), "utf8");
   assert.match(root, /name: "apple-mobile-web-app-capable", content: "yes"/);
-  assert.match(root, /rel: "apple-touch-icon", href: appleTouch\("apple-touch-icon.png"\)/);
-  assert.match(root, /sizes: "180x180", href: appleTouch\("apple-touch-icon.png"\)/);
-  assert.match(root, /sizes: "120x120", href: appleTouch\("apple-touch-icon-120x120.png"\)/);
-  assert.match(root, /sizes: "152x152", href: appleTouch\("apple-touch-icon-152x152.png"\)/);
-  assert.match(root, /sizes: "167x167", href: appleTouch\("apple-touch-icon-167x167.png"\)/);
-  assert.match(root, /sizes: "180x180", href: appleTouch\("apple-touch-icon-180x180.png"\)/);
-  assert.match(root, /rel: "apple-touch-icon-precomposed", href: appleTouch\("apple-touch-icon-precomposed.png"\)/);
-  assert.equal(root.includes('href: "/apple-touch-icon.png"'), false);
+  assert.match(
+    root,
+    /\{ rel: "apple-touch-icon", sizes: "180x180", href: "\/brand\/icon-180\.png\?v=3" \}/,
+  );
+  assert.equal((root.match(/rel: "apple-touch-icon"/g) ?? []).length, 1);
+  assert.match(root, /rel: "manifest", href: "\/manifest\.webmanifest"/);
+  assert.equal(root.includes("__grok/manifest"), false);
+  assert.equal(root.includes("appleTouch("), false);
+  const manifest = JSON.parse(
+    readFileSync(join(TEMPLATE_ROOT, "public/manifest.webmanifest"), "utf8"),
+  );
+  assert.equal(manifest.name, "Cielo Efata");
+  assert.equal(manifest.short_name, "Cielo Efata");
+  assert.equal(manifest.display, "standalone");
+  assert.equal(manifest.theme_color, "#1A2340");
+  assert.equal(manifest.background_color, "#F4EFE4");
+  assert.equal(manifest.start_url, "/");
+  assert.equal(manifest.icons[0].src, "/brand/icon-180.png?v=3");
+  assert.equal(manifest.icons[0].sizes, "180x180");
+  assert.equal(manifest.icons[1].src, "/icons/icon-192.png");
+  assert.equal(manifest.icons[1].sizes, "192x192");
+  assert.equal(manifest.icons[2].src, "/icons/icon-512.png");
+  assert.equal(manifest.icons[2].purpose, "any");
+  assert.equal(manifest.icons[3].src, "/icons/icon-512.png");
+  assert.equal(manifest.icons[3].purpose, "maskable");
 });
 
 test("streaming injector handles </head> split across chunks", () => {
@@ -551,7 +570,7 @@ test("renders the manifest with the per-app name", () => {
   const manifest = JSON.parse(renderWebManifest("wild-race.grok.me"));
   assert.equal(manifest.name, "Wild Race");
   assert.equal(manifest.short_name, "Wild Race");
-  assert.equal(manifest.icons[0].src, "/apple-touch-icon.png");
+  assert.equal(manifest.icons[0].src, "/brand/icon-180.png?v=3");
 });
 
 test("house site names the manifest Cielo Efata, not Grok App", () => {
