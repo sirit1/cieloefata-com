@@ -9,12 +9,6 @@ import { SiteHeader } from "@/components/site-header";
 import { BannerVerdad } from "@/components/banner-verdad";
 import appCss from "../styles.css?url";
 import { SCRIPT_TEMA } from "@/lib/tema";
-import { SITE_ORIGIN } from "@/lib/seo";
-
-/** Absolute so Safari never resolves the home-screen seal against another host. */
-function appleTouch(file: string) {
-  return `${SITE_ORIGIN}/${file}`;
-}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -32,14 +26,8 @@ export const Route = createRootRoute({
       { rel: "icon", type: "image/png", sizes: "192x192", href: "/icons/icon-192.png" },
       { rel: "icon", type: "image/png", sizes: "512x512", href: "/icons/icon-512.png" },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: appleTouch("apple-touch-icon.png") },
-      { rel: "apple-touch-icon", sizes: "120x120", href: appleTouch("apple-touch-icon-120x120.png") },
-      { rel: "apple-touch-icon", sizes: "152x152", href: appleTouch("apple-touch-icon-152x152.png") },
-      { rel: "apple-touch-icon", sizes: "167x167", href: appleTouch("apple-touch-icon-167x167.png") },
-      { rel: "apple-touch-icon", sizes: "180x180", href: appleTouch("apple-touch-icon.png") },
-      { rel: "apple-touch-icon", sizes: "180x180", href: appleTouch("apple-touch-icon-180x180.png") },
-      { rel: "apple-touch-icon-precomposed", href: appleTouch("apple-touch-icon-precomposed.png") },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/brand/icon-180.png?v=3" },
       {
         rel: "preload",
         href: "/fonts/cormorant-latin.woff2",
