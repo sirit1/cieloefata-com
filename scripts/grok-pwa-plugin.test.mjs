@@ -432,6 +432,47 @@ test("uses the app name in the injected title tag", () => {
   assert.match(out, /apple-mobile-web-app-title" content="Wild Race"/);
 });
 
+test("fallback touch icon is absolute and declares apple-mobile-web-app-capable", () => {
+  const out = injectGrokPwaHead("<html><head></head></html>", {
+    appName: "Cielo Efata",
+    site: { title: "Cielo Efata" },
+  });
+  assert.match(
+    out,
+    /rel="apple-touch-icon" sizes="180x180" href="https:\/\/www\.cieloefata\.com\/apple-touch-icon\.png"/,
+  );
+  assert.equal(out.includes('href="/apple-touch-icon.png"'), false);
+  assert.match(out, /name="apple-mobile-web-app-capable" content="yes"/);
+  assert.match(out, /name="apple-mobile-web-app-title" content="Cielo Efata"/);
+  assert.match(out, /name="apple-mobile-web-app-status-bar-style" content="black"/);
+});
+
+test("does not append a root-relative touch icon when absolute links are already present", () => {
+  const html = `<html><head>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="https://www.cieloefata.com/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.cieloefata.com/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="https://www.cieloefata.com/apple-touch-icon-precomposed.png">
+  </head><body></body></html>`;
+  const out = injectGrokPwaHead(html, { host: "www.cieloefata.com", site: { title: "Cielo Efata" } });
+  assert.equal(out.includes('href="/apple-touch-icon.png"'), false);
+  assert.equal((out.match(/rel="apple-touch-icon"/g) ?? []).length, 2);
+  assert.equal((out.match(/name="apple-mobile-web-app-capable"/g) ?? []).length, 1);
+});
+
+test("root head links the seal with absolute apple-touch URLs", () => {
+  const root = readFileSync(join(TEMPLATE_ROOT, "src/routes/__root.tsx"), "utf8");
+  assert.match(root, /name: "apple-mobile-web-app-capable", content: "yes"/);
+  assert.match(root, /rel: "apple-touch-icon", href: appleTouch\("apple-touch-icon.png"\)/);
+  assert.match(root, /sizes: "180x180", href: appleTouch\("apple-touch-icon.png"\)/);
+  assert.match(root, /sizes: "120x120", href: appleTouch\("apple-touch-icon-120x120.png"\)/);
+  assert.match(root, /sizes: "152x152", href: appleTouch\("apple-touch-icon-152x152.png"\)/);
+  assert.match(root, /sizes: "167x167", href: appleTouch\("apple-touch-icon-167x167.png"\)/);
+  assert.match(root, /sizes: "180x180", href: appleTouch\("apple-touch-icon-180x180.png"\)/);
+  assert.match(root, /rel: "apple-touch-icon-precomposed", href: appleTouch\("apple-touch-icon-precomposed.png"\)/);
+  assert.equal(root.includes('href: "/apple-touch-icon.png"'), false);
+});
+
 test("streaming injector handles </head> split across chunks", () => {
   const injector = createHeadInjector({ appName: "Wild Race" });
   const chunks = [

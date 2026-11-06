@@ -205,12 +205,22 @@ export function renderWebManifest(hostHeader, appName) {
   );
 }
 
+/** Production origin. Relative touch icons made Safari fetch the seal from the wrong host. */
+const APPLE_TOUCH_ORIGIN = "https://www.cieloefata.com";
+
 export function grokPwaHeadTags(appName = DEFAULT_APP_NAME) {
   return [
-    // Standalone display comes from the manifest ("display": "standalone");
-    // the legacy *-web-app-capable metas it replaces are deliberately absent.
+    // The manifest sets standalone display. iOS Add to Home Screen still
+    // needs apple-mobile-web-app-capable or it paints a letter instead of the seal.
     ["manifest", '<link rel="manifest" href="/__grok/manifest.webmanifest">'],
-    ["apple-touch-icon", '<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">'],
+    [
+      "apple-mobile-web-app-capable",
+      '<meta name="apple-mobile-web-app-capable" content="yes">',
+    ],
+    [
+      "apple-touch-icon",
+      `<link rel="apple-touch-icon" sizes="180x180" href="${APPLE_TOUCH_ORIGIN}/apple-touch-icon.png">`,
+    ],
     [
       "apple-mobile-web-app-title",
       `<meta name="apple-mobile-web-app-title" content="${escapeHtml(appName)}">`,
@@ -524,7 +534,7 @@ export function injectGrokPwaHead(html, ctx = {}) {
   const missing = grokPwaHeadTags(appName)
     .filter(([key]) => {
       if (key === "manifest") return !next.includes('href="/__grok/manifest.webmanifest"');
-      if (key === "apple-touch-icon") return !next.includes('href="/apple-touch-icon.png"');
+      if (key === "apple-touch-icon") return !/rel=["']apple-touch-icon["']/i.test(next);
       return !next.includes(`name="${key}"`);
     })
     .map(([, tag]) => tag);
