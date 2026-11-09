@@ -140,6 +140,15 @@ export const TRATADOS_INDICE: IndiceTratado[] = [
     "blurb": "«No juzguéis» no es una mordaza para la verdad ni una licencia para la crítica. En el Sermón del Monte, el Señor manda sacar primero la viga propia y entonces ayudar al hermano con su paja, y en el mismo párrafo pide discernir lo santo. Este estudio devuelve el versículo a su ladera.",
     "pack": false,
     "soloEs": true
+  },
+  {
+    "slug": "el-yugo-desigual-en-esta-era",
+    "n": "15",
+    "title": "El yugo desigual en esta era",
+    "ref": "2 Corintios 6:14–18",
+    "blurb": "«No os unáis en yugo desigual con los incrédulos» no es un lema solo de noviazgo. Pablo habla al templo de Dios en Corinto, y el yugo es la alianza que obliga a tirar juntos: en el matrimonio, el negocio, el ministerio y los lazos de esta era. El tratado distingue lo que no se debe firmar de lo que, si Dios ya juntó, no se desata por cansancio.",
+    "pack": false,
+    "soloEs": true
   }
 ];
 
