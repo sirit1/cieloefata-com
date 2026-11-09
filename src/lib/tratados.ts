@@ -12,8 +12,10 @@ export type Tratado = {
   /**
    * Excepción a la orden editorial (Puerta): publicada solo en castellano, sin pack
    * (faltan el gemelo inglés y los audios ES/EN). Aprobada por Alejandro Sirit el
-   * 18-oct-2026 solo para «Este mismo Jesús» y «No juzguéis». No se usa en otra obra
-   * sin su aprobación expresa. Al llegar el pack: `pack: true` y se quita este campo.
+   * 18-oct-2026 para «Este mismo Jesús» y «No juzguéis», y el 9-nov-2026 para
+   * «El yugo desigual en esta era», que se publica sin el gemelo inglés ni el audio.
+   * No se usa en otra obra sin su aprobación expresa. Al llegar el pack: `pack: true`
+   * y se quita este campo.
    */
   soloEs?: true;
 };
@@ -183,6 +185,17 @@ export const tratados: Tratado[] = [
     title: "No juzguéis",
     blurb:
       "«No juzguéis» no es una mordaza para la verdad ni una licencia para la crítica. En el Sermón del Monte, el Señor manda sacar primero la viga propia y entonces ayudar al hermano con su paja, y en el mismo párrafo pide discernir lo santo. Este estudio devuelve el versículo a su ladera.",
+    pack: false,
+    soloEs: true,
+  },
+  {
+    slug: "el-yugo-desigual-en-esta-era",
+    n: "15",
+    kicker: "Alianza · no mezcla",
+    ref: "2 Corintios 6:14–18",
+    title: "El yugo desigual en esta era",
+    blurb:
+      "«No os unáis en yugo desigual con los incrédulos» no es un lema solo de noviazgo. Pablo habla al templo de Dios en Corinto, y el yugo es la alianza que obliga a tirar juntos: en el matrimonio, el negocio, el ministerio y los lazos de esta era. El tratado distingue lo que no se debe firmar de lo que, si Dios ya juntó, no se desata por cansancio.",
     pack: false,
     soloEs: true,
   },

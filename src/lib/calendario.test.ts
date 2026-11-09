@@ -63,6 +63,10 @@ describe("calendario editorial", () => {
       { published: "2026-10-18", modified: "2026-10-18" },
     );
     assert.deepEqual(
+      fechasArticulo({ clase: "tratado", slug: "el-yugo-desigual-en-esta-era", pack: false, n: "15" }),
+      { published: "2026-11-09", modified: "2026-11-09" },
+    );
+    assert.deepEqual(
       fechasArticulo({ clase: "tratado", slug: "juan-1", pack: false, n: "15" }),
       { published: "2026-10-01", modified: "2026-10-01" },
     );
