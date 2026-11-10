@@ -4,6 +4,7 @@ import { InsigniaTipo } from "@/components/insignia-tipo";
 import { Volver } from "@/components/volver";
 import { PARA_QUIEN, TRATADOS_CASA } from "@/lib/clasificacion";
 import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
+import { Subir } from "@/components/subir";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 import { SLUGS_CON_PORTADA } from "@/lib/libros/v2";
@@ -38,49 +39,88 @@ function datos(slug: string) {
 function TratadosPage() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   if (pathname.replace(/\/$/, "") !== "/tratados") return <Outlet />;
-  return (
-    <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <Volver />
-      <h1 className="mt-2 font-serif text-4xl">Tratados</h1>
-      <p className="mt-5 text-lg leading-relaxed">
-        Un tratado toma un asunto que la Escritura entera enseña y lo sigue de libro en libro, con argumento
-        ordenado, el hebreo y el griego cuando sostienen el argumento, y los intérpretes como siervos del texto.
-        Lo que lo hace tratado es el enfoque, no la extensión: puede ser breve. Es para líderes, maestros y
-        estudiosos.
-      </p>
-      <p className="mt-4 font-sans text-sm text-ink-soft">{PARA_QUIEN.tratado}</p>
-      <Refs refs="2 Ti. 2:2 · He. 5:14" />
-      <p className="mt-4 font-sans text-sm">
-        <Link to="/estudios-y-tratados" className="text-link underline">
-          Estudios y tratados: cuál leer y por qué
-        </Link>
-      </p>
+  const fichas = TRATADOS_CASA.map(({ slug, href }) => {
+    const d = datos(slug);
+    return d ? { slug, href, ...d } : null;
+  }).filter((f) => f !== null);
+  const destacado =
+    fichas.find((f) => f.slug === "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales") ??
+    fichas.at(-1);
+  const resto = fichas.filter((f) => f.slug !== destacado?.slug);
 
-      <section className="mt-14">
-        <h2 className="font-serif text-3xl">Todos los tratados</h2>
-        <ul className="mt-8 space-y-8">
-          {TRATADOS_CASA.map(({ slug, href }) => {
-            const d = datos(slug);
-            if (!d) return null;
-            return (
-              <li key={slug} className="border-t border-rule pt-6">
-                {CON_PORTADA.has(slug) ? (
-                  <a href={href}><img src={`/tratados-v2/${slug}/portada.jpg`} alt={`Portada: ${d.title}`} width={600} height={960} loading="lazy" className="mb-4 w-32 rounded shadow" /></a>
+  return (
+    <main id="contenido" className="casa-tratados">
+      <div className="casa-intro">
+        <Volver />
+        <nav className="casa-anclas" aria-label="En esta sección">
+          <a href="#reciente">El más reciente</a>
+          <a href="#estante">Todos los tratados</a>
+          <a href="#breves">Versículos muy citados</a>
+        </nav>
+        <p className="casa-serie">Serie Cielo Efata</p>
+        <h1>Tratados</h1>
+        <p className="casa-una-linea">{PARA_QUIEN.tratado}</p>
+        <div className="casa-filete" aria-hidden />
+        <p>
+          Un tratado toma un asunto que la Escritura entera enseña y lo sigue de libro en libro, con argumento
+          ordenado, el hebreo y el griego cuando sostienen el argumento, y los intérpretes como siervos del texto.
+          Lo que lo hace tratado es el enfoque, no la extensión: puede ser breve. Es para líderes, maestros y
+          estudiosos.
+        </p>
+        <Refs refs="2 Ti. 2:2 · He. 5:14" />
+        <p className="mt-4 font-sans text-sm">
+          <Link to="/estudios-y-tratados" className="text-link underline">
+            Estudios y tratados: cuál leer y por qué
+          </Link>
+        </p>
+      </div>
+
+      {destacado ? (
+        <section id="reciente" className="casa-destac">
+          <div className="casa-marco">
+            {CON_PORTADA.has(destacado.slug) ? (
+              <a href={destacado.href}>
+                <img src={`/tratados-v2/${destacado.slug}/portada.jpg`} alt={`Portada: ${destacado.title}`} width={600} height={960} />
+              </a>
+            ) : null}
+            <div>
+              <p className="casa-lbl">Tratado · {destacado.ref}</p>
+              <h2>{destacado.title}</h2>
+              <InsigniaTipo slug={destacado.slug} seccion="tratado" className="mt-2" sinPara />
+              <p className="mt-4 font-serif text-xl leading-relaxed text-[#3a3423]">{destacado.texto}</p>
+              <a href={destacado.href} className="casa-btn">
+                Leer el tratado<span className="sr-only">: {destacado.title}</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      <p className="casa-floron" aria-hidden>✦ ❦ ✦</p>
+
+      <section id="estante">
+        <h2 className="sr-only">Todos los tratados</h2>
+        <ul className="casa-estante">
+          {resto.map((d) => (
+            <li key={d.slug}>
+              <article className="casa-folleto">
+                {CON_PORTADA.has(d.slug) ? (
+                  <a href={d.href}><img src={`/tratados-v2/${d.slug}/portada.jpg`} alt={`Portada: ${d.title}`} width={600} height={960} loading="lazy" /></a>
                 ) : null}
-                <p className="font-sans text-xs tracking-widest text-gold uppercase">Tratado · {d.ref}</p>
-                <h3 className="mt-1 font-serif text-2xl">{d.title}</h3>
-                <InsigniaTipo slug={slug} seccion="tratado" className="mt-2" sinPara />
-                <p className="mt-3 leading-relaxed">{d.texto}</p>
-                <a href={href} className="mt-3 inline-flex min-h-11 items-center font-sans text-sm text-link underline">
-                  Leer el tratado →<span className="sr-only">: {d.title}</span>
+                <p className="casa-ref">Tratado · {d.ref}</p>
+                <h3>{d.title}</h3>
+                <InsigniaTipo slug={d.slug} seccion="tratado" className="mt-2 justify-center" sinPara />
+                <p>{d.texto}</p>
+                <a href={d.href} className="casa-ir">
+                  Leer el tratado<span className="sr-only">: {d.title}</span>
                 </a>
-              </li>
-            );
-          })}
+              </article>
+            </li>
+          ))}
         </ul>
       </section>
 
-      <section className="mt-14 border-t border-rule pt-8">
+      <section id="breves" className="mx-auto mt-14 max-w-[44em] border-t border-[#c4a35a] px-4 pt-8 pb-16">
         <h2 className="font-serif text-2xl">¿Buscaba los versículos muy citados?</h2>
         <p className="mt-4 leading-relaxed">
           Los escritos que devuelven un versículo muy citado al capítulo donde Dios lo puso son estudios breves: se
@@ -96,6 +136,7 @@ function TratadosPage() {
           </Link>
         </p>
       </section>
+      <Subir />
     </main>
   );
 }

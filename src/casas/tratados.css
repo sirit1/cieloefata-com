@@ -1,0 +1,573 @@
+/* Casa Tratados: pergamino, marco doble de oro, capitulares y florones.
+   Solo vive bajo .casa-tratados. La cabecera, el pie y las otras casas no cambian.
+   Títulos: Libre Baskerville. Cuerpo: Spectral. */
+
+@font-face {
+  font-family: "Baskerville Casa";
+  src: url("/fonts/casas/librebaskerville-400.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spectral Casa";
+  src: url("/fonts/casas/spectral-400.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body:has(.casa-tratados) {
+  background: #e9dfc9 radial-gradient(ellipse at 50% 0, #efe6d2 0, #ddd0b4 100%);
+}
+
+.franja-seccion {
+  position: sticky;
+  top: 4.6rem;
+  z-index: 35;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(196, 163, 90, 0.4);
+}
+
+.franja-tratados {
+  background: #efe5cf;
+  color: #7a5414;
+}
+
+.casa-tratados {
+  --casa-display: "Baskerville Casa", Palatino, "Palatino Linotype", serif;
+  --casa-text: "Spectral Casa", Palatino, "Palatino Linotype", serif;
+  color: #22243a;
+  font-family: var(--casa-text);
+}
+
+.casa-tratados h1,
+.casa-tratados h2,
+.casa-tratados h3,
+.casa-tratados .casa-una-linea {
+  font-family: var(--casa-display);
+}
+
+.casa-tratados p,
+.casa-tratados li,
+.casa-tratados .obra-v2 {
+  font-family: var(--casa-text);
+}
+
+.casa-tratados .obra-v2 p:has(.vers) {
+  background: rgba(30, 58, 110, 0.07);
+  border-left: 3px solid #1e3a6e;
+  padding: 0.45em 0.85em;
+}
+
+.casa-subir {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 36;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: #3a2e14;
+  color: #f6efdc;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+}
+
+.casa-anclas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.1rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.casa-anclas a {
+  color: #7a5414;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.casa-tratados h2,
+.casa-tratados h3 {
+  scroll-margin-top: 7rem;
+}
+
+.casa-tratados .casa-mesa {
+  padding: 56px 32px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 860px) 190px;
+  gap: 34px;
+  justify-content: center;
+  align-items: start;
+}
+
+.casa-tratados .aula-hoja.casa-hoja {
+  position: relative;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  background: #f6efdc;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(255, 255, 255, 0.55), transparent 60%),
+    radial-gradient(ellipse at 85% 90%, rgba(160, 120, 60, 0.16), transparent 55%),
+    radial-gradient(ellipse at 10% 80%, rgba(160, 120, 60, 0.1), transparent 50%);
+  box-shadow: 0 30px 60px -30px rgba(60, 40, 10, 0.55), inset 0 2px 0 rgba(255, 255, 255, 0.6);
+  padding: 70px 84px 64px;
+  color: #22243a;
+}
+
+.casa-tratados .casa-hoja::before,
+.casa-tratados .casa-marco::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 2px solid #b38a3e;
+  pointer-events: none;
+}
+
+.casa-tratados .casa-hoja::after,
+.casa-tratados .casa-marco::after {
+  content: "";
+  position: absolute;
+  inset: 25px;
+  border: 1px solid #c9a75e;
+  pointer-events: none;
+}
+
+.casa-esq {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  color: #a37a2e;
+  font-size: 26px;
+  line-height: 34px;
+  text-align: center;
+  z-index: 1;
+}
+
+.casa-esq.a { top: 10px; left: 10px; }
+.casa-esq.b { top: 10px; right: 10px; transform: scaleX(-1); }
+.casa-esq.c { bottom: 10px; left: 10px; transform: scaleY(-1); }
+.casa-esq.d { bottom: 10px; right: 10px; transform: scale(-1); }
+
+.casa-tratados .casa-serie {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: #9a7a3c;
+  text-align: center;
+  font-size: 13px;
+}
+
+.casa-tratados .casa-tipo {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.casa-tratados .casa-filete {
+  width: 150px;
+  height: 1px;
+  background: #c4a35a;
+  margin: 16px auto;
+}
+
+.casa-tratados .casa-hoja h1 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 66px;
+  line-height: 1.02;
+  text-align: center;
+  margin: 10px 0 8px;
+  color: #1a2340;
+}
+
+.casa-tratados .casa-pasaje {
+  text-align: center;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 21px;
+  color: #5a4a2a;
+}
+
+.casa-tratados .casa-acc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 6px;
+}
+
+.casa-tratados .casa-acc .chip,
+.casa-tratados .casa-acc a {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  border: 1px solid #b38a3e;
+  color: #6e4a12;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.3);
+  min-height: 44px;
+}
+
+.casa-floron {
+  text-align: center;
+  color: #a37a2e;
+  font-size: 22px;
+  letter-spacing: 0.6em;
+  margin: 26px 0;
+}
+
+.casa-tratados .obra-v2 {
+  font-size: 20.5px;
+  line-height: 1.72;
+  color: #22243a;
+}
+
+.casa-tratados .obra-v2 h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #6e4a12;
+  margin: 34px 0 18px;
+}
+
+.casa-tratados .obra-v2 h2::before {
+  content: "❦";
+  display: block;
+  letter-spacing: 0.6em;
+  font-size: 22px;
+  font-weight: 400;
+  color: #a37a2e;
+  margin-bottom: 18px;
+}
+
+.casa-tratados .obra-v2 p {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 20.5px;
+  line-height: 1.72;
+  text-align: justify;
+  hyphens: auto;
+  color: #22243a;
+}
+
+.casa-tratados .obra-v2 h2 + p::first-letter {
+  float: left;
+  width: 96px;
+  height: 96px;
+  margin: 6px 16px 4px 0;
+  border: 1.5px solid #b38a3e;
+  background: #efe2bd;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 74px;
+  line-height: 96px;
+  text-align: center;
+  color: #7a5414;
+  box-shadow: inset 0 0 0 4px #efe2bd, inset 0 0 0 5px #c9a75e;
+}
+
+.casa-tratados .obra-v2 p:has(> strong:first-child) {
+  border-top: 1px solid #c4a35a;
+  border-bottom: 1px solid #c4a35a;
+  padding: 16px 26px;
+  margin: 22px 0;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.6;
+  text-align: center;
+  color: #3a2e14;
+}
+
+.casa-tratados .obra-v2 p:has(> strong:first-child) strong {
+  font-style: normal;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+  display: block;
+  color: #7a5414;
+  margin-bottom: 4px;
+}
+
+.casa-tratados .obra-v2 .vers,
+.casa-tratados .obra-v2 blockquote {
+  font-style: italic;
+  font-weight: 500;
+  color: #1e3a6e;
+}
+
+.casa-tratados .obra-v2 blockquote {
+  margin: 22px 34px;
+  padding: 6px 0 6px 22px;
+  border-left: 2px solid #b38a3e;
+  font-size: 19.5px;
+  line-height: 1.7;
+}
+
+/* La voz de Dios o de Jesús: cursiva y negrita, nunca en rojo. */
+.casa-tratados .obra-v2 .voz,
+.casa-tratados .voz-dios {
+  font-style: italic;
+  font-weight: 700;
+  color: inherit;
+}
+
+.casa-tratados .obra-v2 section.footnotes,
+.casa-tratados .obra-v2 aside.footnotes {
+  border-top: 1px solid #c4a35a;
+  color: #4c4430;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+.casa-lado {
+  position: sticky;
+  top: 7.2rem;
+  margin-top: 40px;
+  border-left: 1px solid #c4a35a;
+  padding-left: 16px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  color: #6b5a38;
+}
+
+.casa-lado b {
+  display: block;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7a5414;
+  margin: 0 0 4px;
+}
+
+.casa-lado a {
+  display: block;
+  margin: 8px 0;
+  color: #6b5a38;
+}
+
+.casa-intro {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 32px 20px;
+}
+
+.casa-intro h1 {
+  font-family: var(--casa-display);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 7vw, 5.4rem);
+  margin: 8px 0;
+  color: #1a2340;
+}
+
+.casa-intro .casa-una-linea {
+  font-family: var(--casa-display);
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: #6e4a12;
+}
+
+.casa-intro p {
+  font-family: var(--casa-text);
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.65;
+  color: #3a3423;
+}
+
+.casa-estante {
+  max-width: 1180px;
+  margin: 30px auto 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 46px 40px;
+  padding: 0 32px;
+  list-style: none;
+}
+
+.casa-folleto {
+  background: #f6efdc;
+  position: relative;
+  padding: 22px 22px 26px;
+  box-shadow: 0 22px 40px -24px rgba(60, 40, 10, 0.6);
+  color: #22243a;
+}
+
+.casa-folleto::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid #c9a75e;
+  pointer-events: none;
+}
+
+.casa-estante > li:nth-child(3n + 1) .casa-folleto { transform: rotate(-0.6deg); }
+.casa-estante > li:nth-child(3n) .casa-folleto { transform: rotate(0.5deg); }
+
+.casa-folleto img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border: 1px solid #c9a75e;
+}
+
+.casa-folleto .casa-ref {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.2em;
+  color: #7a5414;
+  margin: 16px 0 6px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.casa-folleto h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 1.1;
+  text-align: center;
+  color: #1a2340;
+}
+
+.casa-folleto p {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 16.5px;
+  line-height: 1.5;
+  color: #3a3423;
+  margin-top: 10px;
+}
+
+.casa-folleto .casa-ir {
+  display: block;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #6e4a12;
+  margin-top: 14px;
+  text-transform: uppercase;
+}
+
+.casa-destac {
+  max-width: 1180px;
+  margin: 10px auto 0;
+  padding: 0 32px;
+}
+
+.casa-destac .casa-marco {
+  position: relative;
+  background: #f6efdc;
+  box-shadow: 0 30px 60px -30px rgba(60, 40, 10, 0.55);
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 46px;
+  padding: 52px 60px;
+  align-items: center;
+}
+
+.casa-destac img {
+  width: 100%;
+  border: 1px solid #c9a75e;
+  box-shadow: 0 18px 30px -18px rgba(0, 0, 0, 0.5);
+}
+
+.casa-destac h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1.05;
+  color: #1a2340;
+}
+
+.casa-destac .casa-lbl {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: #7a5414;
+  text-transform: uppercase;
+}
+
+.casa-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-top: 20px;
+  margin-right: 10px;
+  background: #6e4a12;
+  color: #f6efdc;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  padding: 12px 22px;
+}
+
+.casa-btn.lin {
+  background: transparent;
+  color: #6e4a12;
+  border: 1px solid #b38a3e;
+}
+
+@media (max-width: 900px) {
+  .casa-estante { grid-template-columns: 1fr 1fr; }
+  .casa-destac .casa-marco { grid-template-columns: 1fr; padding: 36px 28px; }
+}
+
+@media (max-width: 600px) {
+  .casa-tratados .casa-mesa { padding: 18px 10px 40px; display: block; }
+  .casa-tratados .aula-hoja.casa-hoja { padding: 46px 26px 40px; }
+  .casa-tratados .casa-hoja::before,
+  .casa-tratados .casa-marco::before { inset: 9px; }
+  .casa-tratados .casa-hoja::after,
+  .casa-tratados .casa-marco::after { inset: 13px; }
+  .casa-esq { display: none; }
+  .casa-tratados .casa-hoja h1,
+  .casa-intro h1 { font-size: 42px; }
+  .casa-tratados .obra-v2 p { font-size: 18.5px; text-align: left; }
+  .casa-tratados .obra-v2 blockquote { margin: 18px 0; font-size: 18px; }
+  .casa-lado { display: none; }
+  .casa-tratados .obra-v2 h2 + p::first-letter {
+    width: 74px;
+    height: 74px;
+    font-size: 56px;
+    line-height: 74px;
+  }
+  .casa-estante { grid-template-columns: 1fr; padding: 0 16px; }
+  .casa-estante > li .casa-folleto { transform: none; }
+  .casa-intro { padding: 36px 18px 8px; }
+  .casa-destac h2 { font-size: 36px; }
+}
