@@ -121,6 +121,8 @@ export const FECHAS_SOLO_ES: Record<string, string> = {
   "no-juzgueis": "2026-10-18",
   // Alejandro aprobó publicarlo el 9-nov-2026, aún sin gemelo inglés ni audio.
   "el-yugo-desigual-en-esta-era": "2026-11-09",
+  // Alejandro aprobó publicarlo con su guía el 10-nov-2026, aún sin gemelo inglés ni audio.
+  "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales": "2026-11-10",
 };
 
 export function fechasArticulo(opts: {

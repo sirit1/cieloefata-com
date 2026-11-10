@@ -11,6 +11,7 @@ const cargadores: Record<string, () => Promise<{ parrafos: readonly string[] }>>
   "el-pensamiento-que-no-era-tuyo": () => import("./el-pensamiento-que-no-era-tuyo.ts"),
   "el-texto-manda": () => import("./el-texto-manda.ts"),
   "el-yugo-desigual-en-esta-era": () => import("./el-yugo-desigual-en-esta-era.ts"),
+  "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales": () => import("./la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales.ts"),
   "este-mismo-jesus": () => import("./este-mismo-jesus.ts"),
   "espiritu-de-poder": () => import("./espiritu-de-poder.ts"),
   "filipenses-2": () => import("./filipenses-2.ts"),

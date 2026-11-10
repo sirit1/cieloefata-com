@@ -67,6 +67,10 @@ describe("calendario editorial", () => {
       { published: "2026-11-09", modified: "2026-11-09" },
     );
     assert.deepEqual(
+      fechasArticulo({ clase: "tratado", slug: "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales", pack: false, n: "16" }),
+      { published: "2026-11-10", modified: "2026-11-10" },
+    );
+    assert.deepEqual(
       fechasArticulo({ clase: "tratado", slug: "juan-1", pack: false, n: "15" }),
       { published: "2026-10-01", modified: "2026-10-01" },
     );

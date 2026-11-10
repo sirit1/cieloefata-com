@@ -149,6 +149,15 @@ export const TRATADOS_INDICE: IndiceTratado[] = [
     "blurb": "«No os unáis en yugo desigual con los incrédulos» no es un lema solo de noviazgo. Pablo habla al templo de Dios en Corinto, y el yugo es la alianza que obliga a tirar juntos: en el matrimonio, el negocio, el ministerio y los lazos de esta era. El tratado distingue lo que no se debe firmar de lo que, si Dios ya juntó, no se desata por cansancio.",
     "pack": false,
     "soloEs": true
+  },
+  {
+    "slug": "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales",
+    "n": "16",
+    "title": "La crianza de los hijos en estos tiempos de redes sociales",
+    "ref": "Deuteronomio 6:4–9",
+    "blurb": "Deuteronomio 6 escribe la Palabra en los postes de la casa, y hoy la puerta de la casa cabe en el bolsillo del hijo, encendida y abierta a toda hora. El tratado expone lo que la Escritura manda a los padres y promete a los hijos: el padre y la madre forman al hijo en la Palabra dentro de la casa, y las redes no son un cuarto aparte, moralmente indiferente, sino un yugo de atención, de identidad y de compañía que disputa el altar del hogar.",
+    "pack": false,
+    "soloEs": true
   }
 ];
 

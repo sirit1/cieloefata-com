@@ -50,6 +50,7 @@ export const CLASIFICACION: Record<string, { tipo: Tipo; dudoso?: boolean }> = {
   "este-mismo-jesus": { tipo: "tratado" },
   "no-juzgueis": { tipo: "estudio" },
   "el-yugo-desigual-en-esta-era": { tipo: "tratado" },
+  "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales": { tipo: "tratado" },
 };
 
 /** Tipo de una obra; si no está clasificada, se respeta la sección donde vive. */
@@ -64,6 +65,7 @@ export const TRATADOS_CASA: { slug: string; href: string }[] = [
   { slug: "teologia-de-la-gloria", href: "/estudios/teologia-de-la-gloria" },
   { slug: "este-mismo-jesus", href: "/tratados/este-mismo-jesus" },
   { slug: "el-yugo-desigual-en-esta-era", href: "/tratados/el-yugo-desigual-en-esta-era" },
+  { slug: "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales", href: "/tratados/la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales" },
   { slug: "el-paraclito-eterno", href: "/obras/el-paraclito-eterno" },
 ];
 
