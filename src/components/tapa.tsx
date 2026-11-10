@@ -21,6 +21,9 @@ const MINIATURAS = new Set([
   "el-siervo-no-tu",
   "nunca-tocaras-mi-fe",
   "portico-a-la-escritura",
+  "norma-normans-non-normata",
+  "callar-para-ganar",
+  "el-mundo-pregunta-dios-responde",
 ]);
 
 const SIZES: Record<keyof typeof SIZE, string> = {

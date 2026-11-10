@@ -1,5 +1,5 @@
 import { AMAZON_AUTHOR } from "@/lib/amazon";
-import { obras, tapaPath, type Obra } from "@/lib/content";
+import { obraBySlug, obras, tapaPath, type Obra } from "@/lib/content";
 import { amazonDp } from "@/lib/amazon";
 import { SERIE_NOMBRE } from "@/lib/serie";
 import {
@@ -118,8 +118,10 @@ export function SerieJsonLd() {
 }
 
 export function BookJsonLd({ slug }: { slug: string }) {
-  const obra = obras.find((o) => o.slug === slug);
+  const obra = obraBySlug(slug);
   if (!obra) return null;
+  const enLectura = obras.some((o) => o.slug === slug);
+  const posicion = enLectura ? obra.lectura : obra.numeroSerieAmazon;
   return (
     <JsonLdScript
       data={{
@@ -128,8 +130,7 @@ export function BookJsonLd({ slug }: { slug: string }) {
         ...camposLibro(obra),
         image: canonicalUrl(tapaPath(obra.slug)),
         publisher: { "@type": "Organization", name: "Editorial Cielo Efata" },
-        isPartOf: serieRef(),
-        position: obra.lectura,
+        ...(posicion ? { isPartOf: serieRef(), position: posicion } : {}),
         ...(formatosLd(obra).length ? { workExample: formatosLd(obra) } : {}),
       }}
     />

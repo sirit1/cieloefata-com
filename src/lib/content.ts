@@ -164,6 +164,8 @@ export type Obra = {
   revelatioSlug?: string;
   /** Edición nueva aún no publicada en Amazon: la ficha no muestra botón ni búsqueda de Amazon. */
   sinAmazon?: boolean;
+  /** «Cielo Efata nº N» en la ficha de Amazon. No se inventa si Amazon no lo pone. */
+  numeroSerieAmazon?: number;
 };
 
 /** Enlace de la ficha del libro a su libro en RevelatiO, con utm_campaign = slug. */
@@ -215,7 +217,9 @@ export const obras: Obra[] = [
     ref: "Lc. 24:27",
     pasaje: "Lucas 24",
     studySlug: "",
-    sinAmazon: true,
+    asinEbook: "B0HNF8WNRL",
+    asinPrint: "B0HPQDXBJQ",
+    isbnPrint: "9798166069375",
   },
   {
     n: 5,
@@ -259,6 +263,8 @@ export const obras: Obra[] = [
     studySlug: "isaias-53",
     tratadoSlug: "isaias-53",
     asinEbook: "B0HKQGBYV4",
+    asinPrint: "B0HNF76VN9",
+    isbnPrint: "9798163214488",
   },
   {
     n: 6,
@@ -302,6 +308,8 @@ export const obras: Obra[] = [
     pasaje: "Job 42",
     studySlug: "",
     asinEbook: "B0HN5YD6LP",
+    asinPrint: "B0HNFLF2QD",
+    isbnPrint: "9798163215638",
   },
   {
     n: 2,
@@ -324,6 +332,8 @@ export const obras: Obra[] = [
     tratadoSlug: "el-crisol-de-lo-oido",
     crisol: true,
     asinEbook: "B0HJ6B33V3",
+    asinPrint: "B0HKSZ6B9T",
+    isbnPrint: "9798176414967",
   },
   {
     n: 1,
@@ -344,7 +354,9 @@ export const obras: Obra[] = [
     pasaje: "Santiago 3",
     studySlug: "",
     tratadoSlug: "la-muerte-y-la-vida",
-    sinAmazon: true,
+    asinEbook: "B0HNFG6H93",
+    asinPrint: "B0HQ3XKT1W",
+    isbnPrint: "9798167133792",
   },
   {
     n: 8,
@@ -384,12 +396,81 @@ export const obras: Obra[] = [
     ref: "Ef. 2:8–9",
     pasaje: "Efesios 2",
     studySlug: "",
-    sinAmazon: true,
+    asinEbook: "B0HQ2KBG8T",
+    asinPrint: "B0HR2K65V2",
+    isbnPrint: "9798141303906",
+  },
+];
+
+/**
+ * Ebooks ya publicados en Amazon que no entran en el orden de lectura I–IX.
+ * Título, subtítulo y descripción salen de la ficha de Amazon (10 nov 2026),
+ * recortados al largo de las descripciones del sitio, sin reescribirlos.
+ */
+export const fichas: Obra[] = [
+  {
+    n: 0,
+    lectura: 0,
+    slug: "norma-normans-non-normata",
+    title: "Norma normans non normata",
+    subtitulo: "El método V.E.R.D.A.D. para leer la Escritura",
+    seoTitle:
+      "Norma normans non normata: El método V.E.R.D.A.D. para leer la Escritura | Alejandro Sirit",
+    seoDescription:
+      "Cuando un texto puede significar cualquier cosa, deja de significar algo. Norma normans non normata presenta V.E.R.D.A.D.",
+    line: "Cuando un texto puede significar cualquier cosa, deja de significar algo. Norma normans non normata presenta V.E.R.D.A.D.",
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HPPTSKCN",
+    asinPrint: "B0HPQF8W68",
+    isbnPrint: "9798166300706",
+    numeroSerieAmazon: 10,
+  },
+  {
+    n: 0,
+    lectura: 0,
+    slug: "callar-para-ganar",
+    title: "Callar para ganar",
+    subtitulo: "Guía Práctica para encontrar respuestas con tu silencio",
+    seoTitle:
+      "Callar para ganar: Guía Práctica para encontrar respuestas con tu silencio | Alejandro Sirit",
+    seoDescription:
+      '¿Y si la verdadera ventaja competitiva no estuviera en lo que dices, sino en lo que callas? Vivimos en la era de la "Oratoria Vacía".',
+    line: '¿Y si la verdadera ventaja competitiva no estuviera en lo que dices, sino en lo que callas? Vivimos en la era de la "Oratoria Vacía".',
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HQ3331LP",
+    numeroSerieAmazon: 12,
+  },
+  {
+    n: 0,
+    lectura: 0,
+    slug: "el-mundo-pregunta-dios-responde",
+    title: "El mundo pregunta, Dios responde",
+    subtitulo: "",
+    seoTitle: "El mundo pregunta, Dios responde | Alejandro Sirit",
+    seoDescription:
+      "Toda generación de creyentes ha tenido que responder a la misma pregunta que la serpiente formuló en el huerto: «¿Conque Dios os ha dicho...?».",
+    line: "Toda generación de creyentes ha tenido que responder a la misma pregunta que la serpiente formuló en el huerto: «¿Conque Dios os ha dicho...?».",
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HPS6B63Z",
+    asinPrint: "B0HQ29MJS6",
+    isbnPrint: "9798167125032",
   },
 ];
 
 export function obraBySlug(slug: string) {
-  return obras.find((o) => o.slug === slug);
+  return obras.find((o) => o.slug === slug) ?? fichas.find((o) => o.slug === slug);
 }
 
 export function obrasDesdeAula(kind: AulaKind, slug: string) {

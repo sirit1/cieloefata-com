@@ -50,7 +50,8 @@ export function ObraPage() {
   const tratado = obra.tratadoSlug
     ? indiceTratado(obra.tratadoSlug)
     : undefined;
-  const { prev, next } = obraVecina(obra.lectura);
+  const enOrden = obras.some((o) => o.slug === obra.slug);
+  const { prev, next } = enOrden ? obraVecina(obra.lectura) : { prev: undefined, next: undefined };
   const lecturaDe = obras.length;
   const muestra = primerasPaginas(obra);
 
@@ -62,23 +63,35 @@ export function ObraPage() {
         <figure className="m-0 max-w-[13rem]">
           <Tapa obra={obra} size="ficha" priority />
           <figcaption className="sr-only">
-            Tapa de {obra.title}. Se lee junto a {obra.pasaje}.
+            {obra.pasaje
+              ? `Tapa de ${obra.title}. Se lee junto a ${obra.pasaje}.`
+              : `Tapa de ${obra.title}.`}
           </figcaption>
         </figure>
         <div>
-          <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-            Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
-          </p>
+          {enOrden ? (
+            <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
+              Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
+            </p>
+          ) : obra.numeroSerieAmazon ? (
+            <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
+              Serie Cielo Efata · nº {obra.numeroSerieAmazon}
+            </p>
+          ) : null}
           <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">
             {obra.title}
           </h1>
-          <p className="mt-2 font-sans text-sm tracking-wide text-gold">
-            {obra.subtitulo}
-          </p>
+          {obra.subtitulo ? (
+            <p className="mt-2 font-sans text-sm tracking-wide text-gold">
+              {obra.subtitulo}
+            </p>
+          ) : null}
           <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
-          <p className="mt-2 font-sans text-sm tracking-wide text-ink-soft">
-            Capítulo ancla: {obra.pasaje}
-          </p>
+          {obra.pasaje ? (
+            <p className="mt-2 font-sans text-sm tracking-wide text-ink-soft">
+              Capítulo ancla: {obra.pasaje}
+            </p>
+          ) : null}
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             {obra.asinEbook && !obra.sinAmazon ? (
               <a
@@ -118,44 +131,56 @@ export function ObraPage() {
       <p className="mt-10 text-lg leading-relaxed">
         <ConLemas>{obra.line}</ConLemas>
       </p>
-      <p className="mt-5 leading-relaxed">
-        <ConLemas>{obra.thesis}</ConLemas>
-      </p>
-      <p className="mt-3 font-sans text-sm tracking-wide text-gold">
-        <Cite>{obra.ref}</Cite>
-      </p>
-
-      <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
-      <p className="mt-4 leading-relaxed">
-        Este es el libro {ROMANO[obra.lectura]} en el orden de lectura sugerido
-        (que no es el de publicación). Se empieza por Pórtico a la Escritura, y
-        en Éfata se aprende a leer el capítulo entero antes de hablar. Cada
-        libro se lee junto al capítulo de la Biblia en que se apoya.
-      </p>
-      <ol className="mt-5 space-y-2">
-        {obras.map((o) => (
-          <li
-            key={o.slug}
-            className={o.slug === obra.slug ? "text-ink" : "text-ink-soft"}
-          >
-            <Link
-              to="/obras/$slug"
-              params={{ slug: o.slug }}
-              className="hover:text-gold"
-            >
-              {ROMANO[o.lectura]}. {o.title}
-              {o.slug === obra.slug ? " · este libro" : ""}
-            </Link>
-          </li>
-        ))}
-      </ol>
-
-      <h2 className="mt-12 font-serif text-3xl">Sobre este libro</h2>
-      {muestra.map((p) => (
-        <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
-          <ConLemas>{p}</ConLemas>
+      {obra.thesis ? (
+        <p className="mt-5 leading-relaxed">
+          <ConLemas>{obra.thesis}</ConLemas>
         </p>
-      ))}
+      ) : null}
+      {obra.ref ? (
+        <p className="mt-3 font-sans text-sm tracking-wide text-gold">
+          <Cite>{obra.ref}</Cite>
+        </p>
+      ) : null}
+
+      {enOrden ? (
+        <>
+          <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
+          <p className="mt-4 leading-relaxed">
+            Este es el libro {ROMANO[obra.lectura]} en el orden de lectura sugerido
+            (que no es el de publicación). Se empieza por Pórtico a la Escritura, y
+            en Éfata se aprende a leer el capítulo entero antes de hablar. Cada
+            libro se lee junto al capítulo de la Biblia en que se apoya.
+          </p>
+          <ol className="mt-5 space-y-2">
+            {obras.map((o) => (
+              <li
+                key={o.slug}
+                className={o.slug === obra.slug ? "text-ink" : "text-ink-soft"}
+              >
+                <Link
+                  to="/obras/$slug"
+                  params={{ slug: o.slug }}
+                  className="hover:text-gold"
+                >
+                  {ROMANO[o.lectura]}. {o.title}
+                  {o.slug === obra.slug ? " · este libro" : ""}
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </>
+      ) : null}
+
+      {muestra.length ? (
+        <>
+          <h2 className="mt-12 font-serif text-3xl">Sobre este libro</h2>
+          {muestra.map((p) => (
+            <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
+              <ConLemas>{p}</ConLemas>
+            </p>
+          ))}
+        </>
+      ) : null}
 
       <h2 id="obtener" className="mt-12 scroll-mt-24 font-serif text-3xl">
         Cómo obtenerlo
@@ -232,11 +257,13 @@ export function ObraPage() {
             <BtnArrow />
           </Link>
         ) : null}
-        <LeerCapitulo
-          ref={obra.pasaje}
-          desde={`/obras/${obra.slug}`}
-          companeros={[study?.ref, tratado?.ref]}
-        />
+        {obra.pasaje ? (
+          <LeerCapitulo
+            ref={obra.pasaje}
+            desde={`/obras/${obra.slug}`}
+            companeros={[study?.ref, tratado?.ref]}
+          />
+        ) : null}
         {obra.crisol ? (
           <Link to="/crisol" className="btn btn-ghost">
             C.R.I.S.O.L.
@@ -244,35 +271,37 @@ export function ObraPage() {
         ) : null}
       </div>
 
-      <nav
-        className="mt-14 flex flex-col gap-3 border-t border-rule pt-6 sm:flex-row sm:justify-between"
-        aria-label="Orden de lectura"
-      >
-        {prev ? (
-          <Link
-            to="/obras/$slug"
-            params={{ slug: prev.slug }}
-            className="text-link underline"
-          >
-            Anterior: {ROMANO[prev.lectura]}. {prev.title}
-          </Link>
-        ) : (
-          <span />
-        )}
-        {next ? (
-          <Link
-            to="/obras/$slug"
-            params={{ slug: next.slug }}
-            className="text-link underline"
-          >
-            Siguiente: {ROMANO[next.lectura]}. {next.title}
-          </Link>
-        ) : null}
-      </nav>
+      {enOrden ? (
+        <nav
+          className="mt-14 flex flex-col gap-3 border-t border-rule pt-6 sm:flex-row sm:justify-between"
+          aria-label="Orden de lectura"
+        >
+          {prev ? (
+            <Link
+              to="/obras/$slug"
+              params={{ slug: prev.slug }}
+              className="text-link underline"
+            >
+              Anterior: {ROMANO[prev.lectura]}. {prev.title}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {next ? (
+            <Link
+              to="/obras/$slug"
+              params={{ slug: next.slug }}
+              className="text-link underline"
+            >
+              Siguiente: {ROMANO[next.lectura]}. {next.title}
+            </Link>
+          ) : null}
+        </nav>
+      ) : null}
       <p className="mt-6 font-sans text-sm">
         <Link
           to="/obras"
-          hash={`lectura-${obra.lectura}`}
+          hash={enOrden ? `lectura-${obra.lectura}` : "fuera"}
           className="text-link underline"
         >
           Volver al catálogo
