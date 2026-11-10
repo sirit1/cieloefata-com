@@ -7,7 +7,7 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
-import { CORPUS, obras, ROMANO, tapaPath, type Obra } from "@/lib/content";
+import { CORPUS, fichas, obras, ROMANO, tapaPath, type Obra } from "@/lib/content";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -62,7 +62,9 @@ function ObrasPage() {
         ))}
       </ul>
 
-      <h2 className="mt-14 font-serif text-3xl">Fuera del orden de lectura</h2>
+      <h2 id="fuera" className="mt-14 scroll-mt-24 font-serif text-3xl">
+        Fuera del orden de lectura
+      </h2>
       <p className="mt-4 leading-relaxed">
         <Link to="/obras/el-paraclito-eterno" className="text-link underline">
           El Paráclito Eterno
@@ -70,6 +72,47 @@ function ObrasPage() {
         , estudio de la Serie Cielo Efata sobre Juan 14–16: el Espíritu Santo no es una energía
         que se activa, sino una Persona divina que el Padre envía en el nombre del Hijo.
       </p>
+      <ul className="mt-8 space-y-10">
+        {fichas.map((o) => (
+          <li key={o.slug} id={o.slug} className="scroll-mt-24 border-t border-rule pt-6">
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+              <Link
+                to="/obras/$slug"
+                params={{ slug: o.slug }}
+                className="shrink-0 self-start"
+                aria-hidden
+                tabIndex={-1}
+              >
+                <Tapa obra={o} size="sm" />
+              </Link>
+              <div className="min-w-0 flex-1">
+                {o.numeroSerieAmazon ? (
+                  <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
+                    Serie Cielo Efata · nº {o.numeroSerieAmazon}
+                  </p>
+                ) : null}
+                <h2 className="tomo-title mt-3">
+                  <Link to="/obras/$slug" params={{ slug: o.slug }} className="hover:text-gold">
+                    {o.title}
+                  </Link>
+                </h2>
+                {o.subtitulo ? (
+                  <p className="mt-2 font-sans text-sm tracking-wide text-gold">{o.subtitulo}</p>
+                ) : null}
+                <p className="mt-4 text-lg">
+                  <ConLemas>{o.line}</ConLemas>
+                </p>
+                <div className="mt-5">
+                  <Link to="/obras/$slug" params={{ slug: o.slug }} className="btn btn-ink">
+                    Examinar este libro
+                    <BtnArrow />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
     </main>
   );
 }

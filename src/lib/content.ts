@@ -164,6 +164,8 @@ export type Obra = {
   revelatioSlug?: string;
   /** Edición nueva aún no publicada en Amazon: la ficha no muestra botón ni búsqueda de Amazon. */
   sinAmazon?: boolean;
+  /** «Cielo Efata nº N» en la ficha de Amazon. No se inventa si Amazon no lo pone. */
+  numeroSerieAmazon?: number;
 };
 
 /** Enlace de la ficha del libro a su libro en RevelatiO, con utm_campaign = slug. */
@@ -400,8 +402,75 @@ export const obras: Obra[] = [
   },
 ];
 
+/**
+ * Ebooks ya publicados en Amazon que no entran en el orden de lectura I–IX.
+ * Título, subtítulo y descripción salen de la ficha de Amazon (10 nov 2026),
+ * recortados al largo de las descripciones del sitio, sin reescribirlos.
+ */
+export const fichas: Obra[] = [
+  {
+    n: 0,
+    lectura: 0,
+    slug: "norma-normans-non-normata",
+    title: "Norma normans non normata",
+    subtitulo: "El método V.E.R.D.A.D. para leer la Escritura",
+    seoTitle:
+      "Norma normans non normata: El método V.E.R.D.A.D. para leer la Escritura | Alejandro Sirit",
+    seoDescription:
+      "Cuando un texto puede significar cualquier cosa, deja de significar algo. Norma normans non normata presenta V.E.R.D.A.D.",
+    line: "Cuando un texto puede significar cualquier cosa, deja de significar algo. Norma normans non normata presenta V.E.R.D.A.D.",
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HPPTSKCN",
+    asinPrint: "B0HPQF8W68",
+    isbnPrint: "9798166300706",
+    numeroSerieAmazon: 10,
+  },
+  {
+    n: 0,
+    lectura: 0,
+    slug: "callar-para-ganar",
+    title: "Callar para ganar",
+    subtitulo: "Guía Práctica para encontrar respuestas con tu silencio",
+    seoTitle:
+      "Callar para ganar: Guía Práctica para encontrar respuestas con tu silencio | Alejandro Sirit",
+    seoDescription:
+      '¿Y si la verdadera ventaja competitiva no estuviera en lo que dices, sino en lo que callas? Vivimos en la era de la "Oratoria Vacía".',
+    line: '¿Y si la verdadera ventaja competitiva no estuviera en lo que dices, sino en lo que callas? Vivimos en la era de la "Oratoria Vacía".',
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HQ3331LP",
+    numeroSerieAmazon: 12,
+  },
+  {
+    n: 0,
+    lectura: 0,
+    slug: "el-mundo-pregunta-dios-responde",
+    title: "El mundo pregunta, Dios responde",
+    subtitulo: "",
+    seoTitle: "El mundo pregunta, Dios responde | Alejandro Sirit",
+    seoDescription:
+      "Toda generación de creyentes ha tenido que responder a la misma pregunta que la serpiente formuló en el huerto: «¿Conque Dios os ha dicho...?».",
+    line: "Toda generación de creyentes ha tenido que responder a la misma pregunta que la serpiente formuló en el huerto: «¿Conque Dios os ha dicho...?».",
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HPS6B63Z",
+    asinPrint: "B0HQ29MJS6",
+    isbnPrint: "9798167125032",
+  },
+];
+
 export function obraBySlug(slug: string) {
-  return obras.find((o) => o.slug === slug);
+  return obras.find((o) => o.slug === slug) ?? fichas.find((o) => o.slug === slug);
 }
 
 export function obrasDesdeAula(kind: AulaKind, slug: string) {

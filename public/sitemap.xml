@@ -338,6 +338,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.cieloefata.com/obras/norma-normans-non-normata</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cieloefata.com/obras/callar-para-ganar</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.cieloefata.com/obras/el-mundo-pregunta-dios-responde</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.cieloefata.com/articulos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

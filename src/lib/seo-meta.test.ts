@@ -8,7 +8,7 @@ import { CRISOL_ORIGEN } from "./crisol.ts";
 import { CUADERNO_VACIO } from "./copy-nivel.ts";
 import { SELLO } from "./identidad.ts";
 import { ESCRITURA } from "./pilar.ts";
-import { obras, obrasDesdeAula, qrRevelatioPath, urlRevelatioLibro } from "./content.ts";
+import { fichas, obras, obrasDesdeAula, qrRevelatioPath, urlRevelatioLibro } from "./content.ts";
 import { studies } from "./studies.ts";
 import { tipoDe } from "./clasificacion.ts";
 import { entradaTratado, tratados, tratadosPublicados } from "./tratados.ts";
@@ -63,6 +63,9 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
   for (const obra of obras) {
     note(`/obras/${obra.slug}`, obra.seoTitle, obra.seoDescription);
   }
+  for (const obra of fichas) {
+    note(`/obras/${obra.slug}`, obra.seoTitle, obra.seoDescription);
+  }
   note(`/obras/${PARACLITO.slug}`, PARACLITO.seoTitle, PARACLITO.seoDescription);
   note("/articulos", tituloSeccion("Artículos"), DESCRIPCION_ARTICULOS);
   for (const a of articulos) note(`/articulos/${a.slug}`, a.seoTitle, a.seoDescription);
@@ -115,6 +118,26 @@ test("ASIN e ISBN de imprenta coinciden con las fichas publicadas en Amazon", ()
   }
 });
 
+test("las fichas fuera del orden copian Amazon y no renumeran los nueve", () => {
+  assert.equal(obras.length, 9);
+  assert.deepEqual(
+    fichas.map((o) => [o.slug, o.asinEbook, o.asinPrint ?? "", o.isbnPrint ?? "", o.numeroSerieAmazon ?? 0]),
+    [
+      ["norma-normans-non-normata", "B0HPPTSKCN", "B0HPQF8W68", "9798166300706", 10],
+      ["callar-para-ganar", "B0HQ3331LP", "", "", 12],
+      ["el-mundo-pregunta-dios-responde", "B0HPS6B63Z", "B0HQ29MJS6", "9798167125032", 0],
+    ],
+  );
+  const callar = fichas.find((o) => o.slug === "callar-para-ganar");
+  assert.equal(callar?.asinPrint, undefined);
+  assert.equal(callar?.isbnPrint, undefined);
+  const mundo = fichas.find((o) => o.slug === "el-mundo-pregunta-dios-responde");
+  assert.equal(mundo?.numeroSerieAmazon, undefined);
+  assert.equal(mundo?.subtitulo, "");
+  const vercel = readFileSync(new URL("../../vercel.json", import.meta.url), "utf8");
+  assert.equal(vercel.includes("/obras/callar-para-ganar"), false);
+});
+
 function robotsDe(head: ReturnType<typeof pageHead>) {
   const tag = head.meta.find((m) => "name" in m && m.name === "robots");
   return tag && "content" in tag ? tag.content : undefined;
@@ -162,7 +185,7 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
       fechasArticulo({ clase: "tratado", slug, pack: true, n: t.n }).modified,
     );
   }
-  for (const obra of obras) {
+  for (const obra of [...obras, ...fichas]) {
     const loc = `${SITE_ORIGIN}/obras/${obra.slug}`;
     const bloque = bloques.find((b) => b.loc === loc);
     assert.ok(bloque, loc);

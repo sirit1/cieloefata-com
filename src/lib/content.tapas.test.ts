@@ -13,6 +13,9 @@ const SLUGS = [
   "cuando-el-cielo-se-cae",
   "el-altar-del-espejo",
   "de-una-misma-boca",
+  "norma-normans-non-normata",
+  "callar-para-ganar",
+  "el-mundo-pregunta-dios-responde",
 ] as const;
 
 test("los los libros cuelgan tapa KDP bajo public/TAPAS", () => {
