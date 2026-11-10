@@ -4,6 +4,7 @@ import { FichaPalabra } from "@/components/ficha-palabra";
 import { IdleBar } from "@/components/idle-bar";
 import { Medicion } from "@/components/medicion";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
+import { FranjaSeccion } from "@/components/franja-seccion";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { BannerVerdad } from "@/components/banner-verdad";
@@ -58,6 +59,7 @@ export const Route = createRootRoute({
           <div className="flex min-h-dvh flex-col">
             <BannerVerdad />
             <SiteHeader />
+            <FranjaSeccion />
             <div id="contenido" className="flex-1" tabIndex={-1}>
               <Outlet />
             </div>

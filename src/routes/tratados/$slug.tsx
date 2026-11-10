@@ -68,6 +68,7 @@ function TratadoPage() {
       titulo={tratado.title}
       pasaje={tratado.ref}
       slug={tratado.slug}
+      casa="tratado"
     >
       <ArticleJsonLd
         headline={tituloTratado(tratado.title, tipoDe(tratado.slug, "tratado"))}
@@ -75,11 +76,12 @@ function TratadoPage() {
         published={fechas?.published}
         modified={fechas?.modified}
       />
-      <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-        {etiquetaTratado(tratado.slug)} · {tratado.kicker} · {tratado.ref}
-      </p>
-      {fechas ? <p className="mt-3 font-sans text-sm text-ink-soft">{lineaFechas(fechas)}</p> : null}
-      <h1 className="mt-2 font-serif text-4xl md:text-5xl">{tratado.title}</h1>
+      <p className="casa-serie">Serie Cielo Efata</p>
+      <p className="casa-tipo">{etiquetaTratado(tratado.slug)}</p>
+      <div className="casa-filete" aria-hidden />
+      <h1>{tratado.title}</h1>
+      <p className="casa-pasaje">{tratado.kicker} · {tratado.ref}</p>
+      {fechas ? <p className="mt-3 text-center font-sans text-sm text-[#7b6a48]">{lineaFechas(fechas)}</p> : null}
       <InsigniaTipo slug={tratado.slug} seccion="tratado" className="mt-3" />
       <SelloVerdad clave={tratado.ref} />
       <p className="mt-6">
