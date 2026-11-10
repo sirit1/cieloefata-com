@@ -67,7 +67,7 @@ body:has(.casa-tratados) {
   padding: 0.45em 0.85em;
 }
 
-.casa-subir {
+.casa-tratados .casa-subir {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -83,7 +83,7 @@ body:has(.casa-tratados) {
   border-radius: 999px;
 }
 
-.casa-anclas {
+.casa-tratados .casa-anclas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -96,7 +96,7 @@ body:has(.casa-tratados) {
   font-weight: 700;
 }
 
-.casa-anclas a {
+.casa-tratados .casa-anclas a {
   color: #7a5414;
   text-decoration: underline;
   text-underline-offset: 3px;

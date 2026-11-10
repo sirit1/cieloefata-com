@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "./fonts.css";
 @import "./casas/tratados.css";
+@import "./casas/estudios.css";
 
 /* Identidad del sello: tinta, oro, pergamino. No hay una cuarta. */
 @theme {

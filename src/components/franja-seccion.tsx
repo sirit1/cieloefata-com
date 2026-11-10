@@ -6,5 +6,8 @@ export function FranjaSeccion() {
   if (path === "/tratados" || path.startsWith("/tratados/")) {
     return <p className="franja-seccion franja-tratados">Tratados · la hoja impresa, en la mano</p>;
   }
+  if (path === "/estudios" || path.startsWith("/estudios/")) {
+    return <p className="franja-seccion franja-estudios">Estudios · el cuaderno abierto junto al pasaje</p>;
+  }
   return null;
 }
