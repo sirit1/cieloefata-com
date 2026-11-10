@@ -3,6 +3,7 @@ import { Printer, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Compartir } from "@/components/compartir";
 import { IndiceHoja } from "@/components/indice-hoja";
+import { NotasMargen, PasosCuaderno } from "@/components/notas-margen";
 import { Subir } from "@/components/subir";
 import { Seal } from "@/components/seal";
 import { Escuchar } from "@/components/escuchar";
@@ -32,10 +33,12 @@ export function Aula({
   titulo?: string;
   pasaje: string;
   slug: string;
-  /** Pergamino de tratados. Sin este valor el aula de estudios queda como está. */
-  casa?: "tratado";
+  /** Pergamino de tratados o cuaderno de estudios. Sin valor, el aula sigue siendo el modal. */
+  casa?: "tratado" | "estudio";
 }) {
   const enHoja = casa === "tratado";
+  const enCuaderno = casa === "estudio";
+  const enFlujo = enHoja || enCuaderno;
   const navigate = useNavigate();
   const root = useRef<HTMLDivElement>(null);
   const capa = useRef<HTMLDivElement>(null);
@@ -58,7 +61,7 @@ export function Aula({
 
   // Barra de progreso y «seguir donde ibas»: se guarda la fracción leída, nunca el texto.
   useEffect(() => {
-    const nodo = enHoja ? document.documentElement : capa.current;
+    const nodo = enFlujo ? document.documentElement : capa.current;
     if (!nodo) return;
     const el = nodo;
     setPrevio(progresoDe(slug));
@@ -67,7 +70,8 @@ export function Aula({
     function medir() {
       raf = 0;
       const max = el.scrollHeight - el.clientHeight;
-      const f = max > 0 ? el.scrollTop / max : 0;
+      const top = enFlujo ? window.scrollY : el.scrollTop;
+      const f = max > 0 ? top / max : 0;
       if (barra.current) barra.current.style.transform = `scaleX(${f})`;
       if (Math.abs(f - guardado) > 0.03) {
         guardado = f;
@@ -77,16 +81,22 @@ export function Aula({
     function onScroll() {
       if (!raf) raf = requestAnimationFrame(medir);
     }
-    const blanco = enHoja ? window : el;
-    blanco.addEventListener("scroll", onScroll, { passive: true });
+    const objetivo: HTMLElement | Window = enFlujo ? window : el;
+    objetivo.addEventListener("scroll", onScroll, { passive: true });
     return () => {
-      blanco.removeEventListener("scroll", onScroll);
+      objetivo.removeEventListener("scroll", onScroll);
       if (raf) cancelAnimationFrame(raf);
     };
-  }, [slug, enHoja]);
+  }, [slug, enFlujo]);
 
   function seguir() {
-    const el = enHoja ? document.documentElement : capa.current;
+    if (enFlujo) {
+      const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      window.scrollTo({ top: previo * max, behavior: "smooth" });
+      setPrevio(0);
+      return;
+    }
+    const el = capa.current;
     if (!el) return;
     el.scrollTo({ top: previo * (el.scrollHeight - el.clientHeight), behavior: "smooth" });
     setPrevio(0);
@@ -94,10 +104,10 @@ export function Aula({
 
   useEffect(() => {
     const prev = document.body.style.overflow;
-    if (!enHoja) document.body.style.overflow = "hidden";
+    if (!enFlujo) document.body.style.overflow = "hidden";
     const sheet = root.current;
     const before = document.activeElement as HTMLElement | null;
-    if (!enHoja) sheet?.focus();
+    if (!enFlujo) sheet?.focus();
 
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") {
@@ -105,7 +115,7 @@ export function Aula({
         void navigate({ to: salir });
         return;
       }
-      if (enHoja || e.key !== "Tab" || !sheet) return;
+      if (enFlujo || e.key !== "Tab" || !sheet) return;
       const list = [...sheet.querySelectorAll<HTMLElement>(FOCUSABLE)].filter(
         (el) => !el.hasAttribute("disabled") && el.tabIndex !== -1,
       );
@@ -132,7 +142,101 @@ export function Aula({
       document.removeEventListener("keydown", onKey);
       before?.focus?.();
     };
-  }, [navigate, salir, enHoja]);
+  }, [navigate, salir, enFlujo]);
+
+  const hoja = (
+    <div
+      ref={root}
+      role={enFlujo ? undefined : "dialog"}
+      aria-modal={enFlujo ? undefined : true}
+      aria-label={titulo}
+      tabIndex={-1}
+      id={enHoja ? "hoja-tratado" : enCuaderno ? "hoja-estudio" : undefined}
+      className={
+        enHoja
+          ? "aula-hoja casa-hoja text-ink outline-none"
+          : enCuaderno
+            ? "hoja-c aula-hoja text-ink outline-none"
+            : "aula-hoja mx-auto w-full max-w-xl bg-parchment px-5 py-8 text-ink outline-none sm:my-10 sm:px-10 sm:shadow-[0_24px_80px_rgba(0,0,0,0.55)]"
+      }
+    >
+      {enHoja ? (
+        <>
+          <span className="casa-esq a" aria-hidden>❧</span>
+          <span className="casa-esq b" aria-hidden>❧</span>
+          <span className="casa-esq c" aria-hidden>❧</span>
+          <span className="casa-esq d" aria-hidden>❧</span>
+        </>
+      ) : null}
+      <div className="progreso-lectura" aria-hidden>
+        <span ref={barra} style={{ transform: "scaleX(0)" }} />
+      </div>
+      {enCuaderno ? <PasosCuaderno raiz="hoja-estudio" /> : null}
+      <nav
+        aria-label="Cielo Efata"
+        className={`no-imprimir sticky top-0 z-10 -mx-5 -mt-8 mb-4 flex items-center gap-3 border-b border-rule/50 bg-parchment px-5 py-1 font-sans text-sm sm:-mx-10 sm:px-10 ${enFlujo ? "hidden" : ""}`}
+      >
+        <Link to="/" className="inline-flex min-h-11 items-center gap-2" aria-label="Cielo Efata, inicio">
+          <Seal variant="mark" size={32} className="h-8 w-8" />
+          <span className="wordmark text-sm">Cielo Efata</span>
+        </Link>
+        <Link to={salir} className="ml-auto inline-flex min-h-11 items-center px-2 tracking-[0.14em] uppercase text-link">
+          {salir === "/tratados" ? "Tratados" : "Estudios"}
+        </Link>
+      </nav>
+      <div className={`no-imprimir mb-6 flex flex-wrap items-center gap-2 font-sans text-sm ${enHoja ? "casa-acc" : ""}`}>
+        <Escuchar partes={partes} etiqueta={etiqueta} />
+        <Compartir titulo={titulo} pasaje={pasaje} ruta={`${salir}/${slug}`} />
+        <button type="button" className="chip" onClick={() => window.print()}>
+          <Printer size={16} aria-hidden />
+          PDF
+          <span className="sr-only"> (imprimir o guardar como PDF)</span>
+        </button>
+        <Link to={salir} className="ml-auto inline-flex min-h-11 items-center gap-2 text-gold">
+          <X size={18} aria-hidden />
+          Cerrar
+        </Link>
+      </div>
+      <p className="meta-lectura mb-6">
+        <span>{minutos} min de lectura</span>
+        {previo > 0.05 && previo < 0.95 ? (
+          <button type="button" onClick={seguir} className="text-link underline underline-offset-4">
+            Seguir donde ibas ({Math.round(previo * 100)} %)
+          </button>
+        ) : null}
+      </p>
+      {children}
+    </div>
+  );
+
+  if (enCuaderno) {
+    const partesVoz = voz && escritura?.includes(voz) ? escritura.split(voz) : null;
+    return (
+      <div ref={capa} id="contenido" data-aula data-casa="estudio" className="casa-estudios cuaderno">
+        <aside className="pasaje-col">
+          <p className="lbl">El pasaje · a la vista</p>
+          <h2>{pasaje}</h2>
+          <p className="rv">Reina-Valera 1960 · léelo entero antes de estudiar</p>
+          {escritura ? (
+            <p className="vs">
+              {partesVoz ? (
+                <>
+                  {partesVoz[0]}
+                  <strong className="voz">{voz}</strong>
+                  {partesVoz.slice(1).join(voz)}
+                </>
+              ) : (
+                escritura
+              )}
+            </p>
+          ) : null}
+        </aside>
+        {hoja}
+        <NotasMargen raiz="hoja-estudio" />
+        <Subir />
+      </div>
+    );
+  }
 
   return (
     <div
@@ -147,65 +251,7 @@ export function Aula({
       }
       style={enHoja ? undefined : { background: "rgba(8, 17, 27, 0.88)" }}
     >
-      <div
-        ref={root}
-        role={enHoja ? undefined : "dialog"}
-        aria-modal={enHoja ? undefined : true}
-        aria-label={titulo}
-        tabIndex={-1}
-        id={enHoja ? "hoja-tratado" : undefined}
-        className={
-          enHoja
-            ? "aula-hoja casa-hoja text-ink outline-none"
-            : "aula-hoja mx-auto w-full max-w-xl bg-parchment px-5 py-8 text-ink outline-none sm:my-10 sm:px-10 sm:shadow-[0_24px_80px_rgba(0,0,0,0.55)]"
-        }
-      >
-        {enHoja ? (
-          <>
-            <span className="casa-esq a" aria-hidden>❧</span>
-            <span className="casa-esq b" aria-hidden>❧</span>
-            <span className="casa-esq c" aria-hidden>❧</span>
-            <span className="casa-esq d" aria-hidden>❧</span>
-          </>
-        ) : null}
-        <div className="progreso-lectura" aria-hidden>
-          <span ref={barra} style={{ transform: "scaleX(0)" }} />
-        </div>
-        <nav
-          aria-label="Cielo Efata"
-          className={`no-imprimir sticky top-0 z-10 -mx-5 -mt-8 mb-4 flex items-center gap-3 border-b border-rule/50 bg-parchment px-5 py-1 font-sans text-sm sm:-mx-10 sm:px-10 ${enHoja ? "hidden" : ""}`}
-        >
-          <Link to="/" className="inline-flex min-h-11 items-center gap-2" aria-label="Cielo Efata, inicio">
-            <Seal variant="mark" size={32} className="h-8 w-8" />
-            <span className="wordmark text-sm">Cielo Efata</span>
-          </Link>
-          <Link to={salir} className="ml-auto inline-flex min-h-11 items-center px-2 tracking-[0.14em] uppercase text-link">
-            {salir === "/tratados" ? "Tratados" : "Estudios"}
-          </Link>
-        </nav>
-        <div className={`no-imprimir mb-6 flex flex-wrap items-center gap-2 font-sans text-sm ${enHoja ? "casa-acc" : ""}`}>
-          <Escuchar partes={partes} etiqueta={etiqueta} />
-          <Compartir titulo={titulo} pasaje={pasaje} ruta={`${salir}/${slug}`} />
-          <button type="button" className="chip" onClick={() => window.print()}>
-            <Printer size={16} aria-hidden />
-            PDF
-            <span className="sr-only"> (imprimir o guardar como PDF)</span>
-          </button>
-          <Link to={salir} className="ml-auto inline-flex min-h-11 items-center gap-2 text-gold">
-            <X size={18} aria-hidden />
-            Cerrar
-          </Link>
-        </div>
-        <p className="meta-lectura mb-6">
-          <span>{minutos} min de lectura</span>
-          {previo > 0.05 && previo < 0.95 ? (
-            <button type="button" onClick={seguir} className="text-link underline underline-offset-4">
-              Seguir donde ibas ({Math.round(previo * 100)} %)
-            </button>
-          ) : null}
-        </p>
-        {children}
-      </div>
+      {hoja}
       {enHoja ? <IndiceHoja raiz="hoja-tratado" /> : null}
       {enHoja ? <Subir /> : null}
     </div>

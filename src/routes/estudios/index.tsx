@@ -12,6 +12,7 @@ import { etiquetaEstudio, etiquetaTratado } from "@/lib/etiquetas";
 import { LABORATORIOS } from "@/lib/verdad";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 
+import { Subir } from "@/components/subir";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { InsigniaTipo } from "@/components/insignia-tipo";
 import { portadaV2 } from "@/lib/libros/v2";
@@ -54,25 +55,40 @@ function EstudiosPage() {
   }));
 
   return (
-    <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
-      <Volver />
-      <h1 className="mt-2 font-serif text-4xl">Estudios bíblicos</h1>
-      <p className="mt-5 text-lg leading-relaxed">
-        Cada estudio recorre un pasaje completo con el método V.E.R.D.A.D. —Ver, Entorno,
-        Revelación, Doctrina, Argumento y Decisión—. Primero leemos el capítulo entero; después
-        lo estudiamos juntos hasta llegar a un paso concreto de obediencia, que conviene
-        compartir con alguien de confianza.
-      </p>
-      <p className="mt-4 font-sans text-sm text-ink-soft">{PARA_QUIEN.estudio}</p>
-      <Refs refs="Neh. 8:8 · 2 Ti. 3:16" />
-      <p className="mt-4 font-sans text-sm">
-        <Link to="/metodo" className="text-link underline">
-          Cómo se recorre un pasaje
-        </Link>
-      </p>
+    <main id="contenido" className="casa-estudios pb-20">
+      <div className="mx-auto max-w-[1240px] px-4 pt-6">
+        <Volver />
+      </div>
+      <nav className="casa-anclas" aria-label="En esta sección">
+        <a href="#semana">El estudio de esta semana</a>
+        <a href="#breves">Estudios breves</a>
+        <a href="#todos">Todos los estudios</a>
+        <a href="#generos">Por género literario</a>
+      </nav>
+      <header className="casa-portada">
+        <div className="izq">
+          <p className="kicker">Estudios</p>
+          <h1>Estudios bíblicos</h1>
+          <p className="casa-una-linea">{PARA_QUIEN.estudio}</p>
+        </div>
+        <div className="der">
+          <p>
+            Cada estudio recorre un pasaje completo con el método V.E.R.D.A.D. —Ver, Entorno,
+            Revelación, Doctrina, Argumento y Decisión—. Primero leemos el capítulo entero; después
+            lo estudiamos juntos hasta llegar a un paso concreto de obediencia, que conviene
+            compartir con alguien de confianza.
+          </p>
+          <Refs refs="Neh. 8:8 · 2 Ti. 3:16" />
+          <p className="mt-4 font-sans text-sm">
+            <Link to="/metodo" className="text-link underline">
+              Cómo se recorre un pasaje
+            </Link>
+          </p>
+        </div>
+      </header>
 
       {semana ? (
-        <article className="mt-16 border border-rule bg-paper px-6 py-10 md:px-9">
+        <article id="semana" className="casa-indice mt-8 px-6 py-8 md:px-9">
           <p className="font-serif text-lg italic text-gold">{esTratado(semana.slug) ? "El tratado de esta semana" : "El estudio de esta semana"}</p>
           <h2 className="mt-2 font-serif text-3xl">{semana.title}</h2>
           <p className="mt-1 text-gold">{semana.ref}</p>
@@ -128,7 +144,9 @@ function EstudiosPage() {
         </ul>
       </section>
 
-      <Lista titulo="Todos los estudios" items={publicados} />
+      <div id="todos">
+        <Lista titulo="Todos los estudios" items={publicados} />
+      </div>
 
       <p className="mt-10 font-sans text-sm">
         ¿Busca un tema por toda la Escritura?{" "}
@@ -137,7 +155,7 @@ function EstudiosPage() {
         </Link>
       </p>
 
-      <section className="mt-14">
+      <section id="generos" className="mx-auto mt-14 max-w-[1240px] px-4">
         <h2 className="font-serif text-3xl">Estudios por género literario</h2>
         <p className="mt-4 leading-relaxed">
           No se lee igual un relato que un himno o una visión. Estos tres estudios muestran
@@ -169,6 +187,7 @@ function EstudiosPage() {
           ))}
         </ul>
       </section>
+      <Subir />
     </main>
   );
 }

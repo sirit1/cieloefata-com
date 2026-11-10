@@ -105,6 +105,7 @@ function StudyPage() {
       etiqueta={`Oír ${study.title}`}
       pasaje={study.ref}
       slug={study.slug}
+      casa="estudio"
     >
       <ArticleJsonLd
         headline={tituloEstudio(study.ref)}
