@@ -1,0 +1,253 @@
+/* Casa Libros: vitrina azul noche y oro.
+   Títulos: Cinzel. Cuerpo: Outfit.
+   Cabecera y pie siguen Cormorant y Source Sans. */
+
+@font-face {
+  font-family: "Cinzel Casa";
+  src: url("/fonts/casas/cinzel-500.woff2") format("woff2");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit Casa";
+  src: url("/fonts/casas/outfit-400.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body:has(.casa-libros) {
+  background: #0c1018;
+}
+
+.franja-seccion {
+  position: sticky;
+  top: 4.6rem;
+  z-index: 35;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 7px 12px;
+}
+
+.franja-libros {
+  background: #0c1018;
+  color: #d9b871;
+  border-bottom: 1px solid rgba(217, 184, 113, 0.35);
+}
+
+.casa-libros {
+  --casa-display: "Cinzel Casa", Palatino, serif;
+  --casa-text: "Outfit Casa", "Source Sans 3", sans-serif;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 5rem;
+  color: #f3ead7;
+  font-family: var(--casa-text);
+}
+
+.casa-libros h1,
+.casa-libros h2,
+.casa-libros h3,
+.casa-libros .casa-una-linea,
+.casa-libros .casa-romano {
+  font-family: var(--casa-display);
+  color: #f6efdc;
+}
+
+.casa-libros h1 {
+  font-weight: 500;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+}
+
+.casa-libros h2 {
+  font-weight: 500;
+  scroll-margin-top: 7rem;
+}
+
+.casa-libros p,
+.casa-libros li {
+  font-family: var(--casa-text);
+}
+
+.casa-libros .casa-una-linea {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.35;
+  color: #d9b871;
+  max-width: 28em;
+}
+
+.casa-libros .text-gold,
+.casa-libros .kicker {
+  color: #d9b871;
+}
+
+.casa-libros .text-ink,
+.casa-libros .text-ink-soft {
+  color: #e7dfcf;
+}
+
+.casa-libros .text-link {
+  color: #f0d9a0;
+}
+
+.casa-libros .border-rule {
+  border-color: rgba(217, 184, 113, 0.35);
+}
+
+.casa-libros .bg-paper {
+  background: #141a2a;
+}
+
+.casa-libros .btn-ink,
+.casa-libros .btn-gold {
+  background: #d9b871;
+  color: #0c1018;
+  border-color: #d9b871;
+}
+
+.casa-libros .btn-ghost,
+.casa-libros .btn-wa {
+  background: transparent;
+  color: #f6efdc;
+  border-color: #d9b871;
+}
+
+.casa-libros .casa-tesis {
+  font-family: var(--casa-display);
+  font-size: 1.35rem;
+  line-height: 1.45;
+  border-left: 3px solid #d9b871;
+  padding: 0.2rem 0 0.2rem 1rem;
+  margin-top: 1rem;
+}
+
+.casa-libros .casa-verso {
+  font-family: var(--casa-text);
+  font-style: italic;
+  color: #f0d9a0;
+}
+
+.casa-libros .voz,
+.casa-libros .voz-dios {
+  font-style: italic;
+  font-weight: 700;
+  color: inherit;
+}
+
+.casa-libros .casa-riel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.4rem 0 0.4rem;
+}
+
+.casa-libros .casa-riel a {
+  font-family: var(--casa-display);
+  color: #d9b871;
+  border: 1px solid rgba(217, 184, 113, 0.55);
+  min-width: 2.6rem;
+  text-align: center;
+  padding: 0.35rem 0.55rem;
+  text-decoration: none;
+}
+
+.casa-libros .casa-riel a[aria-current="true"] {
+  background: #d9b871;
+  color: #0c1018;
+}
+
+.casa-libros .casa-siguen {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.casa-libros .casa-siguen > li {
+  border: 0;
+  padding: 0;
+}
+
+.casa-libros .casa-siguen .casa-romano {
+  font-size: 2rem;
+}
+
+.casa-libros .casa-siguen img,
+.casa-libros .casa-vitrina img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.casa-libros .casa-vitrina {
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) 1fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2rem;
+  padding: 1.6rem;
+  border: 1px solid rgba(217, 184, 113, 0.4);
+  background: #141a2a;
+}
+
+.casa-libros .casa-ficha {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.casa-libros .casa-anclas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin: 1rem 0 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.casa-libros .casa-anclas a {
+  color: #d9b871;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.casa-libros .casa-romano {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.9;
+  color: #d9b871;
+  margin: 0;
+}
+
+.casa-libros .casa-subir {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 36;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: #d9b871;
+  color: #0c1018;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 720px) {
+  .casa-libros .casa-vitrina,
+  .casa-libros .casa-ficha,
+  .casa-libros .casa-siguen {
+    grid-template-columns: 1fr;
+  }
+}
