@@ -1,11 +1,31 @@
 /* Casa Tratados: pergamino, marco doble de oro, capitulares y florones.
-   Solo vive bajo .casa-tratados. La cabecera, el pie y las otras casas no cambian. */
+   Solo vive bajo .casa-tratados. La cabecera, el pie y las otras casas no cambian.
+   Títulos: Libre Baskerville. Cuerpo: Spectral. */
+
+@font-face {
+  font-family: "Baskerville Casa";
+  src: url("/fonts/casas/librebaskerville-400.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Spectral Casa";
+  src: url("/fonts/casas/spectral-400.woff2") format("woff2");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 body:has(.casa-tratados) {
   background: #e9dfc9 radial-gradient(ellipse at 50% 0, #efe6d2 0, #ddd0b4 100%);
 }
 
 .franja-seccion {
+  position: sticky;
+  top: 4.6rem;
+  z-index: 35;
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 10.5px;
@@ -22,7 +42,69 @@ body:has(.casa-tratados) {
 }
 
 .casa-tratados {
+  --casa-display: "Baskerville Casa", Palatino, "Palatino Linotype", serif;
+  --casa-text: "Spectral Casa", Palatino, "Palatino Linotype", serif;
   color: #22243a;
+  font-family: var(--casa-text);
+}
+
+.casa-tratados h1,
+.casa-tratados h2,
+.casa-tratados h3,
+.casa-tratados .casa-una-linea {
+  font-family: var(--casa-display);
+}
+
+.casa-tratados p,
+.casa-tratados li,
+.casa-tratados .obra-v2 {
+  font-family: var(--casa-text);
+}
+
+.casa-tratados .obra-v2 p:has(.vers) {
+  background: rgba(30, 58, 110, 0.07);
+  border-left: 3px solid #1e3a6e;
+  padding: 0.45em 0.85em;
+}
+
+.casa-subir {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 36;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: #3a2e14;
+  color: #f6efdc;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+}
+
+.casa-anclas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 1.1rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1rem 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.casa-anclas a {
+  color: #7a5414;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.casa-tratados h2,
+.casa-tratados h3 {
+  scroll-margin-top: 7rem;
 }
 
 .casa-tratados .casa-mesa {
@@ -265,7 +347,7 @@ body:has(.casa-tratados) {
 
 .casa-lado {
   position: sticky;
-  top: 30px;
+  top: 7.2rem;
   margin-top: 40px;
   border-left: 1px solid #c4a35a;
   padding-left: 16px;
@@ -299,15 +381,22 @@ body:has(.casa-tratados) {
 }
 
 .casa-intro h1 {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 76px;
+  font-family: var(--casa-display);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 7vw, 5.4rem);
   margin: 8px 0;
   color: #1a2340;
 }
 
+.casa-intro .casa-una-linea {
+  font-family: var(--casa-display);
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: #6e4a12;
+}
+
 .casa-intro p {
-  font-family: var(--font-serif);
+  font-family: var(--casa-text);
   font-weight: 500;
   font-size: 21px;
   line-height: 1.65;
@@ -345,9 +434,8 @@ body:has(.casa-tratados) {
 
 .casa-folleto img {
   width: 100%;
-  aspect-ratio: 5 / 6;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
+  object-fit: contain;
   display: block;
   border: 1px solid #c9a75e;
 }
@@ -404,7 +492,7 @@ body:has(.casa-tratados) {
   background: #f6efdc;
   box-shadow: 0 30px 60px -30px rgba(60, 40, 10, 0.55);
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 380px 1fr;
   gap: 46px;
   padding: 52px 60px;
   align-items: center;

@@ -4,6 +4,7 @@ import { InsigniaTipo } from "@/components/insignia-tipo";
 import { Volver } from "@/components/volver";
 import { PARA_QUIEN, TRATADOS_CASA } from "@/lib/clasificacion";
 import { ESTUDIOS_INDICE } from "@/lib/estudios-indice";
+import { Subir } from "@/components/subir";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { TRATADOS_INDICE } from "@/lib/tratados-indice";
 import { SLUGS_CON_PORTADA } from "@/lib/libros/v2";
@@ -48,11 +49,17 @@ function TratadosPage() {
   const resto = fichas.filter((f) => f.slug !== destacado?.slug);
 
   return (
-    <main className="casa-tratados">
+    <main id="contenido" className="casa-tratados">
       <div className="casa-intro">
         <Volver />
+        <nav className="casa-anclas" aria-label="En esta sección">
+          <a href="#reciente">El más reciente</a>
+          <a href="#estante">Todos los tratados</a>
+          <a href="#breves">Versículos muy citados</a>
+        </nav>
         <p className="casa-serie">Serie Cielo Efata</p>
         <h1>Tratados</h1>
+        <p className="casa-una-linea">{PARA_QUIEN.tratado}</p>
         <div className="casa-filete" aria-hidden />
         <p>
           Un tratado toma un asunto que la Escritura entera enseña y lo sigue de libro en libro, con argumento
@@ -60,7 +67,6 @@ function TratadosPage() {
           Lo que lo hace tratado es el enfoque, no la extensión: puede ser breve. Es para líderes, maestros y
           estudiosos.
         </p>
-        <p className="mt-4 font-sans text-sm text-[#6b5a38]">{PARA_QUIEN.tratado}</p>
         <Refs refs="2 Ti. 2:2 · He. 5:14" />
         <p className="mt-4 font-sans text-sm">
           <Link to="/estudios-y-tratados" className="text-link underline">
@@ -70,7 +76,7 @@ function TratadosPage() {
       </div>
 
       {destacado ? (
-        <section className="casa-destac">
+        <section id="reciente" className="casa-destac">
           <div className="casa-marco">
             {CON_PORTADA.has(destacado.slug) ? (
               <a href={destacado.href}>
@@ -92,7 +98,7 @@ function TratadosPage() {
 
       <p className="casa-floron" aria-hidden>✦ ❦ ✦</p>
 
-      <section>
+      <section id="estante">
         <h2 className="sr-only">Todos los tratados</h2>
         <ul className="casa-estante">
           {resto.map((d) => (
@@ -114,7 +120,7 @@ function TratadosPage() {
         </ul>
       </section>
 
-      <section className="mx-auto mt-14 max-w-[44em] border-t border-[#c4a35a] px-4 pt-8 pb-16">
+      <section id="breves" className="mx-auto mt-14 max-w-[44em] border-t border-[#c4a35a] px-4 pt-8 pb-16">
         <h2 className="font-serif text-2xl">¿Buscaba los versículos muy citados?</h2>
         <p className="mt-4 leading-relaxed">
           Los escritos que devuelven un versículo muy citado al capítulo donde Dios lo puso son estudios breves: se
@@ -130,6 +136,7 @@ function TratadosPage() {
           </Link>
         </p>
       </section>
+      <Subir />
     </main>
   );
 }

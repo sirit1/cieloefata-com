@@ -3,6 +3,7 @@ import { Printer, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Compartir } from "@/components/compartir";
 import { IndiceHoja } from "@/components/indice-hoja";
+import { Subir } from "@/components/subir";
 import { Seal } from "@/components/seal";
 import { Escuchar } from "@/components/escuchar";
 import { guardarProgreso, marcarAula, minutosDeLectura, progresoDe } from "@/lib/aula-abierta";
@@ -136,6 +137,7 @@ export function Aula({
   return (
     <div
       ref={capa}
+      id={enHoja ? "contenido" : undefined}
       data-aula
       data-casa={casa}
       className={
@@ -205,6 +207,7 @@ export function Aula({
         {children}
       </div>
       {enHoja ? <IndiceHoja raiz="hoja-tratado" /> : null}
+      {enHoja ? <Subir /> : null}
     </div>
   );
 }
