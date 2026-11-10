@@ -1,5 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { IndiceLeccion } from "@/components/indice-leccion";
 import { LeccionCuerpo } from "@/components/leccion-curso";
+import { Subir } from "@/components/subir";
 import { LeccionJsonLd } from "@/components/json-ld";
 import { CURSO_NOMBRE, CURSO_PATH, CURSO_PUBLICADO, DIAS, diaPorSlug, textoDia } from "@/lib/curso";
 import { metaDescription, pageHead, tituloSeccion } from "@/lib/seo";
@@ -28,7 +30,7 @@ function DiaPage() {
   const next = DIAS.find((d) => d.n === dia.n + 1);
   const path = `${CURSO_PATH}/${dia.slug}`;
   return (
-    <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
+    <main id="leccion" className="casa-escuela">
       <LeccionJsonLd
         headline={`Día ${dia.n}. ${dia.titulo}`}
         description={metaDescription(dia.intro)}
@@ -43,9 +45,11 @@ function DiaPage() {
         </Link>{" "}
         · Día {dia.n}
       </p>
-      <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">{dia.titulo}</h1>
+      <h1 className="mt-3">{dia.titulo}</h1>
+      <p className="casa-una-linea mt-4">Versículo para memorizar: {dia.cita}</p>
       <p className="kicker mt-4">Escuela Bíblica Cielo Efata · Dr. (h. c.) Alejandro Sirit</p>
-      <aside className="mt-8 border border-rule p-5">
+      <IndiceLeccion raiz="leccion" />
+      <aside className="casa-verso mt-8">
         <p className="kicker">Versículo para memorizar · {dia.cita}</p>
         <p className="mt-2 font-serif text-xl leading-relaxed">«{dia.versiculo}»</p>
       </aside>
@@ -71,6 +75,7 @@ function DiaPage() {
           <Link to="/gratis" className="text-link underline">Recibir aviso de nuevas lecciones →</Link>
         )}
       </nav>
+      <Subir />
     </main>
   );
 }

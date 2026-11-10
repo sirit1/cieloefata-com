@@ -12,5 +12,8 @@ export function FranjaSeccion() {
   if (path === "/obras" || path.startsWith("/obras/")) {
     return <p className="franja-seccion franja-libros">Libros · Editorial Cielo Efata · azul noche y oro</p>;
   }
+  if (path === "/curso" || path.startsWith("/curso/")) {
+    return <p className="franja-seccion franja-escuela">Escuela Bíblica Cielo Efata · gratis, con certificado</p>;
+  }
   return null;
 }
