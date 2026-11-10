@@ -4,14 +4,17 @@ import { Subir } from "@/components/subir";
 import { CURSO_NOMBRE, CURSO_PATH, DIAS } from "@/lib/curso";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
+const total = DIAS.length;
+const leccionesAbiertas = `${total} lecciones abiertas`;
+
 const DESCRIPCION =
-  "Curso Experto Bíblico gratis de la Escuela Bíblica Cielo Efata: diez lecciones abiertas sobre la Escritura, el canon, el texto, hebreo, griego, hermenéutica y apologética.";
+  `Curso Experto Bíblico gratis de la Escuela Bíblica Cielo Efata: ${total} lecciones abiertas sobre la Escritura, el canon, el texto, hebreo, griego, hermenéutica, apologética, panorama bíblico, doctrina de Dios, Cristo y predicación.`;
 
 export const Route = createFileRoute("/curso/")({
   head: () =>
     pageHead({
       path: CURSO_PATH,
-      title: tituloSeccion("Curso Experto Bíblico gratis · 10 lecciones"),
+      title: tituloSeccion(`Curso Experto Bíblico gratis · ${total} lecciones`),
       description: DESCRIPCION,
       exact: true,
     }),
@@ -28,14 +31,14 @@ function CursoPage() {
         lecciones={DIAS.map((d) => ({ name: `Día ${d.n}. ${d.titulo}`, path: `${CURSO_PATH}/${d.slug}` }))}
       />
       <nav className="casa-anclas" aria-label="En esta sección">
-        <a href="#lecciones">Diez lecciones abiertas</a>
+        <a href="#lecciones">{leccionesAbiertas}</a>
         <a href="#aviso">Lección gratis del Día 1</a>
       </nav>
       <header className="casa-hero">
         <div>
           <p className="kicker">Escuela Bíblica Cielo Efata</p>
           <h1 className="mt-3">{CURSO_NOMBRE}</h1>
-          <p className="casa-una-linea mt-4">Diez lecciones abiertas, gratis, para leer con la Biblia en la mano.</p>
+          <p className="casa-una-linea mt-4">{leccionesAbiertas}, gratis, para leer con la Biblia en la mano.</p>
           <p className="kicker mt-4">Dr. (h. c.) Alejandro Sirit</p>
         </div>
         <img src="/brand/seal-full.webp" alt="" width={120} height={120} className="casa-sello" />
@@ -51,8 +54,8 @@ function CursoPage() {
         </Link>
         .
       </p>
-      <h2 id="lecciones" className="mt-12 text-3xl">Diez lecciones abiertas</h2>
-      <ol className="casa-dias" aria-label="Diez lecciones abiertas">
+      <h2 id="lecciones" className="mt-12 text-3xl">{leccionesAbiertas}</h2>
+      <ol className="casa-dias" aria-label={leccionesAbiertas}>
         {DIAS.map((d) => (
           <li key={d.slug}>
             <Link to="/curso/$slug" params={{ slug: d.slug }}>
