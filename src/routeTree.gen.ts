@@ -46,9 +46,12 @@ import { Route as VerdadRouteImport } from './routes/verdad'
 import { Route as ApiVozRouteImport } from './routes/api/voz'
 import { Route as ArticulosIndexRouteImport } from './routes/articulos/index'
 import { Route as ArticulosSlugRouteImport } from './routes/articulos/$slug'
+import { Route as CertificadoIndexRouteImport } from './routes/certificado/index'
+import { Route as CertificadoCodigoRouteImport } from './routes/certificado/$codigo'
 import { Route as CrisolManualRouteImport } from './routes/crisol_.manual'
 import { Route as CursoIndexRouteImport } from './routes/curso/index'
 import { Route as CursoSlugRouteImport } from './routes/curso/$slug'
+import { Route as CursoExamenesRouteImport } from './routes/curso/examenes'
 import { Route as EstudiosIndexRouteImport } from './routes/estudios/index'
 import { Route as EstudiosSlugRouteImport } from './routes/estudios/$slug'
 import { Route as EstudiosHechos1314RouteImport } from './routes/estudios/hechos-13-14'
@@ -65,6 +68,8 @@ import { Route as VersiculoIndexRouteImport } from './routes/versiculo/index'
 import { Route as VersiculoSlugRouteImport } from './routes/versiculo/$slug'
 import { Route as VersiculosIndexRouteImport } from './routes/versiculos/index'
 import { Route as VersiculosSlugRouteImport } from './routes/versiculos/$slug'
+import { Route as ApiCertificadoCodigoRouteImport } from './routes/api/certificado/$codigo'
+import { Route as CursoExamenSlugRouteImport } from './routes/curso/examen/$slug'
 import { Route as EstudiosSlugGuiaRouteImport } from './routes/estudios/$slug_.guia'
 
 const IndexRoute = IndexRouteImport.update({
@@ -252,6 +257,16 @@ const ArticulosSlugRoute = ArticulosSlugRouteImport.update({
   path: '/articulos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CertificadoIndexRoute = CertificadoIndexRouteImport.update({
+  id: '/certificado/',
+  path: '/certificado/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificadoCodigoRoute = CertificadoCodigoRouteImport.update({
+  id: '/certificado/$codigo',
+  path: '/certificado/$codigo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrisolManualRoute = CrisolManualRouteImport.update({
   id: '/crisol_/manual',
   path: '/crisol/manual',
@@ -265,6 +280,11 @@ const CursoIndexRoute = CursoIndexRouteImport.update({
 const CursoSlugRoute = CursoSlugRouteImport.update({
   id: '/curso/$slug',
   path: '/curso/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursoExamenesRoute = CursoExamenesRouteImport.update({
+  id: '/curso/examenes',
+  path: '/curso/examenes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EstudiosIndexRoute = EstudiosIndexRouteImport.update({
@@ -348,6 +368,16 @@ const VersiculosSlugRoute = VersiculosSlugRouteImport.update({
   path: '/versiculos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCertificadoCodigoRoute = ApiCertificadoCodigoRouteImport.update({
+  id: '/api/certificado/$codigo',
+  path: '/api/certificado/$codigo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CursoExamenSlugRoute = CursoExamenSlugRouteImport.update({
+  id: '/curso/examen/$slug',
+  path: '/curso/examen/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EstudiosSlugGuiaRoute = EstudiosSlugGuiaRouteImport.update({
   id: '/estudios/$slug_/guia',
   path: '/estudios/$slug/guia',
@@ -391,8 +421,10 @@ export interface FileRoutesByFullPath {
   '/verdad': typeof VerdadRoute
   '/api/voz': typeof ApiVozRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
+  '/certificado/$codigo': typeof CertificadoCodigoRoute
   '/crisol/manual': typeof CrisolManualRoute
   '/curso/$slug': typeof CursoSlugRoute
+  '/curso/examenes': typeof CursoExamenesRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/estudios/un-solo-dios-tres-personas': typeof EstudiosUnSoloDiosTresPersonasRoute
@@ -405,12 +437,15 @@ export interface FileRoutesByFullPath {
   '/versiculo/$slug': typeof VersiculoSlugRoute
   '/versiculos/$slug': typeof VersiculosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
+  '/certificado/': typeof CertificadoIndexRoute
   '/curso/': typeof CursoIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
   '/preguntas/': typeof PreguntasIndexRoute
   '/versiculo/': typeof VersiculoIndexRoute
   '/versiculos/': typeof VersiculosIndexRoute
+  '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
+  '/curso/examen/$slug': typeof CursoExamenSlugRoute
   '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRoutesByTo {
@@ -450,8 +485,10 @@ export interface FileRoutesByTo {
   '/verdad': typeof VerdadRoute
   '/api/voz': typeof ApiVozRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
+  '/certificado/$codigo': typeof CertificadoCodigoRoute
   '/crisol/manual': typeof CrisolManualRoute
   '/curso/$slug': typeof CursoSlugRoute
+  '/curso/examenes': typeof CursoExamenesRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/estudios/un-solo-dios-tres-personas': typeof EstudiosUnSoloDiosTresPersonasRoute
@@ -464,12 +501,15 @@ export interface FileRoutesByTo {
   '/versiculo/$slug': typeof VersiculoSlugRoute
   '/versiculos/$slug': typeof VersiculosSlugRoute
   '/articulos': typeof ArticulosIndexRoute
+  '/certificado': typeof CertificadoIndexRoute
   '/curso': typeof CursoIndexRoute
   '/estudios': typeof EstudiosIndexRoute
   '/obras': typeof ObrasIndexRoute
   '/preguntas': typeof PreguntasIndexRoute
   '/versiculo': typeof VersiculoIndexRoute
   '/versiculos': typeof VersiculosIndexRoute
+  '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
+  '/curso/examen/$slug': typeof CursoExamenSlugRoute
   '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRoutesById {
@@ -510,8 +550,10 @@ export interface FileRoutesById {
   '/verdad': typeof VerdadRoute
   '/api/voz': typeof ApiVozRoute
   '/articulos/$slug': typeof ArticulosSlugRoute
+  '/certificado/$codigo': typeof CertificadoCodigoRoute
   '/crisol_/manual': typeof CrisolManualRoute
   '/curso/$slug': typeof CursoSlugRoute
+  '/curso/examenes': typeof CursoExamenesRoute
   '/estudios/$slug': typeof EstudiosSlugRoute
   '/estudios/hechos-13-14': typeof EstudiosHechos1314Route
   '/estudios/un-solo-dios-tres-personas': typeof EstudiosUnSoloDiosTresPersonasRoute
@@ -524,12 +566,15 @@ export interface FileRoutesById {
   '/versiculo/$slug': typeof VersiculoSlugRoute
   '/versiculos/$slug': typeof VersiculosSlugRoute
   '/articulos/': typeof ArticulosIndexRoute
+  '/certificado/': typeof CertificadoIndexRoute
   '/curso/': typeof CursoIndexRoute
   '/estudios/': typeof EstudiosIndexRoute
   '/obras/': typeof ObrasIndexRoute
   '/preguntas/': typeof PreguntasIndexRoute
   '/versiculo/': typeof VersiculoIndexRoute
   '/versiculos/': typeof VersiculosIndexRoute
+  '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
+  '/curso/examen/$slug': typeof CursoExamenSlugRoute
   '/estudios/$slug_/guia': typeof EstudiosSlugGuiaRoute
 }
 export interface FileRouteTypes {
@@ -571,8 +616,10 @@ export interface FileRouteTypes {
     | '/verdad'
     | '/api/voz'
     | '/articulos/$slug'
+    | '/certificado/$codigo'
     | '/crisol/manual'
     | '/curso/$slug'
+    | '/curso/examenes'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/estudios/un-solo-dios-tres-personas'
@@ -585,12 +632,15 @@ export interface FileRouteTypes {
     | '/versiculo/$slug'
     | '/versiculos/$slug'
     | '/articulos/'
+    | '/certificado/'
     | '/curso/'
     | '/estudios/'
     | '/obras/'
     | '/preguntas/'
     | '/versiculo/'
     | '/versiculos/'
+    | '/api/certificado/$codigo'
+    | '/curso/examen/$slug'
     | '/estudios/$slug/guia'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -630,8 +680,10 @@ export interface FileRouteTypes {
     | '/verdad'
     | '/api/voz'
     | '/articulos/$slug'
+    | '/certificado/$codigo'
     | '/crisol/manual'
     | '/curso/$slug'
+    | '/curso/examenes'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/estudios/un-solo-dios-tres-personas'
@@ -644,12 +696,15 @@ export interface FileRouteTypes {
     | '/versiculo/$slug'
     | '/versiculos/$slug'
     | '/articulos'
+    | '/certificado'
     | '/curso'
     | '/estudios'
     | '/obras'
     | '/preguntas'
     | '/versiculo'
     | '/versiculos'
+    | '/api/certificado/$codigo'
+    | '/curso/examen/$slug'
     | '/estudios/$slug/guia'
   id:
     | '__root__'
@@ -689,8 +744,10 @@ export interface FileRouteTypes {
     | '/verdad'
     | '/api/voz'
     | '/articulos/$slug'
+    | '/certificado/$codigo'
     | '/crisol_/manual'
     | '/curso/$slug'
+    | '/curso/examenes'
     | '/estudios/$slug'
     | '/estudios/hechos-13-14'
     | '/estudios/un-solo-dios-tres-personas'
@@ -703,12 +760,15 @@ export interface FileRouteTypes {
     | '/versiculo/$slug'
     | '/versiculos/$slug'
     | '/articulos/'
+    | '/certificado/'
     | '/curso/'
     | '/estudios/'
     | '/obras/'
     | '/preguntas/'
     | '/versiculo/'
     | '/versiculos/'
+    | '/api/certificado/$codigo'
+    | '/curso/examen/$slug'
     | '/estudios/$slug_/guia'
   fileRoutesById: FileRoutesById
 }
@@ -749,8 +809,10 @@ export interface RootRouteChildren {
   VerdadRoute: typeof VerdadRoute
   ApiVozRoute: typeof ApiVozRoute
   ArticulosSlugRoute: typeof ArticulosSlugRoute
+  CertificadoCodigoRoute: typeof CertificadoCodigoRoute
   CrisolManualRoute: typeof CrisolManualRoute
   CursoSlugRoute: typeof CursoSlugRoute
+  CursoExamenesRoute: typeof CursoExamenesRoute
   EstudiosSlugRoute: typeof EstudiosSlugRoute
   EstudiosHechos1314Route: typeof EstudiosHechos1314Route
   EstudiosUnSoloDiosTresPersonasRoute: typeof EstudiosUnSoloDiosTresPersonasRoute
@@ -762,12 +824,15 @@ export interface RootRouteChildren {
   VersiculoSlugRoute: typeof VersiculoSlugRoute
   VersiculosSlugRoute: typeof VersiculosSlugRoute
   ArticulosIndexRoute: typeof ArticulosIndexRoute
+  CertificadoIndexRoute: typeof CertificadoIndexRoute
   CursoIndexRoute: typeof CursoIndexRoute
   EstudiosIndexRoute: typeof EstudiosIndexRoute
   ObrasIndexRoute: typeof ObrasIndexRoute
   PreguntasIndexRoute: typeof PreguntasIndexRoute
   VersiculoIndexRoute: typeof VersiculoIndexRoute
   VersiculosIndexRoute: typeof VersiculosIndexRoute
+  ApiCertificadoCodigoRoute: typeof ApiCertificadoCodigoRoute
+  CursoExamenSlugRoute: typeof CursoExamenSlugRoute
   EstudiosSlugGuiaRoute: typeof EstudiosSlugGuiaRoute
 }
 
@@ -1032,6 +1097,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ArticulosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/certificado/': {
+      id: '/certificado/'
+      path: '/certificado'
+      fullPath: '/certificado/'
+      preLoaderRoute: typeof CertificadoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certificado/$codigo': {
+      id: '/certificado/$codigo'
+      path: '/certificado/$codigo'
+      fullPath: '/certificado/$codigo'
+      preLoaderRoute: typeof CertificadoCodigoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/crisol_/manual': {
       id: '/crisol_/manual'
       path: '/crisol/manual'
@@ -1051,6 +1130,13 @@ declare module '@tanstack/react-router' {
       path: '/curso/$slug'
       fullPath: '/curso/$slug'
       preLoaderRoute: typeof CursoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso/examenes': {
+      id: '/curso/examenes'
+      path: '/curso/examenes'
+      fullPath: '/curso/examenes'
+      preLoaderRoute: typeof CursoExamenesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/estudios/': {
@@ -1165,6 +1251,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VersiculosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/certificado/$codigo': {
+      id: '/api/certificado/$codigo'
+      path: '/api/certificado/$codigo'
+      fullPath: '/api/certificado/$codigo'
+      preLoaderRoute: typeof ApiCertificadoCodigoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/curso/examen/$slug': {
+      id: '/curso/examen/$slug'
+      path: '/curso/examen/$slug'
+      fullPath: '/curso/examen/$slug'
+      preLoaderRoute: typeof CursoExamenSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/estudios/$slug_/guia': {
       id: '/estudios/$slug_/guia'
       path: '/estudios/$slug/guia'
@@ -1224,8 +1324,10 @@ const rootRouteChildren: RootRouteChildren = {
   VerdadRoute: VerdadRoute,
   ApiVozRoute: ApiVozRoute,
   ArticulosSlugRoute: ArticulosSlugRoute,
+  CertificadoCodigoRoute: CertificadoCodigoRoute,
   CrisolManualRoute: CrisolManualRoute,
   CursoSlugRoute: CursoSlugRoute,
+  CursoExamenesRoute: CursoExamenesRoute,
   EstudiosSlugRoute: EstudiosSlugRoute,
   EstudiosHechos1314Route: EstudiosHechos1314Route,
   EstudiosUnSoloDiosTresPersonasRoute: EstudiosUnSoloDiosTresPersonasRoute,
@@ -1237,12 +1339,15 @@ const rootRouteChildren: RootRouteChildren = {
   VersiculoSlugRoute: VersiculoSlugRoute,
   VersiculosSlugRoute: VersiculosSlugRoute,
   ArticulosIndexRoute: ArticulosIndexRoute,
+  CertificadoIndexRoute: CertificadoIndexRoute,
   CursoIndexRoute: CursoIndexRoute,
   EstudiosIndexRoute: EstudiosIndexRoute,
   ObrasIndexRoute: ObrasIndexRoute,
   PreguntasIndexRoute: PreguntasIndexRoute,
   VersiculoIndexRoute: VersiculoIndexRoute,
   VersiculosIndexRoute: VersiculosIndexRoute,
+  ApiCertificadoCodigoRoute: ApiCertificadoCodigoRoute,
+  CursoExamenSlugRoute: CursoExamenSlugRoute,
   EstudiosSlugGuiaRoute: EstudiosSlugGuiaRoute,
 }
 export const routeTree = rootRouteImport

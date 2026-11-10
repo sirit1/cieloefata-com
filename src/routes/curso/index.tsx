@@ -40,6 +40,15 @@ function CursoPage() {
         </Link>
         .
       </p>
+      <p className="mt-4 leading-relaxed">
+        <Link to="/curso/examenes" className="text-link underline">
+          Exámenes
+        </Link>
+        {" · "}
+        <Link to="/certificado" className="text-link underline">
+          Verificar certificado
+        </Link>
+      </p>
       <ol className="mt-10 space-y-6">
         {DIAS.map((d) => (
           <li key={d.slug} className="border-t border-rule pt-5">
