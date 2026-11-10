@@ -215,7 +215,9 @@ export const obras: Obra[] = [
     ref: "Lc. 24:27",
     pasaje: "Lucas 24",
     studySlug: "",
-    sinAmazon: true,
+    asinEbook: "B0HNF8WNRL",
+    asinPrint: "B0HPQDXBJQ",
+    isbnPrint: "9798166069375",
   },
   {
     n: 5,
@@ -259,6 +261,8 @@ export const obras: Obra[] = [
     studySlug: "isaias-53",
     tratadoSlug: "isaias-53",
     asinEbook: "B0HKQGBYV4",
+    asinPrint: "B0HNF76VN9",
+    isbnPrint: "9798163214488",
   },
   {
     n: 6,
@@ -302,6 +306,8 @@ export const obras: Obra[] = [
     pasaje: "Job 42",
     studySlug: "",
     asinEbook: "B0HN5YD6LP",
+    asinPrint: "B0HNFLF2QD",
+    isbnPrint: "9798163215638",
   },
   {
     n: 2,
@@ -324,6 +330,8 @@ export const obras: Obra[] = [
     tratadoSlug: "el-crisol-de-lo-oido",
     crisol: true,
     asinEbook: "B0HJ6B33V3",
+    asinPrint: "B0HKSZ6B9T",
+    isbnPrint: "9798176414967",
   },
   {
     n: 1,
@@ -344,7 +352,9 @@ export const obras: Obra[] = [
     pasaje: "Santiago 3",
     studySlug: "",
     tratadoSlug: "la-muerte-y-la-vida",
-    sinAmazon: true,
+    asinEbook: "B0HNFG6H93",
+    asinPrint: "B0HQ3XKT1W",
+    isbnPrint: "9798167133792",
   },
   {
     n: 8,
@@ -384,7 +394,9 @@ export const obras: Obra[] = [
     ref: "Ef. 2:8–9",
     pasaje: "Efesios 2",
     studySlug: "",
-    sinAmazon: true,
+    asinEbook: "B0HQ2KBG8T",
+    asinPrint: "B0HR2K65V2",
+    isbnPrint: "9798141303906",
   },
 ];
 

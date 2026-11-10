@@ -81,9 +81,9 @@ test("títulos únicos y descripciones de 120 a 160", async () => {
 });
 
 test("solo los libros sin edición publicada en Amazon quedan sin ficha", () => {
-  // Comprobado en amazon.com el 17-10-2026: Pórtico, De una misma boca y Nunca tocarás mi fe aún no están publicados.
+  // Comprobado en amazon.com el 10-11-2026: los nueve libros de la serie ya tienen ebook Kindle.
   const sin = obras.filter((o) => !amazonDeObra(o)).map((o) => o.slug);
-  assert.deepEqual(sin, ["portico-a-la-escritura", "de-una-misma-boca", "nunca-tocaras-mi-fe"]);
+  assert.deepEqual(sin, []);
   for (const o of obras) assert.equal(Boolean(o.sinAmazon), !amazonDeObra(o), o.slug);
 });
 
@@ -92,22 +92,25 @@ test("ASIN e ISBN de imprenta coinciden con las fichas publicadas en Amazon", ()
     .filter((o) => o.asinEbook || o.asinPrint || o.isbnPrint)
     .map((o) => [o.slug, o.asinEbook, o.asinPrint, o.isbnPrint]);
   assert.deepEqual(fichas, [
+    ["portico-a-la-escritura", "B0HNF8WNRL", "B0HPQDXBJQ", "9798166069375"],
     ["efata", "B0HJ15ZXL3", "B0HKSRS7TZ", "9798172426322"],
-    ["el-siervo-no-tu", "B0HKQGBYV4", undefined, undefined],
+    ["el-siervo-no-tu", "B0HKQGBYV4", "B0HNF76VN9", "9798163214488"],
     ["bastate-mi-gracia", "B0HKQHNRBC", "B0HN7MTCZ1", "9798162809135"],
-    ["cuando-el-cielo-se-cae", "B0HN5YD6LP", undefined, undefined],
-    ["el-altar-del-espejo", "B0HJ6B33V3", undefined, undefined],
+    ["cuando-el-cielo-se-cae", "B0HN5YD6LP", "B0HNFLF2QD", "9798163215638"],
+    ["el-altar-del-espejo", "B0HJ6B33V3", "B0HKSZ6B9T", "9798176414967"],
+    ["de-una-misma-boca", "B0HNFG6H93", "B0HQ3XKT1W", "9798167133792"],
     ["diakrisis", "B0HN6G4NG4", "B0HN6BFCF2", "9798162796060"],
+    ["nunca-tocaras-mi-fe", "B0HQ2KBG8T", "B0HR2K65V2", "9798141303906"],
   ]);
   for (const o of obras.filter((x) => x.isbnPrint)) assert.equal(camposLibro(o).isbn, o.isbnPrint, o.slug);
-  for (const slug of ["de-una-misma-boca", "portico-a-la-escritura", "nunca-tocaras-mi-fe"]) {
-    const libro = camposLibro(obras.find((x) => x.slug === slug)!);
-    assert.equal("isbn" in libro, false, slug);
-    assert.equal("sameAs" in libro, false, slug);
+  for (const o of obras) {
+    const libro = camposLibro(o);
+    assert.equal("isbn" in libro, true, o.slug);
+    assert.equal("sameAs" in libro, true, o.slug);
   }
-  // Ediciones viejas que no deben volver: Callar para ganar, el manual anterior de Job y la tapa blanda vieja del Altar.
+  // Ediciones viejas o dadas de baja que no deben volver al catálogo.
   const fuente = readFileSync(new URL("./content.ts", import.meta.url), "utf8");
-  for (const viejo of ["B0GPF3NHQT", "9798176466690", "B0HKT237N1", "B0HKSZ6B9T", "9798176414967"]) {
+  for (const viejo of ["B0GPF3NHQT", "B0GYFR8YDQ", "B0GYKQWP4R", "B0GX2YGRBL", "9798176466690", "B0HKT237N1"]) {
     assert.equal(fuente.includes(viejo), false, viejo);
   }
 });
