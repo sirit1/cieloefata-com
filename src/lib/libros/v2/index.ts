@@ -20,6 +20,7 @@ const cargadores: Record<string, () => Promise<{ default: ObraV2 }>> = {
   "el-paraclito-eterno": () => import("./el-paraclito-eterno.ts"),
   "no-juzgueis": () => import("./no-juzgueis.ts"),
   "el-yugo-desigual-en-esta-era": () => import("./el-yugo-desigual-en-esta-era.ts"),
+  "la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales": () => import("./la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales.ts"),
   "teologia-de-la-cruz": () => import("./teologia-de-la-cruz.ts"),
   "2-pedro-1": () => import("./2-pedro-1.ts"),
   "filipenses-2": () => import("./filipenses-2.ts"),
