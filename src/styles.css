@@ -3,6 +3,7 @@
 @import "./casas/tratados.css";
 @import "./casas/estudios.css";
 @import "./casas/libros.css";
+@import "./casas/escuela.css";
 
 /* Identidad del sello: tinta, oro, pergamino. No hay una cuarta. */
 @theme {

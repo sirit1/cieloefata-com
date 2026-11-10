@@ -10,6 +10,7 @@ const nav = [
   { to: "/estudios", label: "Estudios" },
   { to: "/tratados", label: "Tratados" },
   { to: "/obras", label: "Libros" },
+  { to: "/curso", label: "Escuela" },
   { to: "/metodo", label: "Cómo leer" },
   { to: "/nosotros", label: "Nosotros" },
 ] as const;
