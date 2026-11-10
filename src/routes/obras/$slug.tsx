@@ -19,6 +19,7 @@ import {
 import { primerasPaginas } from "@/lib/muestras";
 import { amazonDp, whatsappTomo } from "@/lib/amazon";
 import { Compartir } from "@/components/compartir";
+import { Subir } from "@/components/subir";
 import { pageHead, tituloObra } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -56,12 +57,32 @@ export function ObraPage() {
   const muestra = primerasPaginas(obra);
 
   return (
-    <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
+    <main className="casa-libros">
       <BookJsonLd slug={obra.slug} />
       <Volver />
-      <div className="grid gap-8 sm:grid-cols-[minmax(0,13rem)_1fr] sm:items-start md:gap-10">
-        <figure className="m-0 max-w-[13rem]">
-          <Tapa obra={obra} size="ficha" priority />
+      <nav className="casa-anclas" aria-label="En este libro">
+        {enOrden ? <a href="#orden">Orden de lectura</a> : null}
+        {muestra.length ? <a href="#sobre">Sobre este libro</a> : null}
+        <a href="#obtener">Cómo obtenerlo</a>
+      </nav>
+      {enOrden ? (
+        <nav className="casa-riel" aria-label="Orden de lectura">
+          {obras.map((o) => (
+            <Link
+              key={o.slug}
+              to="/obras/$slug"
+              params={{ slug: o.slug }}
+              aria-current={o.slug === obra.slug ? true : undefined}
+            >
+              {ROMANO[o.lectura]}
+              <span className="sr-only">. {o.title}</span>
+            </Link>
+          ))}
+        </nav>
+      ) : null}
+      <div className="casa-ficha mt-8">
+        <figure className="m-0">
+          <Tapa obra={obra} size="lg" priority />
           <figcaption className="sr-only">
             {obra.pasaje
               ? `Tapa de ${obra.title}. Se lee junto a ${obra.pasaje}.`
@@ -70,19 +91,20 @@ export function ObraPage() {
         </figure>
         <div>
           {enOrden ? (
-            <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-              Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}
+            <p className="casa-romano">
+              {ROMANO[obra.lectura]}
+              <span className="sr-only"> de {ROMANO[lecturaDe]}. Lectura {ROMANO[obra.lectura]} de {ROMANO[lecturaDe]}</span>
             </p>
           ) : obra.numeroSerieAmazon ? (
             <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
               Serie Cielo Efata · nº {obra.numeroSerieAmazon}
             </p>
           ) : null}
-          <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">
+          <h1 className="mt-3">
             {obra.title}
           </h1>
           {obra.subtitulo ? (
-            <p className="mt-2 font-sans text-sm tracking-wide text-gold">
+            <p className="casa-una-linea mt-3">
               {obra.subtitulo}
             </p>
           ) : null}
@@ -132,19 +154,19 @@ export function ObraPage() {
         <ConLemas>{obra.line}</ConLemas>
       </p>
       {obra.thesis ? (
-        <p className="mt-5 leading-relaxed">
+        <p className="casa-tesis">
           <ConLemas>{obra.thesis}</ConLemas>
         </p>
       ) : null}
       {obra.ref ? (
-        <p className="mt-3 font-sans text-sm tracking-wide text-gold">
+        <p className="casa-verso mt-3 font-sans text-sm tracking-wide">
           <Cite>{obra.ref}</Cite>
         </p>
       ) : null}
 
       {enOrden ? (
         <>
-          <h2 className="mt-12 font-serif text-3xl">Orden de lectura</h2>
+          <h2 id="orden" className="mt-12 font-serif text-3xl">Orden de lectura</h2>
           <p className="mt-4 leading-relaxed">
             Este es el libro {ROMANO[obra.lectura]} en el orden de lectura sugerido
             (que no es el de publicación). Se empieza por Pórtico a la Escritura, y
@@ -173,7 +195,7 @@ export function ObraPage() {
 
       {muestra.length ? (
         <>
-          <h2 className="mt-12 font-serif text-3xl">Sobre este libro</h2>
+          <h2 id="sobre" className="mt-12 font-serif text-3xl">Sobre este libro</h2>
           {muestra.map((p) => (
             <p key={p.slice(0, 40)} className="mt-5 text-lg leading-relaxed">
               <ConLemas>{p}</ConLemas>
@@ -307,6 +329,7 @@ export function ObraPage() {
           Volver al catálogo
         </Link>
       </p>
+      <Subir />
     </main>
   );
 }

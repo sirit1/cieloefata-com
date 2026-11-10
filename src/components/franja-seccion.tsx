@@ -9,5 +9,8 @@ export function FranjaSeccion() {
   if (path === "/estudios" || path.startsWith("/estudios/")) {
     return <p className="franja-seccion franja-estudios">Estudios · el cuaderno abierto junto al pasaje</p>;
   }
+  if (path === "/obras" || path.startsWith("/obras/")) {
+    return <p className="franja-seccion franja-libros">Libros · Editorial Cielo Efata · azul noche y oro</p>;
+  }
   return null;
 }

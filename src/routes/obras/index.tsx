@@ -8,6 +8,7 @@ import { BtnArrow } from "@/components/motif";
 import { Tapa } from "@/components/tapa";
 import { Volver } from "@/components/volver";
 import { CORPUS, fichas, obras, ROMANO, tapaPath, type Obra } from "@/lib/content";
+import { Subir } from "@/components/subir";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
 import { indiceTratado } from "@/lib/tratados-indice";
@@ -29,16 +30,35 @@ export const Route = createFileRoute("/obras/")({
 
 function ObrasPage() {
   const [primero, ...resto] = obras;
+  const corte = CORPUS.gate.indexOf(". ");
+  const linea = corte > 0 ? CORPUS.gate.slice(0, corte + 1) : CORPUS.gate;
+  const sigue = corte > 0 ? CORPUS.gate.slice(corte + 2) : "";
 
   return (
-    <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
+    <main className="casa-libros">
       <CorpusJsonLd />
       <Volver />
-      <h1 className="mt-2 font-serif text-4xl">{CORPUS.title}</h1>
+      <nav className="casa-anclas" aria-label="En esta sección">
+        <a href="#lectura-1">Para empezar</a>
+        <a href="#siguen">Siguen en este orden</a>
+        <a href="#fuera">Fuera del orden de lectura</a>
+      </nav>
+      <nav className="casa-riel" aria-label="Orden de lectura">
+        {obras.map((o) => (
+          <a key={o.slug} href={`#lectura-${o.lectura}`}>
+            {ROMANO[o.lectura]}
+            <span className="sr-only">. {o.title}</span>
+          </a>
+        ))}
+      </nav>
+      <h1 className="mt-6">{CORPUS.title}</h1>
+      <p className="casa-una-linea mt-4">{linea}</p>
       <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
-      <p className="mt-5 text-lg">
-        <ConLemas>{CORPUS.gate}</ConLemas>
-      </p>
+      {sigue ? (
+        <p className="mt-5 text-lg">
+          <ConLemas>{sigue}</ConLemas>
+        </p>
+      ) : null}
       <p className="kicker mt-8">El método · Éfata</p>
       <p className="mt-4 text-lg">
         <ConLemas>{CORPUS.efata}</ConLemas>
@@ -53,8 +73,8 @@ function ObrasPage() {
 
       <TomoCard obra={primero} destacado />
 
-      <h2 className="mt-14 font-serif text-3xl">Siguen en este orden</h2>
-      <ul className="mt-8 space-y-10">
+      <h2 id="siguen" className="mt-14 font-serif text-3xl">Siguen en este orden</h2>
+      <ul className="casa-siguen">
         {resto.map((o) => (
           <li key={o.slug}>
             <TomoCard obra={o} />
@@ -75,7 +95,7 @@ function ObrasPage() {
       <ul className="mt-8 space-y-10">
         {fichas.map((o) => (
           <li key={o.slug} id={o.slug} className="scroll-mt-24 border-t border-rule pt-6">
-            <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+            <div className="casa-ficha">
               <Link
                 to="/obras/$slug"
                 params={{ slug: o.slug }}
@@ -83,7 +103,7 @@ function ObrasPage() {
                 aria-hidden
                 tabIndex={-1}
               >
-                <Tapa obra={o} size="sm" />
+                <Tapa obra={o} size="lg" />
               </Link>
               <div className="min-w-0 flex-1">
                 {o.numeroSerieAmazon ? (
@@ -112,7 +132,8 @@ function ObrasPage() {
             </div>
           </li>
         ))}
-      </ul>
+        </ul>
+      <Subir />
     </main>
   );
 }
@@ -130,16 +151,12 @@ function TomoCard({
   return (
     <article
       id={`lectura-${obra.lectura}`}
-      className={
-        destacado
-          ? "mt-12 scroll-mt-24 border border-rule bg-paper px-5 py-7 md:px-7"
-          : "scroll-mt-24 border-t border-rule pt-6"
-      }
+      className={destacado ? "casa-vitrina scroll-mt-24" : "scroll-mt-24"}
     >
       {destacado ? (
-        <p className="font-serif text-lg italic text-gold">Para empezar</p>
+        <p className="casa-una-linea sm:col-span-2">Para empezar</p>
       ) : null}
-      <div className="mt-4 flex flex-col gap-6 sm:flex-row sm:items-start">
+      <div className={destacado ? "contents" : "flex flex-col gap-4"}>
         <Link
           to="/obras/$slug"
           params={{ slug: obra.slug }}
@@ -147,11 +164,12 @@ function TomoCard({
           aria-hidden
           tabIndex={-1}
         >
-          <Tapa obra={obra} size={destacado ? "umbral" : "sm"} priority={destacado} />
+          <Tapa obra={obra} size={destacado ? "lg" : "pdp"} priority={destacado} />
         </Link>
         <div className="min-w-0 flex-1">
-          <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
-            Lectura {ROMANO[obra.lectura]}
+          <p className="casa-romano">
+            {ROMANO[obra.lectura]}
+            <span className="sr-only">. Lectura {ROMANO[obra.lectura]}</span>
           </p>
           <h2 className="tomo-title mt-3">
             <Link to="/obras/$slug" params={{ slug: obra.slug }} className="hover:text-gold">
@@ -161,10 +179,10 @@ function TomoCard({
           <p className="mt-4 text-lg">
             <ConLemas>{obra.line}</ConLemas>
           </p>
-          <p className="mt-4">
+          <p className="casa-tesis">
             <ConLemas>{obra.thesis}</ConLemas>
           </p>
-          <p className="mt-3 font-sans text-sm tracking-wide text-gold">
+          <p className="casa-verso mt-3 font-sans text-sm tracking-wide">
             <Cite>{obra.ref}</Cite>
           </p>
           {obra.studyNote ? (
