@@ -13,12 +13,32 @@ export function ObraV2Cuerpo({ obra, tipo }: { obra: ObraV2; tipo: "Tratado" | "
         ) : null}
         <div className="font-sans text-sm">
           <p className="tracking-widest text-gold uppercase">Descargar gratis</p>
-          <ul className="mt-3 space-y-2">
-            {d.obra_pdf ? <li><a className="text-link underline" href={d.obra_pdf} download>{tipo} en PDF</a></li> : null}
-            {d.obra_epub ? <li><a className="text-link underline" href={d.obra_epub} download>{tipo} en EPUB (Kindle y lectores)</a></li> : null}
-            {d.guia_pdf ? <li><a className="text-link underline" href={d.guia_pdf} download>Guía de estudio en PDF</a></li> : null}
-            {d.guia_epub ? <li><a className="text-link underline" href={d.guia_epub} download>Guía de estudio en EPUB</a></li> : null}
-          </ul>
+          {hayGuia ? (
+            <p className="mt-2 text-ink-soft">
+              Un solo archivo con el {tipo === "Tratado" ? "tratado" : "estudio"} y su guía de estudio al final, cada parte con su entrada en el índice.
+            </p>
+          ) : null}
+          <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {d.obra_epub ? (
+              <a className="btn btn-gold" href={d.obra_epub} download>
+                {hayGuia ? "Descargar todo" : "Descargar"} · EPUB
+              </a>
+            ) : null}
+            {d.obra_pdf ? (
+              <a className="btn btn-ghost" href={d.obra_pdf} download>
+                {hayGuia ? "Descargar todo" : "Descargar"} · PDF
+              </a>
+            ) : null}
+          </div>
+          <p className="mt-2 text-xs text-ink-soft">EPUB para Kindle y lectores; PDF para imprimir o leer en pantalla.</p>
+          {d.guia_epub || d.guia_pdf ? (
+            <p className="mt-4">
+              Solo la guía de estudio:{" "}
+              {d.guia_epub ? <a className="text-link underline" href={d.guia_epub} download>EPUB</a> : null}
+              {d.guia_epub && d.guia_pdf ? " · " : null}
+              {d.guia_pdf ? <a className="text-link underline" href={d.guia_pdf} download>PDF</a> : null}
+            </p>
+          ) : null}
           {hayGuia ? <p className="mt-3"><a className="text-link underline" href="#guia">Leer la guía aquí</a></p> : null}
         </div>
       </div>
