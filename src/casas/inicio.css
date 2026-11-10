@@ -1,0 +1,130 @@
+/* Inicio: el héroe dice qué es la casa, y cuatro puertas muestran la letra de cada sección.
+   La cabecera y el pie no cambian. Estas familias solo se usan dentro de .muestra. */
+
+@font-face { font-family: "Baskerville Casa"; src: url("/fonts/casas/librebaskerville-400.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Spectral Casa"; src: url("/fonts/casas/spectral-400.woff2") format("woff2"); font-weight: 400 600; font-display: swap; }
+@font-face { font-family: "Fraunces Casa"; src: url("/fonts/casas/fraunces-500.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
+@font-face { font-family: "Literata Casa"; src: url("/fonts/casas/literata-400.woff2") format("woff2"); font-weight: 400 600; font-display: swap; }
+@font-face { font-family: "Cinzel Casa"; src: url("/fonts/casas/cinzel-500.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
+@font-face { font-family: "Outfit Casa"; src: url("/fonts/casas/outfit-400.woff2") format("woff2"); font-weight: 400 600; font-display: swap; }
+@font-face { font-family: "Playfair Casa"; src: url("/fonts/casas/playfairdisplay-500.woff2") format("woff2"); font-weight: 500 700; font-display: swap; }
+@font-face { font-family: "Karla Casa"; src: url("/fonts/casas/karla-400.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+
+.casa-inicio .hero-titulo {
+  font-size: clamp(3.2rem, 7vw, 5.6rem);
+  line-height: 0.96;
+}
+
+.casa-inicio .casa-que-es {
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.45;
+  max-width: 34rem;
+}
+
+.casa-inicio .casa-anclas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.casa-inicio .casa-anclas a {
+  color: #7a5414;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.casa-inicio .muestras {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.casa-inicio .muestra {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.1rem 1rem 1.2rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.casa-inicio .muestra b {
+  display: block;
+  font-size: 1.7rem;
+  line-height: 1.05;
+  margin: 0.7rem 0 0.45rem;
+}
+
+.casa-inicio .muestra span {
+  display: block;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.casa-inicio .muestra img {
+  width: 4.5rem;
+  height: auto;
+}
+
+.casa-inicio .muestra-tratados {
+  background: #f6efdc;
+  color: #2a2416;
+  border-color: #b38a3e;
+  box-shadow: inset 0 0 0 4px #f6efdc, inset 0 0 0 5px #c9a75e;
+}
+.casa-inicio .muestra-tratados b { font-family: "Baskerville Casa", Palatino, serif; }
+.casa-inicio .muestra-tratados span { font-family: "Spectral Casa", Palatino, serif; }
+
+.casa-inicio .muestra-estudios {
+  background: repeating-linear-gradient(to bottom, transparent 0 27px, #e1e8f1 27px 28px), #fdfdfa;
+  color: #1a2340;
+  border-color: #d4dbe6;
+}
+.casa-inicio .muestra-estudios b { font-family: "Fraunces Casa", Palatino, serif; }
+.casa-inicio .muestra-estudios span { font-family: "Literata Casa", Palatino, serif; }
+
+.casa-inicio .muestra-libros {
+  background: #0e1424;
+  color: #f6efdc;
+  border-color: #d9b871;
+}
+.casa-inicio .muestra-libros b { font-family: "Cinzel Casa", Palatino, serif; color: #f6efdc; }
+.casa-inicio .muestra-libros span { font-family: "Outfit Casa", sans-serif; color: #e7dfcf; }
+
+.casa-inicio .muestra-escuela {
+  background: #f7f1e8;
+  color: #3b1218;
+  border-color: #7a1f2b;
+}
+.casa-inicio .muestra-escuela b { font-family: "Playfair Casa", Palatino, serif; color: #7a1f2b; }
+.casa-inicio .muestra-escuela span { font-family: "Karla Casa", sans-serif; }
+
+.casa-inicio .casa-subir {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 36;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: #1a2340;
+  color: #f4efe4;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+  .casa-inicio .muestras { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .casa-inicio .muestras { grid-template-columns: 1fr; }
+}

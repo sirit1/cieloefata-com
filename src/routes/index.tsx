@@ -8,7 +8,8 @@ import { Tapa } from "@/components/tapa";
 import { BtnArrow } from "@/components/motif";
 import { SlotsSemanaMes } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
-import { obras, ROMANO } from "@/lib/content";
+import { Subir } from "@/components/subir";
+import { CORPUS, obras, ROMANO, school } from "@/lib/content";
 import { AMAZON_AUTHOR, amazonDp, whatsappColeccion } from "@/lib/amazon";
 import { SELLO } from "@/lib/identidad";
 import { ESCRITURA } from "@/lib/pilar";
@@ -103,8 +104,14 @@ function BuscadorPortada() {
 
 function Home() {
   return (
-    <main className="pb-24">
+    <main className="casa-inicio pb-24">
       <HomeJsonLd />
+      <nav className="casa-anclas" aria-label="En esta página">
+        <a href="#casas">Tratados, estudios, libros y escuela</a>
+        <a href="#libros">Nueve libros, un orden de lectura</a>
+        <a href="#puertas">Por dónde entrar</a>
+        <a href="#pilares">Con qué texto leemos</a>
+      </nav>
       <section className="marca-agua border-b border-rule/30 px-4 pt-16 pb-20 md:pt-24 md:pb-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,44rem)_1fr]">
           <div>
@@ -116,7 +123,10 @@ function Home() {
             </p>
             <p className="lema-romance">{SELLO.romance}</p>
             <h1 className="hero-titulo mt-10">{ESCRITURA.title}</h1>
-            <p className="mt-5 font-serif text-2xl text-ink-soft italic">{ESCRITURA.motto}</p>
+            <p className="casa-que-es mt-5 font-serif text-ink-soft italic">{ESCRITURA.motto}</p>
+            <p className="mt-5 text-lg leading-relaxed">
+              <ConLemas>{school.welcome}</ConLemas>
+            </p>
             <p className="mt-4 font-sans text-sm tracking-wide">
               <a href="/verdad" className="text-link underline">
                 La Biblia no se lee, se estudia: el método V.E.R.D.A.D.
@@ -148,6 +158,31 @@ function Home() {
               className="h-auto w-[15rem] xl:w-[17rem]"
             />
           </div>
+        </div>
+      </section>
+
+      <section id="casas" className="border-b border-rule/30 px-4 py-14" aria-label="Tratados, estudios, libros y escuela">
+        <div className="muestras mx-auto max-w-6xl">
+          <Link to="/tratados" className="muestra muestra-tratados">
+            <img src="/tratados-v2/la-crianza-de-los-hijos-en-estos-tiempos-de-redes-sociales/portada.jpg" alt="" width={120} height={180} />
+            <b>Tratados</b>
+            <span>{PUERTAS[1].linea}</span>
+          </Link>
+          <Link to="/estudios" className="muestra muestra-estudios">
+            <img src="/tratados-v2/filipenses-2/portada.jpg" alt="" width={120} height={180} />
+            <b>Estudios</b>
+            <span>{PUERTAS[0].linea}</span>
+          </Link>
+          <Link to="/obras" className="muestra muestra-libros">
+            <Tapa obra={obras[0]} size="rejilla" />
+            <b>Libros</b>
+            <span>{CORPUS.gate.slice(0, CORPUS.gate.indexOf(". ") + 1)}</span>
+          </Link>
+          <Link to="/curso" className="muestra muestra-escuela">
+            <img src="/brand/seal-full.webp" alt="" width={120} height={120} />
+            <b>Escuela</b>
+            <span>Diez lecciones abiertas, gratis, para leer con la Biblia en la mano.</span>
+          </Link>
         </div>
       </section>
 
@@ -253,6 +288,7 @@ function Home() {
           </p>
         </div>
       </section>
+      <Subir />
     </main>
   );
 }
