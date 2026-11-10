@@ -153,8 +153,8 @@ export function Aula({
             <Seal variant="mark" size={32} className="h-8 w-8" />
             <span className="wordmark text-sm">Cielo Efata</span>
           </Link>
-          <Link to="/obras" className="ml-auto inline-flex min-h-11 items-center px-2 tracking-[0.14em] uppercase text-link">
-            Libros
+          <Link to={salir} className="ml-auto inline-flex min-h-11 items-center px-2 tracking-[0.14em] uppercase text-link">
+            {salir === "/tratados" ? "Tratados" : "Estudios"}
           </Link>
         </nav>
         <div className="no-imprimir mb-6 flex flex-wrap items-center gap-2 font-sans text-sm">
