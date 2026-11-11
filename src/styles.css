@@ -1058,3 +1058,114 @@ button.term {
     align-items: center;
   }
 }
+
+/* Regreso a RevelatiO. Oro #d9b871 con tinta #1a2340 ≈ 9,6:1. */
+.volver-cabecera {
+  display: none;
+  border-top: 1px solid color-mix(in oklab, #d9b871 40%, transparent);
+  padding: 0.45rem 1rem 0.55rem;
+}
+
+.volver-pill {
+  display: inline-flex;
+  align-items: stretch;
+  max-width: 100%;
+  min-height: 3rem;
+  background: #d9b871;
+  color: #1a2340;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px -14px rgba(12, 16, 24, 0.7);
+}
+
+.volver-pill a {
+  display: inline-flex;
+  min-width: 0;
+  min-height: 3rem;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 0.15rem 0 0.3rem;
+  color: #1a2340;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.volver-pill img {
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.volver-texto {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.volver-pill button {
+  flex: none;
+  min-width: 2.75rem;
+  min-height: 3rem;
+  padding: 0 0.85rem 0 0.35rem;
+  border: 0;
+  background: transparent;
+  color: #1a2340;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.volver-pill a:hover,
+.volver-pill button:hover {
+  background: color-mix(in oklab, #1a2340 8%, #d9b871);
+}
+
+.volver-pill a:focus-visible,
+.volver-pill button:focus-visible {
+  outline: 2px solid #1a2340;
+  outline-offset: -3px;
+}
+
+.volver-revelatio {
+  position: fixed;
+  z-index: 37;
+  left: max(0.75rem, env(safe-area-inset-left));
+  bottom: max(0.75rem, env(safe-area-inset-bottom));
+  max-width: calc(100vw - 6.75rem - env(safe-area-inset-left) - env(safe-area-inset-right));
+}
+
+@media (max-width: 1023px) {
+  /* El scroll termina encima de la pastilla: no tapa el texto. */
+  body:has(.volver-revelatio) {
+    height: 100dvh;
+    overflow: hidden;
+  }
+  body:has(.volver-revelatio) > .min-h-dvh {
+    min-height: calc(100dvh - 4.5rem - env(safe-area-inset-bottom));
+    max-height: calc(100dvh - 4.5rem - env(safe-area-inset-bottom));
+    overflow: auto;
+  }
+  body:has(.volver-revelatio) .sinopsis-popover:not([hidden]) {
+    bottom: calc(4.75rem + env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 1024px) {
+  .volver-cabecera {
+    display: block;
+  }
+  .volver-revelatio {
+    display: none;
+  }
+  header:has(.volver-cabecera) ~ .franja-seccion {
+    top: 8.4rem;
+  }
+  html:has(.volver-cabecera) {
+    scroll-padding-top: 8.4rem;
+  }
+}

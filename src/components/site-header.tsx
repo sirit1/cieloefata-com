@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Seal } from "@/components/seal";
 import { SostenerBoton } from "@/components/sostener";
 import { TemaBoton } from "@/components/tema-boton";
+import { VolverRevelatio } from "@/components/volver-revelatio";
 import { school } from "@/lib/content";
 
 const nav = [
@@ -182,6 +183,7 @@ export function SiteHeader() {
           </p>
         </nav>
       ) : null}
+      <VolverRevelatio />
     </header>
   );
 }

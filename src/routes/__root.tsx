@@ -10,6 +10,7 @@ import { SiteHeader } from "@/components/site-header";
 import { BannerVerdad } from "@/components/banner-verdad";
 import appCss from "../styles.css?url";
 import { SCRIPT_TEMA } from "@/lib/tema";
+import { SCRIPT_VOLVER } from "@/lib/volver-revelatio";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -50,6 +51,7 @@ export const Route = createRootRoute({
     <html lang="es" className="antialiased" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_VOLVER }} />
         <HeadContent />
       </head>
       <body className="min-h-dvh bg-parchment text-ink">
