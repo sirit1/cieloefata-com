@@ -118,7 +118,7 @@ test("ASIN e ISBN de imprenta coinciden con las fichas publicadas en Amazon", ()
   }
 });
 
-test("las fichas fuera del orden copian Amazon y no renumeran los nueve", () => {
+test("las fichas fuera del orden conservan el ASIN de Amazon y no renumeran los nueve", () => {
   assert.equal(obras.length, 9);
   assert.deepEqual(
     fichas.map((o) => [o.slug, o.asinEbook, o.asinPrint ?? "", o.isbnPrint ?? "", o.numeroSerieAmazon ?? 0]),
@@ -131,9 +131,13 @@ test("las fichas fuera del orden copian Amazon y no renumeran los nueve", () => 
   const callar = fichas.find((o) => o.slug === "callar-para-ganar");
   assert.equal(callar?.asinPrint, undefined);
   assert.equal(callar?.isbnPrint, undefined);
+  assert.equal(callar?.subtitulo, "El silencio del Siervo no es tu marca");
+  assert.match(callar?.line ?? "", /Isaías 53/);
+  assert.equal((callar?.line ?? "").includes("Oratoria"), false);
   const mundo = fichas.find((o) => o.slug === "el-mundo-pregunta-dios-responde");
   assert.equal(mundo?.numeroSerieAmazon, undefined);
   assert.equal(mundo?.subtitulo, "");
+  assert.match(mundo?.line ?? "", /mansedumbre y reverencia/);
   const vercel = readFileSync(new URL("../../vercel.json", import.meta.url), "utf8");
   assert.equal(vercel.includes("/obras/callar-para-ganar"), false);
 });

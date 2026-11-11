@@ -79,6 +79,33 @@
   --btn-ink-fg: #f4efe4;
 }
 
+/*
+ * Estudios, Tratados y Escuela mantienen el papel claro del rediseño.
+ * En modo oscuro los tokens se aclaran: sin este ancla, el oro y la tinta
+ * quedan pálidos sobre el pergamino (el botón «Estudio» del cuaderno).
+ * #6e4a12 sobre #fdfdfa ≈ 7.8:1; #7a5414 como filete ≈ 6.6:1.
+ */
+:root[data-tema="oscuro"] :is(.casa-estudios, .casa-tratados, .casa-escuela) {
+  --color-ink: #1a2340;
+  --color-ink-2: #1a2340;
+  --color-ink-soft: #3a465c;
+  --color-muted: #5c6578;
+  --color-parchment: #f4efe4;
+  --color-paper: #fbf8f1;
+  --color-gold: #6e4a12;
+  --color-gold-dim: #5c3e0e;
+  --color-gold-soft: #7a5414;
+  --color-rule: #7a5414;
+  --color-link: #6e4a12;
+  --color-verse: #1e4d8c;
+  --color-voz: #9b1c1c;
+  --color-danger: #8b2e2e;
+  --glosa-bg: #ebe6dc;
+  --btn-ink-bg: #1a202c;
+  --btn-ink-bg-hover: #0c1018;
+  --btn-ink-fg: #f4efe4;
+}
+
 @layer base {
   button:not(:disabled),
   [role="button"]:not(:disabled) {
@@ -762,16 +789,19 @@
     min-height: 2.75rem;
     align-items: center;
     gap: 0.4rem;
-    border: 1px solid color-mix(in oklab, var(--color-rule) 70%, transparent);
+    border: 1px solid var(--color-gold);
     padding: 0 0.85rem;
     font-family: var(--font-sans);
     font-size: 0.85rem;
+    font-weight: 600;
     color: var(--color-ink);
+    background: color-mix(in oklab, var(--color-paper) 86%, var(--color-gold));
   }
 
   .chip:hover {
     border-color: var(--color-gold);
     color: var(--color-gold);
+    background: var(--color-paper);
   }
 
   .borrador-aviso {
@@ -938,7 +968,69 @@ button.term {
 .obra-v2 ul { list-style: disc; padding-left: 1.5rem; }
 .obra-v2 ol { list-style: decimal; padding-left: 1.5rem; }
 .obra-v2 blockquote { border-left: 3px solid #d7b474; padding-left: 1rem; }
-.obra-v2 a.footnote-ref { color: #a8843f; text-decoration: none; }
+.obra-v2 a.footnote-ref { color: #6e4a12; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Sinopsis de la tapa: recuadro breve, con enlace al libro. */
+.sinopsis-tapa {
+  position: relative;
+  display: block;
+}
+
+.sinopsis-popover {
+  position: absolute;
+  z-index: 45;
+  left: 0;
+  top: calc(100% - 0.15rem);
+  width: min(22rem, 78vw);
+  padding: 0.8rem 0.95rem 0.7rem;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 16px 36px -18px rgba(26, 35, 64, 0.5);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: start;
+}
+
+.sinopsis-popover[hidden] {
+  display: none;
+}
+
+.sinopsis-popover p.sinopsis-texto {
+  margin: 0;
+  text-align: start;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  text-wrap: pretty;
+}
+
+.sinopsis-popover a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  margin-top: 0.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .sinopsis-popover:not([hidden]) {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    bottom: 1rem;
+    width: auto;
+    max-height: min(42vh, 16rem);
+    overflow: auto;
+  }
+}
 .obra-v2 sup { font-size: 0.7em; }
 .obra-v2 section.footnotes, .obra-v2 aside.footnotes { margin-top: 3rem; border-top: 1px solid rgba(0,0,0,.15); font-size: 0.95rem; }
 .obra-v2 .vers { font-style: italic; color: #2e6bd9; }

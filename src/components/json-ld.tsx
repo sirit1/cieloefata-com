@@ -1,5 +1,5 @@
 import { AMAZON_AUTHOR } from "@/lib/amazon";
-import { obraBySlug, obras, tapaPath, type Obra } from "@/lib/content";
+import { fichas, obraBySlug, obras, tapaPath, type Obra } from "@/lib/content";
 import { amazonDp } from "@/lib/amazon";
 import { SERIE_NOMBRE } from "@/lib/serie";
 import {
@@ -197,18 +197,31 @@ export function CorpusJsonLd() {
         "@type": "ItemList",
         name: "Libros · Editorial Cielo Efata",
         itemListOrder: "https://schema.org/ItemListOrderAscending",
-        numberOfItems: obras.length,
-        itemListElement: obras.map((obra) => ({
-          "@type": "ListItem",
-          position: obra.lectura,
-          url: canonicalUrl(`/obras/${obra.slug}`),
-          item: {
-            "@type": "Book",
-            name: obra.title,
-            image: canonicalUrl(tapaPath(obra.slug)),
-            author: { "@type": "Person", name: "Alejandro Sirit" },
-          },
-        })),
+        numberOfItems: obras.length + fichas.length,
+        itemListElement: [
+          ...obras.map((obra) => ({
+            "@type": "ListItem",
+            position: obra.lectura,
+            url: canonicalUrl(`/obras/${obra.slug}`),
+            item: {
+              "@type": "Book",
+              name: obra.title,
+              image: canonicalUrl(tapaPath(obra.slug)),
+              author: { "@type": "Person", name: "Alejandro Sirit" },
+            },
+          })),
+          ...fichas.map((obra, i) => ({
+            "@type": "ListItem",
+            position: obras.length + i + 1,
+            url: canonicalUrl(`/obras/${obra.slug}`),
+            item: {
+              "@type": "Book",
+              name: obra.title,
+              image: canonicalUrl(tapaPath(obra.slug)),
+              author: { "@type": "Person", name: "Alejandro Sirit" },
+            },
+          })),
+        ],
       }}
     />
   );

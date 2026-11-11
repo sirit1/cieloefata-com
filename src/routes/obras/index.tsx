@@ -5,7 +5,7 @@ import { CorpusJsonLd } from "@/components/json-ld";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
-import { Tapa } from "@/components/tapa";
+import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import { Volver } from "@/components/volver";
 import { CORPUS, fichas, obras, ROMANO, tapaPath, type Obra } from "@/lib/content";
 import { Subir } from "@/components/subir";
@@ -86,6 +86,8 @@ function ObrasPage() {
         Fuera del orden de lectura
       </h2>
       <p className="mt-4 leading-relaxed">
+        Además de la serie de nueve libros, la editorial publica Norma normans non normata,
+        Callar para ganar y El mundo pregunta, Dios responde. También está{" "}
         <Link to="/obras/el-paraclito-eterno" className="text-link underline">
           El Paráclito Eterno
         </Link>
@@ -96,15 +98,7 @@ function ObrasPage() {
         {fichas.map((o) => (
           <li key={o.slug} id={o.slug} className="scroll-mt-24 border-t border-rule pt-6">
             <div className="casa-ficha">
-              <Link
-                to="/obras/$slug"
-                params={{ slug: o.slug }}
-                className="shrink-0 self-start"
-                aria-hidden
-                tabIndex={-1}
-              >
-                <Tapa obra={o} size="lg" />
-              </Link>
+              <SinopsisTapa obra={o} size="lg" className="w-full" />
               <div className="min-w-0 flex-1">
                 {o.numeroSerieAmazon ? (
                   <p className="font-sans text-xs tracking-[0.2em] text-gold uppercase">
@@ -157,15 +151,7 @@ function TomoCard({
         <p className="casa-una-linea sm:col-span-2">Para empezar</p>
       ) : null}
       <div className={destacado ? "contents" : "flex flex-col gap-4"}>
-        <Link
-          to="/obras/$slug"
-          params={{ slug: obra.slug }}
-          className="shrink-0 self-start"
-          aria-hidden
-          tabIndex={-1}
-        >
-          <Tapa obra={obra} size={destacado ? "lg" : "pdp"} priority={destacado} />
-        </Link>
+        <SinopsisTapa obra={obra} size={destacado ? "lg" : "pdp"} priority={destacado} />
         <div className="min-w-0 flex-1">
           <p className="casa-romano">
             {ROMANO[obra.lectura]}

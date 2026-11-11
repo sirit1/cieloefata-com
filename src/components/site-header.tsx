@@ -7,6 +7,7 @@ import { TemaBoton } from "@/components/tema-boton";
 import { school } from "@/lib/content";
 
 const nav = [
+  { to: "/", hash: "puertas", label: "La casa", marca: true },
   { to: "/estudios", label: "Estudios" },
   { to: "/tratados", label: "Tratados" },
   { to: "/obras", label: "Libros" },
@@ -43,7 +44,8 @@ function Buscador({ id, className, onDone }: { id: string; className?: string; o
   );
 }
 
-function isCurrent(pathname: string, to: string) {
+function isCurrent(pathname: string, to: string, hash?: string) {
+  if (hash) return false;
   if (to === "/") return pathname === "/";
   return pathname === to || pathname.startsWith(`${to}/`);
 }
@@ -98,10 +100,15 @@ export function SiteHeader() {
         >
           {nav.map((item) => (
             <Link
-              key={item.to}
+              key={item.label}
               to={item.to}
-              aria-current={isCurrent(pathname, item.to) ? "page" : undefined}
-              className="relative inline-flex min-h-11 items-center px-2.5 font-sans text-xs tracking-[0.14em] whitespace-nowrap text-parchment uppercase after:absolute after:inset-x-2.5 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-gold-soft after:transition-transform hover:text-gold-soft hover:after:scale-x-100 aria-[current=page]:text-gold-soft aria-[current=page]:after:scale-x-100"
+              hash={"hash" in item ? item.hash : undefined}
+              aria-current={isCurrent(pathname, item.to, "hash" in item ? item.hash : undefined) ? "page" : undefined}
+              className={
+                "marca" in item && item.marca
+                  ? "ml-1 inline-flex min-h-11 items-center border border-gold-soft px-2.5 font-sans text-xs tracking-[0.14em] whitespace-nowrap text-gold-soft uppercase hover:bg-gold-soft hover:text-navy"
+                  : "relative inline-flex min-h-11 items-center px-2.5 font-sans text-xs tracking-[0.14em] whitespace-nowrap text-parchment uppercase after:absolute after:inset-x-2.5 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-gold-soft after:transition-transform hover:text-gold-soft hover:after:scale-x-100 aria-[current=page]:text-gold-soft aria-[current=page]:after:scale-x-100"
+              }
             >
               {item.label}
             </Link>
@@ -138,11 +145,16 @@ export function SiteHeader() {
           <Buscador id="buscar-menu" className="mx-auto mb-4 max-w-5xl [&_input]:w-full [&_input]:min-h-11 [&_input:focus-visible]:w-full" onDone={() => setOpen(false)} />
           <ul className="mx-auto max-w-5xl">
             {nav.map((item) => (
-              <li key={item.to}>
+              <li key={item.label}>
                 <Link
                   to={item.to}
-                  aria-current={isCurrent(pathname, item.to) ? "page" : undefined}
-                  className="flex min-h-11 items-center tracking-wide text-parchment hover:text-gold-soft aria-[current=page]:text-gold-soft"
+                  hash={"hash" in item ? item.hash : undefined}
+                  aria-current={isCurrent(pathname, item.to, "hash" in item ? item.hash : undefined) ? "page" : undefined}
+                  className={
+                    "marca" in item && item.marca
+                      ? "my-1 inline-flex min-h-11 items-center border border-gold-soft px-3 tracking-[0.14em] text-gold-soft uppercase"
+                      : "flex min-h-11 items-center tracking-wide text-parchment hover:text-gold-soft aria-[current=page]:text-gold-soft"
+                  }
                   onClick={() => setOpen(false)}
                 >
                   {item.label}

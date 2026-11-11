@@ -5,7 +5,7 @@ import { BookJsonLd } from "@/components/json-ld";
 import { ConLemas } from "@/components/lema";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
-import { Tapa } from "@/components/tapa";
+import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import { Volver } from "@/components/volver";
 import {
   obraBySlug,
@@ -82,7 +82,7 @@ export function ObraPage() {
       ) : null}
       <div className="casa-ficha mt-8">
         <figure className="m-0">
-          <Tapa obra={obra} size="lg" priority />
+          <SinopsisTapa obra={obra} size="lg" priority />
           <figcaption className="sr-only">
             {obra.pasaje
               ? `Tapa de ${obra.title}. Se lee junto a ${obra.pasaje}.`

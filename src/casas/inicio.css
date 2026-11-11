@@ -34,7 +34,7 @@
 }
 
 .casa-inicio .casa-anclas a {
-  color: #7a5414;
+  color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -104,6 +104,36 @@
 }
 .casa-inicio .muestra-escuela b { font-family: "Playfair Casa", Palatino, serif; color: #7a1f2b; }
 .casa-inicio .muestra-escuela span { font-family: "Karla Casa", sans-serif; }
+
+.casa-inicio .casa-ficha-caja {
+  background: var(--color-paper);
+  border: 1px solid var(--color-gold);
+  padding: 1.35rem 1.15rem 1.2rem;
+  box-shadow: 0 18px 40px -28px rgba(26, 35, 64, 0.45);
+}
+
+.casa-inicio .casa-ficha-caja .casa-ficha-cabeza {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.casa-inicio .casa-ficha-caja .casa-ficha-cabeza img {
+  width: 4.25rem;
+  height: auto;
+}
+
+.casa-inicio .casa-podcast {
+  background: var(--color-paper);
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 18px 40px -28px rgba(26, 35, 64, 0.4);
+}
+
+.casa-inicio .casa-podcast ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .casa-inicio .casa-subir {
   position: fixed;
