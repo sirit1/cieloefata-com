@@ -1,4 +1,5 @@
 import { defineEventHandler, getRequestURL, sendRedirect } from "h3";
+import { conVueltaCielo } from "../../src/lib/volver-revelatio.ts";
 
 const LIBROS: Record<string, string> = {
   genesis: "genesis",
@@ -76,12 +77,12 @@ function limpio(s: string) {
 
 function destino(cita: string) {
   const m = limpio(cita).match(/^(.+?)\s+(\d+)(?::(\d+))?/);
-  if (!m) return "https://revelatio.app/cuaderno";
+  if (!m) return conVueltaCielo("https://revelatio.app/cuaderno", "/cuaderno");
   const slug = LIBROS[m[1].trim()];
-  if (!slug) return "https://revelatio.app/cuaderno";
+  if (!slug) return conVueltaCielo("https://revelatio.app/cuaderno", "/cuaderno");
   const q = new URLSearchParams({ libro: slug, cap: m[2], casa: "1", vuelta: "/cuaderno" });
   if (m[3]) q.set("vs", m[3]);
-  return `https://revelatio.app/leer?${q.toString()}`;
+  return conVueltaCielo(`https://revelatio.app/leer?${q.toString()}`, "/cuaderno");
 }
 
 export default defineEventHandler((event) => {

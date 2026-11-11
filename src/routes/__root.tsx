@@ -2,6 +2,7 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { FichaPalabra } from "@/components/ficha-palabra";
 import { IdleBar } from "@/components/idle-bar";
+import { EnlacesVuelta } from "@/components/enlaces-vuelta";
 import { Medicion } from "@/components/medicion";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { FranjaSeccion } from "@/components/franja-seccion";
@@ -68,6 +69,7 @@ export const Route = createRootRoute({
             <SiteFooter />
           </div>
           <FichaPalabra />
+          <EnlacesVuelta />
           <Medicion />
         </AuthProvider>
         <Scripts />

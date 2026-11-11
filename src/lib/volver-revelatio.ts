@@ -59,6 +59,36 @@ export function destinoRevelatio(volver: string | null | undefined, referrer: st
   return urlSegura(volver) ?? urlSegura(referrer) ?? REVELATIO_ORIGEN;
 }
 
+/** Marca que RevelatiO lee para mostrar «Volver a Cielo Éfata». */
+export const REF_CIELO = "cieloefata";
+
+/** Solo el path de esta casa. Una ruta ajena o vacía vuelve a `/`. */
+export function rutaDeVuelta(ruta: string | null | undefined): string {
+  if (typeof ruta !== "string") return "/";
+  const path = ruta.trim().split(/[?#]/)[0] ?? "";
+  if (!path.startsWith("/") || path.startsWith("//") || path.length > 500 || /[\s\\]/.test(path)) return "/";
+  return path;
+}
+
+/**
+ * Añade `ref=cieloefata` y `volver` (la ruta actual) a un enlace de revelatio.app.
+ * Conserva la consulta y el ancla que el enlace ya traía. Otra dirección se deja igual.
+ */
+export function conVueltaCielo(destino: string, ruta: string): string {
+  let url: URL;
+  try {
+    url = new URL(destino);
+  } catch {
+    return destino;
+  }
+  if (url.protocol !== "https:" || url.port !== "") return destino;
+  if (!HOSTS.has(url.hostname)) return destino;
+  if (url.username || url.password) return destino;
+  url.searchParams.set("ref", REF_CIELO);
+  url.searchParams.set("volver", rutaDeVuelta(ruta));
+  return url.toString();
+}
+
 /** Destino visible, o null si no hay visita desde RevelatiO o el visitante lo ocultó. */
 export function resolverVolver(senal: Senal): string | null {
   if (senal.oculto) return null;

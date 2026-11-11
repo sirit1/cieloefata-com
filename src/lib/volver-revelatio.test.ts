@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import {
+  conVueltaCielo,
   destinoRevelatio,
   resolverVolver,
   SCRIPT_VOLVER,
@@ -76,6 +77,37 @@ test("la señal se guarda y el cierre la oculta durante la sesión", () => {
     null,
   );
   assert.match(SCRIPT_VOLVER, /revelatio\.app/);
+});
+
+test("cada enlace a RevelatiO lleva la vuelta a la ruta actual", () => {
+  assert.equal(
+    conVueltaCielo("https://revelatio.app/episodios", "/escuela"),
+    "https://revelatio.app/episodios?ref=cieloefata&volver=%2Fescuela",
+  );
+  const conQuery = conVueltaCielo(
+    "https://revelatio.app/libros/efata?utm_source=web&utm_medium=cta&utm_campaign=efata#tapa",
+    "/obras/efata?q=1#aqui",
+  );
+  const u = new URL(conQuery);
+  assert.equal(u.searchParams.get("utm_source"), "web");
+  assert.equal(u.searchParams.get("utm_medium"), "cta");
+  assert.equal(u.searchParams.get("utm_campaign"), "efata");
+  assert.equal(u.searchParams.get("ref"), "cieloefata");
+  assert.equal(u.searchParams.get("volver"), "/obras/efata");
+  assert.equal(u.hash, "#tapa");
+  assert.equal(conVueltaCielo(conQuery, "/obras/efata"), conQuery);
+  assert.equal(
+    conVueltaCielo("https://www.revelatio.app/leer?libro=marcos&cap=1", "/estudios/marcos-7"),
+    "https://www.revelatio.app/leer?libro=marcos&cap=1&ref=cieloefata&volver=%2Festudios%2Fmarcos-7",
+  );
+  assert.equal(conVueltaCielo("https://evil.com/episodios", "/escuela"), "https://evil.com/episodios");
+  assert.equal(conVueltaCielo("https://revelatio.app.evil.com/", "/escuela"), "https://revelatio.app.evil.com/");
+  assert.equal(conVueltaCielo("https://revelatio.app:8443/episodios", "/escuela"), "https://revelatio.app:8443/episodios");
+  assert.equal(conVueltaCielo("https://evil.com@revelatio.app/episodios", "/escuela"), "https://evil.com@revelatio.app/episodios");
+  assert.equal(
+    conVueltaCielo("https://revelatio.app/episodios", "//evil.com"),
+    "https://revelatio.app/episodios?ref=cieloefata&volver=%2F",
+  );
 });
 
 test("la pastilla de regreso cumple AA: tinta sobre oro", () => {
