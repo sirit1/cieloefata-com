@@ -44,6 +44,22 @@ body:has(.casa-libros) {
 .casa-libros {
   --casa-display: "Cinzel Casa", Palatino, serif;
   --casa-text: "Outfit Casa", "Source Sans 3", sans-serif;
+  /* La vitrina es azul noche en los dos temas: el oro claro no puede heredar la tinta oscura. */
+  --color-ink: #f3ead7;
+  --color-ink-2: #f3ead7;
+  --color-ink-soft: #e7dfcf;
+  --color-muted: #d5cbb8;
+  --color-gold: #d9b871;
+  --color-gold-dim: #e2c47f;
+  --color-gold-soft: #d9b871;
+  --color-rule: #d9b871;
+  --color-link: #f0d9a0;
+  --color-verse: #9ec0ea;
+  --color-paper: #141a2a;
+  --color-parchment: #0c1018;
+  --btn-ink-bg: #d9b871;
+  --btn-ink-fg: #0c1018;
+  --btn-ink-bg-hover: #f0d9a0;
   max-width: 1180px;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 5rem;

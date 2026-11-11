@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Tapa } from "@/components/tapa";
+import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import type { Obra } from "@/lib/content";
 import {
   formatosAmazon,
@@ -22,9 +22,7 @@ export function TarjetaLibro({
       className="mt-10 grid gap-5 border border-rule p-5 sm:grid-cols-[8.75rem_1fr]"
       aria-label={`Libro ${numeroSerie(obra)} de la serie ${SERIE_NOMBRE}: ${obra.title}`}
     >
-      <Link to="/obras/$slug" params={{ slug: obra.slug }} className="block">
-        <Tapa obra={obra} size="lista" />
-      </Link>
+      <SinopsisTapa obra={obra} size="lista" />
       <div>
         <p className="kicker">
           Serie {SERIE_NOMBRE} · Libro {numeroSerie(obra)}

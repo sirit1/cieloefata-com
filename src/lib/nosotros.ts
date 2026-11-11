@@ -6,14 +6,14 @@ export const NOSOTROS = {
   escribe: {
     title: "Quién escribe",
     body: [
-      "Dr. (h. c.) Alejandro Sirit escribe para que la Escritura vuelva a tener la última palabra: leída entera, sin autoayuda con lenguaje cristiano y sin versículos sacados de su lugar. Bajo el sello de Editorial Cielo Efata publica estudios bíblicos, tratados y nueve libros, entre ellos Pórtico a la Escritura, Éfata (donde presenta el método V.E.R.D.A.D.), El Siervo, no tú y Bástate. Todo apunta a lo mismo: conocer a Dios, reconocer el pecado, arrepentirse, convertirse a Cristo y permanecer firmes en la fe.",
+      "Dr. (h. c.) Alejandro Sirit escribe para que la Escritura vuelva a tener la última palabra: leída entera, sin autoayuda con lenguaje cristiano y sin versículos sacados de su lugar. Bajo el sello de Editorial Cielo Efata publica estudios bíblicos, tratados y una serie de nueve libros, entre ellos Pórtico a la Escritura, Éfata (donde presenta el método V.E.R.D.A.D.), El Siervo, no tú y Bástate, además de otras obras: Norma normans non normata, Callar para ganar y El mundo pregunta, Dios responde. Todo apunta a lo mismo: conocer a Dios, reconocer el pecado, arrepentirse, convertirse a Cristo y permanecer firmes en la fe.",
       "No ofrece un dios a la medida ni un Jesús útil para otros fines. Confiesa al Padre que habla, al Hijo que fue hecho carne y al Espíritu Santo que convence de pecado y da entendimiento de la Palabra. La fuerza de este trabajo no está en el tono, sino en el capítulo entero leído con humildad y oración.",
       "En 2026 recibió el Doctorado Honoris Causa del Centro UNESCO (Derechos Humanos, Cultura y Paz). Actualmente dirige cieloefata.com y RevelatiO (revelatio.app), una aplicación web de estudio bíblico con la Biblia en audio.",
     ],
   },
   editorial: {
     title: "Qué es Editorial Cielo Efata",
-    body: "Editorial Cielo Efata es la editorial que sostiene esta escuela bíblica. Publica los libros de Alejandro Sirit y mantiene abiertos, sin costo, los estudios bíblicos, los tratados que devuelven a su contexto versículos muy citados, el método V.E.R.D.A.D. y el cuaderno donde cada lector anota lo que el pasaje le pide obedecer. Para quien empieza, el orden de lectura sugerido comienza por Pórtico a la Escritura y sigue con Éfata, donde se aprende a leer el capítulo entero antes de hablar.",
+    body: "Editorial Cielo Efata es la editorial que sostiene esta escuela bíblica. Publica la serie de lectura de nueve libros de Alejandro Sirit y, junto a ella, otras obras: Norma normans non normata, Callar para ganar y El mundo pregunta, Dios responde. Mantiene abiertos, sin costo, los estudios bíblicos, los tratados que devuelven a su contexto versículos muy citados, el método V.E.R.D.A.D. y el cuaderno donde cada lector anota lo que el pasaje le pide obedecer. Para quien empieza, el orden de lectura sugerido comienza por Pórtico a la Escritura y sigue con Éfata, donde se aprende a leer el capítulo entero antes de hablar.",
   },
   revelatio: {
     title: "El lector compañero",

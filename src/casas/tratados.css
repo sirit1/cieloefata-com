@@ -153,7 +153,7 @@ body:has(.casa-tratados) {
   position: absolute;
   width: 34px;
   height: 34px;
-  color: #a37a2e;
+  color: #6e4a12;
   font-size: 26px;
   line-height: 34px;
   text-align: center;
@@ -169,7 +169,7 @@ body:has(.casa-tratados) {
   font-family: var(--font-serif);
   font-weight: 500;
   letter-spacing: 0.3em;
-  color: #9a7a3c;
+  color: #6e4a12;
   text-align: center;
   font-size: 13px;
 }
@@ -222,7 +222,7 @@ body:has(.casa-tratados) {
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 12px;
-  border: 1px solid #b38a3e;
+  border: 1px solid #6e4a12;
   color: #6e4a12;
   padding: 8px 14px;
   background: rgba(255, 255, 255, 0.3);
@@ -231,7 +231,7 @@ body:has(.casa-tratados) {
 
 .casa-floron {
   text-align: center;
-  color: #a37a2e;
+  color: #6e4a12;
   font-size: 22px;
   letter-spacing: 0.6em;
   margin: 26px 0;
@@ -260,7 +260,7 @@ body:has(.casa-tratados) {
   letter-spacing: 0.6em;
   font-size: 22px;
   font-weight: 400;
-  color: #a37a2e;
+  color: #6e4a12;
   margin-bottom: 18px;
 }
 
@@ -539,7 +539,7 @@ body:has(.casa-tratados) {
 .casa-btn.lin {
   background: transparent;
   color: #6e4a12;
-  border: 1px solid #b38a3e;
+  border: 1px solid #6e4a12;
 }
 
 @media (max-width: 900px) {

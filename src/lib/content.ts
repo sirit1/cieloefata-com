@@ -7,7 +7,7 @@ export const school = {
   lead: "La Escritura tiene la última palabra. Todo lo demás —el comentario, el método, el predicador de moda— va detrás, con humildad.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Escuela de estudio bíblico dirigida por Alejandro Sirit. Nueve libros y el método V.E.R.D.A.D. para estudiar el capítulo entero, sin recortar, adornar ni sustituir el texto.",
+    "Escuela de estudio bíblico dirigida por Alejandro Sirit. Una serie de nueve libros, y otras obras —Norma normans non normata, Callar para ganar y El mundo pregunta, Dios responde—, con el método V.E.R.D.A.D. para estudiar el capítulo entero, sin recortar, adornar ni sustituir el texto.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Alejandro Sirit",
   welcome:
@@ -24,7 +24,7 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Los libros",
-  gate: "Nueve libros de Alejandro Sirit, publicados por Editorial Cielo Efata. No son manuales de autoayuda: son libros para leer la Escritura entera, someter el pensamiento a lo que Dios dice y dejar atrás la religión de consumo.",
+  gate: "La serie de lectura reúne nueve libros, y la editorial publica además otras obras. No son manuales de autoayuda: son libros para leer la Escritura entera, someter el pensamiento a lo que Dios dice y dejar atrás la religión de consumo. Junto a la serie están Norma normans non normata, Callar para ganar y El mundo pregunta, Dios responde.",
   efata:
     "En Éfata, Alejandro Sirit presenta el método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión—, una manera de leer que cura la versiculitis y devuelve cada versículo a su capítulo. Es el método con el que se estudia en esta escuela.",
   line: "Te sugerimos leerlos en este orden, que no es el de publicación: I Pórtico a la Escritura, que recorre los sesenta y seis libros como una sola historia; II Éfata, donde se aprende a leer el capítulo entero; III El Siervo, no tú; IV Bástate; V Cuando el cielo se cae; VI El altar del espejo; VII De una misma boca; VIII Diákrisis, sobre el discernimiento; y IX Nunca tocarás mi fe, un testimonio que cierra la serie. Cada libro se lee junto al capítulo de la Biblia en que se apoya.",
@@ -434,12 +434,11 @@ export const fichas: Obra[] = [
     lectura: 0,
     slug: "callar-para-ganar",
     title: "Callar para ganar",
-    subtitulo: "Guía Práctica para encontrar respuestas con tu silencio",
-    seoTitle:
-      "Callar para ganar: Guía Práctica para encontrar respuestas con tu silencio | Alejandro Sirit",
+    subtitulo: "El silencio del Siervo no es tu marca",
+    seoTitle: "Callar para ganar: El silencio del Siervo no es tu marca | Alejandro Sirit",
     seoDescription:
-      '¿Y si la verdadera ventaja competitiva no estuviera en lo que dices, sino en lo que callas? Vivimos en la era de la "Oratoria Vacía".',
-    line: '¿Y si la verdadera ventaja competitiva no estuviera en lo que dices, sino en lo que callas? Vivimos en la era de la "Oratoria Vacía".',
+      "El Siervo de Isaías 53 ganó el juicio más alto guardando silencio. Con Santiago 1 y 3, la boca deja de ser un arma y vuelve a ser instrumento de vida.",
+    line: "El Siervo de Isaías 53 ganó el juicio más alto de la historia guardando silencio. Con Santiago 1 y 3 en la mano, este libro acompaña al lector hasta que su boca deje de ser un arma y vuelva a ser instrumento de vida.",
     thesis: "",
     sample: "",
     ref: "",
@@ -456,8 +455,8 @@ export const fichas: Obra[] = [
     subtitulo: "",
     seoTitle: "El mundo pregunta, Dios responde | Alejandro Sirit",
     seoDescription:
-      "Toda generación de creyentes ha tenido que responder a la misma pregunta que la serpiente formuló en el huerto: «¿Conque Dios os ha dicho...?».",
-    line: "Toda generación de creyentes ha tenido que responder a la misma pregunta que la serpiente formuló en el huerto: «¿Conque Dios os ha dicho...?».",
+      "Ciento veinte preguntas de escépticos, científicos, filósofos, críticos y creyentes, respondidas con la Palabra de Dios con mansedumbre y reverencia.",
+    line: "Ciento veinte preguntas de escépticos, científicos, filósofos, críticos y creyentes de otras tradiciones, respondidas con la Palabra de Dios con mansedumbre y reverencia.",
     thesis: "",
     sample: "",
     ref: "",

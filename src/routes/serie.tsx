@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SerieJsonLd } from "@/components/json-ld";
-import { Tapa } from "@/components/tapa";
+import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import {
   formatosAmazon,
   numeroSerie,
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/serie")({
       path: "/serie",
       title: tituloSeccion("La serie Cielo Efata, en orden de lectura"),
       description:
-        "Los nueve libros de la serie Cielo Efata, de Alejandro Sirit, en orden de lectura del I al IX. Cada uno con su capítulo de la Biblia y sus formatos en Amazon.",
+        "La serie de lectura de Cielo Efata: nueve libros, del I al IX, cada uno con su capítulo de la Biblia. La editorial publica además otras obras.",
     }),
   component: SeriePage,
 });
@@ -29,7 +29,7 @@ function SeriePage() {
       <SerieJsonLd />
       <p className="kicker">Serie {SERIE_NOMBRE}</p>
       <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">
-        Nueve libros, en orden de lectura
+        La serie: nueve libros, en orden de lectura
       </h1>
       <p className="mt-6 text-lg leading-relaxed">
         La serie tiene una sola numeración, la del orden de lectura, y es la
@@ -38,7 +38,8 @@ function SeriePage() {
         en Éfata se aprende a leer el capítulo entero antes de hablar, y cada
         libro siguiente se lee junto al capítulo de la Biblia en que se apoya.
         El capítulo se abre en RevelatiO, el lector de la casa, donde también se
-        pregunta al pasaje.
+        pregunta al pasaje. Fuera de esta serie, la editorial publica además Norma
+        normans non normata, Callar para ganar y El mundo pregunta, Dios responde.
       </p>
       <ol className="mt-12 space-y-10">
         {lista.map((o) => {
@@ -49,13 +50,7 @@ function SeriePage() {
               id={`libro-${o.lectura}`}
               className="grid gap-5 border-t border-rule pt-8 sm:grid-cols-[8.75rem_1fr]"
             >
-              <Link
-                to="/obras/$slug"
-                params={{ slug: o.slug }}
-                className="block"
-              >
-                <Tapa obra={o} size="lista" />
-              </Link>
+              <SinopsisTapa obra={o} size="lista" />
               <div>
                 <p className="kicker">
                   Libro {numeroSerie(o)} · {o.pasaje}

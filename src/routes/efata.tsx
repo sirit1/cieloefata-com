@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { track } from "@vercel/analytics";
-import { Tapa } from "@/components/tapa";
+import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import { obraBySlug } from "@/lib/content";
 import { ENLACE_KINDLE, OTRAS_TIENDAS, efataGratis, urlKindle } from "@/lib/kindle-tienda";
 import { pageHead } from "@/lib/seo";
@@ -49,7 +49,7 @@ function EfataPage() {
         </p>
       ) : null}
       <figure className="m-0 mx-auto max-w-[15rem]">
-        <Tapa obra={obra} size="lg" priority />
+        <SinopsisTapa obra={obra} size="lg" priority />
       </figure>
       <h1 className="mt-8 font-serif text-4xl leading-tight md:text-5xl">{obra.title}</h1>
       <p className="mt-2 text-center font-sans text-sm tracking-wide text-gold">{obra.subtitulo}</p>

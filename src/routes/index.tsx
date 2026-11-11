@@ -1,7 +1,9 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Search } from "lucide-react";
+import { BannerPodcast } from "@/components/banner-podcast";
 import { BannerRevelatio } from "@/components/banner-revelatio";
 import { RegaloVerdad } from "@/components/regalo-verdad";
+import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import { Refs } from "@/components/cite";
 import { ConLemas } from "@/components/lema";
 import { Tapa } from "@/components/tapa";
@@ -9,7 +11,7 @@ import { BtnArrow } from "@/components/motif";
 import { SlotsSemanaMes } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
 import { Subir } from "@/components/subir";
-import { CORPUS, obras, ROMANO, school } from "@/lib/content";
+import { CORPUS, fichas, obras, ROMANO, school } from "@/lib/content";
 import { AMAZON_AUTHOR, amazonDp, whatsappColeccion } from "@/lib/amazon";
 import { SELLO } from "@/lib/identidad";
 import { ESCRITURA } from "@/lib/pilar";
@@ -107,9 +109,10 @@ function Home() {
     <main className="casa-inicio pb-24">
       <HomeJsonLd />
       <nav className="casa-anclas" aria-label="En esta página">
+        <a href="#puertas">La casa</a>
         <a href="#casas">Tratados, estudios, libros y escuela</a>
-        <a href="#libros">Nueve libros, un orden de lectura</a>
-        <a href="#puertas">Por dónde entrar</a>
+        <a href="#podcast">Pódcast</a>
+        <a href="#libros">La serie de nueve libros</a>
         <a href="#pilares">Con qué texto leemos</a>
       </nav>
       <section className="marca-agua border-b border-rule/30 px-4 pt-16 pb-20 md:pt-24 md:pb-28">
@@ -161,6 +164,35 @@ function Home() {
         </div>
       </section>
 
+      <section id="puertas" className="border-b border-rule/30 px-4 py-12 md:py-16" aria-labelledby="casa-titulo">
+        <div className="mx-auto max-w-6xl">
+          <div className="casa-ficha-caja">
+            <div className="casa-ficha-cabeza">
+              <img src="/brand/seal-full.webp" alt="" width={96} height={140} decoding="async" />
+              <div>
+                <p className="kicker">La casa</p>
+                <h2 id="casa-titulo" className="seccion-titulo mt-2">
+                  Por dónde entrar
+                </h2>
+              </div>
+            </div>
+            <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {PUERTAS.map((p) => (
+                <li key={p.to}>
+                  <Link to={p.to} className="tarjeta group">
+                    <span className="flex items-baseline justify-between gap-3">
+                      <span className="font-serif text-2xl font-semibold group-hover:text-gold">{p.titulo}</span>
+                      <BtnArrow />
+                    </span>
+                    <span className="mt-3 block leading-relaxed text-ink-soft">{p.linea}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <section id="casas" className="border-b border-rule/30 px-4 py-14" aria-label="Tratados, estudios, libros y escuela">
         <div className="muestras mx-auto max-w-6xl">
           <Link to="/tratados" className="muestra muestra-tratados">
@@ -186,13 +218,15 @@ function Home() {
         </div>
       </section>
 
+      <BannerPodcast />
+
       <section className="border-b border-rule/30 px-4 py-16 md:py-20" aria-labelledby="libros">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-[36em]">
               <p className="kicker">Alejandro Sirit · Editorial Cielo Efata</p>
               <h2 id="libros" className="seccion-titulo mt-3">
-                Nueve libros, un orden de lectura
+                La serie: nueve libros, un orden de lectura
               </h2>
               <p className="mt-4 text-lg leading-relaxed">
                 Se empieza por Pórtico a la Escritura, y en Éfata se aprende a leer el capítulo entero
@@ -214,8 +248,12 @@ function Home() {
           <ol className="mt-12 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
             {obras.map((o) => (
               <li key={o.slug}>
+                <SinopsisTapa
+                  obra={o}
+                  size="rejilla"
+                  className="transition-transform duration-300 hover:-translate-y-1"
+                />
                 <Link to="/obras/$slug" params={{ slug: o.slug }} className="group block">
-                  <Tapa obra={o} size="rejilla" className="w-full transition-transform duration-300 group-hover:-translate-y-1" />
                   <span className="kicker mt-3 block">{ROMANO[o.lectura]}</span>
                   <span className="mt-1 block font-serif text-xl leading-snug font-semibold group-hover:text-gold">
                     {o.title}
@@ -234,34 +272,67 @@ function Home() {
               </li>
             ))}
           </ol>
+          <div className="mt-14 max-w-[40em]">
+            <h3 className="font-serif text-2xl">Otras obras</h3>
+            <p className="mt-3 leading-relaxed">
+              La serie de lectura son estos nueve. La editorial publica además{" "}
+              <Link to="/obras/$slug" params={{ slug: "norma-normans-non-normata" }} className="text-link underline">
+                Norma normans non normata
+              </Link>
+              ,{" "}
+              <Link to="/obras/$slug" params={{ slug: "callar-para-ganar" }} className="text-link underline">
+                Callar para ganar
+              </Link>{" "}
+              y{" "}
+              <Link to="/obras/$slug" params={{ slug: "el-mundo-pregunta-dios-responde" }} className="text-link underline">
+                El mundo pregunta, Dios responde
+              </Link>
+              .
+            </p>
+          </div>
+          <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3">
+            {fichas.map((o) => (
+              <li key={o.slug}>
+                <SinopsisTapa obra={o} size="ficha" />
+                <Link to="/obras/$slug" params={{ slug: o.slug }} className="group mt-3 block">
+                  <span className="block font-serif text-xl leading-snug font-semibold group-hover:text-gold">
+                    {o.title}
+                  </span>
+                  {o.subtitulo ? (
+                    <span className="mt-1 block font-sans text-sm text-ink-soft">{o.subtitulo}</span>
+                  ) : null}
+                </Link>
+                <span className="mt-2 flex flex-col">
+                  {o.asinEbook ? (
+                    <a
+                      href={amazonDp(o.asinEbook)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center font-sans text-sm text-link underline"
+                    >
+                      Kindle<span className="sr-only">: {o.title}</span>
+                    </a>
+                  ) : null}
+                  {o.asinPrint ? (
+                    <a
+                      href={amazonDp(o.asinPrint)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center font-sans text-sm text-link underline"
+                    >
+                      Tapa blanda<span className="sr-only">: {o.title}</span>
+                    </a>
+                  ) : null}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <div className="mx-auto max-w-6xl px-4">
         <SlotsSemanaMes />
       </div>
-
-      <section className="px-4 py-20 md:py-28" aria-labelledby="puertas">
-        <div className="mx-auto max-w-6xl">
-          <p className="kicker">La casa</p>
-          <h2 id="puertas" className="seccion-titulo mt-3">
-            Por dónde entrar
-          </h2>
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {PUERTAS.map((p) => (
-              <li key={p.to}>
-                <Link to={p.to} className="tarjeta group">
-                  <span className="flex items-baseline justify-between gap-3">
-                    <span className="font-serif text-2xl font-semibold group-hover:text-gold">{p.titulo}</span>
-                    <BtnArrow />
-                  </span>
-                  <span className="mt-3 block leading-relaxed text-ink-soft">{p.linea}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
 
       <div className="mx-auto max-w-5xl px-4 py-10"><RegaloVerdad /></div>
 
