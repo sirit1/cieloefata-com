@@ -2,6 +2,7 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { FichaPalabra } from "@/components/ficha-palabra";
 import { IdleBar } from "@/components/idle-bar";
+import { EnlacesVuelta } from "@/components/enlaces-vuelta";
 import { Medicion } from "@/components/medicion";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { FranjaSeccion } from "@/components/franja-seccion";
@@ -10,6 +11,7 @@ import { SiteHeader } from "@/components/site-header";
 import { BannerVerdad } from "@/components/banner-verdad";
 import appCss from "../styles.css?url";
 import { SCRIPT_TEMA } from "@/lib/tema";
+import { SCRIPT_VOLVER } from "@/lib/volver-revelatio";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -50,6 +52,7 @@ export const Route = createRootRoute({
     <html lang="es" className="antialiased" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT_VOLVER }} />
         <HeadContent />
       </head>
       <body className="min-h-dvh bg-parchment text-ink">
@@ -66,6 +69,7 @@ export const Route = createRootRoute({
             <SiteFooter />
           </div>
           <FichaPalabra />
+          <EnlacesVuelta />
           <Medicion />
         </AuthProvider>
         <Scripts />
