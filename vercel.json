@@ -160,6 +160,12 @@
       "permanent": false
     }
   ],
+  "crons": [
+    {
+      "path": "/api/cuaderno/higiene",
+      "schedule": "17 * * * *"
+    }
+  ],
   "headers": [
     {
       "source": "/brand/(.*)",

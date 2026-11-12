@@ -69,8 +69,11 @@ import { Route as VersiculoSlugRouteImport } from './routes/versiculo/$slug'
 import { Route as VersiculosIndexRouteImport } from './routes/versiculos/index'
 import { Route as VersiculosSlugRouteImport } from './routes/versiculos/$slug'
 import { Route as ApiCertificadoCodigoRouteImport } from './routes/api/certificado/$codigo'
+import { Route as ApiCuadernoExportarRouteImport } from './routes/api/cuaderno/exportar'
+import { Route as ApiCuadernoHigieneRouteImport } from './routes/api/cuaderno/higiene'
 import { Route as CursoExamenSlugRouteImport } from './routes/curso/examen/$slug'
 import { Route as EstudiosSlugGuiaRouteImport } from './routes/estudios/$slug_.guia'
+import { Route as ApiCuadernoAudioIdRouteImport } from './routes/api/cuaderno/audio/$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -373,6 +376,16 @@ const ApiCertificadoCodigoRoute = ApiCertificadoCodigoRouteImport.update({
   path: '/api/certificado/$codigo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiCuadernoExportarRoute = ApiCuadernoExportarRouteImport.update({
+  id: '/api/cuaderno/exportar',
+  path: '/api/cuaderno/exportar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCuadernoHigieneRoute = ApiCuadernoHigieneRouteImport.update({
+  id: '/api/cuaderno/higiene',
+  path: '/api/cuaderno/higiene',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CursoExamenSlugRoute = CursoExamenSlugRouteImport.update({
   id: '/curso/examen/$slug',
   path: '/curso/examen/$slug',
@@ -381,6 +394,11 @@ const CursoExamenSlugRoute = CursoExamenSlugRouteImport.update({
 const EstudiosSlugGuiaRoute = EstudiosSlugGuiaRouteImport.update({
   id: '/estudios/$slug_/guia',
   path: '/estudios/$slug/guia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiCuadernoAudioIdRoute = ApiCuadernoAudioIdRouteImport.update({
+  id: '/api/cuaderno/audio/$id',
+  path: '/api/cuaderno/audio/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -445,8 +463,11 @@ export interface FileRoutesByFullPath {
   '/versiculo/': typeof VersiculoIndexRoute
   '/versiculos/': typeof VersiculosIndexRoute
   '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
+  '/api/cuaderno/exportar': typeof ApiCuadernoExportarRoute
+  '/api/cuaderno/higiene': typeof ApiCuadernoHigieneRoute
   '/curso/examen/$slug': typeof CursoExamenSlugRoute
   '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
+  '/api/cuaderno/audio/$id': typeof ApiCuadernoAudioIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -509,8 +530,11 @@ export interface FileRoutesByTo {
   '/versiculo': typeof VersiculoIndexRoute
   '/versiculos': typeof VersiculosIndexRoute
   '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
+  '/api/cuaderno/exportar': typeof ApiCuadernoExportarRoute
+  '/api/cuaderno/higiene': typeof ApiCuadernoHigieneRoute
   '/curso/examen/$slug': typeof CursoExamenSlugRoute
   '/estudios/$slug/guia': typeof EstudiosSlugGuiaRoute
+  '/api/cuaderno/audio/$id': typeof ApiCuadernoAudioIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -574,8 +598,11 @@ export interface FileRoutesById {
   '/versiculo/': typeof VersiculoIndexRoute
   '/versiculos/': typeof VersiculosIndexRoute
   '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
+  '/api/cuaderno/exportar': typeof ApiCuadernoExportarRoute
+  '/api/cuaderno/higiene': typeof ApiCuadernoHigieneRoute
   '/curso/examen/$slug': typeof CursoExamenSlugRoute
   '/estudios/$slug_/guia': typeof EstudiosSlugGuiaRoute
+  '/api/cuaderno/audio/$id': typeof ApiCuadernoAudioIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -640,8 +667,11 @@ export interface FileRouteTypes {
     | '/versiculo/'
     | '/versiculos/'
     | '/api/certificado/$codigo'
+    | '/api/cuaderno/exportar'
+    | '/api/cuaderno/higiene'
     | '/curso/examen/$slug'
     | '/estudios/$slug/guia'
+    | '/api/cuaderno/audio/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -704,8 +734,11 @@ export interface FileRouteTypes {
     | '/versiculo'
     | '/versiculos'
     | '/api/certificado/$codigo'
+    | '/api/cuaderno/exportar'
+    | '/api/cuaderno/higiene'
     | '/curso/examen/$slug'
     | '/estudios/$slug/guia'
+    | '/api/cuaderno/audio/$id'
   id:
     | '__root__'
     | '/'
@@ -768,8 +801,11 @@ export interface FileRouteTypes {
     | '/versiculo/'
     | '/versiculos/'
     | '/api/certificado/$codigo'
+    | '/api/cuaderno/exportar'
+    | '/api/cuaderno/higiene'
     | '/curso/examen/$slug'
     | '/estudios/$slug_/guia'
+    | '/api/cuaderno/audio/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -832,8 +868,11 @@ export interface RootRouteChildren {
   VersiculoIndexRoute: typeof VersiculoIndexRoute
   VersiculosIndexRoute: typeof VersiculosIndexRoute
   ApiCertificadoCodigoRoute: typeof ApiCertificadoCodigoRoute
+  ApiCuadernoExportarRoute: typeof ApiCuadernoExportarRoute
+  ApiCuadernoHigieneRoute: typeof ApiCuadernoHigieneRoute
   CursoExamenSlugRoute: typeof CursoExamenSlugRoute
   EstudiosSlugGuiaRoute: typeof EstudiosSlugGuiaRoute
+  ApiCuadernoAudioIdRoute: typeof ApiCuadernoAudioIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -1258,6 +1297,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiCertificadoCodigoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/cuaderno/exportar': {
+      id: '/api/cuaderno/exportar'
+      path: '/api/cuaderno/exportar'
+      fullPath: '/api/cuaderno/exportar'
+      preLoaderRoute: typeof ApiCuadernoExportarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/cuaderno/higiene': {
+      id: '/api/cuaderno/higiene'
+      path: '/api/cuaderno/higiene'
+      fullPath: '/api/cuaderno/higiene'
+      preLoaderRoute: typeof ApiCuadernoHigieneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/curso/examen/$slug': {
       id: '/curso/examen/$slug'
       path: '/curso/examen/$slug'
@@ -1270,6 +1323,13 @@ declare module '@tanstack/react-router' {
       path: '/estudios/$slug/guia'
       fullPath: '/estudios/$slug/guia'
       preLoaderRoute: typeof EstudiosSlugGuiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/cuaderno/audio/$id': {
+      id: '/api/cuaderno/audio/$id'
+      path: '/api/cuaderno/audio/$id'
+      fullPath: '/api/cuaderno/audio/$id'
+      preLoaderRoute: typeof ApiCuadernoAudioIdRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -1347,8 +1407,11 @@ const rootRouteChildren: RootRouteChildren = {
   VersiculoIndexRoute: VersiculoIndexRoute,
   VersiculosIndexRoute: VersiculosIndexRoute,
   ApiCertificadoCodigoRoute: ApiCertificadoCodigoRoute,
+  ApiCuadernoExportarRoute: ApiCuadernoExportarRoute,
+  ApiCuadernoHigieneRoute: ApiCuadernoHigieneRoute,
   CursoExamenSlugRoute: CursoExamenSlugRoute,
   EstudiosSlugGuiaRoute: EstudiosSlugGuiaRoute,
+  ApiCuadernoAudioIdRoute: ApiCuadernoAudioIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,5 +1,6 @@
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { CuadernoEstudio } from "@/components/cuaderno-estudio";
 import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
 import { Retomar } from "@/components/retomar";
@@ -361,6 +362,14 @@ function CuadernoPage() {
             ))}
           </ul>
         )}
+      </section>
+      <section className="mt-16 border-t border-rule pt-10" aria-label="Cuaderno de estudio">
+        <h2 className="font-serif text-3xl">Cuaderno de estudio</h2>
+        <p className="mt-3 leading-relaxed">
+          Escuela, lectura diaria y maná. Estas notas viven en la cuenta de quien entra. El acto de
+          obediencia de arriba sigue siendo el de Santiago: ser hacedor de la palabra.
+        </p>
+        <CuadernoEstudio leccion={null} />
       </section>
     </main>
   );

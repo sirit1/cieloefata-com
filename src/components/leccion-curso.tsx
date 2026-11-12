@@ -6,7 +6,7 @@ export function LeccionCuerpo({ bloques }: { bloques: Bloque[] }) {
     <div className="mt-10">
       {bloques.map(([t, s], i) =>
         t === "h" ? (
-          <h2 key={i} className="mt-12 font-serif text-2xl leading-snug">
+          <h2 key={i} id={`leccion-h-${i}`} className="mt-12 font-serif text-2xl leading-snug">
             {s}
           </h2>
         ) : t === "q" ? (
