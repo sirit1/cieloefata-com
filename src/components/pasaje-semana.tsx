@@ -19,7 +19,12 @@ export function PasajeSemana() {
     };
   }, []);
   return (
-    <section className="mt-12 border-t border-rule pt-8" aria-label="Pasaje de la semana">
+    <section
+      className="mt-12 border-t border-rule pt-8"
+      aria-label="Pasaje de la semana"
+      data-cuaderno-shelf="mana"
+      data-ref={mana?.ref ?? ""}
+    >
       <p className="kicker">Pasaje de la semana</p>
       {mana ? (
         <>

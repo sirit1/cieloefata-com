@@ -213,3 +213,365 @@ body:has(.casa-escuela) {
   .casa-escuela .casa-dias { grid-template-columns: 1fr 1fr; }
   .casa-escuela .casa-sello { width: 88px; }
 }
+
+/* El cuaderno acompaña el scroll en la lección. En el teléfono es una hoja, no una segunda columna. */
+.cuaderno-lado {
+  display: none;
+}
+
+.cuaderno-abrir {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 46;
+  min-height: 2.75rem;
+  padding: 0.7rem 0.95rem;
+  border: 0;
+  border-radius: 999px;
+  background: #7a1f2b;
+  color: #fffaf3;
+  font-family: "Karla Casa", "Source Sans 3", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cuaderno-abrir:focus-visible,
+.cuaderno-cerrar:focus-visible,
+.cuaderno-btn:focus-visible,
+.cuaderno-link:focus-visible,
+.cuaderno-estante:focus-visible {
+  outline: 2px solid #1e3a6e;
+  outline-offset: 2px;
+}
+
+.cuaderno-velo {
+  position: fixed;
+  inset: 0;
+  z-index: 54;
+  border: 0;
+  background: rgba(42, 28, 28, 0.35);
+}
+
+.cuaderno-ancla.abierto .cuaderno-lado {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 55;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: min(85dvh, 42rem);
+  overflow: auto;
+  background: #fffaf3;
+  color: #2a1c1c;
+  border-top: 3px solid #7a1f2b;
+  box-shadow: 0 -12px 32px rgba(42, 28, 28, 0.18);
+}
+
+.cuaderno-ancla.abierto .cuaderno-abrir {
+  display: none;
+}
+
+.cuaderno-cerrar {
+  display: inline-flex;
+  align-self: flex-end;
+  min-height: 2.75rem;
+  margin: 0.4rem 0.6rem 0;
+  padding: 0.4rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: #7a1f2b;
+  font-family: "Karla Casa", "Source Sans 3", sans-serif;
+  font-weight: 700;
+}
+
+@media (min-width: 1100px) {
+  .leccion-marco {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 22.5rem;
+    align-items: start;
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .leccion-marco .casa-escuela {
+    max-width: none;
+  }
+
+  .cuaderno-lado,
+  .cuaderno-ancla.abierto .cuaderno-lado {
+    display: block;
+    position: sticky;
+    top: 7.6rem;
+    z-index: 1;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    max-height: calc(100dvh - 8.4rem);
+    margin: 1.2rem 1rem 2rem 0;
+    overflow: auto;
+    background: #fffaf3;
+    color: #2a1c1c;
+    border: 1px solid #e2c9a4;
+    border-top: 3px solid #7a1f2b;
+    box-shadow: none;
+  }
+
+  .cuaderno-abrir,
+  .cuaderno-cerrar,
+  .cuaderno-velo {
+    display: none;
+  }
+}
+
+.cuaderno-panel {
+  padding: 0.9rem 0.95rem 1.2rem;
+  font-family: "Karla Casa", "Source Sans 3", sans-serif;
+  color: #2a1c1c;
+  background: #fffaf3;
+}
+
+.cuaderno-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a1f2b;
+}
+
+.cuaderno-titulo {
+  margin: 0.35rem 0 0;
+  font-family: "Playfair Casa", Palatino, serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: #3b1218;
+}
+
+.cuaderno-lead,
+.cuaderno-meta,
+.cuaderno-cuerpo,
+.cuaderno-pie,
+.cuaderno-aviso p,
+.cuaderno-nota p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.cuaderno-lead,
+.cuaderno-pie {
+  color: #2a1c1c;
+}
+
+.cuaderno-meta {
+  color: #3a332c;
+}
+
+.cuaderno-seccion {
+  margin: 0.6rem 0;
+  padding: 0.45rem 0.55rem;
+  background: #f4e3c0;
+  color: #3b1218;
+  font-size: 0.92rem;
+}
+
+.cuaderno-estantes {
+  display: flex;
+  gap: 0.35rem;
+  margin: 0.8rem 0;
+}
+
+.cuaderno-estante,
+.cuaderno-btn,
+.cuaderno-link {
+  font-family: "Karla Casa", "Source Sans 3", sans-serif;
+}
+
+.cuaderno-estante {
+  flex: 1;
+  min-height: 2.75rem;
+  border: 1px solid #7a1f2b;
+  background: transparent;
+  color: #3b1218;
+  font-weight: 700;
+}
+
+.cuaderno-estante.activo {
+  background: #7a1f2b;
+  color: #fffaf3;
+}
+
+.cuaderno-form,
+.cuaderno-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cuaderno-form {
+  gap: 0.7rem;
+}
+
+.cuaderno-campo {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #3b1218;
+}
+
+.cuaderno-campo input,
+.cuaderno-campo textarea {
+  min-height: 2.75rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #7a5414;
+  background: #fff;
+  color: #2a1c1c;
+  font-family: "Karla Casa", "Source Sans 3", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cuaderno-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #7a1f2b;
+  background: #fffaf3;
+  color: #3b1218;
+  font-weight: 700;
+}
+
+.cuaderno-btn-principal,
+.cuaderno-estante.activo {
+  background: #7a1f2b;
+  color: #fffaf3;
+}
+
+.cuaderno-btn:disabled {
+  opacity: 0.65;
+}
+
+.cuaderno-aviso {
+  margin: 0.8rem 0;
+  padding: 0.75rem 0.8rem;
+  border: 2px solid #7a1f2b;
+  background: #f4e3c0;
+  color: #3b1218;
+}
+
+.cuaderno-aviso-fuerte {
+  background: #f6d48a;
+}
+
+.cuaderno-aviso-ultimo {
+  background: #7a1f2b;
+  color: #fffaf3;
+}
+
+.cuaderno-aviso-ultimo .cuaderno-kicker,
+.cuaderno-aviso-ultimo .cuaderno-btn {
+  color: #fffaf3;
+  border-color: #fffaf3;
+  background: transparent;
+}
+
+.cuaderno-aviso-titulo {
+  margin: 0 0 0.35rem;
+  font-family: "Playfair Casa", Palatino, serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.cuaderno-cuentas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.cuaderno-check {
+  display: flex;
+  gap: 0.45rem;
+  align-items: flex-start;
+  font-size: 0.92rem;
+}
+
+.cuaderno-mana blockquote {
+  margin: 0.4rem 0;
+  font-family: "Playfair Casa", Palatino, serif;
+}
+
+.cuaderno-seleccion,
+.cuaderno-nota {
+  margin-top: 0.6rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid #e2c9a4;
+}
+
+.cuaderno-grupo h3 {
+  margin: 1rem 0 0.2rem;
+  font-family: "Playfair Casa", Palatino, serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #7a1f2b;
+}
+
+.cuaderno-grupo ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cuaderno-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.35rem;
+}
+
+.cuaderno-link {
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1e3a6e;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cuaderno-error {
+  color: #7a1f2b;
+  font-weight: 700;
+}
+
+.cuaderno-audio {
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.cuaderno-flotante {
+  position: fixed;
+  z-index: 71;
+  left: 1rem;
+  right: 1rem;
+  bottom: 4.5rem;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 0.8rem;
+  background: #fffaf3;
+  color: #2a1c1c;
+  border: 2px solid #7a1f2b;
+}
+
+.cuaderno-panel a {
+  color: #1e3a6e;
+}
