@@ -177,6 +177,86 @@ export const DIAS: DiaCurso[] = [
     "versiculo": "que prediques la palabra; que instes a tiempo y fuera de tiempo; redarguye, reprende, exhorta con toda paciencia y doctrina.",
     "intro": "Llegamos al día veinte. Hace diez días, en la lección once, comenzamos a estudiar la suficiencia de la Escritura en la historia del rey Josías y del libro hallado en el templo. Desde entonces hemos aprendido que la Escritura es suficiente, clara y se interpreta a sí misma; hemos establecido la disciplina de leerla entera; hemos dibujado el mapa de los dos testamentos; nos hemos sentado a los pies del Maestro; y hemos estudiado la doctrina de Dios y la persona de Cristo. Hoy vamos a hacer dos cosas. Primero, daremos los primeros pasos en la predicación, porque todo lo que se recibe de Dios debe compartirse. Y después repasaremos los diez días, para que nada de lo aprendido se pierda.",
     "cita": "2 Timoteo 4:2"
+  },
+  {
+    "n": 21,
+    "slug": "dia-21",
+    "titulo": "He aquí el Cordero de Dios: la obra de Cristo",
+    "versiculo": "El siguiente día vio Juan a Jesús que venía a él, y dijo: He aquí el Cordero de Dios, que quita el pecado del mundo.",
+    "intro": "Hace dos días, en la lección diecinueve, estudiamos la persona de Cristo. Aprendimos que el que dijo antes que Abraham fuese, yo soy, es verdadero Dios y verdadero hombre, una sola persona en dos naturalezas, y que precisamente por eso es el único mediador entre Dios y los hombres. Ayer dimos los primeros pasos en la predicación y repasamos los días once al veinte. Hoy abrimos la última serie de diez lecciones del módulo uno, y la abrimos con la pregunta que nace inevitablemente de la lección diecinueve. Si ya sabemos quién es Cristo, debemos preguntar ahora qué hizo Cristo. La persona y la obra no se pueden separar: el Hijo eterno no se hizo carne para ser admirado desde lejos, sino para hacer algo que ningún otro podía hacer. Él mismo lo dijo con palabras sencillas: el Hijo del Hombre no vino para ser servido, sino para servir, y para dar su vida en rescate por muchos.",
+    "cita": "Juan 1:29"
+  },
+  {
+    "n": 22,
+    "slug": "dia-22",
+    "titulo": "El Espíritu de verdad: el Paráclito en la Escritura",
+    "versiculo": "Pero cuando venga el Espíritu de verdad, él os guiará a toda la verdad; porque no hablará por su propia cuenta, sino que hablará todo lo que oyere, y os hará saber las cosas que habrán de venir.",
+    "intro": "Ayer estuvimos junto al Jordán y al pie de la cruz. Oímos a Juan el Bautista decir: he aquí el Cordero de Dios, que quita el pecado del mundo; y oímos al Cordero decir: consumado es. Aprendimos que la obra de Cristo está terminada, que nada se le puede añadir, y que el que murió vive siempre para interceder. Pero esa enseñanza deja abierta una pregunta muy práctica, que cualquier alumno honesto se hace tarde o temprano. Si la obra se consumó hace casi dos mil años, en una colina fuera de Jerusalén, ¿cómo llega hasta mí? ¿Cómo pasa lo que Cristo hizo allá y entonces a mi corazón aquí y ahora? ¿Cómo es que un hombre muerto en sus pecados llega a mirar al Cordero, a creer, a clamar Abba, Padre, y a vivir como redimido?",
+    "cita": "Juan 16:13"
+  },
+  {
+    "n": 23,
+    "slug": "dia-23",
+    "titulo": "Polvo y aliento: el hombre y el pecado",
+    "versiculo": "Crea en mí, oh Dios, un corazón limpio, Y renueva un espíritu recto dentro de mí.",
+    "intro": "En los dos últimos días hemos estudiado lo que Dios ha hecho por nosotros. El Hijo, como Cordero de Dios, consumó la obra en la cruz; el Espíritu de verdad la aplica en el corazón, convenciendo de pecado, regenerando, sellando y dando testimonio. Pero toda esa enseñanza supone una pregunta que todavía no hemos respondido con detalle: ¿quién es ese hombre por el cual el Cordero murió? ¿Qué es eso que el Cordero quita? ¿Y por qué el Espíritu tiene que convencer de pecado a un mundo que, en general, no se siente tan culpable?",
+    "cita": "Salmos 51:10"
+  },
+  {
+    "n": 24,
+    "slug": "dia-24",
+    "titulo": "Justificados por la fe: la salvación que anuncia la Escritura",
+    "versiculo": "Justificados, pues, por la fe, tenemos paz para con Dios por medio de nuestro Señor Jesucristo;",
+    "intro": "Ayer bajamos con Jeremías a la casa del alfarero y con Pablo hasta el fondo del corazón humano. Aprendimos que el hombre es polvo con aliento de Dios, creado recto, y que buscó muchas perversiones; que el pecado es falla, deformación y rebelión; que entró por un hombre y alcanzó a todos; que su raíz está en un corazón engañoso; y que su paga es la muerte. Si la lección de ayer fue una sala de hospital, la de hoy es la sala de un tribunal. Porque la pregunta que deja el diagnóstico del pecado no es solo cómo puede ser sanado el hombre, sino algo más urgente: cómo puede un culpable quedar en pie delante del Juez santo.",
+    "cita": "Romanos 5:1"
+  },
+  {
+    "n": 25,
+    "slug": "dia-25",
+    "titulo": "Hebreo dos: las vocales, la raíz y una frase de Génesis",
+    "versiculo": "Y creyó a Jehová, y le fue contado por justicia.",
+    "intro": "Ayer estuvimos en un tribunal. Escuchamos la pregunta de Job, ¿cómo se justificará el hombre con Dios?, y la respuesta que recorre toda la Escritura: Dios justifica al impío que cree, gratuitamente, por su gracia, a causa de Cristo. Y en el centro de esa respuesta encontramos un versículo del Génesis que el Nuevo Testamento cita tres veces: en Romanos cuatro, en Gálatas tres y en Santiago dos. Escúchalo otra vez.",
+    "cita": "Génesis 15:6"
+  },
+  {
+    "n": 26,
+    "slug": "dia-26",
+    "titulo": "Griego dos: el artículo, el caso y una frase de Juan",
+    "versiculo": "aguardando la esperanza bienaventurada y la manifestación gloriosa de nuestro gran Dios y Salvador Jesucristo,",
+    "intro": "Ayer leímos en hebreo cinco palabras de Génesis: veheemín badonái, vayajshevéha lo tsedaqáh. Aprendimos las vocales por familias, la raíz y sus derivados, y las piezas pequeñas que el hebreo pega a sus palabras. Hoy haremos con el griego del Nuevo Testamento algo parecido. En el día seis conociste el alfabeto griego, oíste hablar de los casos, del artículo y del aspecto de los verbos, y leíste palabra por palabra Juan uno, uno. Allí aprendiste, entre otras cosas, por qué theós va sin artículo en la frase y el Verbo era Dios. Hoy vamos un paso más adentro.",
+    "cita": "Tito 2:13"
+  },
+  {
+    "n": 27,
+    "slug": "dia-27",
+    "titulo": "Yo seré vuestro Dios: los pactos de la Escritura",
+    "versiculo": "De igual manera, después que hubo cenado, tomó la copa, diciendo: Esta copa es el nuevo pacto en mi sangre, que por vosotros se derrama.",
+    "intro": "En los últimos tres días hemos estado junto a Abraham. En el día veinticuatro lo vimos salir de su tienda a contar las estrellas, y oímos que creyó a Jehová, y le fue contado por justicia. En el veinticinco leímos esa frase en hebreo, palabra por palabra. Y ayer, al leer Juan uno, veintinueve, volvimos a escuchar el eco de Moriah, donde Abraham dijo: Dios se proveerá de cordero. Pero si sigues leyendo Génesis quince después del versículo seis, descubres que aquella noche no terminó con la fe de Abraham. Terminó con un pacto. Escucha.",
+    "cita": "Lucas 22:20"
+  },
+  {
+    "n": 28,
+    "slug": "dia-28",
+    "titulo": "La iglesia: casa de Dios y columna de la verdad",
+    "versiculo": "para que si tardo, sepas cómo debes conducirte en la casa de Dios, que es la iglesia del Dios viviente, columna y baluarte de la verdad.",
+    "intro": "Ayer abrimos por dentro los pactos de Dios, y escuchamos la frase que los atraviesa todos: yo seré vuestro Dios, y vosotros seréis mi pueblo. Vimos que el propósito de los pactos es que Dios habite en medio de su pueblo, y terminamos en el aposento alto, con la copa del nuevo pacto en la sangre de Cristo. Hoy damos el paso siguiente. Si hay un nuevo pacto, hay un pueblo del nuevo pacto. Ese pueblo tiene un nombre en el Nuevo Testamento: la iglesia.",
+    "cita": "1 Timoteo 3:15"
+  },
+  {
+    "n": 29,
+    "slug": "dia-29",
+    "titulo": "Pedid, y se os dará: la oración del que estudia",
+    "versiculo": "Y yo os digo: Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.",
+    "intro": "Ayer seguimos la historia de la iglesia de Éfeso, y vimos que la primera iglesia perseveraba en cuatro cosas: en la doctrina de los apóstoles, en la comunión unos con otros, en el partimiento del pan y en las oraciones. Hoy nos detenemos en la cuarta. Y lo hacemos para cumplir una promesa. En el día veintidós, cuando estudiamos al Espíritu de verdad, escuchamos unas palabras del Señor Jesús en el evangelio de Lucas, y te dije que las estudiaríamos de nuevo en la lección sobre la oración. Ha llegado el día.",
+    "cita": "Lucas 11:9"
+  },
+  {
+    "n": 30,
+    "slug": "dia-30",
+    "titulo": "Repaso del módulo uno: lo que hemos puesto por cimiento",
+    "versiculo": "Todo aquel que viene a mí, y oye mis palabras y las hace, os indicaré a quién es semejante. Semejante es al hombre que al edificar una casa, cavó y ahondó y puso el fundamento sobre la roca; y cuando vino una inundación, el río dio con ímpetu contra aquella casa, pero no la pudo mover, porque estaba fundada sobre la roca.",
+    "intro": "Hemos llegado al día treinta. Ayer estudiamos la oración del que estudia, y terminamos con tres verbos del Señor: pedid, buscad, llamad. Hoy cerramos el primer módulo de esta escuela. No vamos a abrir un tema nuevo. Vamos a mirar hacia atrás, al camino que hemos recorrido juntos durante treinta días, para ver qué hemos edificado, y para prepararte para el examen del módulo.",
+    "cita": "Lucas 6:47-48"
   }
 ];
 

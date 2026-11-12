@@ -236,7 +236,10 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
     const bloque = bloques.find((b) => b.loc === loc);
     assert.ok(bloque, loc);
     const n = Number(loc.match(/dia-(\d+)$/)?.[1] ?? 0);
-    assert.equal(bloque.lastmod, n > 20 ? "2026-11-12" : n > 10 ? "2026-11-10" : "2026-11-04");
+    assert.equal(
+      bloque.lastmod,
+      n > 20 ? "2026-11-12" : n > 10 ? "2026-11-10" : "2026-11-04",
+    );
   }
   const conFecha = bloques.filter((b) => b.lastmod);
   assert.equal(
