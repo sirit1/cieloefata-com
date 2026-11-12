@@ -54,6 +54,15 @@ function CursoPage() {
         </Link>
         .
       </p>
+      <p className="mt-4 leading-relaxed">
+        <Link to="/curso/examenes" className="text-link underline">
+          Exámenes
+        </Link>
+        {" · "}
+        <Link to="/certificado" className="text-link underline">
+          Verificar certificado
+        </Link>
+      </p>
       <h2 id="lecciones" className="mt-12 text-3xl">{leccionesAbiertas}</h2>
       <ol className="casa-dias" aria-label={leccionesAbiertas}>
         {DIAS.map((d) => (
