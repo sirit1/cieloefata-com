@@ -213,7 +213,7 @@ function Home() {
           <Link to="/curso" className="muestra muestra-escuela">
             <img src="/brand/seal-full.webp" alt="" width={120} height={120} />
             <b>Escuela</b>
-            <span>Diez lecciones abiertas, gratis, para leer con la Biblia en la mano.</span>
+            <span>Treinta lecciones abiertas, gratis, para leer con la Biblia en la mano.</span>
           </Link>
         </div>
       </section>
