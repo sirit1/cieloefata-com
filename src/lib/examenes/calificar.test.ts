@@ -44,8 +44,15 @@ test("las preguntas públicas no llevan la respuesta correcta", () => {
   assert.deepEqual(publicas[0].opciones, fixture[0].opciones);
 });
 
-test("los bancos del curso se entregan vacíos y el fixture no se sirve", () => {
-  for (let n = 1; n <= 12; n += 1) assert.equal(bancoDe(`modulo-${n}`), null);
+test("el módulo 1 tiene su banco y los demás siguen vacíos", () => {
+  const m1 = bancoDe("modulo-1");
+  assert.ok(m1);
+  assert.equal(m1.length, 60);
+  assert.deepEqual(
+    m1.map((p) => p.id),
+    Array.from({ length: 60 }, (_, i) => `m1-${String(i + 1).padStart(2, "0")}`),
+  );
+  for (let n = 2; n <= 12; n += 1) assert.equal(bancoDe(`modulo-${n}`), null);
   assert.equal(bancoDe("final"), null);
   assert.equal(bancoDe("fixture-prueba"), null);
   assert.ok(bancoUtilizable(fixture));
