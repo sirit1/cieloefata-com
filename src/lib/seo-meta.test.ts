@@ -230,13 +230,13 @@ test("el sitemap lista solo el pack validado y fecha lo que tiene fecha real", (
   const curso = [
     `${SITE_ORIGIN}/gratis`,
     `${SITE_ORIGIN}/curso`,
-    ...Array.from({ length: 20 }, (_, i) => `${SITE_ORIGIN}/curso/dia-${i + 1}`),
+    ...Array.from({ length: 30 }, (_, i) => `${SITE_ORIGIN}/curso/dia-${i + 1}`),
   ];
   for (const loc of curso) {
     const bloque = bloques.find((b) => b.loc === loc);
     assert.ok(bloque, loc);
     const n = Number(loc.match(/dia-(\d+)$/)?.[1] ?? 0);
-    assert.equal(bloque.lastmod, n > 10 ? "2026-11-10" : "2026-11-04");
+    assert.equal(bloque.lastmod, n > 20 ? "2026-11-12" : n > 10 ? "2026-11-10" : "2026-11-04");
   }
   const conFecha = bloques.filter((b) => b.lastmod);
   assert.equal(
