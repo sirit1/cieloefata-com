@@ -11,7 +11,9 @@ import { BtnArrow } from "@/components/motif";
 import { SlotsSemanaMes } from "@/components/umbral";
 import { PuertaRegreso } from "@/components/seguir-acto";
 import { Subir } from "@/components/subir";
+import { DestacadoCoach } from "@/components/destacado-coach";
 import { CORPUS, fichas, obras, ROMANO, school } from "@/lib/content";
+import { COACH_SLUG } from "@/lib/promo-coach";
 import { AMAZON_AUTHOR, amazonDp, whatsappColeccion } from "@/lib/amazon";
 import { SELLO } from "@/lib/identidad";
 import { ESCRITURA } from "@/lib/pilar";
@@ -19,6 +21,7 @@ import { HomeJsonLd } from "@/components/json-ld";
 import { pageHead, SITE_TITLE } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
+  loader: () => ({ ahora: Date.now() }),
   component: Home,
   head: () =>
     pageHead({
@@ -105,6 +108,9 @@ function BuscadorPortada() {
 }
 
 function Home() {
+  const { ahora } = Route.useLoaderData();
+  const ultimo = fichas.find((o) => o.slug === COACH_SLUG);
+  const otras = fichas.filter((o) => o.slug !== COACH_SLUG);
   return (
     <main className="casa-inicio pb-24">
       <HomeJsonLd />
@@ -245,6 +251,45 @@ function Home() {
               </a>
             </div>
           </div>
+          {ultimo ? (
+            <article
+              id={ultimo.slug}
+              className="mt-10 grid scroll-mt-24 grid-cols-1 gap-5 border border-rule/60 p-4 sm:grid-cols-[9.5rem_1fr] sm:items-start"
+              aria-labelledby="ultimo-libro"
+            >
+              <SinopsisTapa obra={ultimo} size="ficha" />
+              <div>
+                <p className="kicker">Fuera de la serie · Kindle</p>
+                <h3 id="ultimo-libro" className="mt-2 font-serif text-3xl leading-tight font-semibold">
+                  <Link to="/obras/$slug" params={{ slug: ultimo.slug }} className="hover:text-gold">
+                    {ultimo.title}
+                  </Link>
+                </h3>
+                <p className="mt-1 font-sans text-sm text-ink-soft">{ultimo.subtitulo}</p>
+                <p className="mt-1 font-sans text-sm text-ink-soft">Dr. (h. c.) Alejandro Sirit</p>
+                <DestacadoCoach ahora={ahora} />
+                <p className="mt-3 leading-relaxed">
+                  <ConLemas>{ultimo.line}</ConLemas>
+                </p>
+                <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+                  {ultimo.enlaceKindle ? (
+                    <a
+                      href={ultimo.enlaceKindle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-gold"
+                    >
+                      Leer en Amazon Kindle
+                      <span className="sr-only">: {ultimo.title}</span>
+                    </a>
+                  ) : null}
+                  <Link to="/obras/$slug" params={{ slug: ultimo.slug }} className="btn btn-ghost">
+                    Examinar este libro
+                  </Link>
+                </div>
+              </div>
+            </article>
+          ) : null}
           <ol className="mt-12 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 lg:grid-cols-5">
             {obras.map((o) => (
               <li key={o.slug}>
@@ -282,16 +327,20 @@ function Home() {
               ,{" "}
               <Link to="/obras/$slug" params={{ slug: "callar-para-ganar" }} className="text-link underline">
                 Callar para ganar
-              </Link>{" "}
-              y{" "}
+              </Link>
+              ,{" "}
               <Link to="/obras/$slug" params={{ slug: "el-mundo-pregunta-dios-responde" }} className="text-link underline">
                 El mundo pregunta, Dios responde
+              </Link>{" "}
+              y{" "}
+              <Link to="/obras/$slug" params={{ slug: COACH_SLUG }} className="text-link underline">
+                Lo que tu coach no te dijo
               </Link>
-              .
+              {"."}
             </p>
           </div>
           <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3">
-            {fichas.map((o) => (
+            {otras.map((o) => (
               <li key={o.slug}>
                 <SinopsisTapa obra={o} size="ficha" />
                 <Link to="/obras/$slug" params={{ slug: o.slug }} className="group mt-3 block">

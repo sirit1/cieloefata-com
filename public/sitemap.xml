@@ -353,6 +353,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.cieloefata.com/obras/lo-que-tu-coach-no-te-dijo</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.cieloefata.com/articulos</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

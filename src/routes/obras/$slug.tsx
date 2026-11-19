@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Adquirir } from "@/components/adquirir";
+import { DestacadoCoach } from "@/components/destacado-coach";
 import { Cite } from "@/components/cite";
 import { BookJsonLd } from "@/components/json-ld";
 import { ConLemas } from "@/components/lema";
@@ -18,6 +19,7 @@ import {
 } from "@/lib/content";
 import { primerasPaginas } from "@/lib/muestras";
 import { amazonDp, whatsappTomo } from "@/lib/amazon";
+import { COACH_SLUG } from "@/lib/promo-coach";
 import { Compartir } from "@/components/compartir";
 import { Subir } from "@/components/subir";
 import { pageHead, tituloObra } from "@/lib/seo";
@@ -29,7 +31,7 @@ export const Route = createFileRoute("/obras/$slug")({
   loader: ({ params }) => {
     const obra = obraBySlug(params.slug);
     if (!obra) throw notFound();
-    return { obra };
+    return { obra, ahora: Date.now() };
   },
   head: ({ loaderData }) => {
     const obra = loaderData?.obra;
@@ -46,7 +48,12 @@ export const Route = createFileRoute("/obras/$slug")({
 });
 
 export function ObraPage() {
-  const { obra } = Route.useLoaderData();
+  const { obra, ahora } = Route.useLoaderData();
+  const kindleHref = obra.enlaceKindle
+    ? obra.enlaceKindle
+    : obra.asinEbook && !obra.sinAmazon
+      ? amazonDp(obra.asinEbook)
+      : undefined;
   const study = obra.studySlug ? indiceEstudio(obra.studySlug) : undefined;
   const tratado = obra.tratadoSlug
     ? indiceTratado(obra.tratadoSlug)
@@ -108,16 +115,19 @@ export function ObraPage() {
               {obra.subtitulo}
             </p>
           ) : null}
-          <p className="kicker mt-4">Alejandro Sirit · Editorial Cielo Efata</p>
+          <p className="kicker mt-4">
+            {obra.slug === COACH_SLUG ? "Dr. (h. c.) Alejandro Sirit" : "Alejandro Sirit"} · Editorial Cielo Efata
+          </p>
+          {obra.slug === COACH_SLUG ? <DestacadoCoach ahora={ahora} /> : null}
           {obra.pasaje ? (
             <p className="mt-2 font-sans text-sm tracking-wide text-ink-soft">
               Capítulo ancla: {obra.pasaje}
             </p>
           ) : null}
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            {obra.asinEbook && !obra.sinAmazon ? (
+            {kindleHref ? (
               <a
-                href={amazonDp(obra.asinEbook)}
+                href={kindleHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-gold"
@@ -125,28 +135,34 @@ export function ObraPage() {
                 Leer en Kindle
               </a>
             ) : null}
-            <a
-              href={whatsappTomo(obra.title)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={obra.asinEbook && !obra.sinAmazon ? "btn btn-ghost" : "btn btn-wa"}
-            >
-              Pedir por WhatsApp
-            </a>
+            {obra.soloKindle ? null : (
+              <a
+                href={whatsappTomo(obra.title)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={obra.asinEbook && !obra.sinAmazon ? "btn btn-ghost" : "btn btn-wa"}
+              >
+                Pedir por WhatsApp
+              </a>
+            )}
             <Compartir
               titulo={obra.title}
               pasaje={obra.pasaje}
               ruta={`/obras/${obra.slug}`}
               className="btn btn-ghost"
             />
-            <a href="#obtener" className="btn btn-ghost">
-              {obra.sinAmazon ? "Cómo obtenerlo" : "Más formatos"}
-            </a>
+            {obra.soloKindle ? null : (
+              <a href="#obtener" className="btn btn-ghost">
+                {obra.sinAmazon ? "Cómo obtenerlo" : "Más formatos"}
+              </a>
+            )}
           </div>
-          <p className="mt-3 font-sans text-xs text-ink-soft">
-            Te respondemos personalmente. El mensaje ya lleva el título del
-            libro.
-          </p>
+          {obra.soloKindle ? null : (
+            <p className="mt-3 font-sans text-xs text-ink-soft">
+              Te respondemos personalmente. El mensaje ya lleva el título del
+              libro.
+            </p>
+          )}
         </div>
       </div>
 
@@ -208,20 +224,32 @@ export function ObraPage() {
         Cómo obtenerlo
       </h2>
       <p className="mt-4 leading-relaxed">
-        {obra.sinAmazon
-          ? "Para solicitar este libro, escríbenos por WhatsApp y te responderemos personalmente."
-          : "Puedes adquirir este libro en Amazon o solicitarlo por WhatsApp. En Venezuela también puedes pedir la colección impresa."}
+        {obra.soloKindle
+          ? "Este libro se ofrece como ebook en Amazon Kindle. El enlace abre la ficha del ebook."
+          : obra.sinAmazon
+            ? "Para solicitar este libro, escríbenos por WhatsApp y te responderemos personalmente."
+            : "Puedes adquirir este libro en Amazon o solicitarlo por WhatsApp. En Venezuela también puedes pedir la colección impresa."}
       </p>
-      <Adquirir
-        title={obra.title}
-        amazonTitle={obra.amazonTitle}
-        slug={obra.slug}
-        asinEbook={obra.asinEbook}
-        isbnPrint={obra.isbnPrint}
-        asinPrint={obra.asinPrint}
-        sinAmazon={obra.sinAmazon}
-        pack
-      />
+      {obra.soloKindle ? (
+        kindleHref ? (
+          <div className="mt-8">
+            <a href={kindleHref} target="_blank" rel="noopener noreferrer" className="btn btn-ink">
+              Leer en Amazon Kindle
+            </a>
+          </div>
+        ) : null
+      ) : (
+        <Adquirir
+          title={obra.title}
+          amazonTitle={obra.amazonTitle}
+          slug={obra.slug}
+          asinEbook={obra.asinEbook}
+          isbnPrint={obra.isbnPrint}
+          asinPrint={obra.asinPrint}
+          sinAmazon={obra.sinAmazon}
+          pack
+        />
+      )}
 
       {obra.revelatio ? (
         <aside

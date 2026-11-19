@@ -7,13 +7,16 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { BtnArrow } from "@/components/motif";
 import { SinopsisTapa } from "@/components/sinopsis-tapa";
 import { Volver } from "@/components/volver";
+import { DestacadoCoach } from "@/components/destacado-coach";
 import { CORPUS, fichas, obras, ROMANO, tapaPath, type Obra } from "@/lib/content";
+import { COACH_SLUG } from "@/lib/promo-coach";
 import { Subir } from "@/components/subir";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 import { indiceEstudio } from "@/lib/estudios-indice";
 import { indiceTratado } from "@/lib/tratados-indice";
 
 export const Route = createFileRoute("/obras/")({
+  loader: () => ({ ahora: Date.now() }),
   component: ObrasPage,
   head: () =>
     pageHead({
@@ -29,7 +32,12 @@ export const Route = createFileRoute("/obras/")({
 });
 
 function ObrasPage() {
+  const { ahora } = Route.useLoaderData();
   const [primero, ...resto] = obras;
+  const fuera = [
+    ...fichas.filter((o) => o.slug === COACH_SLUG),
+    ...fichas.filter((o) => o.slug !== COACH_SLUG),
+  ];
   const corte = CORPUS.gate.indexOf(". ");
   const linea = corte > 0 ? CORPUS.gate.slice(0, corte + 1) : CORPUS.gate;
   const sigue = corte > 0 ? CORPUS.gate.slice(corte + 2) : "";
@@ -87,7 +95,11 @@ function ObrasPage() {
       </h2>
       <p className="mt-4 leading-relaxed">
         Además de la serie de nueve libros, la editorial publica Norma normans non normata,
-        Callar para ganar y El mundo pregunta, Dios responde. También está{" "}
+        Callar para ganar, El mundo pregunta, Dios responde y{" "}
+        <Link to="/obras/$slug" params={{ slug: COACH_SLUG }} className="text-link underline">
+          Lo que tu coach no te dijo
+        </Link>
+        {". También está "}
         <Link to="/obras/el-paraclito-eterno" className="text-link underline">
           El Paráclito Eterno
         </Link>
@@ -95,7 +107,7 @@ function ObrasPage() {
         que se activa, sino una Persona divina que el Padre envía en el nombre del Hijo.
       </p>
       <ul className="mt-8 space-y-10">
-        {fichas.map((o) => (
+        {fuera.map((o) => (
           <li key={o.slug} id={o.slug} className="scroll-mt-24 border-t border-rule pt-6">
             <div className="casa-ficha">
               <SinopsisTapa obra={o} size="lg" className="w-full" />
@@ -105,6 +117,7 @@ function ObrasPage() {
                     Serie Cielo Efata · nº {o.numeroSerieAmazon}
                   </p>
                 ) : null}
+                {o.slug === COACH_SLUG ? <DestacadoCoach ahora={ahora} /> : null}
                 <h2 className="tomo-title mt-3">
                   <Link to="/obras/$slug" params={{ slug: o.slug }} className="hover:text-gold">
                     {o.title}
@@ -116,11 +129,22 @@ function ObrasPage() {
                 <p className="mt-4 text-lg">
                   <ConLemas>{o.line}</ConLemas>
                 </p>
-                <div className="mt-5">
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link to="/obras/$slug" params={{ slug: o.slug }} className="btn btn-ink">
                     Examinar este libro
                     <BtnArrow />
                   </Link>
+                  {o.enlaceKindle ? (
+                    <a
+                      href={o.enlaceKindle}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-gold"
+                    >
+                      Leer en Amazon Kindle
+                      <span className="sr-only">: {o.title}</span>
+                    </a>
+                  ) : null}
                 </div>
               </div>
             </div>

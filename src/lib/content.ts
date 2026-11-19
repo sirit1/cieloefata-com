@@ -7,7 +7,7 @@ export const school = {
   lead: "La Escritura tiene la última palabra. Todo lo demás —el comentario, el método, el predicador de moda— va detrás, con humildad.",
   leadRef: "2 Ti. 3:16–17",
   colophon:
-    "Escuela de estudio bíblico dirigida por Alejandro Sirit. Una serie de nueve libros, y otras obras —Norma normans non normata, Callar para ganar y El mundo pregunta, Dios responde—, con el método V.E.R.D.A.D. para estudiar el capítulo entero, sin recortar, adornar ni sustituir el texto.",
+    "Escuela de estudio bíblico dirigida por Alejandro Sirit. Una serie de nueve libros, y otras obras —Norma normans non normata, Callar para ganar, El mundo pregunta, Dios responde y Lo que tu coach no te dijo—, con el método V.E.R.D.A.D. para estudiar el capítulo entero, sin recortar, adornar ni sustituir el texto.",
   colophonRef: "2 Ti. 3:16–17 · 2 Ti. 2:15",
   director: "Alejandro Sirit",
   welcome:
@@ -24,7 +24,7 @@ export const adquisicion = {
 
 export const CORPUS = {
   title: "Los libros",
-  gate: "La serie de lectura reúne nueve libros, y la editorial publica además otras obras. No son manuales de autoayuda: son libros para leer la Escritura entera, someter el pensamiento a lo que Dios dice y dejar atrás la religión de consumo. Junto a la serie están Norma normans non normata, Callar para ganar y El mundo pregunta, Dios responde.",
+  gate: "La serie de lectura reúne nueve libros, y la editorial publica además otras obras. No son manuales de autoayuda: son libros para leer la Escritura entera, someter el pensamiento a lo que Dios dice y dejar atrás la religión de consumo. Junto a la serie están Norma normans non normata, Callar para ganar, El mundo pregunta, Dios responde y Lo que tu coach no te dijo.",
   efata:
     "En Éfata, Alejandro Sirit presenta el método V.E.R.D.A.D. —Ver, Entorno, Revelación, Doctrina, Argumento y Decisión—, una manera de leer que cura la versiculitis y devuelve cada versículo a su capítulo. Es el método con el que se estudia en esta escuela.",
   line: "Te sugerimos leerlos en este orden, que no es el de publicación: I Pórtico a la Escritura, que recorre los sesenta y seis libros como una sola historia; II Éfata, donde se aprende a leer el capítulo entero; III El Siervo, no tú; IV Bástate; V Cuando el cielo se cae; VI El altar del espejo; VII De una misma boca; VIII Diákrisis, sobre el discernimiento; y IX Nunca tocarás mi fe, un testimonio que cierra la serie. Cada libro se lee junto al capítulo de la Biblia en que se apoya.",
@@ -164,6 +164,10 @@ export type Obra = {
   revelatioSlug?: string;
   /** Edición nueva aún no publicada en Amazon: la ficha no muestra botón ni búsqueda de Amazon. */
   sinAmazon?: boolean;
+  /** Ebook Kindle: la ficha no ofrece tapa blanda ni archivo. */
+  soloKindle?: boolean;
+  /** Enlace directo del ebook, sin parámetros añadidos. */
+  enlaceKindle?: string;
   /** «Cielo Efata nº N» en la ficha de Amazon. No se inventa si Amazon no lo pone. */
   numeroSerieAmazon?: number;
 };
@@ -465,6 +469,26 @@ export const fichas: Obra[] = [
     asinEbook: "B0HPS6B63Z",
     asinPrint: "B0HQ29MJS6",
     isbnPrint: "9798167125032",
+  },
+  {
+    n: 0,
+    lectura: 0,
+    slug: "lo-que-tu-coach-no-te-dijo",
+    title: "Lo que tu coach no te dijo",
+    subtitulo: "Lo que promete el yo, lo que dice el Señor",
+    seoTitle:
+      "Lo que tu coach no te dijo: Lo que promete el yo, lo que dice el Señor | Alejandro Sirit",
+    seoDescription:
+      "Lo que tu coach no te dijo: lo que promete el yo, lo que dice el Señor. De un lado, lo que dice la autoayuda. Del otro, lo que dice la Escritura.",
+    line: "Lo que tu coach no te dijo. De un lado, lo que dice la autoayuda. Del otro, lo que dice la Escritura.",
+    thesis: "",
+    sample: "",
+    ref: "",
+    pasaje: "",
+    studySlug: "",
+    asinEbook: "B0HRBG4G55",
+    soloKindle: true,
+    enlaceKindle: "https://www.amazon.com/dp/B0HRBG4G55",
   },
 ];
 
