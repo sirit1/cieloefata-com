@@ -126,6 +126,7 @@ test("las fichas fuera del orden conservan el ASIN de Amazon y no renumeran los 
       ["norma-normans-non-normata", "B0HPPTSKCN", "B0HPQF8W68", "9798166300706", 10],
       ["callar-para-ganar", "B0HQ3331LP", "", "", 12],
       ["el-mundo-pregunta-dios-responde", "B0HPS6B63Z", "B0HQ29MJS6", "9798167125032", 0],
+      ["lo-que-tu-coach-no-te-dijo", "B0HRBG4G55", "", "", 0],
     ],
   );
   const callar = fichas.find((o) => o.slug === "callar-para-ganar");

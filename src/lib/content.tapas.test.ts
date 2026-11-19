@@ -16,6 +16,7 @@ const SLUGS = [
   "norma-normans-non-normata",
   "callar-para-ganar",
   "el-mundo-pregunta-dios-responde",
+  "lo-que-tu-coach-no-te-dijo",
 ] as const;
 
 test("los los libros cuelgan tapa KDP bajo public/TAPAS", () => {

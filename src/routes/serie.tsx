@@ -39,7 +39,8 @@ function SeriePage() {
         libro siguiente se lee junto al capítulo de la Biblia en que se apoya.
         El capítulo se abre en RevelatiO, el lector de la casa, donde también se
         pregunta al pasaje. Fuera de esta serie, la editorial publica además Norma
-        normans non normata, Callar para ganar y El mundo pregunta, Dios responde.
+        normans non normata, Callar para ganar, El mundo pregunta, Dios responde y
+        Lo que tu coach no te dijo.
       </p>
       <ol className="mt-12 space-y-10">
         {lista.map((o) => {
