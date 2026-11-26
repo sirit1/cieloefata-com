@@ -1,752 +1,356 @@
-/** Generado desde el txt del Día 5 en Drive (carpeta «Audios para ElevenLabs (txt)»). No editar a mano. */
+/** Generado desde el texto reescrito del Día 5 (Drive: Lecciones para leer). No editar a mano. */
 const bloques: ["h" | "p" | "q", string][] = [
+[
+"p",
+"Escuela Bíblica Cielo Efata, por el Dr. (h. c.) Alejandro Sirit."
+],
 [
 "h",
 "Introducción"
 ],
 [
 "p",
-"En los cuatro primeros días hemos recorrido el camino que la Palabra de Dios hizo hasta llegar a tus manos: la puerta del sabio, la revelación y la inspiración, el canon de los libros sagrados y la transmisión fiel del texto a lo largo de los siglos. Hoy entramos por primera vez en una de las dos grandes lenguas en que el Espíritu Santo inspiró la Escritura: el hebreo. No pretendo que al terminar esta lección leas con soltura el texto masorético. Lo que quiero es abrirte la puerta, enseñarte a escuchar las veintidós letras, mostrarte cómo piensa esta lengua y darte las primeras llaves para que, cuando en una Biblia de estudio o en una concordancia veas una palabra hebrea con su número Strong, no te parezca un muro, sino una ventana."
+"En el día cuatro vimos cómo la Palabra llegó hasta nuestras manos: por copias, por el cuidado de los escribas y de los masoretas, por el texto recibido, por una versión fiel en nuestra lengua. Hoy damos un paso que no es un adorno de eruditos. Abrimos la lengua en la que Dios quiso dar primero la Ley, los Profetas y los Escritos. No lo hacemos para que salgas de esta lección recitando veintidós nombres de letras como quien recita una lista y se cree sabio. Lo hacemos para oír una frase que Israel debió llevar sobre el corazón, y que el mismo Señor Jesús llamó el primero y grande mandamiento. Esa frase, en la Reina-Valera de mil novecientos sesenta, dice así: Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas. Deuteronomio 6:4-5."
 ],
 [
 "p",
-"Esta lección está pensada para ser escuchada. Por eso no vamos a escribir letras hebreas, sino a nombrarlas, a describir su forma y a pronunciarlas despacio. Te recomiendo que tengas cerca papel y lápiz, y que, si tienes una Biblia con el alfabeto hebreo, como las que lo traen en el salmo ciento diecinueve, la abras allí, porque iremos con calma."
-],
-[
-"p",
-"La lección tiene diez partes. Primero, veremos por qué estudiar hebreo y qué nos dice la misma Escritura sobre las lenguas. Segundo, conoceremos un poco la historia de esta lengua. Tercero, aprenderemos sus rasgos principales: se escribe de derecha a izquierda, tiene solo consonantes en su forma original y está construida sobre raíces. Cuarto, recorreremos una por una las veintidós letras del alefato. Quinto, conoceremos las cinco formas finales. Sexto, hablaremos de las vocales que añadieron los masoretas. Séptimo, estudiaremos los poemas acrósticos de la Biblia, y en especial el salmo ciento diecinueve. Octavo, leeremos juntos, palabra por palabra, el primer versículo de Génesis. Noveno, aprenderemos una docena de palabras hebreas fundamentales, con sus números Strong verificados. Y décimo, sacaremos las consecuencias para tu vida y tu estudio. Al final haremos el repaso y oraremos juntos."
-],
-[
-"p",
-"Primera parte. ¿Por qué estudiar hebreo?"
-],
-[
-"p",
-"Comencemos con una pregunta honesta: si ya tenemos la Reina Valera, que es una traducción fiel, ¿para qué necesita un creyente estudiar hebreo? La respuesta no es que la traducción sea mala, sino que toda traducción, por buena que sea, tiene que elegir. Cuando una palabra hebrea tiene varios matices, el traductor debe escoger una palabra española, y a veces ninguna palabra española recoge todo lo que la hebrea dice. Conocer el hebreo, aunque sea un poco, te permite asomarte a esos matices, entender por qué la Reina Valera traduce una misma palabra de distintas maneras en distintos lugares y apreciar la belleza del texto que el Espíritu Santo inspiró."
-],
-[
-"p",
-"Hay una segunda razón. La Escritura misma da importancia a las lenguas en que Dios habló. Recuerda lo que el Señor Jesús dijo sobre la letra más pequeña."
-],
-[
-"q",
-"«Porque de cierto os digo que hasta que pasen el cielo y la tierra, ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido.» Así dice Mateo, capítulo cinco, versículo dieciocho."
-],
-[
-"p",
-"La jota es la iod, la letra más pequeña del alefato hebreo, que conocerás hoy. La tilde es uno de esos pequeños trazos que distinguen unas letras de otras. Cuando el Señor quiso expresar la exactitud absoluta de la ley de Dios, no habló de ideas generales: habló de letras hebreas. Esa frase supone que el Señor conocía el texto hebreo hasta el detalle de sus trazos, y que lo consideraba palabra de Dios hasta en sus letras."
-],
-[
-"p",
-"Una tercera razón: el Nuevo Testamento está lleno de pensamiento hebreo. Aunque se escribió en griego, sus autores, con la excepción probable de Lucas, eran judíos que pensaban con categorías del Antiguo Testamento. Palabras como gracia, verdad, justicia, paz, gloria o carne, en el Nuevo Testamento, llevan dentro el peso de sus equivalentes hebreos. Quien conoce un poco el hebreo lee mejor también el griego."
-],
-[
-"p",
-"Y una cuarta razón, que es la más importante: el amor. Cuando amas a alguien, quieres conocer su voz. Dios eligió hablar primero en esta lengua a Abraham, a Moisés, a David, a Isaías. Escucharla, aunque sea de lejos, es acercarnos a la manera en que Dios habló a los padres por los profetas, como dice la carta a los Hebreos."
-],
-[
-"q",
-"«Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo, a quien constituyó heredero de todo, y por quien asimismo hizo el universo;» Así dice Hebreos, capítulo uno, versículos uno al dos."
-],
-[
-"p",
-"Una advertencia antes de seguir. Estudiar hebreo no es para hacernos sentir superiores a los hermanos que no lo conocen, ni para corregir la Biblia desde el púlpito con aire de experto. Pablo nos advierte que el conocimiento envanece, pero el amor edifica. Estudiamos hebreo para entender mejor, obedecer mejor y servir mejor; nunca para enorgullecernos. Y debemos tener mucho cuidado con un error frecuente: el de quien aprende un poco de hebreo y empieza a sacar significados ocultos de cada letra, como si cada trazo escondiera un mensaje secreto. Eso no es estudio, es imaginación. A lo largo de esta lección te mostraré dónde termina lo que sabemos y dónde empieza la especulación, para que aprendas a no cruzar esa línea."
+"El hebreo bíblico no es, en esta escuela, un trofeo. Es el alfabeto de esa confesión y de ese amor. Las letras nos servirán en la medida en que nos ayuden a oír mejor lo que está escrito, a no aplanar un nombre, a no vaciar una palabra, a no convertir el «uno» en una idea floja ni el «amarás» en un sentimiento vago. El que quiera lucirse con el alefato y no amar a Jehová ha perdido el día. El que, oyendo estas palabras, se descubra con un corazón dividido, ha empezado a oír de veras."
 ],
 [
 "h",
-"Segunda parte. Un poco de historia de la lengua hebrea"
+"Primera parte. Una lengua santa, no un desfile"
 ],
 [
 "p",
-"El hebreo pertenece a una familia de lenguas que los estudiosos llaman semíticas, por Sem, el hijo de Noé, de quien descendieron muchos de los pueblos que las hablaban. En esa familia están también el arameo, el arábigo, el acadio de Asiria y Babilonia, el ugarítico y otras lenguas antiguas del Oriente. Todas comparten ciertos rasgos: se construyen sobre raíces de consonantes, se escribían sin vocales, y tienen sonidos guturales que se producen en la garganta y que el español no tiene."
+"El Antiguo Testamento, en el texto de trabajo de esta casa, está en hebreo, con algunos pasajes en arameo que no estudiaremos hoy. Se escribe, en lo esencial, de derecha a izquierda. Sus letras son, en origen, consonantes. Las vocales que hoy leemos en el texto masorético, como vimos ayer, registran una tradición de lectura; no son una segunda inspiración, ni un adorno prescindible. El alumno no necesita, en el día cinco, escribir un alefato perfecto. Necesita respetar que Dios habló en una lengua concreta, con raíces, con un ritmo, con un Nombre que no es un título genérico, y que esa lengua puede aprenderse con provecho a lo largo de estos trescientos sesenta días, sin que nadie se convierta, por unas semanas, en un maestro de hebreo."
 ],
 [
 "p",
-"La Escritura misma llama a esta lengua de distintas maneras. Isaías habla de la lengua de Canaán, en el capítulo diecinueve, versículo dieciocho. En el segundo libro de los Reyes, cuando los mensajeros de Senaquerib hablaban al pueblo desde el muro de Jerusalén, los oficiales de Ezequías les pidieron que hablaran en arameo y no en lengua de Judá, para que el pueblo no entendiera. Escucha."
-],
-[
-"q",
-"«Entonces dijo Eliaquim hijo de Hilcías, y Sebna y Joa, al Rabsaces: Te rogamos que hables a tus siervos en arameo, porque nosotros lo entendemos, y no hables con nosotros en lengua de Judá a oídos del pueblo que está sobre el muro.» Así dice segundo de Reyes, capítulo dieciocho, versículo veintiséis."
+"Hay un peligro simétrico al de ignorar la lengua: el de convertirla en un velo. Hay quien deja de leer su Biblia en castellano porque aún no descifra una línea hebrea, como si la providencia de la traducción no fuera también un don. Esta escuela cita la Reina-Valera, textual, y acude al hebreo para servir a esa lectura, no para sustituirla. El temor de Jehová no desprecia el original, y no desprecia al hermano que todavía solo tiene su versión. Las letras están al servicio de la Palabra, y la Palabra, al servicio de Dios."
 ],
 [
 "p",
-"Este pasaje es muy interesante, porque nos dice que en tiempos de Ezequías, unos setecientos años antes de Cristo, el arameo era la lengua de la diplomacia internacional, que entendían los oficiales cultos, mientras que el pueblo común hablaba la lengua de Judá, es decir, el hebreo."
-],
-[
-"p",
-"Con el tiempo esa situación cambió. Después del destierro en Babilonia, el arameo se fue convirtiendo en la lengua hablada de muchos judíos, aunque el hebreo siguió siendo la lengua de la Escritura y del culto. Por eso algunas partes del Antiguo Testamento están escritas en arameo: buena parte de Daniel, desde el capítulo dos, versículo cuatro, hasta el final del capítulo siete; varios pasajes de Esdras, que son copias de cartas oficiales; un versículo de Jeremías, el capítulo diez, versículo once; y dos palabras en Génesis treinta y uno, cuarenta y siete, el nombre arameo que Labán dio al majano de piedras. Todo lo demás está en hebreo."
-],
-[
-"p",
-"Y recuerda lo que vimos en la lección anterior, cuando Esdras leyó la ley al pueblo. Escucha otra vez."
-],
-[
-"q",
-"«Y leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura.» Así dice Nehemías, capítulo ocho, versículo ocho."
-],
-[
-"p",
-"Leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura. Muchos estudiosos piensan que aquí se alude, entre otras cosas, a la necesidad de explicar el texto hebreo a un pueblo que, después de setenta años de destierro, ya no lo dominaba del todo. Es lo que tú y yo hacemos hoy en esta escuela: leer el texto de Dios claramente y poner el sentido."
-],
-[
-"p",
-"En tiempos del Señor Jesús, el pueblo hablaba arameo de manera habitual, y el Nuevo Testamento conserva algunas de sus palabras en esa lengua: talita cumi, efata, Abba, Eloi, Eloi, ¿lama sabactani? Recuerda que nuestra escuela se llama Cielo Efata, y efata es precisamente una palabra aramea que el Señor pronunció al sanar a un sordo: sé abierto. Pero el hebreo seguía vivo en la sinagoga, donde se leía la ley y los profetas cada sábado, como vimos en Nazaret."
-],
-[
-"p",
-"Una nota sobre la escritura. Las letras hebreas antiguas tenían una forma distinta de las que vemos hoy en las Biblias hebreas. La forma antigua, que los estudiosos llaman paleohebrea, se parecía a la escritura fenicia. La forma que conocemos hoy, de letras más cuadradas, se llama escritura cuadrada o asiria, y es la que se generalizó después del destierro. Muchos estudiosos piensan que la jota y la tilde de las que habló el Señor se refieren a esta escritura cuadrada, en la que la iod es efectivamente la letra más pequeña."
+"Por eso no recorreremos hoy las veintidós letras como un abecedario de feria. Nos detendremos en las que el Shemá nos obliga a mirar, y en la primera frase de la Escritura, para que veas el método: la lengua se aprende leyendo un texto que importa, no coleccionando curiosidades."
 ],
 [
 "h",
-"Tercera parte. Tres rasgos que cambian tu manera de leer"
+"Segunda parte. El Shemá, leído entero"
 ],
 [
 "p",
-"Antes de conocer las letras, debes saber tres cosas sobre cómo funciona esta lengua, porque son muy distintas del español."
+"Moisés, en las llanuras de Moab, no entrega primero un tratado de gramática. Entrega una llamada, después de haber recordado el Decálogo y la historia de un pueblo que oyó la voz de Dios y que es propenso a olvidarla. El texto sigue, y no debemos cortarlo en el versículo cinco, porque el amor que se manda tiene un modo concreto de permanecer:"
+],
+[
+"q",
+"«Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas. Y estas palabras que yo te mando hoy, estarán sobre tu corazón; y las repetirás a tus hijos, y hablarás de ellas estando en tu casa, y andando por el camino, y al acostarte, y cuando te levantes. Y las atarás como una señal en tu mano, y estarán como frontales entre tus ojos; y las escribirás en los postes de tu casa, y en tus puertas» Deuteronomio 6:4-9."
 ],
 [
 "p",
-"El primer rasgo: el hebreo se escribe de derecha a izquierda. Un libro hebreo comienza por lo que para nosotros sería la última página, y cada línea empieza a la derecha y termina a la izquierda. Si alguna vez abres una Biblia hebrea, no te asustes: lo que ves al revés es, para el hebreo, perfectamente natural."
-],
-[
-"p",
-"El segundo rasgo: el hebreo bíblico se escribió originalmente solo con consonantes. Las vocales no se escribían; el lector las ponía al leer, porque conocía la lengua. Es algo parecido a cuando tú lees un mensaje abreviado en el teléfono: si alguien te escribe solo las consonantes de una frase conocida, tú la entiendes porque conoces el idioma. Así leían los israelitas. Algunas letras, como la alef, la he, la vav y la iod, servían a veces para indicar ciertas vocales, especialmente al final de las palabras, pero no había un sistema completo de vocales. Ese sistema lo añadieron los masoretas siglos después de Cristo, como vimos ayer, con puntos y rayitas debajo, encima y dentro de las letras, sin tocar las consonantes."
-],
-[
-"p",
-"El tercer rasgo, y el más importante para el estudiante de la Biblia: el hebreo está construido sobre raíces. La mayoría de las palabras hebreas salen de una raíz de tres consonantes, que lleva una idea básica. A esa raíz se le añaden vocales, prefijos y sufijos para formar verbos, sustantivos y adjetivos relacionados. Te doy un ejemplo con una raíz que ya conoces de la lección anterior. La raíz formada por las letras kaf, tav y bet, que suenan ka, ta, ba, lleva la idea de escribir. De ella sale el verbo katáb, hache tres mil setecientos ochenta y nueve, que significa escribir y en su sentido primitivo grabar. De la misma raíz salen palabras como escrito y escritura. Así funciona toda la lengua."
-],
-[
-"p",
-"Otro ejemplo hermoso es la raíz de la palabra que la Reina Valera traduce bendecir: barák, hache mil doscientos ochenta y ocho. El diccionario de Strong anota que su sentido primitivo es arrodillarse, y de allí bendecir. La relación entre las dos ideas se explica de distintas maneras, y no es necesario forzarla; pero es hermoso pensar, sin afirmar más de lo que sabemos, que la misma raíz hebrea está asociada al gesto de doblar la rodilla y al acto de bendecir."
-],
-[
-"p",
-"¿Por qué importa esto? Porque cuando conoces la raíz de una palabra, puedes ver conexiones entre pasajes que en español parecen no tener relación. Pero aquí va una advertencia importante, que los estudiosos llaman la falacia de la raíz: el significado de una palabra no se determina solo por su raíz, sino por cómo se usa en su contexto. Igual que en español la palabra embarazada no tiene nada que ver con estar avergonzada aunque se parezca a embarazoso, en hebreo una palabra puede haber tomado un sentido propio, distinto de su raíz. La raíz ilumina, pero el contexto decide. Esta regla te protegerá de muchos errores."
+"Oye. Ama. Que estas palabras estén sobre tu corazón. Repítelas a tus hijos. Habla de ellas en la casa y en el camino, al acostarte y al levantarte. Átalas. Escríbelas. El monoteísmo de Israel no es, en este pasaje, una tesis fría que se asiente con la cabeza y se deje en el aula. Es una confesión que se oye, un amor que se debe, y una Palabra que ocupa el día entero. Si esta escuela te pide, al cabo de la lección, que memorices los versículos cuatro y cinco, no te pide un adorno. Te pide el umbral de todo el Antiguo Testamento, y el mandamiento que el Señor pondrá primero."
 ],
 [
 "h",
-"Cuarta parte. Las veintidós letras del alefato"
+"Tercera parte. Oye: no es solo oído"
 ],
 [
 "p",
-"El alfabeto hebreo se llama alefato, por el nombre de su primera letra, alef, de la misma manera que la palabra alfabeto viene de las dos primeras letras griegas, alfa y beta. Tiene veintidós letras, todas consonantes. Vamos a recorrerlas una por una. De cada letra te diré su nombre, cómo suena, cómo se ve, y, cuando sea seguro, el significado de su nombre. Debo ser honesto contigo: en algunas letras, el significado del nombre es claro porque coincide con una palabra hebrea conocida; en otras, el significado es discutido entre los estudiosos, y en esos casos te lo diré con claridad. No te daré interpretaciones místicas de las letras, porque la Escritura no las enseña."
+"La primera palabra, en hebreo, es shema.[1] No significa únicamente percibir un sonido. En la Escritura, oír a Dios es atenderle y disponerse a cumplir. Israel no es convocado a un concierto. Es convocado a una obediencia que empieza por el oído. El pueblo que no oye, aunque tenga el rollo, es un pueblo sordo. El alumno que subraya y no se detiene, también lo es."
 ],
 [
 "p",
-"Para ayudarte a memorizar, vamos a apoyarnos en el salmo ciento diecinueve, que está dividido en veintidós estrofas de ocho versículos, una por cada letra del alefato, en orden. En muchas ediciones de la Reina Valera, encima de cada estrofa aparece el nombre de la letra hebrea. En el texto hebreo, cada uno de los ocho versículos de una estrofa comienza con esa letra. Al presentar cada letra, te leeré un versículo de su estrofa."
+"Esa llamada no nace en el vacío. A ti te fue mostrado, para que supieses que Jehová es Dios, y no hay otro fuera de él. Desde los cielos te hizo oír su voz, para enseñarte; y sobre la tierra te mostró su gran fuego, y has oído sus palabras de en medio del fuego. Deuteronomio 4:35-36. Primero Dios se mostró y se hizo oír; después el pueblo es llamado a seguir oyendo. El conocimiento de que Jehová es Dios, y no hay otro fuera de él, no es una conquista de la especulación. Es un don que se recibe, y una verdad que se guarda. El Shemá resume lo que ya se ha visto y se ha oído: hay un Señor, es nuestro Dios, es uno, y se le ama."
 ],
 [
 "p",
-"La primera letra es alef. En la escritura cuadrada se parece a una equis inclinada con dos pequeños trazos. Es una consonante muda, o mejor dicho, representa un pequeño golpe de la garganta que el español no escribe, como el que hacemos sin darnos cuenta al decir oh, oh. Sobre ella se pone la vocal que corresponda, y así suena a, e, i, o, u según el caso. El nombre alef coincide con la palabra hebrea élef, hache quinientos cuatro, que según el diccionario de Strong significa familia y también, en otro sentido, buey o vaca, como animal domado. Los estudiosos piensan que la forma más antigua de esta letra era el dibujo de una cabeza de buey con sus cuernos; si le das la vuelta a nuestra letra A mayúscula, que desciende de ella, verás todavía los dos cuernos. La estrofa alef del salmo comienza así."
-],
-[
-"q",
-"«Bienaventurados los perfectos de camino, Los que andan en la ley de Jehová.» Así dice Salmos, capítulo ciento diecinueve, versículo uno."
-],
-[
-"p",
-"La segunda letra es bet. Su forma es como un cuadrado abierto por el lado izquierdo, con una línea de base que sobresale un poco hacia la derecha. Suena como nuestra be, y en ciertas posiciones se suaviza y suena como una ve labial. Su nombre coincide con la palabra hebrea báyit, hache mil cuatro, que significa casa. Y es muy fácil de recordar, porque su forma parece una casa abierta hacia adelante. Es la primera letra de la Biblia hebrea, porque Génesis empieza con la palabra bereshít, en el principio. La estrofa bet trae uno de los versículos más amados."
-],
-[
-"q",
-"«En mi corazón he guardado tus dichos, Para no pecar contra ti.» Así dice Salmos, capítulo ciento diecinueve, versículo once."
-],
-[
-"p",
-"La tercera letra es guímel. Suena como la ge de gato, nunca como la de gente. Su forma se parece a una pierna con un pie que avanza hacia la izquierda. Muchos estudiosos relacionan su nombre con la palabra camello, que en hebreo es gamál; es una relación probable, pero no segura. La estrofa guímel comienza así."
-],
-[
-"q",
-"«Haz bien a tu siervo; que viva, Y guarde tu palabra. Abre mis ojos, y miraré Las maravillas de tu ley.» Así dice Salmos, capítulo ciento diecinueve, versículos diecisiete al dieciocho."
-],
-[
-"p",
-"Abre mis ojos, y miraré las maravillas de tu ley. Esa oración debería estar en tus labios cada vez que abres la Escritura, y también hoy, al estudiar su lengua."
-],
-[
-"p",
-"La cuarta letra es dálet. Suena como nuestra de. Su forma es como un siete invertido, o como una escuadra con el ángulo arriba a la derecha. Su nombre se relaciona con la palabra hebrea délet, hache mil ochocientos diecisiete, que significa puerta, y se piensa que su forma antigua representaba una puerta o la hoja de una puerta. La estrofa dálet comienza con un clamor."
-],
-[
-"q",
-"«Abatida hasta el polvo está mi alma; Vivifícame según tu palabra.» Así dice Salmos, capítulo ciento diecinueve, versículo veinticinco."
-],
-[
-"p",
-"La quinta letra es he. Es una aspiración suave, como la hache de algunos acentos que se pronuncia ligeramente, o como la jota española muy suave. Su forma se parece a la dálet, pero con un pequeño trazo vertical a la izquierda que no toca el techo. El significado de su nombre es discutido; algunos lo relacionan con una exclamación, y otros con una ventana, pero no hay certeza, y así te lo digo. Lo que sí sabemos es que la he es muy importante en la gramática: al comienzo de una palabra suele ser el artículo, el, la, los, las. La estrofa he trae esta oración."
-],
-[
-"q",
-"«Enséñame, oh Jehová, el camino de tus estatutos, Y lo guardaré hasta el fin.» Así dice Salmos, capítulo ciento diecinueve, versículo treinta y tres."
-],
-[
-"p",
-"La sexta letra es vav. Su forma es un trazo vertical sencillo con una pequeña cabeza arriba. En el hebreo bíblico suena probablemente como una u semiconsonante, parecida a la u de huevo, y en la pronunciación moderna como ve. El nombre vav coincide con la palabra que en Éxodo se usa para los ganchos o capiteles de las columnas del tabernáculo, y por eso se suele explicar como clavo o gancho. Es una de las letras más frecuentes de la Biblia, porque al comienzo de una palabra significa y. Cuando lees en Génesis y dijo Dios, y fue la luz, y vio Dios, cada y es una vav. Por eso la narración hebrea tiene ese ritmo continuo, encadenado, que la Reina Valera conserva con sus muchas y. La estrofa vav comienza así."
-],
-[
-"q",
-"«Venga a mí tu misericordia, oh Jehová; Tu salvación, conforme a tu dicho.» Así dice Salmos, capítulo ciento diecinueve, versículo cuarenta y uno."
-],
-[
-"p",
-"La séptima letra es záyin. Suena como una ese sonora, como la zeta de algunos idiomas o como el zumbido de una abeja. Su forma es parecida a la vav, pero con la cabeza más ancha, como un clavo con una tapa. El significado de su nombre es discutido; algunos lo relacionan con un arma, pero no es seguro. La estrofa záyin dice."
-],
-[
-"q",
-"«Acuérdate de la palabra dada a tu siervo, En la cual me has hecho esperar. Ella es mi consuelo en mi aflicción, Porque tu dicho me ha vivificado.» Así dice Salmos, capítulo ciento diecinueve, versículos cuarenta y nueve al cincuenta."
-],
-[
-"p",
-"La octava letra es jet. Es un sonido gutural fuerte, que sale de la garganta, parecido a nuestra jota. Su forma es como una dálet con una pata a la izquierda que llega hasta el techo, como un arco o una puerta completa. El sentido de su nombre es incierto; algunos piensan en un cerco o una valla. La estrofa jet contiene esta resolución."
-],
-[
-"q",
-"«Mi porción es Jehová; He dicho que guardaré tus palabras.» Así dice Salmos, capítulo ciento diecinueve, versículo cincuenta y siete."
-],
-[
-"p",
-"La novena letra es tet. Suena como una te enfática, que en la pronunciación moderna es igual a la te. Su forma es redonda, como un recipiente que se cierra sobre sí mismo con un pequeño trazo hacia adentro en la parte de arriba. El sentido de su nombre es discutido. Es la primera letra de la palabra tob, hache dos mil ochocientos noventa y seis, que significa bueno, y precisamente la estrofa tet del salmo comienza con esa palabra."
-],
-[
-"q",
-"«Bien has hecho con tu siervo, Oh Jehová, conforme a tu palabra.» Así dice Salmos, capítulo ciento diecinueve, versículo sesenta y cinco."
-],
-[
-"p",
-"Y también contiene una de las confesiones más profundas de todo el salmo."
-],
-[
-"q",
-"«Bueno me es haber sido humillado, Para que aprenda tus estatutos.» Así dice Salmos, capítulo ciento diecinueve, versículo setenta y uno."
-],
-[
-"p",
-"La décima letra es iod. Es la más pequeña de todas, como una coma suspendida en lo alto de la línea. Suena como nuestra i griega en la palabra yo. Es la jota de la que habló el Señor en el sermón del monte. Su nombre se relaciona con la palabra hebrea yad, que significa mano. Es la primera letra del nombre de Dios que la Reina Valera traduce Jehová. La estrofa iod comienza recordando que fueron las manos de Dios las que nos hicieron."
-],
-[
-"q",
-"«Tus manos me hicieron y me formaron; Hazme entender, y aprenderé tus mandamientos.» Así dice Salmos, capítulo ciento diecinueve, versículo setenta y tres."
-],
-[
-"p",
-"La undécima letra es kaf. Suena como nuestra ca, y en ciertas posiciones se suaviza y suena como nuestra jota. Su forma es como una bet redondeada, abierta hacia la izquierda. Su nombre coincide con la palabra hebrea kaf, que significa palma de la mano. La estrofa kaf comienza con un alma que desfallece esperando."
-],
-[
-"q",
-"«Desfallece mi alma por tu salvación, Mas espero en tu palabra.» Así dice Salmos, capítulo ciento diecinueve, versículo ochenta y uno."
-],
-[
-"p",
-"La duodécima letra es lámed. Suena como nuestra ele. Es la letra más alta del alefato, porque su trazo sube por encima de la línea, como un cayado o una aguijada. Precisamente su nombre se suele relacionar con la palabra aguijada, la vara puntiaguda con que se guiaba a los bueyes, y con la raíz que significa aprender y enseñar, lamád. La estrofa lámed comienza con una de las declaraciones más firmes de la Biblia sobre la permanencia de la Palabra."
-],
-[
-"q",
-"«Para siempre, oh Jehová, Permanece tu palabra en los cielos.» Así dice Salmos, capítulo ciento diecinueve, versículo ochenta y nueve."
-],
-[
-"p",
-"La decimotercera letra es mem. Suena como nuestra eme. Su nombre se relaciona con la palabra mayim, que significa aguas, y su forma antigua era una línea ondulada, como las olas. La estrofa mem comienza con un amor apasionado."
-],
-[
-"q",
-"«¡Oh, cuánto amo yo tu ley! Todo el día es ella mi meditación.» Así dice Salmos, capítulo ciento diecinueve, versículo noventa y siete."
-],
-[
-"p",
-"La decimocuarta letra es nun. Suena como nuestra ene. Su forma es como una vav con un pie que va hacia la izquierda. En arameo, nun significa pez, y por eso se suele explicar así. La estrofa nun contiene el versículo que quizás más hemos memorizado de todo el salmo."
-],
-[
-"q",
-"«Lámpara es a mis pies tu palabra, Y lumbrera a mi camino.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento cinco."
-],
-[
-"p",
-"La decimoquinta letra es sámej. Suena como nuestra ese. Su forma es redonda y cerrada, como un círculo. Su nombre se relaciona con la raíz que significa sostener o apoyar. La estrofa sámej dice."
-],
-[
-"q",
-"«Mi escondedero y mi escudo eres tú; En tu palabra he esperado.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento catorce."
-],
-[
-"p",
-"La decimosexta letra es áyin. Es un sonido gutural muy profundo, que en la pronunciación moderna suele quedar mudo, como la alef. Su forma se parece a una i griega mayúscula con un brazo izquierdo más largo. Su nombre coincide con la palabra hebrea áyin, que significa ojo, y también fuente o manantial. La estrofa áyin dice."
-],
-[
-"q",
-"«Juicio y justicia he hecho; No me abandones a mis opresores.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento veintiuno."
-],
-[
-"p",
-"La decimoséptima letra es pe. Suena como nuestra pe, y en ciertas posiciones se suaviza y suena como efe. Su nombre se relaciona con la palabra hebrea pe, que significa boca. La estrofa pe contiene un versículo precioso sobre la luz que da la Palabra."
-],
-[
-"q",
-"«La exposición de tus palabras alumbra; Hace entender a los simples.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento treinta."
-],
-[
-"p",
-"La decimoctava letra es tsade. Suena como ts, como en la palabra tsetsé. El sentido de su nombre es discutido. Es la primera letra de la palabra tsadík, hache seis mil seiscientos sesenta y dos, que significa justo, y la estrofa tsade del salmo comienza justamente con esa palabra."
-],
-[
-"q",
-"«Justo eres tú, oh Jehová, Y rectos tus juicios.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento treinta y siete."
-],
-[
-"p",
-"La decimonovena letra es qof. Es una ca más profunda, pronunciada en el fondo de la boca; en la pronunciación moderna suena igual que la ca. Su forma tiene un trazo que baja por debajo de la línea. El sentido de su nombre es discutido. La estrofa qof comienza con un clamor de todo corazón."
-],
-[
-"q",
-"«Clamé con todo mi corazón; respóndeme, Jehová, Y guardaré tus estatutos.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento cuarenta y cinco."
-],
-[
-"p",
-"La vigésima letra es resh. Suena como una erre suave, en la pronunciación moderna parecida a la erre francesa. Su forma se parece a la dálet, pero redondeada en la esquina. Su nombre se relaciona con la palabra rosh, hache siete mil doscientos dieciocho, que significa cabeza, principio, lo primero. Y, en efecto, la estrofa resh contiene esta declaración."
-],
-[
-"q",
-"«La suma de tu palabra es verdad, Y eterno es todo juicio de tu justicia.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento sesenta."
-],
-[
-"p",
-"La suma de tu palabra es verdad, o, como dice el hebreo literalmente, la cabeza de tu palabra es verdad. Aquí se usa la palabra rosh. Algunos lo entienden como el principio, y otros como el total o la suma, que es como la Reina Valera lo tradujo. En cualquier caso, toda la Palabra de Dios, desde la cabeza hasta el final, es verdad."
-],
-[
-"p",
-"La vigesimoprimera letra es shin, y también sin. Es la misma letra con dos sonidos: con un punto a la derecha suena sh, como cuando pedimos silencio; con un punto a la izquierda suena como una ese. Su forma tiene tres brazos que suben desde una base, como una corona de tres puntas. Su nombre se relaciona con la palabra shen, que significa diente. La estrofa shin contiene esta declaración de paz."
-],
-[
-"q",
-"«Mucha paz tienen los que aman tu ley, Y no hay para ellos tropiezo.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento sesenta y cinco."
-],
-[
-"p",
-"La vigesimosegunda y última letra es tav. Suena como nuestra te. Su nombre coincide con la palabra hebrea tav, que significa marca o señal, y su forma antigua era una pequeña cruz o una equis, como una marca. La palabra tav aparece en Ezequiel nueve, cuatro, cuando Dios manda poner una señal en la frente de los que gimen por las abominaciones de Jerusalén; allí señal traduce precisamente esa palabra. No hace falta añadir nada más a lo que el texto dice; basta saber que la última letra del alefato era una marca. La estrofa tav cierra el salmo con una oración humilde."
-],
-[
-"q",
-"«Yo anduve errante como oveja extraviada; busca a tu siervo, Porque no me he olvidado de tus mandamientos.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento setenta y seis."
-],
-[
-"p",
-"Mira cómo termina el salmo más largo de la Biblia, el gran himno a la Palabra de Dios: no con un grito de triunfo, sino con una confesión. Yo anduve errante como oveja extraviada; busca a tu siervo. Quien más ama la Palabra es quien mejor conoce su propia necesidad de ser buscado por el Pastor."
-],
-[
-"p",
-"Repaso rápido del alefato. Vamos a decir juntos los nombres de las veintidós letras, despacio. Repite conmigo: alef, bet, guímel, dálet, he, vav, záyin, jet, tet, iod, kaf, lámed, mem, nun, sámej, áyin, pe, tsade, qof, resh, shin, tav. Otra vez, un poco más rápido: alef, bet, guímel, dálet, he, vav, záyin, jet, tet, iod, kaf, lámed, mem, nun, sámej, áyin, pe, tsade, qof, resh, shin, tav. Te recomiendo repetirlos así cada día de esta semana, al despertar y antes de dormir, hasta que te salgan solos. Al principio te parecerá difícil, pero en pocos días los dirás como dices las vocales."
-],
-[
-"p",
-"Un consejo práctico para memorizarlos: agrúpalos de cuatro en cuatro. Alef, bet, guímel, dálet. He, vav, záyin, jet. Tet, iod, kaf, lámed. Mem, nun, sámej, áyin. Pe, tsade, qof, resh. Y, al final, shin y tav. Cinco grupos de cuatro y una pareja final."
+"Por eso el oír se vuelve, inmediatamente, un amar. No hay un intervalo en el que Israel pueda decir: ya he oído que es uno, y ahora decidiré, con calma, si le doy el corazón. El texto une las dos cosas. El oído que no ama no ha oído del todo. El amor que no oye la Palabra no es el amor que aquí se manda."
 ],
 [
 "h",
-"Quinta parte. Las cinco formas finales"
+"Cuarta parte. El Nombre"
+],
+[
+"q",
+"«Jehová nuestro Dios, Jehová uno es. El nombre que nuestra versión escribe «Jehová» corresponde, en hebreo, al Tetragrámaton, las cuatro letras del Nombre propio del Dios de Israel, que los estudiosos transcriben a menudo YHWH.[2] Esta escuela no inventará, aquí, una pronunciación que el pueblo de la Escritura, por reverencia, dejó de articular en voz alta, leyendo en su lugar, muchas veces, «Adonai», Señor. Tampoco despreciará la forma «Jehová», que la Reina-Valera ha puesto en la boca de millones de lectores en castellano, y que esta casa cita tal como está. El punto no es ganar una disputa de sílabas. El punto es que Dios no se presenta como una fuerza anónima, ni como un concepto, sino con un Nombre, y que ese Nombre está unido a su pacto.»"
 ],
 [
 "p",
-"Cinco letras del alefato cambian de forma cuando aparecen al final de una palabra. Son la kaf, la mem, la nun, la pe y la tsade. En la mayoría de los casos, la forma final se caracteriza porque el trazo que en la forma normal se dobla hacia la izquierda, en la forma final se alarga hacia abajo, por debajo de la línea. La mem final, en cambio, se cierra como un cuadrado."
+"En la zarza, Moisés pregunta qué dirá cuando le pregunten el nombre del que le envía. Y respondió Dios a Moisés: YO SOY EL QUE SOY. Y dijo: Así dirás a los hijos de Israel: YO SOY me envió a vosotros. Además dijo Dios a Moisés: Así dirás a los hijos de Israel: Jehová, el Dios de vuestros padres, el Dios de Abraham, Dios de Isaac y Dios de Jacob, me ha enviado a vosotros. Este es mi nombre para siempre; con él se me recordará por todos los siglos. Éxodo 3:14-15. El Nombre no es un talismán. Es la revelación del que es, del que está, del que se ata a los padres y no se disuelve en el tiempo. «Este es mi nombre para siempre.» Cuando el Shemá dice «Jehová», no dice un título intercambiable. Dice ese Nombre."
 ],
 [
 "p",
-"Los estudiantes hebreos han memorizado estas cinco letras durante siglos con una sola palabra inventada que reúne sus sonidos. Tú puedes recordarlas así: kaf, mem, nun, pe, tsade. Las formas finales no cambian el sonido de la letra; solo cambian su forma. Son una ayuda para el lector, porque en un texto sin espacios claros o sin vocales, ver una forma final le indica que allí termina una palabra."
+"Por eso el Decálogo comienza donde debe comenzar. Y habló Dios todas estas palabras, diciendo: Yo soy Jehová tu Dios, que te saqué de la tierra de Egipto, de casa de servidumbre. No tendrás dioses ajenos delante de mí. Éxodo 20:1-3. Primero el quién y el qué ha hecho; después la prohibición de los dioses ajenos. El monoteísmo bíblico no es una idea que Israel habría descubierto al cabo de una evolución religiosa que esta lección no va a narrar con invenciones. Es la voz de Dios que se oye, que redime, y que no admite rivales. El Shemá, más adelante, lo dirá otra vez: A Jehová tu Dios temerás, y a él solo servirás, y por su nombre jurarás. No andaréis en pos de dioses ajenos, de los dioses de los pueblos que están en vuestros contornos; porque el Dios celoso, Jehová tu Dios, en medio de ti está; para que no se inflame el furor de Jehová tu Dios contra ti, y te destruya de sobre la tierra. Deuteronomio 6:13-15."
 ],
 [
 "p",
-"Un ejemplo que oyes muchas veces: la palabra shalóm, hache siete mil novecientos sesenta y cinco, que significa paz, termina en mem, y por eso se escribe con la mem final, cerrada como una caja. Y la palabra amén, hache quinientos cuarenta y tres, termina en nun, y se escribe con la nun final, que es un trazo largo que baja."
+"Si hoy tu corazón tiene otros señores —el dinero, la imagen, el rencor, el miedo, un nombre propio que has puesto en el centro—, el Shemá no te pide un comentario de letras. Te pide que oigas, y que no andes en pos de dioses ajenos. El celo de Dios no es un capricho. Es el amor que no comparte el trono."
 ],
 [
 "h",
-"Sexta parte. Las vocales de los masoretas"
+"Quinta parte. Jehová uno es"
 ],
 [
 "p",
-"Ya dijimos que el hebreo bíblico se escribió originalmente con consonantes. Cuando la lengua dejó de hablarse de manera cotidiana, se corría el peligro de que la pronunciación tradicional se perdiera. Por eso los masoretas, entre los siglos sexto y décimo después de Cristo aproximadamente, desarrollaron un sistema de puntos y rayas para indicar las vocales sin tocar las consonantes. El sistema que se impuso es el de la escuela de Tiberias, junto al mar de Galilea, el mismo de los grandes códices de los que hablamos ayer."
+"La palabra hebrea que nuestra versión traduce «uno» es echad.[3] Significa uno, un, unidad. No debemos cargar sobre una sola palabra todo el peso de la doctrina de Dios, ni debemos vaciarla. El texto dice lo que dice: Jehová uno es. No hay un comité de dioses iguales, ni un Señor entre otros señores de la misma dignidad. Isaías lo oye de la boca de Dios con una claridad que no admite un segundo trono: Así dice Jehová Rey de Israel, y su Redentor, Jehová de los ejércitos: Yo soy el primero, y yo soy el postrero, y fuera de mí no hay Dios. Isaías 44:6. Y otra vez: Yo soy Jehová, y ninguno más hay; no hay Dios fuera de mí. Yo te ceñiré, aunque tú no me conociste, Isaías 45:5. El Shemá y los profetas se dan la mano."
 ],
 [
 "p",
-"Estos signos se llaman en conjunto nikúd, que significa puntuación. La mayoría se escriben debajo de las letras; uno se escribe encima, a la izquierda; y uno se escribe dentro de la vav. No vamos a aprender aquí la forma de cada signo, porque eso se hace con los ojos y no con el oído. Pero sí debes saber algunas cosas."
+"¿Qué clase de «uno» es este? Aquí el alumno atento debe ser humilde. En Génesis, cuando se completa el primer día, leemos: Y llamó Dios a la luz Día, y a las tinieblas llamó Noche. Y fue la tarde y la mañana un día. Génesis 1:5. «Un día»: tarde y mañana, dos momentos, un día. La palabra de la unidad puede abarcar una unidad que no es un punto vacío. Eso no nos autoriza a convertir el echad del Shemá, por sí solo, en una demostración completa de todo lo que el Nuevo Testamento revelará sobre el Padre, el Hijo y el Espíritu. Tampoco nos autoriza a decir que «uno» significa, aquí, una soledad estéril, como si Dios fuera un número y no el Dios vivo que habla, que ama, que dice en la creación: Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza; y señoree en los peces del mar, en las aves de los cielos, en las bestias, en toda la tierra, y en todo animal que se arrastra sobre la tierra. Génesis 1:26. El verbo está en plural; la obra, en el versículo siguiente, se narra con un verbo en singular: Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó. Génesis 1:27. Esta escuela no forzará la gramática para que pruebe, ella sola, lo que más adelante la Escritura enseña con toda luz. Dirá, con sobriedad, que el Dios que es uno no es un ídolo mudo, y que su unidad no queda desmentida cuando el evangelio nos muestra al Padre y al Hijo, y al Espíritu Santo."
 ],
 [
 "p",
-"Primera. Los signos vocálicos indican sonidos que corresponden más o menos a nuestras cinco vocales, a, e, i, o, u, con distinciones de cantidad y de cualidad que la pronunciación moderna ya no hace."
+"Pablo, escribiendo a una iglesia tentada por los ídolos, no anula el Shemá: lo confiesa y lo llena. Acerca, pues, de las viandas que se sacrifican a los ídolos, sabemos que un ídolo nada es en el mundo, y que no hay más que un Dios. Pues aunque haya algunos que se llamen dioses, sea en el cielo, o en la tierra (como hay muchos dioses y muchos señores), para nosotros, sin embargo, sólo hay un Dios, el Padre, del cual proceden todas las cosas, y nosotros somos para él; y un Señor, Jesucristo, por medio del cual son todas las cosas, y nosotros por medio de él. 1 Corintios 8:4-6. Un Dios, el Padre; un Señor, Jesucristo. La unidad no se rompe. El Nombre no se reparte entre ídolos. Y el Señor Jesús no queda fuera de esa confesión, como un añadido piadoso. Está en el centro de lo que «para nosotros» significa no tener más que un Dios."
 ],
 [
 "p",
-"Segunda. Hay un signo muy frecuente, de dos puntos verticales debajo de la letra, que se llama shevá. A veces indica una vocal muy breve, casi imperceptible, como una e rápida, y a veces indica que no hay vocal. Cuando oyes bereshít, la primera e es una shevá: se pronuncia muy rápida."
-],
-[
-"p",
-"Tercera. Hay un punto dentro de algunas letras que se llama daguésh. En unas letras indica que la consonante se duplica, como cuando decimos dos eles; en otras, indica que la letra se pronuncia dura y no suave. Por ejemplo, la bet con daguésh suena be, y sin daguésh suena ve. Por eso a veces oirás bet y a veces vet."
-],
-[
-"p",
-"Cuarta. Además de las vocales, los masoretas añadieron acentos, que marcan la sílaba tónica, dividen el versículo en partes y servían para la cantilación, es decir, para la manera de cantar el texto en la sinagoga. El acento más importante divide cada versículo en dos mitades, y se llama atnaj. Los acentos son una ayuda preciosa para entender cómo los antiguos lectores agrupaban las palabras de cada versículo."
-],
-[
-"p",
-"Y quinta, que ya conoces: los masoretas no cambiaron ni una consonante. Cuando creían que una palabra debía leerse de otro modo, la dejaban escrita como estaba y anotaban al margen cómo se leía. Ese es el ketiv y el qeré, lo escrito y lo leído, que estudiamos ayer."
-],
-[
-"p",
-"El nombre de Dios."
-],
-[
-"p",
-"Aquí debemos detenernos en algo muy delicado: el nombre propio de Dios. En el texto hebreo aparece más de seis mil ochocientas veces un nombre de cuatro letras: iod, he, vav, he. Los estudiosos lo llaman tetragrámaton, que significa cuatro letras. Es el nombre que Dios reveló a Moisés junto a la zarza, y que está relacionado con el verbo ser."
-],
-[
-"q",
-"«Y respondió Dios a Moisés: YO SOY EL QUE SOY. Y dijo: Así dirás a los hijos de Israel: YO SOY me envió a vosotros. Además dijo Dios a Moisés: Así dirás a los hijos de Israel: Jehová, el Dios de vuestros padres, el Dios de Abraham, Dios de Isaac y Dios de Jacob, me ha enviado a vosotros. Este es mi nombre para siempre; con él se me recordará por todos los siglos.» Así dice Éxodo, capítulo tres, versículos catorce al quince."
-],
-[
-"p",
-"Con el tiempo, por reverencia y por temor de tomar el nombre de Dios en vano, los lectores judíos dejaron de pronunciarlo y, al llegar a él, leían en su lugar Adonái, que significa mi Señor. Los masoretas, coherentes con su práctica del qeré, pusieron a las cuatro consonantes las vocales de la palabra que se leía. De esa combinación de consonantes y vocales, leída literalmente por lectores cristianos siglos después, salió la forma Jehová, que usa la Reina Valera. El diccionario de Strong la registra así: Yehováh, hache tres mil sesenta y ocho. Los estudiosos discuten cuál era la pronunciación original, y muchos proponen una forma distinta, pero la verdad es que no lo sabemos con certeza, porque las vocales originales no se escribieron. Lo que sí sabemos es lo que el nombre significa, porque Dios mismo lo explicó: yo soy el que soy. El Dios que existe por sí mismo, que no depende de nadie, que no cambia, y que es fiel a su pacto."
-],
-[
-"p",
-"La Reina Valera traduce este nombre como Jehová, mientras que muchas otras traducciones ponen el Señor, a veces en mayúsculas. Cuando leas Jehová en tu Biblia, sabes que allí, en el hebreo, está el nombre propio de Dios. Cuando leas Señor, generalmente estás ante la palabra Adonái. Y cuando leas Dios, generalmente estás ante la palabra Elohím, hache cuatrocientos treinta, de la que hablaremos enseguida."
-],
-[
-"p",
-"Existe también una forma abreviada del nombre, Yah, hache tres mil cincuenta, que aparece especialmente en los salmos y que tú pronuncias cada vez que dices aleluya. Aleluya es una palabra hebrea compuesta: halelú, que es un imperativo plural del verbo halál, hache mil novecientos ochenta y cuatro, alabar, y Yah, el nombre abreviado de Dios. Aleluya significa, por lo tanto, alabad a Yah, alabad a Jehová. Cuando la Reina Valera traduce alabad a Jehová en los salmos, muchas veces está traduciendo precisamente esa palabra. Escucha el último salmo."
-],
-[
-"q",
-"«Todo lo que respira alabe a JAH. Aleluya» Así dice Salmos, capítulo ciento cincuenta, versículo seis."
+"El Señor mismo, orando, lo dijo con una sencillez que debe gobernar este día: Y esta es la vida eterna: que te conozcan a ti, el único Dios verdadero, y a Jesucristo, a quien has enviado. Juan 17:3. Conocer al único Dios verdadero, y a Jesucristo enviado: esa es la vida eterna, no el desfile de un alfabeto. El hebreo del Shemá nos lleva a esa vida, no nos aparta de ella."
 ],
 [
 "h",
-"Séptima parte. Los poemas acrósticos"
-],
-[
-"p",
-"Ya hemos visto que el salmo ciento diecinueve está organizado según el alefato. A este tipo de poema se le llama acróstico alfabético: cada verso, o cada grupo de versos, comienza con una letra distinta, siguiendo el orden del alfabeto. En la traducción española este orden se pierde, porque las palabras cambian de lugar, pero en el hebreo es evidente. Conocer este dato te permite ver la arquitectura de varios pasajes de la Escritura."
-],
-[
-"p",
-"Hay varios acrósticos alfabéticos en el Antiguo Testamento. Entre los más claros están los salmos veinticinco, treinta y cuatro, ciento once, ciento doce y ciento cuarenta y cinco, además del ciento diecinueve. Los salmos nueve y diez, juntos, forman también un acróstico, aunque incompleto. Fuera del libro de los Salmos, el poema de la mujer virtuosa en Proverbios treinta y uno, desde el versículo diez hasta el final, es un acróstico perfecto de veintidós versos. Y el libro de Lamentaciones es casi entero acróstico: los capítulos uno, dos y cuatro tienen veintidós versículos cada uno, uno por letra; el capítulo tres tiene sesenta y seis versículos, tres para cada letra; y el capítulo cinco tiene veintidós versículos, pero sin orden alfabético."
-],
-[
-"p",
-"¿Por qué escribirían así los autores inspirados? La Escritura no lo explica, y por eso hay que ser prudentes. Pero hay razones razonables que los estudiosos señalan: el acróstico ayuda a la memoria, porque el que conoce el orden de las letras puede recordar el orden de los versos; y transmite una idea de totalidad, como si se dijera todo, de la a a la zeta. Es significativo que el libro de Lamentaciones, que llora la destrucción de Jerusalén, esté ordenado con tanto cuidado: en medio del caos, el dolor se expresa con orden. Y en el corazón de ese libro, en el capítulo tres, que es el más elaborado de todos, están estas palabras."
+"Sexta parte. Amarás: corazón, alma, fuerzas"
 ],
 [
 "q",
-"«Por la misericordia de Jehová no hemos sido consumidos, porque nunca decayeron sus misericordias. Nuevas son cada mañana; grande es tu fidelidad.» Así dice Lamentaciones, capítulo tres, versículos veintidós al veintitrés."
+"«Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas. El verbo es un mandato, no un consejo para almas sensibles. El amor a Dios se manda porque el hombre, después de la caída, no lo da espontáneamente del modo que se debe. Se manda también porque Dios es digno de él, y porque el pacto no es un contrato frío. El hebreo del corazón, levav,[4] no designa solo el sentimiento. Designa el centro de la persona: el pensar, el querer, el interior de donde salen las decisiones. El alma, nephesh,[5] es la vida misma, el aliento, lo que somos como seres vivientes. Las fuerzas, meod,[6] son el mucho, el muy, el vigor y los recursos: lo que puedes, lo que vales, lo que das. Nada queda fuera. Un amor de labios, o un amor de horas sueltas, o un amor que retiene el bolsillo y el domingo, no es este amor.»"
 ],
 [
 "p",
-"En el hebreo, estos dos versículos pertenecen a la estrofa de la letra jet, la octava letra; y los tres versículos de esa estrofa comienzan con jet. Grande es tu fidelidad. Aquí fidelidad traduce emunáh, de la misma raíz que la palabra amén. Y misericordias traduce jésed, hache dos mil seiscientos diecisiete, una de las palabras más ricas del Antiguo Testamento, que habla del amor fiel de Dios a su pacto y que estudiaremos en el vocabulario."
+"El salmista lo sabe, y lo pide como quien ha entendido el Shemá por dentro: Con todo mi corazón te he buscado; No me dejes desviarme de tus mandamientos. En mi corazón he guardado tus dichos, Para no pecar contra ti. Salmos 119:10-11. Guardar los dichos en el corazón no es un truco de memoria. Es el modo de no pecar. Las palabras del Shemá deben estar, dice el versículo seis, sobre tu corazón. No al lado. No en un estante. Sobre el corazón. Si esta lección te deja con hebreo en la cabeza y con un corazón que no ha sido puesto debajo de esas palabras, has oído la lengua y no has oído el mandato."
 ],
 [
 "p",
-"El salmo treinta y cuatro es también un acróstico, y contiene un versículo que el apóstol Juan relaciona con la cruz. Escucha."
-],
-[
-"q",
-"«El guarda todos sus huesos; Ni uno de ellos será quebrantado.» Así dice Salmos, capítulo treinta y cuatro, versículo veinte."
-],
-[
-"p",
-"Y escucha cómo Juan, al narrar que los soldados no quebraron las piernas del Señor, dice que eso sucedió para que se cumpliera la Escritura."
-],
-[
-"q",
-"«Porque estas cosas sucedieron para que se cumpliese la Escritura: No será quebrado hueso suyo.» Así dice Juan, capítulo diecinueve, versículo treinta y seis."
-],
-[
-"p",
-"Muchos estudiosos relacionan esta cita también con la ley del cordero de la pascua, al que no se le debía quebrar hueso, en Éxodo doce, cuarenta y seis. El justo del salmo y el cordero de la pascua se encuentran en Cristo."
-],
-[
-"p",
-"Una lección para tu vida: Dios no es un Dios de desorden, y su Palabra tampoco lo es. Los poetas inspirados de Israel ordenaron sus cantos, sus lamentos y sus oraciones con cuidado y belleza. Si el Espíritu Santo inspiró poemas tan ordenados, nosotros, al estudiar la Biblia, debemos hacerlo también con orden y cuidado."
+"Hay aquí una convicción de pecado que no debemos suavizar. ¿Amas a Jehová de todo tu corazón, o hay cuartos cerrados? ¿De toda tu alma, o solo de la parte que no te cuesta? ¿Con todas tus fuerzas, o con las que te sobran cuando el día ya ha sido de ti? El Shemá no se da para que el devoto se contemple cumplido. Se da para que el pueblo se sepa llamado, y para que el que no ama del todo se arrepienta y vuelva. Oseas lo dice con una frase que corta los rituales vacíos: Porque misericordia quiero, y no sacrificio, y conocimiento de Dios más que holocaustos. Oseas 6:6. El conocimiento de Dios, en la Escritura, no es una ficha. Es un trato que se parece al amor, y que produce misericordia."
 ],
 [
 "h",
-"Octava parte. Leyendo juntos el primer versículo de la Biblia"
+"Séptima parte. El Señor Jesús y el primer mandamiento"
 ],
 [
 "p",
-"Ha llegado el momento más emocionante de la lección. Vamos a leer juntos, palabra por palabra, el primer versículo de la Biblia en hebreo. Primero escúchalo en tu Reina Valera."
-],
-[
-"q",
-"«En el principio creó Dios los cielos y la tierra.» Así dice Génesis, capítulo uno, versículo uno."
+"Un intérprete de la ley preguntó, por tentarle: Maestro, ¿cuál es el gran mandamiento en la ley? El Señor no inventó una respuesta nueva. Recitó el Shemá, en las palabras que Mateo registra así: Jesús le dijo: Amarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con toda tu mente. Este es el primero y grande mandamiento. Y el segundo es semejante: Amarás a tu prójimo como a ti mismo. De estos dos mandamientos depende toda la ley y los profetas. Mateo 22:37-40. Marcos, en el mismo episodio, conserva también el «Oye, Israel»: Jesús le respondió: El primer mandamiento de todos es: Oye, Israel; el Señor nuestro Dios, el Señor uno es. Y amarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con toda tu mente y con todas tus fuerzas. Este es el principal mandamiento. Y el segundo es semejante: Amarás a tu prójimo como a ti mismo. No hay otro mandamiento mayor que éstos. Marcos 12:29-31."
 ],
 [
 "p",
-"En hebreo, este versículo tiene siete palabras. Vamos a escucharlas y entenderlas una por una."
+"Conviene que el alumno vea, sin violencia, lo que las versiones nos ponen delante. Deuteronomio dice: corazón, alma, fuerzas. Mateo dice: corazón, alma, mente. Marcos dice: corazón, alma, mente y fuerzas. Esta escuela no aplastará esas diferencias para fabricar una sola línea, ni afirmará que hay un error donde hay un testimonio pleno del mismo mandato. El hebreo meod es un «mucho» que abarca el vigor; el griego de los evangelios, en la tradición que Mateo y Marcos nos dan, hace explícita la mente y, en Marcos, retiene también las fuerzas. El sentido no se evapora: el amor debido a Dios no deja afuera el interior, la vida, el pensar ni el poder. Jesús, hijo de Israel, hijo de David, no desplaza el Shemá. Lo confirma, lo pone primero, y le añade, como semejante, lo que ya estaba escrito: No te vengarás, ni guardarás rencor a los hijos de tu pueblo, sino amarás a tu prójimo como a ti mismo. Yo Jehová. Levítico 19:18."
 ],
 [
 "p",
-"La primera palabra es bereshít. Se compone de la letra bet, que aquí es una preposición que significa en, y de reshít, hache siete mil doscientos veinticinco, que significa principio, lo primero. Reshít viene de la misma raíz que rosh, cabeza, la palabra de la letra resh. Bereshít: en el principio. Es también el nombre hebreo del libro de Génesis, porque los libros de la ley se llamaban por su primera palabra o por una de las primeras."
-],
-[
-"p",
-"La segunda palabra es bará, hache mil doscientos cincuenta y cuatro, que significa crear. Este verbo tiene algo muy especial: en la Escritura, en su forma básica, solo tiene a Dios como sujeto. Los hombres hacen, fabrican, forman; pero solo Dios bará, crea. El diccionario de Strong lo anota así: crear, en sentido absoluto. Es una de esas palabras que, cuando las conoces, cambian tu manera de leer el capítulo. Mira cuántas veces aparece el verbo crear en el capítulo uno: en el versículo uno, para los cielos y la tierra; en el veintiuno, para los grandes monstruos marinos y los seres vivientes del mar; y en el veintisiete, tres veces, para el hombre. Escucha."
-],
-[
-"q",
-"«Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó.» Así dice Génesis, capítulo uno, versículo veintisiete."
-],
-[
-"p",
-"Tres veces crear en un solo versículo. El texto subraya que el hombre no es un producto más de la tierra: es una creación directa de Dios, a su imagen."
-],
-[
-"p",
-"La tercera palabra es Elohím, hache cuatrocientos treinta. Es la palabra general para Dios en hebreo. Tiene una forma plural, aunque cuando se refiere al Dios verdadero se construye con el verbo en singular, como aquí: bará Elohím, creó Dios, no crearon. Los estudiosos explican este plural de distintas maneras; muchos lo llaman plural de majestad o de plenitud. El creyente, al leer en el mismo capítulo, en el versículo veintiséis, hagamos al hombre a nuestra imagen, y al recibir la revelación completa del Nuevo Testamento, encuentra en estos textos una armonía preciosa con la verdad de un solo Dios en tres personas; pero debemos ser honestos y decir que la doctrina de la Trinidad no se apoya en la gramática de la palabra Elohím, sino en el conjunto de la revelación bíblica, que estudiaremos en su lugar."
-],
-[
-"p",
-"La cuarta palabra es et, hache ochocientos cincuenta y tres. Es una pequeñita palabra que no se traduce. Sirve en hebreo para señalar el complemento directo, es decir, para indicar qué es lo que Dios creó. Se escribe con dos letras: alef, la primera del alefato, y tav, la última. Algunos han querido ver en esto un mensaje oculto, relacionándolo con el Alfa y la Omega del Apocalipsis. Debo decirte con claridad que eso es especulación: esta partícula aparece miles de veces en el Antiguo Testamento, con cualquier tipo de complemento, incluso con cosas malas, y su función es simplemente gramatical. Cristo es el Alfa y la Omega porque él mismo lo declaró en el Apocalipsis, no porque haya una partícula hebrea con esas letras. Este es un buen ejemplo de la línea que no debemos cruzar."
-],
-[
-"p",
-"La quinta palabra es hashamáyim. La he del principio es el artículo, los, y shamáyim, hache ocho mil sesenta y cuatro, significa cielos. Su forma es dual o plural, y por eso la Reina Valera traduce los cielos, en plural."
-],
-[
-"p",
-"La sexta palabra es veét. La vav del principio es la conjunción y, y et es de nuevo la partícula que señala el complemento."
-],
-[
-"p",
-"Y la séptima palabra es haárets. La he es otra vez el artículo, la, y érets, hache setecientos setenta y seis, significa tierra. Es la misma palabra que se usa para la tierra entera y también para un país o una región, como la tierra de Canaán. El contexto decide."
-],
-[
-"p",
-"Ahora escucha el versículo entero en hebreo, despacio, palabra por palabra: bereshít, bará, Elohím, et, hashamáyim, veét, haárets. En el principio, creó Dios, los cielos, y la tierra. Repítelo conmigo dos veces: bereshít bará Elohím et hashamáyim veét haárets. Bereshít bará Elohím et hashamáyim veét haárets."
-],
-[
-"p",
-"¡Has leído el primer versículo de la Biblia en la lengua en que Moisés lo escribió! Siete palabras que contienen toda una cosmovisión: hay un principio, no un ciclo eterno sin comienzo; hay un Dios que existía antes de ese principio; ese Dios crea por su propia voluntad, no por necesidad; y todo lo que existe, arriba y abajo, los cielos y la tierra, es obra suya. Muchas creencias de la antigüedad y de hoy niegan alguna de esas verdades: unas dicen que el mundo es eterno, otras que todo es divino, otras que todo surgió por azar. Este versículo responde a todas, sin nombrar a ninguna."
-],
-[
-"p",
-"Y ahora mira cómo el apóstol Juan empieza su evangelio, con las mismas palabras, en el principio, que en griego son en arjé."
-],
-[
-"q",
-"«En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios. Este era en el principio con Dios. Todas las cosas por él fueron hechas, y sin él nada de lo que ha sido hecho, fue hecho.» Así dice Juan, capítulo uno, versículos uno al tres."
-],
-[
-"p",
-"Juan, que conocía su Biblia hebrea, comenzó su evangelio con las primeras palabras de Génesis, para decirnos que aquel por quien Dios creó los cielos y la tierra es el Verbo, que en el principio era con Dios, y era Dios. Lo estudiaremos con detalle en el día ocho."
-],
-[
-"p",
-"El segundo versículo."
-],
-[
-"p",
-"Ya que estamos aquí, escuchemos también el versículo dos, porque contiene dos palabras hebreas que suenan como un eco."
-],
-[
-"q",
-"«Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre la faz de las aguas.» Así dice Génesis, capítulo uno, versículo dos."
-],
-[
-"p",
-"Desordenada y vacía traduce dos palabras hebreas que riman: tohu, hache ocho mil cuatrocientos catorce, y bohu, hache novecientos veintidós. Tohu significa desolación, algo sin forma; bohu, vacío. Tohu vabohu. La tierra estaba sin forma y vacía. Y fíjate en el orden del resto del capítulo: en los primeros tres días, Dios da forma, separando la luz de las tinieblas, las aguas de arriba de las de abajo, y el mar de la tierra seca; y en los días cuatro, cinco y seis, Dios llena lo que había formado, con los astros, con las aves y los peces, y con los animales y el hombre. A lo que no tenía forma, Dios le dio forma; a lo que estaba vacío, Dios lo llenó. Muchos estudiosos han observado esta correspondencia, y está a la vista en el texto."
-],
-[
-"p",
-"Y el Espíritu de Dios se movía sobre la faz de las aguas. Espíritu traduce rúaj, hache siete mil trescientos siete, que significa también viento y aliento. La misma palabra que se usa para el viento que sopla y para el aliento que respira el hombre se usa para el Espíritu de Dios. Recuerda lo que vimos en el día dos: la Escritura es soplada por Dios. El aliento de Dios estuvo en la creación, y está en la Palabra."
-],
-[
-"p",
-"Y en el versículo tres, la primera palabra de Dios en la Biblia: sea la luz. En hebreo son solo dos palabras: yehí or. Sea luz. Y la luz fue: vayehí or. Luz es or, hache doscientos dieciséis. El mismo Dios que dijo sea la luz es el que, como dice Pablo, resplandeció en nuestros corazones."
-],
-[
-"q",
-"«Porque Dios, que mandó que de las tinieblas resplandeciese la luz, es el que resplandeció en nuestros corazones, para iluminación del conocimiento de la gloria de Dios en la faz de Jesucristo.» Así dice segunda de Corintios, capítulo cuatro, versículo seis."
+"De estos dos mandamientos depende toda la ley y los profetas. El hebreo que hoy empezamos a respetar no es una lengua de curiosos. Es la lengua en la que se escribió el amor a Dios y el amor al prójimo, y es la lengua que el Señor no vino a abrogar, sino a cumplir. Si alguien ama el alefato y desprecia al hermano, no ha entendido ni la jota ni el segundo mandamiento. Si alguien dice que ama al prójimo y no oye al único Dios verdadero, ha invertido el orden que Jesús no invirtió."
 ],
 [
 "h",
-"Novena parte. Doce palabras hebreas que todo estudiante debe conocer"
+"Octava parte. Estas palabras, sobre el corazón y en la casa"
 ],
 [
 "p",
-"Ahora vamos a aprender doce palabras hebreas fundamentales. De cada una te diré su pronunciación, su número Strong verificado, su significado y un pasaje donde aparece. Te recomiendo anotarlas en una libreta, con su número, para que las vayas reconociendo en tu estudio."
-],
-[
-"p",
-"La primera es dabár, hache mil seiscientos noventa y siete. Significa palabra, y también asunto, cosa, hecho. Es muy interesante, porque en hebreo la palabra y el hecho están unidos: lo que Dios dice, sucede. Por eso, en los profetas, la expresión vino palabra de Jehová usa este término. Escucha a Isaías."
+"El Shemá no termina en la confesión. Y estas palabras que yo te mando hoy, estarán sobre tu corazón; y las repetirás a tus hijos, y hablarás de ellas estando en tu casa, y andando por el camino, y al acostarte, y cuando te levantes. Deuteronomio 6:6-7. La pedagogía de Dios es cotidiana. No reserva la Palabra para el sábado, ni para el especialista, ni para el momento de inspiración. Casa, camino, noche, mañana. Hijos que oyen porque el padre y la madre hablan, no porque una institución les sustituya el hogar. Esta escuela, en sus trescientos sesenta días y en sus doce módulos, no pretende reemplazar esa repetición. Pretende servirla. El alumno que estudia el hebreo y no habla de estas palabras en su casa ha invertido el medio y el fin."
 ],
 [
 "q",
-"«así será mi palabra que sale de mi boca; no volverá a mí vacía, sino que hará lo que yo quiero, y será prosperada en aquello para que la envié.» Así dice Isaías, capítulo cincuenta y cinco, versículo once."
+"«Y las atarás como una señal en tu mano, y estarán como frontales entre tus ojos; y las escribirás en los postes de tu casa, y en tus puertas. Deuteronomio 6:8-9. Israel recibió un mandato de señal y de escritura visible. Nosotros no convertiremos ese mandato, en esta lección, en una disputa sobre prácticas posteriores, ni lo vaciaremos como si fuera una metáfora sin peso. Diremos lo que el texto dice: la Palabra debe marcar la mano que obra, los ojos que miran, la casa que se habita, la puerta por la que se entra y se sale. Un hogar sin Escritura en la conversación es un hogar que ha dejado el Shemá en el aula. Un estudio que no cambia lo que haces con la mano es un estudio que no ha sido atado.»"
 ],
 [
 "p",
-"La segunda es Toráh, hache ocho mil cuatrocientos cincuenta y uno, que ya conocimos en el día tres. La Reina Valera la traduce ley, pero su sentido es más amplio: instrucción, enseñanza. Viene de una raíz que significa lanzar, señalar, y de allí enseñar, como quien señala el camino. La Toráh no es solo un código de mandamientos; es la enseñanza de Dios para que su pueblo viva. Por eso el salmista no la siente como una carga, sino como un deleite."
-],
-[
-"q",
-"«Bienaventurado el varón que no anduvo en consejo de malos, Ni estuvo en camino de pecadores, Ni en silla de escarnecedores se ha sentado; Sino que en la ley de Jehová está su delicia, Y en su ley medita de día y de noche.» Así dice Salmos, capítulo uno, versículos uno al dos."
-],
-[
-"p",
-"La tercera es jésed, hache dos mil seiscientos diecisiete. La Reina Valera la traduce de varias maneras: misericordia, bondad, piedad, gracia, merced. Ninguna palabra española la recoge entera. Jésed es el amor leal, el amor que permanece fiel a un compromiso, especialmente al pacto. Es el amor que no se cansa. El salmo ciento treinta y seis repite veintiséis veces el mismo estribillo: porque para siempre es su misericordia. Cada vez, la palabra es jésed. Escucha el primer versículo."
-],
-[
-"q",
-"«Alabad a Jehová, porque él es bueno, Porque para siempre es su misericordia.» Así dice Salmos, capítulo ciento treinta y seis, versículo uno."
-],
-[
-"p",
-"La cuarta es eméth, hache quinientos setenta y uno. Significa verdad, y el diccionario de Strong anota que su sentido básico es estabilidad, firmeza, certeza. Viene de la misma raíz que amén. En hebreo, la verdad no es solo algo que se dice correctamente; es algo firme, en lo que te puedes apoyar sin que se hunda. Por eso Dios es llamado Dios de verdad. Y fíjate que jésed y eméth aparecen juntas muchas veces, como en la revelación del nombre de Dios a Moisés."
-],
-[
-"q",
-"«Y pasando Jehová por delante de él, proclamó: ¡Jehová! ¡Jehová! fuerte, misericordioso y piadoso; tardo para la ira, y grande en misericordia y verdad;» Así dice Éxodo, capítulo treinta y cuatro, versículo seis."
-],
-[
-"p",
-"Grande en misericordia y verdad: jésed y eméth. Y escucha cómo Juan, en su prólogo, dice que el Verbo hecho carne estaba lleno de gracia y de verdad. Muchos estudiosos ven en esas palabras un eco de este versículo de Éxodo. Lo que Dios proclamó de sí mismo a Moisés se vio en el rostro de Jesucristo."
-],
-[
-"p",
-"La quinta es shalóm, hache siete mil novecientos sesenta y cinco. La traducimos paz, pero su sentido es mucho más amplio: bienestar, integridad, plenitud, estar completo, que nada falte. Shalóm no es solo ausencia de guerra; es la vida tal como Dios la diseñó, entera y en orden. Por eso la bendición sacerdotal termina con esta palabra."
-],
-[
-"q",
-"«Jehová te bendiga, y te guarde; Jehová haga resplandecer su rostro sobre ti, y tenga de ti misericordia; Jehová alce sobre ti su rostro, y ponga en ti paz.”» Así dice Números, capítulo seis, versículos veinticuatro al veintiséis."
-],
-[
-"p",
-"La sexta es néfesh, hache cinco mil trescientos quince. La Reina Valera la traduce muchas veces alma, pero también vida, persona, ser, y en algunos lugares apetito o deseo. En el relato de la creación, cuando Dios sopla aliento de vida en la nariz del hombre, dice que fue el hombre un ser viviente: allí ser es néfesh."
-],
-[
-"q",
-"«Entonces Jehová Dios formó al hombre del polvo de la tierra, y sopló en su nariz aliento de vida, y fue el hombre un ser viviente.» Así dice Génesis, capítulo dos, versículo siete."
-],
-[
-"p",
-"En el pensamiento hebreo, el hombre no tiene una néfesh, sino que es una néfesh: un ser viviente completo. Esto nos ayuda a no leer la Biblia con ideas ajenas a ella sobre el alma como algo separado y opuesto al cuerpo; la Escritura enseña que el hombre tiene una parte material y una inmaterial, pero lo presenta siempre como un ser completo creado por Dios."
-],
-[
-"p",
-"La séptima es leb, hache tres mil ochocientos veinte, el corazón. En hebreo, el corazón no es solo el lugar de los sentimientos, como en español; es el centro de la persona, donde se piensa, se decide y se siente. Cuando la Escritura dice que alguien dijo en su corazón, quiere decir que lo pensó. Por eso Proverbios manda guardar el corazón por encima de todo."
-],
-[
-"q",
-"«Sobre toda cosa guardada, guarda tu corazón; Porque de él mana la vida.» Así dice Proverbios, capítulo cuatro, versículo veintitrés."
-],
-[
-"p",
-"La octava es qadósh, hache seis mil novecientos dieciocho, santo. Su idea básica es la de algo apartado, separado para Dios. Dios es santo porque es absolutamente distinto de todo lo creado, y absolutamente puro. Los serafines, en la visión de Isaías, lo dicen tres veces."
-],
-[
-"q",
-"«Y el uno al otro daba voces, diciendo: Santo, santo, santo, Jehová de los ejércitos; toda la tierra está llena de su gloria.» Así dice Isaías, capítulo seis, versículo tres."
-],
-[
-"p",
-"En hebreo, repetir una palabra es una manera de intensificarla. Una vez es santo; dos veces, muy santo; tres veces, que es lo que dicen los serafines, es la santidad en su grado más alto. Es la única cualidad de Dios que en el Antiguo Testamento se proclama así, tres veces."
-],
-[
-"p",
-"La novena es kabód, hache tres mil quinientos diecinueve. Se traduce gloria, y el diccionario de Strong anota que su sentido propio es peso, y figuradamente esplendor, honra. La gloria de Dios es el peso de su presencia, su realidad abrumadora. Cuando la gloria de Jehová llenó el tabernáculo, Moisés no podía entrar. Es una palabra que nos enseña que Dios no es ligero: su presencia tiene peso."
-],
-[
-"q",
-"«Entonces una nube cubrió el tabernáculo de reunión, y la gloria de Jehová llenó el tabernáculo. Y no podía Moisés entrar en el tabernáculo de reunión, porque la nube estaba sobre él, y la gloria de Jehová lo llenaba.» Así dice Éxodo, capítulo cuarenta, versículos treinta y cuatro al treinta y cinco."
-],
-[
-"p",
-"La décima es berít, hache mil doscientos ochenta y cinco, pacto. Es la palabra que define la relación de Dios con su pueblo a lo largo de toda la Biblia: el pacto con Noé, con Abraham, con Israel en el Sinaí, con David, y el nuevo pacto anunciado por Jeremías y sellado con la sangre de Cristo. Escucha la promesa del nuevo pacto."
-],
-[
-"q",
-"«Pero este es el pacto que haré con la casa de Israel después de aquellos días, dice Jehová: Daré mi ley en su mente, y la escribiré en su corazón; y yo seré a ellos por Dios, y ellos me serán por pueblo.» Así dice Jeremías, capítulo treinta y uno, versículo treinta y tres."
-],
-[
-"p",
-"La undécima es mashíaj, hache cuatro mil ochocientos noventa y nueve, ungido. De esta palabra viene Mesías. En el Antiguo Testamento se usa para los sacerdotes, los reyes y, en ciertos pasajes, para el Rey prometido. En griego se tradujo Jristós, Cristo. Cada vez que dices Jesucristo estás diciendo, en el fondo, Jesús el Mesías, Jesús el Ungido. Escucha el salmo dos."
-],
-[
-"q",
-"«Se levantarán los reyes de la tierra, Y príncipes consultarán unidos Contra Jehová y contra su ungido, diciendo:» Así dice Salmos, capítulo dos, versículo dos."
-],
-[
-"p",
-"Y la duodécima es amén, hache quinientos cuarenta y tres. Ya la conoces, porque la decimos en cada oración. Viene de la misma raíz que eméth y emunáh: firmeza, fidelidad. Decir amén es decir así es, es firme, es verdad. En Isaías, Dios es llamado literalmente el Dios del amén, que la Reina Valera traduce Dios de verdad."
-],
-[
-"q",
-"«El que se bendijere en la tierra, en el Dios de verdad se bendecirá; y el que jurare en la tierra, por el Dios de verdad jurará; porque las angustias primeras serán olvidadas, y serán cubiertas de mis ojos.» Así dice Isaías, capítulo sesenta y cinco, versículo dieciséis."
-],
-[
-"p",
-"Y en el Apocalipsis, el Señor Jesús se presenta con ese nombre."
-],
-[
-"q",
-"«Y escribe al ángel de la iglesia en Laodicea: He aquí el Amén, el testigo fiel y verdadero, el principio de la creación de Dios, dice esto:» Así dice Apocalipsis, capítulo tres, versículo catorce."
-],
-[
-"p",
-"El Amén, el testigo fiel y verdadero. Cristo es el amén de Dios, aquel en quien todas las promesas de Dios son sí y amén, como dice Pablo en segunda de Corintios uno, veinte."
-],
-[
-"p",
-"Escuchemos de nuevo las doce palabras, para fijarlas: dabár, palabra; Toráh, instrucción; jésed, amor leal; eméth, verdad firme; shalóm, paz completa; néfesh, ser viviente; leb, corazón; qadósh, santo; kabód, gloria con peso; berít, pacto; mashíaj, ungido; amén, firme y verdadero."
-],
-[
-"p",
-"El shemá, la gran confesión de Israel."
-],
-[
-"p",
-"Antes de terminar el vocabulario, quiero que aprendas la frase hebrea más conocida de toda la Biblia, la que los israelitas piadosos repetían por la mañana y por la noche, y que el Señor Jesús citó como el primero de todos los mandamientos. Se llama shemá, por su primera palabra, que significa oye. Escúchala en tu Reina Valera."
-],
-[
-"q",
-"«Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas.» Así dice Deuteronomio, capítulo seis, versículos cuatro al cinco."
-],
-[
-"p",
-"En hebreo, el versículo cuatro tiene seis palabras: shemá Yisraél, Adonái Elohéinu, Adonái ejád. Oye, Israel: Jehová nuestro Dios, Jehová uno es. Shemá viene del verbo shamá, hache ocho mil ochenta y cinco, que según el diccionario de Strong significa oír con inteligencia, y muchas veces con la idea de obedecer. En hebreo, oír de verdad es obedecer. Y ejád, hache doscientos cincuenta y nueve, significa uno, unido."
-],
-[
-"p",
-"El Señor Jesús, cuando un escriba le preguntó cuál era el primer mandamiento, respondió precisamente con estas palabras."
-],
-[
-"q",
-"«Jesús le respondió: El primer mandamiento de todos es: Oye, Israel; el Señor nuestro Dios, el Señor uno es. Y amarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con toda tu mente y con todas tus fuerzas. Este es el principal mandamiento.» Así dice Marcos, capítulo doce, versículos veintinueve al treinta."
-],
-[
-"p",
-"Repite conmigo, despacio: shemá Yisraél, Adonái Elohéinu, Adonái ejád. Que esta sea tu confesión cada mañana durante esta semana: oye, alma mía, el Señor nuestro Dios, el Señor uno es; y lo amarás con todo tu corazón."
+"El salmo diecinueve nos recuerda para qué es esa ley que se oye y se repite: La ley de Jehová es perfecta, que convierte el alma; El testimonio de Jehová es fiel, que hace sabio al sencillo. Los mandamientos de Jehová son rectos, que alegran el corazón; El precepto de Jehová es puro, que alumbra los ojos. Salmos 19:7-8. Convierte el alma. Hace sabio al sencillo. Alegra el corazón. Alumbra los ojos. El hebreo de la Ley no está para producir una clase de iniciados. Está para convertir, para dar sabiduría al que no la tenía, para alegrar y para alumbrar. Si el alefato no sirve a esa conversión, sobra el desfile."
 ],
 [
 "h",
-"Décima parte. Consecuencias para tu estudio y tu vida"
+"Novena parte. Letras al servicio de un texto, y la primera frase de la Biblia"
 ],
 [
 "p",
-"Primera consecuencia: humildad. Has visto hoy que detrás de cada palabra de tu Biblia en español hay una palabra hebrea con una riqueza que ninguna traducción agota. Eso no debe hacerte desconfiar de tu Reina Valera; debe hacerte leerla más despacio, con más reverencia, sabiendo que cada palabra es una puerta."
+"Ahora sí, con el Shemá delante, podemos mirar algunas letras sin convertir la lección en un abecedario. El hebreo se lee de derecha a izquierda. La letra más pequeña, la yod, es la jota de la que habló el Señor: ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido. Esa frase, que ya oímos ayer, adquiere hoy un sentido más concreto: las letras de esta lengua están bajo el cuidado de Dios, no bajo el capricho del alumno."
 ],
 [
 "p",
-"Segunda consecuencia: cuidado. Has visto también dónde termina el conocimiento y dónde empieza la especulación. En los significados de las letras, en la partícula et, en la raíz de las palabras, hemos separado lo que sabemos de lo que algunos imaginan. Lleva esa disciplina a todo tu estudio. Cuando alguien te enseñe un significado oculto de una letra hebrea que la Escritura no enseña, pregunta siempre: ¿dónde está escrito eso?"
+"En muchos rollos de la Ley, los soferim han escrito con un tamaño mayor la letra ayin de shema y la dalet de echad. Juntas, esas dos letras forman la palabra hebrea que significa «testigo». No elevaremos esa costumbre al rango de inspiración, ni la negaremos como si no existiera. Es una tradición de escribas, un recordatorio grabado en la tinta: Israel es testigo de que Jehová es uno. El testigo no inventa lo que ve. El testigo dice lo que se le ha mostrado. Tú, al memorizar estos versículos, entras en esa línea de testimonio, no en una sociedad de letras raras."
 ],
 [
 "p",
-"Tercera consecuencia: práctica. Una lengua no se aprende en un día. Te propongo una tarea para esta semana. Primero, repite el alefato cada mañana y cada noche hasta saberlo de memoria. Segundo, repite el primer versículo de Génesis en hebreo y su traducción. Tercero, aprende el shemá. Cuarto, cada vez que en tu lectura diaria encuentres una de las doce palabras que hemos estudiado, búscala en una concordancia con su número Strong y mira dónde más aparece. En pocas semanas habrás empezado a pensar con categorías bíblicas."
+"La primera frase de la Escritura, que conviene respetar desde ahora, es esta: En el principio creó Dios los cielos y la tierra. Génesis 1:1. En hebreo, las primeras palabras se oyen, en transcripción simple, bereshit bara elohim. Bereshit: en el principio.[7] Bara: creó, un verbo que la Escritura reserva, en su uso más propio, a la acción de Dios que hace lo que no era.[8] Elohim: Dios.[9] El nombre elohim tiene forma de plural; el verbo bara, aquí, está en singular. Otra vez, no forzaremos esa gramática para que demuestre, ella sola, toda la verdad de Dios. La respetaremos. El Dios que crea es el Dios del Shemá. El principio de los cielos y de la tierra no es un azar, ni un relato que el alumno pueda tratar como un mito piadoso. Es el comienzo de la Palabra, en la lengua que Dios eligió primero, y de ese comienzo pende el sentido del amor que se nos manda: amamos al que es, al que creó, al que no tiene otro fuera de él."
 ],
 [
 "p",
-"Cuarta consecuencia: adoración. El salmo ciento diecinueve, que hemos recorrido letra por letra, no es un tratado de gramática: es una oración. El salmista amaba la Palabra porque amaba al Dios de la Palabra. Que el estudio del hebreo no te lleve a enamorarte de una lengua, sino del Dios que eligió hablar en ella. Como dice la estrofa mem: ¡Oh, cuánto amo yo tu ley! Todo el día es ella mi meditación."
+"Un aviso basta, y no lo repetiremos con dureza de aula, sino con temor. El que empieza a saber unas raíces y se cree autorizado a corregir a la iglesia, o a despreciar la versión que el pueblo lee, ha tomado el camino de la erudición sin sabiduría, que ya denunciamos en el día uno. Las lenguas sirven. El temor de Jehová gobierna."
+],
+[
+"h",
+"El Nombre proclamado, no solo pronunciado"
 ],
 [
 "p",
-"Un testimonio personal. Recuerdo la primera vez que leí en voz alta el primer versículo de Génesis en hebreo. No entendía todavía la gramática, ni conocía todas las letras, pero al pronunciar bereshít bará Elohím sentí algo parecido a lo que siente un hijo cuando oye por primera vez la voz de su padre en su lengua materna. Esas mismas palabras las oyó Moisés, las leyeron Esdras y los escribas, las escuchó el Señor Jesús en la sinagoga de Nazaret. Y hoy tú también las has pronunciado. No es un mérito nuestro: es un regalo de Dios, que preservó su Palabra hasta nosotros, como vimos ayer. Te animo a no dejar que este regalo quede en una sola lección."
+"El Shemá nos ha hecho oír el Nombre. Conviene, ahora, oír cómo Jehová mismo lo proclamó, cuando Moisés pidió ver su gloria y no pudo ver el rostro. Y Jehová descendió en la nube, y estuvo allí con él, proclamando el nombre de Jehová. Y pasando Jehová por delante de él, proclamó: ¡Jehová! ¡Jehová! fuerte, misericordioso y piadoso; tardo para la ira, y grande en misericordia y verdad; que guarda misericordia a millares, que perdona la iniquidad, la rebelión y el pecado, y que de ningún modo tendrá por inocente al malvado; que visita la iniquidad de los padres sobre los hijos y sobre los hijos de los hijos, hasta la tercera y cuarta generación. Éxodo 34:5-7."
+],
+[
+"p",
+"El Nombre no es un sonido vacío, ni una sílaba para disputar. Es este Dios: fuerte, misericordioso y piadoso, tardo para la ira, grande en misericordia y verdad, que perdona, y que de ningún modo tendrá por inocente al malvado. El hebreo que nuestra versión traduce «misericordia y verdad» es el par que los estudiosos transcriben a menudo jesed y emet: la bondad de pacto y la firmeza de lo que es verdadero.[10] Cuando el prólogo de Juan, pasado mañana, diga que el Verbo vino «lleno de gracia y de verdad», no estará trayendo un vocabulario ajeno a Moisés. Estará diciendo, en la lengua del evangelio, lo que este Nombre ya era. Amar a Jehová, en el Shemá, es amar a este Dios, no a un ídolo más suave al que le hayamos quitado el «de ningún modo tendrá por inocente», ni a un juez sin misericordia al que le hayamos quitado el perdón. El Nombre se proclama entero. El corazón que ama a medias un dios recortado no ha oído todavía Éxodo 34."
+],
+[
+"h",
+"Cuando te sacies, cuídate de no olvidar"
+],
+[
+"p",
+"El Shemá no se da a un pueblo en el desierto solamente. Se da a un pueblo que va a entrar, a comer, a saciarse, y que entonces olvidará. Cuando Jehová tu Dios te haya introducido en la tierra que juró a tus padres Abraham, Isaac y Jacob que te daría, en ciudades grandes y buenas que tú no edificaste, y casas llenas de todo bien, que tú no llenaste, y cisternas cavadas que tú no cavaste, viñas y olivares que no plantaste, y luego que comas y te sacies, cuídate de no olvidarte de Jehová, que te sacó de la tierra de Egipto, de casa de servidumbre. Deuteronomio 6:10-12."
+],
+[
+"p",
+"El olvido no empieza, de ordinario, en una blasfemia. Empieza en una mesa llena. Ciudades que no edificaste, cisternas que no cavaste, viñas que no plantaste: el don se vuelve, en el corazón no vigilado, un derecho, y el Dador se vuelve un nombre que se recuerda menos. Por eso el texto, enseguida, vuelve al temor, al servicio y a los dioses ajenos, que ya oímos. El alumno de esta escuela, si el estudio le da un saber que no edifió él, una lengua que no inventó, una Biblia que no preservó con su mano, está en esa frontera: comer, saciarse, olvidar. El Shemá se repite, entre otras razones, porque la saciedad es mala memoria."
+],
+[
+"p",
+"Moisés lo resume, más adelante, con una pregunta que debería quedar en tu boca: Ahora, pues, Israel, ¿qué pide Jehová tu Dios de ti, sino que temas a Jehová tu Dios, que andes en todos sus caminos, y que lo ames, y sirvas a Jehová tu Dios con todo tu corazón y con toda tu alma; que guardes los mandamientos de Jehová y sus estatutos, que yo te prescribo hoy, para que tengas prosperidad? Deuteronomio 10:12-13. Temor, caminos, amor, servicio, guarda. No es un temor que expulse al amor, ni un amor que expulse la guarda. El Shemá no es un sentimiento que libra de los mandamientos. Es el amor que los guarda, porque ha oído el Nombre."
+],
+[
+"p",
+"Y la misma predicación se oye otra vez, casi con las mismas palabras, en el capítulo once, ahora atada a la lluvia y al fruto, y a una advertencia que el corazón dividido necesita: Si obedeciereis cuidadosamente a mis mandamientos que yo os prescribo hoy, amando a Jehová vuestro Dios, y sirviéndole con todo vuestro corazón, y con toda vuestra alma, yo daré la lluvia de vuestra tierra a su tiempo, la temprana y la tardía; y recogerás tu grano, tu vino y tu aceite. Daré también hierba en tu campo para tus ganados; y comerás, y te saciarás. Guardaos, pues, que vuestro corazón no se infatúe, y os apartéis y sirváis a dioses ajenos, y os inclinéis a ellos; y se encienda el furor de Jehová sobre vosotros, y cierre los cielos, y no haya lluvia, ni la tierra dé su fruto, y perezcáis pronto de la buena tierra que os da Jehová. Deuteronomio 11:13-17. El corazón se infatúa. La palabra es grave: se engorda, se embota, se cierra. Entonces el apartarse no parece una apostasía al primer paso; parece una inclinación. Por tanto, otra vez: Por tanto, pondréis estas mis palabras en vuestro corazón y en vuestra alma, y las ataréis como señal en vuestra mano, y serán por frontales entre vuestros ojos. Y las enseñaréis a vuestros hijos, hablando de ellas cuando te sientes en tu casa, cuando andes por el camino, cuando te acuestes, y cuando te levantes, y las escribirás en los postes de tu casa, y en tus puertas; para que sean vuestros días, y los días de vuestros hijos, tan numerosos sobre la tierra que Jehová juró a vuestros padres que les había de dar, como los días de los cielos sobre la tierra. Deuteronomio 11:18-21. El Shemá no es un lema de un solo capítulo. Es el régimen de un pueblo, repetido, atado a la vida de los hijos y a la duración de los días, «como los días de los cielos sobre la tierra»."
+],
+[
+"h",
+"Testigos de que Él mismo es, y no hay quien salve fuera de Él"
+],
+[
+"p",
+"Isaías oye, de la boca de Dios, lo que el Shemá confiesa, ahora como vocación de un pueblo testigo: Vosotros sois mis testigos, dice Jehová, y mi siervo que yo escogí, para que me conozcáis y creáis, y entendáis que yo mismo soy; antes de mí no fue formado dios, ni lo será después de mí. Yo, yo Jehová, y fuera de mí no hay quien salve. Isaías 43:10-11. Conocer, creer, entender que Él mismo es. El Nombre de la zarza —YO SOY— se oye aquí otra vez: «yo mismo soy». Y la unidad no es una tesis estéril: fuera de mí no hay quien salve. El monoteísmo de Israel no termina en una aritmética. Termina en la salvación, que no se reparte entre salvadores. Cuando el evangelio nos anuncie que no hay otro nombre bajo el cielo, no estará contradiciendo a Isaías: estará nombrando, en Jesús, al que aquí dice: fuera de mí no hay quien salve. El alumno que defienda el «uno» y busque, no obstante, otra salvación —en su virtud, en su linaje, en su saber de hebreo—, ha oído el Shemá y no ha oído a Isaías."
+],
+[
+"p",
+"Elías, delante de un pueblo que cojeaba, lo dijo con una pregunta que todavía nos alcanza, y que citamos como está, sin convertirla en un tratado de religiones ajenas: ¿Hasta cuándo claudicaréis vosotros entre dos pensamientos? Si Jehová es Dios, seguidle; y si Baal, id en pos de él. Y el pueblo no respondió palabra. 1 Reyes 18:21. Claudicar entre dos pensamientos: ese es el contrario del «todo tu corazón». El pueblo no respondió palabra. El silencio, a veces, es ya la respuesta del corazón infatuado. El Shemá no te pide que añadas a Jehová un segundo señor «por si acaso». Te pide que dejes de cojear."
+],
+[
+"h",
+"La ley en el corazón, y el amor que no aborrece al hermano"
+],
+[
+"p",
+"Hay una promesa, en Jeremías, que no anula el Shemá: lo cumple, llevándolo adentro. Pero este es el pacto que haré con la casa de Israel después de aquellos días, dice Jehová: Daré mi ley en su mente, y la escribiré en su corazón; y yo seré a ellos por Dios, y ellos me serán por pueblo. Y no enseñará más ninguno a su prójimo, ni ninguno a su hermano, diciendo: Conoce a Jehová; porque todos me conocerán, desde el más pequeño de ellos hasta el más grande, dice Jehová; porque perdonaré la maldad de ellos, y no me acordaré más de su pecado. Jeremías 31:33-34. Las palabras que Deuteronomio manda poner sobre el corazón, Dios mismo promete escribirlas en el corazón. El perdón de la maldad no es el final del amor: es su fundamento. El pueblo que conocerá a Jehová lo conocerá porque ha sido perdonado, no porque haya logrado, por fin, un alefato perfecto. Esta escuela te enseña hebreo para servir a esa ley; no te promete que el hebreo te la escribirá dentro. Eso lo hace el Señor, en el pacto nuevo, por el perdón."
+],
+[
+"p",
+"Por eso el amor que el Shemá manda tiene, en la boca de Jesús y de su apóstol, una prueba que no se puede eludir. Si me amáis, guardad mis mandamientos. Juan 14:15. El amor al Hijo no es una excepción al Shemá: es su cumplimiento, porque el que ama a Dios oye al que Él ha enviado. Y Juan, más adelante, cierra la puerta a un amor de Dios que conviva con el odio: Nosotros le amamos a él, porque él nos amó primero. Si alguno dice: Yo amo a Dios, y aborrece a su hermano, es mentiroso. Pues el que no ama a su hermano a quien ha visto, ¿cómo puede amar a Dios a quien no ha visto? Y nosotros tenemos este mandamiento de él: El que ama a Dios, ame también a su hermano. 1 Juan 4:19-21. Él nos amó primero. Ese es el orden. El Shemá, oído evangélicamente, no es primero una hazaña nuestra: es la respuesta a un amor precedente. Y esa respuesta se verifica en el hermano. El segundo mandamiento no es un apéndice piadoso. Es el testigo, a la vista, de si el primero es verdad o es mentira."
+],
+[
+"h",
+"El escriba que no estaba lejos, y el corazón que se afirma"
+],
+[
+"p",
+"En Marcos, después de que Jesús recita el Shemá y el amor al prójimo, un escriba le responde con una sabiduría que el Señor no despreció: Bien, Maestro, verdad has dicho, que uno es Dios, y no hay otro fuera de él; y el amarle con todo el corazón, con todo el entendimiento, con toda el alma, y con todas las fuerzas, y amar al prójimo como a uno mismo, es más que todos los holocaustos y sacrificios. Marcos 12:32-33. El escriba ha oído bien. Ha puesto el amor por encima de los holocaustos, como Oseas. Jesús entonces, viendo que había respondido sabiamente, le dijo: No estás lejos del reino de Dios. Marcos 12:34. «No estás lejos.» No dijo: ya has entrado. Hay una sabiduría que se acerca al reino, y que todavía no entra. Se puede recitar el Shemá con exactitud, alabar al Maestro, despreciar el ritual vacío, y quedar a la puerta. El reino está en el que el Shemá anuncia y en el que está delante del escriba, el Hijo que recita y que cumple. Esta lección te ha enseñado a oír el mandamiento. No te dejes en el «no estás lejos». Ven, recibe, ama, porque Él nos amó primero."
+],
+[
+"p",
+"El salmista, que no disputa letras, pide lo que el alefato no puede dar: Enséñame, oh Jehová, tu camino; caminaré yo en tu verdad; Afirma mi corazón para que tema tu nombre. Salmos 86:11. Enséñame. Caminaré. Afirma mi corazón. El corazón del Shemá —todo el corazón— es un corazón que se parte y que necesita ser afirmado, para que tema el Nombre. Pide eso. El hebreo te ayudará a oír. El Señor afirmará el corazón. Y el Nombre que temerás es el que se proclamó delante de Moisés, el que es uno, el que salva, el que escribe su ley dentro, el que nos amó primero."
+],
+[
+"h",
+"Muy cerca de ti está la palabra, y en aquel día Jehová será uno"
+],
+[
+"p",
+"El Shemá manda poner las palabras sobre el corazón, en la boca, en la casa. Moisés, hacia el final del mismo libro, cierra esa pedagogía con una consolación que Pablo oirá como evangelio: Porque este mandamiento que yo te ordeno hoy no es demasiado difícil para ti, ni está lejos. No está en el cielo, para que digas: ¿Quién subirá por nosotros al cielo, y nos lo traerá y nos lo hará oír para que lo cumplamos? Ni está al otro lado del mar, para que digas: ¿Quién pasará por nosotros el mar, para que nos lo traiga y nos lo haga oír, a fin de que lo cumplamos? Porque muy cerca de ti está la palabra, en tu boca y en tu corazón, para que la cumplas. Deuteronomio 30:11-14."
+],
+[
+"p",
+"No está lejos. No está en el cielo, como un tesoro que habría que escalar. No está al otro lado del mar. Está muy cerca: en tu boca y en tu corazón, para que la cumplas. El hebreo que hoy empezamos a respetar no está, entonces, para alejar la Palabra, como si solo el que sube a una lengua muerta pudiera oír a Dios. Está para servir a una Palabra que ya se te ha acercado, en tu lengua, en tu boca, en el corazón que el Shemá reclama. El que usa el alefato para decir «está lejos, no puedes cumplirla» ha invertido Deuteronomio 30."
+],
+[
+"p",
+"Pablo toma esas frases y las oye en Cristo, sin violentarlas y sin dejarlas en el umbral de la Ley: Pero la justicia que es por la fe dice así: No digas en tu corazón: ¿Quién subirá al cielo? (esto es, para traer abajo a Cristo); o, ¿quién descenderá al abismo? (esto es, para hacer subir a Cristo de entre los muertos). Mas ¿qué dice? Cerca de ti está la palabra, en tu boca y en tu corazón. Esta es la palabra de fe que predicamos: que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo. Porque con el corazón se cree para justicia, pero con la boca se confiesa para salvación. Romanos 10:6-10. La boca y el corazón del Shemá y de Deuteronomio 30 son, en el evangelio, la boca que confiesa que Jesús es el Señor y el corazón que cree que Dios le levantó. El día diez nos detendrá otra vez en este versículo. Hoy, en la lección del Nombre y del amor, basta con esto: la Palabra está cerca, y el amor que se manda se cumple, al cabo, en esa fe y en esa confesión, no en un esfuerzo por subir al cielo a traer lo que Dios ya ha acercado."
+],
+[
+"p",
+"Y el Shemá tiene, además, un horizonte que no se agota en el día de hoy. Y Jehová será rey sobre toda la tierra. En aquel día Jehová será uno, y uno su nombre. Zacarías 14:9. Jehová uno es, ya, en la confesión de Israel. Y en aquel día, cuando sea rey sobre toda la tierra, Jehová será uno, y uno su nombre. No porque ahora sea menos uno, sino porque entonces no habrá, en la tierra, el claudicar entre dos pensamientos, ni nombres rivales, ni un pueblo que se sacia y olvida. El «uno» que hoy se oye y se ama será visto. El Nombre que se proclamó delante de Moisés será uno, sobre toda la tierra. Amar a Jehová con todo el corazón es, también, esperar ese día, y no dar mientras tanto el corazón a otro nombre."
+],
+[
+"h",
+"A quién haréis semejante a Dios, y el amor que no nace de tu grandeza"
+],
+[
+"p",
+"El Shemá nos ha dicho que Jehová es uno, y que se le ama con todo el corazón. Hay una tentación, tan antigua como el fuego de Horeb, de volver a ese Dios una figura que se pueda manejar: una imagen, una comparación, un dios a la medida de lo que el arte o el miedo pueden componer. Moisés lo prohíbe con una razón que no es un capricho: Guardad, pues, mucho vuestras almas; pues ninguna figura visteis el día que Jehová habló con vosotros de en medio del fuego; para que no os corrompáis y hagáis para vosotros escultura, imagen de figura alguna, efigie de varón o hembra, figura de animal alguno que está en la tierra, figura de ave alguna alada que vuele por el aire, figura de ningún animal que se arrastre sobre la tierra, figura de pez alguno que haya en el agua debajo de la tierra. No sea que alces tus ojos al cielo, y viendo el sol y la luna y las estrellas, y todo el ejército del cielo, seas impulsado, y te inclines a ellos y les sirvas; porque Jehová tu Dios los ha concedido a todos los pueblos debajo de todos los cielos. Deuteronomio 4:15-19."
+],
+[
+"p",
+"Ninguna figura visteis. El Nombre se oyó; no se dibujó. El hebreo que hoy respetamos no está para que fabriquemos, con letras, un ídolo más sutil: un Dios reducido a una raíz, o a una transcripción, o a una pronunciación que se posee. Guardad mucho vuestras almas. El sol y la luna, que Él concedió, no se adoran. El alefato, que Él quiso para su Ley, tampoco. Se oye, se ama, no se talla."
+],
+[
+"p",
+"Isaías, en el mismo horizonte de la Palabra que permanece, lo pregunta con una ironía que debería alcanzar al estudioso: ¿A qué, pues, haréis semejante a Dios, o qué imagen le compondréis? El artífice prepara la imagen de talla, el platero le extiende el oro y le funde cadenas de plata. El pobre escoge, para ofrecerle, madera que no se apolille; se busca un maestro sabio, que le haga una imagen de talla que no se mueva. Isaías 40:18-20. El rico y el pobre, cada uno con su material, buscan un dios que no se mueva. El maestro sabio sirve a esa demanda. ¿No sabéis? ¿No habéis oído? ¿Nunca os lo han dicho desde el principio? ¿No habéis sido enseñados desde que la tierra se fundó? El está sentado sobre el círculo de la tierra, cuyos moradores son como langostas; él extiende los cielos como una cortina, los despliega como una tienda para morar. El convierte en nada a los poderosos, y a los que gobiernan la tierra hace como cosa vana. Isaías 40:21-23. Desde el principio: otra vez el umbral de Génesis, el Dios que no se parece a lo que se talla. Y la pregunta se vuelve, ahora, en primera persona, en la boca del Santo: ¿A qué, pues, me haréis semejante o me compararéis? dice el Santo. Isaías 40:25. El Shemá, oído aquí, no es solo «Jehová uno es». Es: no hay semejante. El amor que se manda es el amor a este, no a una copia."
+],
+[
+"p",
+"Y ese amor no nace de que Israel fuera grande. Conviene oírlo, porque el corazón religioso ama jactarse de su elección como de un mérito. Porque tú eres pueblo santo para Jehová tu Dios; Jehová tu Dios te ha escogido para serle un pueblo especial, más que todos los pueblos que están sobre la tierra. No por ser vosotros más que todos los pueblos os ha querido Jehová y os ha escogido, pues vosotros erais el más insignificante de todos los pueblos; sino por cuanto Jehová os amó, y quiso guardar el juramento que juró a vuestros padres, os ha sacado Jehová con mano poderosa, y os ha rescatado de servidumbre, de la mano de Faraón rey de Egipto. Conoce, pues, que Jehová tu Dios es Dios, Dios fiel, que guarda el pacto y la misericordia a los que le aman y guardan sus mandamientos, hasta mil generaciones; Deuteronomio 7:6-9."
+],
+[
+"p",
+"No por ser más. Por cuanto Jehová os amó, y por el juramento. El amor que el Shemá manda es respuesta a un amor precedente y a una fidelidad de pacto, no el pago de una grandeza. «Conoce, pues, que Jehová tu Dios es Dios, Dios fiel.» El conocer, aquí, no es una ficha: es el reconocimiento del fiel, del que guarda misericordia hasta mil generaciones a los que le aman y guardan sus mandamientos. Jeremías lo dirá con una vara contra toda jactancia, también la del que sabe hebreo: Así dijo Jehová: No se alabe el sabio en su sabiduría, ni en su valentía se alabe el valiente, ni el rico se alabe en sus riquezas. Mas alábese en esto el que se hubiere de alabar: en entenderme y conocerme, que yo soy Jehová, que hago misericordia, juicio y justicia en la tierra; porque estas cosas quiero, dice Jehová. Jeremías 9:23-24. El que se alaba, si ha de alabarse, que se alabe en esto: en entenderle y conocerle. Y lo que se conoce no es un concepto: que yo soy Jehová, que hago misericordia, juicio y justicia en la tierra; porque estas cosas quiero, dice Jehová. El Nombre, otra vez, unido a lo que Él hace y a lo que quiere. El alefato sirve a ese conocimiento, o se vuelve una de las sabidurías en las que está prohibido alabarse."
+],
+[
+"h",
+"Santo, santo, santo: el corazón de piedra, y el que lo cambia"
+],
+[
+"p",
+"Hay una visión que el alumno del Shemá debe caminar, no para fabricar con ella lo que el texto no da, sino para oír la santidad del uno, y el «ay de mí» que esa santidad produce, y el carbón que limpia, y el «heme aquí». En el año que murió el rey Uzías vi yo al Señor sentado sobre un trono alto y sublime, y sus faldas llenaban el templo. Por encima de él había serafines; cada uno tenía seis alas; con dos cubrían sus rostros, con dos cubrían sus pies, y con dos volaban. Y el uno al otro daba voces, diciendo: Santo, santo, santo, Jehová de los ejércitos; toda la tierra está llena de su gloria. Isaías 6:1-3."
+],
+[
+"p",
+"Santo, santo, santo. El hebreo qadosh[11] dice lo apartado, lo consagrado, lo que no se confunde con lo común. El triple no es, en este versículo, un tratado completo de todo lo que el evangelio revelará acerca del Padre, del Hijo y del Espíritu. Esta escuela no cargará sobre el «santo» reiterado una demostración que el profeta, en esa hora, no está haciendo. Tampoco lo reducirá a un adorno de estilo, como si la santidad de Jehová se pudiera decir una sola vez y ya. La tierra está llena de su gloria. Los quiciales se estremecen. La casa se llena de humo. Y el profeta no se pone a analizar el trono: Entonces dije: ¡Ay de mí! que soy muerto; porque siendo hombre inmundo de labios, y habitando en medio de pueblo que tiene labios inmundos, han visto mis ojos al Rey, Jehová de los ejércitos. Isaías 6:5. El Shemá, cuando se oye de veras, no produce primero un experto en el Nombre: produce un «ay de mí». Labios inmundos, delante del Rey. El amor de todo el corazón empieza, a menudo, por ese abatimiento, no por una recitación segura."
+],
+[
+"p",
+"Luego, el carbón del altar toca la boca, y es quitada la culpa, y limpio el pecado. Y la voz pregunta, con un plural que anotamos sin forzarlo: ¿A quién enviaré, y quién irá por nosotros? Entonces respondí yo: Heme aquí, envíame a mí. Isaías 6:8. El uno que es santo envía. El inmundo, ya tocado, se ofrece. El Nombre que se ama no se queda en el pecho como un tesoro privado: se vuelve envío. Mañana, en el prólogo, Juan dirá que Isaías vio su gloria, y habló acerca de él. Hoy oímos al Rey, Jehová de los ejércitos, y no adelantamos esa luz para no perder esta: el Dios uno es el Santo, y el Santo limpia, y el limpiado dice heme aquí."
+],
+[
+"p",
+"Ese corazón, sin embargo, no se limpia solo. El Shemá manda un corazón entero, y el pecador descubre que tiene un corazón de piedra. Jehová promete lo que el mandato, por sí, no produce: Os daré corazón nuevo, y pondré espíritu nuevo dentro de vosotros; y quitaré de vuestra carne el corazón de piedra, y os daré un corazón de carne. Y pondré dentro de vosotros mi Espíritu, y haré que andéis en mis estatutos, y guardéis mis preceptos, y los pongáis por obra. Ezequiel 36:26-27. Corazón nuevo, espíritu nuevo, su Espíritu dentro, y un andar que Él mismo hace. Jeremías había prometido la ley escrita en el corazón. Ezequiel muestra el órgano que recibe esa escritura: no la piedra, la carne. El hebreo del «amarás» no se cumple por un pulso más firme del alumno. Se cumple porque Dios da lo que manda. El salmista, que no espera a Ezequiel para saberlo, ya lo pide: Crea en mí, oh Dios, un corazón limpio, Y renueva un espíritu recto dentro de mí. No me eches de delante de ti, Y no quites de mí tu santo Espíritu. Vuélveme el gozo de tu salvación, Y espíritu noble me sustente. Salmos 51:10-12. Crea: el verbo de Génesis, ahora pedido para el interior. El Shemá, rezado sin esta petición, puede volverse un ídolo de palabras. Rezarlo, y pedir un corazón creado, y esperar el Espíritu que hace andar, es oír la Ley como se oye en esta escuela: para conocerle, para ser convencido, para volverse, para ser sostenido."
+],
+[
+"h",
+"No te harás imagen: el Dios que habla, y los ídolos que tienen boca y no hablan"
+],
+[
+"p",
+"El primer mandamiento, que ya oímos, no viene solo. En el Sinaí, después de «no tendrás dioses ajenos delante de mí», la Palabra continúa, y el Shemá, que manda amar a este Jehová con todo el corazón, no se entiende si se recorta lo que sigue: No te harás imagen, ni ninguna semejanza de lo que esté arriba en el cielo, ni abajo en la tierra, ni en las aguas debajo de la tierra. No te inclinarás a ellas, ni las honrarás; porque yo soy Jehová tu Dios, fuerte, celoso, que visito la maldad de los padres sobre los hijos hasta la tercera y cuarta generación de los que me aborrecen, y hago misericordia a millares, a los que me aman y guardan mis mandamientos. Éxodo 20:4-6."
+],
+[
+"p",
+"No te harás imagen, ni ninguna semejanza, ni te inclinarás, ni las honrarás. El celo de este Dios no es un capricho: es el celo del que ha dicho «yo soy Jehová tu Dios», el que sacó de Egipto, el que no se deja reducir a un objeto que la mano talla y la vista administra. Visita la maldad de los padres sobre los hijos, y el texto mismo limita el alcance: «de los que me aborrecen». Y hace misericordia a millares, «a los que me aman y guardan mis mandamientos». El Shemá y este mandato se dan la mano: amar es, también, no fabricar un dios más manejable, y guardar es, también, no honrar lo que tiene figura y no tiene voz. El celoso y el misericordioso son el mismo, y el amar con todo el corazón no convive, en paz, con una imagen delante de los ojos que ha usurpado el lugar del que no se parece a nada de lo creado."
+],
+[
+"p",
+"Ese celo se canta, más adelante, con una primera persona que no admite compañía: Ved ahora que yo, yo soy, Y no hay dioses conmigo; Yo hago morir, y yo hago vivir; Yo hiero, y yo sano; Y no hay quien pueda librar de mi mano. Deuteronomio 32:39. Yo, yo soy. No hay dioses conmigo. El que hace morir y hace vivir, el que hiere y sana, no comparte ese oficio. No hay quien pueda librar de su mano. El ehyeh del Zarza, el Nombre, el «Jehová uno es», se oyen aquí sin adorno. El pueblo que recita el Shemá recita, en el cántico de Moisés, esta misma exclusividad: no un monoteísmo de tesis, un Dios que es, que hace, y de cuya mano no se huye."
+],
+[
+"p",
+"El salmo, por su parte, no discute con una filosofía: pone al lado de este Dios los ídolos, y deja que se vean. No a nosotros, oh Jehová, no a nosotros, Sino a tu nombre da gloria, Por tu misericordia, por tu verdad. ¿Por qué han de decir las gentes: ¿Dónde está ahora su Dios? Nuestro Dios está en los cielos; Todo lo que quiso ha hecho. Los ídolos de ellos son plata y oro, Obra de manos de hombres. Tienen boca, mas no hablan; Tienen ojos, mas no ven; Orejas tienen, mas no oyen; Tienen narices, mas no huelen; Manos tienen, mas no palpan; Tienen pies, mas no andan; No hablan con su garganta. Semejantes a ellos son los que los hacen, Y cualquiera que confía en ellos. Salmos 115:1-8."
+],
+[
+"p",
+"No a nosotros, sino a tu Nombre: el día del Nombre continúa aquí. Las gentes preguntan dónde está su Dios, y la respuesta no es una estatua en el atrio: nuestro Dios está en los cielos; todo lo que quiso ha hecho. Los ídolos son obra de manos, y tienen todos los órganos de un vivo, y no viven. Boca, y no hablan. Ojos, y no ven. Orejas, y no oyen. El que recita «Oye, Israel» sirve al que habla, no a lo que tiene orejas y no oye. Y el salmo no deja la burla en el metal: semejantes a ellos son los que los hacen, y cualquiera que confía en ellos. El corazón se parece a lo que ama. Si amas lo que no habla, te vuelves sordo. Si oyes al que habla, y lo amas con todo el corazón, el alma y las fuerzas, te pareces, no a una obra de tus manos, al que te hizo y te llama. El Shemá, leído así, no es solo un versículo para colgar: es una frontera. De un lado, el que es, el que habla, el que hace morir y hacer vivir. Del otro, la plata y el oro, y el hombre que se les parece."
+],
+[
+"p",
+"Hay, en el mismo Deuteronomio que nos dio el Shemá, un «hoy» que no se dirige a la curiosidad, sino al corazón, y que esta lección puede poner al cierre, porque resume lo que se ha oído: Aprende pues, hoy, y reflexiona en tu corazón que Jehová es Dios arriba en el cielo y abajo en la tierra, y no hay otro. Deuteronomio 4:39. Aprende, hoy. Reflexiona en tu corazón. Jehová es Dios arriba en el cielo y abajo en la tierra, y no hay otro. El cielo no lo aleja, y la tierra no lo reduce a una imagen. El corazón, el mismo que debe amar, debe reflexionar esto, y aprenderlo, no solo recitarlo. No hay otro. El Shemá, leído, oído, guardado, termina en este aprendizaje: hoy, en el corazón, este Dios, y ningún otro."
+],
+[
+"h",
+"Décima parte. Lo que el Shemá pide de ti en este curso"
+],
+[
+"p",
+"Conocer a Dios: eso es lo primero. No un dios genérico, no una fuerza, no un ídolo con tu apellido. Jehová, el Dios de Abraham, de Isaac y de Jacob, el único Dios verdadero, y Jesucristo a quien ha enviado. El hebreo nos ayuda a no perder el Nombre en una niebla de palabras grandes."
+],
+[
+"p",
+"Convicción de pecado: el mandato de amar con todo el corazón nos descubre. Nadie sale del Shemá como un cumplidor, si se ha oído de veras. El corazón dividido es el pecado de este día, y no es un pecado pequeño. Es el pecado de tener dioses ajenos delante de su faz, aunque los llamemos de otro modo."
+],
+[
+"p",
+"Arrepentimiento y conversión: oír, hoy, es volverse. No basta con admirar la antigüedad de una lengua. Hay que amar a este Dios, y amar al prójimo, y poner estas palabras sobre el corazón. El que se convierte no se convierte a un alfabeto. Se convierte al Señor que es uno, y a la vida que es conocerle."
+],
+[
+"p",
+"Mantenerse firme: estas palabras… estarán sobre tu corazón. El curso es largo, porque la repetición es el modo que Dios señaló. En la casa, en el camino, al acostarte, al levantarte. Mañana, si el Señor quiere, abriremos la lengua en la que se escribió el evangelio, y oiremos otra primera frase: En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios. El que hoy oye que Jehová es uno no se encontrará, mañana, con otro Dios. Se encontrará con el Verbo que era en el principio, y que no rompe el Shemá, sino que lo cumple y lo da a conocer."
 ],
 [
 "h",
@@ -754,75 +358,63 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Primera pregunta. ¿Por qué el Señor Jesús habló de la jota y la tilde? Respuesta: para afirmar la exactitud absoluta de la ley de Dios, hasta en su letra más pequeña, la iod, y en sus trazos más pequeños."
+"Ahora vamos a repasar. Contesta cada pregunta en voz alta antes de leer o de oír la respuesta."
 ],
 [
 "p",
-"Segunda pregunta. ¿Qué partes del Antiguo Testamento están escritas en arameo? Respuesta: buena parte de Daniel, desde el capítulo dos, versículo cuatro, hasta el capítulo siete; varios pasajes de Esdras; Jeremías diez, once; y dos palabras de Génesis treinta y uno, cuarenta y siete."
+"Primera pregunta. ¿Cuál es el texto que gobierna esta lección, y qué pide, en lo esencial? Respuesta: Deuteronomio 6:4-5: oír que Jehová nuestro Dios, Jehová uno es, y amarle de todo corazón, de toda el alma y con todas las fuerzas."
 ],
 [
 "p",
-"Tercera pregunta. ¿Cuáles son los tres rasgos principales del hebreo bíblico que estudiamos? Respuesta: se escribe de derecha a izquierda, se escribía originalmente solo con consonantes y está construido sobre raíces de tres consonantes."
+"Segunda pregunta. ¿Para qué sirve, en esta escuela, el hebreo bíblico? Respuesta: para oír mejor lo que está escrito, al servicio de la lectura fiel, no para lucirse con un desfile de letras ni para despreciar la versión que el pueblo lee."
 ],
 [
 "p",
-"Cuarta pregunta. ¿Qué es la falacia de la raíz? Respuesta: el error de pensar que el significado de una palabra se determina solo por su raíz, cuando en realidad lo decide su uso en el contexto."
+"Tercera pregunta. ¿Qué significa, en la Escritura, la llamada «oye» del Shemá? Respuesta: no solo percibir un sonido, sino atender y disponerse a cumplir; oír a Dios es obedecerle."
 ],
 [
 "p",
-"Quinta pregunta. ¿Cuántas letras tiene el alefato y cuáles son? Respuesta: veintidós: alef, bet, guímel, dálet, he, vav, záyin, jet, tet, iod, kaf, lámed, mem, nun, sámej, áyin, pe, tsade, qof, resh, shin, tav."
+"Cuarta pregunta. ¿Qué debemos retener del Nombre que la Reina-Valera escribe «Jehová»? Respuesta: que corresponde al Nombre propio del Dios de Israel, revelado a Moisés como el que es, el Dios de los padres, su nombre para siempre; no es un título genérico ni un talismán."
 ],
 [
 "p",
-"Sexta pregunta. ¿Qué letras tienen forma final? Respuesta: kaf, mem, nun, pe y tsade."
+"Quinta pregunta. ¿Qué afirma el Shemá con la palabra «uno», y qué no debemos hacer con esa sola palabra? Respuesta: que Jehová es uno, y que no hay Dios fuera de él; no debemos cargarla, ella sola, con toda la doctrina posterior, ni vaciarla como si Dios fuera un número estéril."
 ],
 [
 "p",
-"Séptima pregunta. ¿Qué es el tetragrámaton y cómo lo traduce la Reina Valera? Respuesta: el nombre propio de Dios de cuatro letras, iod, he, vav, he, relacionado con el verbo ser; la Reina Valera lo traduce Jehová."
+"Sexta pregunta. ¿Cómo confiesa Pablo, en 1 Corintios 8:4-6, esa unidad sin dejar fuera a Cristo? Respuesta: para nosotros sólo hay un Dios, el Padre, del cual proceden todas las cosas, y un Señor, Jesucristo, por medio del cual son todas las cosas."
 ],
 [
 "p",
-"Octava pregunta. ¿Qué significa aleluya? Respuesta: alabad a Yah, es decir, alabad a Jehová."
+"Séptima pregunta. ¿Qué abarcan el corazón, el alma y las fuerzas en el mandato de amar? Respuesta: el centro de la persona, la vida misma y el vigor o los recursos; nada queda fuera de ese amor mandado."
 ],
 [
 "p",
-"Novena pregunta. Nombra tres pasajes acrósticos de la Biblia. Respuesta: el salmo ciento diecinueve, Proverbios treinta y uno, desde el versículo diez, y el libro de Lamentaciones, entre otros, como los salmos veinticinco, treinta y cuatro y ciento cuarenta y cinco."
+"Octava pregunta. ¿Qué hizo Jesús cuando le preguntaron por el gran mandamiento? Respuesta: confirmó el Shemá como el primero y grande mandamiento, y añadió, como semejante, amar al prójimo como a sí mismo; de estos dos depende toda la ley y los profetas."
 ],
 [
 "p",
-"Décima pregunta. ¿Cuál es el primer versículo de la Biblia en hebreo y qué significa cada palabra? Respuesta: bereshít bará Elohím et hashamáyim veét haárets: en el principio, creó, Dios, partícula del complemento, los cielos, y la tierra."
+"Novena pregunta. ¿Qué diferencia de wording debemos respetar entre Deuteronomio, Mateo y Marcos, sin fabricar un error? Respuesta: Deuteronomio dice corazón, alma y fuerzas; Mateo, corazón, alma y mente; Marcos, corazón, alma, mente y fuerzas. El mismo mandato se oye con plenitud, sin que aplastemos las diferencias."
 ],
 [
 "p",
-"Undécima pregunta. ¿Qué tiene de especial el verbo bará? Respuesta: en su forma básica solo tiene a Dios como sujeto en la Escritura; significa crear."
+"Décima pregunta. Según Deuteronomio 6:6-9, ¿dónde deben estar estas palabras? Respuesta: sobre el corazón; repetidas a los hijos; en la casa y en el camino, al acostarse y al levantarse; como señal en la mano y ante los ojos; escritas en postes y puertas."
 ],
 [
 "p",
-"Duodécima pregunta. ¿Qué significa jésed? Respuesta: el amor leal, fiel al pacto, que la Reina Valera traduce misericordia, bondad o piedad."
+"Undécima pregunta. ¿Qué nos enseña Génesis 1:1, leído con respeto al hebreo, sin forzar la gramática? Respuesta: que en el principio creó Dios los cielos y la tierra; el verbo de crear va en singular, y el nombre elohim tiene forma de plural; el Dios creador es el Dios del Shemá."
 ],
 [
 "p",
-"Decimotercera pregunta. ¿Cómo dice el shemá en hebreo y qué significa? Respuesta: shemá Yisraél, Adonái Elohéinu, Adonái ejád: oye, Israel, Jehová nuestro Dios, Jehová uno es."
-],
-[
-"p",
-"Decimocuarta pregunta. ¿Por qué no debemos sacar mensajes ocultos de la partícula et? Respuesta: porque es una partícula gramatical que aparece miles de veces con cualquier complemento; las verdades sobre Cristo se apoyan en lo que la Escritura enseña claramente, no en especulaciones sobre letras."
+"Duodécima pregunta. ¿Qué peligro pastoral denuncia esta lección en el estudio de la lengua? Respuesta: el de recitar letras y no amar a Jehová, o corregir con soberbia la lectura del pueblo, o amar el alefato y despreciar al prójimo."
 ],
 [
 "h",
-"Oración final"
+"Oración"
 ],
 [
 "p",
-"Señor, Dios del principio, que creaste los cielos y la tierra con tu palabra, gracias porque quisiste hablar a los hombres en su propia lengua. Gracias por Moisés y los profetas, por los escribas y los masoretas, por cada letra que guardaste, desde la alef hasta la tav. Abre mis ojos, y miraré las maravillas de tu ley. Líbrame de la soberbia del que sabe un poco, y de la imaginación del que busca secretos donde tú has hablado claramente. Que tu Palabra sea lámpara a mis pies y lumbrera a mi camino. Oye, alma mía: el Señor nuestro Dios, el Señor uno es. Te amaré con todo mi corazón. En el nombre de Jesucristo, el Amén, el testigo fiel y verdadero, amén."
-],
-[
-"p",
-"Mañana, en el día seis, abriremos la segunda gran lengua de la Escritura: el griego del Nuevo Testamento. Aprenderemos sus veinticuatro letras, veremos por qué Dios eligió esa lengua para el evangelio y leeremos juntos las primeras palabras del evangelio de Juan."
-],
-[
-"p",
-"Dr. (h. c.) Alejandro Sirit."
+"Señor, tú que eres uno, enséñanos a oír tu Nombre y a amarte de todo corazón, de toda el alma y con todas las fuerzas, sin dar tu gloria a otro. Amén."
 ],
 [
 "h",
@@ -830,15 +422,11 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "h",
-"Repaso de la lección"
+"Recapitulación"
 ],
 [
 "p",
-"En la quinta jornada nos asomamos al hebreo, la lengua en que Dios habló a los padres por los profetas, y aprendimos que se escribe y se lee de derecha a izquierda. Su alefato tiene veintidós letras, alef, bet, guímel, dálet, he, vav, záyin, jet, tet, iod, kaf, lámed, mem, nun, sámej, áyin, pe, tsade, qof, resh, shin y tav, y las memorizamos en cinco grupos de cuatro con una pareja final. Cinco de ellas, kaf, mem, nun, pe y tsade, cambian de trazo, aunque no de sonido, cuando cierran una palabra."
-],
-[
-"p",
-"Vimos además que el hebreo bíblico se escribió con consonantes, y que los masoretas añadieron después los signos de las vocales, el nikúd, para guardar la lectura tradicional. El Salmo ciento diecinueve nos mostró la belleza del alefato puesta al servicio de la alabanza, pues cada una de sus secciones de ocho versículos comienza con una letra, en orden, y todo el poema celebra la Palabra de Dios. Por último, guardamos las primeras palabras que nos acompañarán en el curso: bereshít, en el principio, hache siete mil doscientos veinticinco; Elohim, Dios, hache cuatrocientos treinta; shalóm, paz, hache siete mil novecientos sesenta y cinco; y amén, hache quinientos cuarenta y tres."
+"La quinta lección abrió el hebreo bíblico, no como un desfile de veintidós letras, sino al servicio del Shemá. Oímos Deuteronomio 6:4-9 entero: la confesión de que Jehová es uno, el mandato de amarle con todo lo que somos, y la orden de que esas palabras estén sobre el corazón, en la casa, en el camino, en los hijos, en la puerta. Miramos el Nombre revelado a Moisés, la unidad de Dios sin vaciarla ni forzarla, el testimonio de Isaías y de Pablo, y la confirmación que el Señor hizo de este mandamiento, junto al amor al prójimo. Aprendimos unas letras y la primera frase de Génesis solo en cuanto sirven a esa fe. El fin es conocer a Dios, descubrir el corazón dividido, volvernos y permanecer."
 ],
 [
 "h",
@@ -846,63 +434,39 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta habrá un silencio breve. Detén el audio si lo necesitas, responde en voz alta con tus propias palabras, y luego escucha la respuesta."
+"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta, detente, responde en voz alta con tus propias palabras, y luego lee la respuesta."
 ],
 [
 "p",
-"Primera pregunta. Di en orden las veintidós letras del alefato."
+"Primera pregunta. ¿En qué se notaría, mañana en tu casa, que el Shemá ha estado sobre tu corazón, y no solo en un cuaderno? Pausa para responder. Respuesta: en que hablarías de estas palabras en el camino ordinario del día, las repetirías a los tuyos, y el amor a Dios y al prójimo empezaría a gobernar lo que haces con la mano, no solo lo que subraya la mente."
 ],
 [
 "p",
-"Respuesta: alef, bet, guímel, dálet; he, vav, záyin, jet; tet, iod, kaf, lámed; mem, nun, sámej, áyin; pe, tsade, qof, resh; shin y tav."
+"Segunda pregunta. ¿Qué «dioses ajenos» —aunque no los llames así— disputan hoy el trono de tu corazón? Pausa para responder. Respuesta: cada alumno debe nombrarlo con honestidad delante de Dios: aquello a lo que teme, sirve o ama más que a Jehová. El Shemá no admite rivales."
 ],
 [
 "p",
-"Segunda pregunta. ¿En qué dirección se lee el hebreo, y qué consecuencia práctica tiene para una Biblia hebrea?"
+"Tercera pregunta. ¿Por qué no basta con decir «Dios es uno» si no se ama a Jesucristo, a quien el Padre ha enviado? Pausa para responder. Respuesta: porque la vida eterna es conocer al único Dios verdadero y a Jesucristo enviado, y porque para nosotros hay un Dios, el Padre, y un Señor, Jesucristo. El Shemá no se cumple apartando al Hijo."
 ],
 [
 "p",
-"Respuesta: de derecha a izquierda; por eso una Biblia hebrea se abre por lo que para nosotros sería la última página."
+"Cuarta pregunta. ¿Cómo usarás, de aquí en adelante, una palabra hebrea que aprendas en este curso? Pausa para responder. Respuesta: para servir a la lectura del texto, con temor, sin corregir con soberbia ni abandonar la versión fiel, y sin convertir la lengua en un trofeo."
 ],
 [
 "p",
-"Tercera pregunta. ¿Cuáles son las cinco letras con forma final?"
+"Quinta pregunta. ¿Qué debes memorizar hoy, y por qué no es un adorno? Pausa para responder. Respuesta: Deuteronomio 6:4-5, porque es el primero y grande mandamiento, confirmado por Jesús, y el umbral de la fe de Israel que el evangelio no anula, sino que llena."
 ],
 [
 "p",
-"Respuesta: kaf, mem, nun, pe y tsade."
+"Sexta pregunta. Si Mateo dice «mente» y Deuteronomio dice «fuerzas», ¿qué harás, como alumno de esta escuela? Pausa para responder. Respuesta: leeré cada testimonio tal como está, sin inventar un error y sin aplastar las diferencias; recibiré el mandato pleno de amar a Dios con todo lo que soy."
 ],
 [
 "p",
-"Cuarta pregunta. ¿Qué es el nikúd, y por qué no cambia la autoridad del texto?"
+"Séptima pregunta. ¿Qué hay de pastoral en escribir las palabras en los postes y en las puertas, aunque tu casa no sea la de Moisés en Moab? Pausa para responder. Respuesta: que la Palabra debe marcar la entrada y la salida de la vida ordinaria, no quedar encerrada en el tiempo de estudio."
 ],
 [
 "p",
-"Respuesta: son los signos vocálicos que añadieron los masoretas. Guardan la lectura tradicional sin alterar las consonantes que se copiaron desde antiguo."
-],
-[
-"p",
-"Quinta pregunta. ¿Qué tiene de especial el Salmo ciento diecinueve?"
-],
-[
-"p",
-"Respuesta: es un poema alfabético de veintidós secciones; cada sección de ocho versículos empieza con la misma letra, en el orden del alefato. Todo el salmo celebra la Palabra de Dios."
-],
-[
-"p",
-"Sexta pregunta. ¿Qué significan bereshít y shalóm?"
-],
-[
-"p",
-"Respuesta: bereshít significa en el principio, la primera palabra de la Biblia; shalóm significa paz, plenitud, bienestar completo."
-],
-[
-"p",
-"Séptima pregunta. ¿Para qué estudia el creyente el hebreo, y cuál es el peligro?"
-],
-[
-"p",
-"Respuesta: para leer de cerca lo que Dios dijo y entenderlo mejor. El peligro es que el diccionario predique en lugar del texto, o que el saber envanezca. El hebreo sirve a la Palabra; no la reemplaza."
+"Octava pregunta. ¿Qué queda para más adelante, y qué no debe aplazarse? Pausa para responder. Respuesta: un conocimiento más largo de la lengua y de la plenitud de la revelación de Dios en Cristo; no debe aplazarse el oír, el amar, el arrepentirse de un corazón dividido y el poner estas palabras sobre el corazón hoy."
 ],
 [
 "h",
@@ -910,27 +474,27 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Bosquejo para predicar o enseñar. Título: Oye, Israel. Texto: Deuteronomio seis, cuatro y cinco."
+"Bosquejo para predicar o enseñar. Título: Oye, Israel. Texto: Deuteronomio 6:4-9."
 ],
 [
 "q",
-"«Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas.» Así dice Deuteronomio, capítulo seis, versículos cuatro al cinco."
+"«Oye, Israel: Jehová nuestro Dios, Jehová uno es» Deuteronomio 6:4."
 ],
 [
 "p",
-"La idea central es que el Dios que es uno reclama un amor entero."
+"La idea central es que el Dios que se ha revelado con su Nombre es uno, y que esa confesión no termina en un asenso, sino en un amor total, cotidiano, que el Señor Jesús confirmó como el primero y grande mandamiento."
 ],
 [
 "p",
-"El sermón puede abrir con Moisés ante una generación que está a punto de entrar en la tierra, y con la primera palabra de su gran confesión: oye. Ese es el primer movimiento, porque la fe viene por el oír, y el oír por la palabra de Dios, de manera que nadie habla rectamente de Dios sin antes haberle escuchado."
+"El primer movimiento llama a oír. No a opinar primero, ni a exhibir letras. Oír, como quien está delante del fuego de Deuteronomio 4, donde se mostró que Jehová es Dios y no hay otro fuera de él."
 ],
 [
 "p",
-"El segundo movimiento proclama quién es el que habla: Jehová nuestro Dios, Jehová uno es, y no hay otro. El predicador presenta al Dios vivo y verdadero que se dio a conocer a Moisés y que, en la plenitud de los tiempos, se reveló en su Hijo."
+"El segundo movimiento proclama el Nombre y la unidad, y lleva la congregación a 1 Corintios 8:6 y a Juan 17:3, para que nadie separe al Padre y al Señor Jesucristo, ni vuelva el corazón a dioses ajenos."
 ],
 [
 "p",
-"El tercer movimiento confronta al oyente con el mandamiento: amarás a Jehová tu Dios de todo tu corazón, de toda tu alma y con todas tus fuerzas. Ninguno de nosotros ha amado así, y esa convicción de pecado conduce a Cristo, el único que amó al Padre perfectamente y que murió por quienes no lo amaron. Por consiguiente, el sermón concluye mostrando que el perdonado comienza a amar, y que repite estas palabras a sus hijos, en su casa y por el camino."
+"El tercer movimiento aplica el «amarás» y el «estas palabras estarán sobre tu corazón». Convence del corazón dividido, llama al arrepentimiento, enseña el amor al prójimo como semejante, e invita a memorizar Deuteronomio 6:4-5 y a hablar de estas palabras en la casa."
 ],
 [
 "h",
@@ -938,15 +502,67 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"El texto de hoy es el shemá, Deuteronomio seis, cuatro y cinco."
+"El texto de hoy es Deuteronomio 6:4-5."
 ],
 [
 "q",
-"«Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas.» Así dice Deuteronomio, capítulo seis, versículos cuatro al cinco."
+"«Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas» Deuteronomio 6:4-5."
 ],
 [
 "p",
-"Repítelo en voz alta al acostarte y al levantarte, como manda el mismo capítulo."
+"Repítelo en voz alta hasta que lo digas sin mirar."
+],
+[
+"h",
+"Notas"
+],
+[
+"p",
+"Dr. (h. c.) Alejandro Sirit. Escuela Bíblica Cielo Efata."
+],
+[
+"p",
+"[1] Hebreo shama, H8085: oír, atender, obedecer."
+],
+[
+"p",
+"[2] Hebreo YHWH, H3068: el Nombre propio del Dios de Israel, que la Reina-Valera 1960 traduce «Jehová»."
+],
+[
+"p",
+"[3] Hebreo echad, H259: uno, un, unidad."
+],
+[
+"p",
+"[4] Hebreo levav (o lev), H3824 (H3820): corazón, el centro interior de la persona."
+],
+[
+"p",
+"[5] Hebreo nephesh, H5315: alma, vida, ser viviente."
+],
+[
+"p",
+"[6] Hebreo meod, H3966: mucho, muy, vigor, fuerzas."
+],
+[
+"p",
+"[7] Hebreo bereshit, de reshit, H7225: principio, primicia; aquí, «en el principio»."
+],
+[
+"p",
+"[8] Hebreo bara, H1254: crear, en su uso más propio de la acción creadora de Dios."
+],
+[
+"p",
+"[9] Hebreo elohim, H430: Dios; forma de plural, con verbo en singular en Génesis 1:1."
+],
+[
+"p",
+"[10] Hebreo jesed, H2617: misericordia, bondad de pacto; y emet, H571: verdad, firmeza. En Éxodo 34:6, «grande en misericordia y verdad»."
+],
+[
+"p",
+"[11] Hebreo qadosh, H6918: santo, apartado, consagrado."
 ]
 ];
 export default bloques;
