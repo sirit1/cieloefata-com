@@ -32,6 +32,11 @@ function PrivacidadPage() {
         +58 424 167 4909, o pedirlo en el mismo canal en que llegó el mensaje.
       </p>
       <p className="mt-5 text-lg leading-relaxed">
+        Quien abre la cuenta del Curso Experto Bíblico deja su nombre y su correo. Esos datos quedan en la cuenta de
+        esta escuela, la misma del cuaderno, para reconocerlo y para que las lecciones y las notas lo esperen cuando
+        vuelva. No se venden. El curso no se cobra.
+      </p>
+      <p className="mt-5 text-lg leading-relaxed">
         El cuaderno guarda las notas en el propio navegador de quien escribe. La política de
         RevelatiO, que guarda la lectura, la consulta y la cuenta, está en{" "}
         <a href="https://revelatio.app/privacidad" className="text-link underline" rel="noopener noreferrer">

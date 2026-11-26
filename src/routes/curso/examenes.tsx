@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { InscripcionCurso } from "@/components/inscripcion-curso";
 import { EXAMENES, MENSAJE_BANCO_VACIO } from "@/lib/examenes/catalogo";
 import { listarExamenes } from "@/lib/examenes/functions";
-import { authEnabled, signIn } from "@/lib/auth/client";
-import { GROK_PROVIDERS } from "@/lib/auth/providers";
+import { authEnabled } from "@/lib/auth/client";
+import { alumnoDeCuenta } from "@/lib/curso/acceso";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
@@ -71,22 +72,8 @@ function ExamenesPage() {
         </Link>
       </p>
       {isPending ? <p className="mt-8 text-ink-soft">Cargando…</p> : null}
-      {authEnabled && !isPending && !user ? (
-        <p className="mt-8 font-sans text-sm">
-          Para ver tus intentos, entra.{" "}
-          {GROK_PROVIDERS.map((p, i) => (
-            <span key={p.providerId}>
-              {i > 0 ? " · " : null}
-              <button
-                type="button"
-                className="text-link underline"
-                onClick={() => signIn(p.providerId, { callbackURL: "/curso/examenes" })}
-              >
-                Entrar con {p.label}
-              </button>
-            </span>
-          ))}
-        </p>
+      {authEnabled && !isPending && !alumnoDeCuenta(user) ? (
+        <InscripcionCurso volver="/curso/examenes" />
       ) : null}
       {error ? <p className="mt-6 text-danger">{error}</p> : null}
       {curso ? (
@@ -96,6 +83,7 @@ function ExamenesPage() {
           </Link>
         </p>
       ) : null}
+      {authEnabled && !alumnoDeCuenta(user) ? null : (
       <ol className="mt-10 space-y-6">
         {(filas ?? EXAMENES.map((e) => ({ ...e, abierto: false, intentosUsados: 0, maxIntentos: 2, aprobado: false, certificado: null }))).map(
           (examen) => (
@@ -115,6 +103,7 @@ function ExamenesPage() {
           ),
         )}
       </ol>
+      )}
     </main>
   );
 }

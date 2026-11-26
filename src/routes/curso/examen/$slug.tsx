@@ -1,6 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ExamenCurso } from "@/components/examen-curso";
+import { InscripcionCurso } from "@/components/inscripcion-curso";
 import { examenPorId } from "@/lib/examenes/catalogo";
+import { authEnabled } from "@/lib/auth/client";
+import { alumnoDeCuenta } from "@/lib/curso/acceso";
+import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/curso/examen/$slug")({
@@ -23,6 +27,8 @@ export const Route = createFileRoute("/curso/examen/$slug")({
 
 function PaginaExamen() {
   const { examen } = Route.useLoaderData();
+  const { user, isPending } = useCurrentUserState();
+  const cerrado = authEnabled && (isPending || !alumnoDeCuenta(user));
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <p className="kicker">Escuela Bíblica Cielo Efata · gratis</p>
@@ -32,7 +38,11 @@ function PaginaExamen() {
           Todos los exámenes
         </Link>
       </p>
-      <ExamenCurso examenId={examen.id} />
+      {isPending && authEnabled ? <p className="mt-8 text-ink-soft">Cargando…</p> : null}
+      {authEnabled && !isPending && !alumnoDeCuenta(user) ? (
+        <InscripcionCurso volver={`/curso/examen/${examen.id}`} />
+      ) : null}
+      {cerrado ? null : <ExamenCurso examenId={examen.id} />}
     </main>
   );
 }

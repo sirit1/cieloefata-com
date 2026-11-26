@@ -2,14 +2,19 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { GratisForm } from "@/components/gratis-form";
 import { LeccionCuerpo } from "@/components/leccion-curso";
 import { LeccionJsonLd } from "@/components/json-ld";
-import { CURSO_NOMBRE, CURSO_PATH, CURSO_PUBLICADO, DIAS, textoDia } from "@/lib/curso";
+import { CURSO_LEAD, CURSO_RITMO } from "@/lib/curso/acceso";
+import { cargarLeccion } from "@/lib/curso/leccion.functions";
+import { CURSO_NOMBRE, CURSO_PATH, CURSO_PUBLICADO, DIAS } from "@/lib/curso";
 import { metaDescription, pageHead, tituloSeccion } from "@/lib/seo";
 
 const DIA1 = DIAS[0];
-const DESCRIPCION = `Lección gratis del ${CURSO_NOMBRE}: Día 1, «${DIA1.titulo}». Léela completa y recibe el curso en tu correo.`;
+const DESCRIPCION = `Día 1 del ${CURSO_NOMBRE}, «${DIA1.titulo}», completo y sin cuenta. ${CURSO_LEAD}`;
 
 export const Route = createFileRoute("/gratis")({
-  loader: async () => ({ bloques: await textoDia(1) }),
+  loader: async () => {
+    const carga = await cargarLeccion({ data: "dia-1" });
+    return { bloques: carga.bloques, versiculo: carga.versiculo ?? "" };
+  },
   head: () =>
     pageHead({
       path: "/gratis",
@@ -21,7 +26,7 @@ export const Route = createFileRoute("/gratis")({
 });
 
 function GratisPage() {
-  const { bloques } = Route.useLoaderData();
+  const { bloques, versiculo } = Route.useLoaderData();
   return (
     <main className="mx-auto max-w-[44em] px-4 py-16 md:py-24">
       <LeccionJsonLd
@@ -36,14 +41,17 @@ function GratisPage() {
       <h1 className="mt-3 font-serif text-4xl leading-tight md:text-5xl">Día 1. {DIA1.titulo}</h1>
       <p className="kicker mt-4">Escuela Bíblica Cielo Efata · Dr. (h. c.) Alejandro Sirit</p>
       <p className="mt-6 text-lg leading-relaxed">
-        Diez lecciones para estudiar la Biblia con método. Esta es la primera, completa. Deja tu correo y te escribimos
-        con las siguientes; o sigue ya en{" "}
-        <Link to="/curso" className="text-link underline">el índice del curso</Link>.
+        Esta es la primera lección, completa, y se lee sin cuenta. {CURSO_LEAD} {CURSO_RITMO} Para seguir desde el día 2,
+        la cuenta pide el nombre y el correo. El índice está en{" "}
+        <Link to="/curso" className="text-link underline">
+          el curso
+        </Link>
+        .
       </p>
       <GratisForm />
       <aside className="mt-10 border border-rule p-5">
         <p className="kicker">Versículo para memorizar · {DIA1.cita}</p>
-        <p className="mt-2 font-serif text-xl leading-relaxed">«{DIA1.versiculo}»</p>
+        <p className="mt-2 font-serif text-xl leading-relaxed">«{versiculo}»</p>
       </aside>
       <LeccionCuerpo bloques={bloques} />
       <GratisForm />

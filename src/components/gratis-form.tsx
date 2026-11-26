@@ -66,10 +66,11 @@ export function GratisForm() {
       <section className="mt-8 border border-rule p-6" aria-live="polite">
         <p className="font-serif text-2xl">Gracias, {nombre.trim()}.</p>
         <p className="mt-3 leading-relaxed">
-          Las diez lecciones ya están abiertas. Sigue con el Día 2 cuando termines esta.
+          La lección del día 1 está en esta página, completa. Para el día 2, la cuenta del curso pide tu nombre y tu
+          correo. Es la misma cuenta del cuaderno. El curso no se cobra.
         </p>
         <Link to="/curso/$slug" params={{ slug: "dia-2" }} className="btn btn-gold mt-5 inline-flex">
-          Ir al Día 2
+          Seguir al día 2
         </Link>
       </section>
     );
@@ -78,7 +79,7 @@ export function GratisForm() {
   const campo = "mt-2 min-h-12 w-full border border-rule bg-paper px-3";
   return (
     <form onSubmit={enviar} className="mt-8 space-y-5 border border-rule p-6" noValidate>
-      <p className="font-serif text-2xl">Recibe el curso en tu correo</p>
+      <p className="font-serif text-2xl">Si quieres que te escribamos</p>
       <div>
         <label htmlFor="g-nombre" className="kicker block">Nombre</label>
         <input id="g-nombre" autoComplete="given-name" value={nombre} onChange={(e) => setNombre(e.target.value)} className={campo} />
@@ -101,7 +102,7 @@ export function GratisForm() {
       </label>
       {error ? <p role="alert" className="font-sans text-sm text-red-800">{error}</p> : null}
       <button type="submit" className="btn btn-gold" disabled={estado === "enviando"}>
-        {estado === "enviando" ? "Enviando…" : "Quiero el curso gratis"}
+        {estado === "enviando" ? "Enviando…" : "Dejar mi correo"}
       </button>
     </form>
   );
