@@ -23,7 +23,7 @@ export const DIAS: DiaCurso[] = [
     "slug": "dia-1",
     "titulo": "La puerta del sabio",
     "versiculo": "Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos.",
-    "intro": "Bienvenido a la primera lección de esta escuela bíblica. Durante muchos días vamos a caminar juntos por la Palabra de Dios con un propósito que conviene decir en voz alta desde el principio: no venimos a acumular datos, sino a conocer a Dios. Un hombre puede aprender los nombres de las veintidós letras hebreas, recitar la lista de los reyes de Judá, distinguir un aoristo de un perfecto y explicar la ruta de los viajes de Pablo, y todavía no haber entendido lo que la Escritura llama sabiduría. Por eso la primera lección no trata de gramática ni de fechas. Trata de la puerta por donde se entra. Si la puerta está mal, todo el edificio queda torcido; si la puerta es la correcta, cada lección posterior encuentra su lugar.",
+    "intro": "Bienvenido a la primera lección de esta escuela bíblica. A lo largo de trescientos sesenta días, repartidos en doce módulos, vamos a caminar juntos por la Palabra de Dios con un propósito que conviene decir en voz alta desde el principio: no venimos a acumular datos, sino a conocer a Dios. Un hombre puede aprender los nombres de las veintidós letras hebreas, recitar la lista de los reyes de Judá, distinguir un aoristo de un perfecto y explicar la ruta de los viajes de Pablo, y todavía no haber entendido lo que la Escritura llama sabiduría. Por eso la primera lección no trata de gramática ni de fechas. Trata de la puerta por donde se entra. Si la puerta está mal, todo el edificio queda torcido; si la puerta es la correcta, cada lección posterior encuentra su lugar.",
     "cita": "Esdras 7:10"
   },
   {
@@ -31,7 +31,7 @@ export const DIAS: DiaCurso[] = [
     "slug": "dia-2",
     "titulo": "Dios ha hablado: revelación e inspiración de la Escritura",
     "versiculo": "Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra.",
-    "intro": "Ayer entramos por la puerta del sabio: el temor de Jehová, el corazón preparado de Esdras, el orden de inquirir, cumplir y enseñar. Hoy ponemos el primer fundamento de todo el edificio, y es una afirmación que la Biblia hace de sí misma desde su primera página hasta la última: Dios ha hablado. Si Dios no hubiera hablado, toda religión sería un esfuerzo humano por adivinar lo que hay detrás del silencio. Pero el Dios de la Escritura no es mudo. Es el Dios que dijo sea la luz, y fue la luz. Es el Dios que llamó a Abraham, que habló a Moisés cara a cara como habla cualquiera a su compañero, que puso sus palabras en la boca de los profetas, y que en estos postreros días nos ha hablado por el Hijo.",
+    "intro": "Ayer entramos por la puerta del sabio: el temor de Jehová, el corazón preparado de Esdras, el orden de inquirir, cumplir y enseñar, y Cristo, que nos ha sido hecho sabiduría de Dios. Hoy ponemos el primer fundamento doctrinal de todo el edificio, y es una afirmación que la Biblia hace de sí misma desde su primera página hasta la última: Dios ha hablado. Si Dios no hubiera hablado, toda búsqueda de lo divino sería un esfuerzo humano por adivinar lo que hay detrás del silencio. Pero el Dios de la Escritura no es mudo. Es el Dios que dijo que fuese la luz, y fue la luz. Es el Dios que llamó a Abraham, que habló a Moisés, que puso sus palabras en la boca de los profetas, y que en estos postreros días nos ha hablado por el Hijo.",
     "cita": "2 Timoteo 3:16-17"
   },
   {
@@ -39,7 +39,7 @@ export const DIAS: DiaCurso[] = [
     "slug": "dia-3",
     "titulo": "El canon de la Escritura: cuáles libros son Palabra de Dios y por qué",
     "versiculo": "Y les dijo: Estas son las palabras que os hablé, estando aún con vosotros: que era necesario que se cumpliese todo lo que está escrito de mí en la ley de Moisés, en los profetas y en los salmos.",
-    "intro": "Ayer aprendimos que Dios ha hablado, que toda la Escritura es soplada por Dios, y que los santos hombres de Dios hablaron siendo llevados por el Espíritu Santo. Hoy surge inevitablemente la pregunta siguiente: ¿cuáles son esos escritos? Si toda la Escritura es inspirada, necesitamos saber qué libros forman parte de la Escritura y cuáles no. Esa pregunta tiene un nombre técnico: la pregunta por el canon.",
+    "intro": "Ayer aprendimos que Dios ha hablado, que toda la Escritura es soplada por Dios, y que esa Palabra, por ser de Él, es inerrante: verdadera en todo lo que afirma, sin mezcla de error. Hoy surge, de necesidad, la pregunta siguiente: ¿cuáles son esos escritos? Si toda la Escritura es inspirada, necesitamos saber qué libros forman parte de la Escritura y cuáles no. Esa pregunta tiene un nombre técnico: la pregunta por el canon.",
     "cita": "Lucas 24:44"
   },
   {
@@ -47,31 +47,31 @@ export const DIAS: DiaCurso[] = [
     "slug": "dia-4",
     "titulo": "De la mano de Dios a tus manos: la transmisión del texto y el Textus Receptus",
     "versiculo": "Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre.",
-    "intro": "En los tres primeros días hemos puesto los cimientos: la puerta del sabio, que es el temor de Jehová; la revelación y la inspiración, que nos dicen que toda la Escritura es soplada por Dios; y el canon, que nos dice cuáles son los libros inspirados. Hoy damos el paso siguiente, y respondemos a una pregunta que todo creyente pensante se ha hecho alguna vez: si los escritos originales de Moisés, de Isaías, de Pablo y de Juan se perdieron hace muchos siglos, ¿cómo podemos estar seguros de que lo que tenemos hoy en nuestras manos es lo que ellos escribieron?",
+    "intro": "En los tres primeros días hemos puesto los cimientos: la puerta del sabio, que es el temor de Jehová; la revelación, la inspiración y la inerrancia, que nos dicen que Dios ha hablado y que su Palabra es verdadera en todo lo que afirma; y el canon, que nos dice cuáles son los libros inspirados. Hoy respondemos a una pregunta que todo creyente pensante se ha hecho alguna vez: si los escritos originales de Moisés, de Isaías, de Pablo y de Juan se perdieron hace muchos siglos, ¿cómo podemos estar seguros de que lo que tenemos hoy en las manos es lo que ellos escribieron?",
     "cita": "Isaías 40:8"
   },
   {
     "n": 5,
     "slug": "dia-5",
-    "titulo": "La lengua que Dios eligió primero: introducción al hebreo bíblico y al alefato",
+    "titulo": "La lengua que Dios eligió primero: el hebreo bíblico al servicio del Shemá",
     "versiculo": "Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas.",
-    "intro": "En los cuatro primeros días hemos recorrido el camino que la Palabra de Dios hizo hasta llegar a tus manos: la puerta del sabio, la revelación y la inspiración, el canon de los libros sagrados y la transmisión fiel del texto a lo largo de los siglos. Hoy entramos por primera vez en una de las dos grandes lenguas en que el Espíritu Santo inspiró la Escritura: el hebreo. No pretendo que al terminar esta lección leas con soltura el texto masorético. Lo que quiero es abrirte la puerta, enseñarte a escuchar las veintidós letras, mostrarte cómo piensa esta lengua y darte las primeras llaves para que, cuando en una Biblia de estudio o en una concordancia veas una palabra hebrea con su número Strong, no te parezca un muro, sino una ventana.",
+    "intro": "En el día cuatro vimos cómo la Palabra llegó hasta nuestras manos: por copias, por el cuidado de los escribas y de los masoretas, por el texto recibido, por una versión fiel en nuestra lengua. Hoy damos un paso que no es un adorno de eruditos. Abrimos la lengua en la que Dios quiso dar primero la Ley, los Profetas y los Escritos. No lo hacemos para que salgas de esta lección recitando veintidós nombres de letras como quien recita una lista y se cree sabio. Lo hacemos para oír una frase que Israel debió llevar sobre el corazón, y que el mismo Señor Jesús llamó el primero y grande mandamiento. Esa frase, en la Reina-Valera de mil novecientos sesenta, dice así: Oye, Israel: Jehová nuestro Dios, Jehová uno es. Y amarás a Jehová tu Dios de todo tu corazón, y de toda tu alma, y con todas tus fuerzas. Deuteronomio 6:4-5.",
     "cita": "Deuteronomio 6:4-5"
   },
   {
     "n": 6,
     "slug": "dia-6",
-    "titulo": "La lengua del evangelio: introducción al griego del Nuevo Testamento",
+    "titulo": "La lengua del evangelio: el griego del Nuevo Testamento al servicio de Juan 1:1",
     "versiculo": "En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios.",
-    "intro": "Ayer abrimos la puerta del hebreo, la lengua en que Dios habló a los padres por los profetas. Recorrimos las veintidós letras del alefato, leímos el primer versículo de Génesis y aprendimos el shemá. Hoy abrimos la segunda gran puerta: el griego, la lengua en que el Espíritu Santo inspiró los veintisiete libros del Nuevo Testamento. Es la lengua de los evangelios, de las cartas de Pablo, de Pedro, de Santiago, de Juan y de Judas, y del Apocalipsis. Es la lengua en que se escribió por primera vez el nombre de Jesús unido a la palabra Cristo, y en la que se anunció por escrito que el Verbo fue hecho carne.",
+    "intro": "Ayer oímos el Shemá en la lengua que Dios eligió primero, y aprendimos que las letras sirven a una confesión: Jehová nuestro Dios, Jehová uno es. Hoy abrimos la lengua en la que se escribió el evangelio, las cartas y el Apocalipsis. Otra vez, no haremos un desfile. El griego del Nuevo Testamento no está aquí para que salgas recitando un alfabeto y te creas iniciado. Está para que oigas, con más atención, una frase que esta escuela te pedirá de memoria, y que sostiene, con tres cláusulas, el umbral del cuarto evangelio: En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios. Juan 1:1.",
     "cita": "Juan 1:1"
   },
   {
     "n": 7,
     "slug": "dia-7",
-    "titulo": "Usar bien la palabra de verdad: introducción a la hermenéutica bíblica",
+    "titulo": "Usar bien la palabra de verdad: hermenéutica bíblica, demostrada en un pasaje",
     "versiculo": "Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse, que usa bien la palabra de verdad.",
-    "intro": "En los días cinco y seis abrimos las dos grandes puertas de las lenguas bíblicas: el hebreo y el griego. Aprendimos las letras, leímos los primeros versículos de Génesis y de Juan, y conocimos más de veinticinco palabras fundamentales. Pero conocer las palabras no basta. Una persona puede saber el significado de cada palabra de un pasaje y, sin embargo, entender el pasaje al revés. Por eso hoy entramos en una de las materias más importantes de toda esta escuela: la hermenéutica, es decir, el arte y la ciencia de interpretar correctamente la Escritura.",
+    "intro": "En seis días hemos recibido la Palabra como Palabra de Dios, inerrante en todo lo que afirma, reconocida en su canon, preservada hasta nuestras manos, oída en las lenguas en que fue escrita. Hoy preguntamos cómo se usa esa Palabra, porque se puede tener el texto y torcerlo, y porque el diablo mismo, en el desierto, dijo «escrito está». El versículo que gobierna la lección no es un lema de academia: Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse, que usa bien la palabra de verdad. 2 Timoteo 2:15.",
     "cita": "2 Timoteo 2:15"
   },
   {
@@ -79,23 +79,23 @@ export const DIAS: DiaCurso[] = [
     "slug": "dia-8",
     "titulo": "El Verbo hecho carne: exégesis del prólogo del evangelio de Juan",
     "versiculo": "Y aquel Verbo fue hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad.",
-    "intro": "En el día seis leímos en griego el primer versículo del evangelio de Juan, y en el día siete aprendimos los principios para interpretar bien la Escritura: observar, interpretar y aplicar; el sentido literal, gramatical e histórico; el contexto; la Escritura interpretada con la Escritura; y Cristo como centro. Hoy vamos a poner todo eso en práctica en uno de los pasajes más profundos de toda la Biblia: el prólogo del evangelio de Juan, los primeros dieciocho versículos del capítulo uno.",
+    "intro": "En el día seis oímos las tres cláusulas del umbral: el Verbo era en el principio, era con Dios, era Dios. En el día siete aprendimos a usar bien la Palabra, a no recortar, a dejar que una Escritura ilumine a la otra. Hoy ponemos ese método sobre el prólogo entero, Juan 1:1-18, y nos detenemos donde el evangelio nos lleva: no nos deja en la eternidad del Verbo como en una altura que no baja. Nos lleva a esto: Y aquel Verbo fue hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad. Juan 1:14.",
     "cita": "Juan 1:14"
   },
   {
     "n": 9,
     "slug": "dia-9",
-    "titulo": "El libro de los principios: recorrido panorámico por Génesis",
+    "titulo": "El libro de los principios: Génesis a la luz de la simiente",
     "versiculo": "Y pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar.",
-    "intro": "En los días anteriores aprendimos las lenguas bíblicas, los principios de interpretación, y practicamos la exégesis en el prólogo de Juan. Hoy cambiamos de escala. En lugar de mirar un pasaje con lupa, vamos a subir a una montaña y mirar un libro entero desde lo alto. Y el libro que escogemos es el primero de la Biblia: Génesis.",
+    "intro": "En los días anteriores aprendimos las lenguas al servicio de un texto, y el modo de usar bien la Palabra, y vimos al Verbo hecho carne. Hoy cambiamos de escala, pero no de centro. En lugar de un prólogo con lupa, miramos un libro entero, el primero, y no lo recorreremos como un inventario de capítulos, ni como un álbum de orígenes curiosos. Lo leeremos como el libro en el que Dios, desde el huerto, pone una enemistad y una promesa: Y pondré enemistad entre ti y la mujer, y entre tu simiente y la simiente suya; ésta te herirá en la cabeza, y tú le herirás en el calcañar. Génesis 3:15.",
     "cita": "Génesis 3:15"
   },
   {
     "n": 10,
     "slug": "dia-10",
-    "titulo": "Si Cristo no resucitó: apologética de la resurrección a partir de primera de Corintios quince",
+    "titulo": "Si Cristo no resucitó: la resurrección, conforme a las Escrituras, en 1 Corintios 15",
     "versiculo": "Porque primeramente os he enseñado lo que asimismo recibí: Que Cristo murió por nuestros pecados, conforme a las Escrituras; y que fue sepultado, y que resucitó al tercer día, conforme a las Escrituras;",
-    "intro": "Llegamos al día diez, que cierra la primera serie de esta escuela. Hemos estudiado la autoridad de la Escritura, su canon, sus lenguas, los principios para interpretarla, la exégesis de Juan uno y el panorama de Génesis. Hoy vamos a estudiar el acontecimiento sobre el que descansa todo lo demás: la resurrección corporal de Jesucristo. Y lo haremos desde dos ángulos a la vez. Por un lado, haremos una lectura atenta de primera de Corintios quince, el capítulo más extenso de la Biblia sobre la resurrección. Por otro lado, aprenderemos apologética, es decir, cómo presentar y defender con razones la verdad de la fe.",
+    "intro": "Cerramos estos diez días donde debe cerrarse toda escuela que haya hablado de la Palabra, del canon, de las lenguas, de Cristo y de Génesis: en la resurrección corporal de Jesucristo. El hilo de la simiente, la herida del calcañar y el golpe a la cabeza no se entienden del todo sin este capítulo. Pablo no nos deja con una idea de supervivencia, ni con un rumor piadoso. Nos deja con un evangelio recibido, proclamado y testificado, y con una consecuencia que no admite un encogerse de hombros: si Cristo no resucitó, vana es nuestra predicación, vana es nuestra fe, y aún estáis en vuestros pecados. El texto que memorizaremos es el centro de ese evangelio: Porque primeramente os he enseñado lo que asimismo recibí: Que Cristo murió por nuestros pecados, conforme a las Escrituras; y que fue sepultado, y que resucitó al tercer día, conforme a las Escrituras; 1 Corintios 15:3-4.",
     "cita": "1 Corintios 15:3-4"
   },
   {
