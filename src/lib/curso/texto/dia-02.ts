@@ -1,16 +1,20 @@
-/** Generado desde el txt del Día 2 en Drive (carpeta «Audios para ElevenLabs (txt)»). No editar a mano. */
+/** Generado desde el texto reescrito del Día 2 (Drive: Lecciones para leer). No editar a mano. */
 const bloques: ["h" | "p" | "q", string][] = [
+[
+"p",
+"Escuela Bíblica Cielo Efata, por el Dr. (h. c.) Alejandro Sirit."
+],
 [
 "h",
 "Introducción"
 ],
 [
 "p",
-"Ayer entramos por la puerta del sabio: el temor de Jehová, el corazón preparado de Esdras, el orden de inquirir, cumplir y enseñar. Hoy ponemos el primer fundamento de todo el edificio, y es una afirmación que la Biblia hace de sí misma desde su primera página hasta la última: Dios ha hablado. Si Dios no hubiera hablado, toda religión sería un esfuerzo humano por adivinar lo que hay detrás del silencio. Pero el Dios de la Escritura no es mudo. Es el Dios que dijo sea la luz, y fue la luz. Es el Dios que llamó a Abraham, que habló a Moisés cara a cara como habla cualquiera a su compañero, que puso sus palabras en la boca de los profetas, y que en estos postreros días nos ha hablado por el Hijo."
+"Ayer entramos por la puerta del sabio: el temor de Jehová, el corazón preparado de Esdras, el orden de inquirir, cumplir y enseñar, y Cristo, que nos ha sido hecho sabiduría de Dios. Hoy ponemos el primer fundamento doctrinal de todo el edificio, y es una afirmación que la Biblia hace de sí misma desde su primera página hasta la última: Dios ha hablado. Si Dios no hubiera hablado, toda búsqueda de lo divino sería un esfuerzo humano por adivinar lo que hay detrás del silencio. Pero el Dios de la Escritura no es mudo. Es el Dios que dijo que fuese la luz, y fue la luz. Es el Dios que llamó a Abraham, que habló a Moisés, que puso sus palabras en la boca de los profetas, y que en estos postreros días nos ha hablado por el Hijo."
 ],
 [
 "p",
-"La lección de hoy tiene tres grandes partes. En la primera estudiaremos la revelación: la manera en que Dios se da a conocer, tanto en la creación y la conciencia como en su Palabra. En la segunda estudiaremos la inspiración: qué quiere decir que toda la Escritura sea inspirada por Dios, cómo obró el Espíritu Santo en los escritores, y qué no quiere decir. En la tercera estudiaremos las consecuencias: la autoridad, la verdad sin error, la suficiencia, la claridad y la preservación de la Escritura. Y para que todo esto no quede en ideas, vamos a caminar con un profeta que vio con sus propios ojos cómo un rey intentaba destruir la Palabra de Dios con un cortaplumas y un brasero, y cómo la Palabra sobrevivió."
+"La lección de hoy tiene un hilo, y no debemos perderlo. Primero caminaremos con un profeta que vio cómo un rey intentaba destruir la Palabra de Dios con un cortaplumas y un brasero, y cómo la Palabra sobrevivió, y aun creció. Luego estudiaremos la revelación: la manera en que Dios se da a conocer, tanto en la creación, la conciencia y la providencia, como en su Palabra y, de manera final, en el Hijo. Después estudiaremos la inspiración: qué quiere decir que toda la Escritura sea inspirada por Dios, cómo obró el Espíritu Santo en los escritores, y qué no quiere decir. De la inspiración se sigue una consecuencia que el temario de esta escuela nombra con toda claridad, y que debemos explicar, no solo sugerir: la inerrancia de la Escritura, esto es, que la Palabra, por ser de Dios, es verdadera en todo lo que afirma, sin mezcla de error. Por último, veremos otras consecuencias que mañana y los días siguientes desarrollarán: la autoridad, la suficiencia, la claridad y la preservación. Hoy las apuntamos para que el edificio no quede a medias."
 ],
 [
 "h",
@@ -18,51 +22,51 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Estamos en Jerusalén, en el cuarto año de Joacim, hijo de Josías, rey de Judá. Corre el año seiscientos cinco antes de Cristo, aproximadamente. El buen rey Josías ha muerto en batalla, y su hijo Joacim gobierna con dureza, con impuestos para Egipto, con violencia contra los profetas. En ese contexto, Dios habla a Jeremías. Escucha cómo empieza el capítulo treinta y seis."
+"Estamos en Jerusalén, en el cuarto año de Joacim, hijo de Josías, rey de Judá, hacia el año seiscientos cinco antes de Cristo. El buen rey Josías ha muerto en batalla, y su hijo gobierna con dureza, con impuestos y con violencia contra los profetas. En ese contexto, Dios habla a Jeremías. Escucha cómo empieza el capítulo treinta y seis, y oye la voz de Jehová en primera persona, porque el texto la da así:"
 ],
 [
 "q",
-"«Aconteció en el cuarto año de Joacim hijo de Josías, rey de Judá, que vino esta palabra de Jehová a Jeremías, diciendo: Toma un rollo de libro, y escribe en él todas las palabras que te he hablado contra Israel y contra Judá, y contra todas las naciones, desde el día que comencé a hablarte, desde los días de Josías hasta hoy. Quizá oiga la casa de Judá todo el mal que yo pienso hacerles, y se arrepienta cada uno de su mal camino, y yo perdonaré su maldad y su pecado.» Así dice Jeremías, capítulo treinta y seis, versículos uno al tres."
+"«Aconteció en el cuarto año de Joacim hijo de Josías, rey de Judá, que vino esta palabra de Jehová a Jeremías, diciendo: Toma un rollo de libro, y escribe en él todas las palabras que te he hablado contra Israel y contra Judá, y contra todas las naciones, desde el día que comencé a hablarte, desde los días de Josías hasta hoy. Quizá oiga la casa de Judá todo el mal que yo pienso hacerles, y se arrepienta cada uno de su mal camino, y yo perdonaré su maldad y su pecado» Jeremías 36:1-3."
 ],
 [
 "p",
-"Observa lo primero: vino esta palabra a Jeremías de parte de Jehová. El profeta no inventa el mensaje; lo recibe. Lo segundo: Dios le ordena escribir. Toma un rollo de libro, y escribe en él todas las palabras que te he hablado. Dios no solo habla; ordena que su habla quede escrita. Lo tercero: el propósito. Quizá oiga la casa de Judá todo el mal que yo pienso hacerles, y se arrepienta cada uno de su mal camino, y yo perdonaré su maldad y su pecado. La Escritura nace con un propósito redentor. Dios escribe para que el hombre se arrepienta y sea perdonado."
+"Observa lo primero: vino esta palabra de Jehová a Jeremías. El profeta no inventa el mensaje; lo recibe. Lo segundo: Dios le ordena escribir. No solo habla; ordena que su habla quede en un rollo. Lo tercero: el propósito no es la curiosidad, ni el archivo, ni el prestigio de un libro santo. El propósito es el arrepentimiento y el perdón. Quizá oiga la casa de Judá… y se arrepienta cada uno de su mal camino, y yo perdonaré. La Escritura nace con un fin redentor. Dios escribe para que el hombre se convierta de su mal camino y sea perdonado. Si hoy estudiamos la doctrina de la inspiración y no oímos esa llamada, habremos entendido el rollo y no el brasero, o el brasero y no el corazón de Dios."
 ],
 [
 "p",
-"Jeremías llamó a Baruc, hijo de Nerías, su secretario, y Baruc escribió en el rollo, de boca de Jeremías, todas las palabras que Jehová le había hablado. Detengámonos en este cuadro, porque es uno de los retratos más claros de lo que llamamos inspiración. La palabra viene de Jehová a Jeremías. Jeremías la dicta. Baruc la escribe con tinta en un rollo. Hay un origen divino, un instrumento humano y un texto escrito. Y el resultado, dice el texto, son las palabras de Jehová."
+"Jeremías llamó a Baruc, hijo de Nerías, su secretario, y Baruc escribió en el rollo, de boca de Jeremías, todas las palabras que Jehová le había hablado. Detengámonos en este cuadro, porque es uno de los retratos más claros de lo que llamamos inspiración. La palabra viene de Jehová a Jeremías. Jeremías la dicta. Baruc la escribe con tinta en un rollo. Hay un origen divino, un instrumento humano y un texto escrito. Y el resultado, dice el texto, son las palabras de Jehová. El que quiera separar esas tres cosas —como si lo divino no llegara a la tinta, o como si la tinta no fuera de Dios— tendrá que pelear con este capítulo."
 ],
 [
 "p",
-"Como Jeremías estaba impedido para entrar en la casa de Jehová, envió a Baruc a leer el rollo en el templo, en un día de ayuno, en los oídos de todo el pueblo. Baruc leyó en el aposento de Gemarías, en el atrio de arriba, a la entrada de la puerta nueva. Un joven llamado Micaías, hijo de Gemarías, oyó todas las palabras y fue a contarlas a los príncipes, que estaban reunidos en el aposento del secretario. Los príncipes mandaron llamar a Baruc y le dijeron: siéntate ahora, y léelo a nosotros. Y cuando oyeron todas aquellas palabras, dice el texto, cada uno se volvió espantado a su compañero. Se dieron cuenta de que aquello no era palabra de hombre. Preguntaron a Baruc cómo había escrito todo aquello, y él respondió: él me dictaba de su boca todas estas palabras, y yo escribía con tinta en el libro. Y los príncipes, que conocían a su rey, dijeron a Baruc: ve y escóndete, tú y Jeremías, y nadie sepa dónde estáis."
-],
-[
-"p",
-"Luego llevaron el rollo al rey. Escucha lo que sucedió."
+"Como Jeremías estaba impedido para entrar en la casa de Jehová, envió a Baruc a leer el rollo en el templo, en un día de ayuno, en los oídos de todo el pueblo. Un joven oyó, fue a los príncipes, los príncipes mandaron llamar a Baruc, y cuando oyeron todas aquellas palabras, cada uno se volvió espantado a su compañero. Preguntaron cómo había escrito todo aquello, y él respondió que Jeremías le dictaba de su boca, y él escribía con tinta en el libro. Los príncipes, que conocían a su rey, dijeron a Baruc que se escondiera, él y Jeremías, y que nadie supiera dónde estaban. Luego llevaron el rollo al rey."
 ],
 [
 "q",
-"«Y envió el rey a Jehudí a que tomase el rollo, el cual lo tomó del aposento de Elisama secretario, y leyó en él Jehudí a oídos del rey, y a oídos de todos los príncipes que junto al rey estaban. Y el rey estaba en la casa de invierno en el mes noveno, y había un brasero ardiendo delante de él. Cuando Jehudí había leído tres o cuatro planas, lo rasgó el rey con un cortaplumas de escriba, y lo echó en el fuego que había en el brasero, hasta que todo el rollo se consumió sobre el fuego que en el brasero había. Y no tuvieron temor ni rasgaron sus vestidos el rey y todos sus siervos que oyeron todas estas palabras.» Así dice Jeremías, capítulo treinta y seis, versículos veintiuno al veinticuatro."
+"«Y envió el rey a Jehudí a que tomase el rollo, el cual lo tomó del aposento de Elisama secretario, y leyó en él Jehudí a oídos del rey, y a oídos de todos los príncipes que junto al rey estaban. Y el rey estaba en la casa de invierno en el mes noveno, y había un brasero ardiendo delante de él. Cuando Jehudí había leído tres o cuatro planas, lo rasgó el rey con un cortaplumas de escriba, y lo echó en el fuego que había en el brasero, hasta que todo el rollo se consumió sobre el fuego que en el brasero había. Y no tuvieron temor ni rasgaron sus vestidos el rey y todos sus siervos que oyeron todas estas palabras» Jeremías 36:21-24."
 ],
 [
 "p",
-"Era invierno, el mes noveno, y el rey estaba en la casa de invierno con un brasero ardiendo delante de él. Jehudí leía el rollo. Y cuando había leído tres o cuatro planas, el rey lo rasgaba con un cortaplumas de escriba y lo echaba en el fuego que había en el brasero, hasta que todo el rollo se consumió. Y no tuvieron temor ni rasgaron sus vestidos el rey y todos sus siervos que oyeron todas estas palabras. Recuerda la palabra temor de la lección de ayer: yirá, el principio de la sabiduría. Aquí está el retrato contrario. Un hombre que oye la Palabra de Dios y no tiembla. El texto hace un contraste deliberado: cuando el padre de Joacim, el rey Josías, oyó las palabras del libro de la ley hallado en el templo, rasgó sus vestidos y lloró. El hijo oye las palabras y rasga el rollo. Un rey rasga su corazón; el otro rasga la Escritura. Así se dividen los hombres ante la Palabra de Dios hasta el día de hoy."
+"Era invierno, el mes noveno, y el rey estaba en la casa de invierno con un brasero ardiendo delante de él. Jehudí leía. Y cuando había leído tres o cuatro planas, el rey rasgaba el rollo con un cortaplumas de escriba y lo echaba al fuego, hasta que todo se consumió. Y no tuvieron temor, ni rasgaron sus vestidos. Recuerda la palabra de ayer: el temor de Jehová, principio de la sabiduría. Aquí está el retrato contrario. Un hombre oye la Palabra de Dios y no tiembla. El texto hace un contraste deliberado, que el lector de Reyes ya conoce. Cuando el padre de Joacim, el rey Josías, oyó las palabras del libro de la ley hallado en el templo, rasgó sus vestidos. 2 Reyes 22:11. Y dio esta orden: Id y preguntad a Jehová por mí, y por el pueblo, y por todo Judá, acerca de las palabras de este libro que se ha hallado; porque grande es la ira de Jehová que se ha encendido contra nosotros, por cuanto nuestros padres no escucharon las palabras de este libro, para hacer conforme a todo lo que nos fue escrito. 2 Reyes 22:13. El hijo oye las palabras y rasga el rollo. Un rey rasga su corazón; el otro rasga la Escritura. Así se dividen los hombres ante la Palabra de Dios hasta el día de hoy. Hay un oír que conduce al arrepentimiento, y hay un oír que conduce al cortaplumas."
 ],
 [
 "p",
-"¿Y qué hizo Dios? Escucha."
+"¿Y qué hizo Dios? El rollo quemado no fue el final de la Palabra."
 ],
 [
 "q",
-"«Y vino palabra de Jehová a Jeremías, después que el rey quemó el rollo, las palabras que Baruc había escrito de boca de Jeremías, diciendo: Vuelve a tomar otro rollo, y escribe en él todas las palabras primeras que estaban en el primer rollo que quemó Joacim rey de Judá.» Así dice Jeremías, capítulo treinta y seis, versículos veintisiete al veintiocho."
+"«Y vino palabra de Jehová a Jeremías, después que el rey quemó el rollo, las palabras que Baruc había escrito de boca de Jeremías, diciendo: Vuelve a tomar otro rollo, y escribe en él todas las palabras primeras que estaban en el primer rollo que quemó Joacim rey de Judá» Jeremías 36:27-28."
 ],
 [
 "p",
-"Vuelve a tomar otro rollo, y escribe en él todas las palabras primeras que estaban en el primer rollo que quemó Joacim rey de Judá. Y un poco más adelante el texto añade que Jeremías tomó otro rollo, se lo dio a Baruc, y Baruc escribió en él de boca de Jeremías todas las palabras del libro que quemó en el fuego Joacim, y aun fueron añadidas sobre ellas muchas otras palabras semejantes. El rey quemó un rollo, y Dios produjo un rollo más grande. Ese libro que Joacim quiso destruir es el libro de Jeremías que hoy está en tu Biblia. Ningún cortaplumas y ningún brasero han podido destruir la Palabra de Dios. El rey Joacim murió, su reino cayó, y las palabras que quemó siguen siendo leídas en miles de lenguas."
+"Y un poco más adelante el texto añade el juicio sobre el rey y el desenlace del libro:"
+],
+[
+"q",
+"«Por tanto, así ha dicho Jehová acerca de Joacim rey de Judá: No tendrá quien se siente sobre el trono de David; y su cuerpo será echado al calor del día y al hielo de la noche. Y castigaré su maldad en él, y en su descendencia y en sus siervos; y traeré sobre ellos, y sobre los moradores de Jerusalén y sobre los varones de Judá, todo el mal que les he anunciado y no escucharon. Y tomó Jeremías otro rollo y lo dio a Baruc hijo de Nerías escriba; y escribió en él de boca de Jeremías todas las palabras del libro que quemó en el fuego Joacim rey de Judá; y aun fueron añadidas sobre ellas muchas otras palabras semejantes» Jeremías 36:30-32."
 ],
 [
 "p",
-"Este episodio contiene en miniatura los tres temas de la lección: Dios revela su palabra, Dios inspira su escritura, y Dios preserva lo que ha escrito. Ahora vamos a estudiarlos uno por uno."
+"El rey quemó un rollo, y Dios produjo un rollo más grande. Ese libro que Joacim quiso destruir es el libro de Jeremías que hoy está en tu Biblia. Ningún cortaplumas y ningún brasero han podido acabar con la Palabra de Dios. El rey Joacim murió, su reino cayó, y las palabras que quemó siguen siendo leídas. Este episodio contiene, en miniatura, los temas de la lección: Dios revela su palabra, Dios inspira su escritura, Dios dice la verdad que el rey no quiso oír, y Dios preserva lo que ha escrito. Ahora vamos a estudiarlos uno por uno, no como ideas sueltas, sino como el nervio de la fe que se acerca a la Escritura para conocer a Dios, para ser convencido de pecado, para arrepentirse, para ser perdonado y para mantenerse firme cuando otros encienden el brasero."
 ],
 [
 "h",
@@ -70,43 +74,43 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"La palabra revelar, en hebreo, es galá, hache mil quinientos cuarenta, que significa descubrir, quitar el velo, dejar al desnudo. En griego es apokalýpto, ge seiscientos uno, de donde viene apocalipsis, ge seiscientos dos, que significa descubrimiento o revelación. Revelar es quitar el velo de algo que estaba oculto. Y la primera verdad que necesitamos aprender es que, si Dios no quita el velo, el hombre no puede conocerlo. Dios es infinito; nosotros somos finitos. Dios es santo; nosotros somos pecadores. No subimos a Dios con nuestra inteligencia; Dios desciende a nosotros con su revelación."
+"La palabra revelar, en hebreo, tiene la idea de descubrir, de quitar el velo, de dejar al desnudo.[1] En griego, el verbo que da nombre al Apocalipsis significa también quitar el velo.[2] Revelar es descubrir lo que estaba oculto. Y la primera verdad que necesitamos aprender es que, si Dios no quita el velo, el hombre no puede conocerlo. Dios es infinito; nosotros somos finitos. Dios es santo; nosotros somos pecadores. No subimos a Dios con nuestra inteligencia; Dios desciende a nosotros con su revelación."
 ],
 [
 "p",
-"Los teólogos distinguen dos clases de revelación. La primera se llama revelación general, porque es para todos los hombres, en todo tiempo y lugar. Dios se da a conocer en la creación, en la providencia y en la conciencia. Escucha el salmo diecinueve, uno de los textos más hermosos sobre este tema."
+"Se suele distinguir, y la distinción es útil si no se convierte en una jaula, dos modos en que Dios se da a conocer. El primero se llama revelación general, porque es para todos los hombres, en todo tiempo y lugar. Dios se da a conocer en la creación, en la providencia y en la conciencia. El Salmo diecinueve lo dice con una de las páginas más hermosas de la Escritura:"
 ],
 [
 "q",
-"«Los cielos cuentan la gloria de Dios, Y el firmamento anuncia la obra de sus manos. Un día emite palabra a otro día, Y una noche a otra noche declara sabiduría. No hay lenguaje, ni palabras, Ni es oída su voz. Por toda la tierra salió su voz, Y hasta el extremo del mundo sus palabras. En ellos puso tabernáculo para el sol;» Así dice Salmos, capítulo diecinueve, versículos uno al cuatro."
+"«Los cielos cuentan la gloria de Dios, Y el firmamento anuncia la obra de sus manos. Un día emite palabra a otro día, Y una noche a otra noche declara sabiduría. No hay lenguaje, ni palabras, Ni es oída su voz. Por toda la tierra salió su voz, Y hasta el extremo del mundo sus palabras. En ellos puso tabernáculo para el sol;» Salmo 19:1-4."
 ],
 [
 "p",
-"Los cielos cuentan la gloria de Dios, y el firmamento anuncia la obra de sus manos. Un día emite palabra a otro día, y una noche a otra noche declara sabiduría. No hay lenguaje, ni palabras, ni es oída su voz. Por toda la tierra salió su voz. Observa la paradoja: los cielos no tienen lenguaje ni palabras, y sin embargo su voz sale por toda la tierra. Es un sermón sin palabras, predicado cada día y cada noche, en todos los idiomas a la vez. Cualquier hombre que levanta los ojos a las estrellas está escuchando ese sermón."
-],
-[
-"p",
-"El apóstol Pablo explica en Romanos uno qué es lo que la creación revela, y qué hace el hombre con esa revelación."
+"Los cielos no tienen lenguaje ni palabras, y sin embargo su voz sale por toda la tierra. Es un sermón sin palabras, predicado cada día y cada noche, en todos los idiomas a la vez. Cualquier hombre que levanta los ojos a las estrellas está oyendo ese sermón. El apóstol Pablo explica en Romanos uno qué es lo que la creación revela, y qué hace el hombre con esa revelación."
 ],
 [
 "q",
-"«Porque la ira de Dios se revela desde el cielo contra toda impiedad e injusticia de los hombres que detienen con injusticia la verdad; porque lo que de Dios se conoce les es manifiesto, pues Dios se lo manifestó. Porque las cosas invisibles de él, su eterno poder y deidad, se hacen claramente visibles desde la creación del mundo, siendo entendidas por medio de las cosas hechas, de modo que no tienen excusa. Pues habiendo conocido a Dios, no le glorificaron como a Dios, ni le dieron gracias, sino que se envanecieron en sus razonamientos, y su necio corazón fue entenebrecido.» Así dice Romanos, capítulo uno, versículos dieciocho al veintiuno."
+"«Porque la ira de Dios se revela desde el cielo contra toda impiedad e injusticia de los hombres que detienen con injusticia la verdad; porque lo que de Dios se conoce les es manifiesto, pues Dios se lo manifestó. Porque las cosas invisibles de él, su eterno poder y deidad, se hacen claramente visibles desde la creación del mundo, siendo entendidas por medio de las cosas hechas, de modo que no tienen excusa. Pues habiendo conocido a Dios, no le glorificaron como a Dios, ni le dieron gracias, sino que se envanecieron en sus razonamientos, y su necio corazón fue entenebrecido» Romanos 1:18-21."
 ],
 [
 "p",
-"Lo que de Dios se conoce les es manifiesto, dice Pablo, porque Dios se lo manifestó. Las cosas invisibles de Él, su eterno poder y deidad, se hacen claramente visibles desde la creación del mundo, siendo entendidas por medio de las cosas hechas. Y la conclusión es seria: de modo que no tienen excusa. La revelación general basta para que el hombre sepa que hay un Dios eterno y poderoso, y para que sea responsable delante de Él. Pero no basta para salvarlo. ¿Por qué? Porque el hombre, dice Pablo, detiene con injusticia la verdad. La palabra detener es katéjo, ge dos mil setecientos veintidós: retener, sujetar, suprimir. El hombre conoce a Dios y suprime ese conocimiento. No le glorifica como a Dios, ni le da gracias, sino que se envanece en sus razonamientos, y su necio corazón es entenebrecido."
+"Lo que de Dios se conoce les es manifiesto, porque Dios se lo manifestó. Las cosas invisibles de Él, su eterno poder y deidad, se hacen claramente visibles desde la creación del mundo. Y la conclusión es seria: de modo que no tienen excusa. La revelación general basta para que el hombre sepa que hay un Dios eterno y poderoso, y para que sea responsable delante de Él. Pero no basta para salvarlo. ¿Por qué? Porque el hombre, dice Pablo, detiene con injusticia la verdad. El verbo griego tiene la idea de retener, de sujetar, de suprimir.[3] El hombre conoce a Dios y suprime ese conocimiento. No le glorifica como a Dios, ni le da gracias, sino que se envanece en sus razonamientos, y su necio corazón es entenebrecido. Aquí hay convicción de pecado para todo estudioso: el problema primero no es la falta de pruebas en el cielo, sino la injusticia que detiene la verdad en el corazón."
 ],
 [
 "p",
-"La revelación general también está en la conciencia. Pablo lo dice en el capítulo dos de Romanos: los que no tienen la ley escrita muestran la obra de la ley escrita en sus corazones, dando testimonio su conciencia, y acusándoles o defendiéndoles sus razonamientos. Todo ser humano lleva dentro un sentido del bien y del mal, una voz que le acusa cuando miente o roba. Esa voz no es la Escritura, pero es un eco del Legislador."
+"La revelación general está también en la conciencia. Pablo lo dice en el capítulo dos de Romanos:"
+],
+[
+"q",
+"«Porque cuando los gentiles que no tienen ley, hacen por naturaleza lo que es de la ley, éstos, aunque no tengan ley, son ley para sí mismos, mostrando la obra de la ley escrita en sus corazones, dando testimonio su conciencia, y acusándoles o defendiéndoles sus razonamientos,» Romanos 2:14-15."
 ],
 [
 "p",
-"Y la revelación general está también en la providencia. Cuando Pablo y Bernabé predicaron en Listra a gente que no conocía las Escrituras, les dijeron que Dios no se dejó a sí mismo sin testimonio, haciendo bien, dándonos lluvias del cielo y tiempos fructíferos, llenando de sustento y de alegría nuestros corazones. Así está en Hechos catorce diecisiete. Cada cosecha, cada lluvia, cada pan en la mesa, es un testimonio de la bondad de Dios."
+"Todo ser humano lleva dentro un sentido del bien y del mal, una voz que le acusa cuando miente o roba. Esa voz no es la Escritura, pero es un eco del Legislador. Y la revelación general está también en la providencia. Cuando Pablo y Bernabé hablaron en Listra a gente que no conocía las Escrituras, les dijeron que Dios no se dejó a sí mismo sin testimonio, haciendo bien, dándonos lluvias del cielo y tiempos fructíferos, llenando de sustento y de alegría nuestros corazones. Hechos 14:17. Cada cosecha, cada lluvia, cada pan en la mesa, es un testimonio de la bondad de Dios."
 ],
 [
 "p",
-"Pero aquí está el límite. La creación te dice que Dios es poderoso; no te dice cómo un pecador puede ser perdonado. La conciencia te dice que eres culpable; no te dice dónde está el remedio. La providencia te dice que Dios es bueno; no te dice que envió a su Hijo. Para eso hace falta otra revelación."
+"Pero aquí está el límite, y hay que decirlo con precisión de escuela seria. La creación te dice que Dios es poderoso; no te dice cómo un pecador puede ser perdonado. La conciencia te dice que eres culpable; no te dice dónde está el remedio. La providencia te dice que Dios es bueno; no te dice que envió a su Hijo. Para eso hace falta otra revelación. El que pretenda salvarse solo con las estrellas, o solo con la voz de su pecho, o solo con el pan de cada día, está pidiendo a la revelación general lo que Dios no le encargó. El que, por el contrario, desprecie esa revelación, como si el mundo no hablara de su Hacedor, contradice a Romanos uno y al Salmo diecinueve."
 ],
 [
 "h",
@@ -114,27 +118,35 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"La segunda clase de revelación se llama especial, porque Dios la dio en momentos particulares, a personas particulares, con un contenido particular: su plan de redención. Escucha cómo empieza la epístola a los Hebreos."
+"La segunda manera se llama especial, no porque sea menos pública en su destino final, sino porque Dios la dio en momentos particulares, a personas particulares, con un contenido particular: su plan de redención, y, al cabo, su Palabra escrita y su Hijo. Escucha cómo empieza la epístola a los Hebreos:"
 ],
 [
 "q",
-"«Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo, a quien constituyó heredero de todo, y por quien asimismo hizo el universo; el cual, siendo el resplandor de su gloria, y la imagen misma de su sustancia, y quien sustenta todas las cosas con la palabra de su poder, habiendo efectuado la purificación de nuestros pecados por medio de sí mismo, se sentó a la diestra de la Majestad en las alturas,» Así dice Hebreos, capítulo uno, versículos uno al tres."
+"«Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo, a quien constituyó heredero de todo, y por quien asimismo hizo el universo; el cual, siendo el resplandor de su gloria, y la imagen misma de su sustancia, y quien sustenta todas las cosas con la palabra de su poder, habiendo efectuado la purificación de nuestros pecados por medio de sí mismo, se sentó a la diestra de la Majestad en las alturas,» Hebreos 1:1-3."
 ],
 [
 "p",
-"Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo. Muchas veces: la revelación vino por partes, a lo largo de unos mil quinientos años de historia. Y de muchas maneras: Dios habló por sueños, como a José; por visiones, como a Isaías y a Ezequiel; por la voz audible, como en el Sinaí; por ángeles, como a Daniel y a Zacarías; por el Urim y el Tumim, que llevaba el sumo sacerdote; por teofanías, como cuando el Ángel de Jehová apareció a Abraham y a Gedeón; y por la palabra puesta en la boca de los profetas. Pero toda esa revelación fragmentaria tenía un punto de llegada: el Hijo. En Él Dios ha dicho su palabra final y completa. El Hijo es el resplandor de su gloria y la imagen misma de su sustancia. Ya no esperamos otra revelación que complete o corrija lo que Dios dijo en Cristo."
+"Dios ha hablado. Esa es la tesis. Muchas veces: la revelación vino por partes, a lo largo de siglos. De muchas maneras: por sueños, por visiones, por la voz, por ángeles, por la palabra puesta en la boca de los profetas. Pero toda esa revelación fragmentaria tenía un punto de llegada: el Hijo. En Él Dios ha dicho su palabra final y completa. El Hijo es el resplandor de su gloria y la imagen misma de su sustancia. Ya no esperamos otra revelación que complete o corrija lo que Dios dijo en Cristo. El que anda buscando una palabra nueva que desplace a la Escritura, o una voz interior que la enmiende, no ha entendido lo que significa «en estos postreros días nos ha hablado por el Hijo»."
 ],
 [
 "p",
-"El Evangelio de Juan lo dice de otro modo, en el versículo dieciocho del primer capítulo: a Dios nadie le vio jamás; el unigénito Hijo, que está en el seno del Padre, Él le ha dado a conocer. La palabra dar a conocer es exegéomai, ge mil ochocientos treinta y cuatro. ¿La recuerdas? Es la raíz de la palabra exégesis, que explicamos ayer. El Hijo es el exégeta del Padre. Él saca a la luz, explica, interpreta a Dios para nosotros."
+"El Evangelio de Juan lo dice de otro modo: A Dios nadie le vio jamás; el unigénito Hijo, que está en el seno del Padre, él le ha dado a conocer. Juan 1:18. El verbo griego que se traduce «ha dado a conocer» es el que está en la raíz de nuestra palabra exégesis: sacar a la luz, explicar, relatar.[4] El Hijo es el exégeta del Padre. Él interpreta a Dios para nosotros. Por eso el estudio de la Escritura, si es fiel, no es una huida de Cristo: es el camino por el que el Hijo nos da a conocer al Padre."
 ],
 [
 "p",
-"Ahora bien, ¿cómo llega a nosotros esa revelación especial? Abraham oyó la voz de Dios, pero nosotros no estuvimos allí. Los apóstoles vieron al Señor resucitado, pero nosotros no estuvimos en el aposento alto. La respuesta es que Dios dispuso que su revelación especial quedara escrita. El acto de revelar ocurrió en la historia, en momentos únicos; el registro inspirado de esa revelación permanece para todas las generaciones. Por eso la Escritura no es solamente un testimonio sobre la revelación, ni un eco humano de algo que pasó; es revelación de Dios puesta por escrito. Lo que la Biblia dice, Dios lo dice."
+"Ahora bien, ¿cómo llega a nosotros esa revelación especial? Abraham oyó la voz de Dios, pero nosotros no estuvimos allí. Los apóstoles vieron al Señor resucitado, pero nosotros no estuvimos en el aposento alto. La respuesta es que Dios dispuso que su revelación especial quedara escrita. El acto de revelar ocurrió en la historia, en momentos únicos; el registro inspirado de esa revelación permanece para todas las generaciones. Por eso la Escritura no es solamente un testimonio humano sobre la revelación, ni un eco lejano de algo que pasó: es revelación de Dios puesta por escrito. Lo que la Biblia dice, Dios lo dice."
 ],
 [
 "p",
-"En el Antiguo Testamento esta convicción se expresa con una fórmula que aparece cientos de veces: así dice Jehová. En hebreo es ko amar Adonai, y la palabra amar, decir, es hache quinientos cincuenta y nueve. Otra fórmula frecuente es dice Jehová, neúm Adonai, donde neúm, hache cinco mil dos, significa oráculo, declaración solemne. Y la expresión palabra de Jehová usa la voz dabar, hache mil seiscientos noventa y siete, que significa palabra, pero también asunto, cosa, acontecimiento. Para el hebreo, la palabra de Dios no es un sonido vacío; es un hecho que se cumple. Cuando Dios dice, sucede."
+"En el Antiguo Testamento esta convicción se expresa con una fórmula que aparece cientos de veces: así dice Jehová. Y la palabra de Jehová, en hebreo, no es un sonido vacío: es también asunto, hecho, acontecimiento.[5] Cuando Dios dice, sucede. Isaías lo oye de la boca de Dios mismo:"
+],
+[
+"q",
+"«Porque como desciende de los cielos la lluvia y la nieve, y no vuelve allá, sino que riega la tierra, y la hace germinar y producir, y da semilla al que siembra, y pan al que come, así será mi palabra que sale de mi boca; no volverá a mí vacía, sino que hará lo que yo quiero, y será prosperada en aquello para que la envié» Isaías 55:10-11."
+],
+[
+"p",
+"La Palabra que sale de la boca de Dios no vuelve vacía. Esa es la confianza del estudioso, y también su temor: lo que estudiamos no es un texto inerte. Es la palabra que hace lo que Dios quiere. Puede convertir el alma, como oímos ayer en el Salmo diecinueve. Puede endurecer al que la rasga. No es un juguete del intérprete."
 ],
 [
 "h",
@@ -142,31 +154,27 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Llegamos al texto central. Ya lo escuchamos ayer, pero hoy vamos a detenernos en él palabra por palabra."
+"Llegamos al texto central. Pablo escribe a Timoteo, al final de su carrera, y le recuerda las Sagradas Escrituras que desde la niñez puede hacerle sabio para la salvación por la fe que es en Cristo Jesús. Y añade:"
 ],
 [
 "q",
-"«Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra.» Así dice segunda de Timoteo, capítulo tres, versículos dieciséis al diecisiete."
+"«Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra» 2 Timoteo 3:16-17."
 ],
 [
 "p",
-"Toda la Escritura. La palabra griega es graphé, ge mil ciento veinticuatro, que en el Nuevo Testamento se usa siempre para las Sagradas Escrituras. Pablo dice toda: no solo las partes que nos gustan, no solo las partes que hablan de salvación, no solo las partes doctrinales, sino también las genealogías, las leyes de Levítico, los proverbios y los relatos de batallas. Toda."
+"Toda la Escritura. La palabra griega es la que el Nuevo Testamento reserva para las Sagradas Escrituras.[6] Pablo dice toda: no solo las partes que nos gustan, no solo las que hablan de salvación, no solo las doctrinales, sino también las genealogías, las leyes, los proverbios y los relatos. Toda."
 ],
 [
 "p",
-"Es inspirada por Dios. Aquí está la palabra theópneustos, ge dos mil trescientos quince. Es una palabra compuesta: theós, Dios, y pnéo, soplar, de donde viene pneuma, ge cuatro mil ciento cincuenta y uno, que significa viento, aliento y espíritu. Theópneustos significa soplada por Dios, exhalada por Dios. El diccionario de Lockward, en nuestra biblioteca, lo explica con precisión: el término contiene la idea de algo que sale de, relacionada con soplar, y por eso es más bien expiración que inspiración; el énfasis está en el origen. Añade además que la palabra no era común entre los griegos, y que el historiador judío Josefo usa la idea para decir que los libros del Antiguo Testamento fueron escritos por inspiración que viene de Dios."
+"Es inspirada por Dios. Aquí está la palabra theópneustos.[7] Es una palabra compuesta: Dios, y soplar, de donde viene también la palabra que significa viento, aliento y espíritu. Theópneustos significa soplada por Dios, exhalada por Dios. El acento no cae primero en el estado del escritor, como cuando decimos en español que un poeta está inspirado, sino en el producto: el texto escrito procede del aliento de Dios, como las palabras salen del aliento de quien habla. Recuerda que en Génesis Jehová Dios formó al hombre del polvo de la tierra, y sopló en su nariz aliento de vida, y fue el hombre un ser viviente. Génesis 2:7. El mismo Dios que dio aliento al hombre dio aliento a la Escritura. Por eso la palabra de Dios es viva y eficaz, y más cortante que toda espada de dos filos; y penetra hasta partir el alma y el espíritu, las coyunturas y los tuétanos, y discierne los pensamientos y las intenciones del corazón. Hebreos 4:12."
 ],
 [
 "p",
-"Esto es muy importante. Cuando decimos en español que un poeta está inspirado, queremos decir que tiene un talento especial, un momento de lucidez. Pero Pablo no dice que los escritores fueran inspirados en ese sentido. Dice que la Escritura misma es soplada por Dios. El acento no cae primero en el estado del escritor, sino en el producto: el texto escrito procede del aliento de Dios, como las palabras salen del aliento de quien habla. Recuerda que en Génesis dos siete Dios sopló en la nariz del hombre aliento de vida, y fue el hombre un ser viviente. El mismo Dios que dio aliento al hombre dio aliento a la Escritura. Por eso la Palabra es viva y eficaz, como dice Hebreos cuatro doce."
+"Y útil. La palabra griega significa provechosa, que trae beneficio.[8] Pablo da cuatro usos, y el orden no es casual. Para enseñar: la doctrina, lo que debemos creer. Para redargüir: la reprensión que pone al descubierto el error y el pecado. Para corregir: volver a poner derecho lo que se torció. Para instruir en justicia: la formación del hijo, la disciplina que educa. La Escritura enseña lo verdadero, reprende lo falso, endereza lo torcido y forma en lo recto. Es un ciclo completo. El que solo busca en ella confirmación de lo que ya piensa, no se ha expuesto a ser redargüido. El que solo busca consuelo, no se ha expuesto a ser corregido. El que solo busca datos, no se ha expuesto a ser formado en justicia."
 ],
 [
 "p",
-"Y útil. La palabra es ofélimos, ge cinco mil seiscientos veinticuatro: provechosa, que trae beneficio. Pablo da cuatro usos. Para enseñar: didaskalía, la doctrina, lo que debemos creer. Para redargüir: élegjos, la reprensión que pone al descubierto el error y el pecado. Para corregir: epanórthosis, literalmente volver a poner derecho lo que se torció. Y para instruir en justicia: paideía, la formación del hijo, la disciplina que educa. Observa el orden: la Escritura enseña lo verdadero, reprende lo falso, endereza lo torcido y forma en lo recto. Es un ciclo completo de formación."
-],
-[
-"p",
-"Y el fin: a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra. La palabra perfecto es ártios, ge setecientos treinta y nueve, que significa ajustado, apto, completo para su tarea. Y enteramente preparado es exartízo, ge mil ochocientos veintidós, la misma raíz con un prefijo que intensifica: completamente equipado. Se usaba para un barco que estaba listo para zarpar, con todos sus aparejos. La Escritura equipa al hombre de Dios completamente. No le falta nada para toda buena obra. Esta es la raíz bíblica de la suficiencia de la Escritura, de la que hablaremos más adelante."
+"Y el fin: a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra. Perfecto, aquí, no significa sin pecado pendiente: significa apto, ajustado, completo para su tarea.[9] Enteramente preparado traduce un verbo que intensifica esa idea: completamente equipado, como un barco listo para zarpar.[10] La Escritura equipa al hombre de Dios completamente. No le falta nada para toda buena obra. Esta es la raíz bíblica de la suficiencia de la Escritura, que estudiaremos con más detención en el día once. Hoy basta con verla nacer aquí: si la Escritura es soplada por Dios y deja al hombre de Dios enteramente preparado, no andamos mendigando otra palabra que la complete."
 ],
 [
 "h",
@@ -174,23 +182,23 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Si segunda de Timoteo nos dice el origen de la Escritura, segunda de Pedro nos dice algo del modo. Pedro está a punto de morir. Sabe que pronto dejará su cuerpo, como el Señor le había declarado. Quiere que los creyentes recuerden lo que les enseñó, y les dice que no siguieron fábulas artificiosas, porque él mismo fue testigo ocular de la majestad de Cristo en el monte santo, cuando oyó la voz del cielo que decía: este es mi Hijo amado, en el cual tengo complacencia. Y entonces añade algo sorprendente."
+"Si 2 Timoteo nos dice el origen de la Escritura, 2 Pedro nos dice algo del modo. Pedro está a punto de dejar su cuerpo. Quiere que los creyentes recuerden que no siguieron fábulas artificiosas, porque él mismo fue testigo ocular de la majestad de Cristo en el monte santo, cuando oyó la voz del cielo. Y entonces añade algo que debe humillar a todo el que pone su experiencia por encima del texto:"
 ],
 [
 "q",
-"«Tenemos también la palabra profética más segura, a la cual hacéis bien en estar atentos como a una antorcha que alumbra en lugar oscuro, hasta que el día esclarezca y el lucero de la mañana salga en vuestros corazones; entendiendo primero esto, que ninguna profecía de la Escritura es de interpretación privada, porque nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo.» Así dice segunda de Pedro, capítulo uno, versículos diecinueve al veintiuno."
+"«Tenemos también la palabra profética más segura, a la cual hacéis bien en estar atentos como a una antorcha que alumbra en lugar oscuro, hasta que el día esclarezca y el lucero de la mañana salga en vuestros corazones; entendiendo primero esto, que ninguna profecía de la Escritura es de interpretación privada, porque nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo» 2 Pedro 1:19-21."
 ],
 [
 "p",
-"Tenemos también la palabra profética más segura. Pedro había visto la transfiguración con sus ojos y había oído la voz con sus oídos, y sin embargo dice que la palabra profética escrita es más segura, o, como lo entienden muchos comentaristas, que la experiencia del monte confirmó todavía más la palabra profética. En cualquiera de los dos sentidos, el apóstol pone la Escritura por encima de toda experiencia personal, incluso de la suya. Es como una antorcha que alumbra en lugar oscuro, hasta que el día esclarezca y el lucero de la mañana salga en vuestros corazones."
+"Tenemos también la palabra profética más segura. Pedro había visto la transfiguración con sus ojos y había oído la voz con sus oídos, y sin embargo pone la palabra profética escrita como antorcha que alumbra en lugar oscuro. La experiencia del monte no desplaza a la Escritura; la confirma, y la Escritura permanece para los que no estuvieron en el monte. La voz del Padre, en aquel día, fue esta: Este es mi Hijo amado, en el cual tengo complacencia. 2 Pedro 1:17. Esa voz no se opone al libro: el libro nos la guarda."
 ],
 [
 "p",
-"Y luego explica por qué es tan segura. Entendiendo primero esto, que ninguna profecía de la Escritura es de interpretación privada. La palabra interpretación es epílysis, ge mil novecientos cincuenta y cinco: desatar, explicar, resolver. El contexto inmediato aclara que Pedro está hablando del origen de la profecía: ninguna profecía nació de la explicación propia del profeta, de su manera personal de entender las cosas. Porque nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo."
+"Ninguna profecía de la Escritura es de interpretación privada. La palabra griega tiene la idea de desatar, de explicar, de resolver.[11] El contexto inmediato aclara que Pedro está hablando, en primer lugar, del origen de la profecía: ninguna profecía nació de la explicación propia del profeta, de su manera personal de entender las cosas. Porque nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo. El verbo que nuestra versión traduce «siendo inspirados» es el verbo llevar, traer, conducir.[12] Es la misma palabra que Lucas usa en Hechos veintisiete, cuando el barco de Pablo es llevado por el viento y los marineros no pueden gobernarlo. Los escritores de la Escritura fueron llevados por el Espíritu Santo. Siguieron siendo hombres, con su vocabulario, su estilo, su cultura y su experiencia: Lucas escribe como quien ha investigado con diligencia; Pablo, como quien ha sido formado en la ley; Amós, como un pastor de Tecoa; Juan, con una sencillez profunda. Pero el Espíritu los llevaba, de modo que lo que escribieron fue exactamente lo que Dios quería que escribieran."
 ],
 [
 "p",
-"La expresión siendo inspirados traduce el verbo phéro, ge cinco mil trescientos cuarenta y dos, que significa llevar, traer, conducir. El diccionario de Lockward lo señala: se usa el verbo phero, con el sentido de traer. Es la misma palabra que Lucas usa en Hechos veintisiete, cuando el barco de Pablo es arrastrado por el viento llamado Euroclidón, y dice que dejaban que el barco fuese llevado. Los marineros no podían gobernar la nave; el viento la llevaba. Así fueron llevados los escritores de la Escritura por el Espíritu Santo. Siguieron siendo hombres, con su vocabulario, su estilo, su cultura y su experiencia; Lucas escribe como un médico cuidadoso, Pablo como un rabino formado, Amós como un pastor de Tecoa, Juan con una sencillez profunda. Pero el Espíritu los llevaba, de modo que lo que escribieron fue exactamente lo que Dios quería que escribieran."
+"Pedro, más adelante, llama Escrituras también a las cartas de Pablo, y advierte que en ellas hay cosas difíciles de entender, las cuales los indoctos e inconstantes tuercen, como también las otras Escrituras, para su propia perdición. 2 Pedro 3:16. Dos lecciones nacen de ese versículo, y las dos son de esta escuela. Primera: ya en el tiempo apostólico, las cartas de Pablo se recibían junto a las otras Escrituras. Segunda: la dificultad de un pasaje no autoriza a torcerlo. Hay cosas difíciles. El remedio no es la tijera, ni el cortaplumas de Joacim, ni la invención. El remedio es la atención humilde, la analogía de la fe y la paciencia del que espera."
 ],
 [
 "h",
@@ -198,7 +206,7 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Es útil, para un estudiante serio, aprender a distinguir la doctrina bíblica de algunas maneras equivocadas de entenderla. Lo haremos describiendo las ideas, no a quienes las sostienen."
+"Es útil, para un estudiante serio, aprender a distinguir la doctrina bíblica de algunas maneras equivocadas de entenderla. Lo haremos describiendo las ideas, no a quienes las sostienen, y sin ponerles un partido por nombre."
 ],
 [
 "p",
@@ -214,311 +222,183 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Y hay, en el extremo opuesto, quien piensa que Dios dictó mecánicamente cada palabra a escritores que funcionaban como máquinas de escribir, sin participación de su mente ni de su personalidad. Pero la Biblia misma muestra que los escritores investigaban, como Lucas, que dice en el prólogo de su Evangelio que investigó con diligencia todas las cosas desde su origen; que usaban sus recuerdos, como Pablo cuando no recuerda si bautizó a alguien más en Corinto; que tenían emociones, como Jeremías en sus lamentos. Dios no anuló la humanidad de los escritores; la usó. Algunos han comparado esto con la persona de Cristo, que es verdadero Dios y verdadero hombre sin mezcla y sin pecado. La Escritura es plenamente palabra de Dios y, al mismo tiempo, palabra escrita por hombres, sin que el elemento humano introduzca error, porque el Espíritu los llevaba."
+"Y hay, en el extremo opuesto, quien piensa que Dios dictó mecánicamente cada palabra a escritores que funcionaban como instrumentos sin mente ni personalidad. Pero la Biblia misma muestra que los escritores investigaban, como Lucas, que dice: me ha parecido también a mí, después de haber investigado con diligencia todas las cosas desde su origen, escribírtelas por orden, oh excelentísimo Teófilo, para que conozcas bien la verdad de las cosas en las cuales has sido instruido. Lucas 1:3-4. Muestra que usaban sus recuerdos, y que esos recuerdos, bajo el Espíritu, no introducen error, aunque no pretenden ser una crónica exhaustiva de cada detalle: Pablo puede decir, con honestidad, También bauticé a la familia de Estéfanas; de los demás, no sé si he bautizado a algún otro. 1 Corintios 1:16. Dios no anuló la humanidad de los escritores; la usó. La Escritura es plenamente palabra de Dios y, al mismo tiempo, palabra escrita por hombres, sin que el elemento humano introduzca error, porque el Espíritu los llevaba."
 ],
 [
 "p",
-"La doctrina que enseña la Escritura se suele resumir con dos palabras. Inspiración plenaria, que significa completa: toda la Escritura, no solo partes. E inspiración verbal, que significa que se extiende a las palabras mismas, no solo a las ideas. Dios no dio a los escritores ideas generales para que las vistieran como quisieran; los llevó de tal manera que las palabras escritas son las palabras que Él quería. Por eso tiene sentido estudiar las palabras hebreas y griegas una por una, como hacemos en esta escuela."
+"La doctrina que enseña la Escritura se suele resumir con dos palabras, y conviene aprenderlas con exactitud. Inspiración plenaria, que significa completa: toda la Escritura, no solo partes. E inspiración verbal, que significa que se extiende a las palabras mismas, no solo a las ideas. Dios no dio a los escritores ideas generales para que las vistieran como quisieran; los llevó de tal manera que las palabras escritas son las palabras que Él quería. Por eso tiene sentido estudiar las palabras hebreas y griegas una por una, como hacemos en esta escuela. Si solo se inspiraran «las ideas», el léxico sería un lujo. Si se inspiran las palabras, el léxico es un deber."
+],
+[
+"p",
+"El Señor Jesús lo confirmó de un modo que no deja resquicio. En el sermón del monte dijo:"
+],
+[
+"q",
+"«No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir. Porque de cierto os digo que hasta que pasen el cielo y la tierra, ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido» Mateo 5:17-18."
+],
+[
+"p",
+"La jota es la letra más pequeña del alefato hebreo, apenas un trazo. La tilde traduce una palabra que significa cuernito: el pequeño rasgo que distingue una letra de otra parecida.[13] El Señor afirma que la autoridad de la Escritura llega hasta el último trazo de la última letra. No hay inspiración más verbal que esa. En otra ocasión, discutiendo con los que querían prenderle, citó el Salmo ochenta y dos y añadió una frase que vale como principio de toda la hermenéutica: Si llamó dioses a aquellos a quienes vino la palabra de Dios (y la Escritura no puede ser quebrantada), Juan 10:35. El verbo es desatar, disolver, anular.[14] El argumento del Señor depende de una sola palabra del salmo. Él apoya su razonamiento en esa palabra, porque sabe que la Escritura no puede ser anulada en ninguna de sus partes. Y en su oración sacerdotal, la noche antes de morir, dijo al Padre: Santifícalos en tu verdad; tu palabra es verdad. Juan 17:17. No dijo solamente: tu palabra es verdadera, como quien da una calificación. Dijo: tu palabra es verdad. La Palabra de Dios es la norma misma de la verdad."
+],
+[
+"p",
+"El Señor trató los relatos del Antiguo Testamento como historia real. Habló de Adán y Eva, de Abel, de Noé y del diluvio, de Lot, de Moisés y la zarza, de David, de Elías, de Jonás. No los trató como leyendas edificantes, sino como hechos. Y si el Señor creía así, el discípulo no está por encima de su maestro. Esta es, para el cristiano, la razón última de lo que ahora vamos a nombrar con su nombre."
 ],
 [
 "h",
-"Séptima parte. Lo que el Señor Jesús creía de la Escritura"
+"Séptima parte. La inerrancia de la Escritura"
 ],
 [
 "p",
-"Para un discípulo, la pregunta decisiva no es qué piensan los teólogos de la Biblia, sino qué pensaba el Señor Jesús. Y la respuesta es clara. Escucha lo que dijo en el sermón del monte."
+"De la inspiración se sigue una consecuencia directa, y esta escuela no la dejará sin nombre. Si Dios es verdad, y la Escritura procede de su aliento, la Escritura es verdadera en todo lo que afirma. A esa verdad, sin mezcla de error, la llamamos inerrancia. No es una palabra que la Reina-Valera ponga en un versículo; es el nombre que damos, con rigor, a lo que la Escritura enseña de sí misma y de Dios que la sopló. El temario de este curso la pide, y conviene explicarla con claridad, no solo darla por sobreentendida."
+],
+[
+"p",
+"El fundamento no es un sentimiento nuestro acerca del libro, sino el carácter de Dios. Dios no es hombre, para que mienta, Ni hijo de hombre para que se arrepienta. El dijo, ¿y no hará? Habló, ¿y no lo ejecutará? Números 23:19. Pablo llama a Dios, en la esperanza de la vida eterna, Dios, que no miente. Tito 1:2. Y el autor de Hebreos dice que hay dos cosas inmutables en las cuales es imposible que Dios mienta, para que tengamos un fortísimo consuelo los que hemos acudido a asirnos de la esperanza. Hebreos 6:18. Si es imposible que Dios mienta, la Palabra que Él sopló no puede contener engaño en lo que afirma. El Salmo doce lo dice con una imagen de metalurgia:"
 ],
 [
 "q",
-"«No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir. Porque de cierto os digo que hasta que pasen el cielo y la tierra, ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido.» Así dice Mateo, capítulo cinco, versículos diecisiete al dieciocho."
+"«Las palabras de Jehová son palabras limpias, Como plata refinada en horno de tierra, Purificada siete veces. Tú, Jehová, los guardarás; De esta generación los preservarás para siempre» Salmo 12:6-7."
 ],
 [
 "p",
-"Ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido. La jota es la letra yod, la más pequeña del alfabeto hebreo, apenas un trazo. La tilde traduce la palabra keraía, ge dos mil setecientos sesenta y dos, que significa cuernito: el pequeño rasgo que distingue una letra hebrea de otra parecida, como la dálet de la resh, o la bet de la kaf. Cuando estudiemos el alefato en la lección cinco, escucharás cómo se parecen esas letras. El Señor Jesús afirma que la autoridad de la Escritura llega hasta el último trazo de la última letra. No hay inspiración más verbal que esa."
+"El número siete, en la Escritura, expresa plenitud. La plata purificada siete veces no tiene escoria. Así son las palabras de Dios: sin mezcla de error. El versículo siguiente añade la promesa de guardarlas y preservarlas, a la que volveremos cuando estudiemos la transmisión del texto. Hoy nos detenemos en lo primero: palabras limpias. Toda palabra de Dios es limpia; El es escudo a los que en él esperan. No añadas a sus palabras, para que no te reprenda, Y seas hallado mentiroso. Proverbios 30:5-6. El intérprete que añade a la Palabra lo que ella no dice se expone a la reprensión de Dios. Por eso esta escuela tiene como regla no inventar nada: ni datos, ni citas, ni detalles que el texto no da. Y el salmista lo resume con una frase que bien podría servir de lema de la doctrina: La suma de tu palabra es verdad, Y eterno es todo juicio de tu justicia. Salmo 119:160. No una parte de la palabra, sino su suma. No una verdad provisional, sino eterna como el juicio de su justicia."
 ],
 [
 "p",
-"En otra ocasión, discutiendo con los que querían apedrearle, el Señor citó el salmo ochenta y dos y añadió una frase que vale como principio de toda la hermenéutica."
-],
-[
-"q",
-"«Jesús les respondió: ¿No está escrito en vuestra ley: Yo dije, dioses sois? Si llamó dioses a aquellos a quienes vino la palabra de Dios (y la Escritura no puede ser quebrantada), ¿al que el Padre santificó y envió al mundo, vosotros decís: Tú blasfemas, porque dije: Hijo de Dios soy?» Así dice Juan, capítulo diez, versículos treinta y cuatro al treinta y seis."
+"Conviene, ahora, un distingo, para que la palabra inerrancia no se vuelva un letrero vacío ni una arma tosca. La inerrancia afirma que la Escritura, en todo lo que afirma, es verdadera: no hay en ella error, ni fraude, ni enseñanza falsa. Se habla también de infalibilidad, y las dos palabras no son enemigas. Infalible, en este oficio, significa que la Escritura no puede fallar en su propósito, ni engañar al que la recibe como lo que es: Palabra de Dios. Inerrante significa que, en lo que afirma, no hay error. Una subraya que la Palabra no falla; la otra, que no yerra. En la práctica de esta escuela las sostenemos juntas, porque ambas nacen del mismo Dios que no miente. No las usaremos para pecarnos de sutileza, ni para pelear por un vocabulario; las usaremos para honrar el texto."
 ],
 [
 "p",
-"La Escritura no puede ser quebrantada. El verbo es lýo, ge tres mil ochenta y nueve: desatar, disolver, anular. Observa que el argumento del Señor depende de una sola palabra del salmo: dioses. Él apoya todo su razonamiento en una palabra, porque sabe que la Escritura no puede ser anulada en ninguna de sus partes."
+"—A. S. Cuando digo inerrancia, no digo una teoría inventada para defender un partido. Digo lo que se sigue de que Dios haya hablado y no pueda mentir, y de que el Señor Jesús haya tratado la Escritura como verdad que no puede ser quebrantada."
 ],
 [
 "p",
-"Y en su oración sacerdotal, la noche antes de morir, el Señor dijo al Padre: santifícalos en tu verdad; tu palabra es verdad. Eso es Juan diecisiete diecisiete. Observa que no dice: tu palabra es verdadera, como quien da una calificación, sino: tu palabra es verdad. La Palabra de Dios es la norma misma de la verdad."
+"Ahora el alcance, porque una doctrina sin límites se vuelve o a una jactancia, o a una trampa. La inerrancia se afirma, en primer lugar, de los escritos originales, de aquello que los estudiosos llaman autógrafos: lo que Moisés, Isaías, Pablo o Juan escribieron, llevados por el Espíritu. Ninguno de esos documentos originales ha llegado hasta nuestras manos; lo que tenemos son copias, y copias de copias, y traducciones. Eso no anula la doctrina; la sitúa. Las copias y las traducciones son inerrantes en la medida en que reproducen con fidelidad lo que los originales afirmaron. Un error de copista en un manuscrito particular no es un error de la Escritura soplada por Dios; es un accidente de la transmisión, que la providencia de Dios no ha permitido que robe a su pueblo la Palabra. Mañana y, sobre todo, en el día cuatro, veremos cómo esa providencia ha velado sobre el texto masorético y sobre el Textus Receptus de Scrivener, y por qué esta escuela se fía del texto recibido. Hoy basta con no confundir dos cosas: la inerrancia de lo que Dios sopló, y la honestidad de reconocer que una copia puede tener una variante. El que niega lo primero por lo segundo, ha hecho del cortaplumas un argumento. El que niega lo segundo por lo primero, ha hecho de la fe un milagro que la Escritura no promete: no promete que cada manuscrito esté libre de todo desliz de pluma, sino que su Palabra permanece y que su pueblo la tiene."
 ],
 [
 "p",
-"El Señor trató los relatos del Antiguo Testamento como historia real. Habló de Adán y Eva creados varón y hembra al principio; de Abel, cuya sangre fue derramada; de Noé y del diluvio; de Lot y de su mujer; de Moisés y la zarza; de David comiendo los panes de la proposición; de Elías y la viuda de Sarepta; de Jonás en el vientre del gran pez y de los ninivitas que se arrepintieron. No los trató como leyendas edificantes, sino como hechos. Y si el Señor creía así, el discípulo no está por encima de su maestro."
+"La inerrancia tampoco exige que la Biblia hable con el idioma de un laboratorio moderno, ni que cada número sea una cifra de contabilidad contemporánea, ni que dos narradores inspirados cuenten el mismo suceso con las mismas palabras. La Escritura afirma según el modo en que afirma. Habla, a menudo, el lenguaje de la observación: el sol sale, el sol se pone, y no por eso comete error, como no lo comete el hombre que dice lo mismo al mirar el horizonte. Puede redondear una cifra sin mentir. Puede citar un pasaje según el sentido, o según el texto que el Espíritu le da a usar, sin que eso sea una falsificación. Puede, en los Evangelios, referir un mismo hecho con énfasis distintos, porque cuatro testigos, llevados por el mismo Espíritu, no son cuatro copistas el uno del otro. La contradicción sería que un texto afirmara lo que el otro niega, en el mismo sentido y en el mismo respecto. El que abra dos relatos paralelos y, al hallar una diferencia de detalle, concluya que la Escritura yerra, ha aplicado a la Palabra una regla que no aplicaría ni a dos testigos honrados en un tribunal. El sabio, cuando no entiende, espera y busca, en lugar de juzgar a Dios."
+],
+[
+"p",
+"Pedro ya nos advirtió que hay cosas difíciles de entender, y que los indoctos e inconstantes las tuercen para su perdición. La dificultad no es una refutación. Muchas veces, lo que hoy parece un problema ha resultado, con una lectura más atenta del contexto, de la lengua o de los lugares paralelos, una confirmación. Otras veces, el alumno de esta escuela deberá decir, con humildad: aún no lo veo, y no por eso soltaré la suma de tu palabra, que es verdad. Esa humildad es temor de Jehová. La soberbia es la del que, hallando un nudo, enciende el brasero."
+],
+[
+"p",
+"La inerrancia, por último, no nos ahorra el trabajo de interpretar. «Lo que la Escritura afirma» se sabe leyendo con cuidado: el género, el contexto, la analogía de la fe, el sentido de las palabras. Un salmo de lamento no afirma que Dios haya abandonado para siempre a su siervo, aunque el siervo lo diga en su angustia; afirma esa angustia, y el canon la corrige y la lleva a la alabanza. Un proverbio no es una promesa mecánica. Una parábola no es una crónica. El que use la inerrancia para forzar un género a decir lo que no dice, ha añadido a las palabras de Dios. El que, por miedo a esa fuerza, niegue que Dios ha hablado sin error, ha rasgado el rollo."
+],
+[
+"p",
+"Así se sostiene el locus, con el peso de un primer ciclo de seminario serio, no con el aparato de una disertación. Dios ha hablado. Toda la Escritura es soplada por Dios. Los santos hombres de Dios hablaron siendo llevados por el Espíritu. Por tanto, la Escritura es inerrante: verdadera en todo lo que afirma, sin mezcla de error. Esa verdad nos convence de pecado, porque nos pone delante de un Dios que no miente y de una Palabra que no se deja torcer. Esa verdad nos llama al arrepentimiento, como el rollo de Jeremías llamaba a Judá a dejar su mal camino para ser perdonada. Esa verdad nos lleva a Cristo, la Palabra hecha carne, que es la verdad y que santifica en la verdad. Y esa verdad nos mantiene firmes cuando el invierno llega y alguien enciende un brasero: la Palabra permanece, y el rey que la quema no la apaga."
 ],
 [
 "h",
-"Octava parte. La Escritura verdadera en todo lo que afirma"
+"Octava parte. El Señor, los apóstoles y la iluminación"
 ],
 [
 "p",
-"De la inspiración se sigue una consecuencia directa. Si Dios es verdad, y la Escritura procede de su aliento, la Escritura es verdadera en todo lo que afirma. Escucha lo que dice el libro de Números sobre el carácter de Dios."
+"Hemos dicho que el Señor trató los relatos del Antiguo Testamento como historia real, y que esa es, para el discípulo, la razón última de la inerrancia. Conviene oírlo en sus propias palabras, no en un resumen, para que nadie piense que hemos inflado un gesto piadoso."
+],
+[
+"p",
+"Cuando le pidieron una señal, respondió:"
 ],
 [
 "q",
-"«Dios no es hombre, para que mienta, Ni hijo de hombre para que se arrepienta. El dijo, ¿y no hará? Habló, ¿y no lo ejecutará?» Así dice Números, capítulo veintitrés, versículo diecinueve."
+"«La generación mala y adúltera demanda señal; pero señal no le será dada, sino la señal del profeta Jonás. Porque como estuvo Jonás en el vientre del gran pez tres días y tres noches, así estará el Hijo del Hombre en el corazón de la tierra tres días y tres noches. Los hombres de Nínive se levantarán en el juicio con esta generación, y la condenarán; porque ellos se arrepintieron a la predicación de Jonás, y he aquí más que Jonás en este lugar» Mateo 12:39-41."
 ],
 [
 "p",
-"Dios no es hombre, para que mienta, ni hijo de hombre para que se arrepienta. Él dijo, ¿y no hará? Habló, ¿y no lo ejecutará? Y Tito uno dos llama a Dios el que no miente. Y Hebreos seis dieciocho dice que es imposible que Dios mienta. De esto se deduce que la Palabra que Él sopló no puede contener engaño."
+"Jonás en el pez no es, en la boca del Señor, una fábula útil. Es el patrón de su propia sepultura y de su propia resurrección. Los hombres de Nínive se levantarán en el juicio: son hombres reales, y su arrepentimiento es real, y condenará a la generación que, teniendo más que Jonás, no se arrepiente. Si Jonás no estuvo en el pez, el ancla de esa analogía se suelta. El Señor no la suelta."
 ],
 [
 "p",
-"El salmo doce lo dice con una imagen de metalurgia."
+"Lo mismo hace con el principio. Preguntado sobre el matrimonio, no acudió a una costumbre, sino a la lectura de Génesis:"
 ],
 [
 "q",
-"«Las palabras de Jehová son palabras limpias, Como plata refinada en horno de tierra, Purificada siete veces. Tú, Jehová, los guardarás; De esta generación los preservarás para siempre.» Así dice Salmos, capítulo doce, versículos seis al siete."
+"«¿No habéis leído que el que los hizo al principio, varón y hembra los hizo, y dijo: Por esto el hombre dejará padre y madre, y se unirá a su mujer, y los dos serán una sola carne? Así que no son ya más dos, sino una sola carne; por tanto, lo que Dios juntó, no lo separe el hombre» Mateo 19:4-6."
 ],
 [
 "p",
-"Las palabras de Jehová son palabras limpias, como plata refinada en horno de tierra, purificada siete veces. El número siete en la Escritura expresa plenitud. La plata purificada siete veces no tiene escoria. Así son las palabras de Dios: sin mezcla de error. Y el versículo siguiente añade: tú, Jehová, los guardarás; de esta generación los preservarás para siempre. Volveremos a esta promesa cuando hablemos de la preservación."
-],
-[
-"p",
-"Y Proverbios treinta lo dice con una advertencia que debe tener muy presente quien estudia y enseña la Escritura."
+"«¿No habéis leído?» El argumento depende de que lo leído sea verdad: que Dios los hizo al principio varón y hembra, y que Él dijo lo que el Génesis pone en su boca. Si el relato fuera una leyenda edificante, el Señor no podría atar con él lo que Dios juntó. Y con Noé, hablando de su venida, dijo:"
 ],
 [
 "q",
-"«Toda palabra de Dios es limpia; El es escudo a los que en él esperan. No añadas a sus palabras, para que no te reprenda, Y seas hallado mentiroso.» Así dice Proverbios, capítulo treinta, versículos cinco al seis."
+"«Mas como en los días de Noé, así será la venida del Hijo del Hombre. Porque como en los días antes del diluvio estaban comiendo y bebiendo, casándose y dando en casamiento, hasta el día en que Noé entró en el arca, y no entendieron hasta que vino el diluvio y se los llevó a todos, así será también la venida del Hijo del Hombre» Mateo 24:37-39."
 ],
 [
 "p",
-"Toda palabra de Dios es limpia. No añadas a sus palabras, para que no te reprenda, y seas hallado mentiroso. El intérprete que añade a la Palabra lo que ella no dice se expone a la reprensión de Dios. Por eso esta escuela tiene como regla no inventar nada: ni datos, ni citas, ni detalles que el texto no da."
+"El diluvio, el arca y los que no entendieron son, para Jesús, la medida de un día venidero. El discípulo que «crea en Cristo» y niegue lo que Cristo afirmó del principio y del diluvio y de Jonás, ha puesto una cuña entre el Señor y las Escrituras que el Señor mismo no puso. Esta escuela no la pondrá."
 ],
 [
 "p",
-"Un estudiante honrado preguntará: ¿y las aparentes contradicciones? Es una pregunta legítima, y le dedicaremos una lección completa de apologética con ayuda del Diccionario de dificultades y aparentes contradicciones bíblicas de John W. Haley, que está en nuestra biblioteca. Por ahora basta decir tres cosas. Primera: una dificultad no es una contradicción; muchas dificultades se resuelven al leer el contexto, al conocer las costumbres antiguas o al entender el idioma original. Segunda: la verdad de la Escritura se refiere a lo que la Escritura afirma, según la intención de su autor y la forma literaria que usa; cuando la Biblia dice que el sol sale, habla en lenguaje de observación, como lo hacemos todos, y no comete error. Tercera: lo que hoy parece un problema ha resultado muchas veces, con nuevos conocimientos, una confirmación. La actitud del sabio es la humildad: si no entiende algo, espera y busca, en lugar de juzgar la Palabra."
+"Los apóstoles hablaron con la misma conciencia. David, al cabo de su vida, no atribuyó sus cánticos a su talento de dulce cantor: El Espíritu de Jehová ha hablado por mí, Y su palabra ha estado en mi lengua. 2 Samuel 23:2. Pedro, en los días de la iglesia naciente, pudo decir: Varones hermanos, era necesario que se cumpliese la Escritura en que el Espíritu Santo habló antes por boca de David acerca de Judas, que fue guía de los que prendieron a Jesús, Hechos 1:16. El Espíritu Santo habló: la boca era la de David. Esa es la inspiración, dicha sin teoría. Y los apóstoles supieron que lo que ellos mismos entregaban no era palabra de hombres. Pablo da gracias de que los tesalonicenses, cuando recibisteis la palabra de Dios que oísteis de nosotros, la recibisteis no como palabra de hombres, sino según es en verdad, la palabra de Dios, la cual actúa en vosotros los creyentes. 1 Tesalonicenses 2:13. Y a los corintios, con una audacia que solo se sostiene si es verdad, escribe: Si alguno se cree profeta, o espiritual, reconozca que lo que os escribo son mandamientos del Señor. 1 Corintios 14:37. No dice: reconozca que son consejos ilustrados. Dice: mandamientos del Señor. Por eso Pedro pudo poner las cartas de Pablo junto a las otras Escrituras. La iglesia no inventó esa dignidad más tarde: la recibió."
+],
+[
+"p",
+"Una última distinción, que evitará mucha confusión en los días que vienen. La inspiración es el acto por el cual el Espíritu llevó a los escritores a poner por escrito, sin error, la Palabra de Dios. Ese acto, en el sentido de 2 Timoteo 3:16 y de 2 Pedro 1:21, no se repite en el lector de cada generación: el canon está cerrado, y no esperamos un nuevo rollo que corrija al que ya tenemos. Distinta es la iluminación: la obra del Espíritu en el que lee o oye, para que perciba lo que Dios ha concedido. Pablo lo dice así:"
+],
+[
+"q",
+"«Y nosotros no hemos recibido el espíritu del mundo, sino el Espíritu que proviene de Dios, para que sepamos lo que Dios nos ha concedido, lo cual también hablamos, no con palabras enseñadas por sabiduría humana, sino con las que enseña el Espíritu, acomodando lo espiritual a lo espiritual. Pero el hombre natural no percibe las cosas que son del Espíritu de Dios, porque para él son locura, y no las puede entender, porque se han de discernir espiritualmente» 1 Corintios 2:12-14."
+],
+[
+"p",
+"El hombre natural puede leer las palabras y no percibirlas. Por eso pedimos, como ayer, que se nos abran los ojos. El Señor prometió a los apóstoles que el Espíritu Santo les enseñaría y les recordaría todo lo que Él les había dicho. Juan 14:26. Esa promesa, en su rigor, sostiene la escritura inspirada de los apóstoles. En un sentido derivado, el mismo Espíritu ilumina hoy al pueblo de Dios para entender lo ya escrito, no para añadir un capítulo. El que confunda iluminación con inspiración acabará poniendo su impresión a la altura del rollo. El que niegue la iluminación acabará tratando la Escritura como un libro que se rinde solo a la inteligencia natural, y Pablo dice que eso no basta."
+],
+[
+"p",
+"Así se cierra el círculo del día. Dios ha revelado. Dios ha inspirado. La Escritura es inerrante. El Señor la leyó como verdad histórica y como Palabra que no puede ser quebrantada. Los apóstoles la recibieron y, llevados por el Espíritu, escribieron mandamientos del Señor. El Espíritu, hoy, ilumina para que oigamos, nos arrepintamos y permanezcamos, no para que encendamos un brasero nuevo."
 ],
 [
 "h",
-"Novena parte. La Escritura suficiente"
+"Novena parte. Autoridad, suficiencia, claridad y preservación"
 ],
 [
 "p",
-"La siguiente consecuencia es la suficiencia. Ya la vimos en segunda de Timoteo tres diecisiete: la Escritura equipa enteramente al hombre de Dios para toda buena obra. Pedro dice algo parecido en su segunda carta, en el capítulo uno, versículo tres: el divino poder de Dios nos ha dado todas las cosas que pertenecen a la vida y a la piedad, mediante el conocimiento de aquel que nos llamó. Y ese conocimiento viene por su Palabra."
+"De la inspiración y de la inerrancia se siguen otras consecuencias, que esta escuela desarrollará en los días siguientes y que hoy debemos ver en germen, para que el cimiento no quede a medias."
 ],
 [
 "p",
-"Suficiencia no significa que la Biblia responda todas las preguntas que podemos hacer. No es un manual de química ni de mecánica. Significa que la Biblia contiene todo lo que necesitamos saber para la salvación, para la fe y para la vida que agrada a Dios, y que no necesitamos otra revelación, otra tradición ni otra autoridad al mismo nivel para completarla. A lo largo de la historia ha habido quienes han puesto al lado de la Escritura, con igual autoridad, las tradiciones de los hombres, o revelaciones nuevas recibidas por supuestos profetas posteriores, o la experiencia interior del creyente. La Escritura responde a todo eso con el principio de Isaías ocho veinte: a la ley y al testimonio. Si no dijeren conforme a esto, es porque no les ha amanecido."
+"La primera es la autoridad. Si Dios ha hablado, su Palabra obliga. No es un voto más en una asamblea de opiniones. El Señor, tentado en el desierto, no respondió con un argumento propio, sino con lo escrito: Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios. Mateo 4:4. Eso es Deuteronomio ocho, llevado a la boca del Hijo. La Escritura tiene autoridad porque es de Dios, no porque nosotros se la concedamos. El hombre se sujeta a ella, o se rebela contra ella; no se sienta a juzgarla. Esta es la raíz de lo que llamamos sola Scriptura: la Escritura es la única regla infalible de fe y de vida. No significa que despreciemos a los maestros, ni a los antiguos testimonios de la fe, ni a la iglesia. Significa que todos ellos están debajo de la Escritura y deben ser examinados por ella, como los de Berea examinaban cada día las Escrituras para ver si estas cosas eran así."
 ],
 [
 "p",
-"El Señor Jesús reprendió a los fariseos precisamente por esto, en Marcos siete: invalidando la palabra de Dios con vuestra tradición que habéis transmitido. Las tradiciones humanas pueden ser útiles mientras se sujetan a la Escritura; cuando la contradicen o la igualan, la invalidan. Y Judas, en el versículo tres de su carta, nos exhorta a contender ardientemente por la fe que ha sido una vez dada a los santos. Una vez: de una vez para siempre. La fe no está en construcción. Fue entregada completa."
+"La segunda es la suficiencia, que ya vimos nacer en 2 Timoteo 3:16-17. La Escritura deja al hombre de Dios enteramente preparado para toda buena obra. No le falta una revelación nueva para conocer a Dios, para ser convencido de pecado, para arrepentirse, para creer en Cristo y para mantenerse firme. En el día once volveremos sobre esta doctrina con más detención, y distinguiremos lo que afirma y lo que no afirma. Hoy basta con no mendigar, junto al rollo, otra llama que lo complete."
 ],
 [
 "p",
-"Esto es lo que se resume con la frase sola Scriptura: la Escritura sola como regla infalible de fe y de práctica. No significa que despreciemos a los maestros, ni a los credos antiguos, ni a los comentaristas, ni a la iglesia. Significa que todos ellos están debajo de la Escritura y deben ser juzgados por ella. La Escritura es la norma que norma y no es normada. Si conoces el libro que Alejandro Sirit tituló con esa frase en latín, Norma normans non normata, ya sabes de qué estamos hablando."
+"La tercera es la claridad. La Escritura no es un enigma reservado a una casta. El pueblo, en la plaza de Nehemías, pudo entender cuando se leía claramente y se ponía el sentido. El sencillo, dice el Salmo diecinueve, es hecho sabio por el testimonio de Jehová. Eso no significa que todo pasaje sea igualmente llano: Pedro habla de cosas difíciles, y esta escuela no las negará. Significa que lo necesario para la salvación, la fe y la vida está dicho de modo que el que tiene oídos, con la ayuda del Espíritu y con la Escritura interpretada por la Escritura, puede entender. La claridad no anula al maestro; lo pone a su servicio, como a los levitas junto a Esdras. En el día doce lo veremos con más vagar."
+],
+[
+"p",
+"La cuarta es la preservación. Jehová guarda sus palabras y las preserva para siempre, dice el Salmo doce. Joacim quemó un rollo, y Dios dictó otro, con muchas otras palabras semejantes. El Señor Jesús leyó, en la sinagoga de Nazaret, una copia del profeta Isaías, siglos después del profeta, y la llamó Escritura, y dijo que se había cumplido. La autoridad no quedó encerrada en un original perdido. El día cuatro será el lugar de esta doctrina: escribas, masoretas, rollos, manuscritos, el Textus Receptus y la Reina-Valera. Hoy solo afirmamos lo que el brasero ya enseñó: ningún fuego apaga lo que Dios ha hablado."
 ],
 [
 "h",
-"Décima parte. La Escritura clara"
+"Décima parte. Lo que esto pide de ti"
 ],
 [
 "p",
-"Otra consecuencia es la claridad. Algunos han enseñado que la Biblia es tan oscura que el creyente común no puede entenderla, y que necesita siempre un intérprete autorizado que le diga qué significa. La Escritura enseña otra cosa. Escucha el salmo diecinueve, en su segunda parte, donde pasa de los cielos a la ley."
+"La doctrina de este día no es un escudo para enorgullecerse, ni un lema para un debate. Es una llamada. El rollo se escribió para que Judá oyera, se arrepintiera y fuera perdonada. La Escritura, soplada por Dios, es útil para redargüir y para corregir. Si has oído que Dios ha hablado, y no has temblado; si has leído que su Palabra es verdad, y sigues deteniéndola con injusticia; si has entendido que Cristo es la Palabra final del Padre, y no has venido a Él, entonces estás más cerca de Joacim que de Josías. El cortaplumas no siempre es de metal. A veces es la indiferencia, o la costumbre, o el versículo usado como adorno, o la desobediencia que oye y no hace."
+],
+[
+"p",
+"Hay, sin embargo, una buena noticia, y es el corazón mismo de la revelación especial. Dios no ha hablado primero para condenar, aunque su Palabra condena. Ha hablado para perdonar. Quizá oiga la casa de Judá… y se arrepienta cada uno de su mal camino, y yo perdonaré su maldad y su pecado. Ese «quizá» no es duda en Dios; es la urgencia de la llamada, la puerta todavía abierta. En estos postreros días nos ha hablado por el Hijo, el cual, habiendo efectuado la purificación de nuestros pecados por medio de sí mismo, se sentó a la diestra de la Majestad en las alturas. La Palabra inerrante nos lleva a un Salvador suficiente. El que se arrepiente y cree no se sujeta a un libro mudo: se sujeta al Dios que ha hablado en su Hijo, y encuentra en la Escritura la antorcha que alumbra hasta que el día esclarezca."
+],
+[
+"p",
+"Mantente, pues, atento a esa antorcha. No torzas lo difícil. No añadas a sus palabras. No pidas a la creación lo que solo el Evangelio da. No pidas a una voz interior lo que el Hijo ya dijo. Inquiere, como Esdras, para cumplir. Y cuando el invierno llegue, y un brasero se encienda, recuerda que el rey que quemó el rollo murió, y que las palabras que quiso destruir siguen siendo leídas, y que tú las tienes hoy en tus manos para vida, si las oyes."
+],
+[
+"p",
+"Hay un versículo, en el umbral de la vida de Israel en el desierto, que el Señor hizo suyo cuando tuvo hambre, y que junta en una sola frase todo lo que hoy hemos visto. Moisés dijo al pueblo que Jehová lo afligió y lo hizo tener hambre, y lo sustentó con maná, para hacerte saber que no sólo de pan vivirá el hombre, mas de todo lo que sale de la boca de Jehová vivirá el hombre. Deuteronomio 8:3. Siglos más tarde, el Hijo, tentado a convertir las piedras en pan, respondió: Escrito está: No sólo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios. Mateo 4:4. Toda palabra que sale de la boca de Dios: esa es la inspiración verbal, dicha sin técnica. Vivirá el hombre: esa es la suficiencia, dicha como pan. Escrito está: esa es la autoridad. El que tiene esa Palabra y corre a otra mesa, o fabrica otro pan, no ha entendido todavía el desierto ni el jardín. El maná se recogía cada día. La Escritura, soplada por Dios, inerrante, clara en lo necesario, preservada para su pueblo, se recibe cada día, no para que el estudioso se jacte de su rollo, sino para que viva, se arrepienta, crea y permanezca, hasta que el día esclarezca y el lucero de la mañana salga en su corazón."
 ],
 [
 "q",
-"«La ley de Jehová es perfecta, que convierte el alma; El testimonio de Jehová es fiel, que hace sabio al sencillo. Los mandamientos de Jehová son rectos, que alegran el corazón; El precepto de Jehová es puro, que alumbra los ojos. El temor de Jehová es limpio, que permanece para siempre; Los juicios de Jehová son verdad, todos justos. Deseables son más que el oro, y más que mucho oro afinado; Y dulces más que miel, y que la que destila del panal. Tu siervo es además amonestado con ellos; En guardarlos hay grande galardón.» Así dice Salmos, capítulo diecinueve, versículos siete al once."
-],
-[
-"p",
-"El testimonio de Jehová es fiel, que hace sabio al sencillo. La palabra sencillo es peti, hache seis mil seiscientos doce, que describe a una persona simple, inexperta, fácil de engañar. La Palabra de Dios hace sabio precisamente a ese. El precepto de Jehová alumbra los ojos. Y el salmo ciento diecinueve dice en el versículo ciento treinta: la exposición de tus palabras alumbra; hace entender a los simples."
-],
-[
-"p",
-"Claridad no quiere decir que todo en la Biblia sea igualmente fácil. Pedro mismo reconoce, en su segunda carta, que en las epístolas de Pablo hay algunas cosas difíciles de entender, las cuales los indoctos e inconstantes tuercen, como también las otras Escrituras, para su propia perdición. Lo que quiere decir es que lo necesario para la salvación y para la vida cristiana está expresado con suficiente claridad para que cualquier persona que lea con atención y oración pueda entenderlo. Los pasajes difíciles se iluminan con los claros. Esa es una regla de oro de la hermenéutica que estudiaremos en la lección siete."
-],
-[
-"h",
-"Undécima parte. La Escritura preservada"
-],
-[
-"p",
-"Volvamos al rollo quemado. El rey Joacim quiso borrar la Palabra, y Dios la escribió de nuevo, y más amplia. Esa escena es una parábola de la historia de la Biblia. Escucha lo que dice Isaías."
-],
-[
-"q",
-"«Voz que decía: Da voces. Y yo respondí: ¿Qué tengo que decir a voces? Que toda carne es hierba, y toda su gloria como flor del campo. La hierba se seca, y la flor se marchita, porque el viento de Jehová sopló en ella; ciertamente como hierba es el pueblo. Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre.» Así dice Isaías, capítulo cuarenta, versículos seis al ocho."
-],
-[
-"p",
-"Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre. Y el Señor Jesús lo dijo con sus propios labios en Mateo veinticuatro treinta y cinco: el cielo y la tierra pasarán, pero mis palabras no pasarán. Pedro cita el texto de Isaías en su primera carta y lo aplica al evangelio que se predicó a sus lectores."
-],
-[
-"q",
-"«siendo renacidos, no de simiente corruptible, sino de incorruptible, por la palabra de Dios que vive y permanece para siempre. Porque: Toda carne es como hierba, Y toda la gloria del hombre como flor de la hierba. La hierba se seca, y la flor se cae; Mas la palabra del Señor permanece para siempre. Y esta es la palabra que por el evangelio os ha sido anunciada.» Así dice primera de Pedro, capítulo uno, versículos veintitrés al veinticinco."
-],
-[
-"p",
-"Siendo renacidos, no de simiente corruptible, sino de incorruptible, por la palabra de Dios que vive y permanece para siempre. Aquí la preservación de la Palabra y la regeneración del creyente aparecen juntas. La Palabra que no muere es la semilla de la vida que no muere. El mismo Dios que preserva su Palabra preserva a los que nacen por ella."
-],
-[
-"p",
-"Dios no prometió preservar su Palabra por medio de un milagro que impidiera todo error de copia en cada manuscrito, sino por medio de su providencia, que vela sobre la transmisión del texto a lo largo de los siglos, de modo que su pueblo siempre ha tenido la Palabra de Dios. Esta convicción es la que sostiene nuestra confianza en el texto que la iglesia recibió y usó: el texto masorético del Antiguo Testamento, copiado con un cuidado extraordinario por generaciones de escribas, y el texto griego del Nuevo Testamento que se imprimió en el siglo dieciséis y que se conoce como Textus Receptus, el texto recibido. Le dedicaremos la lección cuatro, y allí veremos los hechos históricos con detalle."
-],
-[
-"h",
-"Duodécima parte. El Espíritu que ilumina"
-],
-[
-"p",
-"Una última verdad completa el cuadro. El mismo Espíritu que llevó a los escritores es el que abre el entendimiento de los lectores. A la obra del Espíritu en los escritores la llamamos inspiración; a su obra en los lectores, iluminación. Escucha a Pablo."
-],
-[
-"q",
-"«Y nosotros no hemos recibido el espíritu del mundo, sino el Espíritu que proviene de Dios, para que sepamos lo que Dios nos ha concedido, lo cual también hablamos, no con palabras enseñadas por sabiduría humana, sino con las que enseña el Espíritu, acomodando lo espiritual a lo espiritual. Pero el hombre natural no percibe las cosas que son del Espíritu de Dios, porque para él son locura, y no las puede entender, porque se han de discernir espiritualmente.» Así dice primera de Corintios, capítulo dos, versículos doce al catorce."
-],
-[
-"p",
-"Hemos recibido el Espíritu que proviene de Dios, para que sepamos lo que Dios nos ha concedido. Y el hombre natural no percibe las cosas que son del Espíritu de Dios, porque para él son locura, y no las puede entender, porque se han de discernir espiritualmente. La palabra discernir es anakríno, ge trescientos cincuenta: examinar, investigar, juzgar con cuidado. Sin el Espíritu, el hombre puede leer las palabras, conocer la gramática y la historia, y aun así no recibir las cosas de Dios. Por eso los príncipes de Joacim temblaron, y el rey no. Por eso Esdras lloró, y otros no. La iluminación no añade nada al texto; abre los ojos del lector para ver lo que el texto ya dice."
-],
-[
-"p",
-"Esto tiene una aplicación muy personal. Si al escuchar estas lecciones sientes que la Palabra te muestra tu pecado, no es un accidente. Es el Espíritu de Dios haciendo su obra. Juan dieciséis ocho dice que el Espíritu convencerá al mundo de pecado, de justicia y de juicio. El que tiembla ante la Palabra está más cerca del reino que el que la quema. Y el que tiembla y se vuelve a Cristo encuentra perdón. La misma Palabra que anunció juicio a Joacim anunció en el mismo libro, en Jeremías treinta y uno, el nuevo pacto: perdonaré la maldad de ellos, y no me acordaré más de su pecado."
-],
-[
-"h",
-"Decimotercera parte. Cómo vive el que cree que Dios ha hablado"
-],
-[
-"p",
-"Una doctrina que no cambia la vida no ha sido entendida. Si de verdad creemos que la Escritura es soplada por Dios, eso debe notarse en cinco hábitos concretos."
-],
-[
-"p",
-"El primero es la reverencia. Isaías sesenta y seis dos dice: miraré a aquel que es pobre y humilde de espíritu, y que tiembla a mi palabra. Antes de abrir la Biblia, el creyente se recuerda a sí mismo que va a escuchar a Dios. Por eso es buena costumbre comenzar cada lectura con una breve oración, como la del salmista: abre mis ojos, y miraré las maravillas de tu ley."
-],
-[
-"q",
-"«Abre mis ojos, y miraré Las maravillas de tu ley.» Así dice Salmos, capítulo ciento diecinueve, versículo dieciocho."
-],
-[
-"p",
-"El segundo es la atención a las palabras. Si la inspiración es verbal, cada palabra cuenta. El estudiante no lee la Biblia como quien hojea un periódico, sino despacio, preguntando por qué el texto dice esto y no otra cosa, por qué usa este verbo, por qué repite esta expresión. Por eso en esta escuela aprenderemos hebreo y griego, y por eso usamos los números de Strong: para llegar a la palabra que el Espíritu escogió."
-],
-[
-"p",
-"El tercero es la obediencia. Santiago uno veintidós dice: sed hacedores de la palabra, y no tan solamente oidores, engañándoos a vosotros mismos. Esdras, recuérdalo, preparó su corazón para inquirir y para cumplir antes de enseñar. Quien estudia la Biblia sin intención de obedecerla acumula condenación, no sabiduría."
-],
-[
-"p",
-"El cuarto es la memoria. El salmo ciento diecinueve, en el versículo once, dice: en mi corazón he guardado tus dichos, para no pecar contra ti. Si la Palabra es el aliento de Dios, vale la pena guardarla dentro. Esta semana te propongo memorizar segunda de Timoteo tres dieciséis y diecisiete. Repítelo en voz alta mañana y noche hasta que lo digas sin mirar."
-],
-[
-"p",
-"El quinto es la confianza en medio de la oposición. Jeremías vio quemar su rollo, fue encarcelado, metido en una cisterna de lodo, y llamado traidor. Pero la Palabra que él escribió permaneció. El creyente que hoy ve a la Biblia despreciada en universidades, en medios de comunicación y aun en algunos púlpitos, no tiene por qué temer. Muchos reyes han tenido su brasero encendido, y la Palabra ha salido del fuego más amplia. La lámpara sigue encendida."
-],
-[
-"q",
-"«Lámpara es a mis pies tu palabra, Y lumbrera a mi camino.» Así dice Salmos, capítulo ciento diecinueve, versículo ciento cinco."
-],
-[
-"h",
-"Decimocuarta parte. Los apóstoles sabían que escribían Escritura"
-],
-[
-"p",
-"Una pregunta que surge con frecuencia es esta: ¿sabían los escritores del Nuevo Testamento que estaban escribiendo Escritura, o fue la iglesia la que, mucho después, decidió darles esa autoridad? La respuesta del propio Nuevo Testamento es clara, y conviene conocerla, porque prepara la lección de mañana sobre el canon."
-],
-[
-"p",
-"Escucha lo que Pablo escribe a los tesalonicenses, una de sus primeras cartas."
-],
-[
-"q",
-"«Por lo cual también nosotros sin cesar damos gracias a Dios, de que cuando recibisteis la palabra de Dios que oísteis de nosotros, la recibisteis no como palabra de hombres, sino según es en verdad, la palabra de Dios, la cual actúa en vosotros los creyentes.» Así dice primera de Tesalonicenses, capítulo dos, versículo trece."
-],
-[
-"p",
-"Cuando recibisteis la palabra de Dios que oísteis de nosotros, la recibisteis no como palabra de hombres, sino según es en verdad, la palabra de Dios, la cual actúa en vosotros los creyentes. Pablo no se presenta como un pensador religioso que comparte sus opiniones. Afirma que su predicación es palabra de Dios, y alaba a los tesalonicenses porque la recibieron como tal."
-],
-[
-"p",
-"A los corintios, que se creían muy espirituales, les escribe en primera de Corintios catorce treinta y siete: si alguno se cree profeta, o espiritual, reconozca que lo que os escribo son mandamientos del Señor. El apóstol pone sus cartas al nivel de los mandamientos de Cristo."
-],
-[
-"p",
-"Más llamativo todavía es lo que hace Pablo en primera de Timoteo cinco dieciocho. Para probar que el obrero es digno de su salario, escribe: pues la Escritura dice: no pondrás bozal al buey que trilla; y: digno es el obrero de su salario. La primera cita es de Deuteronomio veinticinco cuatro. La segunda es una frase del Señor Jesús que aparece en el Evangelio de Lucas, capítulo diez, versículo siete. Pablo las une bajo una misma introducción: la Escritura dice. Para el apóstol, las palabras de Jesús registradas en un evangelio tienen la misma autoridad que la ley de Moisés."
-],
-[
-"p",
-"Y Pedro, en su segunda carta, hace lo mismo con las cartas de Pablo."
-],
-[
-"q",
-"«Y tened entendido que la paciencia de nuestro Señor es para salvación; como también nuestro amado hermano Pablo, según la sabiduría que le ha sido dada, os ha escrito, casi en todas sus epístolas, hablando en ellas de estas cosas; entre las cuales hay algunas difíciles de entender, las cuales los indoctos e inconstantes tuercen, como también las otras Escrituras, para su propia perdición.» Así dice segunda de Pedro, capítulo tres, versículos quince al dieciséis."
-],
-[
-"p",
-"Nuestro amado hermano Pablo, según la sabiduría que le ha sido dada, os ha escrito, casi en todas sus epístolas, hablando en ellas de estas cosas; entre las cuales hay algunas difíciles de entender, las cuales los indoctos e inconstantes tuercen, como también las otras Escrituras, para su propia perdición. Observa la expresión: como también las otras Escrituras. Pedro coloca las cartas de Pablo en la categoría de Escritura, junto a los libros del Antiguo Testamento. Y lo hace en vida de ambos apóstoles, no siglos después."
-],
-[
-"p",
-"Hay además una promesa del Señor Jesús que explica todo esto. En el aposento alto, la noche antes de su muerte, dijo a los once: el Consolador, el Espíritu Santo, a quien el Padre enviará en mi nombre, él os enseñará todas las cosas, y os recordará todo lo que yo os he dicho. Así está en Juan catorce veintiséis. Y en el capítulo dieciséis añade: cuando venga el Espíritu de verdad, él os guiará a toda la verdad. El Señor prometió a sus apóstoles una obra especial del Espíritu para que recordaran con exactitud sus palabras y fueran guiados a toda la verdad. Los evangelios son el cumplimiento de la primera promesa; las epístolas, el de la segunda. Por eso Pablo puede decir, en Efesios dos veinte, que la iglesia está edificada sobre el fundamento de los apóstoles y profetas, siendo la principal piedra del ángulo Jesucristo mismo."
-],
-[
-"p",
-"Este punto es decisivo para la lección del canon. La iglesia no creó la autoridad de los libros del Nuevo Testamento; la reconoció. Los libros tenían autoridad porque Dios los inspiró, y el pueblo de Dios, guiado por el Espíritu, reconoció en ellos la voz de su Pastor. El Señor dijo en Juan diez veintisiete: mis ovejas oyen mi voz, y yo las conozco, y me siguen."
-],
-[
-"h",
-"Decimoquinta parte. Cristo, la Palabra viva, y la Escritura, la Palabra escrita"
-],
-[
-"p",
-"Para terminar el cuerpo de la lección, quiero que veas la relación entre las dos maneras en que la Biblia usa la expresión Palabra de Dios. A veces se refiere a la Escritura. Pero el apóstol Juan la usa también para la segunda persona de la Trinidad."
-],
-[
-"q",
-"«En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios.» Así dice Juan, capítulo uno, versículo uno."
-],
-[
-"p",
-"En el principio era el Verbo. La palabra Verbo traduce el griego lógos, ge tres mil cincuenta y seis, que significa palabra, razón, discurso. Juan llama al Hijo de Dios el Verbo, porque Él es la expresión perfecta del Padre, así como la palabra expresa lo que hay en la mente de quien habla. Y en el versículo catorce dice: y aquel Verbo fue hecho carne, y habitó entre nosotros, y vimos su gloria. En la lección ocho haremos la exégesis de este prólogo palabra por palabra."
-],
-[
-"p",
-"¿Cuál es la relación entre Cristo, la Palabra viva, y la Biblia, la Palabra escrita? El Señor Jesús mismo la explicó. Escucha lo que dijo a los judíos que estudiaban las Escrituras sin creer en Él."
-],
-[
-"q",
-"«Escudriñad las Escrituras; porque a vosotros os parece que en ellas tenéis la vida eterna; y ellas son las que dan testimonio de mí; y no queréis venir a mí para que tengáis vida.» Así dice Juan, capítulo cinco, versículos treinta y nueve al cuarenta."
-],
-[
-"p",
-"Escudriñad las Escrituras; porque a vosotros os parece que en ellas tenéis la vida eterna; y ellas son las que dan testimonio de mí; y no queréis venir a mí para que tengáis vida. La palabra escudriñar es ereunáo, ge dos mil cuarenta y cinco, la misma que estudiamos ayer. Estos hombres escudriñaban con gran diligencia, pero se quedaban en el texto sin llegar a la Persona de la que el texto habla. La Escritura da testimonio de Cristo. Es posible estudiar la Biblia durante años, saber hebreo y griego, memorizar capítulos enteros, y perderse la vida eterna, si no se viene a Cristo."
-],
-[
-"p",
-"Y después de su resurrección, el Señor dijo a los discípulos en Lucas veinticuatro cuarenta y cuatro que era necesario que se cumpliese todo lo que está escrito de Él en la ley de Moisés, en los profetas y en los salmos. Y les abrió el entendimiento para que comprendiesen las Escrituras. Ahí están juntas la Palabra viva y la Palabra escrita, y la iluminación que abre el entendimiento. El Cristo resucitado explica las Escrituras, y las Escrituras explican al Cristo resucitado."
-],
-[
-"p",
-"Por eso nunca debemos oponer a Cristo y la Biblia, como hacen quienes dicen que siguen a Jesús pero no a la Biblia. No conocemos a otro Cristo que el Cristo de las Escrituras. Todo lo que sabemos de Él lo sabemos porque está escrito. Y a la vez, nunca debemos quedarnos en la Biblia sin llegar a Cristo. El propósito de toda esta escuela, con sus idiomas, su historia y su doctrina, es que conozcas mejor a Cristo, lo ames más y lo sigas más de cerca."
-],
-[
-"h",
-"Conclusión"
-],
-[
-"p",
-"Hemos recorrido hoy el primer fundamento de la escuela. Dios se revela en la creación, la providencia y la conciencia, lo suficiente para que el hombre sea responsable, pero no para que sea salvo. Dios se reveló de manera especial por los profetas y finalmente por el Hijo, y dispuso que esa revelación quedara escrita. Toda la Escritura es soplada por Dios; sus escritores hablaron llevados por el Espíritu Santo. Por eso la Escritura tiene autoridad, es verdadera en todo lo que afirma, es suficiente para la fe y la vida, es clara en lo necesario, ha sido preservada por la providencia de Dios, y es iluminada por el mismo Espíritu que la inspiró. Y su fin es que el hombre se arrepienta, sea perdonado y sea equipado para toda buena obra."
-],
-[
-"p",
-"Antes del repaso, una palabra personal. Quizá has tenido momentos en los que la Biblia te parecía un libro antiguo y lejano, difícil de entender y fácil de dejar en el estante. Quizá has escuchado a maestros que hablaban de ella con sospecha, como si fuera un conjunto de mitos que hay que corregir con la ciencia moderna. Hoy hemos visto que la Biblia se presenta a sí misma de otra manera: como el aliento de Dios puesto por escrito, como la voz del Pastor que sus ovejas reconocen, como una lámpara en lugar oscuro. Si eso es verdad, y lo es, entonces cada lección de esta escuela es una oportunidad de escuchar a Dios. No te acerques a la Escritura como un crítico que juzga un documento, sino como un hijo que escucha a su Padre. Lee como Josías, que rasgó sus vestidos, y no como Joacim, que rasgó el rollo. Lee como los de Berea, que recibieron la palabra con toda solicitud y escudriñaban cada día las Escrituras. Y lee como Daniel, que, al entender, se puso a orar."
+"«Para siempre, oh Jehová, Permanece tu palabra en los cielos. Salmo 119:89. Esa permanencia es nuestra firmeza. El brasero se apaga. La Palabra no.»"
 ],
 [
 "h",
@@ -526,71 +406,63 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Primera pregunta. ¿Qué hizo el rey Joacim con el rollo de Jeremías, y qué hizo Dios? Respuesta: Joacim lo rasgó con un cortaplumas y lo quemó en el brasero sin temor; Dios mandó escribir otro rollo con todas las palabras del primero y muchas otras semejantes."
+"Ahora vamos a repasar. Contesta cada pregunta en voz alta antes de leer o de oír la respuesta."
 ],
 [
 "p",
-"Segunda pregunta. ¿Qué es la revelación general y cuál es su límite? Respuesta: es el conocimiento de Dios que se da a todos en la creación, la providencia y la conciencia. Basta para que el hombre no tenga excusa, pero no muestra el camino de la salvación."
+"Primera pregunta. ¿Con qué propósito mandó Jehová a Jeremías escribir el rollo, según Jeremías 36:3? Respuesta: para que la casa de Judá oyera el mal que Él pensaba hacerles, se arrepintiera cada uno de su mal camino, y Él perdonara su maldad y su pecado."
 ],
 [
 "p",
-"Tercera pregunta. ¿Qué dice Hebreos uno sobre la revelación especial? Respuesta: que Dios habló muchas veces y de muchas maneras por los profetas, y en estos postreros días nos ha hablado por el Hijo."
+"Segunda pregunta. ¿Qué sucedió cuando Joacim oyó el rollo, y qué hizo Dios después? Respuesta: el rey lo rasgó con un cortaplumas y lo echó al brasero, sin temor y sin rasgar sus vestidos; Dios mandó escribir otro rollo con todas las palabras primeras, y aun fueron añadidas muchas otras palabras semejantes."
 ],
 [
 "p",
-"Cuarta pregunta. ¿Qué significa theópneustos, ge dos mil trescientos quince? Respuesta: soplada por Dios. El énfasis está en el origen divino del texto."
+"Tercera pregunta. ¿Qué revela la revelación general, y qué no basta para dar? Respuesta: revela el eterno poder y la deidad de Dios, en la creación, la conciencia y la providencia, de modo que el hombre no tiene excusa; no basta para decir cómo un pecador es perdonado, ni que el Padre envió al Hijo."
 ],
 [
 "p",
-"Quinta pregunta. ¿Cuáles son los cuatro usos de la Escritura en segunda de Timoteo tres dieciséis? Respuesta: enseñar, redargüir, corregir e instruir en justicia."
+"Cuarta pregunta. Según Hebreos 1:1-2, ¿cómo y por quién ha hablado Dios de manera final? Respuesta: habiendo hablado muchas veces y de muchas maneras a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo."
 ],
 [
 "p",
-"Sexta pregunta. ¿Qué verbo usa Pedro para decir que los santos hombres fueron inspirados por el Espíritu, y qué imagen sugiere? Respuesta: phéro, ge cinco mil trescientos cuarenta y dos, llevar, como el barco llevado por el viento en Hechos veintisiete."
+"Quinta pregunta. ¿Qué significa theópneustos en 2 Timoteo 3:16? Respuesta: soplada por Dios, exhalada por Dios: el acento cae en el origen del texto escrito, no en un talento poético del escritor."
 ],
 [
 "p",
-"Séptima pregunta. ¿Qué significan inspiración plenaria e inspiración verbal? Respuesta: plenaria significa que abarca toda la Escritura; verbal, que se extiende a las palabras mismas."
+"Sexta pregunta. ¿Qué enseñan, juntas, la inspiración plenaria y la inspiración verbal? Respuesta: plenaria, que toda la Escritura es inspirada, no solo partes; verbal, que la inspiración se extiende a las palabras mismas, no solo a las ideas."
 ],
 [
 "p",
-"Octava pregunta. ¿Qué enseñó el Señor Jesús con la jota y la tilde? Respuesta: que la autoridad de la ley se extiende hasta la letra más pequeña y el trazo más pequeño."
+"Séptima pregunta. ¿Qué es la inerrancia de la Escritura? Respuesta: que la Escritura, por ser Palabra del Dios que no miente, es verdadera en todo lo que afirma, sin mezcla de error."
 ],
 [
 "p",
-"Novena pregunta. ¿Qué dice Juan diez treinta y cinco? Respuesta: que la Escritura no puede ser quebrantada."
+"Octava pregunta. ¿De qué escritos se afirma primero la inerrancia, y cómo se aplica a las copias y traducciones? Respuesta: de los originales; las copias y las traducciones son inerrantes en la medida en que reproducen con fidelidad lo que aquellos afirmaron. Un desliz de copista no es un error de la Palabra soplada por Dios."
 ],
 [
 "p",
-"Décima pregunta. ¿Qué significa sola Scriptura? Respuesta: que la Escritura es la única regla infalible de fe y de vida, y que toda tradición, maestro y experiencia se sujeta a ella."
+"Novena pregunta. ¿Qué no exige la inerrancia? Respuesta: no exige el idioma de un laboratorio moderno, ni que los números sean siempre cifras de contabilidad, ni que dos narradores inspirados cuenten un hecho con las mismas palabras; tampoco promete que cada manuscrito esté libre de todo desliz de pluma."
 ],
 [
 "p",
-"Undécima pregunta. ¿Qué diferencia hay entre inspiración e iluminación? Respuesta: la inspiración es la obra del Espíritu en los escritores, que produjo el texto; la iluminación es su obra en los lectores, que abre el entendimiento para recibirlo."
+"Décima pregunta. Según 2 Pedro 1:19-21, ¿cómo fueron llevados los escritores, y qué lugar tiene la experiencia frente a la Escritura? Respuesta: los santos hombres de Dios hablaron siendo llevados por el Espíritu Santo, no por voluntad humana; Pedro, habiendo visto la majestad en el monte, llama a la palabra profética más segura, antorcha que alumbra en lugar oscuro."
 ],
 [
 "p",
-"Duodécima pregunta. ¿Cuál era el propósito de Dios al mandar escribir el rollo de Jeremías? Respuesta: que el pueblo oyera, se arrepintiera cada uno de su mal camino, y Dios perdonara su maldad y su pecado."
+"Undécima pregunta. ¿Qué dijo el Señor sobre la jota y la tilde, y sobre la Escritura en Juan 10:35? Respuesta: que ni una jota ni una tilde pasará de la ley hasta que todo se haya cumplido; y que la Escritura no puede ser quebrantada."
 ],
 [
 "p",
-"Decimotercera pregunta. ¿Qué hace Pablo en primera de Timoteo cinco dieciocho que muestra la autoridad de los evangelios? Respuesta: cita juntas una frase de Deuteronomio y una frase del Señor registrada en Lucas, y llama a ambas la Escritura."
-],
-[
-"p",
-"Decimocuarta pregunta. ¿Qué dijo el Señor en Juan cinco treinta y nueve sobre el propósito de las Escrituras? Respuesta: que ellas dan testimonio de Él, y que es necesario venir a Él para tener vida."
+"Duodécima pregunta. ¿Qué es sola Scriptura, según se expuso hoy? Respuesta: que la Escritura es la única regla infalible de fe y de vida, y que maestros, testimonios y iglesia están debajo de ella y deben ser examinados por ella."
 ],
 [
 "h",
-"Oración final"
+"Oración"
 ],
 [
 "p",
-"Padre santo, tú no eres un Dios mudo. Te damos gracias porque has hablado, porque tu Hijo te ha dado a conocer, y porque tu Palabra permanece para siempre. Danos el corazón que tiembla ante tu Palabra y no el corazón que la desprecia. Guárdanos de añadir a tus palabras y de quitarles algo. Abre nuestros ojos por tu Espíritu, para que veamos lo que has escrito y lo recibamos con fe. Y que tu Palabra, que no vuelve vacía, haga en nosotros lo que tú quieres. En el nombre de Jesucristo, amén."
-],
-[
-"p",
-"Mañana, en el día tres, estudiaremos el canon: cuáles libros forman parte de la Escritura, cómo los reconoció el pueblo de Dios, qué dijo el Señor Jesús sobre las tres partes de la Biblia hebrea, y por qué hay libros que no pertenecen al canon."
+"Señor, tú has hablado, y tu Palabra es verdad; convéncenos de pecado, llévanos a arrepentirnos y a tu Hijo, y afiánzanos en la Escritura que no puede ser quebrantada. Amén."
 ],
 [
 "h",
@@ -598,15 +470,11 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "h",
-"Repaso de la lección"
+"Recapitulación"
 ],
 [
 "p",
-"La segunda jornada partió de una certeza que sostiene todo el edificio: Dios ha hablado. Si no hubiera hablado, toda religión sería apenas un esfuerzo humano por adivinar detrás del silencio. Su voz resuena en la creación, en la providencia y en la conciencia, y esa revelación general deja al hombre sin excusa; sin embargo, no le muestra el camino de la salvación. Para eso hacía falta la revelación especial, que culmina en el Hijo, como enseña Hebreos uno."
-],
-[
-"p",
-"De esa revelación escrita dice Pablo que toda la Escritura es theópneustos, ge dos mil trescientos quince, soplada por Dios, y el énfasis recae en el origen divino del texto, no en el estado de ánimo del escritor. Pedro explica el modo: los santos hombres de Dios hablaron siendo llevados por el Espíritu Santo, y el verbo phéro, ge cinco mil trescientos cuarenta y dos, evoca un barco empujado por el viento. Por consiguiente, la inspiración es plenaria y verbal, abarca toda la Escritura y alcanza sus palabras, hasta la jota y la tilde, de modo que la Escritura no puede ser quebrantada. Es, además, suficiente, pues equipa enteramente al hombre de Dios para toda buena obra, y no necesitamos otra revelación ni otra autoridad a su nivel: eso es sola Scriptura. La lección se cerró junto al brasero de Joacim, con el rollo quemado y escrito de nuevo, porque la Palabra sale del fuego para que el pecador oiga, se arrepienta y sea perdonado."
+"La segunda lección partió de un brasero en la casa de invierno de Joacim: el rey rasgó el rollo y no rasgó su corazón, y Dios mandó escribir otro, más grande. Vimos la revelación general, que deja al hombre sin excusa y no lo salva, y la revelación especial, que llega a su cima en el Hijo y permanece en la Escritura. Leímos que toda la Escritura es soplada por Dios, útil para enseñar, redargüir, corregir e instruir en justicia, a fin de dejar al hombre de Dios enteramente preparado. Vimos a los escritores llevados por el Espíritu, sin que su humanidad introdujera error, y distinguimos la inspiración de un talento literario, de un núcleo divino con cáscara humana, de una Palabra que «llega a serlo» en la experiencia, y de un dictado mecánico. Nombramos la inerrancia: la Escritura es verdadera en todo lo que afirma, sin mezcla de error, porque Dios no miente. Distinguimos su alcance —los originales, y las copias en la medida de su fidelidad—, lo que no exige, y la humildad ante lo difícil. Y apuntamos la autoridad, la suficiencia, la claridad y la preservación, que los días siguientes desarrollarán."
 ],
 [
 "h",
@@ -614,63 +482,39 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta habrá un silencio breve. Detén el audio si lo necesitas, responde en voz alta con tus propias palabras, y luego escucha la respuesta."
+"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta, detente, responde en voz alta con tus propias palabras, y luego lee la respuesta."
 ],
 [
 "p",
-"Primera pregunta. ¿Por qué la revelación general no basta para la salvación?"
+"Primera pregunta. ¿Por qué el episodio de Jeremías 36 es un retrato de la inspiración, y no solo una anécdota histórica? Pausa para responder. Respuesta: porque muestra un origen divino, un instrumento humano y un texto escrito, y el resultado son las palabras de Jehová; y porque, quemado el rollo, Dios lo restaura y lo aumenta, de modo que la Palabra permanece."
 ],
 [
 "p",
-"Respuesta: porque muestra el poder y la divinidad de Dios y deja al hombre sin excusa, pero no anuncia a Cristo ni el perdón de los pecados. Eso solo lo da la revelación especial."
+"Segunda pregunta. ¿Qué distingue a Josías de Joacim delante de la Palabra? Pausa para responder. Respuesta: Josías, al oír el libro, rasgó sus vestidos y se arrepintió; Joacim rasgó el rollo, no tuvo temor y no rasgó sus vestidos."
 ],
 [
 "p",
-"Segunda pregunta. Explica con tus palabras la diferencia entre decir que la Biblia inspira y decir que la Biblia es inspirada."
+"Tercera pregunta. ¿Por qué la revelación general no salva, si es verdadera y deja al hombre sin excusa? Pausa para responder. Respuesta: porque el hombre detiene con injusticia la verdad, y porque la creación, la conciencia y la providencia no anuncian cómo un pecador es perdonado en el Hijo."
 ],
 [
 "p",
-"Respuesta: decir que inspira habla del efecto que produce en el lector. Decir que es inspirada, soplada por Dios, habla de su origen: el texto mismo procede de Dios."
+"Cuarta pregunta. ¿En qué se distinguen inspiración plenaria, inspiración verbal e inerrancia, y cómo se sostienen juntas? Pausa para responder. Respuesta: la plenaria dice el alcance (toda la Escritura); la verbal, el modo (hasta las palabras); la inerrancia, el resultado (verdadera en todo lo que afirma, sin error). Las tres nacen de que Dios ha soplado la Escritura y no puede mentir."
 ],
 [
 "p",
-"Tercera pregunta. ¿Qué imagen ofrece el verbo phéro sobre la obra del Espíritu en los escritores?"
+"Quinta pregunta. Si un manuscrito tiene una variante, ¿ha fallado la inerrancia? Pausa para responder. Respuesta: no. La inerrancia se afirma de lo que Dios sopló; un desliz de copia es un hecho de la transmisión, no un error de la Palabra. La providencia preserva el texto de modo que el pueblo de Dios lo tiene."
 ],
 [
 "p",
-"Respuesta: la de un barco llevado por el viento. Los escritores escribieron con su lengua y su estilo, pero el Espíritu los llevó, de modo que lo escrito es Palabra de Dios."
+"Sexta pregunta. ¿Cómo debe el estudioso tratar un pasaje difícil, según 2 Pedro 3:16 y el temor de Jehová? Pausa para responder. Respuesta: sin torcerlo, con atención, analogía de la fe y paciencia; no tomando la dificultad como refutación, ni añadiendo lo que el texto no dice."
 ],
 [
 "p",
-"Cuarta pregunta. ¿Por qué importa que la inspiración sea verbal y no solo de las ideas?"
+"Séptima pregunta. ¿Qué autoridad tiene la Escritura, y de dónde la saca? Pausa para responder. Respuesta: obliga porque es Palabra de Dios, no porque el hombre se la conceda; el Señor mismo respondió a la tentación con «Escrito está»."
 ],
 [
 "p",
-"Respuesta: porque el Señor Jesús argumentó desde las palabras mismas y dijo que ni una jota ni una tilde pasará de la ley. Si las palabras no fueran inspiradas, no podríamos confiar en lo que el texto dice exactamente."
-],
-[
-"p",
-"Quinta pregunta. ¿Qué significa que la Escritura es suficiente, y qué no significa?"
-],
-[
-"p",
-"Respuesta: significa que contiene todo lo necesario para la salvación, la fe y la vida que agrada a Dios. No significa que sea un manual de química o de mecánica."
-],
-[
-"p",
-"Sexta pregunta. ¿Qué enseña el rollo quemado de Jeremías sobre la permanencia de la Palabra?"
-],
-[
-"p",
-"Respuesta: que ningún poder humano puede destruirla. Dios mandó escribir otro rollo con las mismas palabras y aun más. La hierba se seca, pero la palabra del Dios nuestro permanece para siempre."
-],
-[
-"p",
-"Séptima pregunta. ¿Cuál es la diferencia entre inspiración e iluminación, y por qué necesitamos las dos?"
-],
-[
-"p",
-"Respuesta: la inspiración produjo el texto en los escritores; la iluminación abre el entendimiento de los lectores. Sin la primera no habría Palabra; sin la segunda, el hombre natural no la recibe."
+"Octava pregunta. ¿A qué llama este día el propósito redentor de la Escritura, ya visible en Jeremías 36:3? Pausa para responder. Respuesta: a que Dios habla y escribe para que el pecador oiga, se arrepienta de su mal camino y sea perdonado, y para llevarlo al Hijo, en quien hay purificación de pecados."
 ],
 [
 "h",
@@ -678,27 +522,27 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Bosquejo para predicar o enseñar. Título: La Palabra que no se quema. Texto: Jeremías treinta y seis, veintisiete y veintiocho."
+"Bosquejo para predicar o enseñar. Título: El rollo en el brasero. Texto: Jeremías 36:21-32."
 ],
 [
 "q",
-"«Y vino palabra de Jehová a Jeremías, después que el rey quemó el rollo, las palabras que Baruc había escrito de boca de Jeremías, diciendo: Vuelve a tomar otro rollo, y escribe en él todas las palabras primeras que estaban en el primer rollo que quemó Joacim rey de Judá.» Así dice Jeremías, capítulo treinta y seis, versículos veintisiete al veintiocho."
+"«Cuando Jehudí había leído tres o cuatro planas, lo rasgó el rey con un cortaplumas de escriba, y lo echó en el fuego que había en el brasero, hasta que todo el rollo se consumió sobre el fuego que en el brasero había» Jeremías 36:23."
 ],
 [
 "p",
-"La idea central del mensaje es que la Palabra de Dios sobrevive a la hostilidad del hombre, porque su autor es el Dios vivo, y por eso merece ser oída con temblor."
+"La idea central es que la Palabra de Dios, soplada por Él y verdadera en todo lo que afirma, no puede ser destruida por el que no la teme; llama al arrepentimiento y al perdón, y permanece cuando el rey ya no está."
 ],
 [
 "p",
-"El predicador puede comenzar narrando la escena en la casa de invierno, el brasero encendido delante del rey, y a Joacim que oye tres o cuatro planas y las corta. Nadie tiembla ni rasga sus vestidos. Ese silencio es el primer movimiento del sermón: el corazón humano no solo ignora la Palabra, sino que a veces la quiere destruir, y el oyente debe preguntarse con honestidad qué páginas ha arrancado él de su propia Biblia."
+"El primer movimiento describe el invierno, el brasero y el cortaplumas. El predicador puede contrastar a Josías, que rasgó sus vestidos, con Joacim, que rasgó el rollo. La congregación debe preguntarse qué hace con la Palabra que oye: si tiembla, o si la trata como un papel que se puede echar al fuego por pedazos, tres o cuatro planas cada vez, hasta que no quede nada."
 ],
 [
 "p",
-"No obstante, el relato no termina en las cenizas. Vino palabra de Jehová a Jeremías después que el rey quemó el rollo, y Dios mandó escribirlo otra vez, con muchas palabras semejantes añadidas. Este segundo movimiento proclama la fidelidad de Dios, que preserva lo que inspiró y cumple lo que anunció."
+"El segundo movimiento proclama lo que Dios hace: vuelve a dictar el rollo, añade palabras, y anuncia juicio sobre el que no escuchó. Aquí se predica la inspiración y la inerrancia sin un vocabulario de escuela: lo que Dios dijo, lo dijo; lo que quemaron, Él lo restauró; su Palabra no miente y no vuelve vacía."
 ],
 [
 "p",
-"El tercer movimiento conduce al Verbo eterno. Los hombres pudieron quemar un rollo y, siglos después, crucificar al Señor de la gloria, pero al tercer día la Palabra hecha carne se levantó de la tumba. El sermón concluye con un llamado a recibir con mansedumbre la palabra implantada, que puede salvar las almas."
+"El tercer movimiento abre la puerta del evangelio, que ya está en el propósito del rollo: se arrepienta cada uno de su mal camino, y yo perdonaré. El sermón no termina en la condenación de Joacim, sino en la llamada a oír, a rasgar el corazón y a venir al Hijo, por quien Dios nos ha hablado en estos postreros días, y en quien hay purificación de pecados. Invita a memorizar 2 Timoteo 3:16-17, y a tratar la Biblia, esta semana, como Palabra de Dios y no como papel de brasero."
 ],
 [
 "h",
@@ -706,15 +550,79 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"El versículo de hoy es segunda de Timoteo, tres, dieciséis y diecisiete, como ya se propuso en la lección."
+"El texto de hoy es 2 Timoteo 3:16-17."
 ],
 [
 "q",
-"«Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra.» Así dice segunda de Timoteo, capítulo tres, versículos dieciséis al diecisiete."
+"«Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra» 2 Timoteo 3:16-17."
 ],
 [
 "p",
-"Repítelo en voz alta mañana y noche hasta que lo digas sin mirar."
+"Repítelo en voz alta hasta que lo digas sin mirar."
+],
+[
+"h",
+"Notas"
+],
+[
+"p",
+"Dr. (h. c.) Alejandro Sirit. Escuela Bíblica Cielo Efata."
+],
+[
+"p",
+"[1] Hebreo galah, H1540: descubrir, quitar el velo, dejar al desnudo."
+],
+[
+"p",
+"[2] Griego apokalýpto, G601: descubrir, revelar; de ahí apokálypsis, G602, revelación."
+],
+[
+"p",
+"[3] Griego katéjo, G2722: retener, sujetar, suprimir. Romanos 1:18, «detienen con injusticia la verdad»."
+],
+[
+"p",
+"[4] Griego exegéomai, G1834: explicar, relatar, dar a conocer. Juan 1:18."
+],
+[
+"p",
+"[5] Hebreo dabar, H1697: palabra, asunto, hecho. La palabra de Jehová no es un sonido vacío."
+],
+[
+"p",
+"[6] Griego graphé, G1124: escritura; en el Nuevo Testamento, las Sagradas Escrituras. 2 Timoteo 3:16."
+],
+[
+"p",
+"[7] Griego theópneustos, G2315: soplada por Dios, exhalada por Dios. De theós, Dios, y pnéo, soplar. 2 Timoteo 3:16."
+],
+[
+"p",
+"[8] Griego ophélimos, G5624: útil, provechoso. 2 Timoteo 3:16."
+],
+[
+"p",
+"[9] Griego ártios, G739: apto, ajustado, completo para su tarea. 2 Timoteo 3:17, «perfecto»."
+],
+[
+"p",
+"[10] Griego exartízo, G1822: equipar completamente. 2 Timoteo 3:17, «enteramente preparado»."
+],
+[
+"p",
+"[11] Griego epílysis, G1955: desatar, explicar, resolver. 2 Pedro 1:20, «interpretación»."
+],
+[
+"p",
+"[12] Griego phéro, G5342: llevar, traer, conducir. 2 Pedro 1:21, «siendo inspirados». En Hechos 27 se usa del barco llevado por el viento."
+],
+[
+"p",
+"[13] Griego keraía, G2762: cuernito, rasgo mínimo de una letra. Mateo 5:18, «tilde». La jota corresponde a la yod hebrea."
+],
+[
+"p",
+"[14] Griego lýo, G3089: desatar, disolver, anular, quebrantar. Juan 10:35, «la Escritura no puede ser quebrantada»."
 ]
 ];
 export default bloques;

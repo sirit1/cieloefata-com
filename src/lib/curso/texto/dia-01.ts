@@ -1,196 +1,208 @@
-/** Generado desde el txt del Día 1 en Drive (carpeta «Audios para ElevenLabs (txt)»). No editar a mano. */
+/** Generado desde el texto reescrito del Día 1 (Drive: Lecciones para leer). No editar a mano. */
 const bloques: ["h" | "p" | "q", string][] = [
+[
+"p",
+"Escuela Bíblica Cielo Efata, por el Dr. (h. c.) Alejandro Sirit."
+],
 [
 "h",
 "Bienvenida"
 ],
 [
 "p",
-"Bienvenido a la primera lección de esta escuela bíblica. Durante muchos días vamos a caminar juntos por la Palabra de Dios con un propósito que conviene decir en voz alta desde el principio: no venimos a acumular datos, sino a conocer a Dios. Un hombre puede aprender los nombres de las veintidós letras hebreas, recitar la lista de los reyes de Judá, distinguir un aoristo de un perfecto y explicar la ruta de los viajes de Pablo, y todavía no haber entendido lo que la Escritura llama sabiduría. Por eso la primera lección no trata de gramática ni de fechas. Trata de la puerta por donde se entra. Si la puerta está mal, todo el edificio queda torcido; si la puerta es la correcta, cada lección posterior encuentra su lugar."
+"Bienvenido a la primera lección de esta escuela bíblica. A lo largo de trescientos sesenta días, repartidos en doce módulos, vamos a caminar juntos por la Palabra de Dios con un propósito que conviene decir en voz alta desde el principio: no venimos a acumular datos, sino a conocer a Dios. Un hombre puede aprender los nombres de las veintidós letras hebreas, recitar la lista de los reyes de Judá, distinguir un aoristo de un perfecto y explicar la ruta de los viajes de Pablo, y todavía no haber entendido lo que la Escritura llama sabiduría. Por eso la primera lección no trata de gramática ni de fechas. Trata de la puerta por donde se entra. Si la puerta está mal, todo el edificio queda torcido; si la puerta es la correcta, cada lección posterior encuentra su lugar."
 ],
 [
 "p",
-"La pregunta de hoy es sencilla y profunda a la vez: ¿qué es un experto bíblico según la Biblia misma? No según las universidades, ni según el prestigio de los títulos, ni según la opinión de la época, sino según lo que Dios dice de los que estudian su Palabra. Para responderla vamos a caminar con un hombre del Antiguo Testamento que es el retrato más claro del estudioso de la Escritura: Esdras, el escriba. Lo veremos llegar de Babilonia a Jerusalén con la ley de su Dios en la mano, lo veremos llorar por el pecado del pueblo, y lo veremos subir a un púlpito de madera para leer la ley desde el alba hasta el mediodía mientras unos levitas ponían el sentido para que el pueblo entendiera. En su vida está, en miniatura, todo el programa de esta escuela."
+"Esta escuela no es un cursillo de ocurrencias piadosas, ni un recuento de anécdotas para consolar el oído. Está pensada con la densidad de un primer ciclo de seminario bíblico serio: el texto, las lenguas, la hermenéutica, los libros, la doctrina, la historia, la predicación y la vida que termina de rodillas. Si más adelante se abre un segundo ciclo de investigación, ese oficio vendrá después, y no se le pondrá un nombre que todavía no le corresponde. Hoy ponemos el cimiento, y el cimiento es una pregunta que la Biblia misma tiene derecho a responder: ¿qué es un experto bíblico según la Escritura?"
 ],
 [
 "p",
-"Esta lección dura algo más de una hora. Está pensada para escucharla con calma, si es posible con la Biblia abierta, y para volver a ella al final de la semana. Al terminar habrá un repaso con preguntas. Contéstalas en voz alta, aunque estés solo. La voz fija lo que el oído recibe."
+"No según las universidades, ni según el prestigio de los títulos, ni según la opinión de la época, sino según lo que Dios dice de los que estudian su Palabra. Para responderla vamos a caminar con un hombre del Antiguo Testamento que es el retrato más claro del estudioso de la Escritura: Esdras, el escriba. Lo veremos llegar de Babilonia a Jerusalén con la ley de su Dios en la mano, lo veremos preparar el corazón antes de abrir el libro, y lo veremos subir a un púlpito de madera para leer la ley desde el alba hasta el mediodía, mientras unos levitas ponían el sentido para que el pueblo entendiera. En su vida está, en miniatura, todo el programa de esta escuela."
+],
+[
+"p",
+"Esta lección está pensada para oírla o leerla con calma, si es posible con la Biblia abierta, y para volver a ella. Al terminar habrá un repaso con preguntas, una autoevaluación, un bosquejo para el púlpito y un versículo para memorizar. Contesta las preguntas en voz alta, aunque estés solo. La voz fija lo que el oído recibe."
 ],
 [
 "h",
-"Primera parte. El hombre que preparó su corazón"
+"Primera parte. La pregunta que no se responde con un título"
 ],
 [
 "p",
-"El libro de Esdras nos lleva al siglo quinto antes de Cristo. El pueblo de Judá ha vuelto del cautiverio en dos oleadas. La primera, bajo Zorobabel, reconstruyó el altar y luego el templo, en medio de oposición y desaliento. Han pasado casi sesenta años desde la dedicación de aquella casa cuando, en el séptimo año del rey Artajerjes de Persia, un sacerdote descendiente de Aarón emprende el viaje de Babilonia a Jerusalén. Su nombre es Esdras, que significa ayuda. El Nuevo Diccionario de la Biblia de Alfonso Lockward, que está en nuestra biblioteca, observa que, aunque Esdras era sacerdote, lo que el texto subraya una y otra vez es su condición de escriba, y que esa palabra se repite unas diez veces en los libros de Esdras y Nehemías. El rey persa lo llama escriba erudito en la ley del Dios del cielo. Ese es su título. No es el de un general ni el de un gobernador, aunque recibió autoridad para nombrar jueces. Es el título de un hombre de la Palabra."
+"Conviene empezar por un distingo, porque la palabra experto puede engañar. En el uso común, un experto es quien sabe más que los demás en un oficio, quien ha acumulado horas, métodos y un lenguaje que el profano no maneja. Nada de eso es, por sí solo, despreciable. Esta escuela te pedirá precisamente ese trabajo: atender a las palabras, aprender las lenguas, seguir el hilo de un libro, distinguir lo que el texto dice de lo que nosotros quisiéramos que dijera. Pero la Escritura conoce a hombres que escudriñan y no vienen, que leen y no oyen, que enseñan y no hacen. El problema no es el estudio. El problema es el estudio que se detiene antes de Cristo y antes de la obediencia."
 ],
 [
 "p",
-"Ahora escucha el versículo que resume su vida. Es uno de los versículos más importantes para cualquier estudiante de la Biblia, y conviene aprenderlo de memoria hoy mismo."
+"El Señor Jesús lo dijo con una claridad que debe acompañarnos trescientos sesenta días. Hablaba con quienes tenían las Escrituras en las manos y se preciaban de conocerlas, y les dijo:"
 ],
 [
 "q",
-"«Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos.» Así dice Esdras, capítulo siete, versículo diez."
+"«Escudriñad las Escrituras; porque a vosotros os parece que en ellas tenéis la vida eterna; y ellas son las que dan testimonio de mí; y no queréis venir a mí para que tengáis vida» Juan 5:39-40."
 ],
 [
 "p",
-"Fíjate en el orden. Primero, Esdras había preparado su corazón. La palabra hebrea traducida preparar es kun, el número Strong hache tres mil quinientos cincuenta y nueve, que tiene la idea de afirmar, establecer, dejar algo firme en su lugar. No se trata de una emoción pasajera, sino de una decisión estable. Esdras había fijado su corazón. Antes de la técnica está la dirección del corazón."
+"El verbo es un imperativo, o se oye como tal en nuestra versión: escudriñad.[7] El Señor no reprende el escudriñar. Reprende el escudriñar que se niega a venir. Ellos buscaban la vida en el pronunciar de las letras, y las letras estaban señalando a una Persona. Habían hecho de la Biblia un fin, cuando la Biblia es testimonio. Habían convertido el estudio en un refugio contra Aquel de quien el estudio da fe. Esa es la primera advertencia de la escuela, y no es una cortesía de entrada: es la puerta. Si vienes a estas lecciones para saber más y no para venir a Cristo, el saber se te volverá acusación."
 ],
 [
 "p",
-"Segundo, para inquirir la ley de Jehová. El verbo es darash, hache mil ochocientos setenta y cinco: buscar, indagar, consultar, preguntar con insistencia. Es el mismo verbo que se usa cuando alguien acude a Dios para consultarle. Esdras no leía la ley de pasada; la interrogaba. De esa raíz saldría, siglos después, la palabra midrash, que designa la explicación de la Escritura. El estudio bíblico verdadero es una búsqueda, y una búsqueda exige tiempo, preguntas y paciencia."
-],
-[
-"p",
-"Tercero, y para cumplirla. El verbo es asah, hache seis mil doscientos trece: hacer, obrar, poner por obra. Esdras no se conformaba con entender. Quería obedecer. Y observa que la obediencia viene antes que la enseñanza. El estudioso que no practica lo que aprende se convierte en un erudito sin autoridad, porque su vida desmiente su doctrina."
-],
-[
-"p",
-"Cuarto, y para enseñar en Israel sus estatutos y decretos. El verbo es lamad, hache tres mil novecientos veinticinco, el mismo que en otra forma significa aprender. En hebreo, enseñar y aprender son dos caras de la misma raíz: quien enseña hace aprender. Esdras estudiaba para practicar, y practicaba para enseñar. Esa es la secuencia de esta escuela: inquirir, cumplir, enseñar."
-],
-[
-"p",
-"Hay todavía una frase que no debemos pasar por alto. Unos versículos antes, el texto dice que el rey le concedió todo lo que pidió porque la mano de Jehová su Dios estaba sobre Esdras. Escucha."
+"Por eso Jeremías nueve no nos deja gloriarnos en el talento. Jehová mismo habla, y su voz debe oírse como suya:"
 ],
 [
 "q",
-"«este Esdras subió de Babilonia. Era escriba diligente en la ley de Moisés, que Jehová Dios de Israel había dado; y le concedió el rey todo lo que pidió, porque la mano de Jehová su Dios estaba sobre Esdras.» Así dice Esdras, capítulo siete, versículo seis."
+"«Así dijo Jehová: No se alabe el sabio en su sabiduría, ni en su valentía se alabe el valiente, ni el rico se alabe en sus riquezas. Mas alábese en esto el que se hubiere de alabar: en entenderme y conocerme, que yo soy Jehová, que hago misericordia, juicio y justicia en la tierra; porque estas cosas quiero, dice Jehová» Jeremías 9:23-24."
 ],
 [
 "p",
-"La mano de Dios estaba sobre él. El estudio de la Escritura no es una conquista humana. Es una gracia. Esdras era diligente, pero su diligencia descansaba en la mano buena de su Dios. Esa frase aparece varias veces en el libro, como un estribillo, y nos recuerda que todo progreso en el conocimiento de la Palabra es don de Dios antes que mérito nuestro."
+"Tres glorias humanas quedan desarmadas: la sabiduría, la valentía y las riquezas. En su lugar, Dios pone un único motivo de alabanza: entenderle y conocerle, y conocerle como el que hace misericordia, juicio y justicia. El experto bíblico, si la palabra tiene derecho a usarse, no es el que ha vencido a otros en una disputa, sino el que ha sido vencido por este conocimiento. El que camina hacia esa meta puede aprender hebreo y griego con provecho. El que camina hacia otra meta puede aprenderlos y endurecerse."
+],
+[
+"p",
+"—A. S. En esta escuela diremos experto en el sentido que la Escritura permite: no el de una casta, sino el del escriba que preparó el corazón, inquirió, cumplió y enseñó, y el del discípulo que viene a Cristo, de quien las Escrituras dan testimonio."
 ],
 [
 "h",
-"Segunda parte. Qué es la sabiduría según la Escritura"
+"Segunda parte. El hombre que preparó su corazón"
 ],
 [
 "p",
-"Antes de seguir con Esdras, necesitamos definir la palabra que da nombre a este curso: sabio. El hebreo tiene una palabra central para sabiduría, jokmá, hache dos mil cuatrocientos cincuenta y uno, y una para sabio, jakam, hache dos mil cuatrocientos cincuenta. Lo interesante es que esas palabras se usan también para la habilidad de los artesanos. Cuando Dios llena a Bezaleel para construir el tabernáculo, le da sabiduría para trabajar el oro, la plata y la madera. La sabiduría bíblica, entonces, no es solamente información; es destreza para vivir. Es saber hacer lo correcto, en el momento correcto, de la manera correcta, delante de Dios."
+"El libro de Esdras nos lleva al siglo quinto antes de Cristo. El pueblo de Judá ha vuelto del cautiverio en dos oleadas. La primera, bajo Zorobabel, reconstruyó el altar y luego el templo, en medio de oposición y desaliento. Han pasado casi sesenta años desde la dedicación de aquella casa cuando, en el séptimo año del rey Artajerjes de Persia, hacia el año cuatrocientos cincuenta y ocho antes de Cristo, un sacerdote descendiente de Aarón emprende el viaje de Babilonia a Jerusalén. Su nombre es Esdras, que significa ayuda. El texto no lo presenta primero como un general, ni como un gobernador, aunque recibió autoridad para nombrar jueces. Lo presenta como escriba. El rey persa lo llama escriba erudito en la ley del Dios del cielo. Ese es su título. Es el título de un hombre de la Palabra."
 ],
 [
 "p",
-"El diccionario de Lockward lo explica así: en el mundo antiguo se consideraba sabio a quien reunía astucia, experiencia, discernimiento moral, conocimientos amplios y capacidad para juzgar o gobernar, pero en Israel esa palabra adquirió un sentido especial porque todas esas cosas se unieron con un elemento religioso, el temor de Dios. Y aquí llegamos al lema de todo el libro de Proverbios, que es también el lema de esta escuela."
+"Escucha cómo lo introduce el libro, porque cada cláusula del versículo va a importar:"
 ],
 [
 "q",
-"«El principio de la sabiduría es el temor de Jehová; Los insensatos desprecian la sabiduría y la enseñanza. Amonestaciones de la Sabiduría» Así dice Proverbios, capítulo uno, versículo siete."
+"«este Esdras subió de Babilonia. Era escriba diligente en la ley de Moisés, que Jehová Dios de Israel había dado; y le concedió el rey todo lo que pidió, porque la mano de Jehová su Dios estaba sobre Esdras» Esdras 7:6."
 ],
 [
 "p",
-"Y unos capítulos más adelante el mismo libro lo repite con otras palabras."
+"Escriba diligente. La palabra hebrea que está detrás de escriba no designa a un burócrata de archivo, sino al hombre que cuenta, copia, guarda y enseña el texto.[4] Diligente no es un adorno: es rapidez unida a competencia, la prontitud de quien ha hecho de la ley su oficio. Y fíjate en el origen de esa ley: no es la ley que Esdras inventó, ni la costumbre que el exilio había ido acumulando, sino la ley de Moisés, que Jehová Dios de Israel había dado. El escriba no es dueño del texto. Es siervo de un don. La autoridad no nace de su diligencia; la diligencia nace de esa autoridad."
+],
+[
+"p",
+"El viaje dura cuatro meses. El texto lo cuenta con una sobriedad que conviene no pasar por alto:"
 ],
 [
 "q",
-"«El temor de Jehová es el principio de la sabiduría, Y el conocimiento del Santísimo es la inteligencia.» Así dice Proverbios, capítulo nueve, versículo diez."
+"«Porque el día primero del primer mes fue el principio de la partida de Babilonia, y al primero del mes quinto llegó a Jerusalén, estando con él la buena mano de Dios. Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos» Esdras 7:9-10."
 ],
 [
 "p",
-"La palabra temor es yirá, hache tres mil trescientos setenta y cuatro. No es el terror del esclavo que huye de un amo cruel. Es la reverencia del hijo que conoce la grandeza y la santidad de su Padre, y que por eso no quiere ofenderle. El temor de Jehová incluye asombro, adoración, confianza y obediencia. Y la palabra principio, en Proverbios uno siete, es reshit, hache siete mil doscientos veinticinco, la misma raíz de la primera palabra de la Biblia: en el principio. El temor de Dios es el punto de partida y también la parte principal, lo primero en el tiempo y lo primero en importancia. Nadie llega a ser sabio en la Biblia saltándose el temor de Dios. Puede llegar a ser erudito, pero no sabio."
+"El versículo diez explica el nueve. ¿Por qué la buena mano de Dios estaba con él? El narrador no invoca un azar piadoso. Dice: porque Esdras había preparado su corazón. La mano de Dios no se opone a la decisión del hombre; la sostiene y la usa. Y esa decisión tiene un orden que esta escuela no invertirá."
 ],
 [
 "p",
-"Observa también la segunda mitad del versículo: los insensatos desprecian la sabiduría y la enseñanza. El necio de Proverbios no es el que tiene poca inteligencia, sino el que rechaza la corrección. Hay hombres de gran capacidad intelectual que son necios en sentido bíblico, porque no se dejan enseñar. Y hay hombres sencillos que son sabios, porque temen a Dios y reciben su Palabra. Por eso el primer requisito para avanzar en esta escuela no es la memoria ni la cultura, sino la disposición a ser corregido por la Escritura."
+"Primero, había preparado su corazón. El verbo hebreo que nuestra versión traduce preparar tiene la idea de afirmar, de establecer, de dejar algo firme en su lugar.[1] No se trata de una emoción pasajera, ni de un propósito nacido el lunes y olvidado el jueves. Esdras había fijado su corazón. Antes de la técnica está la dirección. El estudio bíblico que no empieza aquí se convierte, más tarde o más temprano, en un oficio sin altar."
 ],
 [
 "p",
-"El profeta Jeremías añade una advertencia que todo estudioso debe llevar en el bolsillo. Escucha lo que dice Dios por medio de él."
-],
-[
-"q",
-"«Así dijo Jehová: No se alabe el sabio en su sabiduría, ni en su valentía se alabe el valiente, ni el rico se alabe en sus riquezas. Mas alábese en esto el que se hubiere de alabar: en entenderme y conocerme, que yo soy Jehová, que hago misericordia, juicio y justicia en la tierra; porque estas cosas quiero, dice Jehová.» Así dice Jeremías, capítulo nueve, versículos veintitrés al veinticuatro."
+"Segundo, para inquirir la ley de Jehová. El verbo hebreo tiene la idea de buscar, de indagar, de consultar con cuidado.[2] No es una lectura distraída, ni el hojear de quien busca una frase para adornar lo que ya había decidido. Esdras busca en la ley como quien pregunta a Dios, porque la ley es de Jehová, no de una escuela humana. Inquirir, en esta escuela, significará atender al texto masorético en el Antiguo Testamento y al Textus Receptus de Scrivener en el Nuevo, citar la Reina-Valera de mil novecientos sesenta de manera textual, y no decir de un versículo lo que el versículo no dice."
 ],
 [
 "p",
-"Aquí está la meta. Dios no dice que el sabio no deba saber, sino que no debe gloriarse en su sabiduría. La única gloria legítima es entender y conocer a Dios: conocer que Él es Jehová, que hace misericordia, juicio y justicia en la tierra. Toda la erudición bíblica, toda la gramática, toda la historia, toda la crítica textual, tiene un solo fin: que conozcamos mejor al Dios que se revela en la Escritura. Si alguna vez el estudio nos aparta de ese fin, el estudio se ha corrompido."
+"Tercero, para cumplirla. El orden es teológico, no meramente pedagógico. Esdras no inquiere para exhibirse, ni para ganar una discusión. Inquiere para hacer. La sabiduría bíblica no se contenta con el análisis. Santiago lo dirá con otra imagen, siglos más tarde: el que oye y no hace se parece al hombre que mira su rostro en un espejo y se va, y olvida cómo era. El que mira atentamente en la perfecta ley y persevera, no siendo oidor olvidadizo, sino hacedor de la obra, éste será bienaventurado en lo que hace. El experto que no cumple lo que inquiere se condena con su propia luz."
 ],
 [
 "p",
-"El apóstol Pablo dice lo mismo desde el Nuevo Testamento, cuando los corintios se jactaban de su conocimiento."
-],
-[
-"q",
-"«En cuanto a lo sacrificado a los ídolos, sabemos que todos tenemos conocimiento. El conocimiento envanece, pero el amor edifica. Y si alguno se imagina que sabe algo, aún no sabe nada como debe saberlo. Pero si alguno ama a Dios, es conocido por él.» Así dice primera de Corintios, capítulo ocho, versículos uno al tres."
+"Cuarto, para enseñar en Israel sus estatutos y decretos. La enseñanza viene al final, no porque enseñar sea poco, sino porque enseñar sin haber inquirido es presunción, y enseñar sin haber cumplido es hipocresía. Santiago advierte a los hermanos que no se hagan maestros muchos de ellos, sabiendo que recibirán mayor condenación. El púlpito no es un premio al que más ha leído; es un peso. Esta escuela te formará también para enseñar, porque la Palabra no se nos dio para que la guardáramos como un tesoro privado. Pero el orden de Esdras siete diez permanece: corazón, inquirir, cumplir, enseñar."
 ],
 [
 "p",
-"El conocimiento envanece, dice el apóstol; el amor edifica. La palabra griega para conocimiento es gnósis, ge mil ciento ocho. Pablo no la desprecia; él mismo era el hombre más instruido de su generación. Pero advierte que el conocimiento sin amor infla al hombre como un globo: mucho volumen y nada de peso. Y luego da la vuelta a la frase con una profundidad asombrosa: si alguno ama a Dios, es conocido por Él. Lo más importante no es lo que nosotros sabemos de Dios, sino que Dios nos conoce a nosotros. El experto bíblico verdadero es, ante todo, un hombre conocido por Dios."
+"Ese versículo es el de hoy, y conviene aprenderlo de memoria antes de terminar. No como un lema de academia, sino como una regla de vida. Si en el día treinta todavía puedes recitarlo y no te ha juzgado, no lo has entendido."
 ],
 [
 "h",
-"Tercera parte. El Maestro de los maestros"
+"Tercera parte. El principio de la sabiduría"
 ],
 [
 "p",
-"Si queremos saber cómo se estudia la Escritura, el mejor modelo no es Esdras, sino Aquel de quien Esdras era sombra: el Señor Jesucristo. Él es el Verbo eterno, la sabiduría de Dios hecha carne, y sin embargo, en los días de su humanidad, se sometió a la Escritura, la citó, la explicó y la cumplió. Cuando fue tentado en el desierto, respondió tres veces con la misma fórmula: escrito está. Cuando discutía con los que le resistían, les preguntaba: ¿no habéis leído? Y cuando quiso dar a sus discípulos la lección de hermenéutica más importante de la historia, lo hizo en un camino, la tarde de su resurrección."
-],
-[
-"p",
-"Dos discípulos iban a una aldea llamada Emaús, tristes, conversando sobre la crucifixión. El Señor resucitado se acercó y caminó con ellos, pero sus ojos estaban velados. Les preguntó de qué hablaban, y ellos le contaron sus esperanzas rotas. Entonces Él les dijo:"
+"Si Esdras siete diez describe el oficio, Proverbios describe la puerta de ese oficio. El libro de los Proverbios no espera al capítulo diez para decirlo. Lo dice al umbral:"
 ],
 [
 "q",
-"«Entonces él les dijo: ¡Oh insensatos, y tardos de corazón para creer todo lo que los profetas han dicho! ¿No era necesario que el Cristo padeciera estas cosas, y que entrara en su gloria? Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían.» Así dice Lucas, capítulo veinticuatro, versículos veinticinco al veintisiete."
+"«El principio de la sabiduría es el temor de Jehová; Los insensatos desprecian la sabiduría y la enseñanza» Proverbios 1:7."
 ],
 [
 "p",
-"Observa la palabra declaraba. En griego es diermenéuo, ge mil trescientos veintinueve, de la misma familia que hermenéutica. El Señor Jesús hizo hermenéutica: explicó, interpretó, tradujo el sentido de las Escrituras. Y su punto de partida fue Moisés y todos los profetas, y su tema fue lo que de Él decían. Toda la Escritura habla de Cristo. No en el sentido de que cada versículo sea una profecía directa, sino en el sentido de que toda la historia de la redención converge en Él, toda la ley lo necesita, todos los sacrificios lo anuncian y todas las promesas encuentran en Él su sí y su amén."
-],
-[
-"p",
-"Más tarde, esa misma noche, el Señor se apareció a los once y les dijo algo que nos servirá cuando estudiemos el canon en la lección tres."
+"Y lo vuelve a decir, para que no se nos olvide:"
 ],
 [
 "q",
-"«Y les dijo: Estas son las palabras que os hablé, estando aún con vosotros: que era necesario que se cumpliese todo lo que está escrito de mí en la ley de Moisés, en los profetas y en los salmos. Entonces les abrió el entendimiento, para que comprendiesen las Escrituras;» Así dice Lucas, capítulo veinticuatro, versículos cuarenta y cuatro al cuarenta y cinco."
+"«El temor de Jehová es el principio de la sabiduría, Y el conocimiento del Santísimo es la inteligencia» Proverbios 9:10."
 ],
 [
 "p",
-"Aquí aparecen las tres partes de la Biblia hebrea: la ley de Moisés, los profetas y los salmos, que encabezan la tercera sección llamada los escritos. Y observa el versículo cuarenta y cinco: entonces les abrió el entendimiento, para que comprendiesen las Escrituras. El estudio bíblico necesita dos aperturas: que se abra el libro y que se abra el entendimiento. La primera la hace el maestro con su explicación; la segunda solo la hace el Señor por su Espíritu. Por eso cada lección de esta escuela empieza y termina con oración."
-],
-[
-"p",
-"El Señor también advirtió a los que estudiaban la Escritura sin llegar a Él. Escucha sus palabras a los líderes de Jerusalén."
+"La palabra hebrea que traducimos temor no es el pánico del que huye de un tirano, ni la mera cortesía religiosa.[3] Es reverencia, es el temblor santo del que sabe ante quién está. Job lo dice al cierre de su gran poema sobre la sabiduría, cuando ha preguntado dónde se halla y ha concluido que Dios la entiende, y que al hombre le ha sido dicho:"
 ],
 [
 "q",
-"«Escudriñad las Escrituras; porque a vosotros os parece que en ellas tenéis la vida eterna; y ellas son las que dan testimonio de mí; y no queréis venir a mí para que tengáis vida.» Así dice Juan, capítulo cinco, versículos treinta y nueve al cuarenta."
+"«Y dijo al hombre: He aquí que el temor del Señor es la sabiduría, Y el apartarse del mal, la inteligencia» Job 28:28."
 ],
 [
 "p",
-"Aquí está el peligro más grande del estudioso. Aquellos hombres escudriñaban las Escrituras. El verbo es eraunáo, ge dos mil cuarenta y cinco: rastrear, investigar, buscar como quien sigue una huella. Eran expertos. Contaban las letras de la ley. Y sin embargo no querían venir a Cristo para tener vida. Se puede ser un gran investigador de la Biblia y estar perdido. Se puede conocer el texto y no conocer al Autor. Por eso esta escuela tiene cinco fines que atraviesan todas las lecciones, aunque no siempre los nombremos: conocer a Dios, ser convencido de pecado, arrepentirse, convertirse de veras a Cristo y mantenerse firme hasta el fin. Si una lección no nos acerca a esos cinco fines, la lección ha fallado."
+"El temor, entonces, no es un sentimiento que se agrega al estudio. Es el principio, el comienzo y el fundamento. Sin él, el insensato puede manejar un léxico y despreciar, al mismo tiempo, la sabiduría y la enseñanza. Hay una erudición que es una forma de desprecio. Hay un pulir de versículos que nunca se inclina. Esta escuela no te pedirá que apagues la inteligencia. Te pedirá que la arrodilles."
+],
+[
+"p",
+"Proverbios dos describe el camino con una serie de condiciones que parecen un método, y lo son, pero un método que clama y busca, no un método que se basta:"
+],
+[
+"q",
+"«Hijo mío, si recibieres mis palabras, Y mis mandamientos guardares dentro de ti, Haciendo estar atento tu oído a la sabiduría; Si inclinares tu corazón a la prudencia, Si clamares a la inteligencia, Y a la prudencia dieres tu voz; Si como a la plata la buscares, Y la escudriñares como a tesoros, Entonces entenderás el temor de Jehová, Y hallarás el conocimiento de Dios. Porque Jehová da la sabiduría, Y de su boca viene el conocimiento y la inteligencia» Proverbios 2:1-6."
+],
+[
+"p",
+"Observa el movimiento. El hijo recibe, guarda, atiende, inclina, clama, busca y escudriña. Nada de eso es pasividad. Y, no obstante, la sabiduría no es un trofeo que el diligente se arranca a Dios, porque Jehová da la sabiduría, y de su boca viene el conocimiento. El estudio es deber; la inteligencia es don. El que olvida lo primero se vuelve perezoso. El que olvida lo segundo se vuelve soberbio. El temor de Jehová se entiende al final de esa búsqueda, y con él se halla el conocimiento de Dios. Volvemos al propósito del día: no venimos a acumular datos, sino a conocer a Dios."
+],
+[
+"p",
+"Ese conocimiento no deja al pecador donde estaba. El temor limpio permanece para siempre, dice el Salmo diecinueve, y los juicios de Jehová son verdad, todos justos. La ley de Jehová es perfecta, y convierte el alma. El que se acerca a la Palabra con el corazón afirmado no tarda en verse a sí mismo. La luz que nos muestra a Dios nos muestra también nuestra injusticia. El escriba que no ha temblado todavía delante del texto no ha empezado a leerlo."
 ],
 [
 "h",
-"Cuarta parte. El Espíritu que abre y la conciencia que se dobla"
+"Cuarta parte. Cristo, sabiduría de Dios"
 ],
 [
 "p",
-"Volvamos a Esdras. Cuando llegó a Jerusalén con su compañía, después de un viaje de unos cuatro meses en el que no quiso pedir escolta militar al rey para no deshonrar el nombre de Dios, se encontró con una noticia terrible. Los príncipes le dijeron que el pueblo, los sacerdotes y los levitas se habían mezclado con los pueblos de la tierra en sus matrimonios y en sus abominaciones, y que los primeros en esa infidelidad habían sido los mismos jefes. ¿Qué hizo el escriba erudito? No escribió un tratado. No convocó una conferencia. Rasgó su vestido, se arrancó pelo de la cabeza y de la barba, y se sentó angustiado hasta la hora del sacrificio de la tarde. Luego se postró de rodillas, extendió las manos a Jehová y oró. Escucha el comienzo de su oración."
+"Ahora bien, el Antiguo Testamento no deja la sabiduría como una virtud abstracta. La sabiduría es de Jehová, sale de su boca, y tiene un cumplimiento que el Nuevo Testamento nombra sin rodeos. Pablo lo dice a una iglesia que se preciaba de ser sabia, en una ciudad que amaba la disputa, y lo dice de manera que debe corregir también al estudiante de esta escuela."
 ],
 [
 "q",
-"«Y a la hora del sacrificio de la tarde me levanté de mi aflicción, y habiendo rasgado mi vestido y mi manto, me postré de rodillas, y extendí mis manos a Jehová mi Dios, y dije: Dios mío, confuso y avergonzado estoy para levantar, oh Dios mío, mi rostro a ti, porque nuestras iniquidades se han multiplicado sobre nuestra cabeza, y nuestros delitos han crecido hasta el cielo.» Así dice Esdras, capítulo nueve, versículos cinco al seis."
+"«Porque la palabra de la cruz es locura a los que se pierden; pero a los que se salvan, esto es, a nosotros, es poder de Dios. Pues está escrito: Destruiré la sabiduría de los sabios, Y desecharé el entendimiento de los entendidos. ¿Dónde está el sabio? ¿Dónde está el escriba? ¿Dónde está el disputador de este siglo? ¿No ha enloquecido Dios la sabiduría del mundo? Pues ya que en la sabiduría de Dios, el mundo no conoció a Dios mediante la sabiduría, agradó a Dios salvar a los creyentes por la locura de la predicación. Porque los judíos piden señales, y los griegos buscan sabiduría; pero nosotros predicamos a Cristo crucificado, para los judíos ciertamente tropezadero, y para los gentiles locura; mas para los llamados, así judíos como griegos, Cristo poder de Dios, y sabiduría de Dios» 1 Corintios 1:18-24."
 ],
 [
 "p",
-"Aquí aprendemos algo que ningún currículo académico enseña con suficiente fuerza: el verdadero conocimiento de la ley produce convicción de pecado. Esdras conocía la ley mejor que nadie, y precisamente por eso fue el primero en avergonzarse. No dijo: ellos han pecado. Dijo: nuestras iniquidades se han multiplicado sobre nuestra cabeza. Se incluyó. El estudioso maduro no usa la Biblia como una vara para golpear a otros, sino como un espejo para examinarse primero."
+"El escriba aparece en esa lista, y no para adularlo. Dios no ha consagrado la erudición del siglo. Ha hecho de Cristo crucificado su poder y su sabiduría. El mundo no conoció a Dios mediante su sabiduría. Esa frase debe detenernos. No es que el estudio sea inútil; es que el estudio que no se rinde a la cruz no conduce al conocimiento de Dios. Hay un modo de buscar a Dios que es, en realidad, una negativa a ser salvo por lo que el mundo llama locura. El experto bíblico que esta escuela quiere formar no es el disputador de este siglo. Es el que predica, enseña y vive a Cristo crucificado, y halla en Él la sabiduría que el léxico no puede inventar."
 ],
 [
 "p",
-"Santiago lo dice con una imagen inolvidable."
+"Pablo no se detiene en la polémica. Lleva la tesis hasta la persona de los llamados:"
 ],
 [
 "q",
-"«Pero sed hacedores de la palabra, y no tan solamente oidores, engañándoos a vosotros mismos. Porque si alguno es oidor de la palabra pero no hacedor de ella, éste es semejante al hombre que considera en un espejo su rostro natural. Porque él se considera a sí mismo, y se va, y luego olvida cómo era. Mas el que mira atentamente en la perfecta ley, la de la libertad, y persevera en ella, no siendo oidor olvidadizo, sino hacedor de la obra, éste será bienaventurado en lo que hace.» Así dice Santiago, capítulo uno, versículos veintidós al veinticinco."
+"«Mas por él estáis vosotros en Cristo Jesús, el cual nos ha sido hecho por Dios sabiduría, justificación, santificación y redención; para que, como está escrito: El que se gloría, gloríese en el Señor» 1 Corintios 1:30-31."
 ],
 [
 "p",
-"El que oye la Palabra y no la hace es como un hombre que se mira en un espejo y luego se va y olvida cómo era. Pero el que mira atentamente en la perfecta ley, la de la libertad, y persevera en ella, será bienaventurado en lo que hace. La palabra mirar atentamente es parakýpto, ge tres mil ochocientos setenta y nueve: inclinarse para ver de cerca, como quien se agacha para mirar dentro de un sepulcro. Es la misma palabra que se usa cuando Pedro y Juan se inclinan para mirar dentro de la tumba vacía. El estudio bíblico es inclinarse ante el texto, con humildad, para ver de cerca."
+"Cristo nos ha sido hecho sabiduría. No solo nos enseña sabiduría: Él mismo es la sabiduría de Dios para nosotros, y con ella la justificación, la santificación y la redención. El orden de esas palabras no es un adorno. El que es puesto en Cristo es declarado justo, es apartado como santo y es rescatado. El estudio que no desemboca ahí puede ser correcto en la gramática y falso en el destino. Por eso el apóstol dirá a los colosenses que en quien están escondidos todos los tesoros de la sabiduría y del conocimiento. Colosenses 2:3. Buscar esos tesoros fuera de Él es cavar en el lugar equivocado."
 ],
 [
 "p",
-"La respuesta de Esdras tuvo consecuencias. Mientras él oraba y confesaba llorando, se juntó a su alrededor una gran multitud de hombres, mujeres y niños, y el pueblo lloró amargamente. Un hombre llamado Secanías dijo: nosotros hemos pecado contra nuestro Dios, pero a pesar de esto aún hay esperanza para Israel. La convicción produjo arrepentimiento, y el arrepentimiento produjo conversión: una decisión concreta de apartarse del pecado. Cuando un estudioso de la Palabra se dobla ante ella, la Palabra empieza a doblar también a los que le rodean."
+"Esta es la razón por la que, en el camino a Emaús, el Señor resucitado no empezó por un milagro que deslumbrara a los dos discípulos abatidos, sino por las Escrituras. Ellos hablaban de Jesús de Nazaret, profeta poderoso en obra y en palabra, y no entendían que el Mesías debía padecer. Entonces Él les dijo:"
+],
+[
+"q",
+"«¡Oh insensatos, y tardos de corazón para creer todo lo que los profetas han dicho! ¿No era necesario que el Cristo padeciera estas cosas, y que entrara en su gloria? Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían» Lucas 24:25-27."
+],
+[
+"p",
+"El Maestro de los maestros hace exégesis en el camino. Comienza desde Moisés. Sigue por todos los profetas. Declara en todas las Escrituras lo que de Él decían. La hermenéutica de esta escuela nace aquí, no en un manual. La Escritura se interpreta con la Escritura, y toda ella da testimonio de Cristo. Más tarde, cuando el pan es partido y los ojos se abren, ellos no celebran una técnica: se dicen el uno al otro: ¿No ardía nuestro corazón en nosotros, mientras nos hablaba en el camino, y cuando nos abría las Escrituras? Lucas 24:32. El estudio que esta escuela busca es ese ardor, no el de una emoción fabricada, sino el del corazón al que el Señor abre las Escrituras y se da a conocer."
+],
+[
+"p",
+"Si has venido a esta lección con un corazón frío, o con un corazón orgulloso, o con un corazón cansado de oír sin hacer, el camino de Emaús te está llamando. El Señor todavía abre las Escrituras. El Señor todavía parte el pan. El que se reconoce insensato y tardo de corazón está más cerca de la sabiduría que el que se cree ya experto."
 ],
 [
 "h",
@@ -198,355 +210,355 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Unos trece años después, ya en tiempos de Nehemías, cuando el muro de Jerusalén estaba reconstruido, el pueblo se reunió como un solo hombre en la plaza que está delante de la puerta de las Aguas, y pidió a Esdras que trajera el libro de la ley de Moisés. Escucha cómo lo cuenta Nehemías."
+"El libro de Nehemías nos lleva, años más tarde, a la plaza que está delante de la puerta de las Aguas. El muro ha sido levantado. El pueblo se junta como un solo hombre, y le pide a Esdras el escriba que traiga el libro de la ley de Moisés, la cual Jehová había dado a Israel. La iniciativa, fíjate, no nace de un programa de estudios impuesto desde arriba: el pueblo pide el libro. Hay hambre. Sin esa hambre, el púlpito se convierte en un espectáculo."
 ],
 [
 "q",
-"«y se juntó todo el pueblo como un solo hombre en la plaza que está delante de la puerta de las Aguas, y dijeron a Esdras el escriba que trajese el libro de la ley de Moisés, la cual Jehová había dado a Israel. Y el sacerdote Esdras trajo la ley delante de la congregación, así de hombres como de mujeres y de todos los que podían entender, el primer día del mes séptimo. Y leyó en el libro delante de la plaza que está delante de la puerta de las Aguas, desde el alba hasta el mediodía, en presencia de hombres y mujeres y de todos los que podían entender; y los oídos de todo el pueblo estaban atentos al libro de la ley.» Así dice Nehemías, capítulo ocho, versículos uno al tres."
+"«Y el sacerdote Esdras trajo la ley delante de la congregación, así de hombres como de mujeres y de todos los que podían entender, el primer día del mes séptimo. Y leyó en el libro delante de la plaza que está delante de la puerta de las Aguas, desde el alba hasta el mediodía, en presencia de hombres y mujeres y de todos los que podían entender; y los oídos de todo el pueblo estaban atentos al libro de la ley» Nehemías 8:2-3."
 ],
 [
 "p",
-"Observa el detalle: hombres y mujeres y todos los que podían entender. La Palabra de Dios no es propiedad de una casta. Es para todo el pueblo. Y leyó desde el alba hasta el mediodía: unas seis horas de lectura. Y los oídos de todo el pueblo estaban atentos al libro de la ley. Tú estás haciendo algo muy parecido ahora mismo: estás escuchando. La fe viene por el oír, y el oír por la palabra de Dios, dice Pablo en Romanos diez diecisiete. Un curso para el oído tiene raíces muy antiguas."
+"Observa el detalle: hombres y mujeres y todos los que podían entender. La Palabra de Dios no es propiedad de una casta de escribas. Es para la congregación. Y leyó desde el alba hasta el mediodía: horas de lectura, no un versículo suelto para abrir una reunión. Los oídos estaban atentos al libro. Tú estás haciendo algo muy parecido ahora: estás oyendo o leyendo. Así que la fe es por el oír, y el oír, por la palabra de Dios. Romanos 10:17. Un curso que se puede oír no es una novedad de nuestro siglo; tiene raíces en esa plaza."
 ],
 [
 "p",
-"Sigue el relato."
+"Sigue el relato, porque el texto cuida los gestos:"
 ],
 [
 "q",
-"«Y el escriba Esdras estaba sobre un púlpito de madera que habían hecho para ello, y junto a él estaban Matatías, Sema, Anías, Urías, Hilcías y Maasías a su mano derecha; y a su mano izquierda, Pedaías, Misael, Malquías, Hasum, Hasbadana, Zacarías y Mesulam. Abrió, pues, Esdras el libro a ojos de todo el pueblo, porque estaba más alto que todo el pueblo; y cuando lo abrió, todo el pueblo estuvo atento. Bendijo entonces Esdras a Jehová, Dios grande. Y todo el pueblo respondió: ¡Amén! ¡Amén! alzando sus manos; y se humillaron y adoraron a Jehová inclinados a tierra.» Así dice Nehemías, capítulo ocho, versículos cuatro al seis."
+"«Y el escriba Esdras estaba sobre un púlpito de madera que habían hecho para ello, y junto a él estaban Matatías, Sema, Anías, Urías, Hilcías y Maasías a su mano derecha; y a su mano izquierda, Pedaías, Misael, Malquías, Hasum, Hasbadana, Zacarías y Mesulam. Abrió, pues, Esdras el libro a ojos de todo el pueblo, porque estaba más alto que todo el pueblo; y cuando lo abrió, todo el pueblo estuvo atento. Bendijo entonces Esdras a Jehová, Dios grande. Y todo el pueblo respondió: ¡Amén! ¡Amén! alzando sus manos; y se humillaron y adoraron a Jehová inclinados a tierra» Nehemías 8:4-6."
 ],
 [
 "p",
-"Esdras estaba sobre un púlpito de madera que habían hecho para ello. Es la primera vez que la Biblia menciona algo parecido a un púlpito, y está asociado a la lectura pública de la Escritura. Cuando abrió el libro, todo el pueblo se puso en pie. Esdras bendijo a Jehová, y el pueblo respondió amén, amén, alzando las manos, y luego se inclinaron y adoraron rostro en tierra. La lectura de la Palabra produjo adoración. El estudio bíblico que no termina en adoración se queda a mitad de camino."
+"Es la primera vez que la Escritura menciona algo parecido a un púlpito, y está asociado a la lectura pública de la ley, no a la exhibición de un orador. Esdras no está más alto para ser visto como un personaje; está más alto para que el libro se abra a ojos de todo el pueblo. Cuando el libro se abre, el pueblo está atento. Esdras bendice a Jehová, y el pueblo responde amén, alza las manos, se humilla y adora rostro en tierra. La lectura produce adoración. El estudio bíblico que no termina en adoración se queda a mitad de camino. El que solo acumula observaciones y no se inclina no ha leído todavía como Israel leyó aquel día."
 ],
 [
 "p",
-"Y ahora el versículo que define la tarea del exégeta, del intérprete y del predicador."
+"Y ahora el versículo que define, en una sola frase, las tres tareas de esta escuela:"
 ],
 [
 "q",
-"«Y leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura.» Así dice Nehemías, capítulo ocho, versículo ocho."
+"«Y leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura» Nehemías 8:8."
 ],
 [
 "p",
-"Leían claramente, ponían el sentido, y hacían que entendiesen la lectura. Ahí tienes, en una sola frase, tres disciplinas de esta escuela. Leer claramente es la tarea de la crítica textual y de las lenguas: saber qué dice el texto, palabra por palabra. Poner el sentido es la tarea de la hermenéutica y de la exégesis: explicar lo que el texto significa en su contexto. Hacer que entiendan es la tarea de la homilética: comunicar con claridad para que el oyente comprenda y responda. Los levitas que ayudaban a Esdras eran exégetas y predicadores al mismo tiempo."
+"Leían claramente. Esa es la tarea del texto y de las lenguas: saber qué dice la Escritura, palabra por palabra, en el hebreo que los masoretas guardaron y en el griego que la iglesia recibió. Poner el sentido. Esa es la tarea de la hermenéutica y de la exégesis: explicar lo que el texto significa en su contexto, con la analogía de la fe, sin imponerle lo que no dice. De modo que entendiesen la lectura. Esa es la tarea de la homilética y de la enseñanza: comunicar con claridad para que el oyente comprenda y responda. Los levitas que ayudaban a Esdras eran, al mismo tiempo, lectores, intérpretes y predicadores. No separaban lo que Dios había unido."
 ],
 [
 "p",
-"¿Y cómo respondió el pueblo? Lloraba. Al oír la ley, se dieron cuenta de cuánto se habían apartado. Pero Nehemías, Esdras y los levitas les dijeron que aquel día era santo, que no se entristecieran, y les dieron una frase que ha sostenido a generaciones de creyentes."
-],
-[
-"q",
-"«Luego les dijo: Id, comed grosuras, y bebed vino dulce, y enviad porciones a los que no tienen nada preparado; porque día santo es a nuestro Señor; no os entristezcáis, porque el gozo de Jehová es vuestra fuerza.» Así dice Nehemías, capítulo ocho, versículo diez."
+"Ese triple oficio recorre los doce módulos. Los primeros treinta días ponen el cimiento: la Palabra, el texto y las lenguas, con las primeras lecciones de hermenéutica, de los libros, de la doctrina y de la predicación. Luego vendrán el hebreo y el arameo, el griego del texto recibido, la hermenéutica y la exégesis, el Antiguo y el Nuevo Testamento libro por libro, la doctrina ordenada, la historia, la defensa de la fe, la ética y, al cierre, la predicación, el ministerio y la sabiduría que permanece. No te pido que memorices hoy ese mapa. Te pido que veas su raíz: Nehemías ocho ocho. Si alguna lección se aparta de leer claramente, de poner el sentido y de hacer entender, se ha apartado de Esdras."
 ],
 [
 "p",
-"El gozo de Jehová es vuestra fuerza. La Palabra primero hiere y después sana. Primero convence de pecado y después consuela con la gracia. El pueblo fue a comer, a beber y a compartir, porque habían entendido las palabras que les habían enseñado. Y al día siguiente, los jefes de familia, los sacerdotes y los levitas se reunieron con Esdras para entender las palabras de la ley. Descubrieron en el texto la fiesta de los tabernáculos, que no se celebraba así desde los días de Josué, y la celebraron con gran alegría. Durante siete días, Esdras leyó en el libro de la ley de Dios. Así es el ciclo del estudio verdadero: se lee, se entiende, se obedece, se celebra, y se vuelve a leer."
+"El pueblo que oyó no quedó igual. Más adelante el mismo capítulo cuenta que lloraron al oír las palabras de la ley, y que se les dijo que no lloraran, porque el día era santo, y que el gozo de Jehová era su fortaleza. La Palabra convence de pecado, y la Palabra también restaura. Hay un llanto que es el comienzo del arrepentimiento, y hay un gozo que no se fabrica, porque nace de la misma boca que hería. El estudioso que nunca ha llorado sobre un texto, y el estudioso que nunca se ha gozado en un texto, todavía no se han expuesto del todo a la ley de Dios."
 ],
 [
 "h",
-"Sexta parte. El lugar del corazón en el estudio"
+"Sexta parte. Dos estudiosos del Nuevo Testamento"
 ],
 [
 "p",
-"Hasta aquí hemos visto el retrato de Esdras. Ahora necesitamos poner algunas columnas que sostengan todo el edificio de esta escuela. La primera columna es la meditación constante. Cuando Moisés murió y Josué recibió la tarea de conducir al pueblo, Dios no le dio primero un plan militar, sino un libro."
+"Esdras no es el único retrato. El libro de los Hechos nos deja dos compañeros de camino que corrigen, cada uno, una tentación distinta."
+],
+[
+"p",
+"El primero es el de los de Berea. Pablo y Silas han salido de Tesalónica, donde la palabra fue recibida por algunos y rechazada con tumulto por otros. Llegan a Berea, y el narrador hace un juicio que debe hacernos desear esa nobleza:"
 ],
 [
 "q",
-"«Nunca se apartará de tu boca este libro de la ley, sino que de día y de noche meditarás en él, para que guardes y hagas conforme a todo lo que en él está escrito; porque entonces harás prosperar tu camino, y todo te saldrá bien.» Así dice Josué, capítulo uno, versículo ocho."
+"«Y éstos eran más nobles que los que estaban en Tesalónica, pues recibieron la palabra con toda solicitud, escudriñando cada día las Escrituras para ver si estas cosas eran así» Hechos 17:11."
 ],
 [
 "p",
-"Nunca se apartará de tu boca este libro de la ley. Observa que la ley debía estar en la boca, no solo en los ojos. La palabra meditar es hagá, hache mil ochocientos noventa y siete, que significa murmurar, susurrar, hablar en voz baja, incluso gemir o arrullar como la paloma. Meditar en la Biblia, para un hebreo, no era vaciar la mente, sino llenarla de la Palabra repitiéndola en voz baja, de día y de noche. Por eso un curso en audio es una herramienta muy bíblica: lo que escuchas lo repites, y lo que repites se queda."
+"Hay dos verbos, y los dos son necesarios. Recibieron la palabra con toda solicitud: no eran escépticos de oficio, ni oidores de ceja alzada que se complacen en no creer. Y escudriñaban cada día las Escrituras para ver si estas cosas eran así: no eran crédulos de cualquier voz, aunque la voz fuera la de un apóstol. La nobleza bereana no consiste en desconfiar, ni en tragar. Consiste en recibir con hambre y comprobar con el texto. Esta escuela te pedirá las dos cosas. Recibe la enseñanza con solicitud. Y no la recibas como si el maestro estuviera por encima de la Escritura. La regla de esta casa es sola Scriptura: la Escritura es la única regla infalible de fe y de vida, y la Escritura se interpreta con la Escritura. El maestro sirve al texto. Si lo que oyes no está en la Escritura, no estás obligado a creerlo por el tono con que se dijo."
 ],
 [
 "p",
-"El primer salmo dice lo mismo con una imagen de árbol."
+"El segundo retrato es el de Apolos. Llega a Éfeso un judío de Alejandría, varón elocuente, poderoso en las Escrituras, instruido en el camino del Señor, de espíritu fervoroso, que hablaba y enseñaba diligentemente lo concerniente al Señor, aunque solamente conocía el bautismo de Juan. Comenzó a hablar con denuedo en la sinagoga. Tenía dones que muchos envidiarían: lengua, conocimiento, fervor, valentía. Y, no obstante, su conocimiento era incompleto."
 ],
 [
 "q",
-"«Bienaventurado el varón que no anduvo en consejo de malos, Ni estuvo en camino de pecadores, Ni en silla de escarnecedores se ha sentado; Sino que en la ley de Jehová está su delicia, Y en su ley medita de día y de noche. Será como árbol plantado junto a corrientes de aguas, Que da su fruto en su tiempo, Y su hoja no cae; Y todo lo que hace, prosperará.» Así dice Salmos, capítulo uno, versículos uno al tres."
+"«Y comenzó a hablar con denuedo en la sinagoga; pero cuando le oyeron Priscila y Aquila, le tomaron aparte y le expusieron más exactamente el camino de Dios» Hechos 18:26."
 ],
 [
 "p",
-"El varón bienaventurado no anda, no se detiene, no se sienta con los que desprecian a Dios. Su delicia está en la ley de Jehová, y en su ley medita de día y de noche. El resultado es un árbol plantado junto a corrientes de aguas. La palabra plantado es shatal, hache ocho mil trescientos sesenta y dos, que sugiere un árbol trasplantado a propósito, puesto allí por un jardinero. El creyente que medita en la Palabra no crece por casualidad. Ha sido plantado por Dios junto al río. Y su fruto llega a su tiempo: no de inmediato, no según nuestra impaciencia, sino en la estación que Dios señala. Esta escuela es larga. El fruto vendrá a su tiempo."
+"Priscila y Aquila no lo humillaron en público. Lo tomaron aparte. Él no se defendió con su elocuencia. Se dejó enseñar más exactamente. Después, cuando pasó a Acaya, fue de gran provecho a los que por la gracia habían creído, porque con gran vehemencia refutaba públicamente, demostrando por las Escrituras que Jesús era el Cristo. El poder de Apolos no estaba en la retórica de Alejandría. Estaba en las Escrituras, y en una humildad que aceptó ser corregido. Un hombre poderoso en las Escrituras necesita todavía esa humildad. El día en que ya no te dejes tomar aparte, el estudio habrá empezado a corromperte."
 ],
 [
 "p",
-"La segunda columna es el amor por la Palabra. El salmo ciento diecinueve, el más largo de la Biblia, es un poema alfabético de veintidós estrofas, una por cada letra hebrea, cada una con ocho versículos. Lo estudiaremos en la lección cinco, cuando aprendamos el alfabeto. Por ahora escucha una de sus estrofas, la que corresponde a la letra mem."
-],
-[
-"q",
-"«¡Oh, cuánto amo yo tu ley! Todo el día es ella mi meditación. Me has hecho más sabio que mis enemigos con tus mandamientos, Porque siempre están conmigo. Más que todos mis enseñadores he entendido, Porque tus testimonios son mi meditación. Más que los viejos he entendido, Porque he guardado tus mandamientos; De todo mal camino contuve mis pies, Para guardar tu palabra. No me aparté de tus juicios, Porque tú me enseñaste. ¡Cuán dulces son a mi paladar tus palabras! Más que la miel a mi boca. De tus mandamientos he adquirido inteligencia; Por tanto, he aborrecido todo camino de mentira.» Así dice Salmos, capítulo ciento diecinueve, versículos noventa y siete al ciento cuatro."
-],
-[
-"p",
-"¡Oh, cuánto amo yo tu ley! Todo el día es ella mi meditación. El salmista afirma que entiende más que todos sus enseñadores, más que los viejos, porque guarda los mandamientos de Dios. No es arrogancia. Está diciendo que la Palabra de Dios, recibida y obedecida, da una sabiduría que ningún maestro humano puede dar por sí solo. Y añade: de tu ley he adquirido inteligencia; por tanto, he aborrecido todo camino de mentira. El estudio de la Biblia produce un afecto doble: amor por la verdad y aborrecimiento de la mentira. Si con los meses descubres que amas más la Palabra y toleras menos el pecado, la escuela está funcionando."
-],
-[
-"p",
-"La tercera columna es la diligencia. Pablo escribió a Timoteo, su hijo en la fe, una frase que se ha convertido en el lema de muchos seminarios."
-],
-[
-"q",
-"«Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse, que usa bien la palabra de verdad.» Así dice segunda de Timoteo, capítulo dos, versículo quince."
-],
-[
-"p",
-"Procura con diligencia. El verbo es spoudázo, ge cuatro mil setecientos cuatro: apresurarse, esforzarse, poner empeño. No hay estudio bíblico serio sin esfuerzo. Presentarte a Dios aprobado: la palabra es dókimos, ge mil trescientos ochenta y cuatro, que se usaba para las monedas que pasaban la prueba y para los metales probados por fuego. El estudioso no estudia para ser aprobado por los hombres, sino por Dios. Como obrero que no tiene de qué avergonzarse: el estudio bíblico es trabajo, oficio, labor de artesano. Y la última frase: que usa bien la palabra de verdad. El verbo es orthotoméo, ge tres mil setecientos dieciocho, literalmente cortar en línea recta. Se usaba para trazar un camino recto o para un corte preciso. El experto bíblico traza en línea recta la palabra de verdad, sin torcerla para que diga lo que él quiere, sin desviarla hacia sus gustos, sin cortarla en pedazos para armar un argumento ajeno."
-],
-[
-"p",
-"La cuarta columna es la confianza en la Escritura como Palabra de Dios. En la misma carta, Pablo recuerda a Timoteo de dónde venía su formación."
-],
-[
-"q",
-"«Pero persiste tú en lo que has aprendido y te persuadiste, sabiendo de quién has aprendido; y que desde la niñez has sabido las Sagradas Escrituras, las cuales te pueden hacer sabio para la salvación por la fe que es en Cristo Jesús. Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra.» Así dice segunda de Timoteo, capítulo tres, versículos catorce al diecisiete."
-],
-[
-"p",
-"Desde la niñez has sabido las Sagradas Escrituras, las cuales te pueden hacer sabio para la salvación por la fe que es en Cristo Jesús. Aquí la palabra sabio es sofízo, ge cuatro mil seiscientos setenta y nueve: hacer sabio. La Escritura hace sabios. Pero ¿sabios para qué? Para la salvación por la fe en Cristo. La primera sabiduría de la Biblia no es saber de muchas cosas, sino saber cómo un pecador puede ser reconciliado con Dios. Y luego viene el versículo que estudiaremos a fondo mañana: toda la Escritura es inspirada por Dios. La palabra es theópneustos, ge dos mil trescientos quince, soplada por Dios. El diccionario de Lockward observa que el énfasis de esa palabra está en el origen: más que inspiración, se trata de una expiración, de un aliento que sale de Dios. La Escritura es útil para enseñar, para redargüir, para corregir y para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra. Si la Escritura prepara enteramente, no necesitamos otra fuente de autoridad por encima de ella. Esa es la convicción que llamamos sola Scriptura."
+"Estos dos retratos, juntos, te guardan de dos fosos. El de Berea te guarda del discípulo que todo lo cree y de nada se cerciora. El de Apolos te guarda del maestro que todo lo sabe y a nadie se sujeta. El experto que esta escuela busca recibe con solicitud, escudriña cada día, y se deja exponer más exactamente el camino de Dios."
 ],
 [
 "h",
-"Séptima parte. Dos estudiosos del Nuevo Testamento"
+"Séptima parte. El método de esta escuela y la rutina de cada día"
 ],
 [
 "p",
-"Antes de dibujar el mapa del curso, quiero presentarte dos retratos breves del Nuevo Testamento que completan el de Esdras. El primero es una congregación entera: los de Berea. Pablo y Silas llegaron a esa ciudad de Macedonia huyendo de Tesalónica, y entraron en la sinagoga. Escucha cómo los describe Lucas."
-],
-[
-"q",
-"«Inmediatamente, los hermanos enviaron de noche a Pablo y a Silas hasta Berea. Y ellos, habiendo llegado, entraron en la sinagoga de los judíos. Y éstos eran más nobles que los que estaban en Tesalónica, pues recibieron la palabra con toda solicitud, escudriñando cada día las Escrituras para ver si estas cosas eran así. Así que creyeron muchos de ellos, y mujeres griegas de distinción, y no pocos hombres.» Así dice Hechos, capítulo diecisiete, versículos diez al doce."
+"Con Esdras, con Nehemías, con Berea y con Apolos, ya podemos decir de qué modo caminaremos."
 ],
 [
 "p",
-"Eran más nobles que los de Tesalónica. La palabra es eugenés, ge dos mil ciento cuatro, de buen linaje, de noble carácter. ¿En qué consistía su nobleza? En dos cosas que deben ir juntas: recibieron la palabra con toda solicitud, es decir, con prontitud y avidez, y escudriñaban cada día las Escrituras para ver si estas cosas eran así. No eran crédulos ni incrédulos. Eran receptivos y críticos al mismo tiempo, en el buen sentido de la palabra crítico: examinaban todo a la luz de la Escritura. Ni siquiera la enseñanza del apóstol Pablo quedaba exenta de ese examen, y Lucas los elogia por ello. Así queremos que escuches esta escuela: con avidez, y con la Biblia abierta para comprobar si las cosas son así. Si alguna vez algo de lo que oyes no concuerda con la Escritura, la Escritura gana."
+"Cada lección parte del texto bíblico, no de un esquema abstracto. Se cita la Reina-Valera de mil novecientos sesenta, textual, sin inventar versículos ni completar de memoria lo que no se ha verificado. Cuando un lema hebreo o griego carga el argumento, se da en nota, con su número en la concordancia de Strong, para que el oído del cuerpo de la lección no se llene de paréntesis, y para que el alumno pueda comprobarlo. En el Antiguo Testamento trabajamos con el texto masorético; en el Nuevo, con el Textus Receptus en la edición de Scrivener. Esa postura se explicará con razones, sobre todo cuando lleguemos a la transmisión del texto; no se pide hoy un acto de fe en un nombre, sino atención al texto que la iglesia ha recibido y leído."
 ],
 [
 "p",
-"El segundo retrato es el de Apolos."
-],
-[
-"q",
-"«Llegó entonces a Efeso un judío llamado Apolos, natural de Alejandría, varón elocuente, poderoso en las Escrituras. Este había sido instruido en el camino del Señor; y siendo de espíritu fervoroso, hablaba y enseñaba diligentemente lo concerniente al Señor, aunque solamente conocía el bautismo de Juan. Y comenzó a hablar con denuedo en la sinagoga; pero cuando le oyeron Priscila y Aquila, le tomaron aparte y le expusieron más exactamente el camino de Dios. Y queriendo él pasar a Acaya, los hermanos le animaron, y escribieron a los discípulos que le recibiesen; y llegado él allá, fue de gran provecho a los que por la gracia habían creído; porque con gran vehemencia refutaba públicamente a los judíos, demostrando por las Escrituras que Jesús era el Cristo.» Así dice Hechos, capítulo dieciocho, versículos veinticuatro al veintiocho."
+"El método, en su nervio, es el de Nehemías ocho y el de Esdras siete: leer claramente, poner el sentido, hacer entender; inquirir, cumplir, enseñar. Observar lo que el texto dice, en su lengua y en su contexto; interpretar la Escritura con la Escritura; aplicar lo entendido a la fe y a la vida, de modo que el indicativo de lo que Dios ha hecho en Cristo vaya siempre delante del imperativo de lo que se nos manda. No llegaremos a un versículo para usarlo como dardo suelto. El versículo vive en un pasaje, el pasaje en un libro, el libro en el canon, y el canon da testimonio de Cristo."
 ],
 [
 "p",
-"Apolos era natural de Alejandría, la gran ciudad del saber en el mundo antiguo, varón elocuente, poderoso en las Escrituras. La frase poderoso en las Escrituras usa la palabra dynatós, ge mil cuatrocientos quince: capaz, fuerte. Era instruido en el camino del Señor, ferviente de espíritu, y enseñaba diligentemente lo concerniente al Señor. Sin embargo, solamente conocía el bautismo de Juan. Tenía un vacío. Y aquí aparece algo hermoso: Priscila y Aquila, un matrimonio de fabricantes de tiendas, le oyeron, le tomaron aparte y le expusieron más exactamente el camino de Dios. No lo corrigieron en público para humillarlo. Lo tomaron aparte. Y Apolos, el elocuente de Alejandría, se dejó enseñar por dos artesanos. Por eso pudo después ser de gran provecho a los que habían creído, refutando públicamente a los que se oponían y demostrando por las Escrituras que Jesús era el Cristo. La humildad para ser corregido es la condición para llegar a ser poderoso en las Escrituras."
+"La rutina de cada día es sobria, y por eso se puede guardar. Reserva un tiempo quieto, si es posible a la misma hora. Ten la Biblia abierta en el pasaje que la lección camina. Oye o lee con calma, sin prisa de terminar. Cuando llegue el repaso, responde en voz alta antes de oír la respuesta. En la autoevaluación, formula tú la respuesta con tus palabras, y luego compárala. Recita el versículo para memorizar hasta decirlo sin mirar. Si hay un bosquejo para el púlpito, no lo guardes como un adorno: predícalo a alguien, o enséñalo, o llévalo a tu propia alma como si tuvieras que subirlo a un púlpito de madera. Y no cierres el día sin haberte puesto delante de Dios con lo que el texto te ha mostrado de Él, de tu pecado, de la gracia de Cristo y de la obediencia que queda."
+],
+[
+"p",
+"Habrá también, al cierre de cada módulo, un examen. No es un trámite para coleccionar un papel. Es una manera de volver sobre lo aprendido y de no dejarnos engañar por la impresión de que oímos mucho. El oidor olvidadizo se considera a sí mismo y se va. El hacedor persevera. El examen sirve a esa perseverancia."
+],
+[
+"p",
+"Una palabra sobre el cuaderno. Escribe. Copia el versículo. Anota la pregunta que el texto te hizo y que tú no pudiste callar. Anota, si la hay, la desobediencia concreta que el pasaje te descubrió, y la promesa de la que te aferras para no quedarte en la culpa. El estudio que no se escribe se evapora con facilidad. El estudio que se escribe y no se ora se endurece. Que el cuaderno sea siervo de la Palabra, no un museo de observaciones brillantes."
 ],
 [
 "h",
-"Octava parte. El mapa de la escuela"
+"Octava parte. Los peligros del camino y la gracia que sostiene"
 ],
 [
 "p",
-"Ahora que tenemos la puerta y las columnas, podemos mirar el plano completo del edificio. Esta escuela tiene la extensión de un programa completo de formación teológica. Para trazarlo comparamos los planes de estudio de varios seminarios de tradición bíblica e histórica, y encontramos que todos coinciden en un núcleo común. Ese núcleo es el que vas a recibir aquí, en audio, día tras día. Te lo voy a explicar disciplina por disciplina, para que sepas qué es cada una y por qué la necesitas."
+"El camino del estudioso tiene fosos, y conviene nombrarlos antes de que los amemos."
 ],
 [
 "p",
-"La primera disciplina es la bibliología, la doctrina de la Escritura: qué es la Biblia, cómo se reveló Dios, qué significa que la Escritura sea inspirada, por qué es infalible y suficiente. Es el fundamento, y por eso la estudiamos mañana."
+"El primero es el orgullo. El conocimiento envanece, si no está gobernado por el amor y por el temor de Jehová. El que empieza a saber los nombres de las letras, o a corregir la cita de otro, siente una tentación antigua: gloriarse en su sabiduría. Jeremías nueve ya nos la quitó de las manos. Primera de Corintios uno la clava en la cruz. El remedio no es la ignorancia; es la jactancia desarmada delante del Señor."
 ],
 [
 "p",
-"La segunda es el canon: cuáles libros forman parte de la Escritura y por qué. Lo estudiaremos en la lección tres."
+"El segundo es la curiosidad que no obedece. Hay quien escudriña para saber, y no para cumplir. Acumula lecturas como quien acumula armas, y no se rinde a ningún mandamiento. Juan cinco treinta y nueve y cuarenta lo esperan al final de ese camino: Escrituras en la mano, y una negativa a venir a Cristo para tener vida. Santiago uno lo describe como el hombre del espejo. Si esta escuela te deja más informado y menos obediente, ha fracasado en ti, aunque hayas respondido bien a todas las preguntas."
 ],
 [
 "p",
-"La tercera es la crítica textual. Esta palabra asusta a algunos, pero la crítica textual es simplemente el estudio de cómo se ha transmitido el texto bíblico a través de los siglos, por medio de manuscritos copiados a mano, hasta llegar a nuestras Biblias impresas. Esta escuela la estudia desde la confianza en el texto que Dios ha preservado y que la iglesia recibió: el texto masorético para el Antiguo Testamento y el Textus Receptus para el Nuevo. Es la lección cuatro."
+"El tercero es enseñar antes de hacer, o enseñar para ser visto. El orden de Esdras se invierte, y el púlpito se adelanta al corazón. Santiago tres uno permanece. Mejor un discípulo silencioso que cumple, que un maestro elocuente que no se sujeta."
 ],
 [
 "p",
-"La cuarta son las lenguas bíblicas. El Antiguo Testamento fue escrito en hebreo, con algunas secciones en arameo, en Daniel y en Esdras. El Nuevo Testamento fue escrito en griego. No necesitas llegar a ser un filólogo para estudiar bien la Biblia, pero conocer el alfabeto, el sonido de las palabras, las palabras clave y su número en la concordancia de Strong te abrirá puertas que ninguna traducción puede abrir del todo. En esta escuela aprenderás las lenguas por el oído: las letras, su pronunciación y el vocabulario esencial. La concordancia de James Strong, publicada a fines del siglo diecinueve, asignó un número a cada palabra hebrea y aramea, que se cita con la letra hache, y a cada palabra griega, que se cita con la letra ge. Cuando en esta escuela digamos, por ejemplo, hache tres mil trescientos setenta y cuatro, estaremos hablando de la palabra yirá, temor. Con ese número puedes encontrar la palabra en cualquier concordancia o diccionario que use el sistema de Strong. Las lecciones cinco y seis abren el hebreo y el griego."
+"El cuarto es lo que más adelante llamaremos, con más detalle, el vicio de arrancar un versículo de su casa y hacerlo decir lo que el pasaje no dice. Se puede citar mucho y entender poco. La analogía de la fe, el contexto y la lectura lenta son la guarda. Por eso no inventaremos citas, ni rellenaremos de memoria lo que no hayamos verificado, ni construiremos doctrinas sobre una cláusula aislada."
 ],
 [
 "p",
-"La quinta es la hermenéutica: la ciencia y el arte de interpretar. Su nombre viene del griego hermenéuo, interpretar, y ya vimos que el Señor Jesús la practicó en el camino a Emaús. Te enseñará a leer cada texto en su sentido literal, gramatical e histórico, en su contexto, según su género literario, y siempre a la luz de toda la Escritura. Es la lección siete, y luego un módulo entero."
+"El quinto es el desaliento. El que ve la magnitud del hebreo, del griego, de los sesenta y seis libros y de su propia inconstancia, puede cerrar el cuaderno y decir que esto no es para él. A ese conviene recordarle que Esdras no subió por su brazo. El texto repite que la mano de Jehová su Dios estaba sobre él. Al final del mismo capítulo, Esdras mismo lo confiesa:"
+],
+[
+"q",
+"«Bendito Jehová Dios de nuestros padres, que puso tal cosa en el corazón del rey, para honrar la casa de Jehová que está en Jerusalén, e inclinó hacia mí su misericordia delante del rey y de sus consejeros, y de todos los príncipes poderosos del rey. Y yo, fortalecido por la mano de mi Dios sobre mí, reuní a los principales de Israel para que subiesen conmigo» Esdras 7:27-28."
 ],
 [
 "p",
-"La sexta es la exégesis: la aplicación del método a un pasaje concreto. Su nombre viene del griego exegéomai, que significa sacar fuera, conducir hacia afuera, explicar. La exégesis saca del texto lo que está en el texto. Su enemiga es la eiségesis, que mete en el texto lo que el lector trae de fuera. Es la lección ocho."
+"La buena mano no anula el trabajo; lo hace posible. Y si te falta sabiduría, no estás abandonado a tu talento. Santiago lo dice con una promesa que debe ser oración de esta escuela:"
+],
+[
+"q",
+"«Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios, el cual da a todos abundantemente y sin reproche, y le será dada» Santiago 1:5."
 ],
 [
 "p",
-"La séptima es el panorama de la Biblia libro por libro: autor, fecha, contexto, estructura, mensaje y cómo cada libro apunta a Cristo. Empezamos con Génesis en la lección nueve."
-],
-[
-"p",
-"La octava es el trasfondo histórico y la arqueología: la geografía de la tierra prometida, los imperios que rodearon a Israel, las costumbres, el templo, la sinagoga y los hallazgos que han iluminado el texto bíblico."
-],
-[
-"p",
-"La novena es la teología bíblica y sistemática. La teología bíblica sigue el hilo de la revelación a lo largo de la historia, desde Génesis hasta Apocalipsis. La teología sistemática ordena la enseñanza de toda la Escritura por temas: Dios, el hombre, el pecado, Cristo, la salvación, el Espíritu Santo, la iglesia y las últimas cosas."
-],
-[
-"p",
-"La décima es la historia de la iglesia: los mártires, los defensores de la fe, la Reforma, los avivamientos y la historia de la Biblia en español, desde Casiodoro de Reina y Cipriano de Valera."
-],
-[
-"p",
-"La undécima es la apologética: la defensa de la fe. El nombre viene de la palabra griega apología, ge seiscientos veintisiete, que Pedro usa cuando dice que estemos siempre preparados para presentar defensa con mansedumbre y reverencia ante todo el que nos demande razón de la esperanza que hay en nosotros. La lección diez abre esta disciplina con la resurrección."
-],
-[
-"p",
-"La duodécima es la homilética: el arte de predicar y enseñar la Palabra, de hacer que el pueblo entienda la lectura, como los levitas de Esdras."
-],
-[
-"p",
-"Y la decimotercera, que no es una disciplina más, sino el suelo de todas, es la sabiduría práctica y la devoción: la oración, la meditación, la santidad, la consejería con la Escritura, el carácter del maestro de la Palabra y la perseverancia."
+"Sin reproche. Dios no te echará en cara tu ignorancia cuando se la pidas. No te dirá que ya deberías saber. Da abundantemente. El estudioso que persevera no persevera por la dureza de su carácter, sino porque pide, y porque se le da, y porque la misma Palabra que lo convenció de su pobreza lo sostiene hasta el fin. Permanecer en estas cosas, como Pablo le dirá a Timoteo, es parte del oficio. El que empieza y no permanece no ha entendido todavía qué es la sabiduría."
 ],
 [
 "h",
-"Novena parte. La rutina diaria"
+"Novena parte. Tres retratos más: el joven, el anciano y el discípulo"
 ],
 [
 "p",
-"Dijimos que este es un curso para escuchar entre una y dos horas al día. Te propongo una manera de usarlo. Antes de dar play, ora brevemente. Puedes usar las palabras del salmista: abre mis ojos, y miraré las maravillas de tu ley. Ese versículo es el salmo ciento diecinueve, versículo dieciocho. Luego escucha la lección completa, sin prisa. Si puedes, ten la Biblia abierta en los pasajes que se citan. Cuando lleguemos a las palabras hebreas y griegas, repítelas en voz alta: el oído aprende mejor cuando la boca acompaña. Al final de la lección, responde el repaso en voz alta. Si tienes tiempo para la segunda hora, vuelve a escuchar la lección del día anterior, o lee en tu Biblia, en voz alta, los capítulos que la lección menciona. Una vez por semana, en lugar de una lección nueva, repasa las de la semana. La repetición no es pérdida de tiempo: es como el agua que cae sobre la piedra."
+"Esdras no es el único modelo que la Escritura nos ofrece. Antes de terminar, quiero que conozcas a tres compañeros de camino que te acompañarán cuando el oficio se vuelva largo."
 ],
 [
 "p",
-"Y una última recomendación práctica: escribe. Aunque el curso es para el oído, ten a mano un cuaderno o una nota en el teléfono para anotar una sola frase por lección, la que más te haya hablado. Al cabo de un año tendrás un libro de trescientas sesenta frases, y cada una te recordará una lección entera."
+"El primero es Daniel joven. Fue llevado cautivo a Babilonia siendo un muchacho, en el tercer año de Joacim. En una corte que quería cambiarle el nombre, la lengua y la mesa, el texto dice algo que debes oír junto a Esdras siete diez:"
+],
+[
+"q",
+"«Y Daniel propuso en su corazón no contaminarse con la porción de la comida del rey, ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligase a contaminarse» Daniel 1:8."
+],
+[
+"p",
+"Daniel propuso en su corazón. Recuerda la frase de Esdras: había preparado su corazón. La sabiduría bíblica siempre comienza ahí, y comienza en un mundo que no facilita la fidelidad. El estudioso de la Palabra no vive en un recinto limpio. Vive, como Daniel, en tierras donde se le pedirá que se contamine un poco para progresar un poco. El corazón afirmado se decide antes de que llegue la mesa del rey. Si esperas a sentir la fuerza en el momento de la tentación, llegarás tarde. El propósito se toma de antemano, y se toma delante de Dios."
+],
+[
+"p",
+"El segundo retrato es Daniel anciano. Han pasado casi setenta años. Babilonia ha caído, y Daniel, ya muy mayor, está sirviendo bajo un reino nuevo. Entonces hace algo que debería avergonzar al estudiante que ya no abre el libro porque «ya sabe»:"
+],
+[
+"q",
+"«En el año primero de su reinado, yo Daniel miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, que habían de cumplirse las desolaciones de Jerusalén en setenta años. Y volví mi rostro a Dios el Señor, buscándole en oración y ruego, en ayuno, cilicio y ceniza» Daniel 9:2-3."
+],
+[
+"p",
+"Este anciano, que había recibido visiones y había interpretado sueños, se inclina sobre los libros. Mira atentamente. Cuenta los años de los que habló Jehová por Jeremías. Y lo que lee no se queda en un hallazgo erudito: vuelve el rostro a Dios, y ora, y ayuna, y se humilla. Aquí hay una lección de método que no debes olvidar. El estudio de la Biblia no termina en el entendimiento; termina en la oración. Daniel lee la promesa y se pone a interceder conforme a la promesa. El estudioso que descubre un texto y no ora, ha dejado la obra a medias. El estudioso que ora sin haber leído, corre el riesgo de pedir a Dios lo que Dios no ha prometido. Lectura y ruego se necesitan, y el anciano lo sabía mejor que el joven."
+],
+[
+"p",
+"El tercer retrato es Timoteo. Pablo le escribe en su última carta, desde la cárcel en Roma, poco antes de morir, y le recuerda el origen de su fe:"
+],
+[
+"q",
+"«trayendo a la memoria la fe no fingida que hay en ti, la cual habitó primero en tu abuela Loida, y en tu madre Eunice, y estoy seguro que en ti también» 2 Timoteo 1:5."
+],
+[
+"p",
+"Y un poco más adelante le dice que permanezca en lo que ha aprendido, sabiendo de quién lo has aprendido, y que desde la niñez has sabido las Sagradas Escrituras, las cuales te pueden hacer sabio para la salvación por la fe que es en Cristo Jesús. 2 Timoteo 3:15. Desde la niñez. Las Escrituras no son un coto de especialistas adultos. Un niño puede ser hecho sabio para la salvación por la fe que es en Cristo Jesús. La sabiduría de esta escuela no es otra. Y en su primera carta, el apóstol le había dejado a Timoteo un programa de oficio que vale para nosotros:"
+],
+[
+"q",
+"«Entre tanto que voy, ocúpate en la lectura, la exhortación y la enseñanza. No descuides el don que hay en ti, que te fue dado mediante profecía con la imposición de las manos del presbiterio. Ocúpate en estas cosas; permanece en ellas, para que tu aprovechamiento sea manifiesto a todos. Ten cuidado de ti mismo y de la doctrina; persiste en ello, pues haciendo esto, te salvarás a ti mismo y a los que te oyeren» 1 Timoteo 4:13-16."
+],
+[
+"p",
+"Lectura, exhortación y enseñanza. Cuidado de ti mismo y de la doctrina. Permanecer, persistir. El aprovechamiento no es una emoción de un día; es algo que se hace manifiesto a todos cuando un hombre se ocupa y permanece. Y hay una frase que debe quitarnos toda ligereza: te salvarás a ti mismo y a los que te oyeren. No porque el maestro sea el Salvador, sino porque la doctrina que se guarda y se vive es el medio que Dios usa para salvar. El estudiante de la Biblia no aprende solo para sí. Lo que aprendes en esta escuela, si lo cumples, será para otros. Lo que descuidas, también."
+],
+[
+"p",
+"Daniel joven nos enseña a estudiar sin contaminarnos. Daniel anciano nos enseña a convertir el estudio en oración. Timoteo nos enseña que la fe se recibe, se permanece en ella y se transmite, y que el cuidado de la doctrina es también cuidado de la propia alma."
 ],
 [
 "h",
-"Décima parte. Los peligros del camino"
+"Décima parte. Cortar derecho y meditar de día y de noche"
 ],
 [
 "p",
-"Todo camino tiene peligros, y es honrado nombrarlos desde el principio. El primer peligro es el orgullo, del que ya hablamos. El conocimiento envanece. El remedio es recordar que todo lo que sabemos lo hemos recibido. ¿Qué tienes que no hayas recibido?, pregunta Pablo en primera de Corintios cuatro siete."
+"Quedan dos verbos que esta escuela usará muchas veces, y conviene oírlos desde el primer día."
 ],
 [
 "p",
-"El segundo peligro es la curiosidad sin obediencia. Hay quien estudia la Biblia como quien colecciona estampillas, por el placer de saber, sin dejar que el texto le toque. El remedio es el orden de Esdras: inquirir para cumplir, y cumplir para enseñar."
-],
-[
-"p",
-"El tercer peligro es la novedad. Hay estudiosos que, para parecer originales, buscan siempre una interpretación que nadie haya visto antes. Pero en la Escritura lo nuevo suele ser lo falso. El remedio es leer con la iglesia de todos los siglos, con los grandes comentaristas que nos precedieron, sin ponerlos por encima de la Escritura, pero sin despreciarlos tampoco."
-],
-[
-"p",
-"El cuarto peligro es el desaliento. Hay días en que el hebreo parece imposible, la historia parece interminable y el corazón está frío. El remedio es la promesa de Isaías cincuenta y cinco: la palabra de Dios no vuelve vacía. Escucha."
+"El primero lo dice Pablo a Timoteo, en una de las frases más precisas del Nuevo Testamento sobre el oficio del estudioso:"
 ],
 [
 "q",
-"«Porque como desciende de los cielos la lluvia y la nieve, y no vuelve allá, sino que riega la tierra, y la hace germinar y producir, y da semilla al que siembra, y pan al que come, así será mi palabra que sale de mi boca; no volverá a mí vacía, sino que hará lo que yo quiero, y será prosperada en aquello para que la envié.» Así dice Isaías, capítulo cincuenta y cinco, versículos diez al once."
+"«Procura con diligencia presentarte a Dios aprobado, como obrero que no tiene de qué avergonzarse, que usa bien la palabra de verdad» 2 Timoteo 2:15."
 ],
 [
 "p",
-"Como la lluvia y la nieve que descienden del cielo y no vuelven allá sino que riegan la tierra, así es la Palabra que sale de la boca de Dios. No volverá a Él vacía, sino que hará lo que Él quiere y será prosperada en aquello para que la envió. Esta promesa vale para la Palabra predicada y también para la Palabra estudiada. Ninguna hora que pases en la Escritura con fe es una hora perdida."
+"«Usa bien» traduce un verbo griego que tiene la idea de cortar derecho, de trazar en línea recta.[5] Se ha pensado en el obrero que abre un surco, o en el que corta una tela, o en el que traza un camino. En cualquiera de esas imágenes, lo contrario es el corte torcido: la Palabra desviada, el texto forzado, la aplicación que no nace del pasaje. El obrero se presenta a Dios, no primero a los hombres. Quiere ser aprobado por Él, y no tener de qué avergonzarse. Esa vergüenza no es la del que ignora un dato; es la del que maneja torcido lo que Dios dijo derecho. Por eso esta escuela será lenta, y por eso no inventará lecturas. Cortar derecho es un acto de temor de Jehová."
 ],
 [
 "p",
-"El quinto peligro es el más sutil: sustituir la relación con Dios por la información sobre Dios. Salomón es el ejemplo trágico. Dios le dio un corazón sabio y entendido como no lo hubo antes ni lo habría después. Compuso tres mil proverbios y mil cinco cantares. Habló de los árboles, de los animales, de las aves, de los reptiles y de los peces. Venían de todos los pueblos a oír su sabiduría. Y sin embargo, cuando fue viejo, sus mujeres inclinaron su corazón tras dioses ajenos, y su corazón no fue perfecto con Jehová su Dios, como el de su padre David. Escucha cómo lo dice el texto."
+"El segundo verbo está en el umbral del Salterio. El Salmo primero no describe a un especialista, sino al hombre dichoso, y no obstante le da una ocupación que es toda una hermenéutica del corazón:"
 ],
 [
 "q",
-"«Y cuando Salomón era ya viejo, sus mujeres inclinaron su corazón tras dioses ajenos, y su corazón no era perfecto con Jehová su Dios, como el corazón de su padre David.» Así dice primero de Reyes, capítulo once, versículo cuatro."
+"«Bienaventurado el varón que no anduvo en consejo de malos, Ni estuvo en camino de pecadores, Ni en silla de escarnecedores se ha sentado; Sino que en la ley de Jehová está su delicia, Y en su ley medita de día y de noche. Será como árbol plantado junto a corrientes de aguas, Que da su fruto en su tiempo, Y su hoja no cae; Y todo lo que hace, prosperará» Salmo 1:1-3."
 ],
 [
 "p",
-"El hombre más sabio de la historia de Israel terminó mal porque su corazón se apartó. La sabiduría no se hereda ni se almacena; se cultiva cada día en el temor de Dios. Por eso el último de los cinco fines de esta escuela es mantenerse firme. No basta comenzar bien. Hay que perseverar."
+"Meditar, en hebreo, tiene la idea de murmurar, de repetir en voz baja, de rumiar la Palabra hasta que se vuelve delicia.[6] No es un vaciar la mente. Es un llenarla de la ley de Jehová, de día y de noche. El fruto no se improvisan: el árbol está plantado, permanece junto a las corrientes, y da en su tiempo. La perseverancia del estudioso se parece más a eso que a un arranque de entusiasmo. Y fíjate en lo que el salmo pone antes de la meditación: no andar en consejo de malos, no estar en camino de pecadores, no sentarse en silla de escarnecedores. La vida y el estudio no se pueden divorciar. El que medita y no se aparta, o el que se aparta y no medita, ha cortado por la mitad lo que Dios juntó."
+],
+[
+"p",
+"El salmista, más adelante, nos enseña a pedir lo que no podemos darnos a nosotros mismos:"
+],
+[
+"q",
+"«Abre mis ojos, y miraré Las maravillas de tu ley» Salmo 119:18."
+],
+[
+"p",
+"Si los ojos no son abiertos, la ley puede estar delante y no ser vista. Esa petición es la hermana de Santiago uno cinco, y debe acompañar cada lección. Pedimos sabiduría. Pedimos ojos. Pedimos un corazón afirmado. Y pedimos, sobre todo, no escudriñar para no venir, sino venir a Cristo, de quien la ley y los profetas dan testimonio, para que tengamos vida."
+],
+[
+"p",
+"Así se tejen, sin necesidad de ponerles un letrero, los fines de este día y de toda la escuela. Venimos a conocer a Dios, que quiere ser entendido y conocido, y que en Cristo se ha hecho sabiduría para nosotros. La Palabra, cuando se abre de verdad, nos convence de pecado: nos hallamos tardos de corazón, oidores no hacedores, tentados de gloria propia. Esa convicción no es el final; es el umbral del arrepentimiento, el volver del que rasga el corazón y no el rollo, el de Daniel que vuelve el rostro a Dios con ruego y ceniza. Y el evangelio no nos deja en el umbral: nos llama a venir a Cristo para tener vida, a ser puestos en Él, donde hay justificación, santificación y redención. En ese Cristo se permanece. Se persevera en la doctrina, en la lectura, en la oración, en el cumplimiento, hasta que el aprovechamiento sea manifiesto y la hoja no caiga."
+],
+[
+"p",
+"Si hoy, al cerrar esta lección, solo has admirado a Esdras, has oído un retrato. Si has preparado el corazón, has entrado por la puerta. El versículo que vas a memorizar no es un lema para el cuaderno: es una decisión. Inquirir. Cumplir. Enseñar. Y, antes que todo, un corazón afirmado delante de Jehová, que es el principio de la sabiduría."
 ],
 [
 "h",
-"Undécima parte. La gracia que sostiene al estudioso"
+"Undécima parte. Junto al río Ahava"
 ],
 [
 "p",
-"No quiero terminar esta lección con una advertencia, sino con el evangelio. Todo lo que hemos dicho, la diligencia, la meditación, la obediencia, podría sonar como una carga imposible. Y lo sería, si dependiera de nosotros. Pero la Biblia no nos presenta primero lo que nosotros hacemos por Dios, sino lo que Dios ha hecho por nosotros en Cristo. El indicativo de la gracia va antes que el imperativo del deber."
-],
-[
-"p",
-"Pablo escribe a los corintios que Cristo nos ha sido hecho por Dios sabiduría."
+"El corazón preparado no se queda en una resolución privada. El mismo Esdras, antes de llegar a Jerusalén, reúne a la caravana junto al río Ahava y allí hace algo que esta escuela no puede tratar como un detalle de itinerario. Había hablado al rey de la mano de su Dios. Ahora tenía que caminar como quien cree lo que ha dicho."
 ],
 [
 "q",
-"«Mas por él estáis vosotros en Cristo Jesús, el cual nos ha sido hecho por Dios sabiduría, justificación, santificación y redención; para que, como está escrito: El que se gloría, gloríese en el Señor.» Así dice primera de Corintios, capítulo uno, versículos treinta al treinta y uno."
+"«Y publiqué ayuno allí junto al río Ahava, para afligirnos delante de nuestro Dios, para solicitar de él camino derecho para nosotros, y para nuestros niños, y para todos nuestros bienes. Porque tuve vergüenza de pedir al rey tropa y gente de a caballo que nos defendiesen del enemigo en el camino; porque habíamos hablado al rey, diciendo: La mano de nuestro Dios es para bien sobre todos los que le buscan; mas su poder y su furor contra todos los que le abandonan. Ayunamos, pues, y pedimos a nuestro Dios sobre esto, y él nos fue propicio» Esdras 8:21-23."
 ],
 [
 "p",
-"Cristo es nuestra sabiduría. No solo nos enseña sabiduría; Él mismo es la sabiduría de Dios. Y en Colosenses dos tres el apóstol dice que en Él están escondidos todos los tesoros de la sabiduría y del conocimiento. Si quieres llegar a ser un experto bíblico, el camino no es primero un método, sino una Persona. Todo el estudio de esta escuela es un viaje hacia los tesoros escondidos en Cristo."
+"Hay una vergüenza santa. Esdras no se avergüenza de ser débil; se avergüenza de desmentir, con un pedido de tropa, lo que ha confesado acerca de Dios. Habían dicho al rey que la mano de Dios es para bien sobre todos los que le buscan, y que su poder y su furor están contra los que le abandonan. Si ahora pedían escolta como quien no cree esa mano, el testimonio se caía delante de un monarca pagano. El estudioso conoce esa tentación con otro ropaje: hablar con altura de la suficiencia de la Palabra, y vivir como quien, en el fondo, se fía de otra defensa. El ayuno de Ahava es la coherencia del corazón afirmado. Se afligen delante de Dios. Solicitan camino derecho, no solo para sí, sino para los niños y para los bienes. El conocimiento de Dios no los vuelve descuidados de los que viajan con ellos."
 ],
 [
 "p",
-"Y si te falta sabiduría, Santiago te dice qué hacer."
+"Y Dios les fue propicio. El texto no oculta el peligro del enemigo y del acechador. Lo que afirma es la mano:"
 ],
 [
 "q",
-"«Y si alguno de vosotros tiene falta de sabiduría, pídala a Dios, el cual da a todos abundantemente y sin reproche, y le será dada.» Así dice Santiago, capítulo uno, versículo cinco."
+"«Y partimos del río Ahava el doce del mes primero, para ir a Jerusalén; y la mano de nuestro Dios estaba sobre nosotros, y nos libró de mano del enemigo y del acechador en el camino. Y llegamos a Jerusalén, y reposamos allí tres días» Esdras 8:31-32."
 ],
 [
 "p",
-"Pídala a Dios, el cual da a todos abundantemente y sin reproche. Sin reproche: Dios no te va a echar en cara tu ignorancia. No te va a decir: ¿cómo no sabías esto todavía? Él da con generosidad a quien pide con fe. Esa es la última frase de nuestra lección, y la primera oración de nuestra escuela."
+"La misma mano que el capítulo siete había puesto sobre el escriba se extiende ahora sobre el pueblo que camina. El experto bíblico, en el sentido que esta lección ha querido rescatar, no viaja solo, ni viaja seguro por su diligencia. Viaja porque Dios es propicio a los que le buscan, y porque el furor de Dios contra los que le abandonan no es una frase para el rey, sino una verdad para el corazón. Buscarle, aquí, no es una devoción vaga: es aflicción, petición, camino, y una Palabra que se ha osado confesar delante de quien no la teme. Si esta escuela te enseña a hablar bien de la mano de Dios y no te lleva a pedirle camino derecho, te habrá dejado a las puertas de Ahava, con la confesión en la boca y la escolta todavía encargada al rey."
 ],
 [
 "h",
-"Duodécima parte. Tres retratos más del estudioso de la Palabra"
+"Duodécima parte. Leche y alimento sólido"
 ],
 [
 "p",
-"Esdras no es el único modelo que la Escritura nos ofrece. Antes de terminar, quiero que conozcas a tres compañeros de camino que te acompañarán durante toda la escuela: un joven cautivo en Babilonia, un anciano que oraba con la Biblia abierta, y un muchacho que aprendió las Escrituras en las rodillas de su abuela y de su madre."
-],
-[
-"p",
-"El primero es Daniel joven. Fue llevado cautivo a Babilonia siendo un muchacho, en el tercer año de Joacim, el mismo rey que quemó el rollo de Jeremías, como veremos mañana. En Babilonia lo pusieron en la escuela del rey, para que aprendiera las letras y la lengua de los caldeos. Le cambiaron el nombre, le ofrecieron la comida de la mesa real, y quisieron borrar de él la identidad de su pueblo. Escucha lo que hizo."
+"Hay un texto, cerca del final de la Escritura, que explica por qué esta escuela no se contentará con lo fácil, y por qué lo difícil no es, por sí solo, madurez. El autor de Hebreos quiere hablar de Melquisedec y de Cristo, y se detiene, porque el oído de sus lectores se ha vuelto tardo:"
 ],
 [
 "q",
-"«Y Daniel propuso en su corazón no contaminarse con la porción de la comida del rey, ni con el vino que él bebía; pidió, por tanto, al jefe de los eunucos que no se le obligase a contaminarse.» Así dice Daniel, capítulo uno, versículo ocho."
+"«Acerca de esto tenemos mucho que decir, y difícil de explicar, por cuanto os habéis hecho tardos para oír. Porque debiendo ser ya maestros, después de tanto tiempo, tenéis necesidad de que se os vuelva a enseñar cuáles son los primeros rudimentos de las palabras de Dios; y habéis llegado a ser tales que tenéis necesidad de leche, y no de alimento sólido. Y todo aquel que participa de la leche es inexperto en la palabra de justicia, porque es niño; pero el alimento sólido es para los que han alcanzado madurez, para los que por el uso tienen los sentidos ejercitados en el discernimiento del bien y del mal» Hebreos 5:11-14."
 ],
 [
 "p",
-"Daniel propuso en su corazón no contaminarse. Recuerda la frase de Esdras: había preparado su corazón. La sabiduría bíblica siempre comienza en una decisión interior. Daniel no despreció el estudio de Babilonia; aprendió sus letras y llegó a ser diez veces mejor que todos los magos y astrólogos del reino. Pero estudió sin entregar su corazón. Y el texto dice que a estos cuatro muchachos Dios les dio conocimiento e inteligencia en todas las letras y ciencias, y que Daniel tuvo entendimiento en toda visión y sueños. El estudiante de esta escuela leerá libros de muchos autores, comentarios, diccionarios, gramáticas y obras de historia. Debe hacerlo como Daniel: aprendiendo todo lo útil y guardando el corazón para Dios."
+"Fíjate en el diagnóstico. No dice, primero, que el tema sea demasiado alto para cualquier hombre. Dice que ellos se han hecho tardos para oír. La tardanza del oído es un hecho moral, no solo una limitación de inteligencia. El tiempo había pasado, y debían ser ya maestros, y sin embargo necesitaban de nuevo los rudimentos. Hay una niñez que es santa, la de Timoteo que desde la niñez sabe las Escrituras. Y hay una niñez que es culpa, la del que, debiendo haber ejercitado los sentidos, sigue pidiendo solo leche."
 ],
 [
 "p",
-"El segundo retrato es Daniel anciano. Han pasado casi setenta años. Babilonia ha caído, y Daniel, ya muy mayor, está sirviendo bajo Darío de Media. Y en ese momento hace algo que todo estudiante debe imitar."
+"Esta escuela te dará alimento sólido: lenguas, texto, doctrina, libros, predicación. No lo hará para que te sientas adulto, ni para que desprecies a quien empieza. Lo hará porque la Palabra de justicia merece sentidos ejercitados, y porque el discernimiento del bien y del mal no se improvisa. El uso, dice el texto, ejercita. El uso es la lectura de cada día, la obediencia de cada día, la oración de cada día, el cortar derecho de cada día. Sin ese uso, la lección más densa se vuelve una leche disfrazada de banquete: se oye, se admira, y no se discierne."
+],
+[
+"p",
+"Santiago, por su parte, no nos deja con la impresión de que oír mucho sea ya un aprovechamiento manifiesto:"
 ],
 [
 "q",
-"«en el año primero de su reinado, yo Daniel miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías, que habían de cumplirse las desolaciones de Jerusalén en setenta años. Y volví mi rostro a Dios el Señor, buscándole en oración y ruego, en ayuno, cilicio y ceniza.» Así dice Daniel, capítulo nueve, versículos dos al tres."
+"«Pero sed hacedores de la palabra, y no tan solamente oidores, engañándoos a vosotros mismos. Porque si alguno es oidor de la palabra pero no hacedor de ella, éste es semejante al hombre que considera en un espejo su rostro natural. Porque él se considera a sí mismo, y se va, y luego olvida cómo era. Mas el que mira atentamente en la perfecta ley, la de la libertad, y persevera en ella, no siendo oidor olvidadizo, sino hacedor de la obra, éste será bienaventurado en lo que hace» Santiago 1:22-25."
 ],
 [
 "p",
-"Yo Daniel miré atentamente en los libros el número de los años de que habló Jehová al profeta Jeremías. Este anciano, que había recibido visiones directamente de Dios, seguía leyendo la Escritura. Tenía en sus manos el rollo de Jeremías, el mismo que había sobrevivido al brasero. Leyó que la desolación de Jerusalén duraría setenta años, hizo la cuenta, y entendió que el tiempo estaba cumplido. ¿Y qué hizo con lo que entendió? No escribió un tratado de profecía para satisfacer la curiosidad. Volvió su rostro a Dios el Señor, buscándole en oración y ruego, en ayuno, cilicio y ceniza. Leyó la Biblia y se puso a orar. Y su oración, que ocupa casi todo el capítulo nueve, es una confesión de pecado tejida con frases de Moisés, de Salomón y de Jeremías. Daniel oraba con las palabras de la Escritura."
+"El espejo es bueno. El problema no es mirarse. El problema es irse y olvidar. La perfecta ley, la de la libertad, pide una mirada atenta y una perseverancia. Libertad no significa aquí la licencia de no cumplir, sino el yugo bueno de la Palabra que, cumplida, bienaventurado hace al hombre en lo que hace. Así se cierra el círculo de Esdras: inquirir es mirar atentamente; cumplir es ser hacedor; enseñar, cuando llegue, será ayudar a otros a mirar y a perseverar."
 ],
 [
 "p",
-"Aquí está una lección de método que no debes olvidar. El estudio de la Biblia no termina en el entendimiento; termina en la oración. Daniel miró atentamente, entendió, y oró. Ese es el ciclo que proponemos para cada día de esta escuela: escuchar la lección, meditar un pasaje, y convertirlo en oración. Si la profecía de Jeremías llevó a Daniel a confesar el pecado de su pueblo, cada lección debería llevarte a hablar con Dios de lo que has aprendido."
+"Una última distinción, para que nadie oiga en esta lección lo que no hemos dicho. No hemos dicho que el estudio formal sea vanidad, ni que un título sea una deshonra, ni que la ignorancia sea un privilegio espiritual. Esdras era escriba diligente, Apolos era poderoso en las Escrituras, Pablo podía razonar en las sinagogas y en el areópago. El trabajo del oído, de la memoria, de la lengua y de la inteligencia es un culto, cuando se ofrece a Dios. Lo que hemos dicho es que ese trabajo no es la puerta. La puerta es el temor de Jehová, el corazón afirmado, el venir a Cristo de quien las Escrituras dan testimonio, y el orden de inquirir, cumplir y enseñar. El que entra por esa puerta puede, y debe, llegar tan lejos como la Palabra lo lleve, con sentidos ejercitados, sin jactancia y sin pereza."
 ],
 [
 "p",
-"El tercer retrato es Timoteo. Pablo le escribe en su última carta, desde la cárcel en Roma, poco antes de morir."
+"Junto al río, Esdras había dicho que la mano de Dios es para bien sobre todos los que le buscan. Esa frase no es un lema de viaje: es teología. El que se acerca a Dios cree que le hay, y que es galardonador de los que le buscan. Así lo dice la Escritura:"
 ],
 [
 "q",
-"«trayendo a la memoria la fe no fingida que hay en ti, la cual habitó primero en tu abuela Loida, y en tu madre Eunice, y estoy seguro que en ti también.» Así dice segunda de Timoteo, capítulo uno, versículo cinco."
+"«Pero sin fe es imposible agradar a Dios; porque es necesario que el que se acerca a Dios crea que le hay, y que es galardonador de los que le buscan» Hebreos 11:6."
 ],
 [
 "p",
-"La fe no fingida que habitó primero en tu abuela Loida, y en tu madre Eunice. Y en el capítulo tres, el apóstol añade: desde la niñez has sabido las Sagradas Escrituras, las cuales te pueden hacer sabio para la salvación por la fe que es en Cristo Jesús. Timoteo tenía un padre griego, que según todo indica no era creyente. Pero una abuela y una madre fieles le enseñaron las Escrituras desde niño, en una casa sencilla de Listra. Esa enseñanza humilde de dos mujeres preparó al hombre que luego sería pastor en Éfeso y colaborador del apóstol de los gentiles."
+"Buscar a Dios, en Esdras y en Hebreos, no es un experimento religioso. Es fe que se acerca, que pide camino derecho, que ayuna, que no desmiente con la conducta lo que ha confesado con la boca. Y el reverso es grave: su poder y su furor están contra todos los que le abandonan. El estudioso puede abandonar a Dios sin cerrar el libro, si hace del libro un oficio y deja de buscarle a Él. Esa es una forma de apostasía educada, y esta lección la nombra para que nos examinemos a tiempo, nos arrepintamos y volvamos a buscarle, no a buscar una escolta que nos ahorre la fe."
 ],
 [
 "p",
-"Este retrato tiene una aplicación que no debemos pasar por alto. El estudiante de la Biblia no aprende solo para sí. Lo que aprendes en esta escuela debe pasar a tu casa: a tu esposa, a tus hijos, a tus nietos, a los que viven contigo. Deuteronomio seis manda que las palabras de Dios estén sobre tu corazón, y que las repitas a tus hijos, y hables de ellas estando en tu casa, y andando por el camino, y al acostarte, y cuando te levantes. Las mejores escuelas bíblicas de la historia no han sido los grandes seminarios, sino las mesas de las familias donde se leía la Biblia cada día."
+"El galardón de los que le buscan no es, en primer lugar, un viaje sin acechadores. A Esdras le fue propicio Dios, y le libró; no a todos los siervos se les ahorra el valle. El galardón, al cabo, es el mismo Dios, conocido, y el grande galardón de guardar sus juicios, y Cristo, en quien el Padre nos ha dado toda sabiduría. El que busca tesoros en la Escritura y no busca a Dios, ha malentendido el mapa. El que busca a Dios y desprecia la Escritura por la que Dios ha hablado, ha rechazado el camino. Esta escuela te llamará, día tras día, a las dos cosas juntas: el texto abierto y el rostro vuelto, como Daniel, a Dios el Señor."
 ],
 [
 "p",
-"Y Pablo, en su primera carta, le dejó a Timoteo un programa de estudio que vale para nosotros."
+"El Salmo diecinueve resume, mejor que un programa, lo que el estudioso va a hallar si entra así:"
 ],
 [
 "q",
-"«Entre tanto que voy, ocúpate en la lectura, la exhortación y la enseñanza. No descuides el don que hay en ti, que te fue dado mediante profecía con la imposición de las manos del presbiterio. Ocúpate en estas cosas; permanece en ellas, para que tu aprovechamiento sea manifiesto a todos. Ten cuidado de ti mismo y de la doctrina; persiste en ello, pues haciendo esto, te salvarás a ti mismo y a los que te oyeren.» Así dice primera de Timoteo, capítulo cuatro, versículos trece al dieciséis."
+"«La ley de Jehová es perfecta, que convierte el alma; El testimonio de Jehová es fiel, que hace sabio al sencillo. Los mandamientos de Jehová son rectos, que alegran el corazón; El precepto de Jehová es puro, que alumbra los ojos. El temor de Jehová es limpio, que permanece para siempre; Los juicios de Jehová son verdad, todos justos. Deseables son más que el oro, y más que mucho oro afinado; Y dulces más que miel, y que la que destila del panal. Tu siervo es además amonestado con ellos; En guardarlos hay grande galardón» Salmo 19:7-11."
 ],
 [
 "p",
-"Ocúpate en la lectura, la exhortación y la enseñanza. Ocúpate en estas cosas; permanece en ellas, para que tu aprovechamiento sea manifiesto a todos. Ten cuidado de ti mismo y de la doctrina; persiste en ello. Observa el orden de la última frase: primero de ti mismo, después de la doctrina. El maestro que descuida su propia alma termina enseñando una doctrina que él mismo no vive. Y la palabra aprovechamiento significa progreso, avance. Pablo espera que Timoteo crezca, que se note su avance. Esta escuela no busca que acumules información, sino que avances, día tras día, en conocimiento y en santidad, de manera que tu progreso sea manifiesto a todos."
-],
-[
-"p",
-"Daniel joven nos enseña a estudiar sin contaminarnos. Daniel anciano nos enseña a convertir el estudio en oración. Timoteo nos enseña que la Palabra se aprende en casa y se transmite a la siguiente generación. Y Esdras, el primero de todos, nos recuerda el orden: preparar el corazón, inquirir, cumplir, enseñar. Cuatro hombres en cuatro situaciones distintas: un cautivo, un anciano, un joven pastor y un escriba que regresa del exilio. Ninguno de ellos tenía las comodidades que tú tienes hoy, con la Biblia entera en tu bolsillo y lecciones para escuchar mientras caminas. Que eso nos avergüence y nos anime a la vez."
+"Convierte el alma. Hace sabio al sencillo. Alegra el corazón. Alumbra los ojos. Permanece para siempre. Amonesta al siervo. Y en guardarlos hay grande galardón. No en citarlos solamente, sino en guardarlos. Esa es la puerta del sabio. Mañana pondremos, sobre este umbral, el primer fundamento doctrinal de todo el edificio: que Dios ha hablado, que toda la Escritura es soplada por Dios, y que esa Palabra, por ser de Él, es verdadera en todo lo que afirma. Hoy basta con entrar. Prepara el corazón. Inquiere. Cumple. Enseña. Y que tu alabanza no sea tu sabiduría, sino el entender y el conocer a Jehová, que hace misericordia, juicio y justicia en la tierra."
 ],
 [
 "h",
@@ -554,75 +566,63 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Ahora vamos a repasar. Contesta cada pregunta en voz alta antes de escuchar la respuesta."
+"Ahora vamos a repasar. Contesta cada pregunta en voz alta antes de leer o de oír la respuesta."
 ],
 [
 "p",
-"Primera pregunta. ¿Cuáles son los cuatro verbos de Esdras siete diez, en su orden? Respuesta: Esdras había preparado su corazón para inquirir la ley de Jehová, para cumplirla, y para enseñar en Israel sus estatutos y decretos. Preparar, inquirir, cumplir, enseñar."
+"Primera pregunta. ¿Cuáles son los cuatro movimientos de Esdras 7:10, en su orden? Respuesta: había preparado su corazón, para inquirir la ley de Jehová, para cumplirla, y para enseñar en Israel sus estatutos y decretos."
 ],
 [
 "p",
-"Segunda pregunta. ¿Qué significa la palabra hebrea darash, hache mil ochocientos setenta y cinco? Respuesta: buscar, indagar, consultar con insistencia. Es el verbo de la búsqueda paciente en la Escritura."
+"Segunda pregunta. ¿Qué idea lleva el verbo hebreo traducido preparar en ese versículo? Respuesta: la idea de afirmar, de establecer, de dejar algo firme en su lugar: un propósito estable, no una emoción pasajera."
 ],
 [
 "p",
-"Tercera pregunta. ¿Cuál es el principio de la sabiduría según Proverbios? Respuesta: el temor de Jehová. La palabra temor es yirá, hache tres mil trescientos setenta y cuatro, y significa reverencia filial, no terror servil."
+"Tercera pregunta. ¿Cuál es el principio de la sabiduría, según Proverbios 1:7 y 9:10? Respuesta: el temor de Jehová. Y el conocimiento del Santísimo es la inteligencia."
 ],
 [
 "p",
-"Cuarta pregunta. ¿En qué puede gloriarse el hombre, según Jeremías nueve? Respuesta: en entender y conocer a Dios, que hace misericordia, juicio y justicia en la tierra."
+"Cuarta pregunta. ¿En qué puede alabarse el hombre, según Jeremías 9:23-24? Respuesta: no en su sabiduría, ni en su valentía, ni en sus riquezas, sino en entender y conocer a Jehová, que hace misericordia, juicio y justicia en la tierra."
 ],
 [
 "p",
-"Quinta pregunta. ¿Qué hizo el Señor Jesús en el camino a Emaús? Respuesta: comenzando desde Moisés y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de Él decían. Toda la Escritura habla de Cristo."
+"Quinta pregunta. ¿Qué hizo el Señor Jesús en el camino a Emaús, según Lucas 24:27? Respuesta: comenzando desde Moisés y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían."
 ],
 [
 "p",
-"Sexta pregunta. ¿Cuál es el peligro de Juan cinco treinta y nueve y cuarenta? Respuesta: escudriñar las Escrituras sin venir a Cristo para tener vida."
+"Sexta pregunta. ¿Cuál es el peligro de Juan 5:39-40? Respuesta: escudriñar las Escrituras y no querer venir a Cristo, de quien ellas dan testimonio, para tener vida."
 ],
 [
 "p",
-"Séptima pregunta. ¿Cuáles son las tres tareas de Nehemías ocho ocho y qué disciplinas representan? Respuesta: leer claramente, que corresponde a las lenguas y a la crítica textual; poner el sentido, que corresponde a la hermenéutica y a la exégesis; y hacer que entiendan la lectura, que corresponde a la homilética."
+"Séptima pregunta. ¿Cuáles son las tres tareas de Nehemías 8:8, y qué oficios de esta escuela representan? Respuesta: leer claramente, que corresponde al texto y a las lenguas; poner el sentido, que corresponde a la hermenéutica y a la exégesis; y hacer que entiendan la lectura, que corresponde a la enseñanza y a la predicación."
 ],
 [
 "p",
-"Octava pregunta. ¿Qué significa meditar, hagá, hache mil ochocientos noventa y siete? Respuesta: murmurar, repetir en voz baja la Palabra de día y de noche."
+"Octava pregunta. ¿Qué significa el verbo griego traducido «usa bien» en 2 Timoteo 2:15? Respuesta: cortar derecho, trazar en línea recta la palabra de verdad, sin torcer el texto."
 ],
 [
 "p",
-"Novena pregunta. ¿Qué significa el verbo orthotoméo, ge tres mil setecientos dieciocho, en segunda de Timoteo dos quince? Respuesta: cortar o trazar en línea recta. Usar bien la palabra de verdad, sin torcerla."
+"Novena pregunta. ¿Qué dos cualidades tenían los de Berea, según Hechos 17:11? Respuesta: recibieron la palabra con toda solicitud, y escudriñaban cada día las Escrituras para ver si estas cosas eran así."
 ],
 [
 "p",
-"Décima pregunta. ¿Qué dos cualidades tenían los de Berea? Respuesta: recibieron la palabra con toda solicitud, y escudriñaban cada día las Escrituras para ver si estas cosas eran así."
+"Décima pregunta. ¿Qué aprendemos de Apolos en Hechos 18? Respuesta: que un hombre poderoso en las Escrituras necesita humildad para dejarse tomar aparte y para que le expongan más exactamente el camino de Dios."
 ],
 [
 "p",
-"Undécima pregunta. ¿Qué aprendemos de Apolos? Respuesta: que un hombre poderoso en las Escrituras necesita humildad para dejarse enseñar más exactamente."
+"Undécima pregunta. Según 1 Corintios 1:30, ¿qué nos ha sido hecho Cristo por Dios? Respuesta: sabiduría, justificación, santificación y redención, para que el que se gloría, se gloríe en el Señor."
 ],
 [
 "p",
-"Duodécima pregunta. ¿Cuáles son los cinco fines que atraviesan toda esta escuela? Respuesta: conocer a Dios, ser convencido de pecado, arrepentirse, convertirse de veras a Cristo y mantenerse firme hasta el fin."
-],
-[
-"p",
-"Decimotercera pregunta. ¿Qué hizo Daniel cuando entendió en el libro de Jeremías los setenta años? Respuesta: volvió su rostro a Dios en oración, ruego y ayuno, y confesó el pecado de su pueblo."
-],
-[
-"p",
-"Decimocuarta pregunta. ¿Qué programa de estudio dejó Pablo a Timoteo? Respuesta: ocuparse en la lectura, la exhortación y la enseñanza, y tener cuidado de sí mismo y de la doctrina."
+"Duodécima pregunta. ¿Dónde termina el estudio, según el ejemplo de Daniel 9? Respuesta: en la oración. Daniel miró atentamente en los libros, y volvió su rostro a Dios el Señor, buscándole en oración y ruego."
 ],
 [
 "h",
-"Oración final"
+"Oración"
 ],
 [
 "p",
-"Señor nuestro Dios, Padre de nuestro Señor Jesucristo, te damos gracias porque nos has hablado en tu Palabra. Prepara nuestro corazón, como preparaste el de Esdras, para inquirir tu ley, para cumplirla y para enseñarla. Abre nuestros ojos para que miremos las maravillas de tu ley. Líbranos del orgullo del conocimiento y danos el temor que es principio de la sabiduría. Muéstranos nuestro pecado y llévanos al arrepentimiento. Haz que en cada página encontremos a tu Hijo, en quien están escondidos todos los tesoros de la sabiduría y del conocimiento. Y guárdanos firmes hasta el fin. En el nombre de Jesucristo, amén."
-],
-[
-"p",
-"Mañana, en el día dos, estudiaremos la revelación y la inspiración de la Escritura: cómo ha hablado Dios, qué significa que toda la Escritura sea soplada por Dios, y por qué podemos confiar en ella como Palabra infalible y suficiente."
+"Señor, afirma nuestro corazón para inquirir tu ley, cumplirla y enseñarla; danos temor de ti, y llévanos a Cristo, en quien están todos los tesoros de la sabiduría. Amén."
 ],
 [
 "h",
@@ -630,15 +630,11 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "h",
-"Repaso de la lección"
+"Recapitulación"
 ],
 [
 "p",
-"Todo comenzó en la puerta del sabio. Según la Biblia, el experto en la Escritura no se define por sus títulos, sino por el temor de Jehová, que es el principio de la sabiduría, porque el conocimiento que no se arrodilla envanece, mientras que el amor edifica. Desde ese umbral miramos a Esdras, retrato del estudioso de la Palabra, que preparó su corazón, inquirió la ley de Jehová, la cumplió y la enseñó. El orden no es casual: primero el corazón, después el estudio, luego la obediencia, y solo al final la enseñanza. Incluso el verbo inquirir, darash, hache mil ochocientos setenta y cinco, nos recordó que la Escritura no se lee de pasada, sino que se interroga con paciencia, como quien busca con insistencia."
-],
-[
-"p",
-"Vimos después a los levitas de Nehemías ocho, que leían claramente, ponían el sentido y hacían que el pueblo entendiese la lectura; en esas tres tareas está el mapa de este curso, con las lenguas y la crítica textual, la hermenéutica y la exégesis, y la homilética. Ahora bien, el estudio no queda encerrado en el aula. Daniel, joven en Babilonia, estudió sin entregar el corazón, y ya anciano leyó a Jeremías y se puso a orar; Timoteo aprendió las Escrituras en su casa. Así el estudio termina en oración y pasa a la familia, y por eso la rutina de esta escuela es sencilla: escuchar la lección, meditar un pasaje y convertirlo en oración, cada día."
+"La primera lección no empezó por la gramática, sino por la puerta. Caminamos con Esdras, escriba diligente, cuya buena mano de Dios se explica por un corazón afirmado para inquirir, cumplir y enseñar. Oímos que el principio de la sabiduría es el temor de Jehová, y que Jehová no deja al hombre alabarse en su sabiduría, sino en entenderle y conocerle. Vimos que Cristo nos ha sido hecho sabiduría, justificación, santificación y redención, y que el Señor resucitado, en el camino a Emaús, abría todas las Escrituras, comenzando desde Moisés, y declaraba lo que de él decían. En la plaza, junto a la puerta de las Aguas, Esdras subió a un púlpito de madera, y los levitas leían claramente, ponían el sentido y hacían entender: ahí está el oficio de esta escuela. Berea nos enseñó a recibir con solicitud y a escudriñar cada día; Apolos, a dejarnos exponer más exactamente el camino de Dios. El Salmo primero nos llamó a meditar de día y de noche; 2 Timoteo 2:15, a cortar derecho; Hebreos cinco, a ejercitar los sentidos con alimento sólido, no a quedarnos en una niñez culpable. Y se nos advirtió de los fosos del orgullo, de la curiosidad que no obedece, de enseñar antes de hacer, de torcer el versículo y del desaliento, con la promesa de que Dios da sabiduría abundantemente y sin reproche."
 ],
 [
 "h",
@@ -646,71 +642,39 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta habrá un silencio breve. Detén el audio si lo necesitas, responde en voz alta con tus propias palabras, y luego escucha la respuesta."
+"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta, detente, responde en voz alta con tus propias palabras, y luego lee la respuesta."
 ],
 [
 "p",
-"Primera pregunta. ¿Por qué un hombre puede saber mucho de la Biblia y, sin embargo, no ser sabio según la Biblia?"
+"Primera pregunta. ¿Por qué esta lección llama «puerta» al temor de Jehová y al corazón preparado, y no al acopio de datos? Pausa para responder. Respuesta: porque un hombre puede distinguir tiempos verbales y recitar listas, y todavía no tener lo que la Escritura llama sabiduría, que comienza en el temor de Jehová y se cumple en conocerle y en venir a Cristo."
 ],
 [
 "p",
-"Respuesta: porque la sabiduría bíblica comienza en el temor de Jehová, no en la acumulación de datos. El conocimiento sin amor y sin reverencia envanece, como enseña primera de Corintios ocho."
+"Segunda pregunta. ¿Qué distingue el escudriñar de Juan 5:39-40 del inquirir de Esdras 7:10? Pausa para responder. Respuesta: Esdras inquiere para cumplir y para enseñar, con el corazón afirmado; los de Juan cinco escudriñan las Escrituras y no quieren venir a Cristo, de quien ellas dan testimonio, para tener vida."
 ],
 [
 "p",
-"Segunda pregunta. ¿Qué preparó Esdras antes de inquirir la ley, y por qué ese orden es importante?"
+"Tercera pregunta. ¿En qué sentido Cristo es la sabiduría de Dios para el estudioso, según 1 Corintios 1? Pausa para responder. Respuesta: no solo nos enseña sabiduría, sino que nos ha sido hecho sabiduría, justificación, santificación y redención, de modo que el estudio que no se rinde a Cristo crucificado no conduce al conocimiento de Dios."
 ],
 [
 "p",
-"Respuesta: preparó su corazón. El orden muestra que el estudio verdadero nace de una decisión interior delante de Dios, y no de la curiosidad o del deseo de prestigio."
+"Cuarta pregunta. ¿Qué orden no debe invertirse, y por qué? Pausa para responder. Respuesta: el de preparar el corazón, inquirir, cumplir y enseñar; porque enseñar sin haber inquirido es presunción, y enseñar sin haber cumplido es hipocresía."
 ],
 [
 "p",
-"Tercera pregunta. ¿Qué significa darash, y qué actitud exige al estudiante?"
+"Quinta pregunta. ¿Cómo se relaciona Nehemías 8:8 con los doce módulos de esta escuela? Pausa para responder. Respuesta: leer claramente, poner el sentido y hacer entender recorren todo el programa: lenguas y texto, hermenéutica y exégesis, doctrina y predicación, de modo que cada lección sirva a esa triple tarea."
 ],
 [
 "p",
-"Respuesta: buscar, indagar, consultar con insistencia. Exige tiempo, preguntas y paciencia: interrogar el texto en lugar de leerlo de pasada."
+"Sexta pregunta. ¿Qué es sola Scriptura, según se expuso hoy? Pausa para responder. Respuesta: que la Escritura es la única regla infalible de fe y de vida, y que la Escritura se interpreta con la Escritura, de modo que el maestro sirve al texto y no está por encima de él."
 ],
 [
 "p",
-"Cuarta pregunta. ¿Por qué Esdras cumplió la ley antes de enseñarla?"
+"Séptima pregunta. ¿Qué dos fosos evitan, juntos, Berea y Apolos? Pausa para responder. Respuesta: el del discípulo que todo lo cree y de nada se cerciora, y el del maestro que todo lo sabe y a nadie se sujeta."
 ],
 [
 "p",
-"Respuesta: porque el que enseña lo que no practica pierde autoridad delante de Dios y de los hombres. La obediencia valida la enseñanza."
-],
-[
-"p",
-"Quinta pregunta. ¿Qué produjo la lectura pública de la ley en el pueblo, según Nehemías ocho?"
-],
-[
-"p",
-"Respuesta: adoración. El pueblo se puso en pie, respondió amén, alzó las manos y se inclinó rostro en tierra. El estudio que no termina en adoración se queda a mitad de camino."
-],
-[
-"p",
-"Sexta pregunta. ¿Qué hizo Daniel anciano después de entender la profecía de Jeremías?"
-],
-[
-"p",
-"Respuesta: volvió su rostro a Dios en oración y ruego, con ayuno, y confesó el pecado de su pueblo. Leyó, entendió y oró."
-],
-[
-"p",
-"Séptima pregunta. ¿Qué enseña el retrato de Timoteo sobre el destino de lo que aprendes?"
-],
-[
-"p",
-"Respuesta: que lo aprendido debe pasar a la casa: a la esposa, a los hijos, a los nietos, como manda Deuteronomio seis. La fe de Loida y de Eunice preparó a un pastor."
-],
-[
-"p",
-"Octava pregunta. ¿Cuáles son los tres pasos diarios que propone esta escuela?"
-],
-[
-"p",
-"Respuesta: escuchar la lección, meditar un pasaje y convertirlo en oración."
+"Octava pregunta. ¿Qué pide el estudioso que no quiere ser oidor olvidadizo? Pausa para responder. Respuesta: pide sabiduría a Dios, que da abundantemente y sin reproche; pide que se le abran los ojos para mirar las maravillas de la ley; y persevera en la perfecta ley, siendo hacedor de la obra."
 ],
 [
 "h",
@@ -718,27 +682,31 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Bosquejo para predicar o enseñar. Título: Un corazón preparado para la Palabra. Texto: Esdras siete, diez."
+"Bosquejo para predicar o enseñar. Título: Un corazón preparado. Texto: Esdras 7:10."
 ],
 [
 "q",
-"«Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos.» Así dice Esdras, capítulo siete, versículo diez."
+"«Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos» Esdras 7:10."
 ],
 [
 "p",
-"La idea central que el predicador desea dejar en la congregación es esta: Dios forma maestros de su Palabra empezando por el corazón, y el orden de Esdras sigue siendo el orden de Dios."
+"La idea central es que el estudioso de la Palabra, y todo el pueblo de Dios con él, entra por el temor de Jehová, afirma el corazón, inquiere la ley, la cumple y entonces enseña, hallando en Cristo la sabiduría de Dios."
 ],
 [
 "p",
-"El sermón puede abrirse con la escena del regreso de Babilonia, un pueblo pequeño y cansado, y un escriba que no trae ejército ni oro abundante, sino un libro. Ahora bien, lo primero que el texto dice de él no es lo que hizo, sino lo que preparó: había preparado su corazón. Ese es el primer movimiento del mensaje, porque nadie entiende la Palabra con un corazón distraído, y la buena mano de Dios estaba sobre Esdras precisamente así."
+"El predicador puede abrir con la pregunta de esta lección: ¿qué es un experto bíblico según la Biblia misma? No según los títulos, sino según Esdras. Ese es el primer movimiento: el hombre cuya diligencia de escriba no se entiende sin la buena mano de Dios, y cuya buena mano el narrador explica por un corazón afirmado. La congregación puede preguntarse si su estudio, o su falta de estudio, nace de un corazón establecido o de un capricho."
 ],
 [
 "p",
-"El segundo movimiento avanza hacia la búsqueda y la obediencia. Esdras inquirió la ley y la cumplió; no se contentó con saberla. Aquí el predicador muestra con mansedumbre la distancia entre el oyente olvidadizo y el hacedor de la obra, y llama al arrepentimiento a quien ha convertido la Biblia en un objeto de estudio sin rendirle la vida."
+"El segundo movimiento recorre los cuatro verbos del versículo, en su orden, y no permite que se inviertan. Inquirir sin cumplir es mirarse al espejo y olvidar. Cumplir sin inquirir es celo sin luz. Enseñar sin los dos es un peso que Santiago no nos deja tomar a la ligera. Aquí hay convicción de pecado para el oidor y para el que sube al púlpito."
 ],
 [
 "p",
-"El tercer movimiento desemboca en la enseñanza. Solo después de cumplir, Esdras enseñó en Israel sus estatutos y decretos, y lo que vemos en Nehemías ocho es el fruto: un pueblo que llora, que entiende y que se alegra. El sermón termina llevando la mirada a Cristo, el Maestro perfecto que hizo y enseñó, e invita a la iglesia a preparar hoy su corazón delante de Él."
+"El tercer movimiento lleva el retrato a Cristo, sabiduría de Dios, y a Emaús, donde el Señor abre todas las Escrituras y declara lo que de él decían. El sermón no termina en un programa de lectura, sino en una llamada a venir a Él para tener vida, a arrepentirse del estudio que se niega a obedecer, y a permanecer, como árbol plantado, meditando en la ley de día y de noche."
+],
+[
+"p",
+"Para aplicar, el predicador puede invitar a memorizar Esdras 7:10, a fijar un tiempo diario de lectura con la Biblia abierta, y a pedir a Dios sabiduría, sin reproche, para este mismo día."
 ],
 [
 "h",
@@ -746,15 +714,51 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"El versículo de hoy es Esdras siete, diez."
+"El texto de hoy es Esdras 7:10."
 ],
 [
 "q",
-"«Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos.» Así dice Esdras, capítulo siete, versículo diez."
+"«Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos» Esdras 7:10."
 ],
 [
 "p",
-"Repítelo en voz alta tres veces hoy, mañana y noche, hasta que lo digas sin mirar."
+"Repítelo en voz alta hasta que lo digas sin mirar."
+],
+[
+"h",
+"Notas"
+],
+[
+"p",
+"Dr. (h. c.) Alejandro Sirit. Escuela Bíblica Cielo Efata."
+],
+[
+"p",
+"[1] Hebreo kun, H3559: afirmar, establecer, dejar firme en su lugar. Así el «había preparado» de Esdras 7:10."
+],
+[
+"p",
+"[2] Hebreo darash, H1875: buscar, indagar, consultar con cuidado. Es el «inquirir» la ley de Jehová."
+],
+[
+"p",
+"[3] Hebreo yirah, H3374: temor, reverencia. «El temor de Jehová» en Proverbios 1:7 y 9:10."
+],
+[
+"p",
+"[4] Hebreo sofer, H5608: escriba, de una raíz que significa contar, numerar, escribir. Esdras 7:6."
+],
+[
+"p",
+"[5] Griego orthotomeo, G3718: cortar derecho, trazar en línea recta. 2 Timoteo 2:15, «usa bien la palabra de verdad»."
+],
+[
+"p",
+"[6] Hebreo hagah, H1897: murmurar, repetir en voz baja, rumiar. El «medita» del Salmo 1:2."
+],
+[
+"p",
+"[7] Griego eraunao (o ereunao), G2045: escudriñar, indagar. Juan 5:39, «Escudriñad las Escrituras»."
 ]
 ];
 export default bloques;

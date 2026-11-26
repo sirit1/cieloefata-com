@@ -1,20 +1,24 @@
-/** Generado desde el txt del Día 4 en Drive (carpeta «Audios para ElevenLabs (txt)»). No editar a mano. */
+/** Generado desde el texto reescrito del Día 4 (Drive: Lecciones para leer). No editar a mano. */
 const bloques: ["h" | "p" | "q", string][] = [
+[
+"p",
+"Escuela Bíblica Cielo Efata, por el Dr. (h. c.) Alejandro Sirit."
+],
 [
 "h",
 "Introducción"
 ],
 [
 "p",
-"En los tres primeros días hemos puesto los cimientos: la puerta del sabio, que es el temor de Jehová; la revelación y la inspiración, que nos dicen que toda la Escritura es soplada por Dios; y el canon, que nos dice cuáles son los libros inspirados. Hoy damos el paso siguiente, y respondemos a una pregunta que todo creyente pensante se ha hecho alguna vez: si los escritos originales de Moisés, de Isaías, de Pablo y de Juan se perdieron hace muchos siglos, ¿cómo podemos estar seguros de que lo que tenemos hoy en nuestras manos es lo que ellos escribieron?"
+"En los tres primeros días hemos puesto los cimientos: la puerta del sabio, que es el temor de Jehová; la revelación, la inspiración y la inerrancia, que nos dicen que Dios ha hablado y que su Palabra es verdadera en todo lo que afirma; y el canon, que nos dice cuáles son los libros inspirados. Hoy respondemos a una pregunta que todo creyente pensante se ha hecho alguna vez: si los escritos originales de Moisés, de Isaías, de Pablo y de Juan se perdieron hace muchos siglos, ¿cómo podemos estar seguros de que lo que tenemos hoy en las manos es lo que ellos escribieron?"
 ],
 [
 "p",
-"Es una pregunta legítima. Ninguno de los documentos originales, que los estudiosos llaman autógrafos, ha llegado hasta nosotros. El rollo que escribió Baruc de boca de Jeremías, la carta que Pablo dictó a Tercio para los romanos, el pergamino donde Juan escribió el Apocalipsis en Patmos, todos se deshicieron con el tiempo. Lo que tenemos son copias, y copias de copias, hechas a mano durante siglos antes de la invención de la imprenta. ¿Puede un texto copiado a mano durante más de mil años conservarse fiel?"
+"Es una pregunta legítima. Ninguno de los documentos originales, que los estudiosos llaman autógrafos, ha llegado hasta nosotros. El rollo que Baruc escribió de boca de Jeremías, la carta que Pablo dictó, el pergamino del Apocalipsis, se deshicieron con el tiempo. Lo que tenemos son copias, y copias de copias, hechas a mano durante siglos antes de la imprenta. ¿Puede un texto copiado a mano durante más de mil años conservarse fiel? Esta lección responde con la Escritura, con la historia de los escribas y de los impresores, y con la posición de esta escuela: confiamos en el texto masorético para el Antiguo Testamento y en el Textus Receptus de Scrivener para el Nuevo, y citamos la Reina-Valera de mil novecientos sesenta. No lo hacemos por un milagro que niegue todo desliz de pluma en cada manuscrito, sino por la providencia de Dios, que ha velado sobre su Palabra de modo que su pueblo siempre la ha tenido."
 ],
 [
 "p",
-"La lección de hoy responde a esa pregunta en siete partes. Primero, entraremos en la sinagoga de Nazaret, donde el Señor Jesús leyó una copia del rollo de Isaías. Segundo, conoceremos a los escribas y a los masoretas, los guardianes del texto hebreo. Tercero, veremos los descubrimientos que confirmaron su fidelidad, especialmente los rollos del mar Muerto. Cuarto, estudiaremos la transmisión del Nuevo Testamento griego. Quinto, conoceremos la historia del texto impreso, desde Erasmo hasta el Textus Receptus, y su relación con nuestra Reina Valera. Sexto, explicaremos con honestidad el debate moderno sobre el texto, y la posición que sostiene esta escuela. Y séptimo, sacaremos las consecuencias para la fe y para la vida."
+"Para no tratar el asunto como un esquema, entraremos primero en la sinagoga de Nazaret, donde el Señor leyó una copia del rollo de Isaías y la llamó Escritura. Luego conoceremos a los escribas y a los masoretas, veremos el testimonio de los rollos del mar Muerto, recorreremos la transmisión del Nuevo Testamento hasta el texto recibido, y miraremos de frente el debate moderno, sin copiar la postura de otras escuelas y sin callar que existe. El fin, otra vez, no es ganar una disputa de eruditos: es conocer al Dios que guarda su Palabra, ser convencidos si la hemos tratado como un papel que se puede perder, arrepentirnos, creer el evangelio que esa Palabra nos anuncia, y mantenernos firmes cuando alguien diga que ya no tenemos lo que Dios sopló."
 ],
 [
 "h",
@@ -22,507 +26,291 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Es sábado en Nazaret, un pueblo pequeño de Galilea. El Señor Jesús ha comenzado su ministerio, y su fama se ha extendido por toda la región. Vuelve al pueblo donde se crió, y entra en la sinagoga, como era su costumbre. Escucha lo que sucedió."
+"Es sábado en Nazaret, un pueblo pequeño de Galilea. El Señor Jesús ha comenzado su ministerio y vuelve al lugar donde se crió. Entra en la sinagoga, como era su costumbre, y se levanta a leer."
 ],
 [
 "q",
-"«Vino a Nazaret, donde se había criado; y en el día de reposo entró en la sinagoga, conforme a su costumbre, y se levantó a leer. Y se le dio el libro del profeta Isaías; y habiendo abierto el libro, halló el lugar donde estaba escrito: Espíritu del Señor está sobre mí, Por cuanto me ha ungido para dar buenas nuevas a los pobres; Me ha enviado a sanar a los quebrantados de corazón; A pregonar libertad a los cautivos, Y vista a los ciegos; A poner en libertad a los oprimidos; A predicar el año agradable del Señor. Y enrollando el libro, lo dio al ministro, y se sentó; y los ojos de todos en la sinagoga estaban fijos en él. Y comenzó a decirles: Hoy se ha cumplido esta Escritura delante de vosotros.» Así dice Lucas, capítulo cuatro, versículos dieciséis al veintiuno."
-],
-[
-"p",
-"Se levantó a leer. Y se le dio el libro del profeta Isaías; y habiendo abierto el libro, halló el lugar donde estaba escrito. El libro era un rollo, probablemente de pergamino, guardado en la sinagoga del pueblo. No era el original de Isaías, que había sido escrito unos setecientos años antes. Era una copia, hecha por algún escriba a partir de otra copia, que a su vez venía de otra copia, en una cadena de siglos. Y el Señor Jesús tomó esa copia, la leyó en público, enrolló el libro, se lo dio al ministro, y se sentó. Y entonces dijo: hoy se ha cumplido esta Escritura delante de vosotros."
-],
-[
-"p",
-"Detente en esa frase. El Señor no dijo: hoy se ha cumplido lo que más o menos escribió Isaías, si es que esta copia es fiel. Dijo: hoy se ha cumplido esta Escritura. Llamó Escritura a la copia que tenía en sus manos. Para el Señor Jesús, el rollo de una sinagoga de pueblo, siete siglos después del profeta, era la Palabra de Dios con plena autoridad."
-],
-[
-"p",
-"Lo mismo hizo siempre. Cuando discutía con los fariseos, les preguntaba: ¿no habéis leído? Se refería a las copias que había en sus sinagogas. Cuando respondía a Satanás en el desierto, decía: escrito está. Escrito, en tiempo perfecto: está escrito y permanece escrito. Para el Señor, el texto que el pueblo tenía en sus manos era el texto que Dios había dado. No tenía ninguna duda de que Dios había preservado su Palabra."
-],
-[
-"p",
-"Lo mismo hicieron los apóstoles. En Hechos ocho, el eunuco etíope va en su carro leyendo al profeta Isaías. Tenía una copia, probablemente comprada en Jerusalén a un precio considerable. Felipe se acerca y le pregunta: ¿entiendes lo que lees? Y comenzando desde esta escritura, le anunció el evangelio de Jesús. Una copia en el desierto de Gaza fue el instrumento de la salvación de un hombre de África. Y en segunda de Timoteo, Pablo dice que Timoteo ha conocido desde la niñez las Sagradas Escrituras, las cuales le pueden hacer sabio para la salvación. Timoteo no conoció los originales de Moisés; conoció copias, en una casa de Listra. Y Pablo llama a esas copias Sagradas Escrituras, y dice inmediatamente después que toda la Escritura es inspirada por Dios."
-],
-[
-"p",
-"Aquí está la primera gran lección del día. La Biblia no limita la autoridad de la Palabra a los documentos originales perdidos. La autoridad acompaña al texto que Dios preserva en manos de su pueblo. El Señor, los apóstoles y los creyentes del primer siglo leyeron copias y las recibieron como Palabra de Dios. Nosotros podemos hacer lo mismo con la misma confianza."
-],
-[
-"h",
-"Segunda parte. Los escribas: la profesión de copiar la Palabra"
-],
-[
-"p",
-"En el Antiguo Testamento, la tarea de copiar y guardar los textos sagrados estaba en manos de una clase especial de hombres: los escribas. La palabra hebrea es sofér, hache cinco mil seiscientos ocho, que viene de una raíz que significa contar, numerar, escribir. El escriba era el hombre que sabía escribir y contar, el secretario, el copista, y con el tiempo, el experto en la ley."
-],
-[
-"p",
-"Ya conocimos a varios escribas. Safán, el escriba del rey Josías, que leyó el libro hallado en el templo. Baruc, el escriba de Jeremías, que escribió dos veces el mismo libro. Y sobre todo Esdras, que era escriba diligente en la ley de Moisés. El primer día leímos la descripción que hace de él el libro que lleva su nombre. Lockward, en su diccionario, señala que Esdras es llamado escriba unas diez veces en la Escritura. La tradición judía posterior le atribuye un papel muy importante en la organización y la copia de los libros sagrados después del exilio."
-],
-[
-"p",
-"En Nehemías ocho, cuando Esdras lee la ley ante el pueblo en la plaza, el texto dice algo importante:"
+"«Vino a Nazaret, donde se había criado; y en el día de reposo entró en la sinagoga, conforme a su costumbre, y se levantó a leer. Y se le dio el libro del profeta Isaías; y habiendo abierto el libro, halló el lugar donde estaba escrito:»"
 ],
 [
 "q",
-"«Y leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura.» Así dice Nehemías, capítulo ocho, versículo ocho."
-],
-[
-"p",
-"Y leían en el libro de la ley de Dios claramente, y ponían el sentido, de modo que entendiesen la lectura. Los levitas que acompañaban a Esdras no solo leían; ponían el sentido. Muchos piensan que, como el pueblo había vuelto de Babilonia hablando arameo, los levitas leían el hebreo y lo explicaban en arameo. Así nacieron con el tiempo los targumes, que eran traducciones y paráfrasis arameas del texto hebreo. Pero lo importante es que el texto hebreo se mantenía como texto sagrado, y la explicación se daba aparte. El texto no se tocaba; se explicaba."
-],
-[
-"p",
-"Los escribas desarrollaron, a lo largo de los siglos, un respeto extraordinario por el texto. La regla de Deuteronomio cuatro dos, no añadiréis a la palabra que yo os mando, ni disminuiréis de ella, se aplicaba con rigor a la copia. Y recuerda las palabras del Señor sobre la jota y la tilde. El Señor hablaba a un pueblo donde los escribas cuidaban hasta el último trazo de cada letra."
-],
-[
-"h",
-"Tercera parte. Los masoretas: los guardianes del texto hebreo"
-],
-[
-"p",
-"Después de la destrucción del templo de Jerusalén por los romanos en el año setenta después de Cristo, y de la dispersión de los judíos, la tarea de preservar el texto hebreo pasó a generaciones de estudiosos que, entre los siglos sexto y décimo aproximadamente, llevaron el arte de copiar a un nivel de precisión asombroso. Se les llama masoretas, porque se dedicaron a fijar y transmitir la masorá, palabra hebrea que significa tradición, lo que se entrega de una generación a otra."
-],
-[
-"p",
-"Para entender su obra, hay que saber algo del hebreo, que estudiaremos mañana. El hebreo antiguo se escribía solo con consonantes. No había vocales escritas. El lector sabía cómo pronunciar cada palabra porque conocía la lengua y la tradición de lectura. Imagina que en español escribiéramos solo las consonantes: n l prncp cr Ds ls cls y l trr. Un hispanohablante podría leer, con algo de esfuerzo, en el principio creó Dios los cielos y la tierra. Pero cuando el hebreo dejó de ser la lengua hablada del pueblo, había peligro de que la pronunciación correcta se perdiera. Los masoretas inventaron un sistema de puntos y rayas, colocados arriba, abajo y dentro de las consonantes, para indicar las vocales. Y lo hicieron sin tocar ni una sola consonante del texto. Las letras sagradas quedaron intactas; los signos vocálicos se añadieron alrededor, como quien coloca marcos alrededor de un cuadro sin tocar la pintura. Además, añadieron acentos que indican la entonación con la que se cantaba el texto en la sinagoga y que sirven también como una especie de puntuación."
-],
-[
-"p",
-"Pero los masoretas hicieron algo más. Para asegurar que ninguna copia se apartara del texto, contaron. Contaron los versículos, las palabras y las letras de cada libro. Anotaron cuál era la letra que estaba en el centro exacto de la Torá, la palabra del centro, el versículo del centro. Anotaron cuántas veces aparecía una palabra rara en toda la Biblia. Cuando un escriba terminaba de copiar un libro, podía comprobar el número de versículos, de palabras y de letras, y si no coincidía, sabía que se había equivocado. Escribieron todas estas notas en los márgenes de los manuscritos, arriba, abajo y a los lados, con letras diminutas. Ese aparato de notas es lo que se llama la masorá."
-],
-[
-"p",
-"Y cuando encontraban una palabra que, según la tradición de lectura, debía leerse de manera distinta a como estaba escrita, no corregían el texto. Dejaban la palabra escrita tal como la habían recibido, y anotaban al margen cómo se leía. Lo escrito se llama ketiv, y lo leído se llama qeré. El respeto era tan grande que preferían conservar una forma que les parecía difícil antes que cambiar una sola letra de lo que habían recibido."
-],
-[
-"p",
-"La escuela más importante de masoretas trabajó en Tiberias, junto al mar de Galilea, el mismo mar donde el Señor llamó a Pedro y a Andrés. La familia más célebre de esa escuela fue la familia Ben Asher, que durante varias generaciones perfeccionó el texto y sus notas. Del trabajo de esa escuela proceden los dos manuscritos completos o casi completos más importantes del Antiguo Testamento hebreo que conocemos. El primero es el Códice de Alepo, escrito hacia el año novecientos treinta, que durante siglos fue considerado el modelo más perfecto del texto, aunque parte de él se perdió en el siglo veinte. El segundo es el Códice de Leningrado, copiado en el año mil ocho, que es el manuscrito completo más antiguo de la Biblia hebrea que se conserva entero, y que sirve de base a las ediciones impresas modernas del texto hebreo."
-],
-[
-"p",
-"El texto que transmitieron los masoretas se llama texto masorético. Es el texto hebreo que la sinagoga había recibido y guardado, el texto que Dios confió a Israel, como vimos ayer con Romanos tres dos. Y es el texto del que se tradujo el Antiguo Testamento de nuestra Reina Valera."
-],
-[
-"p",
-"Hay un detalle sobre la manera de trabajar de los copistas judíos que conviene conocer, porque muestra hasta dónde llegaba su reverencia. En tratados judíos posteriores se recogieron las reglas para copiar un rollo de la ley destinado a la sinagoga. Entre ellas estaban las siguientes: el rollo debía escribirse sobre pergamino de un animal limpio, preparado para ese fin; el copista debía tener delante un ejemplar autorizado y no escribir nunca de memoria, ni una sola letra; debía pronunciar en voz alta cada palabra antes de escribirla; las columnas, las líneas y los espacios debían tener medidas establecidas; y cuando iba a escribir el nombre de Dios, debía hacerlo con especial reverencia, y no podía interrumpirse mientras lo escribía. Un rollo con errores no podía usarse en la sinagoga; debía corregirse dentro de límites estrictos o retirarse. Los rollos gastados o defectuosos no se tiraban a la basura, sino que se guardaban en un depósito especial, llamado guenizá, hasta que podían ser enterrados con respeto. En el siglo diecinueve se encontró en el Cairo, en la guenizá de una antigua sinagoga, una enorme cantidad de manuscritos y fragmentos guardados durante siglos, entre ellos muchos textos bíblicos, que han sido de gran valor para el estudio del texto hebreo."
-],
-[
-"p",
-"El verbo hebreo escribir es katáb, hache tres mil setecientos ochenta y nueve, que en su sentido primitivo significa grabar. Así se escribió primero la ley: grabada en piedra por el dedo de Dios. Y la expresión escrito está, que el Señor usó en el desierto, recoge esa idea de algo grabado de manera permanente. El escriba que copiaba la ley sabía que estaba trasladando de un pergamino a otro palabras que Dios había grabado."
-],
-[
-"h",
-"Cuarta parte. La cueva del pastor: los rollos del mar Muerto"
-],
-[
-"p",
-"Durante siglos, los críticos de la Biblia tenían un argumento que parecía fuerte. Decían: el manuscrito hebreo completo más antiguo es del siglo diez después de Cristo. Isaías escribió en el siglo octavo antes de Cristo. Hay un abismo de mil setecientos años entre el profeta y la copia más antigua. ¿Cómo saber cuánto cambió el texto en todo ese tiempo?"
-],
-[
-"p",
-"En mil novecientos cuarenta y siete, un pastor beduino buscaba una cabra perdida entre los acantilados cercanos al mar Muerto, en un lugar llamado Qumrán. Arrojó una piedra dentro de una cueva y oyó el ruido de algo que se rompía. Al entrar, encontró unas vasijas de barro, y dentro de ellas, rollos antiguos envueltos en lino. Fue el comienzo del descubrimiento arqueológico más importante del siglo veinte para el estudio de la Biblia. En los años siguientes, se exploraron once cuevas en la zona, y se encontraron restos de cientos de manuscritos. Muchos de ellos son textos bíblicos, y hay fragmentos de todos los libros del Antiguo Testamento excepto Ester. Estos rollos fueron copiados, en su mayoría, entre el siglo tercero antes de Cristo y el siglo primero después de Cristo."
-],
-[
-"p",
-"Entre los primeros rollos encontrados había uno extraordinario: un rollo completo del profeta Isaías, los sesenta y seis capítulos, de más de siete metros de largo, que los estudiosos fechan en el siglo segundo antes de Cristo. Era unos mil años más antiguo que el manuscrito hebreo completo de Isaías más antiguo que se conocía hasta entonces. Por fin se podía comparar. ¿Qué había pasado con el texto en mil años de copias?"
-],
-[
-"p",
-"El resultado asombró a los estudiosos. El rollo de Isaías de Qumrán coincide con el texto masorético de manera sustancial, palabra por palabra en la inmensa mayoría de los versículos. Las diferencias que existen son, en su gran mayoría, variaciones de ortografía, como escribir una palabra con o sin una letra que sirve de vocal, o pequeñas diferencias de gramática que no cambian el sentido, o errores evidentes de un copista. Mil años de copias a mano, y el mensaje del profeta había llegado intacto. Lo que los masoretas copiaban en el siglo diez era, en lo esencial, lo que se leía en tiempos del Señor Jesús, y antes."
-],
-[
-"p",
-"Piensa en lo que esto significa. El rollo que el Señor Jesús leyó en Nazaret pertenecía a la misma época que el rollo de Qumrán. Cuando tú lees hoy Isaías en tu Reina Valera, estás leyendo una traducción de un texto que coincide sustancialmente con el que el Señor leyó en la sinagoga. Dios preservó su Palabra, y lo hizo de tal manera que, cuando los incrédulos más dudaban, sacó del fondo de una cueva un testigo de dos mil años que confirma la fidelidad de la transmisión."
-],
-[
-"p",
-"Escucha lo que dice el profeta Isaías en el mismo libro que se encontró en aquella cueva."
+"«Espíritu del Señor está sobre mí, Por cuanto me ha ungido para dar buenas nuevas a los pobres; Me ha enviado a sanar a los quebrantados de corazón; A pregonar libertad a los cautivos, Y vista a los ciegos; A poner en libertad a los oprimidos; A predicar el año agradable del Señor.»"
 ],
 [
 "q",
-"«Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre.» Así dice Isaías, capítulo cuarenta, versículo ocho."
+"«Y enrollando el libro, lo dio al ministro, y se sentó; y los ojos de todos en la sinagoga estaban fijos en él. Y comenzó a decirles: Hoy se ha cumplido esta Escritura delante de vosotros» Lucas 4:16-21."
 ],
 [
 "p",
-"Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre. Esas palabras estaban escritas en el rollo de Qumrán, guardadas durante dos mil años en la oscuridad de una cueva, y salieron a la luz para dar testimonio de su propia verdad."
-],
-[
-"h",
-"Quinta parte. El Nuevo Testamento: una abundancia sin igual"
+"Detente en esa última frase. El libro que se le dio no era el original de Isaías, escrito unos siete siglos antes. Era una copia, hecha por algún escriba a partir de otra copia, en una cadena de generaciones. Y el Señor no dijo: hoy se ha cumplido lo que más o menos escribió Isaías, si es que esta copia es fiel. Dijo: Hoy se ha cumplido esta Escritura delante de vosotros. Llamó Escritura a la copia que tenía en las manos. Para Jesús, el rollo de una sinagoga de pueblo era la Palabra de Dios con plena autoridad, y esa Palabra se cumplía en Él: buenas nuevas a los pobres, libertad a los cautivos, el año agradable del Señor. La transmisión no le resta autoridad al texto. La autoridad acompaña a la Palabra que Dios preserva en las manos de su pueblo."
 ],
 [
 "p",
-"Pasemos ahora al Nuevo Testamento. Aquí la situación es distinta, pero igualmente asombrosa. Los libros del Nuevo Testamento se escribieron en griego, la lengua común del mundo mediterráneo en el siglo primero. No el griego clásico de los filósofos, sino el griego común del pueblo, que se llama koiné, y que estudiaremos en la lección seis."
+"Lo mismo hizo siempre. Cuando discutía, preguntaba: ¿no habéis leído? Se refería a las copias de sus sinagogas. Cuando respondía a Satanás, decía: escrito está. Para el Señor, el texto que el pueblo tenía era el texto que Dios había dado. Los apóstoles hicieron lo mismo. En Hechos ocho, el eunuco lee a Isaías en su carro, una copia, y Felipe, comenzando desde aquella Escritura, le anuncia a Jesús. En 2 Timoteo, Pablo dice que Timoteo ha conocido desde la niñez las Sagradas Escrituras, las cuales le pueden hacer sabio para la salvación: no los autógrafos de Moisés, sino copias, en una casa de Listra, y las llama Escrituras inspiradas. La primera gran lección del día es esta: la Biblia no encierra la autoridad en unos originales perdidos. El Señor, los apóstoles y los creyentes del primer siglo leyeron copias y las recibieron como Palabra de Dios. Nosotros podemos hacer lo mismo, con la misma confianza, y con el deber de saber cómo esas copias nos han llegado."
 ],
 [
 "p",
-"Los apóstoles escribieron en papiro, un material hecho con tiras de una planta que crecía en Egipto, prensadas y secadas. El papiro es frágil y se deshace con la humedad. Más tarde se usó el pergamino, hecho de pieles de animales preparadas, mucho más resistente. Pablo menciona ambos en su última carta, cuando pide a Timoteo que le traiga los libros, mayormente los pergaminos. Así está en segunda de Timoteo cuatro trece. La palabra libros es biblíon, ge novecientos setenta y cinco, de donde viene nuestra palabra Biblia, y la palabra pergaminos es membrána, ge tres mil doscientos. Aun en la cárcel, poco antes de morir, el apóstol quería tener cerca sus libros y sus pergaminos. Probablemente eran copias de las Escrituras."
-],
-[
-"p",
-"Las cartas de los apóstoles, como vimos ayer, circulaban entre las iglesias y se copiaban. Cada iglesia quería tener su propia copia de las cartas de Pablo y de los evangelios. Y así, desde el primer siglo, comenzó una multiplicación de copias que no se detuvo hasta la invención de la imprenta, mil cuatrocientos años después."
-],
-[
-"p",
-"Hoy se conocen más de cinco mil ochocientos manuscritos griegos del Nuevo Testamento, completos o en fragmentos, y la cifra sigue creciendo con nuevos hallazgos. A eso hay que añadir miles de manuscritos de traducciones antiguas, especialmente al latín, al siríaco y al copto, y una enorme cantidad de citas del Nuevo Testamento en los escritos de los maestros cristianos de los primeros siglos, tan numerosas que se ha dicho que casi todo el Nuevo Testamento podría reconstruirse solo con ellas."
-],
-[
-"p",
-"Para que puedas apreciar lo que significa esa cifra, compárala con las obras de la antigüedad clásica. De las obras de los grandes historiadores y filósofos griegos y latinos, de los que nadie duda que tenemos sus textos, se conservan en muchos casos unas pocas decenas de manuscritos, o a veces menos, y la copia más antigua es muchas veces posterior en varios siglos, a veces en más de mil años, a la fecha en que se escribió la obra. Del Nuevo Testamento tenemos miles de manuscritos, y algunos fragmentos se acercan mucho a la época de los apóstoles. Entre ellos hay un pequeño trozo de papiro, del tamaño de una tarjeta de crédito, que se guarda en la biblioteca John Rylands de Manchester, en Inglaterra, y que contiene unos versículos del capítulo dieciocho del Evangelio de Juan, del diálogo entre el Señor y Pilato. Muchos estudiosos lo fechan en la primera mitad del siglo segundo, aunque la fecha exacta se discute. Es decir, pocas décadas después de que Juan escribiera su evangelio, ya había copias circulando en Egipto, lejos de Éfeso, donde según la tradición lo escribió el apóstol."
-],
-[
-"p",
-"Ningún libro de la antigüedad tiene un testimonio manuscrito comparable. Si alguien duda del texto del Nuevo Testamento, tendría que dudar con mucha más razón de todos los demás textos antiguos."
+"Esa confianza no es pereza. Precisamente porque la Palabra es inerrante en lo que Dios sopló, nos importa que la copia sea fiel, y damos gracias de que Dios no haya dejado esa fidelidad al azar. El brasero de Joacim ya nos enseñó que los hombres pueden rasgar un rollo, y que Dios puede mandar otro. La historia de la transmisión es, en gran parte, la historia de esa mano que no deja que su Palabra se pierda."
 ],
 [
 "h",
-"Sexta parte. Las variantes: lo que son y lo que no son"
+"Segunda parte. Los escribas, guardianes de la consonante"
 ],
 [
 "p",
-"Ahora bien, el estudiante honrado debe saber que, en esa multitud de manuscritos copiados a mano, hay diferencias. Ningún manuscrito antiguo es idéntico a otro en cada letra. Los estudiosos llaman a esas diferencias variantes. Y algunos, para asustar a los creyentes, dicen que hay cientos de miles de variantes en el Nuevo Testamento, más variantes que palabras."
+"En el Antiguo Testamento, la tarea de copiar y guardar los textos sagrados estuvo, de manera creciente, en manos de escribas. La palabra hebrea que está detrás de escriba viene de una raíz que significa contar, numerar, escribir.[1] El escriba es el que sabe escribir y contar, el copista, y con el tiempo el experto en la ley. Ya conocimos a Baruc, que escribió dos veces el mismo libro, y a Esdras, escriba diligente en la ley de Moisés, a quien el texto llama así una y otra vez. El primer día vimos su corazón afirmado; hoy vemos su oficio: el de un hombre que vive para que el libro permanezca y se entienda."
 ],
 [
 "p",
-"Hay que entender bien qué significa eso. Si un copista escribe una palabra con una letra diferente, eso cuenta como una variante. Si mil manuscritos repiten esa misma diferencia, en algunas maneras de contar eso cuenta como mil variantes. Cuantos más manuscritos tenemos, más variantes se pueden contar. Es decir, el gran número de variantes es consecuencia directa de la gran abundancia de manuscritos, que es precisamente una de las fortalezas del Nuevo Testamento."
-],
-[
-"p",
-"La inmensa mayoría de esas variantes son insignificantes. Son diferencias de ortografía; o cambios en el orden de las palabras, que en griego no alteran el sentido; o la presencia o ausencia de un artículo; o palabras repetidas o saltadas por un descuido evidente. Por ejemplo, la diferencia entre escribir Cristo Jesús o Jesucristo, o un error en el que el ojo del copista salta de una palabra a otra igual unas líneas más abajo. Este tipo de errores se detectan fácilmente comparando unos manuscritos con otros."
-],
-[
-"p",
-"Hay un número mucho menor de variantes que sí afectan al sentido de una frase, y que merecen estudio. Y aquí viene lo más importante: ninguna doctrina de la fe cristiana depende de una variante dudosa. La deidad de Cristo, su nacimiento virginal, su muerte expiatoria, su resurrección corporal, la justificación por la fe, la Trinidad, la segunda venida, todas estas verdades están enseñadas en muchos pasajes cuyo texto es firme. Dios no dejó ninguna verdad esencial colgando de un hilo."
-],
-[
-"p",
-"El estudio de los manuscritos y sus variantes, para establecer el texto, se llama crítica textual. La palabra crítica aquí no significa criticar en el sentido negativo, sino juzgar, discernir, del griego krínō, ge dos mil novecientos diecinueve, que significa separar, distinguir, juzgar. Hay una crítica textual que parte de la fe en la preservación providencial de la Escritura, y otra que parte de la duda. El estudiante debe saber distinguirlas."
-],
-[
-"p",
-"Las traducciones antiguas: testigos en muchas lenguas."
-],
-[
-"p",
-"Antes de pasar a la historia del texto impreso, hay otro grupo de testigos que el estudiante debe conocer: las traducciones antiguas. Desde muy temprano, la Escritura se tradujo a otras lenguas, y esas traducciones son también testigos del texto del que fueron hechas."
-],
-[
-"p",
-"Para el Antiguo Testamento, la más importante es la traducción griega llamada Septuaginta, que se hizo en Alejandría de Egipto a partir del siglo tercero antes de Cristo, comenzando por la Torá, para los judíos que vivían allí y ya no entendían bien el hebreo. Su nombre significa setenta, por una antigua tradición que hablaba de setenta o setenta y dos traductores, y por eso se abrevia con el número romano setenta. Los apóstoles la conocían y a veces la citaban, especialmente cuando escribían a lectores de habla griega. Es un testigo valioso, aunque, como toda traducción, a veces parafrasea, y en algunos libros se aparta bastante del hebreo. Por eso esta escuela la usa como testigo auxiliar, pero no la pone por encima del texto hebreo confiado a Israel."
-],
-[
-"p",
-"También están los targumes, de los que ya hablamos, que son traducciones y paráfrasis al arameo, la lengua que hablaban los judíos de Palestina y de Babilonia en tiempos del Señor. Y está la Peshitta, la traducción al siríaco, una lengua emparentada con el arameo, que se usó en las iglesias de oriente desde los primeros siglos."
-],
-[
-"p",
-"Para el Nuevo Testamento, hay traducciones antiguas al latín, que se suelen llamar latinas antiguas, anteriores a Jerónimo; al siríaco; y al copto, la lengua de los cristianos de Egipto. Y a finales del siglo cuarto, Jerónimo preparó una revisión y traducción de toda la Biblia al latín, que con el tiempo se llamó Vulgata, es decir, la versión de uso común. Jerónimo tuvo la convicción de que para traducir bien el Antiguo Testamento había que ir al hebreo, y para eso se fue a vivir a Belén y aprendió hebreo con maestros judíos. La Vulgata fue la Biblia de occidente durante más de mil años."
-],
-[
-"p",
-"¿Por qué son importantes estas traducciones? Porque muchas de ellas son más antiguas que gran parte de los manuscritos que conservamos en la lengua original, y nos permiten saber qué texto se leía en distintas regiones en épocas tempranas. Cuando un pasaje aparece en la mayoría de los manuscritos griegos, y además en traducciones antiguas de regiones lejanas entre sí, y en citas de maestros de distintos lugares, eso es un testimonio muy fuerte de que el pasaje pertenece al texto que Dios preservó."
-],
-[
-"p",
-"Los capítulos y los versículos."
-],
-[
-"p",
-"Un dato práctico que pocos conocen. Los autores bíblicos no escribieron sus libros divididos en capítulos y versículos. Pablo escribió una carta continua a los romanos, como se escribe cualquier carta. Las divisiones que usamos hoy se añadieron mucho después, para facilitar la búsqueda de los pasajes. Los masoretas ya separaban los versículos del Antiguo Testamento en el texto hebreo. La división en capítulos que usamos se atribuye generalmente a Esteban Langton, un maestro de la universidad de París que fue luego arzobispo de Canterbury, a comienzos del siglo trece. Y la numeración de los versículos del Nuevo Testamento se debe a Robert Estienne, Estéfano, como dijimos, en su edición de mil quinientos cincuenta y uno; se cuenta que hizo buena parte de ese trabajo durante un viaje."
-],
-[
-"p",
-"¿Qué consecuencia tiene esto para el estudiante? Que las divisiones de capítulos y versículos son una ayuda muy útil, pero no son inspiradas. A veces cortan un pensamiento por la mitad. Por ejemplo, el capítulo cincuenta y tres de Isaías, el del siervo sufriente, en realidad comienza en el capítulo cincuenta y dos, versículo trece: he aquí que mi siervo será prosperado. Y el primer versículo del capítulo cinco de Gálatas está tan unido al final del capítulo cuatro como al resto del capítulo cinco. Por eso, en la hermenéutica que estudiaremos, aprenderemos a leer siempre por unidades de pensamiento y no por versículos sueltos."
-],
-[
-"p",
-"Dos ejemplos de variantes, para que aprendas a pensar."
-],
-[
-"p",
-"Para terminar esta parte de la lección, quiero mostrarte dos ejemplos concretos de diferencias entre el texto recibido y el texto crítico, para que veas cómo se razona y por qué el tema importa."
-],
-[
-"p",
-"El primer ejemplo está en primera de Timoteo tres dieciséis. Escúchalo en tu Reina Valera."
-],
-[
-"q",
-"«E indiscutiblemente, grande es el misterio de la piedad: Dios fue manifestado en carne, Justificado en el Espíritu, Visto de los ángeles, Predicado a los gentiles, Creído en el mundo, Recibido arriba en gloria.» Así dice primera de Timoteo, capítulo tres, versículo dieciséis."
-],
-[
-"p",
-"Dios fue manifestado en carne. El verbo manifestar es phaneróo, ge cinco mil trescientos diecinueve, hacer visible, sacar a la luz. Así dice el texto recibido, y así la gran mayoría de los manuscritos griegos. Varios manuscritos antiguos, en cambio, dicen el que fue manifestado en carne, o quien fue manifestado en carne, usando el pronombre relativo, que en griego es hós, ge tres mil setecientos treinta y nueve. Lo interesante es que, en los manuscritos antiguos escritos en mayúsculas, la palabra Dios se escribía abreviada con dos letras, una especie de círculo con una raya en medio y una letra en forma de media luna, con una línea encima que indicaba que era una abreviatura. El pronombre quien se escribía con la misma media luna y otra letra muy parecida a ese círculo, pero sin la raya interior y sin la línea de arriba. Una raya pequeña, borrada por el tiempo o no vista por un copista, hace la diferencia entre ambas lecturas. El texto recibido conserva la lectura Dios fue manifestado en carne, que es una de las declaraciones más claras de la deidad de Cristo. Y recuerda: aunque alguien prefiera la otra lectura, la deidad de Cristo sigue enseñada en Juan uno uno, en Romanos nueve cinco, en Tito dos trece, en Hebreos uno ocho y en muchos otros lugares."
-],
-[
-"p",
-"El segundo ejemplo está en el canto de los ángeles en Belén, en Lucas dos catorce."
-],
-[
-"q",
-"«¡Gloria a Dios en las alturas, Y en la tierra paz, buena voluntad para con los hombres!» Así dice Lucas, capítulo dos, versículo catorce."
-],
-[
-"p",
-"Gloria a Dios en las alturas, y en la tierra paz, buena voluntad para con los hombres. Así dice el texto recibido. Algunos manuscritos antiguos tienen una sola letra de diferencia al final de la palabra que significa buena voluntad, eudokía, ge dos mil ciento siete, y con esa letra la frase se convierte en paz a los hombres de buena voluntad, o a los hombres en quienes él se complace. Una sola letra cambia el énfasis. En el texto recibido, el canto anuncia que la buena voluntad de Dios se dirige hacia los hombres en el nacimiento de Cristo. Ambas maneras de leer pueden entenderse de forma que concuerde con la gracia de Dios, pero muestran por qué los detalles importan."
-],
-[
-"p",
-"Estos ejemplos te enseñan dos cosas. Primera, que las diferencias reales entre los textos son pocas en comparación con el total, y se pueden estudiar con calma. Segunda, que el estudiante serio debe saber leer las notas de una Biblia de estudio sin asustarse, entendiendo qué está en juego y sabiendo por qué prefiere la lectura que prefiere. En el módulo diez de esta escuela, dedicado a historia y crítica textual, estudiaremos estos y otros pasajes con más detalle."
+"La regla de Deuteronomio cuatro dos —no añadir, no disminuir— se aplicó, en la conciencia de Israel, también a la copia. El Señor, al hablar de la jota y de la tilde, hablaba a un pueblo donde los escribas cuidaban hasta el último trazo. No idealizaremos a todos los que llevaron ese nombre: el mismo Jesús denunció a escribas que cargaban pesos y no tocaban la ley con un dedo. El oficio, sin embargo, no se anula por el pecado de algunos que lo ejercieron. Dios usó a hombres falibles para guardar un texto infalible, como usó a escritores humanos para soplar una Escritura inerrante. El instrumento no es el origen. El origen es Dios."
 ],
 [
 "h",
-"Séptima parte. Erasmo, la imprenta y el texto recibido"
+"Tercera parte. Los masoretas: las vocales y el conteo"
 ],
 [
 "p",
-"Hacia el año mil cuatrocientos cincuenta, Johannes Gutenberg desarrolló en Alemania la imprenta de tipos móviles. El primer gran libro que imprimió fue la Biblia, en latín. La imprenta cambió la historia de la Biblia. Ya no había que copiar a mano cada ejemplar; se podían producir cientos de copias idénticas."
+"El hebreo antiguo se escribía con consonantes. El lector sabía cómo pronunciar cada palabra porque conocía la lengua y la tradición de lectura. Cuando el hebreo dejó de ser la lengua hablada de todo el pueblo, había peligro de que la pronunciación correcta se perdiera. Entre los siglos sexto y décimo, aproximadamente, generaciones de estudiosos que llamamos masoretas —porque se dedicaron a fijar y transmitir la masorá, la tradición entregada— llevaron el arte de copiar a un nivel de precisión asombroso. Inventaron un sistema de puntos y rayas, colocados alrededor de las consonantes, para indicar las vocales, y lo hicieron sin tocar las letras sagradas. Las consonantes quedaron intactas; los signos vocálicos se añadieron como quien coloca un marco alrededor de un cuadro sin tocar la pintura. Añadieron también acentos, que sirven a la cantilación y a una especie de puntuación, y que estudiaremos con más detención cuando el hebreo se vuelva el trabajo de treinta días."
 ],
 [
 "p",
-"Durante la Edad Media, en occidente, la Biblia se leía casi exclusivamente en latín, en la traducción llamada Vulgata. Pero en el siglo quince y en el siglo dieciséis, con el movimiento de regreso a las fuentes antiguas que se conoce como Renacimiento, muchos estudiosos sintieron la necesidad de volver a la Biblia en sus lenguas originales, el hebreo y el griego."
+"Pero los masoretas hicieron algo más, y es una de las maravillas de esta historia. Para asegurar que ninguna copia se apartara del texto, contaron. Contaron versículos, palabras y letras de cada libro. Anotaron la letra del centro, la palabra del centro, el versículo del centro. Anotaron cuántas veces aparecía una forma rara. Cuando un escriba terminaba de copiar un libro, podía comprobar el número, y si no coincidía, sabía que había un error. Escribieron estas notas en los márgenes, con letras diminutas. Ese aparato es la masorá. El texto que de ellos recibimos es el texto masorético, y es el texto hebreo de esta escuela. No porque los masoretas fueran inspirados como Isaías, sino porque, bajo la providencia de Dios, nos entregaron con un cuidado extraordinario el texto consonántico que la comunidad de la fe ya tenía por Escritura, y la lectura tradicional de sus vocales."
 ],
 [
 "p",
-"El primer Nuevo Testamento griego impreso que se publicó fue el de Erasmo de Rotterdam, un estudioso holandés, en el año mil quinientos dieciséis, en la ciudad de Basilea. Hubo un Nuevo Testamento griego impreso un poco antes en España, como parte de la gran Biblia Políglota Complutense, preparada en Alcalá de Henares bajo la dirección del cardenal Cisneros, pero no se puso a la venta hasta varios años después. Erasmo usó los manuscritos griegos que tenía a su alcance en Basilea, que eran manuscritos de los siglos posteriores, del tipo de texto que se había copiado y leído durante siglos en las iglesias de habla griega. Publicó varias ediciones, corrigiendo y mejorando en cada una."
-],
-[
-"p",
-"Después de Erasmo vinieron otros editores que continuaron y refinaron su trabajo, comparando más manuscritos. El impresor francés Robert Estienne, conocido como Estéfano, publicó varias ediciones; la de mil quinientos cincuenta, llamada la edición real, por su belleza, fue muy influyente, y la de mil quinientos cincuenta y uno fue la primera en dividir el Nuevo Testamento en versículos numerados, la división que usamos hasta hoy. Teodoro de Beza, sucesor de Calvino en Ginebra, publicó varias ediciones en la segunda mitad del siglo dieciséis. Y en el siglo diecisiete, los impresores holandeses de la familia Elzevir publicaron en Leiden ediciones de gran difusión. En el prefacio de su edición de mil seiscientos treinta y tres escribieron en latín una frase que dio nombre a todo este texto: tienes, pues, el texto que ahora es recibido por todos. En latín, textus receptus. De ahí viene el nombre Textus Receptus, el texto recibido."
-],
-[
-"p",
-"Este texto, en sus distintas ediciones, que difieren entre sí solo en detalles menores, fue el texto griego del Nuevo Testamento que usaron los traductores de la Biblia a las lenguas del pueblo durante los siglos dieciséis y diecisiete. Fue el texto de la Biblia alemana de Lutero, de la Biblia inglesa del rey Jacobo de mil seiscientos once, y también el texto de nuestra Biblia en español."
+"Esta doctrina de la preservación, que ayer apuntamos, encuentra aquí su primer rostro concreto. Las palabras de Jehová son palabras limpias, Como plata refinada en horno de tierra, Purificada siete veces. Tú, Jehová, los guardarás; De esta generación los preservarás para siempre. Salmo 12:6-7. Dios no prometió que cada copista sería impecable. Prometió guardar sus palabras. El conteo, el margen, la reverencia casi temblorosa delante de una letra, son medios, no el milagro mismo. El milagro, si queremos usar la palabra, es que un texto tan copiado, a lo largo de tantos siglos, nos haya llegado con una estabilidad que asombra a quien se acerca sin ganas de incendiar el rollo."
 ],
 [
 "h",
-"Octava parte. La Biblia del Oso y la Reina Valera"
+"Cuarta parte. Los rollos del mar Muerto y el gran rollo de Isaías"
 ],
 [
 "p",
-"Aquí entra la historia de nuestra propia Biblia. Casiodoro de Reina era un monje español del monasterio de San Isidoro del Campo, cerca de Sevilla. Él y otros monjes de ese monasterio llegaron a la fe evangélica leyendo las Escrituras, y tuvieron que huir de España para salvar la vida. Reina vivió como fugitivo en varios países de Europa, perseguido y con su vida en peligro, y durante unos doce años trabajó en la traducción de toda la Biblia al español a partir del hebreo y del griego. En mil quinientos sesenta y nueve, en Basilea, la misma ciudad donde Erasmo había publicado su Nuevo Testamento griego, se imprimió su traducción. En la portada aparece un oso que intenta alcanzar un panal de miel en un árbol, y por eso se la conoce como la Biblia del Oso. En la portada también aparece una frase de Isaías: la palabra del Dios nuestro permanece para siempre."
+"En mil novecientos cuarenta y siete, en cuevas cerca del mar Muerto, se hallaron rollos y fragmentos hebreos de una antigüedad que nadie, en la práctica, tenía entre las manos: copias de libros bíblicos anteriores, en muchos casos, en más de mil años a los grandes códices masoréticos medievales. Esta escuela no convertirá un hallazgo arqueológico en un nuevo canon, ni en una nueva revelación. Pero sí lo recibe, donde hay testigo, como un testimonio antiguo de la estabilidad del texto. El caso más claro es el del gran rollo de Isaías, llamado 1QIsaᵃ: un manuscrito casi completo del profeta, siglos anterior a nuestra era, que permite comparar, libro entero, el Isaías que leemos en el texto masorético con un Isaías copiado mucho antes de los masoretas."
 ],
 [
 "p",
-"Cipriano de Valera, otro de los monjes que huyeron de San Isidoro, dedicó unos veinte años a revisar la traducción de Reina, y publicó su revisión en Ámsterdam en mil seiscientos dos. Desde entonces, la traducción se conoce como Reina Valera. A lo largo de los siglos ha tenido varias revisiones para actualizar el lenguaje, entre ellas la de mil novecientos nueve y la de mil novecientos sesenta, que son las que usamos en esta escuela."
+"La comparación no produce un Isaías distinto. Hay variantes, como las hay en toda copia humana, y se estudian con sobriedad. Lo que no hay es un libro otro, un profeta reescrito, una teología distinta. El texto que el Señor leyó en Nazaret, y el que nosotros leemos en Isaías, se reconocen. Eso no «prueba» la inerrancia, que no depende de un rollo hallado en una cueva: la inerrancia se afirma de lo que Dios sopló, por el carácter de Dios. Pero sí ilustra la preservación. El pueblo de Dios no tuvo que esperar a mil novecientos cuarenta y siete para tener a Isaías. El hallazgo confirma, en un punto particularmente visible, lo que la fe ya confesaba: que Jehová guarda su Palabra."
 ],
 [
 "p",
-"El Nuevo Testamento de la Reina Valera de mil novecientos nueve y el de mil novecientos sesenta se basan en la tradición del Textus Receptus. El Antiguo Testamento se basa en el texto masorético hebreo. Por eso, cuando en esta escuela decimos que seguimos el Textus Receptus y el texto masorético, no estamos hablando de una teoría abstracta. Estamos hablando del texto que han leído generaciones de creyentes de habla hispana, el texto por el que muchos fueron perseguidos y algunos dieron su vida, el texto que llevó el evangelio a toda América Latina."
+"La Septuaginta, la antigua traducción griega del Antiguo Testamento, es también un testigo, y un testigo importante cuando el Nuevo Testamento cita la Escritura en griego. Esta escuela no la pone en el lugar del texto hebreo masorético, ni la ignora. La usa con agradecimiento cuando ilumina, y no la convierte en una palanca para corregir a Isaías o a Moisés cada vez que una diferencia aparece. El texto de trabajo del Antiguo Testamento, aquí, es el masorético. Las versiones antiguas, los rollos y las notas son luces alrededor del cuadro, no un segundo cuadro."
 ],
 [
 "h",
-"Novena parte. El debate moderno"
+"Quinta parte. El Nuevo Testamento: copias, versiones y el texto que se recibió"
 ],
 [
 "p",
-"Es honesto explicar ahora que no todos los estudiosos están de acuerdo sobre cuál es el mejor texto griego del Nuevo Testamento. El estudiante de esta escuela debe conocer el debate, para no ser sorprendido y para poder dar razón de su posición."
+"El Nuevo Testamento se escribió en griego, y se copió desde el primer siglo en iglesias esparcidas, en papiros y, más tarde, en pergaminos, en unciales y en minúsculas, y se tradujo muy pronto a otras lenguas. No pretendemos, en esta lección, un tratado de crítica textual: ese oficio, con los métodos y los pasajes discutidos, tiene su lugar en el módulo diez. Hoy necesitamos lo suficiente para leer con inteligencia y para firmar una postura."
 ],
 [
 "p",
-"En el siglo diecinueve se descubrieron o se dieron a conocer algunos manuscritos griegos muy antiguos, del siglo cuarto. Los más famosos son dos. El primero es el Códice Vaticano, que se encuentra en la biblioteca del Vaticano desde por lo menos el siglo quince. El segundo es el Códice Sinaítico, que el estudioso alemán Constantino von Tischendorf encontró en el monasterio de Santa Catalina, al pie del monte Sinaí, a mediados del siglo diecinueve. Estos dos manuscritos son más antiguos que la mayoría de los manuscritos sobre los que se basó el Textus Receptus, y en varios lugares tienen un texto más breve."
+"Hay una abundancia de copias griegas, y de antiguas traducciones, que permite comparar. Esa abundancia no es un problema: es una merced. Donde hay muchas copias, las diferencias se ven, y también se ve, de manera aplastante, el acuerdo. El relato de Jesús, las cartas de Pablo, el evangelio de Juan, no son un texto reconstruido a partir de un solo folio dudoso. Son un tesoro copiado, leído, predicado y traducido, de generación en generación. Como en el hebreo, un desliz de copista en un manuscrito no es un error de la Escritura soplada por Dios. Es un accidente de la transmisión, que se discierne comparando, y que no ha robado al pueblo el evangelio."
 ],
 [
 "p",
-"En mil ochocientos ochenta y uno, dos estudiosos ingleses de Cambridge, Brooke Westcott y Fenton Hort, publicaron una edición del Nuevo Testamento griego que daba mucha preferencia a esos dos manuscritos antiguos, especialmente al Vaticano. Sostenían que el texto que se había leído durante siglos en las iglesias de habla griega, y que está en la base del Textus Receptus, era un texto posterior, revisado y ampliado. A partir de entonces, la mayoría de los estudiosos académicos siguieron, con modificaciones, ese camino, y la mayor parte de las traducciones modernas de la Biblia se basan en ediciones griegas de ese tipo, que se suelen llamar texto crítico."
+"En el siglo dieciséis, con la imprenta, ese texto griego que las iglesias de habla griega habían leído y que los reformadores de la Biblia en lengua del pueblo tenían a la vista, se fijó en ediciones impresas. Erasmo publicó en mil quinientos dieciséis un Nuevo Testamento griego. Le siguieron, entre otros, Estienne y Beza. En mil seiscientos treinta y tres, en una prefacio de los Elzevir, se habló de un texto recibido por todos: de ahí el nombre Textus Receptus, texto recibido. Esta escuela sigue el Textus Receptus en la edición de Scrivener, que da forma cuidadosa a ese texto recibido. No lo hacemos porque un impresor de Leiden sea inspirado, sino porque reconocemos, en esa línea, el texto que la providencia de Dios dio a la iglesia para ser leído, predicado y traducido, el texto que está en la base de la Reina-Valera que citamos."
 ],
 [
 "p",
-"La posición del Textus Receptus responde con varios argumentos que el estudiante debe conocer."
+"La historia de esa Biblia en castellano es también, para nosotros, historia de la transmisión. Casiodoro de Reina publicó en mil quinientos sesenta y nueve la versión que llamamos la Biblia del Oso. Cipriano de Valera la revisó en mil seiscientos dos. De esa corriente nacen la Reina-Valera de mil novecientos nueve y la de mil novecientos sesenta, que esta escuela cita textual. No contaremos aquí, con adornos, vidas que no vamos a inventar. Basta decir que aquellos hombres trabajaron para que el pueblo tuviera la Escritura en su lengua, y que muchos pagaron un precio por leerla y por darla a leer. El texto griego recibido y la Biblia en castellano se dieron la mano. Nosotros las seguimos dando."
 ],
 [
 "p",
-"El primer argumento es teológico y es el más importante: la promesa de la preservación. Dios prometió que su Palabra permanecería para siempre, que el cielo y la tierra pasarían pero sus palabras no pasarían. Si eso es verdad, no es razonable pensar que el texto correcto estuvo perdido o escondido durante más de mil años en un par de manuscritos guardados en una biblioteca o en un monasterio, mientras las iglesias leían durante siglos un texto supuestamente corrompido. Lo razonable es pensar que Dios preservó su Palabra en el texto que su pueblo recibió, copió, leyó y usó a lo largo de los siglos. Recuerda el principio que vimos ayer con el canon: las ovejas reconocen la voz del Pastor. Lo que vale para el canon vale también para el texto."
+"Hay, ya en la Ley, una orden que ilumina todo este día. Cuando el rey de Israel se sentara sobre el trono, no debía gobernar con un recuerdo vago de lo oído, ni con un poder que se creyera por encima del rollo. Debía escribir. Y cuando se siente sobre el trono de su reino, entonces escribirá para sí en un libro una copia de esta ley, del original que está al cuidado de los sacerdotes levitas; y lo tendrá consigo, y leerá en él todos los días de su vida, para que aprenda a temer a Jehová su Dios, para guardar todas las palabras de esta ley y estos estatutos, para ponerlos por obra. Deuteronomio 17:18-19. El texto mismo distingue, desde Moisés, entre el original al cuidado de los sacerdotes y la copia que el rey escribe y lleva consigo. La autoridad no se evapora al pasar del uno a la otra. Al contrario: el rey vive de la copia, la lee todos los días, y por ella aprende a temer a Jehová. Si el trono de Israel debía someterse a un libro copiado, ¿con qué derecho diríamos nosotros que una Biblia fielmente traducida es menos que Palabra, solo porque no tenemos ya el pergamino de Isaías o la carta de puño de Pablo? La copia no es un sucedáneo vergonzoso. Es, en la providencia de Dios, el modo ordinario por el cual su pueblo oye y obedece."
 ],
 [
 "p",
-"El segundo argumento es la mayoría. El tipo de texto que está en la base del Textus Receptus es el que se encuentra en la gran mayoría de los manuscritos griegos que se conservan. Los defensores del texto crítico explican esa mayoría diciendo que se trata de copias tardías que se multiplicaron. Pero los defensores del texto recibido preguntan: ¿por qué las iglesias de habla griega, que hablaban el idioma del Nuevo Testamento como lengua materna, habrían escogido copiar durante siglos un texto inferior, abandonando el mejor?"
+"Esa misma lógica se ve, con una hermosura evangélica, en el camino de Gaza. Un etíope, eunuco, funcionario de Candace, volvía de Jerusalén, sentado en su carro, leyendo al profeta Isaías. No tenía, que sepamos, el autógrafo del profeta. Tenía un rollo, una copia, y esa copia era Escritura. Felipe se le acercó y le oyó leer, y le preguntó: Pero ¿entiendes lo que lees? El eunuco respondió: ¿Y cómo podré, si alguno no me enseñare? Y Lucas añade: El pasaje de la Escritura que leía era este: Como oveja a la muerte fue llevado; Y como cordero mudo delante del que lo trasquila, Así no abrió su boca. En su humillación no se le hizo justicia; Mas su generación, ¿quién la contará? Porque fue quitada de la tierra su vida. Hechos 8:32-33. El eunuco pregunta de quién dice el profeta esto, de sí mismo o de algún otro. Entonces Felipe, abriendo su boca, y comenzando desde esta escritura, le anunció el evangelio de Jesús. Hechos 8:35. La transmisión no termina en la conservación de un texto. Termina, cuando Dios lo quiere, en un hombre que oye, en un siervo que explica, y en el evangelio de Jesús anunciado desde esa escritura. El eunuco no fue salvado por un debate de códices. Fue salvado porque la Palabra que Isaías había recibido llegó, por copias, hasta su carro, y porque había quien, comenzando desde ella, anunciara a Cristo. Así debe terminar también este día en ti: no en una opinión sobre Erasmo o sobre Cambridge, sino en el Cordero que no abrió su boca, de quien esa Escritura habla."
 ],
 [
 "p",
-"El tercer argumento se refiere a la antigüedad. Que un manuscrito sea antiguo no significa automáticamente que sea mejor. Un manuscrito del siglo cuarto puede ser copia de un ejemplar defectuoso, mientras que un manuscrito del siglo diez puede ser copia de una cadena de ejemplares fieles que se remonta a los apóstoles. Además, se ha señalado que el clima seco de Egipto conserva mejor los manuscritos que el clima húmedo de Asia Menor o de Grecia, donde se encontraban las iglesias a las que se escribieron muchas cartas del Nuevo Testamento. Es lógico que los manuscritos más usados se gastaran y se reemplazaran por copias nuevas, mientras que un manuscrito poco usado podía sobrevivir intacto en una biblioteca. También se ha observado que los dos grandes códices antiguos no siempre coinciden entre sí, y que en bastantes lugares discrepan uno del otro."
+"Antes de que Moisés concluya el libro al lado del arca, hay una escena que enseña, de una vez, qué es escribir, qué es leer y para qué se hace. En el monte, Moisés cuenta al pueblo todas las palabras de Jehová, y el pueblo responde: Haremos todas las palabras que Jehová ha dicho. Éxodo 24:3. Luego no se fía de la sola memoria de aquella asamblea: Y Moisés escribió todas las palabras de Jehová, y levantándose de mañana edificó un altar al pie del monte, y doce columnas, según las doce tribus de Israel. Éxodo 24:4. Escribir no es un recurso tardío de eruditos. Es el modo que Dios quiso, desde el pacto del Sinaí, para que «todas las palabras» quedaran, no algunas, no las que el pueblo preferiría recordar. Y, escrito el libro, se lee: Y tomó el libro del pacto y lo leyó a oídos del pueblo, el cual dijo: Haremos todas las cosas que Jehová ha dicho, y obedeceremos. Éxodo 24:7. El oído del pueblo se ata a un libro leído, no a una impresión. Entonces viene la sangre: Entonces Moisés tomó la sangre y roció sobre el pueblo, y dijo: He aquí la sangre del pacto que Jehová ha hecho con vosotros sobre todas estas cosas. Éxodo 24:8. La transmisión, aquí, no es un oficio neutro. El libro del pacto se lee, el pueblo se obliga, y la sangre sella. Cuando el autor de Hebreos, más adelante, tome esta escena para hablar de una sangre mejor, no estará improvisando un símbolo: estará leyendo un libro que se escribió, se leyó y se selló. Hoy nos basta con esto: la Palabra que llega a tus manos viene de un pacto, no de un azar, y se recibió con sangre."
 ],
 [
 "p",
-"El cuarto argumento es que muchas lecturas que se consideraban tardías han aparecido en papiros antiguos descubiertos en el siglo veinte, lo que muestra que ciertas lecturas del texto tradicional circulaban ya en épocas muy tempranas."
+"Esa orden de escribir no nace siquiera en el Sinaí por primera vez. Ya contra Amalec había dicho Jehová: Y Jehová dijo a Moisés: Escribe esto para memoria en un libro, y di a Josué que raeré del todo la memoria de Amalec de debajo del cielo. Éxodo 17:14. Un libro para memoria; un decir a Josué. Lo escrito y lo entregado al sucesor van juntos. Y cuando el pueblo esté para pasar el Jordán, la Ley misma preverá lo que Josué hará sobre las piedras: Y el día que pases el Jordán a la tierra que Jehová tu Dios te da, levantarás piedras grandes, y las revocarás con cal; y escribirás en ellas todas las palabras de esta ley, cuando hayas pasado para entrar en la tierra que Jehová tu Dios te da, tierra que fluye leche y miel, como Jehová el Dios de tus padres te ha dicho. Deuteronomio 27:2-3. «Todas las palabras de esta ley», otra vez. La copia en piedra no es un monumento turístico. Es la Ley entera, a la vista, en la tierra prometida, para que la entrada no sea un olvido."
 ],
 [
 "p",
-"Hay algunos pasajes donde las diferencias entre el Textus Receptus y el texto crítico son más visibles, y que el estudiante debe conocer, porque en muchas Biblias modernas aparecen entre corchetes, con notas que dicen que no están en los manuscritos más antiguos. Los más conocidos son el final del Evangelio de Marcos, desde el capítulo dieciséis versículo nueve hasta el veinte, que narra las apariciones del resucitado y la gran comisión; y el relato de la mujer sorprendida en adulterio, en Juan siete cincuenta y tres hasta ocho once. Ambos pasajes están en la gran mayoría de los manuscritos griegos y en tu Reina Valera, y ambos fueron conocidos y citados por maestros cristianos antiguos. El final de Marcos es conocido por Ireneo en el siglo segundo, que cita el versículo diecinueve como parte del Evangelio de Marcos."
-],
-[
-"p",
-"Hay un pasaje especialmente debatido, que el estudiante debe conocer con honestidad: primera de Juan cinco siete, que dice: porque tres son los que dan testimonio en el cielo: el Padre, el Verbo y el Espíritu Santo; y estos tres son uno. Este versículo está en el Textus Receptus y en la Reina Valera, pero aparece en muy pocos manuscritos griegos, y su testimonio principal está en la tradición latina. Los defensores de su autenticidad señalan, entre otras cosas, que Cipriano de Cartago, a mediados del siglo tercero, parece aludir a él al decir que de los tres está escrito que son uno, y que la gramática griega del pasaje es más natural con el versículo que sin él. Sus críticos responden que la evidencia griega es demasiado escasa. Es un debate serio, y el estudiante debe saber que existe. Pero recuerda lo que dijimos antes: la doctrina de la Trinidad no depende de este versículo. Está enseñada en todo el Nuevo Testamento, desde el bautismo de Jesús, donde el Hijo es bautizado, el Espíritu desciende y el Padre habla desde el cielo, hasta la fórmula bautismal de Mateo veintiocho diecinueve, en el nombre del Padre, y del Hijo, y del Espíritu Santo."
+"A Jeremías, en otra hora, se le manda lo mismo, y el propósito se dice con una claridad que debería gobernar nuestro amor a los manuscritos: Así habló Jehová Dios de Israel, diciendo: Escríbete en un libro todas las palabras que te he hablado. Porque he aquí que vienen días, dice Jehová, en que haré volver a los cautivos de mi pueblo Israel y Judá, ha dicho Jehová, y los traeré a la tierra que di a sus padres, y la disfrutarán. Jeremías 30:2-3. Se escribe porque vienen días de restauración. El libro sirve a la esperanza, no solo a la memoria del juicio. Y cuando Joacim queme el primer rollo, como ya vimos al hablar de la inspiración, la Palabra no se acaba en la lumbre: Vuelve a tomar otro rollo, y escribe en él todas las palabras primeras que estaban en el primer rollo que quemó Joacim rey de Judá. Jeremías 36:28. Y tomó Jeremías otro rollo y lo dio a Baruc hijo de Nerías escriba; y escribió en él de boca de Jeremías todas las palabras del libro que quemó en el fuego Joacim rey de Judá; y aun fueron añadidas sobre ellas muchas otras palabras semejantes. Jeremías 36:32. Esta es la providencia de la preservación, vista de cerca: el rey puede quemar un ejemplar; no puede borrar lo que Dios ha hablado. Se vuelve a escribir. Se añade, no una doctrina nueva inventada por el escriba, sino lo que Jehová sigue dando por la misma boca. El brasero no gana. El segundo rollo llega hasta nosotros, por la misma cadena de copias que hoy honramos. Por eso no tratamos un manuscrito particular como si fuera el único hilo del que pende la fe, ni tratamos la quema, o la pérdida, o el desliz de un copista, como si Dios hubiera sido vencido."
 ],
 [
 "h",
-"Décima parte. La posición de esta escuela"
+"Entre la quinta y la sexta: el libro se escribe, se copia y se lee en voz alta"
 ],
 [
 "p",
-"¿Cuál es, entonces, la posición de esta escuela? La resumo en cinco afirmaciones."
+"La transmisión no empieza en los masoretas, ni en Erasmo. Empieza cuando Dios manda escribir, y cuando ese escrito se entrega, se copia y se lee ante el pueblo, para que oigan los que no escribieron. Al final de su carrera, Moisés no deja un recuerdo vago. Deja un libro."
+],
+[
+"q",
+"«Y escribió Moisés esta ley, y la dio a los sacerdotes hijos de Leví, que llevaban el arca del pacto de Jehová, y a todos los ancianos de Israel. Deuteronomio 31:9. El autor humano de la Ley la pone en manos de quienes llevan el arca y de los ancianos: no en un archivo secreto, ni en una casta que la esconda. Y les manda un ritmo de lectura pública que esta escuela no debe olvidar, porque la Palabra se preserva también siendo oída:»"
+],
+[
+"q",
+"«Y les mandó Moisés, diciendo: Al fin de cada siete años, en el año de la remisión, en la fiesta de los tabernáculos, cuando viniere todo Israel a presentarse delante de Jehová tu Dios en el lugar que él escogiere, leerás esta ley delante de todo Israel a oídos de ellos. Harás congregar al pueblo, varones y mujeres y niños, y tus extranjeros que estuvieren en tus ciudades, para que oigan y aprendan, y teman a Jehová vuestro Dios, y cuiden de cumplir todas las palabras de esta ley; y los hijos de ellos que no supieron, oigan, y aprendan a temer a Jehová vuestro Dios todos los días que viviereis sobre la tierra adonde vais, pasando el Jordán, para tomar posesión de ella» Deuteronomio 31:10-13."
 ],
 [
 "p",
-"Primera. Dios inspiró los textos originales de la Escritura, y prometió preservar su Palabra. Esa preservación no se ha hecho por un milagro que impidiera todo error de copia, sino por la providencia de Dios que vela sobre su Palabra a lo largo de la historia, de modo que su pueblo siempre ha tenido la Palabra de Dios."
+"Varones, mujeres, niños, extranjeros. Los que no supieron. Oír, aprender, temer, cumplir. La transmisión no es solo la fidelidad de una consonante, aunque esa fidelidad importa, y ayer y hoy la hemos honrado. Es también esta congregación, cada siete años, delante de Jehová, a oídos de todo Israel. Un pueblo puede perder el libro en la casa de Dios, como en días de Josías, si deja de leerlo así. Y puede conservarlo, no solo en el cofre, si lo lee a los hijos que no supieron. Esta escuela, en sus trescientos sesenta días, no sustituye aquella fiesta; la sirve, para que haya quienes oigan y teman."
 ],
 [
 "p",
-"Segunda. Para el Antiguo Testamento, el texto preservado es el texto masorético, el texto hebreo confiado a Israel y guardado con cuidado extraordinario por los escribas y los masoretas, cuya fidelidad ha sido confirmada de manera notable por los rollos del mar Muerto."
+"Cuando Moisés acaba de escribir, el libro no queda en el aire. Y cuando acabó Moisés de escribir las palabras de esta ley en un libro hasta concluirse, dio órdenes Moisés a los levitas que llevaban el arca del pacto de Jehová, diciendo: Tomad este libro de la ley, y ponedlo al lado del arca del pacto de Jehová vuestro Dios, y esté allí por testigo contra ti. Deuteronomio 31:24-26. Ya lo oímos, al hablar del canon, como vara. Hoy lo oímos como transmisión: hay un libro concluido, hay un lugar, hay un testigo. La presencia de Dios no es reemplazada por el texto; el texto está al lado del arca, no encima, y no lejos. La copia que el rey debía escribir, según Deuteronomio 17, no es un lujo de palacio: es el modo en que el trono mismo se sujeta a lo que ya está escrito y depositado."
 ],
 [
 "p",
-"Tercera. Para el Nuevo Testamento, esta escuela sostiene el Textus Receptus, el texto recibido y usado por las iglesias durante siglos, representado en la gran mayoría de los manuscritos griegos, y que está en la base de la Reina Valera."
+"Josué, cuando entra en la tierra, no se contenta con haber oído. Escribe una copia, y lee. También escribió allí sobre las piedras una copia de la ley de Moisés, la cual escribió delante de los hijos de Israel. Josué 8:32. Una copia, otra vez: la autoridad no se evapora al pasar de un soporte a otro, cuando lo que se copia es esa ley. Y todo Israel está de pie, a un lado y a otro del arca, naturales y extranjeros, hacia Gerizim y hacia Ebal, como Moisés lo había mandado. Después de esto, leyó todas las palabras de la ley, las bendiciones y las maldiciones, conforme a todo lo que está escrito en el libro de la ley. No hubo palabra alguna de todo cuanto mandó Moisés, que Josué no hiciese leer delante de toda la congregación de Israel, y de las mujeres, de los niños, y de los extranjeros que moraban entre ellos. Josué 8:34-35."
 ],
 [
 "p",
-"Cuarta. Esta posición no es ignorancia de los hechos, sino una manera de interpretar los hechos a la luz de la promesa de Dios. Conocemos la existencia de los manuscritos antiguos y de las ediciones críticas, y conocemos sus argumentos. Pero partimos de la Escritura, que promete la preservación, y no de una teoría que supone que la Palabra estuvo perdida durante siglos."
+"«Todas las palabras.» «No hubo palabra alguna… que Josué no hiciese leer.» Esta es la teología de la transmisión en acto, mucho antes de que nadie hablara de códices. No se lee lo que agrada. No se omiten las maldiciones para dejar solo las bendiciones. No se excluye al niño ni al extranjero. El libro entero, la congregación entera. Si hoy, por un debate de manuscritos o por un cansancio pastoral, aprendieras a leer solo las cláusulas que no escuecen, habrías dejado de ser Josué en Ebal y Gerizim, y habrías empezado a parecer a Joacim con el brasero, aunque el brasero sea, ahora, un silencio."
 ],
 [
 "p",
-"Quinta. Defendemos esta posición con firmeza y, al mismo tiempo, con caridad. Reconocemos que muchos creyentes sinceros y piadosos usan Biblias basadas en otros textos, y que Dios ha usado y usa esas Biblias para salvar y edificar. No convertimos este tema en motivo de división o de desprecio hacia otros hermanos. Pero, cuando enseñamos, citamos y estudiamos, lo hacemos sobre el texto recibido."
+"El profeta Habacuc oye el mismo encargo, en otra hora, con una finalidad pastoral que no debemos perder: Y Jehová me respondió, y dijo: Escribe la visión, y declárala en tablas, para que corra el que leyere en ella. Habacuc 2:2. Se escribe para que se lea, y se declara para que el que lea corra. La Palabra no se preserva para quedar quieta en un estante sagrado. Se preserva para correr. Una transmisión fiel que no produce lectores, ni corredores, ni temor, ha cumplido solo la mitad del mandato."
 ],
 [
 "h",
-"Undécima parte. Dios vela sobre su palabra"
+"La consolación que permanece, leída desde el principio del capítulo"
 ],
 [
 "p",
-"Hay un pasaje en el primer capítulo de Jeremías que es como un sello sobre toda esta lección. Dios está llamando al joven profeta, y le muestra una visión."
-],
-[
-"q",
-"«La palabra de Jehová vino a mí, diciendo: ¿Qué ves tú, Jeremías? Y dije: Veo una vara de almendro. Y me dijo Jehová: Bien has visto; porque yo apresuro mi palabra para ponerla por obra.» Así dice Jeremías, capítulo uno, versículos once al doce."
+"Cuando llegamos a Isaías 40, no debemos oír solo el versículo ocho, aunque ese sea el que memorizamos. El capítulo empieza con una voz de consuelo, y ese consuelo está atado a una Palabra que no falla. Consolaos, consolaos, pueblo mío, dice vuestro Dios. Hablad al corazón de Jerusalén; decidle a voces que su tiempo es ya cumplido, que su pecado es perdonado; que doble ha recibido de la mano de Jehová por todos sus pecados. Isaías 40:1-2. El pueblo que oirá que toda carne es hierba es, primero, un pueblo al que se le habla al corazón, un pueblo perdonado. La transmisión de esta Palabra no es un oficio frío de copistas: es el medio por el cual llega un consuelo, un perdón, un «ya cumplido»."
 ],
 [
 "p",
-"¿Qué ves tú, Jeremías? Y dije: Veo una vara de almendro. Y me dijo Jehová: Bien has visto; porque yo apresuro mi palabra para ponerla por obra. Hay aquí un juego de palabras en hebreo que no se nota en español. El almendro se dice shaqéd, hache ocho mil doscientos cuarenta y siete, y el verbo apresurar, velar, estar alerta, se dice shaqád, hache ocho mil doscientos cuarenta y cinco. El almendro era llamado el árbol vigilante, porque es el primero en despertar y florecer al final del invierno. Dios le dice a Jeremías: así como el almendro vela y despierta primero, así yo velo sobre mi palabra para cumplirla. Varias traducciones lo vierten así: yo vigilo sobre mi palabra."
+"Luego, la voz que el evangelio reconocerá en el Bautista: Voz que clama en el desierto: Preparad camino a Jehová; enderezad calzada en la soledad a nuestro Dios. Todo valle sea alzado, y bájese todo monte y collado; y lo torcido se enderece, y lo áspero se allane. Y se manifestará la gloria de Jehová, y toda carne juntamente la verá; porque la boca de Jehová ha hablado. Isaías 40:3-5. «Porque la boca de Jehová ha hablado.» Esa es la razón de que la gloria se manifieste y de que toda carne la vea. No porque el profeta sea elocuente, ni porque el copista sea infalible en cada trazo, sino porque ha hablado la boca de Jehová. El versículo ocho, que ya oímos, no es un lema suelto de permanencia textual: es la consecuencia de esa boca. La hierba se seca; la Palabra del Dios nuestro permanece; y esa Palabra es, en este capítulo, Palabra de consuelo, de perdón, de camino preparado y de gloria vista. Pedro, como vimos, la llama la palabra del evangelio anunciada. Si espesamos esta lección, que no sea para amar más el códice y menos el consuelo. El códice sirve al consuelo. El consuelo viene de la boca de Jehová."
 ],
 [
 "p",
-"El Dios que vela sobre su palabra para cumplirla es el mismo que vela sobre su palabra para preservarla. Veló sobre el rollo que quemó Joacim. Veló sobre el libro perdido en el templo hasta los días de Josías. Veló sobre los rollos en la cueva de Qumrán durante dos mil años. Veló sobre las manos de miles de escribas y copistas, sobre los masoretas de Tiberias, sobre Erasmo en Basilea, sobre Casiodoro de Reina fugitivo por Europa. Y vela hoy sobre la Biblia que tienes en tus manos."
+"Hay, todavía, un hilo que no debemos soltar. La misma Palabra que se escribe, se copia, se lee en Ebal y se oye en Nazaret, es la que el Señor cumple. Josué hizo leer todas las palabras. Jesús, en la sinagoga, halló el lugar donde estaba escrito, y dijo que hoy se cumplía. Felipe, en el carro, empezó desde aquella Escritura. La cadena no es una curiosidad de historiadores. Es el modo en que el perdón de Isaías 40:2, el año agradable de Lucas 4 y el Cordero de Hechos 8 llegan hasta tu oído, en tu lengua, por un texto que hombres copiaron y que Dios guardó. Dar gracias por esa cadena, y someterse a esa Palabra, es la fe de este día. Disputar de copias para no arrepentirse es, otra vez, el brasero."
 ],
 [
 "h",
-"Duodécima parte. Consecuencias para tu fe y tu vida"
+"Sexta parte. El debate moderno, dicho con honestidad"
 ],
 [
 "p",
-"Termino con cuatro aplicaciones."
+"En el siglo diecinueve, el estudio de manuscritos antiguos, especialmente de dos códices del siglo cuarto —el Códice Vaticano, conservado en la biblioteca del Vaticano, y el Códice Sinaítico— llevó a muchos estudiosos a preferir un texto griego más breve, en no pocos pasajes, que el texto recibido. En mil ochocientos ochenta y uno, Brooke Westcott y Fenton Hort, de Cambridge, publicaron una edición que daba mucha preferencia a esos testimonios. Sostenían que el texto leído durante siglos en las iglesias, y que está en la base del Textus Receptus, era un texto posterior, revisado y ampliado. A partir de entonces, la mayoría de las ediciones académicas y de muchas traducciones modernas han seguido, con variantes, esa orientación."
 ],
 [
 "p",
-"La primera es la confianza. Puedes abrir tu Reina Valera con la misma confianza con la que el Señor Jesús abrió el rollo de Isaías en Nazaret. No estás leyendo un texto incierto, reconstruido por hipótesis. Estás leyendo la Palabra que Dios ha preservado."
+"Esta escuela no silenciará ese debate, ni lo caricaturizará. Hay manuscritos antiguos de gran valor. Hay métodos que se pueden enseñar y se enseñarán, en su lugar, con claridad. Hay pasajes en los que las copias no coinciden, y el alumno debe saberlo. Lo que no haremos es adoptar, por el solo hecho de que sea mayoritaria en las academias, una edición crítica como texto de trabajo de la casa. Tampoco afirmaremos de esos códices lo que no sabemos, ni les atribuiremos intenciones que el historiador no puede jurar. Diremos, con sobriedad, que la antigüedad de un manuscrito no es, por sí sola, la prueba de su superioridad en todos los casos, y que el uso amplio, prolongado y devoto de un texto en la iglesia es un dato que la providencia nos obliga a tomar en serio. El Señor no esperó al siglo diecinueve para que su pueblo tuviera la Escritura. La tuvo, la predicó y la obedeció."
 ],
 [
 "p",
-"La segunda es la gratitud por los que nos precedieron. Piensa en los escribas que pasaron su vida copiando letra por letra, en los masoretas que contaban las letras de cada libro, en los monjes de San Isidoro que huyeron de la hoguera para traducir la Biblia a nuestra lengua. Muchos de ellos no vieron el fruto de su trabajo. Nosotros lo cosechamos. Hebreos once termina diciendo que todos ellos, aunque alcanzaron buen testimonio mediante la fe, no recibieron lo prometido, proveyendo Dios alguna cosa mejor para nosotros."
-],
-[
-"p",
-"La tercera es el cuidado con el texto. Si otros cuidaron tanto la Palabra, nosotros no podemos tratarla con descuido. Cuando cites la Biblia, cítala con exactitud. Cuando prediques, no cambies las palabras para que digan lo que tú quieres. Cuando enseñes, distingue siempre entre lo que dice el texto y lo que tú opinas. El escriba Esdras es nuestro modelo."
-],
-[
-"p",
-"La cuarta es la valentía. Muchos dieron su vida para que la Biblia llegara a nosotros. Algunos fueron quemados junto con las Biblias que habían traducido o distribuido. Si ellos pagaron ese precio para que tuviéramos la Palabra, nosotros no debemos avergonzarnos de ella ni callarla. Pablo dijo en Romanos uno dieciséis: no me avergüenzo del evangelio, porque es poder de Dios para salvación a todo aquel que cree."
-],
-[
-"q",
-"«Las palabras de Jehová son palabras limpias, Como plata refinada en horno de tierra, Purificada siete veces. Tú, Jehová, los guardarás; De esta generación los preservarás para siempre.» Así dice Salmos, capítulo doce, versículos seis al siete."
-],
-[
-"p",
-"Las palabras de Jehová son palabras limpias, como plata refinada en horno de tierra, purificada siete veces. Tú, Jehová, los guardarás; de esta generación los preservarás para siempre."
+"Un ejemplo basta, en esta lección, para que el alumno vea de qué hablamos, sin convertir el día en un catálogo. Hay versículos y cláusulas que el texto recibido incluye y que algunas ediciones modernas ponen en duda o entre corchetes, a veces en lugares que un creyente ama y recita. No los enumeraremos todos hoy, ni construiremos la fe sobre un solo caso. En el módulo diez se estudiarán con el texto delante, con las razones de unos y de otros, y con las razones de esta casa. Hoy firmamos el principio: no abandonamos el texto recibido porque un método nuevo lo haya declarado, en bloque, inferior. Y no tratamos al que pregunta por una variante como a un enemigo de la fe. La pregunta es legítima. La respuesta de esta escuela es el texto que la iglesia recibió, sostenido con razones, no con un grito."
 ],
 [
 "h",
-"Conclusión"
+"Séptima parte. La posición de esta escuela"
 ],
 [
 "p",
-"Hemos visto hoy que los autógrafos de la Escritura se perdieron, pero que el Señor Jesús y los apóstoles leyeron copias y las recibieron como Palabra de Dios con plena autoridad. Los escribas y los masoretas guardaron el texto hebreo con un cuidado extraordinario, contando letras, palabras y versículos, y añadiendo vocales y notas sin tocar las consonantes. Los rollos del mar Muerto, mil años más antiguos que los manuscritos masoréticos completos, confirmaron la fidelidad de esa transmisión. El Nuevo Testamento tiene un testimonio manuscrito sin igual en la antigüedad, con más de cinco mil ochocientos manuscritos griegos. Las variantes, en su inmensa mayoría, son insignificantes, y ninguna doctrina depende de una variante dudosa. Con la imprenta, Erasmo, Estéfano, Beza y los Elzevir publicaron el Nuevo Testamento griego que se llamó Textus Receptus, base de la Reina Valera. Desde el siglo diecinueve, muchos prefieren un texto crítico basado en unos pocos manuscritos antiguos; esta escuela sostiene el texto masorético y el Textus Receptus, por la promesa de preservación, el testimonio de la mayoría de los manuscritos y el uso del pueblo de Dios. Y sobre todo, hemos visto que Dios vela sobre su palabra."
+"¿Cuál es, entonces, la posición de esta casa? La resumo en cinco afirmaciones, para que puedas retenerlas y examinarlas a la luz de lo ya estudiado."
+],
+[
+"p",
+"Primera. Dios inspiró los textos originales de la Escritura, y esa Escritura es inerrante: verdadera en todo lo que afirma, sin mezcla de error. Eso lo vimos en el día dos, y no lo repetiremos como un lema vacío."
+],
+[
+"p",
+"Segunda. Dios prometió preservar su Palabra. Esa preservación no se ha hecho por un milagro que impidiera todo error de copia en cada manuscrito, sino por la providencia que vela sobre el texto a lo largo de la historia, de modo que su pueblo siempre ha tenido la Palabra de Dios. El Señor leyó una copia en Nazaret y la llamó Escritura. Nosotros leemos copias y traducciones, y las recibimos como Palabra en la medida en que reproducen con fidelidad lo que Él sopló."
+],
+[
+"p",
+"Tercera. Para el Antiguo Testamento, el texto de trabajo de esta escuela es el texto masorético. Para el Nuevo, el Textus Receptus en la edición de Scrivener. Las versiones antiguas, los rollos de Qumrán donde hay testigo, y los manuscritos de otras líneas se consultan como testimonios, no como un tribunal que desplace esos textos."
+],
+[
+"p",
+"Cuarta. Citamos la Reina-Valera de mil novecientos sesenta, textual, y acudimos a la de mil novecientos nueve cuando haga falta. No inventamos versículos, ni los completamos de memoria, ni construimos una doctrina sobre una cláusula que no hayamos verificado."
+],
+[
+"p",
+"Quinta. En el módulo diez enseñaremos los métodos de la crítica textual y los pasajes discutidos, y daremos, con más aparato, las razones de esta postura. El que hoy se queda con un recelo tiene derecho a esperar esa lección. El que hoy se queda con un orgullo de partido ha entendido mal el día. La postura es de reverencia y de trabajo, no de desprecio."
+],
+[
+"p",
+"—A. S. No pedimos que nadie amenice un lema. Pedimos que se reciba la Palabra que Dios nos ha guardado, que se la estudie con las lenguas y con el temor de Jehová, y que no se entregue el rollo al primer brasero, aunque el brasero se presente ahora con el nombre de un método."
+],
+[
+"p",
+"Estas cinco afirmaciones no hacen de la transmisión un ídolo. El ídolo sería el manuscrito, o la edición, o la traducción, amados más que el Dios que habla. El texto es siervo de la Palabra, y la Palabra es sierva de Cristo, y Cristo nos lleva al Padre. Si un día el estudio de las variantes te deja más inquieto que arrepentido, o más soberbio que creyente, has tomado el camino de Joacim, aunque sea con más erudición que la suya."
 ],
 [
 "h",
-"Decimotercera parte. Lo que Dios ha hecho por su Palabra a lo largo de la historia"
+"Octava parte. La Palabra que permanece"
 ],
 [
 "p",
-"Antes del repaso, quiero que miremos juntos varios pasajes en los que la misma Escritura muestra cómo Dios ha cuidado su Palabra cuando los hombres intentaron destruirla o perderla. No son teorías: son hechos narrados por el Espíritu Santo."
-],
-[
-"p",
-"El primero es el del libro hallado en el templo, en los días del rey Josías. Durante los reinados de Manasés y de Amón, la idolatría había llenado Judá, y el libro de la ley había quedado olvidado. Pero cuando se reparaba la casa de Jehová, el sumo sacerdote lo encontró. Escucha."
+"La Escritura no nos deja, al cabo, con una técnica. Nos deja con una promesa. El profeta oye y responde, y el mensaje queda escrito:"
 ],
 [
 "q",
-"«Entonces dijo el sumo sacerdote Hilcías al escriba Safán: He hallado el libro de la ley en la casa de Jehová. E Hilcías dio el libro a Safán, y lo leyó.» Así dice segundo de Reyes, capítulo veintidós, versículo ocho."
+"«Voz que decía: Da voces. Y yo respondí: ¿Qué tengo que decir a voces? Que toda carne es hierba, y toda su gloria como flor del campo. La hierba se seca, y la flor se marchita, porque el viento de Jehová sopló en ella; ciertamente como hierba es el pueblo. Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre» Isaías 40:6-8."
 ],
 [
 "p",
-"Y mira lo que hizo el rey cuando lo oyó leer."
-],
-[
-"q",
-"«Y cuando el rey hubo oído las palabras del libro de la ley, rasgó sus vestidos.» Así dice segundo de Reyes, capítulo veintidós, versículo once."
+"Toda carne es hierba. El rey que quema, el copista que se equivoca, el académico que propone, el predicador que cita, tú y yo: hierba. La gloria del hombre es flor del campo. Se seca. Se marchita. La Palabra del Dios nuestro permanece para siempre. Pedro toma esa promesa y la pone en el corazón del evangelio: siendo renacidos, no de simiente corruptible, sino de incorruptible, por la palabra de Dios que vive y permanece para siempre. Porque: Toda carne es como hierba, Y toda la gloria del hombre como flor de la hierba. La hierba se seca, y la flor se cae; Mas la palabra del Señor permanece para siempre. Y esta es la palabra que por el evangelio os ha sido anunciada. 1 Pedro 1:23-25. La Palabra que permanece es la Palabra que regenera. No es un fósil bien conservado. Es simiente incorruptible, por la cual somos nacidos de nuevo. La transmisión, al cabo, sirve a eso: a que el evangelio anunciado sea, de generación en generación, la misma Palabra que vive."
 ],
 [
 "p",
-"El libro estuvo perdido para el pueblo, pero no para Dios. Él lo guardó en su casa hasta el día en que un rey de corazón tierno lo escuchara. Y cuando la Palabra fue leída, vino la reforma: se quitaron los ídolos, se celebró la pascua, y el pueblo hizo pacto de andar en pos de Jehová. Esta es una ley que se repite en la historia: cuando la Palabra vuelve a leerse, el pueblo de Dios vuelve a vivir."
+"El Señor lo dijo también de sus propias palabras, con una solemnidad que no admite un encogerse de hombros: El cielo y la tierra pasarán, pero mis palabras no pasarán. Mateo 24:35. Y Jehová, a su pueblo, le prometió: Y este será mi pacto con ellos, dijo Jehová: El Espíritu mío que está sobre ti, y mis palabras que puse en tu boca, no faltarán de tu boca, ni de la boca de tus hijos, ni de la boca de los hijos de tus hijos, dijo Jehová, desde ahora y para siempre. Isaías 59:21. De boca en boca, de copia en copia, de padre a hijo, de traducción a oído: no faltarán. Esa es la teología de este día, más honda que la fecha de un códice."
 ],
 [
 "p",
-"El segundo es el del rollo de Jeremías quemado por el rey Joacim. Dios mandó a Jeremías escribir en un rollo todas las palabras que le había hablado, y su ayudante Baruc las escribió de su boca. Cuando el rollo fue leído delante del rey, en invierno, junto al brasero, el rey hizo algo terrible. Escucha."
-],
-[
-"q",
-"«Cuando Jehudí había leído tres o cuatro planas, lo rasgó el rey con un cortaplumas de escriba, y lo echó en el fuego que había en el brasero, hasta que todo el rollo se consumió sobre el fuego que en el brasero había.» Así dice Jeremías, capítulo treinta y seis, versículo veintitrés."
+"Conviene, antes de cerrar, mirar de frente un detalle de la lectura de Nazaret, porque un alumno atento lo notará y no debemos dejarlo en la sombra. El rollo de Isaías, en el capítulo sesenta y uno, dice: El Espíritu de Jehová el Señor está sobre mí, porque me ungió Jehová; me ha enviado a predicar buenas nuevas a los abatidos, a vendar a los quebrantados de corazón, a publicar libertad a los cautivos, y a los presos apertura de la cárcel; a proclamar el año de la buena voluntad de Jehová, y el día de venganza del Dios nuestro; a consolar a todos los enlutados. Isaías 61:1-2. Lucas, al referir lo que el Señor leyó, no reproduce cada cláusula de ese oráculo en el mismo orden ni con las mismas palabras. Habla de evangelizar a los pobres, de libertad a los cautivos, de vista a los ciegos, de libertad a los quebrantados, del año agradable del Señor. No registra, en esa lectura, el día de venganza del Dios nuestro. Esta escuela no inventará aquí una teoría de manuscritos para explicar la diferencia, ni acusará a Lucas, ni recortará a Isaías. Diremos lo que el texto nos permite decir: el evangelista nos da, con fidelidad, lo que ocurrió en aquella sinagoga y lo que el Señor declaró cumplido hoy; el oráculo de Isaías es más amplio, y en él hay también un día de venganza que no se agota en la primera venida. El mismo profeta, el mismo Espíritu, el mismo Mesías: la primera venida trae el año agradable; la venganza no queda abolida, queda, en el consejo de Dios, para su tiempo. El punto de esta lección no es armonizar, con violencia, cada palabra. Es ver que Jesús tomó un texto escrito, lo leyó como Escritura, y lo cumplió. La copia era suficiente para ese cumplimiento. La promesa era suficiente para esa fe."
 ],
 [
 "p",
-"El rey cortaba las columnas con un cortaplumas y las echaba al fuego, hasta consumir todo el rollo. Parecía que la Palabra había sido destruida. Pero escucha lo que Dios dijo después."
-],
-[
-"q",
-"«Vuelve a tomar otro rollo, y escribe en él todas las palabras primeras que estaban en el primer rollo que quemó Joacim rey de Judá.» Así dice Jeremías, capítulo treinta y seis, versículo veintiocho."
+"El Señor, en el monte, no habló de la Ley como de un texto aproximado. Dijo: No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir. Porque de cierto os digo que hasta que pasen el cielo y la tierra, ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido. Mateo 5:17-18. La jota es la letra más pequeña del alefato hebreo, la yod.[2] La tilde es el trazo mínimo que distingue una letra de otra. Jesús no estaba dando, en esa hora, una clase de crítica de manuscritos. Estaba afirmando que la Ley, en su letra, está bajo el cuidado de Dios hasta su cumplimiento, y que Él no ha venido a disolverla. Si el Hijo habla así de la jota, nosotros no podemos hablar de la transmisión como de un río en el que todo se pierde. Tampoco podemos convertir esa frase en la afirmación falsa de que cada copia particular, en cada siglo, ha sido letra por letra idéntica. El Señor afirma la estabilidad de la Ley en el propósito de Dios, hasta que todo se cumpla. Esa afirmación sostiene nuestra confianza. No nos autoriza a negar lo que los ojos ven cuando dos copias difieren en un lugar. La fe mira las dos cosas a la vez: la promesa, y el trabajo honesto sobre los testigos."
 ],
 [
 "p",
-"Y el capítulo termina diciendo que Jeremías tomó otro rollo, y Baruc escribió en él todas las palabras del libro que había quemado el rey, y aun fueron añadidas sobre ellas muchas otras palabras semejantes. El rey quemó un rollo; Dios dictó otro, y más completo. Ese es el resumen de toda la historia de la transmisión del texto. Los hombres han quemado Biblias, han prohibido su lectura, han perseguido a los traductores y a los impresores; y en cada generación Dios ha vuelto a poner su Palabra en manos de su pueblo."
+"Pablo, ya cerca del fin, escribió a Timoteo una petición que parece pequeña y no lo es: Trae, cuando vengas, el capote que dejé en Troas en casa de Carpo, y los libros, mayormente los pergaminos. 2 Timoteo 4:13. El apóstol que había recibido revelación, el que había escrito cartas que la iglesia reconocería como Escritura, quería todavía los libros, mayormente los pergaminos. No despreció el soporte. No dijo que, teniendo el Espíritu, ya no necesitaba el rollo. La Palabra de Dios llega en materia: piel, tinta, papel, hoy una página impresa o una pantalla, mañana lo que la providencia disponga. Tratar el soporte con descuido, o tratarlo con idolatría, son dos errores gemelos. El pergamino sirve. El capote también sirve, en invierno. Ni el uno ni el otro son el Señor. Pero el apóstol, en la cárcel, los pide."
 ],
 [
 "p",
-"El tercero es el testimonio del mismo Señor Jesús. Escucha sus palabras en el sermón del monte."
-],
-[
-"q",
-"«Porque de cierto os digo que hasta que pasen el cielo y la tierra, ni una jota ni una tilde pasará de la ley, hasta que todo se haya cumplido.» Así dice Mateo, capítulo cinco, versículo dieciocho."
+"Y lo que se escribió, se escribió para nosotros. Porque las cosas que se escribieron antes, para nuestra enseñanza se escribieron, a fin de que por la paciencia y la consolación de las Escrituras, tengamos esperanza. Romanos 15:4. La transmisión no es un asunto de especialistas encerrados. Es el medio por el cual la enseñanza, la paciencia, la consolación y la esperanza llegan al pueblo. Si el texto no hubiera llegado, no habría esa consolación. Si llega y no se lee, la consolación queda en la estantería. El salmista lo dice con una calma que conviene oír al final de un día técnico: Para siempre, oh Jehová, Permanece tu palabra en los cielos. Salmos 119:89. Y otra vez: Hace ya mucho que he entendido tus testimonios, Que para siempre los has establecido. Salmos 119:152. En los cielos permanece. En la tierra se copia, se traduce, se predica. El establecimiento es de Dios. El trabajo es nuestro, bajo su cuidado."
 ],
 [
 "p",
-"Una jota es la letra más pequeña del alfabeto hebreo, la iod, que parece apenas una coma en lo alto de la línea. Una tilde es uno de esos pequeños trazos que distinguen una letra de otra parecida. El Señor no dijo solo que las grandes ideas de la ley permanecerían; dijo que ni la letra más pequeña ni el trazo más pequeño pasarían hasta que todo se haya cumplido. Así de exacta es la promesa de preservación que sostiene esta lección."
+"Hay, por último, una pregunta práctica que no debes aplazar. Abres una Biblia y, en una nota al pie, lees que algunos manuscritos omiten una cláusula, o que otras traducciones dicen de otro modo. ¿Qué haces entonces? No cierras el libro. No finges que la nota no existe. No construyes, sobre esa sola nota, la conclusión de que nada es seguro. Preguntas: ¿está el pasaje en el texto que esta escuela recibe? ¿Cambia, esa variante, una doctrina que el resto de la Escritura afirma con claridad? ¿He de esperar al módulo diez para ver el caso con aparato, o puedo, ya hoy, seguir leyendo con provecho el capítulo? En la inmensa mayoría de los casos, puedes seguir leyendo. La fe cristiana no pende de un renglón disputado. Pende de Cristo, de quien toda la Escritura da testimonio, y de un texto que, en su conjunto, ha llegado con una estabilidad que el temor de Jehová reconoce y que el trabajo de los copistas, con sus límites, no ha logrado deshacer. Cuando llegue el día de estudiar un pasaje discutido, lo estudiaremos sin miedo y sin burla. Mientras tanto, lee, memoriza, obedece. La hierba se seca. La Palabra permanece."
+],
+[
+"h",
+"No tienes que subir a buscar un autógrafo perdido"
 ],
 [
 "p",
-"El cuarto es la conclusión del profeta Isaías, que Pedro cita en su primera carta. Escucha a Pedro."
-],
-[
-"q",
-"«Porque: Toda carne es como hierba, Y toda la gloria del hombre como flor de la hierba. La hierba se seca, y la flor se cae; Mas la palabra del Señor permanece para siempre. Y esta es la palabra que por el evangelio os ha sido anunciada.» Así dice primera de Pedro, capítulo uno, versículos veinticuatro al veinticinco."
+"Hay un consuelo, en toda esta cadena de copias, que el alumno angustiado por los originales perdidos necesita oír con clara pastoral, y no como un eslogan. La Palabra que Dios sopló no se ha quedado en un cielo inaccesible, ni al otro lado de un mar de siglos que nadie pueda cruzar. Se escribió, se copió, se leyó a oídos del pueblo, se volvió a escribir cuando un rey la quemó, se guardó al lado del arca, se esculpió en piedras, se cantó, se tradujo, y el Señor, en Nazaret, llamó Escritura a la copia que tenía en las manos. Tú no necesitas el papiro de Isaías para oír a Isaías, ni la carta de puño de Pablo para oír a Pablo. Necesitas un texto fiel, y lo tienes, en la línea que esta casa recibe, y una versión que cita lo que ese texto dice. La angustia que no se sacia con eso, y que pide, para creer, el autógrafo, se parece demasiado a la del rico que pedía un muerto por mensajero, cuando ya había Moisés y los profetas."
 ],
 [
 "p",
-"Pedro añade algo precioso: esta es la palabra que por el evangelio os ha sido anunciada. Es decir, la palabra que permanece para siempre no es una palabra inalcanzable, guardada en el cielo; es la misma palabra que te fue predicada, la que tienes en tus manos, la que lees en tu casa. La hierba de los imperios se seca; la flor de las filosofías cae; pero la Palabra del Señor permanece."
+"Eso no hace de la ignorancia una virtud, ni de la pregunta por una variante un pecado. El módulo diez tratará esos casos. Eso sí hace de la fe un acto presente: hoy, esta Palabra, en tu lengua, es la que permanece, la que consuela, la que perdona, la que prepara el camino, la que el Espíritu usa para nacer de nuevo. El sofer contaba letras para no perder ninguna. Tú no contarás menos, en el sentido que te toca: no perderás, por descuido o por moda, las palabras que se te han acercado. Las leerás, las oirás, las cumplirás, y cuando una nota al pie te inquiete, no cerrarás el libro. Seguirás leyendo, y esperarás con templanza la lección que ha de venir, y no construirás sobre esa nota la conclusión de que Dios no ha hablado."
+],
+[
+"h",
+"Novena parte. Lo que esto pide de ti"
 ],
 [
 "p",
-"Nota también el orden de la frase de Isaías: toda carne es como hierba. Eso incluye a los copistas, a los impresores, a los traductores y a los críticos. Todos pasan. Ninguno de ellos es el dueño del texto. El único que permanece junto con su Palabra es el Dios que la dio, y por eso la confianza del creyente no descansa en la habilidad de los hombres, sino en la fidelidad de Dios, que prometió guardarla."
+"Si la Palabra ha llegado a tus manos por la providencia de Dios, no la trates como un hallazgo tuyo, ni como un papel neutro. Trátala como la trató Josías, no como la trató Joacim. Léela. Tiembla. Conviértete. El mismo rollo que se preservó mil años puede perderse otra vez en una casa, no porque se destruya el texto en el mundo, sino porque se descuida en el corazón. Hay un modo de afirmar el Textus Receptus y de no abrir el Evangelio. Hay un modo de defender la Reina-Valera y de no obedecer a Cristo. Esa defensa, entonces, es un brasero más fino, pero brasero al fin."
 ],
 [
 "p",
-"Una aplicación personal. Quizá tú nunca vas a copiar un manuscrito, ni vas a imprimir una Biblia, ni vas a traducirla a otra lengua. Pero tú también eres parte de esta cadena. Cada vez que lees la Escritura en voz alta en tu casa, cada vez que la enseñas a un niño, cada vez que la memorizas, cada vez que la citas con exactitud y no de manera aproximada, estás haciendo lo que hicieron los escribas fieles: estás pasando la Palabra a la siguiente generación sin quitarle ni añadirle. Pablo le dijo a Timoteo que lo que había oído de él delante de muchos testigos lo encargara a hombres fieles que fueran idóneos para enseñar también a otros. Esa es la cadena viva de la transmisión. Te invito a tomar una decisión hoy: citar siempre la Escritura con exactitud, comprobando el texto, y no repetir de memoria lo que creemos que dice. Esa pequeña disciplina es la herencia de los escribas en tu propia vida."
+"La transmisión nos convence también de nuestra pequeñez. No hemos inventado este libro. Lo hemos recibido. Somos, en la larga fila de Esdras, de los masoretas, de Baruc, de Timoteo niño, de Reina y de Valera, un eslabón que debe entregar lo que recibió, no un origen. El orgullo del que descubre una variante y cree haber descubierto que Dios no ha hablado es un orgullo antiguo. El orgullo del que, por defender el texto, desprecia al hermano que todavía pregunta, también lo es. El temor de Jehová empieza, aquí, por dar gracias: tenemos la Palabra, en nuestra lengua, y podemos inquirirla, cumplirla y enseñarla."
+],
+[
+"p",
+"Y hay una llamada al evangelio, que no debemos dejar para otra lección. La Palabra que permanece es la que Pedro llama la palabra del evangelio anunciada. Cristo, en Nazaret, leyó a Isaías y dijo que hoy se cumplía. Las buenas nuevas a los pobres, la libertad a los cautivos, el año agradable del Señor, no son una metáfora vaga: son el anuncio de que el Siervo ha venido, de que hay perdón, de que se puede nacer de nuevo, no de simiente corruptible. Si hoy solo has ganado un poco de historia de manuscritos y no has oído esa voz, has oído la cadena y no el eslabón que salva. Arrepiéntete de tratar la Biblia como un objeto. Ven a Cristo, de quien esa Escritura da testimonio. Y permanece en su Palabra, que no pasará cuando pasen el cielo y la tierra."
+],
+[
+"p",
+"Mañana, si el Señor quiere, abriremos el alefato hebreo, no como un desfile de letras para lucirse, sino como el alfabeto de la Ley y de los Profetas, al servicio de una frase que Israel confiesa y que esta escuela te pedirá de memoria: Jehová nuestro Dios, Jehová uno es. El texto que hoy hemos visto guardado es un texto que se puede leer, letra por letra, con provecho, porque cada jota y cada tilde están bajo la palabra del Señor."
 ],
 [
 "h",
@@ -530,63 +318,63 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Primera pregunta. ¿Qué dijo el Señor Jesús después de leer el rollo de Isaías en Nazaret, y qué nos enseña eso sobre las copias? Respuesta: hoy se ha cumplido esta Escritura delante de vosotros. Nos enseña que el Señor recibía como Escritura con plena autoridad la copia que tenía en sus manos."
+"Ahora vamos a repasar. Contesta cada pregunta en voz alta antes de leer o de oír la respuesta."
 ],
 [
 "p",
-"Segunda pregunta. ¿Qué significa la palabra sofér? Respuesta: escriba, hache cinco mil seiscientos ocho, de una raíz que significa contar y escribir."
+"Primera pregunta. ¿Qué hizo el Señor en Nazaret con una copia del rollo de Isaías, según Lucas 4:16-21? Respuesta: la abrió, leyó, la enrolló, y dijo: Hoy se ha cumplido esta Escritura delante de vosotros. Llamó Escritura a la copia que tenía en las manos."
 ],
 [
 "p",
-"Tercera pregunta. ¿Qué añadieron los masoretas al texto hebreo, y qué no tocaron? Respuesta: añadieron signos vocálicos, acentos y notas marginales; no tocaron las consonantes del texto."
+"Segunda pregunta. ¿Se ha perdido la autoridad de la Palabra porque los autógrafos no estén ya en nuestras manos? Respuesta: no. La autoridad acompaña al texto que Dios preserva en su pueblo; el Señor, los apóstoles y Timoteo leyeron copias y las recibieron como Escritura."
 ],
 [
 "p",
-"Cuarta pregunta. ¿Qué es el ketiv y el qeré? Respuesta: el ketiv es lo que está escrito en el texto, y el qeré lo que se lee según la tradición, anotado al margen sin cambiar el texto."
+"Tercera pregunta. ¿Qué es la masorá, y qué es el texto masorético? Respuesta: la masorá es la tradición de notas y de conteos con que los masoretas guardaron el texto hebreo; el texto masorético es el texto hebreo así transmitido, con sus vocales y su aparato, y es el texto de trabajo de esta escuela en el Antiguo Testamento."
 ],
 [
 "p",
-"Quinta pregunta. ¿Cuáles son los dos grandes manuscritos de la escuela de Tiberias? Respuesta: el Códice de Alepo, hacia el año novecientos treinta, y el Códice de Leningrado, del año mil ocho."
+"Cuarta pregunta. ¿Qué ilustra, y qué no prueba por sí solo, el gran rollo de Isaías hallado cerca del mar Muerto? Respuesta: ilustra la estabilidad del texto de Isaías respecto del texto masorético, siglos antes de los masoretas; no prueba la inerrancia, que se afirma por el carácter de Dios y por lo que Él sopló, no por un hallazgo arqueológico."
 ],
 [
 "p",
-"Sexta pregunta. ¿Qué demostró el rollo de Isaías de Qumrán? Respuesta: que, en mil años de copias, el texto hebreo se mantuvo sustancialmente igual."
+"Quinta pregunta. ¿Qué es el Textus Receptus, y qué edición sigue esta escuela? Respuesta: el texto griego impreso, recibido, de la línea de Erasmo, Estienne, Beza y los Elzevir; esta escuela sigue la edición de Scrivener."
 ],
 [
 "p",
-"Séptima pregunta. ¿Cuántos manuscritos griegos del Nuevo Testamento se conocen? Respuesta: más de cinco mil ochocientos, además de miles de traducciones antiguas y abundantes citas en los maestros cristianos."
+"Sexta pregunta. ¿Qué versión española cita esta escuela, y de qué corriente proviene? Respuesta: la Reina-Valera de mil novecientos sesenta, textual, de la corriente que comienza con Casiodoro de Reina en mil quinientos sesenta y nueve y la revisión de Cipriano de Valera en mil seiscientos dos."
 ],
 [
 "p",
-"Octava pregunta. ¿Depende alguna doctrina de una variante dudosa? Respuesta: no. Todas las doctrinas de la fe están enseñadas en muchos pasajes cuyo texto es firme."
+"Séptima pregunta. ¿En qué consiste, dicho con honestidad, el debate moderno sobre el texto griego? Respuesta: en que, desde el siglo diecinueve, muchas ediciones prefieren testimonios como el Códice Vaticano y el Sinaítico, y un texto a menudo más breve, frente al texto recibido. Esta escuela no silencia el debate, ni adopta por eso esas ediciones como texto de la casa."
 ],
 [
 "p",
-"Novena pregunta. ¿De dónde viene el nombre Textus Receptus? Respuesta: del prefacio de la edición de los Elzevir de mil seiscientos treinta y tres, que dice: tienes, pues, el texto que ahora es recibido por todos."
+"Octava pregunta. ¿Cómo distingue esta escuela la inerrancia de la preservación? Respuesta: la inerrancia se afirma de lo que Dios sopló, verdadero en todo lo que afirma; la preservación es la providencia por la cual ese texto ha llegado a su pueblo, sin que cada manuscrito particular esté libre de todo desliz de pluma."
 ],
 [
 "p",
-"Décima pregunta. ¿Quién tradujo la Biblia del Oso, cuándo y dónde se imprimió? Respuesta: Casiodoro de Reina; se imprimió en Basilea en mil quinientos sesenta y nueve. Cipriano de Valera la revisó en mil seiscientos dos."
+"Novena pregunta. Según Isaías 40:8 y 1 Pedro 1:23-25, ¿qué permanece, y para qué? Respuesta: la palabra del Dios nuestro permanece para siempre; es la simiente incorruptible por la cual somos nacidos de nuevo, la palabra del evangelio anunciada."
 ],
 [
 "p",
-"Undécima pregunta. ¿Cuál es el argumento principal a favor del texto recibido? Respuesta: la promesa de Dios de preservar su Palabra, que hace razonable pensar que la preservó en el texto que su pueblo recibió y usó durante siglos."
+"Décima pregunta. ¿Qué dijo el Señor de sus palabras en Mateo 24:35? Respuesta: El cielo y la tierra pasarán, pero mis palabras no pasarán."
 ],
 [
 "p",
-"Duodécima pregunta. ¿Qué juego de palabras hay en la visión de la vara de almendro? Respuesta: almendro es shaqéd y velar es shaqád. Dios vela sobre su palabra para cumplirla."
+"Undécima pregunta. ¿Cuáles son las cinco afirmaciones de la posición de esta escuela, en resumen? Respuesta: inspiración e inerrancia de los originales; preservación providencial, no milagro de cada copia; texto masorético y Textus Receptus de Scrivener; cita textual de la Reina-Valera 1960; enseñanza plena de los métodos en el módulo diez, sin abandonar esa postura."
+],
+[
+"p",
+"Duodécima pregunta. ¿Qué peligro pastoral denuncia esta lección al defender el texto? Respuesta: el de afirmar el texto recibido y no abrir el Evangelio, o defender una versión y no obedecer a Cristo; tratar la Biblia como un objeto de partido y no como Palabra que convence, perdona y permanece."
 ],
 [
 "h",
-"Oración final"
+"Oración"
 ],
 [
 "p",
-"Señor, tú velas sobre tu palabra. Gracias por los escribas, los masoretas, los copistas, los traductores y los mártires por cuyas manos llegó tu Palabra hasta nosotros. Gracias porque lo que leemos hoy es lo que tú dijiste. Líbranos de la duda que corroe y de la soberbia que juzga tu Palabra. Danos el cuidado de Esdras, la confianza de tu Hijo en la sinagoga de Nazaret y la valentía de los que dieron su vida por tu libro. En el nombre de Jesucristo, amén."
-],
-[
-"p",
-"Mañana, en el día cinco, comenzaremos el estudio de la lengua hebrea: aprenderemos a escuchar y pronunciar las veintidós letras del alefato, sus nombres, sus sonidos y su significado, y veremos cómo leer las primeras palabras de Génesis."
+"Señor, gracias por guardar tu Palabra y ponérnosla en las manos; enséñanos a leerla con temor, a nacer de su simiente, y a no tratarla como hierba que se seca. Amén."
 ],
 [
 "h",
@@ -594,15 +382,11 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "h",
-"Repaso de la lección"
+"Recapitulación"
 ],
 [
 "p",
-"La cuarta lección nos llevó de la inspiración a la preservación, porque Dios no solo inspiró su Palabra, sino que también la guardó. La prueba más hermosa la dio el Señor Jesús en Nazaret, cuando leyó en una copia del rollo de Isaías y la recibió con plena autoridad, diciendo que hoy se había cumplido esa Escritura delante de ellos. En el Antiguo Testamento, los escribas, los soferím, cuyo nombre se relaciona con sofér, hache cinco mil seiscientos ocho, copiaron el texto con un cuidado reverente, y más tarde los masoretas añadieron vocales, acentos y notas al margen sin tocar las consonantes. Cuando apareció en Qumrán el rollo de Isaías, quedó a la vista que, a lo largo de unos mil años de copias, el texto hebreo se había mantenido sustancialmente igual."
-],
-[
-"p",
-"El Nuevo Testamento, por su parte, cuenta con más de cinco mil ochocientos manuscritos griegos, además de traducciones antiguas y de las citas de los maestros cristianos, y ninguna doctrina de la fe depende de una variante dudosa. Aprendimos también que el nombre Textus Receptus procede del prefacio de la edición de los Elzevir de mil seiscientos treinta y tres, y que esta escuela sigue ese texto recibido por la promesa de Dios de preservar su Palabra en el texto que su pueblo usó durante siglos. De esa fuente bebió Casiodoro de Reina para la Biblia del Oso, impresa en Basilea en mil quinientos sesenta y nueve y revisada por Cipriano de Valera en mil seiscientos dos. Y sobre toda esa historia se alza la visión de la vara de almendro: Dios vela sobre su palabra para ponerla por obra."
+"La cuarta lección preguntó cómo llegó el texto hasta nosotros, si los originales se perdieron. En Nazaret, el Señor leyó una copia de Isaías y la llamó Escritura cumplida en Él. Vimos a los escribas, a los masoretas y su conteo, el texto masorético, el gran rollo de Isaías como testigo de estabilidad, y la abundancia de copias del Nuevo Testamento. Recorrimos la línea impresa del Textus Receptus hasta Scrivener, y la corriente de Reina y Valera hasta la de mil novecientos sesenta. Miramos el debate moderno sin silenciarlo y sin entregarle el texto de la casa. Firmamos cinco afirmaciones, y oímos que la hierba se seca y la Palabra de nuestro Dios permanece para siempre, la misma que por el evangelio nos ha sido anunciada."
 ],
 [
 "h",
@@ -610,63 +394,39 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta habrá un silencio breve. Detén el audio si lo necesitas, responde en voz alta con tus propias palabras, y luego escucha la respuesta."
+"Ahora vienen las preguntas de autoevaluación. Después de cada pregunta, detente, responde en voz alta con tus propias palabras, y luego lee la respuesta."
 ],
 [
 "p",
-"Primera pregunta. ¿Qué nos enseña el uso que el Señor Jesús hizo de una copia de Isaías?"
+"Primera pregunta. ¿Qué se sigue, para tu lectura diaria, de que Jesús llamara Escritura a una copia? Pausa para responder. Respuesta: que puedes recibir tu Biblia, fielmente traducida del texto que la iglesia ha tenido, como Palabra de Dios, sin esperar a tener el autógrafo, y que debes leerla con la misma seriedad con que se oyó en Nazaret."
 ],
 [
 "p",
-"Respuesta: que una copia fiel transmite la autoridad de la Palabra. No necesitamos los manuscritos originales para tener la Palabra de Dios."
+"Segunda pregunta. ¿Por qué no es lo mismo un desliz de copista que un error de la Escritura? Pausa para responder. Respuesta: porque la inerrancia se afirma de lo que Dios sopló; un accidente de transmisión en un manuscrito se discierne y no anula la Palabra preservada al pueblo."
 ],
 [
 "p",
-"Segunda pregunta. ¿Qué hicieron los masoretas, y qué se abstuvieron de hacer?"
+"Tercera pregunta. ¿Qué hacen, y qué no hacen, las vocales masoréticas? Pausa para responder. Respuesta: registran la tradición de lectura sin alterar las consonantes sagradas; no equivalen a una nueva inspiración, sino a un cuidado providencial de lo ya dado."
 ],
 [
 "p",
-"Respuesta: añadieron signos vocálicos, acentos y notas al margen para guardar la lectura tradicional; no cambiaron las consonantes del texto. Cuando la tradición leía otra cosa, lo anotaron al margen, en el qeré, sin tocar el ketiv."
+"Cuarta pregunta. ¿Cómo debe usarse Qumrán en esta escuela, y cómo no? Pausa para responder. Respuesta: como testigo antiguo donde lo hay, sobre todo en Isaías, de la estabilidad del texto; no como un canon nuevo, ni como una revelación añadida, ni como un tribunal que desplace el texto masorético."
 ],
 [
 "p",
-"Tercera pregunta. ¿Por qué el rollo de Isaías de Qumrán fortalece nuestra confianza?"
+"Quinta pregunta. ¿Por qué esta escuela no cambia de texto de trabajo solo porque una edición crítica sea mayoritaria en las academias? Pausa para responder. Respuesta: porque la antigüedad de algunos códices no basta, por sí sola, para declarar inferior el texto que la iglesia recibió y leyó durante siglos, y porque la postura se sostendrá con razones, no por moda."
 ],
 [
 "p",
-"Respuesta: porque al compararlo con los manuscritos masoréticos, unos mil años posteriores, se ve que el texto se mantuvo sustancialmente igual."
+"Sexta pregunta. ¿Qué une a Isaías 40:8 y a 1 Pedro 1:23-25, más allá de la cita? Pausa para responder. Respuesta: que la Palabra que permanece no es solo un texto conservado, sino la simiente incorruptible del evangelio, por la cual hay nuevo nacimiento."
 ],
 [
 "p",
-"Cuarta pregunta. Si alguien dice que la Biblia se ha cambiado tantas veces que ya no sabemos lo que decía, ¿qué le responderías?"
+"Séptima pregunta. ¿Qué pediría Josías, y qué pediría Joacim, a una lección como esta? Pausa para responder. Respuesta: Josías, oír, rasgar el corazón y cumplir lo escrito; Joacim, una excusa para no temblar. La lección nos llama a lo primero."
 ],
 [
 "p",
-"Respuesta: que tenemos miles de manuscritos que permiten comprobar el texto, que las copias hebreas muestran una fidelidad asombrosa, que ninguna doctrina depende de una variante dudosa, y que Dios prometió que su palabra permanece para siempre."
-],
-[
-"p",
-"Quinta pregunta. ¿Por qué esta escuela confía en el texto recibido?"
-],
-[
-"p",
-"Respuesta: por la promesa de Dios de preservar su Palabra, que hace razonable pensar que la guardó en el texto que su pueblo recibió y usó durante siglos."
-],
-[
-"p",
-"Sexta pregunta. ¿Qué relación tiene la Reina-Valera con el texto recibido?"
-],
-[
-"p",
-"Respuesta: es la Biblia de nuestra lengua que nació del texto masorético y del texto griego recibido, por el trabajo de Casiodoro de Reina y la revisión de Cipriano de Valera."
-],
-[
-"p",
-"Séptima pregunta. ¿Qué enseña Nehemías ocho ocho sobre el propósito de un texto bien guardado?"
-],
-[
-"p",
-"Respuesta: que el texto se guarda para ser leído claramente y explicado, de modo que el pueblo entienda. La crítica textual sirve a la predicación."
+"Octava pregunta. ¿Qué queda para el módulo diez, y qué no debe aplazarse hasta entonces? Pausa para responder. Respuesta: el tratado de los métodos y de los pasajes discutidos; no debe aplazarse la recepción reverente de la Palabra que ya tenemos, ni la fe en el Cristo que se cumplió en Nazaret, ni la decisión de leerla y obedecerla."
 ],
 [
 "h",
@@ -674,27 +434,27 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"Bosquejo para predicar o enseñar. Título: Dios vela sobre su palabra. Texto: Jeremías uno, once y doce."
+"Bosquejo para predicar o enseñar. Título: Esta Escritura se ha cumplido. Texto: Lucas 4:16-21."
 ],
 [
 "q",
-"«La palabra de Jehová vino a mí, diciendo: ¿Qué ves tú, Jeremías? Y dije: Veo una vara de almendro. Y me dijo Jehová: Bien has visto; porque yo apresuro mi palabra para ponerla por obra.» Así dice Jeremías, capítulo uno, versículos once al doce."
+"«Hoy se ha cumplido esta Escritura delante de vosotros» Lucas 4:21."
 ],
 [
 "p",
-"La idea central es que el mismo Dios que habló vela sobre lo que dijo, para guardarlo y para cumplirlo."
+"La idea central es que la Palabra de Dios, preservada en las manos de su pueblo, se cumple en Cristo, permanece cuando toda carne se seca, y debe ser oída hoy como Escritura, no como un papel dudoso."
 ],
 [
 "p",
-"El predicador puede comenzar con la escena del joven Jeremías, temeroso de su llamado, a quien Dios muestra una rama de almendro, el árbol que en Israel despierta primero tras el invierno, como un centinela. De esa imagen nace el primer movimiento del sermón: Dios vela para guardar. Escribas, masoretas y copistas fueron instrumentos fieles, pero el guardián verdadero es Dios, y la Biblia que el oyente tiene en sus manos no es un accidente de la historia."
+"El primer movimiento describe la sinagoga, el rollo copiado, la lectura y la mirada de todos. El predicador puede decir que aquel libro no era el original de Isaías, y que, no obstante, Jesús lo llamó Escritura. La congregación tiene en las manos, en su lengua, esa misma Palabra."
 ],
 [
 "p",
-"El segundo movimiento muestra que Dios vela también para cumplir. Cada promesa llega a su hora, y todas las promesas de Dios son en Cristo sí y amén; la mañana de Nazaret, cuando el Señor dijo que hoy se había cumplido la Escritura, es la mejor ilustración."
+"El segundo movimiento oye el contenido leído: buenas nuevas a los pobres, libertad, el año agradable del Señor, cumplido en Jesús. La transmisión no es un museo: es el medio por el cual el evangelio llega. Aquí hay convocatoria al arrepentimiento y a la fe, no solo asombro ante un manuscrito."
 ],
 [
 "p",
-"El tercer movimiento vuelve la mirada al oyente. Si la Palabra es firme, sus advertencias contra el pecado y sus promesas de perdón también lo son, y no se pueden tratar con ligereza. El sermón concluye con un llamado al arrepentimiento y a la fe, y con el consuelo de Isaías: la hierba se seca y la flor se marchita, mas la palabra del Dios nuestro permanece para siempre."
+"El tercer movimiento proclama Isaías 40:8 y 1 Pedro 1:23-25: la hierba se seca, la Palabra permanece, y por ella somos nacidos de nuevo. Cierra invitando a memorizar Isaías 40:8, a dar gracias por la Biblia que tenemos, y a no dejarla, otra vez, olvidada en la casa de Dios."
 ],
 [
 "h",
@@ -702,15 +462,31 @@ const bloques: ["h" | "p" | "q", string][] = [
 ],
 [
 "p",
-"El versículo de hoy es Isaías cuarenta, ocho."
+"El texto de hoy es Isaías 40:8."
 ],
 [
 "q",
-"«Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre.» Así dice Isaías, capítulo cuarenta, versículo ocho."
+"«Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre» Isaías 40:8."
 ],
 [
 "p",
 "Repítelo en voz alta hasta que lo digas sin mirar."
+],
+[
+"h",
+"Notas"
+],
+[
+"p",
+"Dr. (h. c.) Alejandro Sirit. Escuela Bíblica Cielo Efata."
+],
+[
+"p",
+"[1] Hebreo sofer, H5608: escriba, de una raíz que significa contar, numerar, escribir."
+],
+[
+"p",
+"[2] La jota de Mateo 5:18 corresponde a la yod, la letra más pequeña del alefato hebreo."
 ]
 ];
 export default bloques;
