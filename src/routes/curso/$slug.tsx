@@ -1,24 +1,29 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
 import { CuadernoLado } from "@/components/cuaderno-estudio";
 import { IndiceLeccion } from "@/components/indice-leccion";
+import { InscripcionCurso } from "@/components/inscripcion-curso";
 import { LeccionCuerpo } from "@/components/leccion-curso";
 import { Subir } from "@/components/subir";
 import { LeccionJsonLd } from "@/components/json-ld";
+import { alumnoDeCuenta } from "@/lib/curso/acceso";
+import { cargarLeccion } from "@/lib/curso/leccion.functions";
 import {
   CURSO_NOMBRE,
   CURSO_PATH,
   CURSO_PUBLICADO,
   DIAS,
   diaPorSlug,
-  textoDia,
 } from "@/lib/curso";
+import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { metaDescription, pageHead, tituloSeccion } from "@/lib/seo";
 
 export const Route = createFileRoute("/curso/$slug")({
   loader: async ({ params }) => {
     const dia = diaPorSlug(params.slug);
     if (!dia) throw notFound();
-    return { dia, bloques: await textoDia(dia.n) };
+    const carga = await cargarLeccion({ data: dia.slug });
+    return { dia, ...carga };
   },
   head: ({ loaderData }) => {
     const d = loaderData?.dia;
@@ -26,17 +31,51 @@ export const Route = createFileRoute("/curso/$slug")({
     return pageHead({
       path: `${CURSO_PATH}/${d.slug}`,
       title: tituloSeccion(`Día ${d.n}: ${d.titulo} · ${CURSO_NOMBRE}`),
-      description: d.intro,
+      description: loaderData.descripcion,
     });
   },
   component: DiaPage,
 });
 
 function DiaPage() {
-  const { dia, bloques } = Route.useLoaderData();
+  const { dia, bloques, cerrado, versiculo, descripcion } = Route.useLoaderData();
+  const { user } = useCurrentUserState();
+  const router = useRouter();
+  const inscrito = alumnoDeCuenta(user);
+  const pedido = useRef(false);
   const prev = DIAS.find((d) => d.n === dia.n - 1);
   const next = DIAS.find((d) => d.n === dia.n + 1);
   const path = `${CURSO_PATH}/${dia.slug}`;
+
+  useEffect(() => {
+    if (!cerrado || !inscrito || pedido.current) return;
+    pedido.current = true;
+    void router.invalidate();
+  }, [cerrado, inscrito, router]);
+
+  if (cerrado && !inscrito) {
+    return (
+      <main className="casa-escuela">
+        <p className="kicker">
+          <Link to="/curso" className="underline">
+            {CURSO_NOMBRE}
+          </Link>{" "}
+          · Día {dia.n}
+        </p>
+        <h1 className="mt-3">{dia.titulo}</h1>
+        <InscripcionCurso volver={path} />
+      </main>
+    );
+  }
+
+  if (cerrado) {
+    return (
+      <main className="casa-escuela">
+        <p className="mt-6 leading-relaxed">Abriendo la lección…</p>
+      </main>
+    );
+  }
+
   return (
     <div className="leccion-marco">
       <main
@@ -49,7 +88,7 @@ function DiaPage() {
       >
         <LeccionJsonLd
           headline={`Día ${dia.n}. ${dia.titulo}`}
-          description={metaDescription(dia.intro)}
+          description={metaDescription(descripcion)}
           path={path}
           published={CURSO_PUBLICADO}
           cursoNombre={CURSO_NOMBRE}
@@ -69,15 +108,17 @@ function DiaPage() {
           Escuela Bíblica Cielo Efata · Dr. (h. c.) Alejandro Sirit
         </p>
         <IndiceLeccion raiz="leccion" />
-        <aside
-          className="casa-verso mt-8"
-          data-seccion="Versículo para memorizar"
-        >
-          <p className="kicker">Versículo para memorizar · {dia.cita}</p>
-          <p className="mt-2 font-serif text-xl leading-relaxed">
-            «{dia.versiculo}»
-          </p>
-        </aside>
+        {versiculo ? (
+          <aside
+            className="casa-verso mt-8"
+            data-seccion="Versículo para memorizar"
+          >
+            <p className="kicker">Versículo para memorizar · {dia.cita}</p>
+            <p className="mt-2 font-serif text-xl leading-relaxed">
+              «{versiculo}»
+            </p>
+          </aside>
+        ) : null}
         <LeccionCuerpo bloques={bloques} />
         <p className="mt-12 text-sm leading-relaxed text-ink-soft">
           Texto bíblico tomado de la versión Reina-Valera © 1960 Sociedades
@@ -108,8 +149,8 @@ function DiaPage() {
               Día {next.n}: {next.titulo} →
             </Link>
           ) : (
-            <Link to="/gratis" className="text-link underline">
-              Recibir aviso de nuevas lecciones →
+            <Link to="/curso" className="text-link underline">
+              Las lecciones que faltan se entregan a su tiempo →
             </Link>
           )}
         </nav>

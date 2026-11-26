@@ -5,9 +5,9 @@ import { LeerCapitulo } from "@/components/leer-capitulo";
 import { Refs } from "@/components/cite";
 import { Retomar } from "@/components/retomar";
 import { aulaSinActo, cerrarAulaSiEscrito, type AulaAbierta } from "@/lib/aula-abierta";
-import { useCurrentUser } from "@/lib/auth/use-current-user";
-import { authEnabled, signIn } from "@/lib/auth/client";
-import { GROK_PROVIDERS } from "@/lib/auth/providers";
+import { InscripcionCurso } from "@/components/inscripcion-curso";
+import { useCurrentUserState } from "@/lib/auth/use-current-user";
+import { authEnabled } from "@/lib/auth/client";
 import { guardarActo, leerActos } from "@/lib/cuaderno.functions";
 import {
   clearBorrador,
@@ -52,7 +52,7 @@ export const Route = createFileRoute("/cuaderno")({
 
 function CuadernoPage() {
   const { ref = "" } = Route.useSearch();
-  const user = useCurrentUser();
+  const { user, isPending } = useCurrentUserState();
   const userId = user && !user.isDevFallback ? user.id : null;
   const [items, setItems] = useState<CuadernoEntry[]>([]);
   const [indicativo, setIndicativo] = useState("");
@@ -308,22 +308,7 @@ function CuadernoPage() {
       <section className="mt-12">
         <h2 className="font-serif text-2xl">Lo escrito</h2>
         <p className="mt-3 font-sans text-sm text-ink-soft">{persistencia}</p>
-        {authEnabled && !userId ? (
-          <p className="mt-3 font-sans text-sm">
-            {GROK_PROVIDERS.map((p, i) => (
-              <span key={p.providerId}>
-                {i > 0 ? " · " : null}
-                <button
-                  type="button"
-                  className="text-link underline"
-                  onClick={() => signIn(p.providerId, { callbackURL: "/cuaderno" })}
-                >
-                  Entrar con {p.label}
-                </button>
-              </span>
-            ))}
-          </p>
-        ) : null}
+        {authEnabled && !isPending && !userId ? <InscripcionCurso volver="/cuaderno" breve /> : null}
         {items.length === 0 ? (
           <p className="mt-4 leading-relaxed text-ink-soft">
             Cuando se guarde el primer acto, quedará aquí, con fecha.

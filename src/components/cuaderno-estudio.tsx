@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { useRouterState } from "@tanstack/react-router";
-import { GROK_PROVIDERS, authEnabled, signIn } from "@/lib/auth/client";
+import { InscripcionCurso } from "@/components/inscripcion-curso";
+import { authEnabled } from "@/lib/auth/client";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 import { encabezadosCuenta } from "@/lib/cuaderno-cuenta";
 import { apartadoEnVista, citaDeLaSeccionVisible } from "@/lib/cuaderno-dom";
@@ -521,7 +522,7 @@ export function CuadernoEstudio({ leccion }: { leccion: Leccion | null }) {
             cuenta, lo que escribas o grabes desaparece al salir de la página.
             No queda guardado.
           </p>
-          <BotonesCuenta callbackURL={callback} />
+          <InscripcionCurso volver={callback} breve />
         </div>
       ) : null}
 
@@ -1045,24 +1046,6 @@ function AudioCuenta({ id }: { id: string }) {
   if (!url)
     return <p className="cuaderno-meta">Cargando el audio de la cuenta…</p>;
   return <audio controls src={url} preload="none" className="cuaderno-audio" />;
-}
-
-function BotonesCuenta({ callbackURL }: { callbackURL: string }) {
-  return (
-    <div className="cuaderno-cuentas">
-      <p className="cuaderno-kicker">Crear o abrir una cuenta</p>
-      {GROK_PROVIDERS.map((p) => (
-        <button
-          key={p.providerId}
-          type="button"
-          className="cuaderno-btn"
-          onClick={() => void signIn(p.providerId, { callbackURL })}
-        >
-          Entrar con {p.label}
-        </button>
-      ))}
-    </div>
-  );
 }
 
 function agrupar(

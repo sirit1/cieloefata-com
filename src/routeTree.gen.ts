@@ -68,6 +68,7 @@ import { Route as VersiculoIndexRouteImport } from './routes/versiculo/index'
 import { Route as VersiculoSlugRouteImport } from './routes/versiculo/$slug'
 import { Route as VersiculosIndexRouteImport } from './routes/versiculos/index'
 import { Route as VersiculosSlugRouteImport } from './routes/versiculos/$slug'
+import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiCertificadoCodigoRouteImport } from './routes/api/certificado/$codigo'
 import { Route as ApiCuadernoExportarRouteImport } from './routes/api/cuaderno/exportar'
 import { Route as ApiCuadernoHigieneRouteImport } from './routes/api/cuaderno/higiene'
@@ -371,6 +372,11 @@ const VersiculosSlugRoute = VersiculosSlugRouteImport.update({
   path: '/versiculos/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
+  id: '/api/auth/$',
+  path: '/api/auth/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiCertificadoCodigoRoute = ApiCertificadoCodigoRouteImport.update({
   id: '/api/certificado/$codigo',
   path: '/api/certificado/$codigo',
@@ -462,6 +468,7 @@ export interface FileRoutesByFullPath {
   '/preguntas/': typeof PreguntasIndexRoute
   '/versiculo/': typeof VersiculoIndexRoute
   '/versiculos/': typeof VersiculosIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
   '/api/cuaderno/exportar': typeof ApiCuadernoExportarRoute
   '/api/cuaderno/higiene': typeof ApiCuadernoHigieneRoute
@@ -529,6 +536,7 @@ export interface FileRoutesByTo {
   '/preguntas': typeof PreguntasIndexRoute
   '/versiculo': typeof VersiculoIndexRoute
   '/versiculos': typeof VersiculosIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
   '/api/cuaderno/exportar': typeof ApiCuadernoExportarRoute
   '/api/cuaderno/higiene': typeof ApiCuadernoHigieneRoute
@@ -597,6 +605,7 @@ export interface FileRoutesById {
   '/preguntas/': typeof PreguntasIndexRoute
   '/versiculo/': typeof VersiculoIndexRoute
   '/versiculos/': typeof VersiculosIndexRoute
+  '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/certificado/$codigo': typeof ApiCertificadoCodigoRoute
   '/api/cuaderno/exportar': typeof ApiCuadernoExportarRoute
   '/api/cuaderno/higiene': typeof ApiCuadernoHigieneRoute
@@ -666,6 +675,7 @@ export interface FileRouteTypes {
     | '/preguntas/'
     | '/versiculo/'
     | '/versiculos/'
+    | '/api/auth/$'
     | '/api/certificado/$codigo'
     | '/api/cuaderno/exportar'
     | '/api/cuaderno/higiene'
@@ -733,6 +743,7 @@ export interface FileRouteTypes {
     | '/preguntas'
     | '/versiculo'
     | '/versiculos'
+    | '/api/auth/$'
     | '/api/certificado/$codigo'
     | '/api/cuaderno/exportar'
     | '/api/cuaderno/higiene'
@@ -800,6 +811,7 @@ export interface FileRouteTypes {
     | '/preguntas/'
     | '/versiculo/'
     | '/versiculos/'
+    | '/api/auth/$'
     | '/api/certificado/$codigo'
     | '/api/cuaderno/exportar'
     | '/api/cuaderno/higiene'
@@ -867,6 +879,7 @@ export interface RootRouteChildren {
   PreguntasIndexRoute: typeof PreguntasIndexRoute
   VersiculoIndexRoute: typeof VersiculoIndexRoute
   VersiculosIndexRoute: typeof VersiculosIndexRoute
+  ApiAuthSplatRoute: typeof ApiAuthSplatRoute
   ApiCertificadoCodigoRoute: typeof ApiCertificadoCodigoRoute
   ApiCuadernoExportarRoute: typeof ApiCuadernoExportarRoute
   ApiCuadernoHigieneRoute: typeof ApiCuadernoHigieneRoute
@@ -1290,6 +1303,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VersiculosSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/auth/$': {
+      id: '/api/auth/$'
+      path: '/api/auth/$'
+      fullPath: '/api/auth/$'
+      preLoaderRoute: typeof ApiAuthSplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/certificado/$codigo': {
       id: '/api/certificado/$codigo'
       path: '/api/certificado/$codigo'
@@ -1406,6 +1426,7 @@ const rootRouteChildren: RootRouteChildren = {
   PreguntasIndexRoute: PreguntasIndexRoute,
   VersiculoIndexRoute: VersiculoIndexRoute,
   VersiculosIndexRoute: VersiculosIndexRoute,
+  ApiAuthSplatRoute: ApiAuthSplatRoute,
   ApiCertificadoCodigoRoute: ApiCertificadoCodigoRoute,
   ApiCuadernoExportarRoute: ApiCuadernoExportarRoute,
   ApiCuadernoHigieneRoute: ApiCuadernoHigieneRoute,

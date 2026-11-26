@@ -16,6 +16,7 @@ import { AMAZON_AUTHOR, amazonDp, whatsappColeccion } from "@/lib/amazon";
 import { SELLO } from "@/lib/identidad";
 import { ESCRITURA } from "@/lib/pilar";
 import { HomeJsonLd } from "@/components/json-ld";
+import { CURSO_PORTADA } from "@/lib/curso/acceso";
 import { pageHead, SITE_TITLE } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -213,7 +214,7 @@ function Home() {
           <Link to="/curso" className="muestra muestra-escuela">
             <img src="/brand/seal-full.webp" alt="" width={120} height={120} />
             <b>Escuela</b>
-            <span>Treinta lecciones abiertas, gratis, para leer con la Biblia en la mano.</span>
+            <span>{CURSO_PORTADA}</span>
           </Link>
         </div>
       </section>

@@ -8,8 +8,9 @@ import {
   leerExamen,
 } from "@/lib/examenes/functions";
 import type { PreguntaPublica } from "@/lib/examenes/esquema";
-import { authEnabled, signIn } from "@/lib/auth/client";
-import { GROK_PROVIDERS } from "@/lib/auth/providers";
+import { InscripcionCurso } from "@/components/inscripcion-curso";
+import { authEnabled } from "@/lib/auth/client";
+import { alumnoDeCuenta } from "@/lib/curso/acceso";
 import { useCurrentUserState } from "@/lib/auth/use-current-user";
 
 type EnCurso = {
@@ -189,26 +190,8 @@ export function ExamenCurso({ examenId }: { examenId: string }) {
 
   if (isPending) return <p className="mt-8 text-ink-soft">Cargando…</p>;
 
-  if (authEnabled && !user) {
-    return (
-      <div className="mt-8">
-        <p className="leading-relaxed">Para presentar el examen hay que entrar. La escuela es gratis.</p>
-        <p className="mt-4 font-sans text-sm">
-          {GROK_PROVIDERS.map((p, i) => (
-            <span key={p.providerId}>
-              {i > 0 ? " · " : null}
-              <button
-                type="button"
-                className="text-link underline"
-                onClick={() => signIn(p.providerId, { callbackURL: `/curso/examen/${examenId}` })}
-              >
-                Entrar con {p.label}
-              </button>
-            </span>
-          ))}
-        </p>
-      </div>
-    );
+  if (authEnabled && !alumnoDeCuenta(user)) {
+    return <InscripcionCurso volver={`/curso/examen/${examenId}`} />;
   }
 
   if (!estado) {
